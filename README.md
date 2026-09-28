@@ -21,7 +21,7 @@ $$
 $$
 
 $$
-\sum_{\substack{N>N_0,\;N\ {\rm even}}}|\partial_s^j T_N(s_\epsilon)|=o(\epsilon^{-1/2}),\qquad 0\le j\le k.
+\sum_{N>N_0,\quad N\text{ even}}|\partial_s^j T_N(s_\epsilon)|=o(\epsilon^{-1/2}),\qquad 0\le j\le k.
 $$
 
 The first supplies a nonzero singular carrier; the second makes the entire higher-particle tail too small to cancel it. Constants may depend on the fixed point and finite $k$. These are the proof claims to scrutinize, not externally certified estimates.
