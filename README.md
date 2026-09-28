@@ -14,14 +14,14 @@ Nickel identified fixed-form-factor singularities whose union is dense on the un
 
 ## Two load-bearing estimates
 
-At each fixed selected point $s_*$ of manuscript §3, set $N_0=2p$, $k=N_0^2/2-1$ and $s_\epsilon=(1+\epsilon)s_*$. The manuscript claims
+At each fixed selected point $s_{\ast}$ of manuscript §3, set $N_0=2p$, $k=N_0^2/2-1$ and $s_\epsilon=(1+\epsilon)s_{\ast}$. The manuscript claims
 
 $$
 \partial_s^k T_{N_0}(s_\epsilon)=2L_\beta\epsilon^{-1/2}+o(\epsilon^{-1/2}),\qquad L_\beta\ne0,
 $$
 
 $$
-\sum_{\substack{N>N_0\\N\ {\rm even}}}|\partial_s^j T_N(s_\epsilon)|=o(\epsilon^{-1/2}),\qquad 0\le j\le k.
+\sum_{\substack{N>N_0,\;N\ {\rm even}}}|\partial_s^j T_N(s_\epsilon)|=o(\epsilon^{-1/2}),\qquad 0\le j\le k.
 $$
 
 The first supplies a nonzero singular carrier; the second makes the entire higher-particle tail too small to cancel it. Constants may depend on the fixed point and finite $k$. These are the proof claims to scrutinize, not externally certified estimates.
