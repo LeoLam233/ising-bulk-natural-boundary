@@ -1,0 +1,2829 @@
+% Standalone audit manuscript. All sections, appendices, and bibliography are embedded.
+\documentclass[11pt]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\fi
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage[margin=28mm]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Candidate proof, v0.1-rc2; not independently certified}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Li}{\mathcal L}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sstar}{s_*}
+\newcommand{\se}{s_\varepsilon}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\gap}[1]{\par\medskip\noindent\textbf{SOURCE-SUPPORTED PROOF GAP:} #1\par\medskip}
+\title{A candidate natural-boundary proof\\
+for the bulk square-lattice Ising susceptibility}
+\author{Dehao Lin\\
+\small School of Physics, Sun Yat-sen University\\
+\small\texttt{lindh9@mail2.sysu.edu.cn}}
+\date{Version 0.1-rc2\\28 September 2026}
+\begin{document}
+\maketitle
+
+% BEGIN SOURCE: sections/01_introduction.tex
+\begin{abstract}
+This manuscript presents a candidate proof that the unit circle is a
+natural boundary for the zero-field, isotropic, infinite square-lattice
+Ising susceptibility continued from low temperature. The argument has
+two separate analytic tasks. At a dense cyclotomic family of boundary
+points, an actual average-angle residue produces a nonzero first
+singular derivative. A weighted contour deformation and a partition of
+the entire particle-number tail are then used to claim an absolute
+smaller-order bound for every derivative needed in the bulk product
+rule. The decisive estimates, support conditions, differentiation
+recurrences, and order of choices are included in the paper.
+
+This release candidate is reconstructed from an AI-generated research checkpoint.
+Its propositions are the proof claims to be checked, not independently
+certified results. Appendix~\ref{app:auditmap} identifies the load-bearing
+checks and the coverage of all tail sectors. No exhaustive priority
+clearance is claimed; the natural-boundary conclusion has no
+independent certification.
+\end{abstract}
+
+\section{The claim, scope, and proof architecture}\label{sec:scope}
+Let \(s=\sinh(2\beta_{\mathrm{phys}} J)\), with inverse temperature
+\(\beta_{\mathrm{phys}}\), zero magnetic field, and equal positive
+nearest-neighbor coupling \(J\) on the infinite square lattice. Write
+\[
+ \mathcal X(s)=\beta_{\mathrm{phys}}^{-1}\chi(s),\qquad
+ \M^2(s)=(1-s^{-4})^{1/4},
+\]
+The factor \(\M^2\) is the square of the low-temperature spontaneous
+magnetization \cite{Yang1952}; its branch tends to one at infinity.
+The symbol \(\beta_{\mathrm{phys}}\) distinguishes inverse temperature
+from the geometric angle \(\beta\) used below. We study the exterior
+germ inherited from real \(s>1\). On that real interval the response is
+defined by connected correlations in the low-temperature pure phase
+selected by the positive-field limit, as in equations (8)--(9) of
+\cite{McCoyMaillard2012}. The function \(\mathcal X\) is the full
+bulk response. The proposed conclusion is
+\[
+ \text{no point of }|s|=1\text{ admits a local holomorphic
+ continuation of this exterior germ.}
+\]
+The physical factor \(\beta_{\mathrm{phys}}(s)=\operatorname{arsinh}(s)/(2J)\) is locally
+analytic and nonzero at each selected nonaxis point on the continuation
+under consideration. Its logarithmic monodromy is not replaced by an
+assertion of single-valuedness on the entire exterior.
+
+An exterior holomorphic function has \(\T\) as a natural boundary if no
+point of \(\T\) has a neighborhood to which its exterior germ extends
+holomorphically. A dense set of points at which a finite-order derivative
+is unbounded on an exterior radial approach is sufficient.
+
+\subsection{Related work and the proposed contribution}
+The form-factor expansion of the bulk susceptibility goes back to
+Wu, McCoy, Tracy, and Barouch \cite{WMTB1976}. Later correlation
+representations include the low-temperature Fredholm formula of
+Palmer and Tracy \cite{PalmerTracy1981}, used in Appendix A of
+Tracy and Widom \cite{TW2014}. Guttmann and Enting
+\cite{GuttmannEnting1996} supplied early numerical evidence for a
+natural boundary. Nickel \cite{Nickel1999,Nickel2000} identified
+the unit-circle form-factor singularities now bearing his name;
+Boukraa et al.\ \cite{Boukraa2008} developed further series and
+singularity evidence. These findings motivate the full-sum question.
+
+Orrick, Nickel, Guttmann, and Perk \cite[Section~3.2]{Orrick2001}
+examined the order dependence of singularity amplitudes and argued
+that it provides strong evidence against cancellation in the full sum.
+Their introduction explicitly distinguishes this evidence from a proof.
+We cite that analysis as a heuristic precedent, not as an infinite-tail
+theorem.
+
+For the diagonal susceptibility, Tracy and Widom \cite{TW2013}
+proved a natural-boundary theorem. Their Section IV isolates a
+divergent derivative of one particle term and bounds the corresponding
+derivative of the remaining sum. Their later work
+\cite{TW2017Toeplitz} extends that direction to more general sums
+of Toeplitz determinants. Thus the architecture of isolating a
+singular derivative and controlling the tail to exclude cancellation
+is an established method, not a new principle claimed here.
+The analysis in Sections III--IV of \cite{TW2017Toeplitz} also uses
+contour partitions, Vandermonde homogeneity, and Hadamard estimates
+with factorial suppression; grouping near different singularities
+plays a role there as well. These tools and organizing ideas are
+precedents for this work, not inventions attributed to the present
+manuscript. Their bulk implementation must still be justified here.
+
+The diagonal result concerns correlations summed along a single
+lattice diagonal. The present observable sums over the full lattice;
+its representation \eqref{eq:double} contains the two global factors
+\((1-X)(1-Y)\). The diagonal theorem supplies neither the required
+bulk first-chart analysis nor the bulk uniform tail estimate.
+Tracy and Widom's separate fixed-order result \cite{TW2014}
+gives smooth extension of each even form factor away from its Nickel
+set, without excluding cancellation in the infinite bulk sum.
+
+The proposed technical work here is the selected uniquely-first point
+family, the compatible whole-integral first-amplitude calculation,
+and the estimates for the weighted contour decomposition, protected
+parameter disks, and differentiated tail sectors of the bulk integral.
+These are the claims to assess against the displayed derivations and
+the prior literature. Neither an internal audit verdict nor the
+inclusion of additional references establishes their correctness or
+their novelty. No exhaustive literature-priority clearance is claimed.
+
+\subsection{The two estimates that carry the conclusion}
+For each selected point \(s_*\), Section~\ref{sec:arithmetic} specifies
+a first even order \(N_0=2p\) and the fixed integer
+\(k=N_0^2/2-1\). Put \(s_\eps=(1+\eps)s_*\). The proposed argument
+establishes
+\begin{align}
+ T_{N_0}^{(k)}(s_\eps)
+   &=2L_\beta\eps^{-1/2}+o(\eps^{-1/2}),\qquad L_\beta\ne0,
+       \label{eq:roadmapfirst}\\
+ \sum_{\substack{N>N_0\\N\ {\rm even}}}
+       |T_N^{(j)}(s_\eps)|
+   &=o(\eps^{-1/2}),\qquad 0\le j\le k .
+       \label{eq:roadmaptail}
+\end{align}
+The finitely many lower form factors and the lower derivatives of the
+first singular form factor remain bounded. The normalization in
+Section~\ref{sec:setup} then gives
+\[
+ \mathcal X^{(k)}(s_\eps)
+   =4\M^2(s_*)L_\beta\eps^{-1/2}+o(\eps^{-1/2}).
+\]
+Section~\ref{sec:conclusion} proves this implication separately.
+In particular, a proof only of \eqref{eq:roadmapfirst}, or a tail
+estimate only for \(j=k\), does not complete the proposed argument.
+
+\subsection{How the proof is organized}
+The arithmetic and first-amplitude arguments are in
+Sections~\ref{sec:arithmetic} and \ref{sec:first}. The tail begins
+with the exact identity \(T_N=F_N+K_N+S_N\) in
+Section~\ref{sec:tailreduction}; \(S_N\) is the actual weighted
+Stokes correction. Sections~\ref{sec:F}--\ref{sec:sectors} estimate
+every term in that identity. Appendix~\ref{app:lie} supplies the
+fixed-domain, high-order differentiation rules used in those estimates.
+The constants and quantifiers are collected in
+Appendix~\ref{app:constants}; Appendix~\ref{app:auditmap} is a route
+through the proof for an adversarial reader.
+
+Throughout, the point and the differentiation order are fixed before
+\(\eps\) tends to zero. Constants may depend on both. Uniformity in
+the primes indexing the dense family is neither asserted nor needed.
+A bound uniform in \(N\) always refers to the explicitly stated
+\(N\)-window. The contour radius is held fixed during differentiation;
+window boundaries depending on \(\eps\) are introduced only afterwards.
+
+\begin{center}
+\begin{tabular}{p{.20\textwidth}p{.71\textwidth}}
+\toprule
+Symbol & Meaning\\
+\midrule
+\(N,N_0,k\) & Even particle number; first singular order; fixed derivative order.\\
+\(S,W,z,\phi\) & Dispersion variables, with \(z=e^{-\ii\phi}\) on the lower sheet.\\
+\(Y,Z,P_{ij}\) & Products of the \(y,z\) coordinates and the complete canceled pair.\\
+\(p,m,a,P\) & Fixed deformation/selector functions and occupancy \(P=\sum_i p_i\).\\
+\(H,\lambda_*\) & \(\log(1/\eps)\) and the post-differentiation current split \(\eps^{\alpha_0}\).\\
+\(b_N,\rho_N\) & Exponential microcore and full-equality scales in the intermediate window.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% END SOURCE
+
+\tableofcontents
+
+% BEGIN SOURCE: sections/02_setup.tex
+\section{The normalized bulk representation}\label{sec:setup}
+% PROV-INTERNAL: FORM_FACTOR_NORMALIZATION_AUDIT.md; ONSITE_GROUPING_EXACT_AUDIT.md.
+% PROV-PRIMARY: TW2014 Appendix A (7), normalized auxiliary residue and lattice sum.
+% RECONSTRUCTION: retain every normalized integration measure.
+Put \(S(s)=s+s^{-1}\) and
+\[
+ D(x,y;s)=S(s)-\tfrac12(x+x^{-1})-\tfrac12(y+y^{-1}).
+\]
+We take as external physical input the low-temperature correlation
+expansion in Appendix A of \cite{TW2014}, whose Fredholm
+representation is attributed there to \cite[p.~375]{PalmerTracy1981}.
+For even \(N\), let \(T_N\) denote the Fredholm-normalized offsite
+form factor. With positively oriented circles sufficiently close to the
+unit circle, it is
+\begin{align}
+ T_N(s)&=\frac1{N!}\oint\cdots\oint
+ \frac{X^{-1}+Y^{-1}}{(1-X)(1-Y)}
+ \prod_{i<j}\frac{x_i-x_j}{1-x_ix_j}
+              \frac{y_i-y_j}{1-y_iy_j}
+ \prod_{i=1}^N\frac{\dd x_i\,\dd y_i}{(2\pi\ii)^2D(x_i,y_i;s)},\label{eq:double}\\
+ X&=\prod_i x_i,\qquad Y=\prod_i y_i, \nonumber\\
+ \mathcal X(s)&=1-\M^2(s)+2\M^2(s)\sum_{\substack{N\ge2\\N\ {\rm even}}}T_N(s).
+ \label{eq:bulk}
+\end{align}
+This normalization is obtained by converting the \(N\) normalized angular
+measures in Appendix A, equation (7), of \cite{TW2014} and retaining the
+\(N\) normalized auxiliary residues there. The displayed main-text
+contour prefactor in that source is different if its contour measures are
+read as ordinary measures. We do not use that prefactor to fix a physical
+amplitude; Appendix~\ref{app:normalization} gives the measure count.
+
+% PROV-INTERNAL: RESIDUE_REDUCTION.md, lines 9-42.
+% PROV-PRIMARY: TW2014 (2), Appendix A (7) and the normalized residue identity.
+% RECONSTRUCTION: successive residues and subtraction of dispersion equations.
+\begin{lemma}[Residue reduction]\label{lem:residue}
+Let
+\[
+ W(y;s)=S(s)-\tfrac12(y+y^{-1}),\quad
+ z=W-\sqrt{W^2-1}=e^{-\gamma},\quad
+ R(y;s)=\frac{2z^2}{1-z^2}.
+\]
+Choose the square root by continuation of the interior root and require
+\(\lvert z(y;s)\rvert<r<1\) on the \(y\)-circle. Then
+\begin{equation}
+ T_N=\frac1{N!}\oint\cdots\oint
+ \frac{Z^{-1}+Y^{-1}}{(1-Z)(1-Y)}
+ \prod_{i<j}P_{ij}\prod_i R(y_i;s)\frac{\dd y_i}{2\pi\ii},
+ \qquad Z=\prod_i z_i,\label{eq:reduced}
+\end{equation}
+where
+\begin{equation}
+ P_{ij}=\frac{z_i-z_j}{1-z_iz_j}\frac{y_i-y_j}{1-y_iy_j}
+       =-\frac{(y_i-y_j)^2z_iz_j}{y_iy_j(1-z_iz_j)^2}.
+ \label{eq:pair}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The only enclosed dispersion root in each \(x_i\) is \(z_i\);
+its residue is \(2z_i^2/(1-z_i^2)\). At \(x_i=0\) the reciprocal dispersion
+factor is \(-2x_i+O(x_i^2)\), canceling the apparent numerator pole.
+All pair and product poles involving the other interior \(x\)'s are
+outside the \(x_i\)-circle. These statements remain true after each
+successive residue because each previously substituted root has modulus
+less than \(r\).
+Subtracting \(z_i+z_i^{-1}=2S-y_i-y_i^{-1}\) for two indices gives
+\[
+ (z_i-z_j)(1-z_iz_j)
+ =-\frac{z_iz_j}{y_iy_j}(y_i-y_j)(1-y_iy_j),
+\]
+which proves the canceled expression. Each residue consumes its own
+normalized \(x\)-measure and leaves a normalized \(y\)-measure.
+\end{proof}
+
+For a fixed \(\sstar=e^{\ii\theta_*}\), \(0<\theta_*<\pi/2\), set
+\(\se=(1+\eps)\sstar\). On a disk \(\lvert s-\se\rvert<c_1\eps\)
+choose \(r=e^{-c_0\eps}\), with \(c_0,c_1>0\) sufficiently small.
+Then \(\Im W\ge c_2\eps\), uniformly in the angle. The inverse root is
+in the lower unit half-disk. Writing \(\gamma=u+\ii v\) gives
+\(\Im W=\sinh u\sin v\le\sinh u\), hence \(u\ge c_3\eps\).
+Choosing \(c_0<c_3\) verifies the stronger condition \(|z|<r\), not merely
+\(|z|<1\). During an \(s\)-derivative this chosen \(r\) is held fixed.
+
+% PROV-INTERNAL: TWO_NONZERO_PRIME_FAMILY.md, lines 46-50;
+% FORM_FACTOR_SIGN_SYMMETRY.md.
+% PROV-PRIMARY: TW2014 contour representation and Appendix A.
+\begin{lemma}[Symmetries]\label{lem:symmetry}
+The exterior normalized susceptibility and its even form factors are even
+in \(s\) and invariant under conjugation of the argument and value.
+\end{lemma}
+\begin{proof}
+In \eqref{eq:double} replace \(s,x_i,y_i\) by \(-s,-x_i,-y_i\).
+Each dispersion factor changes sign; their number is even. Each pair
+changes sign in both variables and each product is unchanged.
+The contour substitution preserves the integral. The branch of \(\M^2\)
+is also even. Conjugation follows either by conjugating these contours
+with their orientations and measures together or from the real
+low-temperature Fredholm expansion and the identity theorem.
+\end{proof}
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/03_dense_nickel_family.tex
+\section{A dense uniquely-first family}
+\label{sec:arithmetic}
+For this paper a unit-circle point is a Nickel point of order \(n\)
+when
+\[
+ s_*+s_*^{-1}
+   =\cos(2\pi l/n)+\cos(2\pi m/n)
+ \quad\text{for some integers }l,m.
+\]
+This is Nickel's singularity condition
+\cite{Nickel1999,Nickel2000}, in the convention of \cite{TW2014}.
+Only even orders occur in the low-temperature expansion under study.
+The theorem below establishes the additional first-order and uniqueness
+properties for the specific point family used here.
+% PROV-INTERNAL: TWO_NONZERO_PRIME_FAMILY.md, lines 5-50.
+% PROV-PRIMARY: TW2014 definition of a Nickel point.
+% RECONSTRUCTION: elementary cyclotomic argument; no Durham notes used.
+\begin{theorem}\label{thm:prime}
+Let \(p\ge11\) be prime, and choose distinct integers \(a,b\) with
+\(\alpha=2\pi a/p,\ \beta=2\pi b/p\in(0,\pi/2)\).
+Set
+\[
+ c=\frac{\cos\alpha+\cos\beta}{2},\qquad
+ \sstar=e^{\ii\arccos c},\qquad N_0=2p.
+\]
+The first even Nickel order at \(\sstar\) is \(N_0\).
+At that order the unordered cosine pair is uniquely
+\(\{\cos\alpha,\cos\beta\}\).
+These points are dense in the open upper-right arc.
+If \(\theta_B=\arccos(2c-1)\), then \(e^{-\ii\theta_B}\) is algebraic
+and is not a root of unity.
+\end{theorem}
+\begin{proof}
+Let \(\zeta=e^{2\pi\ii/p}\), \(d=(p-1)/2\),
+\(u_j=\zeta^j+\zeta^{-j}\), and \(E=\Q(\zeta+\zeta^{-1})\).
+The trace of every nonzero-index \(u_j\) is \(-1\), by summing over the
+pairs of nonzero residue classes. Thus
+\(\operatorname{Tr}_E(2c)=-1\). If \(2c\) were rational it would be
+\(-1/d\), whereas it is positive.
+
+If an even \(n<2p\) represented the same Nickel point, then \(p\nmid n\)
+and \(c\in\Q(\zeta_p)\cap\Q(\zeta_n)=\Q\);
+the last equality is proved in Lemma~\ref{lem:cyclotomic}.
+This contradicts the preceding trace. Order \(2p\) contains the indicated
+pair of angles and is therefore first.
+
+At order \(2p\) every cosine is \(\pm u_j/2\) or \(\pm1\).
+The only rational relation between \(1,u_1,\ldots,u_d\) is a multiple of
+\(1+\sum_j u_j=0\): lift a relation to a polynomial of degree at most
+\(p-1\) vanishing at \(\zeta\), and use its minimal polynomial
+\(1+X+\cdots+X^{p-1}\). An equality between two cosine pairs uses at most
+four of the \(u_j\). Since \(d\ge5\), one coefficient is zero, forcing
+that multiple to vanish. The remaining coefficients give precisely the
+two positive terms \(u_a,u_b\), with no constant term.
+
+For any \(c_0\in(0,1)\), along unbounded primes choose two distinct
+neighboring grid angles tending to \(\arccos c_0\). They eventually lie
+in \((0,\pi/2)\), and their cosine averages tend to \(c_0\).
+
+Finally \(w=2\cos\theta_B=u_a+u_b-2\) has trace \(-2d-2\).
+Were \(e^{\ii\theta_B}\) a root of unity, every conjugate of \(w\)
+would be in \([-2,2]\); every embedding of \(E\) restricts to such a
+conjugate. Its trace could not be less than \(-2d\).
+Algebraicity follows from \(x^2-wx+1=0\).
+\end{proof}
+
+% PROV-INTERNAL: NONRESONANT_BRANCH_EXPONENTIAL_CUTOFF.md, lines 5-21.
+% RECONSTRUCTION: nonzero integer resultant and a product estimate.
+\begin{lemma}[Exponential separation]\label{lem:resultant}
+For the fixed algebraic number \(\xi=e^{-\ii\theta_B}\) there is
+\(A>0\) such that \(\lvert1-\xi^N\rvert\ge e^{-AN}\) for every \(N\ge1\).
+\end{lemma}
+\begin{proof}
+Write its primitive integer minimal polynomial as
+\(P(X)=a_d\prod_{\nu=1}^d(X-\xi_\nu)\), with \(\xi_1=\xi\).
+It has no root in common with \(X^N-1\): such a conjugate root would make
+its irreducible polynomial cyclotomic and would make \(\xi\) a root of
+unity. Consequently
+\[
+ 1\le |\Res(P,X^N-1)|
+ =|a_d|^N\prod_\nu|\xi_\nu^N-1|
+ \le |a_d|^N|1-\xi^N|\,2^{d-1}
+       \prod_{\nu>1}\max(1,|\xi_\nu|)^N.
+\]
+Increasing \(A\) absorbs all fixed factors for \(N\ge1\).
+\end{proof}
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/04_first_singular_amplitude.tex
+\section{The first singular form factor}
+\label{sec:first}
+Fix the family of Theorem~\ref{thm:prime} and put
+\[
+ N=N_0,\qquad k=N^2/2-1,\qquad
+ S_*=\cos\alpha+\cos\beta=2\cos\theta_*.
+\]
+All constants in this section are allowed to depend on this fixed \(N\).
+At the ordered lower chart \(y_0=e^{-\ii\alpha}\),
+\(z_0=e^{-\ii\beta}\), write \(y_j=r e^{\ii(-\alpha+u_j)}\) and
+\(z_j=e^{-\ii\phi_j}\). Define
+\[
+ v=\sum_j u_j,\qquad t_j=u_j-v/N,\qquad \sum_jt_j=0.
+\]
+The absolute Jacobian of \((v,t_1,\ldots,t_{N-1})\mapsto(u_1,\ldots,u_N)\)
+is one.
+
+\paragraph{Compatible localization.}
+Let \(\Omega^{\mathrm{dbl}}_{N,s}\) denote the complete normalized
+double-contour density in \eqref{eq:double}. Around each of the two
+all-equal lower \(y\)-configurations, choose a smooth angular weight
+\[
+ w_\gamma(\theta)=\eta_\gamma(v_\gamma)\chi_\gamma(t_\gamma),
+ \qquad \gamma\in\{\alpha,\beta\}.
+\]
+Here \(u_{\gamma,j}=\theta_j+\gamma\),
+\(v_\gamma=\sum_j u_{\gamma,j}\), and
+\(t_{\gamma,j}=u_{\gamma,j}-v_\gamma/N\).
+Choose \(\eta_\gamma=1\) on \(|v_\gamma|\le\delta/2\), supported
+in \(|v_\gamma|<\delta\), and \(\chi_\gamma=1\) near the zero shape,
+supported in a fixed small shape ball. Extend each weight smoothly by
+zero on the angular torus, with disjoint supports and values in \([0,1]\).
+The weights depend only on the \(y\) angles and are independent of
+\(s\), the \(x\) angles, and the varying evaluation radius.
+Thus the exact identity
+\[
+ T_N=I_\alpha+I_\beta+I_{\mathrm{rem}},\qquad
+ I_\gamma=\int w_\gamma\Omega^{\mathrm{dbl}}_{N,s},\qquad
+ I_{\mathrm{rem}}=\int(1-w_\alpha-w_\beta)
+                         \Omega^{\mathrm{dbl}}_{N,s}
+\]
+holds before any localization in \(x\).
+The remaining weight vanishes on an open neighborhood of both bad
+double-torus configurations. The classification and estimate in
+Lemma~\ref{lem:complement} therefore give
+\(\partial_s^j I_{\mathrm{rem}}=O(1)\) for every fixed \(j\).
+Its further smooth partition may depend on both sets of angles,
+since no residue calculation is applied to these complementary pieces.
+
+In each \(I_\gamma\), all \(x\) integrations remain unweighted.
+Lemma~\ref{lem:residue} consequently gives the reduced integral with
+the same \(y\)-weight. In this reduced local integral replace
+\(\eta_\gamma(v)\) by the indicator of \([-\delta,\delta]\).
+Their difference is supported where \(\delta/2\le |v|\le\delta\).
+Using the coefficients \(b,d\) computed below, choose the shape radius
+\(h\) so that \(dh^2\ll b\delta\), and then take \(\delta\) and
+the parameter neighborhood sufficiently small. On this edge region,
+the \(Y\) phase is separated by \(|v|\), while the distance of
+\(\Re\sum_j\phi_j\) from \(2\pi\Z\) is bounded below by
+\(b|v|-C(h^2+v^2+\eps)\). Both global denominators, and every local
+one-body and pair denominator, are therefore uniformly separated
+from zero. The replacement changes each fixed \(s\)-derivative by
+\(O(1)\), with the radius held fixed during differentiation.
+Only this hard mean segment is moved in Lemma~\ref{lem:mean}; the
+shape cutoff stays fixed. No nonholomorphic angular weight is moved
+through an \(x\) residue or a complex mean deformation.
+
+% PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md, lines 5-41, 55-69.
+% PROV-PRIMARY: TW2014 Appendix A; no printed amplitude is imported.
+\begin{lemma}[Physical mean residue]\label{lem:mean}
+Choose \(r=e^{-c_0\eps}\) as in Lemma~\ref{lem:residue}. The singular
+part of the localized chart is obtained by moving the real \(v\)-segment
+downward through \(Y=1\); the resulting coefficient is \(+2\pi\).
+At that residue the denominator satisfies
+\[
+ |1-Z(t,\se)|\ge c_1\bigl(\eps+\textstyle\sum_jt_j^2\bigr)
+\]
+on a sufficiently small fixed shape ball.
+\end{lemma}
+\begin{proof}
+Implicit differentiation of \(\cos\phi=S-\cos(-\alpha+u)\) gives
+\[
+ b=\phi_u=\frac{\sin\alpha}{\sin\beta}>0,\qquad
+ d=-\tfrac12\phi_{uu}
+   =\frac{S_*(1-\cos\alpha\cos\beta)}{2\sin^3\beta}>0.
+\]
+At the radial point,
+\[
+ \phi=\beta-\ii A_0\eps+bu-du^2
+       +O(\eps^2+\eps|u|+|u|^3),\quad
+ A_0=\frac{2\sin\theta_*-c_0\sin\alpha}{\sin\beta}.
+\]
+Choose \(c_0\) so that \(A_0>c_0\), in addition to global residue
+admissibility. On a rectangle \(|\Re v|\le\delta,\ -h_0\le\Im v\le0\),
+take the fixed shape support \(\sum t_j^2<h^2\) with \(dh^2\ll b\delta\).
+Take \(h_0\) sufficiently small but fixed and \(Nc_0\eps<h_0\).
+The \(Y\)-pole is \(v=-\ii Nc_0\eps\). The \(Z\)-pole is above the
+real mean line in the local model; throughout this rectangle a downward
+mean motion increases its damping. The side phases are separated by
+\(b\delta+O(h^2+h_0^2)\), and the bottom has fixed positive damping.
+All pair denominators remain nonzero since \(z_0^2\ne1\).
+Thus the three displaced sides, with any fixed number of \(s\)-derivatives,
+are bounded. A shape cutoff independent of \(v\) is legitimate here;
+smoothing the hard mean endpoints is supported on the separated sides.
+
+The downward closure is clockwise. Since
+\(\partial_v(1-Y)=-\ii\) at the pole, the orientation and derivative
+give \((-2\pi\ii)/(-\ii)=+2\pi\).
+There each \(y_j=e^{\ii(-\alpha+t_j)}\) lies exactly on the unit circle.
+On this compact regular arc, \(-\log|Z|\ge cN\eps\).
+The real phase \(g_\eps(\theta)=\Re\arccos(S(\se)-\cos\theta)\) has
+\(g_\eps''\le-c<0\), and
+\(N g_\eps(-\alpha)=N\beta+O(\eps^2)\).
+Taylor's integral remainder on \(\sum t_j=0\) supplies a phase
+separation \(c\sum t_j^2\) when that sum exceeds a sufficiently large
+multiple of \(\eps^2\). Below this scale the modulus separation
+controls it. Shrinking the ball prevents phase wrapping. Combining
+the two separations proves the asserted nonlinear bound.
+\end{proof}
+
+% PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md, lines 25-53.
+% RECONSTRUCTION: residue first, then an absolutely convergent beta integral.
+\begin{lemma}[Nonzero shape period]\label{lem:period}
+Let
+\[
+ a_0=\frac{N^2-1}{2},\quad Q=\frac{2N\sin\theta_*}{\sin\beta},\quad
+ \mathscr C_N=\frac1{\sqrt N}
+ \int_{\{\omega\in\R^N:\,\sum\omega_j=0,\ |\omega|=1\}}
+       \Delta(\omega)^2\,\dd\sigma(\omega)>0 .
+\]
+Then
+\begin{equation}
+ J_\beta=\int_{\R^{N-1}}\frac{\Delta(\tau)^2\,
+                  \dd\tau_1\cdots\dd\tau_{N-1}}
+                   {(Q-\ii d\sum_j\tau_j^2)^{k+1}}
+ =\frac{\mathscr C_N}{2}Q^{-1/2}(-\ii d)^{-a_0}
+                     B(a_0,1/2)\ne0. \label{eq:beta}
+\end{equation}
+Here \(\tau_N=-\sum_{j<N}\tau_j\), and the power is obtained by
+continuation from a quadratic coefficient with positive real part.
+\end{lemma}
+\begin{proof}
+Polar coordinates in the zero-sum hyperplane give radial numerator
+\(R^{N^2-2}\); the Euclidean-to-coordinate volume factor is \(1/\sqrt N\).
+The substitution \(u=R^2\) gives Euler's beta integral.
+Continuation to the coefficient \(-\ii d\) is dominated by a constant
+times \(R^{N^2-2}(1+R^2)^{-N^2/2}\), whose tail is \(O(R^{-2})\).
+All factors on the right of \eqref{eq:beta} are nonzero.
+\end{proof}
+
+The leading local density and pole derivative are
+\[
+ K_\beta=\frac2{N!}\,2^{-N(N-1)}(2\pi)^{-N}\sin(\beta)^{-N^2},
+ \qquad
+ D_s=-\frac{\ii N S'(\sstar)}{\sin\beta}
+     =\frac{2N e^{-\ii\theta_*}\sin\theta_*}{\sin\beta}.
+\]
+Indeed every pair has leading factor
+\(- (u_i-u_j)^2/(4\sin^2\beta)\), and each residue-angle measure
+has leading factor \(y_0z_0/(2\pi\ii\sin\beta)\).
+Since \(N\) is even and \(y_0^Nz_0^N=1\), their combined phase is
+\(\ii^{-N^2}=1\), giving \(K_\beta>0\).
+
+After the actual mean residue, put \(t=\sqrt\eps\,\tau\).
+The \(k\)-th derivative has leading coefficient
+\[
+ L_\beta=2\pi K_\beta(-1)^k k!D_s^kJ_\beta\ne0
+\]
+times \(\eps^{-1/2}\). The bound in Lemma~\ref{lem:mean} dominates
+the rescaled integrand by
+\(C\Delta(\tau)^2/(1+|\tau|^2)^{k+1}\).
+Lower pole orders vanish after multiplication by \(\sqrt\eps\).
+This is a dominated limit of the constrained shape integral,
+not of the joint unintegrated mean/shape absolute value.
+The sine powers in \(K_\beta D_s^kQ^{-1/2}d^{-a_0}\) sum to
+\(-N^2-k+1/2+3a_0=0\). Hence \(L_\alpha=L_\beta\)
+for the swapped ordered chart, including the phase. Exchanging all
+\(x\)'s with all \(y\)'s in \eqref{eq:double} also preserves orientation
+for even \(N\) and checks this equality before asymptotics.
+
+% PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md, lines 73-79.
+% PROV-PRIMARY: TW2014 Section III, proof of Lemmas 1-3 and Appendix B.
+\begin{lemma}[Complement of the two first charts]\label{lem:complement}
+At \(N=N_0\) all other localized charts of the original double contour
+have bounded derivatives of every fixed order on the exterior radial
+approach.
+\end{lemma}
+\begin{proof}
+The local singular-factor gradients in \cite{TW2014} are the two
+all-ones product vectors, pair vectors, and the dispersion vectors with
+entries \((\Im x_j,\Im y_j)\).
+A nonnegative zero combination cannot contain a pair vector:
+cancellation of its two positive entries would require two negative
+imaginary parts, whereas reciprocal coordinates have opposite imaginary
+parts. If both product vectors occur, every \(x_j,y_j\) is lower,
+the ratios \(\Im x_j/\Im y_j\) are equal, and the dispersion relation
+forces all \(x_j\)'s equal and all \(y_j\)'s equal. The strictness follows
+by differentiating that ratio along
+\(\cos\theta+\cos\varphi=S_*>0\). Both common values are \(N\)-th
+roots of unity. Theorem~\ref{thm:prime} leaves exactly the two charts.
+If only one product vector occurs, the other coordinates are all \(+1\)
+or all \(-1\). The former would make \(e^{-\ii\theta_B}\) an \(N\)-th
+root of unity; the latter requires a real cosine \(S_*+1>1\).
+Both are excluded.
+
+For a fixed smooth weight whose support avoids these two
+configurations, cover its support by finitely many compact localized
+pieces. On each piece choose a real separating direction \(e\) and
+\(\delta_*>0\) with \(e\cdot v_i\ge\delta_*\) for every active
+singular-factor vector \(v_i\). Shrink the piece once so that this
+separation persists uniformly for the nearby damped contours.
+
+Represent its \(\ell\) potentially singular factors by damped
+positive-half-line exponential integrals, and put
+\(R=\sum_{i=1}^{\ell}\xi_i\) for their nonnegative auxiliary
+parameters. The exponent \(g\) satisfies \(\Re g\le0\),
+\(|e\cdot\nabla g|\ge cR\), and every fixed angular derivative
+of \(g\) is \(O(R)\). An \(s\)-derivative of order \(j\), taken
+at fixed contour radius, adds a polynomial in the auxiliary parameters
+of degree at most \(j\), with uniformly bounded smooth coefficients.
+On \(R\ge1\), integrate by parts \(q=\ell+j+1\) times using
+\[
+ \mathcal L=\frac{e\cdot\nabla}{e\cdot\nabla g},
+ \qquad \mathcal L e^g=e^g.
+\]
+The transpose of this operator gains one power \(R^{-1}\) per
+iteration, including derivatives of its coefficients and the localized
+weight. The angular integral is therefore bounded by \(CR^{j-q}\).
+The auxiliary radial volume is \(R^{\ell-1}\dd R\), so the
+remaining tail is bounded by \(C\int_1^\infty R^{-2}\dd R\).
+The region \(R\le1\), and pieces with no singular factor, are bounded
+directly. The finite cover supplies common constants for each fixed
+\(N,j\). This proves in particular the bound for the remaining
+weight in the compatible localization above. It uses the local proof
+mechanism, not the non-Nickel hypothesis of the global theorem at
+the selected Nickel point.
+\end{proof}
+
+% PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md.
+% RECONSTRUCTION: Lemmas above; no extrapolation of a higher-index coarea bound.
+\begin{theorem}\label{thm:first}
+At the selected point,
+\[
+ T_{N_0}^{(k)}(\se)=2L_\beta\,\eps^{-1/2}+o(\eps^{-1/2}),
+ \qquad L_\beta\ne0.
+\]
+Every derivative of order \(0\le j<k\) of this first term is bounded
+on the radial approach. Every even \(N<N_0\) has bounded derivatives
+there as well.
+\end{theorem}
+\begin{proof}
+The compatible \(y\)-only partition gives the two reduced local
+integrals and a complement bounded by Lemma~\ref{lem:complement}.
+Replacing their smooth mean cutoffs by hard segments adds only bounded
+edge terms. The two actual mean residues therefore add with the
+displayed coefficients. For lower derivatives the constrained radial
+density at \(\eps=0\)
+has exponent \(N^2-2j-4\ge0\), so it is integrable.
+The displaced sides are bounded as before. Lower even orders are
+non-Nickel by Theorem~\ref{thm:prime}, and the fixed-order smoothness
+theorem of \cite{TW2014} applies.
+\end{proof}
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/05_uniform_tail_reduction.tex
+\section{Exact contour decomposition and quantitative requirements}
+\label{sec:tailreduction}
+For the remainder fix \((p,a,b)\), \(N_0=2p\), and \(k=N_0^2/2-1\).
+Set \(H=\log(1/\eps)\) and choose
+\begin{equation}
+ 0<\alpha_0<\frac1{2(k+2)},\qquad \lambda_*=\eps^{\alpha_0}.
+ \label{eq:alphachoice}
+\end{equation}
+Neither \(N_0\) nor \(k\) varies with \(\eps\).
+Let \(\Omega_{N,s}\) be the reduced holomorphic form in
+\eqref{eq:reduced}, including its \(1/N!\).
+Choose smooth periodic functions \(p,m,a\) with values in \([0,1]\)
+as follows, in angular representatives \(-\pi<\theta\le\pi\).
+The closed support of \(m\) is contained in a small neighborhood of
+\(-\theta_B\) within \((-\pi,0)\); \(m=1\) on an open neighborhood
+of the closed branch-cutoff supports in Lemma~\ref{lem:partition}.
+Thus it is one on the supports of all their finite jets as well.
+Choose a small fixed endpoint width \(\delta>0\) and take
+\[
+ a=0\ \hbox{off }[\delta,\pi-\delta],\qquad
+ a=1\ \hbox{on }[2\delta,\pi-2\delta].
+\]
+Make \(\delta\) small enough that the reflection of
+\(\operatorname{supp}m\) lies in the interior of the latter interval.
+Take \(p\) with closed support in \((0,\pi)\), equal to one on
+an open neighborhood of \([\delta,\pi-\delta]\).
+Smooth step functions give all these choices simultaneously.
+Their widths and the deformation strength are fixed in the order
+of Appendix~\ref{app:constants}, before \(\eps\to0\).
+The supports of \(p,m\) are disjoint, the upper inverse branch is
+inside \(a=p=1\), and \(\operatorname{supp}a\) and
+\(\operatorname{supp}a'\) have positive distance from both endpoints.
+In particular a named upper angle has \(\sin\theta\ge\sin\delta>0\).
+
+Define, with fixed deformation strength \(\tau>0\),
+\[
+ P=\sum_i p(\theta_i),\quad
+ h_i=-2\tau p(\theta_i)+\frac{\tau P}{2N}m(\theta_i),\quad
+ y_i(\lambda,\theta)=r e^{\ii\theta_i+\lambda h_i},
+ \qquad \psi(\theta)=\prod_i(1-a(\theta_i)).
+\]
+The letter \(P\) here is an occupancy sum, not the pair factor \(P_{ij}\).
+Write \(U_{\lambda,s}=\Phi_\lambda^*\Omega_{N,s}\).
+
+% PROV-INTERNAL: GLOBAL_DEFORMATION.md; GENERIC_UPPER_ANCHOR_AUDIT.md;
+% UPPER_CUTOFF_STOKES_RETRACTION.md; STOKES_TOP_FORM_ORIENTATION_REDERIVATION.md.
+% RECONSTRUCTION: exact holomorphic homotopy, matrix determinant, Cartan identity.
+\begin{proposition}[Exact weighted retraction]\label{prop:selector}
+For exterior \(s\) in its admissible neighborhood,
+\begin{align}
+ T_N&=F_N+K_N+S_N,\label{eq:FKS}\\
+ F_N&=\int(1-\psi)U_{1,s},\qquad K_N=\int\psi U_{0,s},\nonumber\\
+ S_N&=-2\ii\tau\int_0^1\sum_q\int
+                         (\partial_{\theta_q}\psi)U_{\lambda,s}\dd\lambda.
+ \label{eq:current}
+\end{align}
+The current has one named index \(q\) in \(\operatorname{supp}a'\),
+with \(p_q=1,\ p'_q=m_q=m'_q=0\); all other indices belong to
+the enlarged lower support \(K=\operatorname{supp}(1-a)\).
+\end{proposition}
+\begin{proof}
+We have \(\sum_i h_i\le-3\tau P/2\), so \(|Y|<1\).
+An inward radial motion on an upper angle and an outward radial motion
+on a lower angle both increase \(\Im W\):
+\(\partial_{\log|y|}\Im W=-\cosh(\log|y|)\sin\theta\).
+Thus all \(z_i\)'s stay on the interior sheet. Neither \(1-Z\)
+nor a denominator \(1-z_iz_j\) vanishes. The canceled pair expression
+has no remaining \(1-y_iy_j\) pole. This proves legality for the full
+closed homotopy.
+
+Normalize the angular Jacobian row \(i\) by \(y_i\). Its matrix is
+\[
+ M_{ij}=d_i\delta_{ij}+\frac{\lambda\tau}{2N}m_i p'_j,\qquad
+ d_i=\ii+\lambda\left(-2\tau p'_i+\frac{\tau P}{2N}m'_i\right).
+\]
+Because \(m_ip'_i=0\), \(\det M=\prod_i d_i\); all factors are
+nonzero and its absolute value is bounded by \(C^N\).
+At a named \(q\), both the row and column of \(M\) are zero
+off the diagonal and \(d_q=\ii\). Replacing angular column \(q\)
+by the homotopy velocity multiplies the determinant by
+\((-2\tau)/\ii=2\ii\tau\).
+Cartan's formula on the closed torus gives
+\[
+ \partial_\lambda\int\psi U_{\lambda,s}
+ =-2\ii\tau\sum_q\int(\partial_{\theta_q}\psi)U_{\lambda,s}.
+\]
+The unweighted integral is homotopy invariant. Integrating this identity
+and separating the selected part proves \eqref{eq:FKS}.
+\end{proof}
+
+No equality is claimed between an individually weighted original chart
+and the same weighted deformed chart. The current is indispensable.
+All \(s\)-derivatives are taken on the entire fixed interval
+\([0,1]\) before splitting the derivative density at \(\lambda_*\).
+Thus no derivative of that split endpoint enters.
+
+% PROV-INTERNAL: GENERIC_PAIR_TAIL.md; L2_PAIR_TAIL.md.
+% RECONSTRUCTION: exact Schur identity, convolution and matching count.
+\begin{proposition}[Ultra-high orders]\label{prop:ultrahigh}
+For fixed \(\sstar\) and \(0\le j\le k\), there are constants
+\(C_0,C_1,c>0\), independent of \(N,\eps\), such that
+\[
+ |T_N^{(j)}(\se)|
+ \le C_j\eps^{-j-2}\left(\frac{C_1(H+1)}{\sqrt N}\right)^N.
+\]
+For a sufficiently large fixed \(C_H\),
+the sum over even \(N\ge C_H(H+1)^2\) is \(o(\eps^A)\)
+for every fixed real \(A\).
+\end{proposition}
+\begin{proof}
+On the original \(c\eps\) disk, each root lies in the lower unit
+half-disk. The identity
+\[
+ |1-zw|^2-|z-w|^2=(1-|z|^2)(1-|w|^2)+4\Im z\Im w
+\]
+and the Schur identity give
+\(|\Pf A(z)|=\prod_{i<j}|(z_i-z_j)/(1-z_iz_j)|\le1\).
+The product numerator is bounded by \(C^N\) and the two global
+denominators below by \(c\eps\).
+At the two simple inverse-dispersion branch angles,
+\(|R(re^{\ii\theta};s)|^2\le C/(\eps+\dist(\theta,\{\pm\theta_B\}))\).
+Its squared \(L^2\) norm is \(O(H+1)\). The \(y\)-pair kernel has a
+majorant depending only on \(\theta_i+\theta_j\), with \(L^1\) norm
+\(O(H+1)\). Circular convolution and Cauchy--Schwarz therefore bound
+one matched weighted pair integral by \(C(H+1)^2\).
+
+The \(y\)-Pfaffian has \(N!/[2^{N/2}(N/2)!]\) matchings.
+Each matching factorizes after these majorants. Dividing by \(N!\)
+and using \((N/2)!\ge(N/(2e))^{N/2}\) proves the undifferentiated
+bound. Cauchy on the same disk adds \(j!(c\eps)^{-j}\).
+Choose \(C_H\) so that the bracket is at most \(1/2\) at the threshold.
+The summed bound is then
+\(C_j\eps^{-j-2}2^{-C_H(H+1)^2}\), which has the stated decay.
+\end{proof}
+
+For \(N<C_H(H+1)^2\), denote the already differentiated,
+angularly integrated current by
+\begin{gather*}
+ \mathcal J_{N,j}(\lambda)
+   =-2\ii\tau\sum_q\int(\partial_{\theta_q}\psi)\,
+              \partial_s^j U_{\lambda,s}\big|_{s=s_\eps},\\
+ B_{N,j}=|K_N^{(j)}(s_\eps)|
+       +\left|\int_0^{\lambda_*}\mathcal J_{N,j}(\lambda)\dd\lambda\right|.
+\end{gather*}
+The quantitative requirements are
+\begin{align}
+ \sum_N|F_N^{(j)}|
+   &\le \exp(C_j\log^2(H+2)),\label{eq:reqF}\\
+ \sum_N\left|\int_{\lambda_*}^1
+               \mathcal J_{N,j}(\lambda)\dd\lambda\right|
+   &\le C_j\eps^{-\alpha_0(j+2)},\label{eq:reqLS}\\
+ B_{N,j}
+   &\le C_j^N\eps^{-j-2}e^{-\kappa N^2}
+             &&(N\ge D\sqrt H),\label{eq:reqhigh}\\
+ B_{N,j}
+   &\le \exp(C_jN\log(N+1))(H+N)^{C_j}
+             &&(N_0+2\le N<D\sqrt H).\label{eq:reqinter}
+\end{align}
+The sums are over even tail orders \(N>N_0\) below \(C_H(H+1)^2\).
+These are statements with fixed point and \(j\), followed by constants,
+followed by a single sufficiently small \(\eps_0\), and only then all
+orders in the indicated window.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/06_shifted_contour_F.tex
+\section{The final selected contour}
+\label{sec:F}
+% PROV-INTERNAL: UPPER_SELECTED_MATCHING_FRESH_RECONSTRUCTION.md;
+% GENERIC_UPPER_ANCHOR_AUDIT.md; UPPER_SELECTED_MATCHING_RECHECK.md.
+\begin{proposition}\label{prop:F}
+The bound \eqref{eq:reqF} holds for the final selected integral.
+\end{proposition}
+\begin{proof}
+Telescope \(1-\psi\). A named selected index has \(p_q=1\), hence \(P\ge1\).
+At \(\lambda=1\), this index is shifted inward by \(2\tau\).
+The endpoint separation above gives
+\(\Im W_q\ge\sinh(2\tau)\sin\delta\) at the radial center.
+The interior root therefore stays in a strict subdisk, uniformly
+on the selected support. It supplies a fixed \(Z\)-gap, and
+\(\sum h_i\le-3\tau P/2\) supplies a fixed \(Y\)-gap.
+Every true lower branch index is on \(m=1,p=0\) and has
+\(\Im W\ge cP/N\), so its residue factor is at most \(C\sqrt N\).
+Other roots are in a compact regular set or on the shifted upper
+branch. The one-body product and pullback Jacobian cost
+\(C^N N^{N/2}\).
+
+These statements continue to the common disk \(|s-\se|\le c/N\):
+the lower branch margin is \(c'/N\), compact roots move \(O(1/N)\),
+and the fixed anchor absorbs the total compact-root inflation
+\(\exp(CN(c/N))\) after the disk constant is made small.
+The integral on this disk is holomorphic because the contour weights
+are fixed in \(s\). Only the original undeformed representation needs
+the smaller \(c\eps\) disk.
+
+The assignments in the following absolute estimates are made
+pointwise at each fixed \(s\). Their domains need not be holomorphic
+in \(s\), and no assigned integral will be differentiated.
+Let \(M\) be the number of indices outside the true lower branch core.
+Split their compact \(z\)-images into a strict interior group and a
+compact lower-arc group. On this disk, same-group compact Schur
+pairs have modulus at most \(q<1\); cross compact pairs are at most
+\(1+C/N\); branch/compact pairs are at most \(1+C/\sqrt N\);
+branch/branch pairs are at most one.
+Since the same-group count is at least \(M^2/4-M/2\),
+\[
+ |\Pf A(z)|\le
+ \exp(CN+CM\sqrt N-aM^2)\le C_1^N e^{-a_1M^2}.
+\]
+The last inequality uses
+\(CM\sqrt N\le(a/2)M^2+C^2N/(2a)\); the mixed inflation cannot be
+dropped without this step.
+
+Every \(y\)-pair with a true branch index is bounded. Indeed at
+reciprocal angles its reflected upper partner has \(p=1\), and
+the negative shift \(-2\tau\) dominates the possible positive
+lower shift \(\tau P/(2N)\le\tau/2\).
+For two compact angles write
+\(d=\dist(\theta_i+\theta_j,2\pi\Z)\).
+At exact reciprocity \(h_i+h_j\le0\) for every \(P/N\in[0,1]\);
+smoothness gives \(h_i+h_j\le Ld\).
+For \(d\le c\eps\) the negative base \(2\log r\) bounds the
+modulus gap below by \(c'\eps\); for larger \(d\) the phase
+bounds it below by \(c'd\). Thus
+\[
+ |A(y_i,y_j)|\le\frac C{\eps+d}.
+\]
+This majorant is independent of all other angles, including the
+coupled scalar \(P\). Its matched two-angle integral is \(O(H+1)\).
+
+Write the \(y\)-Pfaffian matrix as \(A_0+E\), where \(E\) has entries
+only between compact indices and \(A_0\) has bounded entries.
+Expand in an even compact subset of size \(2r\). The remaining
+Pfaffian minor is at most \(C^N N^{(N-2r)/4}\) by Hadamard.
+There are at most \(N^{3r}\) coarse choices of subset and matching;
+their disjoint kernels have integral at most \((C(H+1))^r\).
+As \(r\le M/2\), a sufficient bound is
+\[
+ \int|\Pf A(y)|\le C^N N^{N/4}(CN^3(H+1))^M.
+ \]
+Combine these bounds and \(N!\ge(N/e)^N\) to obtain, for each assignment,
+\[
+ |F_{N,\mathrm{assignment}}(s)|
+ \le C^N N^{-N/4}(CN^3(H+1))^M e^{-a_1M^2}.
+ \]
+At most \(C^N\) assignments and a polynomial number of named indices
+are absorbed by increasing \(C\). For \(N<C_H(H+1)^2\), completing
+the square in \(M\) costs \(\exp(C\log^2(H+2))\).
+This gives the same bound for the complete \(|F_N(s)|\) throughout
+the common disk. Its fixed angular weights and the uniform integrable
+majorant above make \(F_N\) holomorphic on a neighborhood of that
+closed disk, after decreasing \(c\) once. Apply Cauchy to this complete
+integral:
+\[
+ |F_N^{(j)}(\se)|\le j!\left(\frac Nc\right)^j
+       \sup_{|s-\se|\le c/N}|F_N(s)|.
+\]
+No analytic dependence of the pointwise assignments is needed.
+Since \(\sum_N C^N N^{-N/4+j}\) converges, this proves \eqref{eq:reqF}.
+\end{proof}
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/07_original_contour_K.tex
+\section{The original contour and the all-branch region}
+\label{sec:K}
+% PROV-INTERNAL: NESTED_ANGULAR_PARTITION.md;
+% SECOND_FAMILY_DESOURCE_SUPPORT_MATRIX.md, lines 21-31;
+% SECOND_FAMILY_TAIL_GLOBAL_JET_AUDIT.md.
+\begin{lemma}[Fixed support partition]\label{lem:partition}
+The original \(K\)-integral has a finite smooth partition into an
+all-lower-branch region and regions of the following types: a compact
+left root with a modulus gap, a separated compact/true-branch pair,
+and an all-compact right region. The partition uses at most \(C^N\)
+labels, and every finite cutoff jet retains its named anchor and its
+stated support.
+\end{lemma}
+\begin{proof}
+Use \(u=\theta+\theta_B\) near the lower branch. Fix a small
+\(\delta_B>0\) and a large fixed \(L\).
+Take \(\chi_B=1\) for \(|u|\le\delta_B/2\), supported in
+\(|u|\le\delta_B\). Take \(\chi_{\mathrm{in}}=1\) for
+\(|u|\le r_0=\delta_B/(2L^2)\), supported in \(|u|\le2r_0\).
+The deformation function \(m\) is one on a neighborhood of these
+supports.
+Split \(1=\prod\chi_B+(1-\prod\chi_B)\) and telescope the second
+term. It has a named \(q\) with \(|u_q|\ge\delta_B/2\),
+including on the support of every derivative of that named factor.
+Expand the other coordinates with \(1=\chi_{\mathrm{in}}+(1-\chi_{\mathrm{in}})\).
+
+To make the left/right labels periodic, choose an open arc \(J\)
+whose closure lies inside the upper \(a=1\) plateau. Cut the circle
+at a point of \(J\) and unwrap the angle on its complement. Near
+\(-\theta_B\), use \(u=\theta+\theta_B\) and a smooth right step
+which is zero for \(u\le-r_0/4\) and one for \(u\ge r_0/4\).
+Away from this local transition keep its value constant on each
+side, and return smoothly from one to zero inside \(J\).
+This defines a smooth periodic right label; the left label is its
+complement.
+
+At the branch transition every derivative of the products with
+\(1-\chi_{\mathrm{in}}\) vanishes, since \(\chi_{\mathrm{in}}=1\) there. The additional
+transition inside \(J\) is also harmless: \(1-a\) vanishes there
+with all its jets. Thus the full \(K\)-weight and every current
+weight \(\partial_{\theta_q}\psi\), together with all their jets,
+vanish whenever any coordinate lies in \(J\). For the named current
+coordinate this follows from \(a'=0\); for every other coordinate
+it follows from its factor \(1-a\). On the support of any relevant
+weighted jet the labels therefore select the required side.
+On the transition of \(\chi_{\mathrm{in}}\) they are constant. Every effective
+compact label excludes a fixed branch neighborhood.
+If a true-branch label occurs, the outer
+\(q\) and a true-branch \(j\) satisfy
+\(|b_j|\ge4|b_q|\) after choosing \(L\) large, unless a left root
+already supplies a modulus gap.
+With no branch label, all roots are compact; either one is left or
+all are right. Finite product differentiation creates at most
+\(N^{O(j)}\) terms and preserves the supports just described.
+\end{proof}
+
+% PROV-INTERNAL: PAIR_CONSTANTS_COMPLEX_DISK_FRESH_AUDIT.md;
+% GLOBAL_PAIR_CONSTANTS_INTERFACE.md; PAIR_COMPACTNESS_ENDPOINT_EQUALITY_AUDIT.md.
+\begin{lemma}[Pair suppression at radial centers]\label{lem:contraction}
+After the fixed branch margins are chosen, the endpoint slivers and
+deformation strength can be chosen so that at \(s=s_\eps\), on
+\(K^N\) and on each Stokes support with one named \(q\),
+\[
+ \left|\prod_{i<j}P_{ij}\right|\le C^Ne^{-\kappa N^2},
+ \qquad \kappa>0 .
+\]
+This is uniform for \(0\le\lambda\le1\), all permitted occupancies
+\(P/N\in[0,1]\), and sufficiently small \(\eps\).
+\end{lemma}
+\begin{proof}
+On the closed lower semicircle both \(y\) and \(z\) lie in lower
+unit half-disks, and the Schur inequality gives \(|P_{ij}|\le1\).
+Cover that semicircle by a narrow branch group \(B\), a left compact
+group \(L\), and a right compact group \(R\). Both compact groups
+exclude a fixed neighborhood of the exact branch. On \(B^2\), the
+identity \(P_{ij}=(\phi_i-\phi_j)^2A_s\) gives a strict bound after
+\(B\) is shortened. On \(L^2\), the \(z\)-roots are in a strict
+subdisk. On \(R^2\), they lie in a compact lower arc separated from
+the real axis. The Schur inequalities are strict in both cases.
+On the limiting circle, when both variables approach the same
+endpoint, \(y_i=y_j=1\)
+or \(y_i=y_j=-1\), the canceled numerator vanishes and its
+denominator is nonzero. Endpoint--compact strictness is asserted
+only within the same group. The endpoint \(y=-1\) belongs to
+\(L\), whose \(z\)-roots lie in a strict real subinterval of
+\((0,1)\); the endpoint \(y=1\) belongs to \(R\), whose
+\(z\)-roots lie on a compact lower arc separated from the real
+axis. Thus every same-group supremum is \(q<1\).
+
+Cross-group endpoint pairs need not be strictly contractive.
+For example, at the limiting circle, if \(y_1=1\) and
+\(y_2=e^{\ii\theta}\) lies in the left compact group, then
+\(z_1=\xi\), \(z_2=t\in(0,1)\), and
+\[
+ P_{12}=\frac{\xi-t}{1-\xi t},\qquad |P_{12}|=1.
+\]
+Similarly \(y_1=-1\) with a point in the right compact group
+can give equality. The opposite endpoints \(1,-1\) also form
+a cross-group pair, not a same-endpoint collision.
+It is essential to exclude the exact branch from \(L,R\):
+\(|P(y_B,1)|=|P(y_B,-1)|=1\).
+All these cross-group equalities are allowed by the subsequent
+\(1+\eta\) bound; no uniform strict bound for all pairs is used.
+
+The canceled pair is continuous on these resolved compact pair
+sets, including the double branch. Choose \(q'\in(q,1)\), followed
+by \(\eta>0\) with
+\(\log(1+\eta)<-\log(q')/4\). Choose the endpoint slivers and
+\(\tau\) sufficiently small to retain the same-group bound \(q'\)
+and cross-group bound \(1+\eta\), uniformly for the two real
+parameters \(\lambda,P/N\in[0,1]\). These radial deformations
+move the lower branch into the protected interior sheet.
+There is no upper inverse branch on the \(K\) or transition
+support. This is a compactness argument for the complete
+canceled pair, not separate bounds for two possibly singular
+Schur factors.
+
+For \(n_B+n_L+n_R=N\), the same-group count is at least
+\(N^2/6-N/2\). The cross-group count is at most \(N^2/3\).
+The chosen slack makes their combined logarithmic quadratic
+coefficient strictly negative. For a Stokes term apply this
+count to the \(N-1\) lower variables. The named upper compact
+\(q\) has at most \(N-1\) additional pairs, each uniformly
+bounded: its \(z_q\) is separated from the inverse of a lower
+root, including the branch root. These pairs cost \(C^{N-1}\).
+\end{proof}
+
+\begin{lemma}[The original parameter disk]\label{lem:originaldisk}
+For a sufficiently small fixed \(c>0\), the original contour
+and all \(K\) and Stokes transition densities are holomorphic
+on \(|s-s_\eps|\le c\eps\). On these supports,
+\[
+ |1-Y|,\ |1-Z|\ge c'\eps,\qquad
+ \left|\prod_{i<j}P_{ij}\right|\le C^Ne^{-\kappa' N^2}.
+\]
+The integrated one-body majorants and contour Jacobian cost
+at most \(C^N\), uniformly in \(N\) and \(0\le\lambda\le1\).
+\end{lemma}
+\begin{proof}
+The undeformed dispersion has \(\Im W\ge c_2\eps\).
+Every permitted radial motion increases this quantity, as in
+Proposition~\ref{prop:selector}; reducing \(c\) preserves a
+fixed fraction of the margin on the disk. Each root is then
+in the lower unit half-disk with attenuation at least \(c_3\eps\).
+Thus the product gaps are bounded below by a constant times
+\(\min(1,N\eps)\), which is at least a constant times \(\eps\).
+The contour \(Y\) is independent of \(s\).
+
+Near the lower branch put \(t=\lambda P/N\),
+\(E=\eps+t\), and \(\delta=|s-\se|\le c\eps\).
+On its true plateau, write
+\(y=e^{v+\ii\vartheta}\), where
+\(v=-c_0\eps+\tau t/2\) and \(\vartheta=-\theta_B+u\).
+The exact identities
+\[
+ \Re W=\Re S-\cosh v\cos\vartheta,\qquad
+ \Im W=\Im S-\sinh v\sin\vartheta
+\]
+give, with \(D_B=1-W\) and \(a_B=\sin\theta_B>0\),
+\[
+ |\Re D_B-a_Bu|
+ \le C(u^2+\eps^2+t^2+\delta),\qquad
+ \Im W\ge c_bE-C_S\delta\ge(c_b/2)E.
+\]
+Here the last inequality holds after reducing the disk constant
+\(c\). All constants depend only on the fixed point and margins.
+In particular, the real branch-center displacement on this disk is
+\(O(\eps^2+t^2+\delta)\): the parameter perturbation cannot be
+omitted from the radial-center estimate.
+
+Choose a fixed branch radius \(h\) and a fixed \(K\ge1\).
+If \(|u|\le KE\), the imaginary margin gives
+\(|D_B|\ge c_b(|u|+\eps)/(2(K+1))\).
+If \(KE<|u|\le h\), then
+\(u^2\le h|u|\), \(\eps^2+t^2\le E^2\le h|u|/K^2\),
+and \(\delta\le cE\le c|u|/K\).
+Choose \(h,K,c\) so that
+\(C(h+h/K^2+c/K)\le a_B/2\), in addition to the previous margins.
+Then \(|\Re D_B|\ge a_B|u|/2\) in this second region.
+These choices are independent of \(N,\eps,\lambda,P\).
+Since \(W+1\) stays separated from zero on the fixed branch arc
+and \(R=z/\sqrt{W^2-1}\), both regions yield
+\[
+ |R(y;s)|\le \frac{C}{\sqrt{|u|+\eps}}
+\]
+uniformly on the full disk. The upper branch is absent from
+these supports; the remaining compact factors are bounded.
+The displayed majorant does not contain the coupled quantity
+\(P\), and its integral on \(|u|\le h\) is at most \(4C\sqrt h\).
+Thus its product can be integrated with cost \(C^N\) without
+treating \(P\) as constant. The inverse-product numerator
+and the Jacobian in Proposition~\ref{prop:selector} also cost \(C^N\).
+
+A branch root moves by \(O(\sqrt{\eps})\) at most on the disk;
+compact roots move by \(O(\eps)\). The resolved complete-pair
+continuity and the strict slack of Lemma~\ref{lem:contraction}
+therefore persist, uniformly in all occupancies. Counting pairs
+as in that lemma proves the smaller positive \(\kappa'\).
+No large-\(\lambda\) estimate is used here.
+\end{proof}
+
+% PROV-INTERNAL: GENERIC_BRANCH_REAL_PHASE_GEOMETRY.md;
+% ALL_B_LIE_NUMERATOR_DESOURCE.md.
+\begin{lemma}[Branch geometry]\label{lem:branch}
+On a sufficiently small original lower-branch arc,
+\[
+ 1-W=a_Bu-\ii b_B\eps+O(u^2+\eps|u|+\eps^2),
+ \quad a_B=\sin\theta_B>0,\quad b_B=2\sin\theta_*-c_0a_B>0.
+\]
+With \(\phi=\arccos W\) on the fourth-quadrant sheet,
+\begin{align*}
+ |\phi'(u)|&\asymp(|u|+\eps)^{-1/2},&
+ \int_B|\phi'(u)|\dd u&\le C,\\
+ -\Im\phi(u)&\ge c\sqrt{|u|+\eps}\quad(u\le0),&
+ x'(u)&\asymp(u+\eps)^{-1/2}\quad(u\ge0),
+\end{align*}
+where \(x=\Re\phi\).
+For \(u\ge C_0\eps\), \(-x''(u)\ge c u^{-3/2}\).
+If \(M/\eps\to\infty\) uniformly and \(0\le m\le M/2\),
+\[
+ x'(m)-x'(M)\ge c(m+\eps)^{-1/2},\qquad
+ \frac{|\phi'(m)\phi'(M)|}{x'(m)-x'(M)}\le C M^{-1/2}.
+\]
+If \(M/2<m<M\) and \(m\gg\eps\), the latter ratio is at most
+\(C\sqrt M/(M-m)\).
+\end{lemma}
+\begin{proof}
+The displayed normal form follows by Taylor expansion of \(S\) and
+the fixed-radius \(y\). Put \(D=1-W\).
+The exact factorization \(\phi=\sqrt{2D}\,h(D)\), \(h(0)=1\),
+with analytic \(h\), yields the first estimates and an integrable
+branch length. On \(u\ge C_0\eps\), the leading terms
+\(x'(u)=\sqrt{a_B/2}\,u^{-1/2}(1+O(\eps/u+u))\) and
+\(-x''(u)\asymp u^{-3/2}\) have the stated signs after increasing
+\(C_0\) and shortening the arc.
+If \(m\ge C_0\eps\) and \(m\le M/2\), the relative error in
+\(x'\) can be made smaller than a fixed fraction of
+\(1-1/\sqrt2\); this gives the strong difference estimate.
+If \(m<C_0\eps\), its slope is at least \(c\eps^{-1/2}\),
+whereas the slope at \(M\) is \(o(\eps^{-1/2})\).
+For comparable \(m,M\), integrate the bound on \(-x''\).
+The sector containing \(\phi'\) also has width less than \(\pi\);
+integrating in \(u\) gives
+\(|\phi(u)-\phi(v)|\ge c|u-v|\).
+\end{proof}
+
+% PROV-INTERNAL: NONRESONANT_BRANCH_EXPONENTIAL_CUTOFF.md;
+% NONRESONANT_BRANCH_HOSTILE_AUDIT.md; TWO_NONZERO_G3_FRESH_COAREA_PROOF.md.
+\begin{proposition}[Nonresonant microcore]\label{prop:micro}
+For \(N_0+2\le N<D\sqrt H\), put
+\[
+ b_N=c_*e^{-(A+4)N}/N,\qquad
+ \psi_N=\prod_i\chi(u_i/b_N),
+\]
+where \(\chi=1\) on \([-1/2,1/2]\), supported on \([-1,1]\), and
+\(c_*>0\) is fixed and small. The all-\(B\) microcore contribution
+obeys, for every \(j\le k\),
+\[
+ |\partial_s^j I_{\mathrm{micro},N}|
+ \le \exp(C_jN^2)\,b_N^{(N^2-1)/2}.
+\]
+\end{proposition}
+\begin{proof}
+Uniformly in this window,
+\(N\eps e^{AN}\to0\) and \(\eps/b_N^m\to0\) for every fixed \(m\).
+Thus on the microcore and all its cutoff jets,
+\[
+ |Y-\xi^N|\le CN(\eps+b_N)\le\tfrac12e^{-AN},
+ \qquad |1-Y|\ge\tfrac12e^{-AN}.
+\]
+The one-phase field \(V_i=a_i=S'/W_{u_i}\) freezes each regular
+\(\phi_i\), hence \(Z\). In these coordinates the numerator is
+analytic times \(\Delta(\phi)^2\).
+Repeated Lie differentiation leaves the latter polynomial unchanged
+and leaves the \(Z\)-kernel simple. The \(Y\)-power is at most
+\(j+1\); its gap and the \(b_N^{-j}\) cutoff cost are
+\(\exp(O_j(N))\). Analytic products have bound \(\exp(O_j(N^2))\).
+
+The branch image lies in a fixed cone of width less than \(\pi\)
+and has radius \(C\sqrt{b_N}\). Decreasing \(c_*\) ensures
+\(N\sqrt{b_N}\) is small, so
+\(|1-Z|\ge c\sum_i|\phi_i|\).
+The rounded branch curve has a bounded number of monotone arms.
+The square-root normal form gives
+\[
+ \int_{\mathrm{core}}e^{-t|\phi|}|\dd\phi|
+       \le C\min(\sqrt{b_N},t^{-1}).
+\]
+Using \(1/\sum|\phi_i|=\int_0^\infty e^{-t\sum|\phi_i|}\dd t\)
+therefore costs \(C^N b_N^{(N-1)/2}\).
+The Vandermonde costs at most
+\(C^{N(N-1)}b_N^{N(N-1)/2}\). These estimates prove the claim.
+The logarithm of the displayed majorant is
+\[
+ -\frac{A+4}{2}N^3-\frac12N^2\log N+O_j(N^2).
+\]
+In particular it is at most \(-(A+4)N^3/2+O_j(N^2)\).
+Thus the sum of these bounds over all \(N\ge N_0+2\) is finite.
+\end{proof}
+
+% PROV-INTERNAL: TWO_NONZERO_G3_FRESH_COAREA_PROOF.md;
+% ALL_B_LIE_NUMERATOR_DESOURCE.md; NONRESONANT_BRANCH_HOSTILE_AUDIT.md.
+\begin{proposition}[The all-branch complement]\label{prop:allB}
+The remaining original all-\(B\) contribution, for
+\(N_0+2\le N<D\sqrt H\), is bounded through every \(j\le k\) by
+\[
+ \exp(C_jN\log(N+1))(H+N)^{C_j}.
+\]
+\end{proposition}
+\begin{proof}
+Telescope \(1-\psi_N\); each term has a named anchor \(a\) with
+\(|u_a|\ge b_N/2\), including all cutoff jets.
+Let \(t=N^{-1}\sum u_i\), \(\rho^2=\sum(u_i-t)^2\), and split
+smoothly at \(\rho_N=e^{-BN}\), using a function of
+\(\rho^2/\rho_N^2\). Put
+\[
+ \Gamma_* = \sup_{\substack{n\in\mathbb N\\n\ge N_0+2}}
+                   \frac{\log(16n/c_*)}{n}<\infty.
+\]
+Choose \(B>A+4+\max\{1,\Gamma_*\}\), increasing it as needed
+after the finite-jet constants have been fixed. Then
+\[
+ 2\rho_N\le b_N/8\qquad\hbox{for every }N\ge N_0+2.
+\]
+This is a support inclusion for all orders, not an asymptotic
+comparison repaired by enlarging finitely many estimate constants.
+
+On the far support \(\rho\ge\rho_N\), the maximal separation
+is at least \(\rho_N/\sqrt N\). The rational two-phase Lie
+calculus costs \(\exp(O_j(N\log N))\), including every exponential
+cutoff jet. The undifferentiated pairs retain
+\(\exp(-\kappa N^2+O_j(N))\).
+It remains to integrate two simple global kernels against
+\(\prod_i|\phi'_i|\dd u_i\).
+
+If all coordinates are nonnegative, their maximum \(M\ge b_N/2\).
+Select the actual minimum \(m\) and maximum \(M\) only now,
+after differentiation. For fixed other variables the real phase
+map is
+\[
+ (m,M)\longmapsto(F,G)
+    =(m+M+\mathrm{const},\,x(m)+x(M)+\mathrm{const}).
+\]
+Its Jacobian \(x'(m)-x'(M)>0\) makes it injective on each fixed-\(F\)
+extreme-index cell. Lemma~\ref{lem:branch} bounds the ratio of its
+two branch measures to that Jacobian by \(\exp(O(N))\):
+use \(M\ge b_N/2\) for \(m\le M/2\), and
+\(M-m\ge\rho_N/\sqrt N\) otherwise.
+Only \(m,M\) vary here; all other angles are fixed. Each unwrapped
+phase-image interval has bounded length, independent of \(N\), since
+\(m,M\) and \(x(m),x(M)\) range over fixed bounded intervals.
+The additive constants translate these intervals without changing
+their lengths. Thus each simple periodic phase integral costs
+\(O(H+N)\). The other branch lengths cost \(C^N\).
+
+For negative coordinates choose \(\delta_N=e^{-C_1N}\) with
+\(C_1>A+4+\max\{1,\Gamma_*\}\). Then \(\delta_N\le b_N/16\)
+for every \(N\ge N_0+2\). If some negative \(|u_v|\ge\delta_N\), then
+\(|1-Z|\ge e^{-O(N)}\); integrate the remaining \(Y\)-kernel
+in the named anchor, whose measure is at most \(e^{O(N)}\dd u_a\).
+If all negative magnitudes are smaller than \(\delta_N\), the
+named anchor is positive. Choose one negative \(v\); the bound
+\[
+ \frac{|\phi'(u_v)|}{|1-Z|}\le\frac C{|u_v|+\eps}
+\]
+has integral \(O(H+N)\). The positive anchor integrates the
+\(Y\)-kernel with cost \(e^{O(N)}(H+N)\).
+The scale inclusion already covers every finite order; any
+remaining finite-order constants only enlarge the numerical bound.
+This proves the far bound
+\(\exp(-\kappa N^2+O_j(N\log N))(H+N)^2\).
+
+On the near support, \(|u_i-t|\le\rho\le2\rho_N\le b_N/8\).
+The anchor \(|u_a|\ge b_N/2\) gives \(|t|\ge3b_N/8\), so
+all coordinates have the same sign and \(|u_i|\ge b_N/4\).
+Branch slopes and their fixed jets cost at most \(e^{C_jN}\).
+The full collision numerator has bound
+\(e^{CN^3}\rho^{N(N-1)}\); the factor \(e^{CN^3}\) is retained,
+not replaced by a polynomial. Lie and cutoff jets lose at most
+\(2j+1\) powers of \(\rho\).
+The shape measure contributes \(\rho^{N-2}\).
+For negative \(t\), the \(Z\)-gap is \(e^{-O(N)}\) and one mean
+phase integral suffices.
+For positive \(t\), strict concavity and zero first shape derivative
+give \(-\partial_\rho\Re\sum\phi_i\ge c\rho\), while the \(Y\)-phase
+is \(Nt+\mathrm{const}\). Their real Jacobian is at least \(cN\rho\).
+After coarea the conservative remaining power is
+\[
+ L=N^2-2j-4\ge N^2-2k-4\ge4N_0+2>0.
+\]
+Bound this power by \((2\rho_N)^L\) before integrating the phase
+kernels. At fixed shape direction, \(F=Nt+\mathrm{const}\) fixes
+\(t\), and strict monotonicity of \(G\) in \(\rho>0\) gives
+multiplicity one for the unwrapped map. Each phase lies in an
+interval of length at most \(CN\): the mean angle ranges over a
+fixed interval and each individual branch phase is bounded.
+The periodic-kernel estimate in Appendix~\ref{app:lie} therefore
+costs at most \(CN^2(H+N)^2\) for the two phases, rather than a
+single-period bound. For negative \(t\), the sole mean phase
+instead costs at most \(CN(H+N)\), with the separated \(Z\)-kernel
+already in the preceding estimate. These polynomial factors are
+absorbed in \(e^{C_jN\log(N+1)}\). The coarea variable is not
+integrated a second time. The bound is at most
+\[
+ e^{CN^3+C_jN\log(N+1)}(2\rho_N)^L(H+N)^2.
+\]
+Increasing \(B\) absorbs the cubic coefficient for all sufficiently
+large \(N\); finitely many remaining \(N\)'s cost a fixed constant.
+At fixed \(\eps>0\) the same positive collision power makes the
+full-equality puncture flux vanish at every preceding Lie stage.
+Thus the identities used on the punctured charts have no residual
+boundary term. The near and far bounds prove the proposition.
+\end{proof}
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/08_stokes_S.tex
+\section{Compact and mixed sectors; Stokes estimates}
+\label{sec:sectors}
+% PROV-INTERNAL: GENERIC_MIXED_STOKES_REDERIVATION.md;
+% SMALL_LAMBDA_LIE_ATLAS_AUDIT.md; NESTED_ANGULAR_PARTITION.md.
+\begin{proposition}[Separated mixed and left sectors]\label{prop:mixed}
+For \(N_0+2\le N<D\sqrt H\), the non-all-\(B\) original \(K\)
+sectors with a compact left root or a separated compact/branch
+pair, and the corresponding small-\(\lambda\) Stokes sectors,
+obey \eqref{eq:reqinter}. The differentiated current density
+obeys the per-order bound uniformly for \(0\le\lambda\le\lambda_*\).
+\end{proposition}
+\begin{proof}
+Use hybrid coordinates consisting of regular \(\phi_i\) for true
+branch indices \(J\) and original angles for the compact indices.
+All coefficient jets are bounded in these coordinates.
+For Stokes the named \(q\) lies on \(p=1,m=0\), and every true
+branch lies on \(m=1,p=0\); their angle variations preserve both
+\(P=\sum p_i\) and \(\sum m_i\) exactly.
+For original \(K\) the deformation is zero, so these occupancy
+constraints are unnecessary.
+
+Put \(a_i=(\partial_s\phi_i)/b_i\),
+\(b_i=\partial_{\theta_i}\phi_i\),
+\(A=\sum_{i\in J}a_i\), and
+\(D=\sum_{i\notin J}\partial_s\phi_i\).
+With selected \(j\in J\), let
+\[
+ X=\frac{D+b_qA}{b_j-b_q},\qquad
+ V_i=a_i\ (i\in J\setminus\{j\}),\quad
+ V_j=a_j+X,\quad V_q=-A-X .
+ \]
+All other velocities vanish. Direct substitution freezes \(Y,Z\)
+and every unselected branch phase. The residual branch velocity is
+\[
+ (\partial_s-V\cdot\nabla)\phi_j
+       =-\frac{D+b_qA}{1-b_q/b_j}.
+\]
+The support choice gives \(|b_q/b_j|\le1/4\).
+Since \(1/b_j\) is analytic and vanishes in its regular branch
+coordinate, this residual, its finite jets, and the compact
+velocity have only polynomial \(N\)-cost, uniformly in \(\eps,\lambda\).
+Here the hybrid top form can be written explicitly. Up to the
+unchanged factor \((Z^{-1}+Y^{-1})/[N!(1-Z)(1-Y)]\prod_{i<l}P_{il}\),
+its measure is
+\[
+ \prod_{i\in J}\left[-\frac{z_i}{\pi(1-y_i^{-2})}\dd\phi_i\right]
+ \prod_{i\notin J}\left[\frac{R_i y_i d_i}{2\pi\ii}\dd\theta_i\right].
+\]
+Indeed \(d_i=\ii\) on every true branch plateau, the angular
+determinant is \(\prod d_i\), and the hybrid change of variables
+has triangular determinant \(\prod_{i\in J}b_i\).
+This retains the full Jacobian of the coupled contour.
+
+For Stokes, \(V\cdot\nabla P=V\cdot\nabla\sum m_i=0\) identically
+on an open neighborhood of the support. The same is true for
+all parameter derivatives of this identity. Thus the coupled
+occupancy introduces no hidden branch motion at higher order.
+The actual current multiplier is
+\(-2\ii\tau\,\partial_q\psi\); its finite derivatives, and the
+derivatives of the nested partition, stay on these plateaus.
+Use the pullback recurrence \eqref{eq:pullbackLie} in the hybrid
+coordinates. Its residual coefficients have no difference pole,
+because \(1-b_q/b_j\) is separated from zero. Each fixed operation
+changes finitely many analytic pair or one-body factors and
+introduces at most polynomial \(N\)-cost. The remaining pair
+factors therefore retain
+\(C_j^N N^{C_j}e^{-\kappa N^2}\).
+
+For positive branch coordinates, the square-root normal form gives
+\(\Re b_j\ge c|b_j|\).
+The compact slope is dominated by the true branch slope; for a
+Stokes upper-right \(q\) it has the opposite sign in the limit.
+The phase map
+\((\theta_q,u_j)\mapsto(\sum\theta_i,\Re\sum\phi_i)\)
+has Jacobian \(\Re(b_j-b_q)\ge c|b_j|\)
+and is injective on fixed first-phase slices.
+It absorbs the selected branch measure, and each remaining phase
+kernel integrates with cost \(O(H+\log N)\).
+Every unselected branch measure has bounded integral.
+
+If a branch coordinate \(u_v<0\), its attenuation and branch measure
+give instead
+\[
+ \frac{|\phi'_v|}{|1-Z|}
+ \le\frac C{|u_v|+\eps+\lambda P/N}.
+\]
+Integrate this factor in \(u_v\), and the \(Y\)-phase in the compact
+\(q\). Both cost at most \(C(H+\log N)\).
+The phase statements use variables on true plateaus; therefore \(P\)
+does not vary during the selected integrations.
+These sign divisions are performed only on the final absolute integral.
+
+If a compact left root occurs, \(Z\) has a fixed modulus gap.
+Set \(V_i=a_i\) for branches and \(V_q=-A\), preserving \(Y\)
+and freezing every branch root. Differentiating the separated
+\(Z\)-kernel costs only polynomial \(N\), and \(q\) integrates
+the simple \(Y\)-kernel. A left \(q\) itself is allowed.
+The fixed support partition exhausts the asserted cases.
+\end{proof}
+
+% PROV-INTERNAL: COMPACT_R_RATIONAL_ATLAS_PROOF.md;
+% COMPACT_R_FRESH_KTH_COAREA_PROOF.md;
+% COMPACT_R_STOKES_EQUALITY_DESOURCE.md.
+\begin{proposition}[Compact right sectors]\label{prop:compactR}
+The all-compact right original \(K\) and small-\(\lambda\) Stokes
+sectors satisfy the same per-order bound in \eqref{eq:reqinter}.
+\end{proposition}
+\begin{proof}
+On a fixed compact right interval \(R\), separated from both branch
+points, put \(g(\theta)=\arccos(S_*-\cos\theta)\). Direct differentiation
+gives
+\[
+ g''(\theta)=-\frac{S_*(1-\cos\theta\cos g(\theta))}{\sin^3g(\theta)}
+            \le-c_R<0 .
+\]
+The coupled contour is smooth in the angles and analytic in \(s\).
+Its fixed finite jets differ from their limiting values by at most
+\(C_jN^{C_j}(\eps+\lambda)\). In the intermediate window this
+tends to zero uniformly. In particular
+\(\nabla^2 G\le-(c_R/2)I\) for \(G=\Re\sum\phi_i\).
+
+Write \(f_i=\partial_{\theta_i}\log Y\), \(g_i=\partial_{\theta_i}\sum\phi_i\),
+and \(Q_s=\partial_s\sum\phi_i\). Permutation symmetry makes
+\(D_{pq}=f_pg_q-f_qg_p\) zero at \(\theta_p=\theta_q\).
+Division by the difference is justified for these smooth angular
+functions by the integral of their transverse derivative; no analytic
+extension of the deformation bumps is assumed.
+At the limit it equals \(\ii[g'(\theta_q)-g'(\theta_p)]\).
+The strict curvature and the finite-jet perturbation bound yield
+\[
+ D_{pq}=(\theta_p-\theta_q)C_{pq},\qquad |C_{pq}|\ge c_R/2 .
+\]
+The field
+\(V_p=-Q_sf_q/D_{pq},\ V_q=Q_sf_p/D_{pq}\)
+freezes \(Y,Z\). Its simple difference pole, divergence, and
+rational real-angle weights have the two-power-per-Lie-order
+bound of Appendix~\ref{app:lie}.
+
+For separation \(d\ge N^{-K_0}\), all selected losses are polynomial
+in \(N\), and the unchanged pair factors retain quadratic suppression.
+For \(d<N^{-K_0}\), use \(\theta_i=t+\rho\omega_i\), with
+\(\sum\omega_i=0,\ \sum\omega_i^2=1\).
+Permutation symmetry gives \(\partial_\rho G(t,0,\omega)=0\),
+so \(-\partial_\rho G\ge c_R\rho/2\).
+The \(Y\)-phase is exactly \(Nt\); its real radial shifts do not
+alter that phase. The coarea Jacobian in \(t,\rho\) is at least
+\(c_RN\rho/2\). Convexity of the interval cube gives one interval
+on each shape ray, and monotonicity gives multiplicity one there.
+
+At a collision \(\theta_i=\theta_j\) the symmetric coupled shifts
+are equal, so \(y_i-y_j\) vanishes to first order. The raw numerator
+is bounded by \(C^{N^2}\rho^{N(N-1)}\), including its regular pair
+denominators. After \(j\) Lie jets and one conservative flux/cutoff
+loss, its remaining coarea power is
+\(L=N^2-2j-4\ge4N_0+2>0\).
+The exact inequalities \(d\le2\rho\) and \(\rho\le\sqrt N\,d\)
+show that the near region
+has \(\rho\le\sqrt N\,N^{-K_0}\), not literally \(\rho\le N^{-K_0}\).
+Taking fixed \(K_0>1\) and increasing it if needed gives
+\[
+ C^{N^2}(\sqrt N\,N^{-K_0})^L
+      e^{O_j(N\log(N+1))}(H+\log N)^2
+ \le e^{C_jN\log(N+1)}(H+N)^{C_j}.
+\]
+The simple phase kernels have attenuation floors \(cN\eps\) in
+this window. On each fixed shape ray, \(F=Nt\) and bounded individual
+phases put the unwrapped image inside a rectangle with side lengths
+at most \(CN\). The multiplicity-one statement above, followed by
+the interval estimate in Appendix~\ref{app:lie}, bounds its phase
+integral by \(CN^2(H+\log N)^2\). This explicit polynomial factor
+is included in \(e^{O_j(N\log(N+1))}\) in the displayed estimate.
+Counting the \(O(N^2)\) translated period boxes gives the same
+factor; it is not an additional multiplicity to charge twice.
+On the separated region the coarea \(1/\rho\) costs at most a
+polynomial.
+Selected-diagonal fluxes vanish by the rational numerator, and
+full-equality fluxes vanish by the positive collision exponent at
+fixed \(\eps\). The actual Stokes multiplier is smooth with bounded
+finite jets and its \(q\) remains on a plateau. This proves the
+claim uniformly in \(\lambda\le\lambda_*\).
+\end{proof}
+
+% PROV-INTERNAL: LARGE_LAMBDA_COMPLEX_DISK_AUDIT.md;
+% PAIR_CONSTANTS_COMPLEX_DISK_FRESH_AUDIT.md.
+\begin{lemma}[Protected large-current disks]\label{lem:protected}
+On a named Stokes support, let \(\lambda_*\le\lambda\le1\).
+For a sufficiently small constant \(c>0\), depending only on
+the fixed point and previously chosen margins, the density is
+holomorphic on
+\[
+ |s-s_\eps|\le\delta_s,\qquad \delta_s=c\lambda_*/N^2 .
+\]
+On this disk its product gaps are at least \(c'\lambda\),
+its complete pairs have bound \(C^Ne^{-\kappa' N^2}\), and its
+one-body factors have integrable majorants with total cost \(C^N\).
+\end{lemma}
+\begin{proof}
+There is a named upper compact \(q\) with \(p_q=1\), so \(P\ge1\).
+A true lower branch is on \(m=1,p=0\). At the radial center,
+\[
+ \Im W\ge c_1(\eps+\lambda P/N).
+\]
+The perturbation in \(W\) is \(O(\delta_s)\), a small fraction of
+this margin. These branch roots therefore stay on the lower
+interior sheet. Every other root stays a fixed distance from
+\(W=\pm1\), and its analytic continuation moves by \(O(\delta_s)\).
+It can have modulus up to \(\exp(C\delta_s)\); it is not
+asserted to remain inside the unit disk.
+
+At the radial center the named \(q\) satisfies
+\(|z_q|\le e^{-c_q\lambda}\), since it is on a compact upper
+transition arc and shifted inward by \(2\tau\lambda\).
+Consequently, on the disk,
+\[
+ |Z|\le\exp(-c_q\lambda+CN\delta_s)
+       \le e^{-c'_q\lambda}.
+\]
+Also \(|Y|\le e^{-3\tau\lambda P/2}\); \(Y\) is independent of
+\(s\). Both product gaps are thus at least \(c'\lambda\).
+
+A branch coordinate moves by at most
+\[
+ C\frac{\delta_s}{\sqrt{\eps+\lambda P/N}}
+ \le Cc\frac{\lambda_*}{N^2\sqrt{\lambda P/N}}.
+\]
+This tends uniformly to zero with the chosen disk constant.
+Together with the \(O(\delta_s)\) motion of compact roots,
+it preserves the resolved pair sets and the same-group/cross-group
+slack of Lemma~\ref{lem:contraction}. Applying that lemma's
+pair count proves the pair estimate on this disk.
+This step uses only the radial-center estimate, not any
+current integral or derivative bound.
+
+Finally put \(t=\lambda P/N\). The real displacement of the
+branch center is \(O(\eps^2+t^2+\delta_s)\), and the imaginary
+margin is at least \(c_2(\eps+t)\).
+Split into \(|u|\le C(\eps+t)\) and its complement.
+The imaginary margin bounds the square root in the first
+case, and the linear real term bounds it in the second, with
+\(\tau,c\) reduced once if necessary. Hence
+\[
+ |R(y;s)|\le C(|u|+\eps)^{-1/2}.
+\]
+This is a majorant independent of the coupled scalar \(P\);
+no integration treats \(P\) as a free constant. Compact
+one-body factors are bounded. The inverse-product numerator,
+the exact Jacobian, and its Stokes replacement minor cost
+\(C^N\). These facts prove all the stated assertions.
+\end{proof}
+
+\begin{proposition}[Large-\(\lambda\) current]\label{prop:largeS}
+For \(N<C_H(H+1)^2\), the differentiated current integrated over
+\(\lambda_*\le\lambda\le1\) satisfies \eqref{eq:reqLS}.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:protected} bounds the absolute integral of
+the undifferentiated density on its common disk by
+\(C^Ne^{-\kappa N^2}\lambda^{-2}\), including the named-index
+count in \(C^N\). The majorant is integrable and uniform on
+that disk, so the integrated density is holomorphic there.
+Cauchy's inequality of order \(j\) adds
+\(C_jN^{2j}\lambda_*^{-j}\). Integration in \(\lambda\) costs
+at most \(\lambda_*^{-1}\). Summing the convergent series
+\(\sum_N C^NN^{2j}e^{-\kappa N^2}\) gives even the stronger
+bound \(C_j\lambda_*^{-j-1}\). Its weaker version
+\(C_j\lambda_*^{-j-2}\) is \eqref{eq:reqLS}.
+By \eqref{eq:alphachoice}, this is \(o(\eps^{-1/2})\).
+\end{proof}
+
+% PROV-INTERNAL: SECOND_FAMILY_TAIL_GLOBAL_JET_AUDIT.md;
+% SMALL_LAMBDA_LIE_ATLAS_AUDIT.md; PAIR_CONSTANTS_COMPLEX_DISK_FRESH_AUDIT.md.
+\begin{proposition}[The remaining high orders]\label{prop:highKS}
+The bound \eqref{eq:reqhigh} holds on
+\(D\sqrt H\le N<C_H(H+1)^2\).
+\end{proposition}
+\begin{proof}
+Use Lemma~\ref{lem:originaldisk}, which establishes the original
+\(c\eps\) disk, the \(c\eps\) product gaps, integrable one-body
+majorants, and complete pair bound \(C^Ne^{-\kappa N^2}\).
+This invocation is independent of the large-current disk.
+Cauchy of order \(j\) therefore gives
+\(C_j^N\eps^{-j-2}e^{-\kappa N^2}\).
+Integrating the small-\(\lambda\) current only reduces this bound.
+The argument needs no enlarged Cauchy disk and makes no
+unbounded-\(N\) assertion that \(1-r^N\ge cN\eps\).
+\end{proof}
+
+% END SOURCE
+
+
+% BEGIN SOURCE: sections/09_natural_boundary.tex
+\section{Summation and the natural-boundary implication}
+\label{sec:conclusion}
+% PROV-INTERNAL: SECOND_FAMILY_TAIL_GLOBAL_JET_AUDIT.md;
+% SECOND_FAMILY_BULK_NATURAL_BOUNDARY_CANDIDATE.md;
+% TAIL_COMPOSITION_HOSTILE_AUDIT.md (summation only; old central connector excluded).
+\begin{theorem}[Uniform differentiated tail]\label{thm:tail}
+For each \(0\le j\le k\),
+\[
+ \sum_{\substack{N>N_0\\N\ {\rm even}}}|T_N^{(j)}(\se)|
+                =o(\eps^{-1/2}).
+\]
+\end{theorem}
+\begin{proof}
+The original full-order series is differentiated term by term at each
+fixed exterior point; Appendix~\ref{app:pfaffian} supplies local normal
+convergence of every fixed derivative. Only after differentiation are
+the orders split at the \(\eps\)-dependent thresholds.
+The ultra-high tail is negligible by Proposition~\ref{prop:ultrahigh}.
+For the remaining orders use the exact identity \eqref{eq:FKS}.
+The \(F\)-sum is \(\exp(O_j(\log^2H))\).
+The large-\(\lambda\) current is at most
+\(C_j\exp(\alpha_0(j+2)H)=o(e^{H/2})\).
+
+Take a common positive \(\kappa\) smaller than all pair-contraction
+constants, and then choose \(D\) with \(\kappa D^2>k+2\).
+The high-\(N\) original and small-\(\lambda\) pieces have sum at most
+\[
+ \exp\bigl((j+2-\kappa D^2)H+O_j(\sqrt H)\bigr)=o(e^{H/2}).
+\]
+All intermediate pieces are covered by the fixed partition,
+Propositions~\ref{prop:micro}, \ref{prop:allB}, \ref{prop:mixed},
+and \ref{prop:compactR}. Their sum has logarithm at most
+\(O_j(\sqrt H\log(H+2))=o(H)\).
+The small-\(\lambda\) integration contributes at most its length
+\(\lambda_*\le1\). The same choices work for all \(j\le k\), since
+this is a finite set. This proves the claimed absolute tail estimate.
+\end{proof}
+
+% PROV-INTERNAL: SECOND_FAMILY_BULK_NATURAL_BOUNDARY_CANDIDATE.md, lines 31-41;
+% FINAL_KILL_AUDIT_v1.md, lines 7-13.
+% PROV-PRIMARY: TW2014 fixed-order smoothness and bulk expansion.
+% RECONSTRUCTION: an explicit conditional implication, separate from sector validity.
+\begin{theorem}[Bulk noncancellation criterion]\label{thm:conditional}
+Assume the first-form-factor result of Theorem~\ref{thm:first} and
+the absolute tail estimate of Theorem~\ref{thm:tail} at every
+selected point. Then \(\T\) is a natural boundary of the exterior
+bulk susceptibility germ.
+\end{theorem}
+\begin{proof}
+Write \(U=\sum_{N\ {\rm even}}T_N\).
+The finitely many terms below \(N_0\) have bounded \(k\)-th derivatives.
+The first term has
+\(T_{N_0}^{(k)}=2L_\beta\eps^{-1/2}+o(\eps^{-1/2})\).
+The absolute higher-tail estimate excludes cancellation, giving
+\[
+ U^{(k)}(\se)=2L_\beta\eps^{-1/2}+o(\eps^{-1/2}).
+\]
+For \(j<k\), the finite first and lower terms are bounded and the
+higher tails are \(o(\eps^{-1/2})\). Since \(\M^2\) is analytic and
+nonzero near \(\sstar\), Leibniz's rule in \eqref{eq:bulk} therefore gives
+\[
+ \mathcal X^{(k)}(\se)
+ =4\M^2(\sstar)L_\beta\eps^{-1/2}+o(\eps^{-1/2}),
+ \qquad \M^2(\sstar)L_\beta\ne0.
+\]
+Holomorphic extension to a neighborhood of \(\sstar\) would bound this
+derivative on a sufficiently short radial segment, a contradiction.
+The selected points are dense in the upper-right arc; evenness and
+conjugation give density in all four quadrants. A neighborhood of
+any point of \(\T\), including an axis point, contains such a selected
+point. Hence no neighborhood permits an exterior holomorphic extension.
+The locally nonzero analytic factor \(\beta_{\mathrm{phys}}(s)\) transfers the same
+conclusion to the physical susceptibility on its chosen continuation.
+\end{proof}
+
+% PROV-INTERNAL: SECOND_FAMILY_BULK_NATURAL_BOUNDARY_CANDIDATE.md;
+% all active dependencies are itemized in the external source concordance.
+% RECONSTRUCTION: consequence of the first coefficient and the uniform tail.
+\begin{corollary}\label{thm:nb}
+For the zero-field isotropic infinite square-lattice Ising model, the
+unit circle in \(s=\sinh(2\beta_{\mathrm{phys}} J)\) is a natural boundary of the bulk
+susceptibility germ continued from the low-temperature side.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:conditional} using Theorems~\ref{thm:first}
+and \ref{thm:tail}.
+\end{proof}
+
+% END SOURCE
+
+\appendix
+
+% BEGIN SOURCE: appendices/A_cyclotomic_details.tex
+\section{Cyclotomic field intersection}
+% PROV-INTERNAL: TWO_NONZERO_PRIME_FAMILY.md, lines 16-40.
+% RECONSTRUCTION: explicit special case, including the classical irreducibility argument.
+\begin{lemma}\label{lem:cyclotomic}
+If \(p\) is prime and \(p\nmid n\), then
+\(\Q(\zeta_p)\cap\Q(\zeta_n)=\Q\).
+\end{lemma}
+\begin{proof}
+We recall the needed elementary irreducibility argument.
+The cyclotomic polynomial \(\Phi_m\) is monic with integer
+coefficients, obtained successively from \(X^m-1=\prod_{d\mid m}\Phi_d\).
+Let \(f\) be the monic irreducible polynomial of a primitive \(m\)-th
+root \(\zeta\). By Gauss's lemma, \(f\in\Z[X]\) divides \(\Phi_m\).
+For a prime \(q\nmid m\), suppose \(\zeta^q\) belonged to a different
+irreducible factor \(g\) of \(\Phi_m\). Then \(f\mid g(X^q)\).
+Modulo \(q\), \(g(X^q)=g(X)^q\); hence the reductions of \(f\)
+and \(g\) share a factor. Their product divides \(X^m-1\) modulo
+\(q\), making that polynomial have a repeated factor.
+But its derivative is \(mX^{m-1}\), coprime to \(X^m-1\)
+in characteristic \(q\), a contradiction.
+Thus taking a \(q\)-th power preserves the conjugacy class for
+every prime \(q\nmid m\). Factoring any positive integer coprime
+to \(m\) into such primes shows that every primitive \(m\)-th
+root is a conjugate. Therefore \(\Phi_m\) is irreducible and
+\([\Q(\zeta_m):\Q]=\varphi(m)\).
+
+For \(p\nmid n\), the compositum
+\(\Q(\zeta_p,\zeta_n)=\Q(\zeta_{pn})\), by Bezout's identity.
+Its degree is
+\(\varphi(pn)=\varphi(p)\varphi(n)\).
+This is the maximal possible product degree. If the intersection
+contained a field of degree greater than one, a basis calculation
+over that intersection would make the compositum degree strictly
+smaller than this product. The intersection is therefore \(\Q\).
+\end{proof}
+
+For the sparse relation used in Theorem~\ref{thm:prime}, a symmetric
+polynomial representing \(c_0+\sum c_j(\zeta^j+\zeta^{-j})\) has
+degree at most \(p-1\). Its vanishing makes it a scalar multiple
+of \(\Phi_p\). Comparing its paired coefficients gives precisely
+\(c_0=c_1=\cdots=c_d\). The requirement \(d\ge5\) is what rules
+out a nonzero relation involving at most four nonconstant positions.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: appendices/B_residue_and_local_model.tex
+\section{The order of local integrations}\label{app:local}
+% PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md, lines 31-69.
+In the homogeneous first-chart scaling \(v=\eps w\),
+\(t=\sqrt\eps\,\tau\), the two global denominators are
+\[
+ \eps(Nc_0-\ii w),\qquad
+ \eps(NA_0+\ii bw-\ii dR^2).
+\]
+The first pole is below and the second above the real \(w\)-line.
+For fixed \(R^2=|\tau|^2\),
+\[
+ \int_\R
+ \frac{\dd w}{(Nc_0-\ii w)(NA_0+\ii bw-\ii dR^2)^{k+1}}
+ =\frac{2\pi}{(N(A_0+bc_0)-\ii dR^2)^{k+1}}.
+\]
+The combined damping is \(N(A_0+bc_0)=Q\), independent of the arbitrary
+evaluation contour radius. The shape volume scales as
+\(\eps^{(N-1)/2}\), the Vandermonde as
+\(\eps^{N(N-1)/2}\), and the mean measure as \(\eps\).
+The two denominator powers are \(\eps^{k+2}\).
+The net exponent is \(-1/2\).
+
+The absolute joint integral before mean integration is not a permissible
+dominated-convergence majorant: its high-order \(Z\)-ridge moves with
+\(R^2\). The manuscript obtains an exact mean residue on a fixed physical
+rectangle first. Only its constrained shape integral has the integrable
+\(R^{-2}\) tail used for the limit.
+
+For completeness, \(\mathscr C_N>0\) needs no tabulated Mehta formula.
+The squared Vandermonde is nonnegative on the real shape sphere and
+positive in a neighborhood of any zero-sum vector with distinct
+coordinates. That sphere has finite measure. Thus the beta period's
+nonvanishing follows from an ordinary positive angular integral and
+nonzero gamma factors. No numerical coefficient is used.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: appendices/C_pfaffian_bounds.tex
+\section{Pfaffian identities and exterior convergence}\label{app:pfaffian}
+% PROV-INTERNAL: PFAFFIAN_TAIL.md; L2_PAIR_TAIL.md; RESIDUE_REDUCTION.md.
+% RECONSTRUCTION: rational-function induction rather than finite numeric verification.
+The following classical Schur identity and Hadamard's determinant
+inequality are standard tools, not originality claims. The needed
+Schur identity is proved here to fix its sign and convention.
+\begin{lemma}[Schur identity]\label{lem:schur}
+For even \(N\) and \(A_{ij}=(v_i-v_j)/(1-v_iv_j)\),
+\[
+ \Pf A=\prod_{i<j}\frac{v_i-v_j}{1-v_iv_j}.
+\]
+\end{lemma}
+\begin{proof}
+Set \(x_i=(1+v_i)/(1-v_i)\), so the matrix entries are
+\((x_i-x_j)/(x_i+x_j)\).
+Induct on even \(N\), regarding both sides as rational functions of
+\(x_N\). At a simple pole \(x_N=-x_i\), Pfaffian expansion in the
+last index gives residue
+\((-1)^{i+1}2x_i\) times the \((N-2)\)-Pfaffian.
+On the product side, each index between \(i\) and \(N\) contributes
+one minus sign when its two paired factors are evaluated there;
+the total sign is \((-1)^{N-i-1}=(-1)^{i+1}\).
+The residues agree by induction. The difference has no finite poles
+and is bounded at infinity, so is constant. At \(x_N=x_{N-1}\),
+both expressions vanish, fixing that constant to zero.
+Degenerate cases follow as rational identities by continuation.
+\end{proof}
+
+If an even \(m\)-by-\(m\) antisymmetric matrix has entries at most \(C\),
+then Hadamard's determinant inequality and
+\((\Pf A)^2=\det A\) give
+\(|\Pf A|\le C^{m/2}(m-1)^{m/4}\).
+The number of perfect matchings is
+\((N-1)!!=N!/(2^{N/2}(N/2)!)\).
+These are different bounds; the selected-contour proof uses bounded
+minors and an explicit expansion only for exceptional compact pairs.
+
+Fix a compact exterior neighborhood \(K\) and a slightly larger
+compact exterior neighborhood \(K_+\) with
+\(K\subset\operatorname{int}K_+\). Choose an admissible radius
+\(r<1\) and \(q<r\) such that every interior root satisfies
+\(|z(y;s)|\le q\) for \(s\in K_+\) and \(|y|=r\).
+On this compact set the dispersion quantity is bounded, say
+\(|W(y;s)|\le M_W\). The equation \(z+z^{-1}=2W\) gives
+\[
+ |z|^{-1}=|2W-z|\le 2M_W+q,
+ \qquad m:=(2M_W+q)^{-1}\le |z|.
+\]
+Thus individual one-body factors and pair matrix entries have bounds
+independent of \(N\), but the global inverse products need an
+exponential bound. In fact, \(|Y^{-1}|=r^{-N}\), and
+\[
+ |Z^{-1}+Y^{-1}|\le m^{-N}+r^{-N}\le 2C_1^N,
+ \qquad C_1:=\max\{m^{-1},r^{-1}\}.
+\]
+For even \(N\ge2\), the global gaps satisfy
+\(|1-Z|\ge1-q^N\ge1-q^2\) and
+\(|1-Y|\ge1-r^N\ge1-r^2\).
+Applying Hadamard's inequality to the two Pfaffians in
+\eqref{eq:reduced}, and absorbing the bounded one-body factors and
+contour measures into a constant to the power \(N\), yields
+\[
+ |T_N(s)|\le C_0\frac{C_2^N N^{N/2}}{N!}
+       \le C_0\left(\frac{eC_2}{\sqrt N}\right)^N,
+ \qquad s\in K_+.
+\]
+Here \(C_0,C_2\) are independent of \(N\), and the last inequality
+uses \(N!\ge(N/e)^N\).
+Choose \(d>0\) such that each closed \(d\)-disk centered in \(K\)
+lies in \(K_+\). Cauchy's inequality gives, for every fixed
+nonnegative integer \(j\),
+\[
+ \sup_{s\in K}|T_N^{(j)}(s)|
+ \le j!d^{-j}C_0\left(\frac{eC_2}{\sqrt N}\right)^N.
+\]
+The majorant is summable over even \(N\), proving local normal
+convergence of every fixed differentiated series and justifying
+termwise differentiation in the exterior. These compact-set
+constants need not stay bounded on approach to the unit circle;
+this argument does not supply the uniform boundary-tail estimates.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: appendices/D_lie_fields_and_coarea.tex
+\section{Fixed-cutoff differentiation, pole counting, and coarea}
+\label{app:lie}
+% PROV-INTERNAL: LIE_POLE_FILTRATION_PROOF.md;
+% ORIGINAL_CONTOUR_TWO_PHASE_FIELD.md; ALL_B_LIE_NUMERATOR_DESOURCE.md;
+% SECOND_FAMILY_TAIL_GLOBAL_JET_AUDIT.md.
+% V2 EXPANSION: unfactored jet recurrence, chartwise identity, and flux order.
+
+\subsection{The identity on a fixed real integration domain}
+\begin{lemma}[Fixed-domain differentiation]\label{lem:lie}
+Let \(w\) be a smooth, \(s\)-independent weight on a real angular torus.
+For an \(s\)-dependent complex vector field \(V\) and a top form \(A_s\),
+set \(\mathcal D=\partial_s-\Li_V\). If all puncture fluxes vanish
+at every intermediate stage through order \(j\), then
+\[
+ \partial_s^j\int wA_s=\int\mathcal D^j(wA_s).
+\]
+If \((\partial_s-V\cdot\nabla)Y
+=(\partial_s-V\cdot\nabla)Z=0\), the factors
+\((1-Y)^{-1}\) and \((1-Z)^{-1}\) remain simple throughout this identity.
+\end{lemma}
+\begin{proof}
+On a top form, \(\Li_V=\dd\iota_V\) is a divergence. Its integral is the
+boundary flux, including every puncture boundary. Its vanishing proves
+the first derivative identity. Apply that identity to the entire
+\(s\)-dependent top form produced at the preceding step. In particular,
+the iteration differentiates \(V\), its divergence, and all coefficients
+already present. The kernel assertion follows from the derivation rule.
+Complex coefficients in \(V\) are allowed by linearity of real
+integration by parts. No real flow or holomorphic extension of \(w\)
+is required.
+\end{proof}
+
+If \(\sum_h w_h=1\) is a fixed smooth partition, use a different field
+\(V_h\) on each weighted term:
+\begin{equation}
+ \partial_s^j\int A_s
+   =\sum_h\int(\partial_s-\Li_{V_h})^j(w_hA_s).
+ \label{eq:chartwiseLie}
+\end{equation}
+No equality between the fields on overlapping supports is required.
+The proof is the preceding lemma applied to each integral, followed
+by addition. This observation avoids interpolating fields in a way
+that could destroy either frozen-product identity.
+
+\subsection{Regular branch coordinates and the selected-pair field}
+On the original all-branch chart let \(\chi_s:u\mapsto\phi\), where
+\(\phi=\arccos W\). The inverse \(y_s(\phi)\) is even and analytic
+on a fixed polydisk about \((s_*,0)\), because \(W_\theta\ne0\) there.
+The one-body form and the complete pair are
+\begin{equation}
+ \frac{\dd y}{2\pi\ii}\frac{z}{\sinh\gamma}
+   =-\frac{z}{\pi(1-y^{-2})}\dd\phi,\qquad
+ P_{il}=(\phi_i-\phi_l)^2 A_s(\phi_i,\phi_l).
+ \label{eq:branchregular}
+\end{equation}
+Here \(A_s\) is analytic with bounded fixed jets. Indeed,
+\(y_s(\phi_i)-y_s(\phi_l)\) has the two factors
+\(\phi_i-\phi_l\) and \(\phi_i+\phi_l\); the latter cancels the
+corresponding factor in \(1-e^{-\ii(\phi_i+\phi_l)}\).
+No division by a remaining collision zero is used.
+
+Write the regular top form as
+\[
+ \Omega_s=
+  \frac{\mathscr N_s(\phi)}{\mathcal K_s(\phi)}
+       \dd\phi_1\cdots\dd\phi_N,\qquad
+ \mathcal K_s=(1-Y_s)(1-Z),\qquad
+ \mathscr N_s=\Delta(\phi)^2\mathscr A_s(\phi).
+\]
+The analytic factor \(\mathscr A_s\) includes all normalized measures,
+the inverse-product numerator, and the regular pair coefficients.
+
+Put \(a_i=S'/W_{u_i}\), \(b_i=\partial_{u_i}\phi_i\), and
+\(A=\sum_i a_i\). For a selected pair \(p,q\), set
+\begin{equation}
+ \begin{split}
+ V_i&=a_i\quad(i\ne p,q),\\
+ V_p&=a_p+\frac{Ab_q}{b_p-b_q},\qquad
+ V_q=a_q-\frac{Ab_p}{b_p-b_q}.
+ \end{split}\label{eq:twofield}
+\end{equation}
+Then \(\sum_iV_i=0\) and
+\(\sum_i b_iV_i=\partial_s\sum_i\phi_i\), so \(Y,Z\) are frozen.
+In regular coordinates the residual field
+\(B=\partial_s\chi_s-(\chi_s)_*V\) has only two nonzero entries:
+\[
+ B_p=-\frac{Ab_pb_q}{b_p-b_q},\qquad B_q=-B_p.
+\]
+Since \(b(\phi)=B_s(\phi)/\phi\) with \(B_s\) even, analytic, and
+nonzero near zero,
+\[
+ \frac{b_pb_q}{b_p-b_q}
+     =\frac{H_s(\phi_p,\phi_q)}{\phi_q-\phi_p}.
+\]
+The analytic coefficients and any fixed number of their derivatives
+have polynomial \(N\)-bounds. Both \(V\), expressed in regular
+coordinates, and \(B\) have at most one selected-difference pole;
+\(\operatorname{div}_\phi B\) has at most two.
+
+The pullback identity needed for smooth real cutoffs is
+\begin{equation}
+ (\partial_s-\Li_V)(w\chi_s^*\Omega_s)
+  =w\chi_s^*(\partial_s+\Li_B)\Omega_s
+       -(V\cdot\nabla_u w)\chi_s^*\Omega_s.
+ \label{eq:pullbackLie}
+\end{equation}
+It follows by differentiating the pullback and subtracting the
+pushforward of \(V\). In particular,
+\((\partial_s+B\cdot\nabla_\phi)\mathcal K_s=0\).
+Formula \eqref{eq:pullbackLie} is used on the real \(u\)-domain;
+the smooth function \(w\) is never extended holomorphically in \(\phi\).
+
+\subsection{The complete high-order recurrence}
+\begin{lemma}[Unfactored jet filtration]\label{lem:jets}
+For each fixed \(j\), the \(j\)-fold operation in
+\eqref{eq:pullbackLie} is a finite sum of terms
+\begin{equation}
+ (\partial_u^\mu w)(u)\,
+ \chi_s^*\left[
+  \frac{c_{j,\mu,\ell,\nu}(s,\phi)\,
+        \partial_s^\ell\partial_\phi^\nu\mathscr N_s(\phi)}
+       {\mathcal K_s(\phi)}
+       \dd\phi_1\cdots\dd\phi_N\right].
+ \label{eq:jetexpansion}
+\end{equation}
+If \(m\) is the selected-difference pole order of a displayed
+coefficient, then that term can be chosen to satisfy
+\begin{equation}
+ m+|\mu|+|\nu|\le2j,\qquad
+ \ell+|\mu|+|\nu|\le j .
+ \label{eq:jetdegree}
+\end{equation}
+Apart from these explicitly counted poles, fixed coefficient jets
+are bounded by \(C_jN^{C_j}\) on the fixed regular-coordinate
+neighborhood. There are at most \(C_jN^{C_j}\) terms.
+\end{lemma}
+\begin{proof}
+For \(j=0\) take \(c=1\). Suppose \eqref{eq:jetexpansion} holds.
+Apply \eqref{eq:pullbackLie} to each term, and use the fact that
+the kernel is frozen. The possibilities are as follows:
+\begin{enumerate}
+\item A fixed-\(\phi\) \(s\)-derivative on \(c\) does not raise its
+difference-pole order: \(\delta=\phi_p-\phi_q\) is independent of
+\(s\) in these coordinates.
+\item \(B\cdot\nabla_\phi c\), or multiplication by
+\(\operatorname{div}_\phi B\), raises \(m\) by at most two.
+\item \(B\cdot\nabla_\phi\) on the numerator derivative raises
+\(|\nu|\) by one and \(m\) by at most one.
+\item \(\partial_s\) on the numerator derivative raises \(\ell\)
+by one without adding a difference pole.
+\item The final term of \eqref{eq:pullbackLie} raises \(|\mu|\)
+by one and contributes one component of \(V\), whose pole
+order is at most one.
+\end{enumerate}
+Every operation therefore raises the first count by at most two
+and the second count by at most one. These are all product-rule
+terms, including derivatives of the previous field coefficients.
+Bounded analytic coefficients, at most \(N\) summands in \(A\),
+and a fixed number \(j\) of differentiations give the claimed
+polynomial term and coefficient bounds.
+\end{proof}
+
+The object differentiated in this recurrence is the
+\emph{unfactored numerator} \(\mathscr N_s\).
+A numerator derivative of order \(\ell+|\nu|\le j\) changes at
+most \(j\) pair factors. The remaining pair contractions survive.
+Fixed-\(\phi\) \(s\)-derivatives preserve the Vandermonde polynomial;
+\(|\nu|\) coordinate derivatives reduce its full-collision degree
+by at most \(|\nu|\).
+Dividing the answer by the original Vandermonde would instead
+create poles at unselected collisions and would invalidate the
+selected-pole statement. Such division is not part of
+Lemma~\ref{lem:jets}.
+
+\subsection{Rational weights and all boundary fluxes}
+Fix an integer \(M>2k+2\), independent of \(N\), and put
+\[
+ d=\max_{i<l}|u_i-u_l|,\qquad
+ w_{pq}=\frac{(u_p-u_q)^{2M}}
+                  {\sum_{i<l}(u_i-u_l)^{2M}}\quad(d>0).
+\]
+They sum to one off full equality. For \(|\mu|\le k\),
+\begin{equation}
+ |\partial_u^\mu w_{pq}|
+ \le C_kN^{C_k}
+       \frac{|u_p-u_q|^{2M-|\mu|}}{d^{2M}}.
+ \label{eq:weightjets}
+\end{equation}
+To see this, differentiate the quotient. A derivative of the
+denominator contributes a power at most \(d^{-1}\); replace it,
+when needed, by \(|u_p-u_q|^{-1}\). The denominator itself is
+at least \(d^{2M}\), and its derivative sums have polynomial
+\(N\)-cost. This proves \eqref{eq:weightjets} term by term.
+
+On the original branch cone,
+\(|\phi_p-\phi_q|\ge c|u_p-u_q|\), by
+Lemma~\ref{lem:branch}. Combining \eqref{eq:weightjets} with
+\eqref{eq:jetdegree} absorbs every selected pole at a cost
+\(C_jN^{C_j}d^{-2j}\) on a separated support, while the
+undifferentiated pair factors retain their quadratic contraction.
+Other fixed smooth cutoffs are included by the ordinary product
+rule. A cutoff at scale \(b_N\) or \(\rho_N\) has its corresponding
+inverse-scale cost; these costs are retained in
+Propositions~\ref{prop:micro} and \ref{prop:allB}.
+
+Near full equality, the numerator has degree \(N(N-1)\).
+The bound \(m+|\mu|+|\nu|\le2j\) shows that a full \(j\)-th
+density loses at most \(2j\) powers of the shape radius.
+A further inverse radius is reserved when a boundary flux or
+a transition-cutoff estimate requires it. This is the origin
+of the conservative loss \(2j+1\) used in the sector proofs.
+
+These facts also verify the hypotheses of Lemma~\ref{lem:lie};
+they are not additional terms to discard.
+First take a selected-diagonal tube of radius \(h\) on a region
+where \(d\) is bounded below. The pair double zero, the
+\(2M\)-power weight, the preceding \(j\) operations, and one
+extra field factor give a flux at most
+\[
+ C_{\eps,N,j}\,h^{2M+1-2j}.
+\]
+It vanishes. Next take a full-equality sphere of radius \(\rho\).
+At fixed \(\eps>0\) all global denominators and regular coordinate
+changes are bounded; the shape surface measure contributes
+\(\rho^{N-2}\). A sufficient flux exponent is
+\[
+ N(N-1)-2j-1+N-2=N^2-2j-3>0
+ \quad(N\ge N_0+2,\ j\le k).
+\]
+The limits are taken in this order at fixed \(\eps,N\).
+There are no boundaries at a cutoff support endpoint because
+the cutoffs are smooth on the closed torus. These flux checks
+apply at every earlier stage \(0\le l\le j\), and establish the
+iterated identity before any boundary-uniform estimate is taken.
+
+\subsection{Mixed and compact charts}
+In a mixed chart only the true branch coordinates are replaced
+by \(\phi_i\). The selected denominator is \(1-b_q/b_j\), bounded
+away from zero on the nested support, and \(1/b_j\) is analytic
+at the branch. There is consequently no selected-collision pole
+in this calculation. The same pullback recurrence includes the
+regular branch one-body form, the compact-angle measures, and
+the full contour Jacobian. All fixed jets have polynomial
+\(N\)-cost, apart from \(C^N\) one-body products.
+
+For the compact right chart the coefficients are smooth in real
+angles and analytic in \(s\). The factorization
+\(D_{pq}=(\theta_p-\theta_q)C_{pq}\), with \(|C_{pq}|\ge c>0\),
+uses smooth division, as proved in Proposition~\ref{prop:compactR}.
+The same five product-rule cases prove a two-power loss per
+operation in the real angular variables. There are no singular
+branch-coordinate changes in this compact case. It does not
+require analytic continuation of a deformation bump.
+
+\subsection{Simple kernels and the order of coarea}
+For \(a>0\),
+\[
+ \frac1{|1-e^{-a+\ii t}|}
+ \le\frac C{\min(1,a)+\operatorname{dist}(t,2\pi\Z)}
+ \quad\bigl(0\le\operatorname{dist}(t,2\pi\Z)\le\pi\bigr).
+\]
+On an interval of length \(L\), the integral is at most
+\(C(1+L)(1+|\log a|)\) for \(0<a<1\). A variable damping can be
+replaced by its positive lower bound in this estimate.
+
+For two unwrapped phases \(F,G\), suppose their image is contained
+in \(I_F\times I_G\), the map has multiplicity at most \(m_0\),
+and its real Jacobian has already been divided out in the density
+bound. If the attenuation floors are \(a_Y,a_Z\in(0,1)\), the
+remaining two-kernel integral is bounded by
+\[
+ C m_0(1+|I_F|)(1+|I_G|)
+       (1+|\log a_Y|)(1+|\log a_Z|).
+\]
+Indeed extend the nonnegative integrand to the containing rectangle
+and apply the one-dimensional bound twice. Equivalently, subdivide
+each interval into translates of one period. This accounts for
+periodic wrapping separately from the multiplicity of the unwrapped
+map. In the near-equality sectors \(m_0=1\) on each fixed shape
+ray and both lengths are at most \(CN\), yielding an explicit
+\(CN^2\) factor. Any already counted index cells or fixed-jet
+terms retain their stated polynomial costs. Such factors are
+absorbed by the existing \(e^{C_jN\log(N+1)}\) budgets.
+
+Coarea is applied only after all differentiation, to maps whose
+real Jacobian and multiplicity are specified in the sector proof.
+Sign and extreme-index cells are introduced only in that final
+absolute integral. They are not nonsmooth cutoffs in
+\eqref{eq:chartwiseLie}. When a shape radius is exchanged for a
+phase variable, its remaining positive power is bounded on the
+support before integrating the phase. It is not integrated a
+second time as though it were still an independent variable.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: appendices/E_constant_dependencies.tex
+\section{Constant and quantifier dependencies}\label{app:constants}
+The constants can be selected in the following order. Each step
+uses only quantities selected earlier, not the final value of
+\(\eps\) or the particle number.
+\begin{enumerate}
+\item Fix \((p,a,b)\), hence \(N_0,k,S_*,\theta_B\), and the
+original radius and disk constants. There are only finitely many
+derivative orders \(0\le j\le k\).
+\item Fix a sufficiently small branch neighborhood and compact
+margins. Choose the nested ratio \(L\) large enough for the
+outer-anchor/true-branch slope separation. Fix the smooth nested
+partition and all of its finite derivative bounds.
+\item Obtain the same-group pair constant \(q<1\) at the limiting
+real support. Choose \(q'\in(q,1)\), then the cross-group slack
+\(\eta\), and then the upper endpoint slivers and deformation
+strength \(\tau\). The upper branch must lie inside \(a=p=1\).
+\item Choose the selected \(c/N\), original \(c\eps\), and
+protected-current \(c\lambda_*/N^2\) disk constants small enough
+for the already fixed margins. Take a common smaller positive
+\(\kappa\) for the finitely many pair estimates.
+\item Choose \(C_H\) from the original Pfaffian bound,
+\(0<\alpha_0<1/[2(k+2)]\), and then \(D\) with
+\(\kappa D^2>k+2\). Fix the rational-weight integer \(M>2k+2\)
+and a sufficiently large compact-equality exponent \(K_0>1\).
+\item Choose the resultant exponent \(A\), followed by the small
+microcore prefactor \(c_*\) in \(b_N=c_*e^{-(A+4)N}/N\).
+Determine the finite-jet constants on the anchor neighborhood
+\(\rho\le b_N/8\), \(|u_a|\ge b_N/2\). Its lower bound on
+\(|t|\) determines the cubic coefficient \(C\) independently of
+the still unselected exponent \(B\).
+\item With the finite \(\Gamma_*\) defined in
+Proposition~\ref{prop:allB}, choose
+\(B,C_1>A+4+\max\{1,\Gamma_*\}\). This ensures the geometric
+inclusions \(2\rho_N\le b_N/8\) and \(\delta_N\le b_N/16\)
+for every \(N\ge N_0+2\), including the finitely many low orders.
+Increase \(B\) further so that
+\(e^{CN^3}(2e^{-BN})^{N^2-2j-4}\) is controlled for all large
+\(N\) and every \(j\le k\). Only the remaining numerical bounds
+at finitely many orders are absorbed into a point-dependent
+constant; their support geometry already satisfies the inclusions.
+\item Finally decrease a single \(\eps_0>0\) for all the conditions.
+In the intermediate window, for every fixed \(C,m,r\),
+\[
+ \eps^r e^{CN}N^m\longrightarrow0\quad(r>0),\qquad
+ \eps/b_N^m\longrightarrow0,
+ \quad N\le D\sqrt{\log(1/\eps)}.
+\]
+These limits also give \(N^{C_j}(\eps+\lambda_*)\to0\).
+They are used only in that window.
+\end{enumerate}
+
+The distinction between costs is essential: an ordinary one-body
+product costs \(C_j^N\); a full collision coefficient may cost
+\(e^{C_jN^2}\); conversion from the exponentially small branch
+anchor to shape coordinates may cost \(e^{CN^3}\). The last cost
+is paid only where the positive collision power at \(\rho_N\)
+absorbs it. It is not replaced by a polynomial in \(N\).
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.22\textwidth}>{\raggedright\arraybackslash}p{.30\textwidth}>{\raggedright\arraybackslash}p{.38\textwidth}}
+\toprule
+Quantity & May depend on & Uniformity actually used\\
+\midrule
+\endhead
+\(c_0,c_1\), original radius/disk &
+Fixed selected point & All original angles and all even \(N\);
+radius held fixed under each \(s\)-derivative.\\
+Branch and compact margins &
+\(S_*,\theta_B,k\) & Independent of \(N,\eps\); compact groups
+exclude the exact branch before strict constants are chosen.\\
+\(q,\eta,\kappa,\tau\) &
+The preceding margins and point & Entire stated support, all
+occupancies \(P/N\in[0,1]\); protected complex disks only.\\
+Selected-contour disk \(c/N\) &
+Point, margins, \(\tau\) & All \(\eps\) sufficiently small;
+not an assertion about the original undeformed contour on that disk.\\
+Current disk \(c\lambda_*/N^2\) &
+Point, margins, \(\tau\) & \(\lambda_*\le\lambda\le1\);
+compact roots may leave the unit disk.\\
+\(C_j\) in jets &
+Point, fixed bumps, \(j\le k\) & Independent of \(N,\eps\) within
+the stated window; powers \(N^{C_j}\) are explicit.\\
+\(A,b_N,\rho_N\) &
+Algebraic point; \(B\) also on \(k\) & Exponential \(N\)-dependence
+is retained. \(\eps e^{cN}\to0\) only for \(N\le D\sqrt H\).\\
+\(\alpha_0,D,C_H\) &
+Point and \(k\) & Fixed before \(\eps\to0\); all lower derivatives
+use the same finite choices.\\
+First-chart constants &
+The fixed \(N_0,p,a,b\) & No uniform first-amplitude estimate
+in \(p\) or \(N_0\) is claimed.\\
+\bottomrule
+\end{longtable}
+
+Every estimate stated for sufficiently small \(\eps\) means
+\[
+ \forall(p,a,b)\ \exists\eps_0,C_j,\ldots\
+ \forall\,0<\eps<\eps_0\
+ \forall\,N\text{ in the specified window}.
+\]
+Neither the point nor the derivative order is placed after the
+\(\eps\)-quantifier. The \(N\)-window and \(\lambda\)-window splits
+are made after differentiation; their moving endpoints are not
+being differentiated.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: appendices/F_normalization_checks.tex
+\section{Normalization and the independent angular representation}
+\label{app:normalization}
+% PROV-INTERNAL: FORM_FACTOR_NORMALIZATION_AUDIT.md;
+% ONSITE_GROUPING_EXACT_AUDIT.md;
+% COMPACT_FOUR_CHART_NORMALIZATION_RESOLUTION.md.
+% PROV-PRIMARY: TW2014 Appendix A (7), its normalized y-residue identity;
+% Boukraa et al. 2008 (4)-(9); McCoy and Maillard 2012 (67)-(70), comparison only.
+The correlation formula of \cite{PalmerTracy1981}, in the
+representation used by Appendix A of \cite{TW2014}, has
+\(N\) factors \(\dd\theta/(2\pi)\).
+With \(x=e^{\ii\theta}\), these become \(\dd x/(2\pi\ii x)\).
+Introducing \(N\) auxiliary residues uses another \(N\) factors
+\(\dd y/(2\pi\ii)\). Thus the double contour prefactor is
+\((2\pi\ii)^{-2N}/N!\), not \((2\pi\ii)^{-N}/N!\) when
+all contour integrals are ordinary unnormalized integrals.
+Summing the nonorigin lattice sites gives
+\[
+ \frac4{(1-X)(1-Y)}-\frac2{1-X}-\frac2{1-Y}
+ =\frac{2(X+Y)}{(1-X)(1-Y)}.
+\]
+The factors \(1/(XY)\) in the normalized correlation measures
+then give the numerator in \eqref{eq:double} and the factor two
+in \eqref{eq:bulk}. A literal reading of the printed main-text
+prefactor instead multiplies \(T_N\) by \((2\pi\ii)^N\).
+This is a documented measure discrepancy, not a claimed publisher
+erratum.
+
+Let \(C_N^{\rm std}\) denote the standard full-site particle term
+and \(f_{00}^{(N)}\) the onsite Fredholm coefficient.
+Order-by-order lattice summation gives
+\[
+ C_N^{\rm std}=f_{00}^{(N)}+2T_N.
+\]
+The local convex-gradient argument without either global product
+factor bounds every fixed derivative of the onsite term at the
+selected point. Smoothness is sufficient here; it is not silently
+promoted to an analytic-extension theorem.
+
+Boukraa et al.'s equations (5)--(9) \cite{Boukraa2008} give
+\[
+ C_N^{\rm std}=\frac1{N!}
+ \int\prod_{i<N}\frac{\dd\varphi_i}{2\pi}
+ \prod_i\frac1{\sinh\gamma_i}\,
+ \frac{1+Z}{1-Z}
+ \prod_{i<j}\left[
+  \frac{\sin((\varphi_i-\varphi_j)/2)}
+       {\sinh((\gamma_i+\gamma_j)/2)}
+             \right]^2 ,
+\]
+where \(\sum_i\varphi_i=0\pmod{2\pi}\),
+\(\cosh\gamma_i=S-\cos\varphi_i\), and \(z_i=e^{-\gamma_i}\).
+The source variable \(w=s/[2(1+s^2)]\) satisfies \(1/(2w)=S\).
+Its \(x_i\) is our \(z_i\), and its \(y_i\) is
+\(1/\sinh\gamma_i\), not our contour coordinate \(y_i\).
+These substitutions verify the observable, temperature side,
+measures, and squared pair factor.
+
+At the first selected order there are four signed ordered compact
+charts, centered at \(+\alpha,-\alpha,+\beta,-\beta\).
+Simultaneous angle reversal preserves both the density and real
+integration measure. The \(\alpha/\beta\) exchange gives the same
+coefficient by the sine-power calculation.
+For any one chart the pair coefficient is
+\(-1/(4\sin^2\beta)\), identical to its reduced lower-contour
+counterpart. The product \(y_0^Nz_0^N=1\) removes the apparent
+one-body phase discrepancy. The missing angular measure is
+exactly the positive \(2\pi\) from the mean residue, so a single
+standard chart has coefficient \(L_\beta\). Four standard charts
+and two lower offsite charts agree with
+\(C_N^{\rm std}=f_{00}^{(N)}+2T_N\).
+
+\paragraph{Angle and power conventions in the review comparison.}
+The printed amplitude in equation (69) of \cite{McCoyMaillard2012}
+is not used to establish the internal coefficient, sign, or
+multiplicity above. To make the comparison precise, put
+\(a_0=(N^2-1)/2\) and \(\nu=a_0-1=k-1/2\).
+The single-chart coefficient corresponding to an original-function
+term \(A_{\rm chart}\eps^\nu\), modulo regular Taylor terms, is
+\[
+ A_{\rm chart}=L_\beta e^{\ii k\theta_*}
+                      \frac{\sqrt\pi}{\Gamma(a_0)}.
+\]
+This follows by taking \(k\) derivatives with
+\(\partial_s=e^{-\ii\theta_*}\partial_\eps\) along the radius.
+For \(0<\theta_*<\pi/2\), the positive real factors in the local
+formula leave the phase
+\[
+ \frac{A_{\rm chart}}{|A_{\rm chart}|}
+      =(-1)^k e^{\ii\pi a_0/2}.
+\]
+Here \((-\ii d)^{-a_0}\) has the continuation specified in
+Lemma~\ref{lem:period}. In the review's formula, substituting the
+same positive angle and using the principal power of
+\(N\ii\sin\theta_*\) gives phase \(e^{\ii\pi\nu/2}\).
+The geometric denominator is positive for our selected angles.
+The ratio of these phases is
+\[
+ (-1)^k e^{\ii\pi(a_0-\nu)/2}=-\ii,
+\]
+since \(k\) is odd. Substituting the negative angle instead gives
+phase \(e^{-\ii\pi\nu/2}\) and phase ratio one. At \(|s_*|=1\),
+that negative angle is \(\arg(s_*^{-1})\).
+
+The review defines its angle through a cosine relation in (70);
+that relation alone does not choose between these two signs or
+identify its power branch with the exterior germ used here.
+Consequently the last computation is a comparison under stated
+conventions, not evidence that the review explicitly makes that
+inverse-angle choice. Its low-temperature parameter is
+\(\eps_{\rm rev}=1-s_*/s=\eps/(1+\eps)\); this real first-order
+change cannot itself remove the phase difference. A full comparison
+must also specify the continuation side, power branch, and single-chart
+versus total-chart multiplicity. It is not justified to claim that
+multiplicity is the only possible difference. None of these external
+conventions enters the internal identity \(L_\alpha=L_\beta\).
+No conclusion about the degenerate four-particle endpoint normalization
+is imported into the present distinct, nonzero-angle family.
+
+% END SOURCE
+
+
+% BEGIN SOURCE: appendices/G_audit_map.tex
+\section{Audit map, coverage, and status}\label{app:auditmap}
+This appendix records the structure of the proposed proof. It is not
+evidence for any estimate in the preceding sections. A correct
+dependency map and a complete list of source files do not certify
+the mathematics.
+
+\subsection{External inputs and internally claimed estimates}
+The external physical inputs are the spontaneous magnetization
+\cite{Yang1952}, the low-temperature Fredholm correlation formula
+\cite{PalmerTracy1981} in the representation of Appendix A of
+\cite{TW2014}, and the fixed-even-order non-Nickel smoothness
+argument of \cite{TW2014}. Appendix~\ref{app:normalization}
+tracks the measures and compares the independent full-site formula
+in \cite{Boukraa2008}. The review \cite{McCoyMaillard2012}
+supplies physical definitions and amplitude conventions; its printed
+amplitude is not used as a premise for the coefficient proved here.
+
+The historical and methodological references have a separate role:
+\cite{WMTB1976,GuttmannEnting1996,Nickel1999,Nickel2000}
+locate the expansion and singularity problem;
+\cite{TW2013,TW2017Toeplitz} locate the existing diagonal and
+Toeplitz natural-boundary results and the noncancellation strategy.
+None is invoked as a theorem giving the bulk uniform infinite-tail
+estimate \eqref{eq:roadmaptail}. The bibliography records these
+roles; it is not a certificate that every related publication has
+been checked for priority.
+
+The remaining analytic statements are proposed internal derivations
+from the displayed formulas. In particular, the pair compactness
+estimates, all protected disks, the high-order Lie bounds, and
+the complete sector sum require adversarial checking.
+The paper asserts a candidate proof of the full bulk statement;
+it does not replace that statement by a diagonal susceptibility,
+a finite sum, or a conditional numerical result.
+
+\subsection{Dependency order}
+The first-term route is
+\[
+ \begin{gathered}
+ \text{normalization and residues}
+ \ \longrightarrow\ \text{first-order arithmetic}\\
+ \longrightarrow\ \text{mean residue and shape period}
+ \ \longrightarrow\ \text{two-chart noncancellation}.
+ \end{gathered}
+\]
+The tail route starts from the exact retraction and exterior normal
+convergence. The selected-contour estimate uses its own \(c/N\)
+disk. The pair/current route is ordered as
+\[
+ \begin{gathered}
+ \text{radial-center complete-pair bound}
+       \quad\text{(Lemma~\ref{lem:contraction})}\\
+ \downarrow\\
+ \text{original disk (Lemma~\ref{lem:originaldisk})}
+ \quad\text{or}\quad
+ \text{protected current disk (Lemma~\ref{lem:protected})}\\
+ \downarrow\\
+ \text{Cauchy bounds in Propositions~\ref{prop:highKS}
+       and \ref{prop:largeS}.}
+ \end{gathered}
+\]
+The radial-center lemma uses neither Cauchy bound.
+For intermediate orders, the fixed support partition, the regular
+branch geometry, and the recurrence of Lemma~\ref{lem:jets} precede
+the microcore, all-branch complement, mixed, and compact-right
+estimates. Those estimates, and not the final natural-boundary
+criterion, are the inputs to Theorem~\ref{thm:tail}.
+
+\subsection{Every region in the tail}
+In the table, intermediate means \(N_0+2\le N<D\sqrt H\);
+high means \(D\sqrt H\le N<C_H(H+1)^2\).
+All rows apply to every \(0\le j\le k\). The \(N\)- and
+\(\lambda\)-splits are made after differentiation.
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{.06\textwidth}>{\raggedright\arraybackslash}p{.24\textwidth}>{\raggedright\arraybackslash}p{.39\textwidth}>{\raggedright\arraybackslash}p{.20\textwidth}}
+\toprule
+Row & Region & Required support or mechanism & Proof location\\
+\midrule
+\endfirsthead
+\toprule
+Row & Region & Required support or mechanism & Proof location\\
+\midrule
+\endhead
+W1 & Ultra-high original &
+Every angle, \(N\ge C_H(H+1)^2\); weighted matched pairs and
+original disk. & Proposition~\ref{prop:ultrahigh}\\
+W2 & Final selected \(F\) &
+Named \(a_q>0,p_q=1\); protected branches; compact matching
+penalty; disk \(c/N\). & Proposition~\ref{prop:F}\\
+W3 & High \(K\) and small-current orders &
+Enlarged lower support, with one named upper transition
+variable for the current; original \(c\eps\) disk. &
+Lemma~\ref{lem:originaldisk}, Proposition~\ref{prop:highKS}\\
+W4 & Intermediate all-branch core &
+Every \(|u_i|\le b_N\); resultant \(Y\)-gap and one-phase
+branch transport. & Proposition~\ref{prop:micro}\\
+W5 & All-branch far complement &
+Named \(|u_a|\ge b_N/2\), \(\rho\ge\rho_N\); rational
+weights and extreme-pair coarea after differentiation. &
+Proposition~\ref{prop:allB}\\
+W6 & All-branch near equality &
+Same anchor, \(\rho\le2\rho_N\ll b_N\); common sign and
+positive full-collision exponent. & Proposition~\ref{prop:allB}\\
+W7 & Intermediate \(K\), compact left &
+Outer anchor away from branch and a compact left root;
+fixed \(Z\)-gap and one simple phase. & Proposition~\ref{prop:mixed}\\
+W8 & Intermediate \(K\), mixed &
+Outer compact \(q\), true-branch \(j\), \(|b_j|\ge4|b_q|\);
+two-phase field at \(\lambda=0\). & Proposition~\ref{prop:mixed}\\
+W9 & Intermediate \(K\), all right &
+No true branch or left label; strict real phase curvature
+and compact rational atlas. & Proposition~\ref{prop:compactR}\\
+W10 & Intermediate small current, left &
+Named \(q\) on an upper plateau and a left modulus gap;
+all moving branches remain on true plateaus. &
+Proposition~\ref{prop:mixed}\\
+W11 & Intermediate small current, mixed &
+Upper-right \(q\), true-branch \(j\); exact preservation of
+both occupancy sums in every derivative. &
+Proposition~\ref{prop:mixed}\\
+W12 & Intermediate small current, all right &
+Only compact right variables; coupled Hessian perturbation
+\(N^{C_j}(\eps+\lambda_*)\to0\). &
+Proposition~\ref{prop:compactR}\\
+W13 & Large current &
+Named \(q\), \(P\ge1\), \(\lambda\ge\lambda_*\);
+disk \(c\lambda_*/N^2\), root inflation and product gaps. &
+Lemma~\ref{lem:protected}, Proposition~\ref{prop:largeS}\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The upper inverse branch \(+\theta_B\) is in the \(a=p=1\)
+plateau. It can appear in \(F\), where it is shifted inward;
+it cannot appear on a \(K\) or Stokes transition support.
+The nested partition in Lemma~\ref{lem:partition} keeps every
+derivative of a compact label out of the inner branch region.
+These are support assertions required for coverage, not
+optional choices after an estimate has been applied.
+
+\subsection{Load-bearing checks for an adversarial reader}
+The most direct way to disprove the proposed argument is to
+find a failure of one of the two estimates
+\eqref{eq:roadmapfirst}--\eqref{eq:roadmaptail}.
+The following checks expose their sensitive interfaces:
+\begin{enumerate}
+\item Verify the physical measure count, the clockwise mean
+closure and its positive \(2\pi\), and the complex phase
+equality \(L_\alpha=L_\beta\). Check the complement of the
+two charts locally; the selected point itself is Nickel.
+\item Verify that the complete-pair constants are strict on
+the actual supports, including endpoint limits, a moving
+lower branch, the named upper variable, and each stated
+complex disk. Do not infer this from separate Schur bounds
+where one such factor has a pole.
+\item Check \eqref{eq:pullbackLie} and every case in
+\eqref{eq:jetdegree} at arbitrary fixed order, retaining the
+unfactored numerator and the real cutoff derivatives.
+Check both kinds of puncture flux before using integration
+by parts repeatedly.
+\item Check the selected branch measure divided by the real
+coarea Jacobian, the multiplicity of each phase map, and
+the exponential scales \(b_N,\rho_N\).
+An uncontrolled power of \(\eps^{-1}\), an unabsorbed
+\(e^{cN^3}\), or a loss of strict pair contraction would
+invalidate the stated window sum.
+\item Check that the thirteen rows cover every derivative
+density and that their constants can be selected in the
+order of Appendix~\ref{app:constants}. The argument needs
+all \(j\le k\), with \(k\) fixed by the selected point.
+\end{enumerate}
+
+\subsection{Reconstruction boundary}
+Revision 2 retains the first nonzero-angle prime family and
+the final thirteen-sector tail route of checkpoint v38.
+It expands the real-cutoff jet recurrence, separates the
+radial-center and protected-disk arguments, and exposes the
+hybrid measure and constant choices. These additions are
+mathematical exposition to audit, not an external validation.
+
+Revision 3 corrects the exterior convergence paragraph in
+Appendix~\ref{app:pfaffian}: global inverse products are bounded
+exponentially in \(N\), rather than independently of \(N\).
+The displayed Pfaffian--factorial bound absorbs this cost, and
+the compact-set Cauchy estimate makes the differentiated
+normal convergence explicit. This revision leaves the main
+claim, boundary-point family, and tail estimates unchanged.
+
+Revision 4 corrects the one-body argument in
+Lemma~\ref{lem:originaldisk}: the branch-center displacement
+on a complex parameter disk includes \(|s-\se|\).
+The two-region estimate now retains this perturbation and
+proves the same occupancy-independent integrable majorant.
+No contour, particle-number window, or main claim is changed.
+
+Revision 5 incorporates the explicitly identified first-term gluing
+supplement from the subsequent full-chain audit. Section~\ref{sec:first}
+now constructs a \(y\)-only angular partition before taking any
+\(x\) residues, replaces its smooth mean cutoffs only across separated
+edge regions, and gives a quantitative finite-cover estimate for the
+complement. These additions connect the local residue calculation to
+the whole double torus. They are new exposition and supporting
+derivations relative to revision 4, not a claim that revision 4 already
+contained this construction. The tail estimates and the main target
+are unchanged; the audit's other verification labels are not imported
+as premises.
+
+Revision 6 makes four further interfaces explicit following a
+separate audit of revision 5: compact upper supports and branch
+plateaus; a periodic left/right partition whose extra seam lies
+where all relevant weighted jets vanish; Cauchy's inequality
+applied to the complete holomorphic \(F_N\); and exponential-scale
+inclusions imposed at every finite tail order. The related negative
+anchor scale is chosen with the same uniform inclusion. These are
+explicit choices and local justifications within the existing proof
+route. The model, theorem, point family, derivative range, and
+particle-number windows are unchanged. No audit verdict is used
+as a mathematical premise.
+
+Revision 7 corrects the logarithmic expansion of the microcore
+majorant by displaying its negative \(N^2\log N/2\) term. It also
+records the angle and power conventions required for a comparison
+with the review amplitude, and explicitly includes the unwrapped
+phase lengths and period counts in near-equality coarea estimates.
+The positive-field pure-phase meaning of the real low-temperature
+response is stated at the outset. These are local corrections and
+clarifications; the two main estimates, point family, derivative
+range, and particle windows are unchanged. The received audit's
+failure to find a counterexample is not an additional proof premise.
+
+Revision 8 supplies the missing historical and methodological
+attribution, including the diagonal noncancellation argument and the
+upstream correlation representation. It distinguishes the proposed
+bulk estimates from the existing proof architecture. The endpoint
+wording in Lemma~\ref{lem:contraction} now asserts strictness only
+within groups and explicitly permits cross-group equality. Inverse
+temperature and the inner branch cutoff have distinct symbols from
+the geometric angle \(\beta\). The selected family, two central
+estimates, derivative range, and particle windows are unchanged.
+The separate revision record states the checks actually performed;
+earlier audit verdicts are attached to their earlier manuscript
+versions and are not automatically new audits of revision 8.
+
+Earlier routes involving a jointly absolute mean/shape
+limit, a multiplier obtained by dividing by the original
+Vandermonde, a central connector contour, or a degenerate
+four-particle endpoint amplitude are not assumptions of
+this manuscript. The separate source-coverage record names
+their replacements in v38. A historical file being
+present in the checkpoint is not by itself a reason to
+include its superseded argument in the proof.
+
+The accompanying release records identify file hashes, the active-source
+mapping, and the edits from the preceding reconstruction.
+Those checks establish provenance and textual coverage.
+They do not establish truth of any proposition, settle
+literature priority, or constitute a completed independent
+adversarial audit.
+
+% END SOURCE
+
+\subsection*{Release status and AI assistance}
+Version 0.1-rc2 is a candidate for public mathematical review.
+It preserves the mathematics of revision 8 and release candidate rc1;
+this revision clarifies bibliography, attribution, and presentation.
+It does not claim a new independent mathematical audit.
+Three problem-only reconstruction runs returned partial results;
+none reconstructed the complete natural-boundary proof. One
+method-informed run claimed the full tail estimate while explicitly
+leaving its whole-integral first singular term (node I3) unresolved.
+Its tail claim has not received a complete independent verification
+by the receiving workflow. The different point families used in
+some runs do not allow their conclusions to be combined silently.
+The repository separates these run claims from manuscript claims,
+version-specific audit reports, and finite computational checks.
+
+Generative AI was used extensively in research exploration,
+mathematical derivation, manuscript writing, code, internal audits,
+and reconstruction attempts. Dehao Lin is the named human author
+and public contact. No specific division of mathematical contributions
+or line-by-line human verification is asserted here.
+An AI audit verdict is not proof certification. No independent human
+expert certification or proof-assistant verification is claimed.
+The author declares no additional funding or competing interests
+for this project. Project text is offered under CC BY 4.0 to the extent
+the author holds rights in it; project code is offered under the MIT
+license. Cited third-party works retain their own rights.
+The accompanying provenance record states
+the limits of the available historical access evidence.
+
+\begin{thebibliography}{99}
+
+\bibitem{Boukraa2008}
+S.~Boukraa, A.~J. Guttmann, S.~Hassani, I.~Jensen, J.-M. Maillard,
+B.~Nickel, and N.~Zenine.
+\newblock Experimental mathematics on the magnetic susceptibility of the
+square lattice {Ising} model.
+\newblock \emph{Journal of Physics A: Mathematical and Theoretical},
+41(45):455202, 2008.
+\newblock Formula comparison uses equations (4)--(9) of
+\href{https://arxiv.org/abs/0808.0763v1}{arXiv:0808.0763v1}.
+
+\bibitem{GuttmannEnting1996}
+A.~J. Guttmann and I.~G. Enting.
+\newblock Solvability of some statistical mechanical systems.
+\newblock \emph{Physical Review Letters}, 76:344--347, 1996.
+\newblock \href{https://doi.org/10.1103/PhysRevLett.76.344}{doi:10.1103/PhysRevLett.76.344}.
+
+\bibitem{McCoyMaillard2012}
+Barry~M. McCoy and Jean-Marie Maillard.
+\newblock The importance of the {Ising} model.
+\newblock \emph{Progress of Theoretical Physics}, 127(5):791--817, 2012.
+\newblock \href{https://arxiv.org/abs/1203.1456}{arXiv:1203.1456}.
+Physical definitions and amplitude conventions; the printed amplitude
+is not used as a premise for the internal coefficient.
+
+\bibitem{Nickel1999}
+B.~Nickel.
+\newblock On the singularity structure of the 2D {Ising} model susceptibility.
+\newblock \emph{Journal of Physics A: Mathematical and General},
+32(21):3889--3906, 1999.
+\newblock \href{https://doi.org/10.1088/0305-4470/32/21/303}{doi:10.1088/0305-4470/32/21/303}.
+
+\bibitem{Nickel2000}
+B.~Nickel.
+\newblock Addendum to ``On the singularity structure of the 2D {Ising}
+model susceptibility''.
+\newblock \emph{Journal of Physics A: Mathematical and General},
+33(8):1693--1711, 2000.
+\newblock \href{https://doi.org/10.1088/0305-4470/33/8/313}{doi:10.1088/0305-4470/33/8/313}.
+
+\bibitem{Orrick2001}
+W.~P. Orrick, B.~Nickel, A.~J. Guttmann, and J.~H.~H. Perk.
+\newblock The susceptibility of the square lattice {Ising} model:
+New developments.
+\newblock \emph{Journal of Statistical Physics}, 102:795--841, 2001.
+\newblock \href{https://doi.org/10.1023/A:1004850919647}{doi:10.1023/A:1004850919647};
+\href{https://arxiv.org/abs/cond-mat/0103074v1}{arXiv:cond-mat/0103074v1}.
+
+\bibitem{PalmerTracy1981}
+John Palmer and Craig Tracy.
+\newblock Two-dimensional {Ising} correlations: Convergence of the scaling limit.
+\newblock \emph{Advances in Applied Mathematics}, 2(3):329--388, 1981.
+\newblock \href{https://doi.org/10.1016/0196-8858(81)90010-5}{doi:10.1016/0196-8858(81)90010-5}.
+
+\bibitem{TW2013}
+Craig~A. Tracy and Harold Widom.
+\newblock On the diagonal susceptibility of the two-dimensional {Ising} model.
+\newblock \emph{Journal of Mathematical Physics}, 54:123302, 2013.
+\newblock \href{https://arxiv.org/abs/1307.5913v3}{arXiv:1307.5913v3}.
+
+\bibitem{TW2014}
+Craig~A. Tracy and Harold Widom.
+\newblock On the singularities in the susceptibility expansion for the
+two-dimensional {Ising} model.
+\newblock \emph{Journal of Statistical Physics}, 156(6):1125--1135, 2014.
+\newblock Formula comparison uses
+\href{https://arxiv.org/abs/1403.3966v1}{arXiv:1403.3966v1}, 16 March 2014.
+
+\bibitem{TW2017Toeplitz}
+Craig~A. Tracy and Harold Widom.
+\newblock Natural boundary for a sum involving {Toeplitz} determinants.
+\newblock In \emph{Large Truncated Toeplitz Matrices, Toeplitz Operators,
+and Related Topics}, pages 703--718. Springer, 2017.
+\newblock Preprint (2015):
+\href{https://arxiv.org/abs/1502.04922}{arXiv:1502.04922}.
+
+\bibitem{WMTB1976}
+Tai Tsun Wu, Barry~M. McCoy, Craig~A. Tracy, and Eytan Barouch.
+\newblock Spin-spin correlation functions for the two-dimensional {Ising}
+model: Exact theory in the scaling region.
+\newblock \emph{Physical Review B}, 13:316--374, 1976.
+\newblock \href{https://doi.org/10.1103/PhysRevB.13.316}{doi:10.1103/PhysRevB.13.316}.
+
+\bibitem{Yang1952}
+C.~N. Yang.
+\newblock The spontaneous magnetization of a two-dimensional {Ising} model.
+\newblock \emph{Physical Review}, 85:808--816, 1952.
+\newblock \href{https://doi.org/10.1103/PhysRev.85.808}{doi:10.1103/PhysRev.85.808}.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,25 @@
+{
+  "exact_center_integral": "4/(A*u - I*Q*c)",
+  "assumptions_center_integral": "A>0,u>0,0<d<A*u,c and Q real; contour closed below",
+  "exact_y_residue": "-2*rho/(rho**2 - 1)",
+  "jacobian_checks": [
+    {
+      "n": 2,
+      "determinant": "1"
+    },
+    {
+      "n": 4,
+      "determinant": "1"
+    },
+    {
+      "n": 10,
+      "determinant": "1"
+    },
+    {
+      "n": 14,
+      "determinant": "1"
+    }
+  ],
+  "absolute_F2_limit_at_theta_pi_over_3": "0.029576164260098153085963139181306201",
+  "absolute_constant_status": "floating-point evaluation of analytically derived gamma-function constant"
+}

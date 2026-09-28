@@ -1,0 +1,122 @@
+{
+  "classification": "Floating-point fixed-site check only. The analytic proof is section 7; no interval certification or infinite lattice sum is evaluated.",
+  "boundary_point": "exp(2*pi*i/7)",
+  "eta": 0.16,
+  "root_tracking_steps": 100,
+  "rows": [
+    {
+      "nodes": 192,
+      "radial_offset": 0.03,
+      "s": {
+        "real": 0.6421944959144956,
+        "imag": 0.8052864269420708
+      },
+      "P_times_origin_determinant": {
+        "real": 0.9999999999999996,
+        "imag": 4.85722573273506e-17
+      },
+      "origin_abs_error_from_one": 4.467376080957673e-16,
+      "fixed_site_1_1_correlation": {
+        "real": 1.1804182989059835,
+        "imag": -0.07639580468308077
+      },
+      "max_abs_tracked_q": 0.9534294745141201,
+      "min_abs_pair_denominator_sampled": 0.7800846045242336
+    },
+    {
+      "nodes": 192,
+      "radial_offset": 0.0,
+      "s": {
+        "real": 0.6234898018587336,
+        "imag": 0.7818314824680298
+      },
+      "P_times_origin_determinant": {
+        "real": 0.9999999999999991,
+        "imag": 2.192690473634684e-15
+      },
+      "origin_abs_error_from_one": 2.3657456368741984e-15,
+      "fixed_site_1_1_correlation": {
+        "real": 1.2007710195398607,
+        "imag": -0.08407770541561316
+      },
+      "max_abs_tracked_q": 1.0,
+      "min_abs_pair_denominator_sampled": 0.727455555741694
+    },
+    {
+      "nodes": 192,
+      "radial_offset": -0.015,
+      "s": {
+        "real": 0.6141374548308526,
+        "imag": 0.7701040102310094
+      },
+      "P_times_origin_determinant": {
+        "real": 1.0000000000000067,
+        "imag": 2.8167745913521003e-13
+      },
+      "origin_abs_error_from_one": 2.8175621450251383e-13,
+      "fixed_site_1_1_correlation": {
+        "real": 1.2119651152669064,
+        "imag": -0.08824533885133014
+      },
+      "max_abs_tracked_q": 1.024686915883072,
+      "min_abs_pair_denominator_sampled": 0.6929390281096812
+    },
+    {
+      "nodes": 384,
+      "radial_offset": 0.03,
+      "s": {
+        "real": 0.6421944959144956,
+        "imag": 0.8052864269420708
+      },
+      "P_times_origin_determinant": {
+        "real": 0.9999999999999978,
+        "imag": -3.469446951953614e-17
+      },
+      "origin_abs_error_from_one": 2.2207170832518413e-15,
+      "fixed_site_1_1_correlation": {
+        "real": 1.1804182989059875,
+        "imag": -0.076395804683081
+      },
+      "max_abs_tracked_q": 0.9534294745141201,
+      "min_abs_pair_denominator_sampled": 0.7800846045242336
+    },
+    {
+      "nodes": 384,
+      "radial_offset": 0.0,
+      "s": {
+        "real": 0.6234898018587336,
+        "imag": 0.7818314824680298
+      },
+      "P_times_origin_determinant": {
+        "real": 0.9999999999999979,
+        "imag": -4.163336342344337e-17
+      },
+      "origin_abs_error_from_one": 2.109834562344218e-15,
+      "fixed_site_1_1_correlation": {
+        "real": 1.2007710195398642,
+        "imag": -0.08407770541561463
+      },
+      "max_abs_tracked_q": 1.0,
+      "min_abs_pair_denominator_sampled": 0.727455555741694
+    },
+    {
+      "nodes": 384,
+      "radial_offset": -0.015,
+      "s": {
+        "real": 0.6141374548308526,
+        "imag": 0.7701040102310094
+      },
+      "P_times_origin_determinant": {
+        "real": 0.9999999999999988,
+        "imag": 4.85722573273506e-17
+      },
+      "origin_abs_error_from_one": 1.2222108709692243e-15,
+      "fixed_site_1_1_correlation": {
+        "real": 1.211965115266717,
+        "imag": -0.08824533885143693
+      },
+      "max_abs_tracked_q": 1.024686915883072,
+      "min_abs_pair_denominator_sampled": 0.6926376424809678
+    }
+  ]
+}

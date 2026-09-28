@@ -1,0 +1,87 @@
+--- revision-8.tex
++++ paper/manuscript.tex
+@@ -13,7 +13,7 @@
+ \usepackage{microtype}
+ \setlength{\emergencystretch}{2em}
+ \raggedbottom
+-\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfsubject={Audit manuscript, revision 8}}
++\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Candidate proof, v0.1 release candidate; not independently certified}}
+ \numberwithin{equation}{section}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{lemma}[theorem]{Lemma}
+@@ -42,8 +42,10 @@
+ \newcommand{\gap}[1]{\par\medskip\noindent\textbf{SOURCE-SUPPORTED PROOF GAP:} #1\par\medskip}
+ \title{A candidate natural-boundary proof\\
+ for the bulk square-lattice Ising susceptibility}
+-\author{}
+-\date{Audit manuscript, revision 8\\28 September 2026}
++\author{Dehao Lin\\
++\small School of Physics, Sun Yat-sen University\\
++\small\texttt{lindh9@mail2.sysu.edu.cn}}
++\date{Version 0.1 release candidate\\28 September 2026}
+ \begin{document}
+ \maketitle
+ 
+@@ -60,7 +62,7 @@
+ rule. The decisive estimates, support conditions, differentiation
+ recurrences, and order of choices are included in the paper.
+ 
+-This is an audit manuscript reconstructed from a research checkpoint.
++This release candidate is reconstructed from an AI-generated research checkpoint.
+ Its propositions are the proof claims to be checked, not independently
+ certified results. Appendix~\ref{app:auditmap} identifies the load-bearing
+ checks and the coverage of all tail sectors. No priority claim or
+@@ -118,6 +120,12 @@
+ of Toeplitz determinants. Thus the architecture of isolating a
+ singular derivative and controlling the tail to exclude cancellation
+ is an established method, not a new principle claimed here.
++The analysis in Sections III--IV of \cite{TW2017Toeplitz} also uses
++contour partitions, Vandermonde homogeneity, and Hadamard estimates
++with factorial suppression; grouping near different singularities
++plays a role there as well. These tools and organizing ideas are
++precedents for this work, not inventions attributed to the present
++manuscript. Their bulk implementation must still be justified here.
+ 
+ The diagonal result concerns correlations summed along a single
+ lattice diagonal. The present observable sums over the full lattice;
+@@ -2680,7 +2688,7 @@
+ present in the checkpoint is not by itself a reason to
+ include its superseded argument in the proof.
+ 
+-The supplied audit packet records file hashes, the active-source
++The accompanying release records identify file hashes, the active-source
+ mapping, and the edits from the preceding reconstruction.
+ Those checks establish provenance and textual coverage.
+ They do not establish truth of any proposition, settle
+@@ -2688,6 +2696,32 @@
+ adversarial audit.
+ 
+ % END SOURCE
++
++\subsection*{Release status and AI assistance}
++Version 0.1 is a candidate for public mathematical review, derived
++from revision 8 with attribution, authorship, and release-status
++edits. It does not claim a new independent mathematical audit.
++Three problem-only reconstruction runs returned partial results;
++none reconstructed the complete natural-boundary proof. One
++method-informed run claimed the full tail estimate while explicitly
++leaving its whole-integral first singular term (node I3) unresolved.
++Its tail claim has not received a complete independent verification
++by the receiving workflow. The different point families used in
++some runs do not allow their conclusions to be combined silently.
++The repository separates these run claims from manuscript claims,
++version-specific audit reports, and finite computational checks.
++
++AI systems generated the research derivations, substantial manuscript
++text, audit attempts, reconstruction attempts, and checking code.
++The author organized this workflow, selected and maintained the
++materials, and is the human contact responsible for this submission.
++An AI audit verdict is not proof certification. No independent human
++expert certification or proof-assistant verification is claimed.
++The author declares no additional funding or competing interests
++for this project. Author-created text is offered under CC BY 4.0
++and project code under the MIT license; cited third-party works
++retain their own rights. The accompanying provenance record states
++the limits of the available historical access evidence.
+ 
+ \begin{thebibliography}{99}

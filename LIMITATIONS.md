@@ -1,0 +1,12 @@
+# Evidence limits
+
+1. **Mathematics:** this is a candidate proof. Repeated AI agreement, file hashes, script exit codes and finite samples are not independent certification of continuous-domain estimates or infinite sums. No human expert or proof-assistant certification is claimed.
+2. **Versions:** older audit verdicts do not automatically apply to edited versions. v0.1 received a scoped release/delta check; it has not received a new exhaustive mathematical audit.
+3. **Reconstruction:** all three CR0 runs are PARTIAL. MR1 is method-informed and claims TAIL while leaving I3 unresolved. Receiver checks did not independently reprove its entire TAIL. Different families/supports cannot be spliced without proving compatibility.
+4. **Isolation:** solver reports say they did not access comparison material; technical network/filesystem isolation was not established. Generic PDF instructions outside the input were disclosed. Logs include retrospective/grouped entries, not complete system access evidence. Unknown access is not evidence that contamination occurred.
+5. **Priority:** a dated bounded search and close comparison to the main prior methods were completed. Unindexed work, unpublished results and inaccessible details may be missing. Absence of an equivalent result in those searches is not a priority certificate.
+6. **Historical sources:** formal external inputs are identified. The v38 inventory is a scan of explicit text sources, not a complete original research access log. Three bytecode files were not source-scanned. The history cannot be certified free of all unrecorded exposure.
+7. **Public evidence:** the repository contains mathematical/report views and mapping hashes, not every original artifact. External papers and rendered pages are excluded; originals remain frozen with the project. Local links in historical reports may refer to omitted archival files and are not public download promises.
+8. **Licensing:** the chosen licenses apply to project contributions and whatever rights the author can grant. Cited works, third-party quotes and upstream licenses retain their own rights. Neither the institution nor cited authors are represented as endorsing the claim.
+
+The most valuable next evidence is an independent mathematical reading of the complete-pair compactness, selected-contour Pfaffian budget, and high-order differentiation/coarea interfaces, plus the whole-integral first-term glue. This list is a suggested entry route, not a statement that all other claims are certified.

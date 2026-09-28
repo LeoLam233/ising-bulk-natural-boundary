@@ -1,0 +1,368 @@
+[
+  {
+    "source": "paper/manuscript.tex",
+    "source_sha256": "f5e7732a6ec67aaf5597bd07bd4297802aaaec3540ca6bfced93c099fcee50e5",
+    "pdf_sha256": "24468537eab008bca79e96adc5455a7855b82d076b1256968d0f654200e4e83b",
+    "pages": 37,
+    "body_font_pt": 11,
+    "warnings": [],
+    "all_fonts_embedded": true,
+    "page_checks": [
+      {
+        "page": 1,
+        "characters": 2327,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 2,
+        "characters": 3444,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 3,
+        "characters": 2266,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 4,
+        "characters": 2154,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 5,
+        "characters": 2673,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 6,
+        "characters": 2941,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 7,
+        "characters": 2869,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 8,
+        "characters": 2824,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 9,
+        "characters": 3354,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 10,
+        "characters": 2640,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 11,
+        "characters": 2713,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 12,
+        "characters": 2609,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 13,
+        "characters": 2824,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 14,
+        "characters": 3568,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 15,
+        "characters": 3412,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 16,
+        "characters": 2755,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 17,
+        "characters": 2748,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 18,
+        "characters": 3426,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 19,
+        "characters": 3287,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 20,
+        "characters": 3299,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 21,
+        "characters": 2970,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 22,
+        "characters": 2959,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 23,
+        "characters": 2893,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 24,
+        "characters": 2941,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 25,
+        "characters": 2467,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 26,
+        "characters": 2234,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 27,
+        "characters": 2905,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 28,
+        "characters": 3074,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 29,
+        "characters": 2728,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 30,
+        "characters": 2191,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 31,
+        "characters": 2840,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 32,
+        "characters": 2809,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 33,
+        "characters": 2447,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 34,
+        "characters": 2844,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 35,
+        "characters": 3791,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 36,
+        "characters": 3064,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 37,
+        "characters": 1235,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      }
+    ],
+    "visual_review": "All rendered pages inspected; no visible clipping, overflow, missing formula, or unusable text size found.",
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility",
+      "/Subject": "Candidate proof, v0.1-rc2; not independently certified",
+      "/Author": "Dehao Lin",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20260928160254-00'00'"
+    },
+    "build": "Unchanged scripts/build_paper.py with existing Tectonic --untrusted --only-cached; no installation or resource download.",
+    "native_compiler": "Platform-directory failure; source left open in the native editor.",
+    "mathematical_certification": false,
+    "visual_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "render_method": "Poppler 100 dpi; all manuscript pages inspected in two-page contact sheets, both brief pages at original rendered size.",
+    "pdf_hash_identifies_reviewed_render": true
+  },
+  {
+    "source": "docs/expert_brief.tex",
+    "source_sha256": "eb71bd0c3e31e4c0d95fced6da447d02ef0c2503f6a9144bff16cd3b35729aea",
+    "pdf_sha256": "ce47a0756ab784a32618721971f7c2562b6384e4e46b6bfc36be8106dedfa9d7",
+    "pages": 2,
+    "body_font_pt": 11,
+    "warnings": [],
+    "all_fonts_embedded": true,
+    "page_checks": [
+      {
+        "page": 1,
+        "characters": 3025,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      },
+      {
+        "page": 2,
+        "characters": 2733,
+        "unresolved_references": false,
+        "replacement_characters": false,
+        "edge_characters": 0
+      }
+    ],
+    "visual_review": "All rendered pages inspected; no visible clipping, overflow, missing formula, or unusable text size found.",
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Bulk Ising susceptibility: a candidate natural-boundary proof",
+      "/Subject": "Expert brief v0.1-rc2; companion to manuscript v0.1-rc2",
+      "/Author": "Dehao Lin",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20260928160255-00'00'"
+    },
+    "build": "Unchanged scripts/build_paper.py with existing Tectonic --untrusted --only-cached; no installation or resource download.",
+    "native_compiler": "Platform-directory failure; source left open in the native editor.",
+    "mathematical_certification": false,
+    "visual_pages_reviewed": [
+      1,
+      2
+    ],
+    "render_method": "Poppler 100 dpi; all manuscript pages inspected in two-page contact sheets, both brief pages at original rendered size.",
+    "pdf_hash_identifies_reviewed_render": true
+  }
+]

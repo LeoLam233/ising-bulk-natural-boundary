@@ -1,0 +1,15 @@
+# rc2 editorial and release validation
+
+This record concerns version 0.1-rc2. Earlier unprefixed files in this directory are preserved rc1 preparation records; they are not silently updated to describe rc2. These are editorial, integrity and finite computational checks, not certification of the natural-boundary proof.
+
+- The manuscript has 37 pages; the expert brief has 2. All pages were rendered and visually inspected. Both use 11-point body text; no TeX warning, clipped formula, unresolved reference or visible overflow was found. [Build/layout record](RC2_BUILD_QA.json).
+- The exact TeX delta is limited to eight editorial substitutions. All 1,379 extracted math fragments, 29 numbered statement blocks and 29 proof environments are unchanged. Sections 2–9 and Appendices A–G before the release-status text are byte-identical. [Mathematical-delta record](../provenance/RC1_RC2_MANUSCRIPT_DELTA.json).
+- All 11 existing bibliography entries and citation keys are preserved; Orrick et al. 2001 is the sole added entry. Each in-text citation occurrence, compiled number and PDF citation destination was checked. No new mathematical premise is imported. [Primary-source verification](../provenance/ORRICK_2001_VERIFICATION.md).
+- All six checks exposed by `scripts/reproduce.py` were actually rerun successfully and agreed with the historical finite results within the recorded comparison tolerances. An initial missing dependency-path failure is disclosed in the [new replay record](RC2_REPRODUCTION_RECORD.json).
+- All 18 additional archived CR0 scientific scripts were run in scratch copies with their original procedural logging helpers. All completed; their finite result comparisons agreed. Those helpers are not bundled in the public view, so these archival scripts are not claimed to be standalone public entrypoints. [Archived replay record](RC2_ARCHIVED_CHECKS.json).
+- Public JSON and CFF parse, Python syntax, local Markdown links, metadata/privacy patterns, and citation/brief synchronization are recorded in the [current inspection record](RC2_INSPECTION.json). Remote historical links are not all revalidated for availability.
+- The manifest format and verification script are unchanged. Exact file/size/hash verification, deliberate tamper and unlisted-file rejection, ZIP CRC/comment checks, and a fresh extraction followed by release-level replay are recorded in the outer staging receipt. The outer archive SHA-256 binds the manifest without a circular self-hash.
+
+The native document compiler failed to locate platform directories. The unchanged public build entrypoint succeeded with the already available cached Tectonic runtime. No TeX runtime or resources were installed or downloaded for compilation. The displayed author date remains 28 September 2026; preparation/validation continued into 29 September in the local timezone.
+
+No historical audit, reconstruction, input-view, source-inventory, diagnostic or script file was normalized or rewritten. Historical version-specific claims remain historical. No human expert or proof assistant has certified the proof; no exhaustive priority clearance is claimed.

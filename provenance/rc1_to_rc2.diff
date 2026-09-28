@@ -1,0 +1,100 @@
+--- rc1/paper/manuscript.tex
++++ rc2/paper/manuscript.tex
+@@ -13,7 +13,7 @@
+ \usepackage{microtype}
+ \setlength{\emergencystretch}{2em}
+ \raggedbottom
+-\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Candidate proof, v0.1 release candidate; not independently certified}}
++\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Candidate proof, v0.1-rc2; not independently certified}}
+ \numberwithin{equation}{section}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{lemma}[theorem]{Lemma}
+@@ -45,7 +45,7 @@
+ \author{Dehao Lin\\
+ \small School of Physics, Sun Yat-sen University\\
+ \small\texttt{lindh9@mail2.sysu.edu.cn}}
+-\date{Version 0.1 release candidate\\28 September 2026}
++\date{Version 0.1-rc2\\28 September 2026}
+ \begin{document}
+ \maketitle
+ 
+@@ -65,8 +65,9 @@
+ This release candidate is reconstructed from an AI-generated research checkpoint.
+ Its propositions are the proof claims to be checked, not independently
+ certified results. Appendix~\ref{app:auditmap} identifies the load-bearing
+-checks and the coverage of all tail sectors. No priority claim or
+-independent validation of the natural-boundary conclusion is made.
++checks and the coverage of all tail sectors. No exhaustive priority
++clearance is claimed; the natural-boundary conclusion has no
++independent certification.
+ \end{abstract}
+ 
+ \section{The claim, scope, and proof architecture}\label{sec:scope}
+@@ -111,6 +112,13 @@
+ the unit-circle form-factor singularities now bearing his name;
+ Boukraa et al.\ \cite{Boukraa2008} developed further series and
+ singularity evidence. These findings motivate the full-sum question.
++
++Orrick, Nickel, Guttmann, and Perk \cite[Section~3.2]{Orrick2001}
++examined the order dependence of singularity amplitudes and argued
++that it provides strong evidence against cancellation in the full sum.
++Their introduction explicitly distinguishes this evidence from a proof.
++We cite that analysis as a heuristic precedent, not as an infinite-tail
++theorem.
+ 
+ For the diagonal susceptibility, Tracy and Widom \cite{TW2013}
+ proved a natural-boundary theorem. Their Section IV isolates a
+@@ -143,7 +151,7 @@
+ These are the claims to assess against the displayed derivations and
+ the prior literature. Neither an internal audit verdict nor the
+ inclusion of additional references establishes their correctness or
+-their novelty. No complete literature-priority clearance is asserted.
++their novelty. No exhaustive literature-priority clearance is claimed.
+ 
+ \subsection{The two estimates that carry the conclusion}
+ For each selected point \(s_*\), Section~\ref{sec:arithmetic} specifies
+@@ -2698,9 +2706,10 @@
+ % END SOURCE
+ 
+ \subsection*{Release status and AI assistance}
+-Version 0.1 is a candidate for public mathematical review, derived
+-from revision 8 with attribution, authorship, and release-status
+-edits. It does not claim a new independent mathematical audit.
++Version 0.1-rc2 is a candidate for public mathematical review.
++It preserves the mathematics of revision 8 and release candidate rc1;
++this revision clarifies bibliography, attribution, and presentation.
++It does not claim a new independent mathematical audit.
+ Three problem-only reconstruction runs returned partial results;
+ none reconstructed the complete natural-boundary proof. One
+ method-informed run claimed the full tail estimate while explicitly
+@@ -2711,10 +2720,11 @@
+ The repository separates these run claims from manuscript claims,
+ version-specific audit reports, and finite computational checks.
+ 
+-AI systems generated the research derivations, substantial manuscript
+-text, audit attempts, reconstruction attempts, and checking code.
+-The author organized this workflow, selected and maintained the
+-materials, and is the human contact responsible for this submission.
++Generative AI was used extensively in research exploration,
++mathematical derivation, manuscript writing, code, internal audits,
++and reconstruction attempts. Dehao Lin is the named human author
++and public contact. No specific division of mathematical contributions
++or line-by-line human verification is asserted here.
+ An AI audit verdict is not proof certification. No independent human
+ expert certification or proof-assistant verification is claimed.
+ The author declares no additional funding or competing interests
+@@ -2764,6 +2774,14 @@
+ 33(8):1693--1711, 2000.
+ \newblock \href{https://doi.org/10.1088/0305-4470/33/8/313}{doi:10.1088/0305-4470/33/8/313}.
+ 
++\bibitem{Orrick2001}
++W.~P. Orrick, B.~Nickel, A.~J. Guttmann, and J.~H.~H. Perk.
++\newblock The susceptibility of the square lattice {Ising} model:
++New developments.
++\newblock \emph{Journal of Statistical Physics}, 102:795--841, 2001.
++\newblock \href{https://doi.org/10.1023/A:1004850919647}{doi:10.1023/A:1004850919647};
++\href{https://arxiv.org/abs/cond-mat/0103074v1}{arXiv:cond-mat/0103074v1}.
++
+ \bibitem{PalmerTracy1981}
+ John Palmer and Craig Tracy.
+ \newblock Two-dimensional {Ising} correlations: Convergence of the scaling limit.

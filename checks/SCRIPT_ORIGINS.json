@@ -1,0 +1,92 @@
+[
+  {
+    "id": "v7_core",
+    "script": "checks/v7_core/checks.py",
+    "original_project_path": "work/v7_audit_review_20260928/original_evidence/checks.py",
+    "original_sha256": "bed7bcb7b4c2eeb90f8cef3e37187351dd076df971778fa6d0d1bed853302af7",
+    "byte_identical_script": true,
+    "arguments": [
+      "--output",
+      "check_results.json"
+    ],
+    "output_file": "check_results.json",
+    "comparison_kind": "json",
+    "expected": "checks/v7_core/expected.json",
+    "fixture_original_sha256": "9bded9b4324e46c391ae377effadd27ee889e07e67933b652ef6c6887834164d",
+    "fixture_is_derivative": false,
+    "historical_paper_hashes_are_not_v01_input_hashes": false
+  },
+  {
+    "id": "v7_normalization",
+    "script": "checks/v7_normalization/independent_normalization.py",
+    "original_project_path": "outputs/ising_v7_a1v2_audit_intake_20260928/received/independent_normalization.py",
+    "original_sha256": "e68c6f33613c9cd8079a4f128f3d94f6c8f43195a74ac7b063fbb4ad922020d5",
+    "byte_identical_script": true,
+    "arguments": [],
+    "output_file": "independent_normalization_results.json",
+    "comparison_kind": "json",
+    "expected": "checks/v7_normalization/expected.json",
+    "fixture_original_sha256": "fdd0ca2aac988f7123b95a591bba2e93d902315ba1cf9ddd8a7ce8744ec261e2",
+    "fixture_is_derivative": false,
+    "historical_paper_hashes_are_not_v01_input_hashes": false
+  },
+  {
+    "id": "v7_additional",
+    "script": "checks/v7_additional/ising_v7_audit_checks.py",
+    "original_project_path": "outputs/ising_v7_additional_audit_20260928/received/ising_v7_audit_checks.py",
+    "original_sha256": "edcafc559831b64db4067c3d6dc28cb4e7b6d6297e679e784a04351b6b9fd2fb",
+    "byte_identical_script": true,
+    "arguments": [],
+    "output_file": "stdout.txt",
+    "comparison_kind": "text",
+    "expected": "checks/v7_additional/expected.txt",
+    "fixture_original_sha256": "1d954285f743c35a3a675516589b1ecace368aa208506e867ffc64d7eb6fbbb7",
+    "fixture_is_derivative": false,
+    "historical_paper_hashes_are_not_v01_input_hashes": false
+  },
+  {
+    "id": "v6_diagnostics",
+    "script": "checks/v6_diagnostics/ising_v6_audit_checks.py",
+    "original_project_path": "work/v6_audit_review_20260928/received/ising_v6_audit_checks.py",
+    "original_sha256": "c11d9874b420020808bad6bfeafb164f5bb95476105fe6175ef109b13d16779b",
+    "byte_identical_script": true,
+    "arguments": [
+      "--output",
+      "result.json"
+    ],
+    "output_file": "result.json",
+    "comparison_kind": "json",
+    "expected": "checks/v6_diagnostics/expected.json",
+    "fixture_original_sha256": "7091dbe95a4e8b2d1ac1a2d00fe9825250ab042d52aebd495463815318732564",
+    "fixture_is_derivative": true,
+    "historical_paper_hashes_are_not_v01_input_hashes": true
+  },
+  {
+    "id": "mr1_algebra",
+    "script": "checks/mr1_algebra/algebra_checks.py",
+    "original_project_path": "outputs/ising_mr1_run1_20260928/frozen_snapshot/RESULT/code/algebra_checks.py",
+    "original_sha256": "7a39fc3085ca9bed68a029f988d5c847016bd0188f52c9e837bc80a0d71512d5",
+    "byte_identical_script": true,
+    "arguments": [],
+    "output_file": "stdout.txt",
+    "comparison_kind": "json",
+    "expected": "checks/mr1_algebra/expected.json",
+    "fixture_original_sha256": "034457b60f07d8a6f8575d455b7f557cb4dac8518224d0517d33095e45cfe1d7",
+    "fixture_is_derivative": false,
+    "historical_paper_hashes_are_not_v01_input_hashes": false
+  },
+  {
+    "id": "mr1_coupled",
+    "script": "checks/mr1_coupled/coupled_diagnostics.py",
+    "original_project_path": "outputs/ising_mr1_run1_20260928/frozen_snapshot/RESULT/code/coupled_diagnostics.py",
+    "original_sha256": "122868b414b1316bc2aa83e26815db64febfb0a920fcc9dcfbc91a98ba2c1f3f",
+    "byte_identical_script": true,
+    "arguments": [],
+    "output_file": "stdout.txt",
+    "comparison_kind": "json",
+    "expected": "checks/mr1_coupled/expected.json",
+    "fixture_original_sha256": "efa55dffbacffce8017b1d4168f18f9d6b55793abb507ad161d0660773ce16ce",
+    "fixture_is_derivative": false,
+    "historical_paper_hashes_are_not_v01_input_hashes": false
+  }
+]

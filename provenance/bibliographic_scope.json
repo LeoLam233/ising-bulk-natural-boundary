@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-28",
+  "scope": "Targeted bibliography, attribution, and premise-role review; not exhaustive priority clearance or full reproof of external papers",
+  "sources": [
+    {
+      "key": "Boukraa2008",
+      "url": "https://arxiv.org/abs/0808.0763",
+      "role": "Independent angular formula and numerical/series context",
+      "evidence_scope": "Retained previously examined reference and formula comparison; not a new full-paper re-audit in this revision"
+    },
+    {
+      "key": "GuttmannEnting1996",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.76.344",
+      "role": "Early evidence and historical context, not a proof of the full natural boundary",
+      "evidence_scope": "Publisher information, Crossref metadata, and TW2014 historical attribution"
+    },
+    {
+      "key": "McCoyMaillard2012",
+      "url": "https://arxiv.org/abs/1203.1456",
+      "role": "Physical definitions and amplitude conventions; printed amplitude is not a premise of the internal coefficient",
+      "evidence_scope": "Retained prior definition/amplitude comparison and corrected role description; not a new full-paper re-audit"
+    },
+    {
+      "key": "Nickel1999",
+      "url": "https://doi.org/10.1088/0305-4470/32/21/303",
+      "role": "Original singularity work",
+      "evidence_scope": "Crossref metadata and TW2014 attribution; publisher full-text access did not succeed, no full-text reading claimed"
+    },
+    {
+      "key": "Nickel2000",
+      "url": "https://doi.org/10.1088/0305-4470/33/8/313",
+      "role": "Addendum to original singularity work",
+      "evidence_scope": "Crossref metadata and TW2014 attribution; publisher full-text access did not succeed, no full-text reading claimed"
+    },
+    {
+      "key": "PalmerTracy1981",
+      "url": "https://www.math.ucdavis.edu/~tracy/selectedPapers/1980s/CV18.pdf",
+      "doi": "10.1016/0196-8858(81)90010-5",
+      "role": "Upstream low-temperature correlation representation identified in TW2014 Appendix A",
+      "evidence_scope": "Original paper located, introduction inspected, exact p.375 attribution read in TW2014; not a full proof audit of the 60-page article"
+    },
+    {
+      "key": "TW2013",
+      "url": "https://arxiv.org/html/1307.5913v3",
+      "doi": "10.1063/1.4836779",
+      "role": "Closest identified methodological precedent: diagonal susceptibility natural boundary via divergent derivative and controlled remaining sum",
+      "evidence_scope": "Introduction and Section IV including Lemmas 2-4 inspected; does not transfer the diagonal theorem to the bulk susceptibility"
+    },
+    {
+      "key": "TW2014",
+      "url": "https://arxiv.org/html/1403.3966v1",
+      "role": "Fixed-order non-Nickel smoothness, conventions, and correlation representation in Appendix A",
+      "evidence_scope": "Introduction, theorem scope, cancellation caveat, historical citations, and Appendix A source chain checked; not used as a uniform infinite-tail theorem"
+    },
+    {
+      "key": "TW2017Toeplitz",
+      "url": "https://arxiv.org/abs/1502.04922",
+      "role": "Later extension to sums of Toeplitz determinants and more general symbols",
+      "evidence_scope": "Abstract and publication record checked; distinguishes 2015 preprint from 2017 chapter, not a full technical comparison"
+    },
+    {
+      "key": "WMTB1976",
+      "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.13.316",
+      "role": "Historical form-factor/correlation expansion source",
+      "evidence_scope": "Publisher information, Crossref metadata, and TW2014 historical attribution; not a rederivation of the original expansion"
+    },
+    {
+      "key": "Yang1952",
+      "url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808",
+      "role": "Spontaneous magnetization",
+      "evidence_scope": "Publisher information and Crossref metadata; magnetization expression also appears in TW sources, not a reproof of Yang's theorem"
+    }
+  ]
+}

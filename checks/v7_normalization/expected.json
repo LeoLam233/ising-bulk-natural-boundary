@@ -1,0 +1,114 @@
+{
+  "status": "FINITE DOUBLE-PRECISION QUADRATURE ONLY; NO RIGOROUS ERROR ENCLOSURE",
+  "identity": "Cstd_2 = f00^(2) + 2*T_2",
+  "checks": [
+    {
+      "s": 1.4,
+      "radius": 0.9,
+      "mesh_per_angle": 256,
+      "Cstd_N2": 0.17357062131913362,
+      "onsite_f00_N2": 0.078292182602266,
+      "TN2_real": 0.047639219358433814,
+      "TN2_imag": -1.214306433183765e-17,
+      "absolute_identity_error": 3.6880726988814706e-17,
+      "relative_identity_error": 2.124825428895849e-16,
+      "max_interior_root_modulus": 0.629895568419681
+    },
+    {
+      "s": 1.4,
+      "radius": 0.9,
+      "mesh_per_angle": 512,
+      "Cstd_N2": 0.17357062131913364,
+      "onsite_f00_N2": 0.07829218260226599,
+      "TN2_real": 0.04763921935843382,
+      "TN2_imag": -8.673617379884035e-19,
+      "absolute_identity_error": 1.734723475976807e-18,
+      "relative_identity_error": 9.99433811317226e-18,
+      "max_interior_root_modulus": 0.629895568419681
+    },
+    {
+      "s": 1.4,
+      "radius": 0.9,
+      "mesh_per_angle": 1024,
+      "Cstd_N2": 0.1735706213191336,
+      "onsite_f00_N2": 0.07829218260226598,
+      "TN2_real": 0.04763921935843381,
+      "TN2_imag": 1.734723475976807e-18,
+      "absolute_identity_error": 3.469446951953614e-18,
+      "relative_identity_error": 1.9988676226344527e-17,
+      "max_interior_root_modulus": 0.629895568419681
+    },
+    {
+      "s": 2.0,
+      "radius": 0.8,
+      "mesh_per_angle": 256,
+      "Cstd_N2": 0.022047227534310328,
+      "onsite_f00_N2": 0.0162654920395416,
+      "TN2_real": 0.002890867747384363,
+      "TN2_imag": 4.336808689942018e-19,
+      "absolute_identity_error": 3.576224061345498e-18,
+      "relative_identity_error": 1.6220742747722398e-16,
+      "max_interior_root_modulus": 0.390737577889928
+    },
+    {
+      "s": 2.0,
+      "radius": 0.8,
+      "mesh_per_angle": 512,
+      "Cstd_N2": 0.02204722753431033,
+      "onsite_f00_N2": 0.0162654920395416,
+      "TN2_real": 0.002890867747384364,
+      "TN2_imag": 3.2526065174565133e-19,
+      "absolute_identity_error": 3.529906531158615e-18,
+      "relative_identity_error": 1.6010659506576529e-16,
+      "max_interior_root_modulus": 0.390737577889928
+    },
+    {
+      "s": 2.0,
+      "radius": 0.8,
+      "mesh_per_angle": 1024,
+      "Cstd_N2": 0.02204722753431033,
+      "onsite_f00_N2": 0.0162654920395416,
+      "TN2_real": 0.0028908677473843646,
+      "TN2_imag": -5.421010862427522e-19,
+      "absolute_identity_error": 3.634908046050479e-18,
+      "relative_identity_error": 1.6486916735420648e-16,
+      "max_interior_root_modulus": 0.390737577889928
+    },
+    {
+      "s": 3.0,
+      "radius": 0.75,
+      "mesh_per_angle": 256,
+      "Cstd_N2": 0.0035101912478516387,
+      "onsite_f00_N2": 0.00311045745880996,
+      "TN2_real": 0.00019986689452083893,
+      "TN2_imag": -1.2197274440461925e-19,
+      "absolute_identity_error": 9.010137546323265e-19,
+      "relative_identity_error": 2.5668508950439062e-16,
+      "max_interior_root_modulus": 0.2296928280568964
+    },
+    {
+      "s": 3.0,
+      "radius": 0.75,
+      "mesh_per_angle": 512,
+      "Cstd_N2": 0.0035101912478516387,
+      "onsite_f00_N2": 0.00311045745880996,
+      "TN2_real": 0.00019986689452083887,
+      "TN2_imag": 9.486769009248164e-20,
+      "absolute_identity_error": 8.878715554742118e-19,
+      "relative_identity_error": 2.5294107721840533e-16,
+      "max_interior_root_modulus": 0.2296928280568964
+    },
+    {
+      "s": 3.0,
+      "radius": 0.75,
+      "mesh_per_angle": 1024,
+      "Cstd_N2": 0.0035101912478516387,
+      "onsite_f00_N2": 0.00311045745880996,
+      "TN2_real": 0.000199866894520839,
+      "TN2_imag": 1.3552527156068805e-20,
+      "absolute_identity_error": 4.345270763724971e-19,
+      "relative_identity_error": 1.2379014295544242e-16,
+      "max_interior_root_modulus": 0.2296928280568964
+    }
+  ]
+}

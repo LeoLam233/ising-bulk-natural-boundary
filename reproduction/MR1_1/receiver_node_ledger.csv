@@ -1,0 +1,26 @@
+id,solver_status,receiver_status,dependencies,evidence_files,note
+I1,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,,DERIVATION.md;proofs/P01_EXTERIOR_AND_NORMALIZATION.md,Statement and source pathway read; no blanket independent mathematical certification.
+I2,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I1,DERIVATION.md;proofs/P02_ARITHMETIC.md,Statement and source pathway read; no blanket independent mathematical certification.
+I3,unresolved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I1;I2,DERIVATION.md;proofs/P10_FINITE_PARTICLE_INTERFACE.md,Explicitly open global first-term gluing and remainder interface; formal model does not close it.
+I4,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T1;T2;T3,DERIVATION.md;proofs/P03_CONTOURS_AND_DISCS.md;proofs/P05_TRANSPORT_AND_FLUX.md;proofs/P07_MIXED_COMPACT_CURRENT.md,Statement and source pathway read; no blanket independent mathematical certification.
+I5,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I1;I2;I4;T6,DERIVATION.md;proofs/P08_TAIL_SUMMATION_AND_SCOPE.md;CONSTANTS.md,Statement and source pathway read; no blanket independent mathematical certification.
+I6,conditional,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I1;I2;I3;I5,DERIVATION.md;proofs/P08_TAIL_SUMMATION_AND_SCOPE.md;proofs/P10_FINITE_PARTICLE_INTERFACE.md,Remains conditional on I3; not a full natural-boundary reproduction.
+T1,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I1,DERIVATION.md;proofs/P03_CONTOURS_AND_DISCS.md,Statement and source pathway read; no blanket independent mathematical certification.
+T2,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T1,DERIVATION.md;proofs/P03_CONTOURS_AND_DISCS.md,See MR1-R1-ENDPOINT-WORDING. Cross-group equality is compatible with actual grouping budget.
+T3,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T1;T2,DERIVATION.md;proofs/P05_TRANSPORT_AND_FLUX.md;proofs/P07_MIXED_COMPACT_CURRENT.md,Statement and source pathway read; no blanket independent mathematical certification.
+T4,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,W1;W2;W3;W13,DERIVATION.md;proofs/P04_LARGE_ORDER_BUDGETS.md,Statement and source pathway read; no blanket independent mathematical certification.
+T5,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,W4;W5;W6;W7;W8;W9;W10;W11;W12,DERIVATION.md;proofs/P06_INTERMEDIATE_ALL_BRANCH.md;proofs/P07_MIXED_COMPACT_CURRENT.md,Statement and source pathway read; no blanket independent mathematical certification.
+T6,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T4;T5;I2;I4,DERIVATION.md;proofs/P08_TAIL_SUMMATION_AND_SCOPE.md;CONSTANTS.md,Statement and source pathway read; no blanket independent mathematical certification.
+W1,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2,DERIVATION.md;proofs/P04_LARGE_ORDER_BUDGETS.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W2,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2,DERIVATION.md;proofs/P03_CONTOURS_AND_DISCS.md;proofs/P04_LARGE_ORDER_BUDGETS.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W3,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2,DERIVATION.md;proofs/P04_LARGE_ORDER_BUDGETS.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W4,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I2;T2;T3,DERIVATION.md;proofs/P06_INTERMEDIATE_ALL_BRANCH.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W5,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I2;T2;T3,DERIVATION.md;proofs/P06_INTERMEDIATE_ALL_BRANCH.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W6,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,I2;T2;T3,DERIVATION.md;proofs/P06_INTERMEDIATE_ALL_BRANCH.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W7,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2;T3,DERIVATION.md;proofs/P07_MIXED_COMPACT_CURRENT.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W8,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2;T3,DERIVATION.md;proofs/P07_MIXED_COMPACT_CURRENT.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W9,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2;T3,DERIVATION.md;proofs/P07_MIXED_COMPACT_CURRENT.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W10,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2;T3,DERIVATION.md;proofs/P07_MIXED_COMPACT_CURRENT.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W11,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2;T3,DERIVATION.md;proofs/P07_MIXED_COMPACT_CURRENT.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W12,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2;T3,DERIVATION.md;proofs/P07_MIXED_COMPACT_CURRENT.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.
+W13,proved,READ_AND_SCOPE_CHECKED_NOT_CERTIFIED,T2,DERIVATION.md;proofs/P03_CONTOURS_AND_DISCS.md;proofs/P04_LARGE_ORDER_BUDGETS.md;COVERAGE.md,Statement and source pathway read; no blanket independent mathematical certification.

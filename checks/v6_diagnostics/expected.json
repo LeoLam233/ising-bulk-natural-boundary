@@ -1,0 +1,108 @@
+{
+  "scope": "Floating-point spot checks only; no certified error or infinite-tail claim.",
+  "source_sha256": {
+    "ising_audit_manuscript_v6.tex": "5cd014913cba8a55c3a06662adbf7ba30a863ad310476b4b060d5e58efbf448c",
+    "ising_audit_manuscript_v6.pdf": "fa48d824cadc1fd400e59bb0cf1e01b7bab09efeabbbfa59d62e1b2f55658001"
+  },
+  "normalization": [
+    {
+      "s": 1.5,
+      "r": 0.9,
+      "grid": 384,
+      "T2_real": 0.02570285614585209,
+      "T2_imag": 4.625929269271485e-18,
+      "f00_real": 0.05655637259152553,
+      "Cstd_real": 0.10796208488322973,
+      "identity_residual": 1.660315805247626e-17
+    },
+    {
+      "s": 2.0,
+      "r": 0.8,
+      "grid": 384,
+      "T2_real": 0.0028908677473843663,
+      "T2_imag": -9.637352644315595e-19,
+      "f00_real": 0.0162654920395416,
+      "Cstd_real": 0.022047227534310328,
+      "identity_residual": 3.931868763111433e-18
+    },
+    {
+      "s": 4.0,
+      "r": 0.75,
+      "grid": 384,
+      "T2_real": 3.314353527230045e-05,
+      "T2_imag": -3.614007241618348e-20,
+      "f00_real": 0.0009789536928958016,
+      "Cstd_real": 0.0010452407634404023,
+      "identity_residual": 2.1298149731604064e-19
+    }
+  ],
+  "arithmetic": {
+    "families": 523,
+    "pmax": 61,
+    "failures": [],
+    "tolerance": 2e-12
+  },
+  "two_phase_field": {
+    "parameters": {
+      "p": 11,
+      "a": 1,
+      "b": 2,
+      "N": 24,
+      "theta": 0.8913861645505543,
+      "thetaB": 1.3112226378285763,
+      "Sstar": 1.2566685458330675
+    },
+    "tests": [
+      {
+        "eps": 0.0001,
+        "sum_V": 1.7763568394002505e-15,
+        "Z_freeze_absolute": 2.0495186137532011e-13,
+        "Z_freeze_scaled": 9.771025168716385e-17,
+        "max_unselected_residual": 2.0097183471152322e-14,
+        "B_pair_sum": 1.1368683772161603e-13
+      },
+      {
+        "eps": 1e-07,
+        "sum_V": 5.0242958677880805e-15,
+        "Z_freeze_absolute": 0.0,
+        "Z_freeze_scaled": 0.0,
+        "max_unselected_residual": 4.547473508864641e-13,
+        "B_pair_sum": 6.355287432313019e-14
+      },
+      {
+        "eps": 1e-10,
+        "sum_V": 7.32410687763558e-15,
+        "Z_freeze_absolute": 3.637978807091713e-12,
+        "Z_freeze_scaled": 2.1040313549246324e-17,
+        "max_unselected_residual": 1.7160311712462504e-11,
+        "B_pair_sum": 3.552713678800501e-14
+      }
+    ]
+  },
+  "amplitude_conventions": [
+    {
+      "p": 11,
+      "N": 22,
+      "ratio_review_positive_theta": "(1.67198942794374259045245693052914400825e-91 - 1.0j)",
+      "ratio_review_negative_theta": "(1.0 - 1.67198942794374259045245693052914400825e-91j)",
+      "positive_theta_residual_from_minus_i": "5.6209368851e-89",
+      "negative_theta_residual_from_one": "5.6209368851e-89"
+    },
+    {
+      "p": 13,
+      "N": 26,
+      "ratio_review_positive_theta": "(2.136416875273795968896587948210714172928e-91 - 1.0j)",
+      "ratio_review_negative_theta": "(1.0 - 2.136416875273795968896587948210714172928e-91j)",
+      "positive_theta_residual_from_minus_i": "8.48048587181e-89",
+      "negative_theta_residual_from_one": "8.48048587181e-89"
+    },
+    {
+      "p": 17,
+      "N": 34,
+      "ratio_review_positive_theta": "(2.012866288435083707112169674394179244141e-91 - 1.0j)",
+      "ratio_review_negative_theta": "(1.0 - 2.012866288435083707112169674394179244141e-91j)",
+      "positive_theta_residual_from_minus_i": "2.83254764467e-88",
+      "negative_theta_residual_from_one": "2.83254764467e-88"
+    }
+  ]
+}

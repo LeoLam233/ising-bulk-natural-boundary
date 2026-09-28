@@ -1,0 +1,46 @@
+{
+  "kind": "floating_point_check_of_local_model_only",
+  "decimal_precision": 100,
+  "rows": [
+    {
+      "p": 7,
+      "root_index": 1,
+      "particle_n": 14,
+      "derivative_order_k": 97,
+      "gamma_derivative_max_error": "1.532693421268123088085260196332561484986901937502793769913760050813029662324518484285641429668982866e-101",
+      "radial_beta_relative_error": "1.043579230758963148347252978445016496589796157094727294906057199848984488493373465489142858070095497e-101",
+      "radial_beta_integral_nonzero": true,
+      "finite_diagnostic_pass": true
+    },
+    {
+      "p": 7,
+      "root_index": 2,
+      "particle_n": 14,
+      "derivative_order_k": 97,
+      "gamma_derivative_max_error": "7.34488814583536759953484672011743320709174213892407739194444640815778915050197608774554946882263957e-102",
+      "radial_beta_relative_error": "0.0",
+      "radial_beta_integral_nonzero": true,
+      "finite_diagnostic_pass": true
+    },
+    {
+      "p": 11,
+      "root_index": 1,
+      "particle_n": 22,
+      "derivative_order_k": 241,
+      "gamma_derivative_max_error": "6.321229794145407264280943111724587624238389552724666545023632490713014251166199048724985041958337978e-101",
+      "radial_beta_relative_error": "0.0",
+      "radial_beta_integral_nonzero": true,
+      "finite_diagnostic_pass": true
+    },
+    {
+      "p": 13,
+      "root_index": 1,
+      "particle_n": 26,
+      "derivative_order_k": 337,
+      "gamma_derivative_max_error": "6.817069456465067202283111866103195477947886144026149919951080202528798188537883498599968402597419012e-101",
+      "radial_beta_relative_error": "1.093998449539210435977921651200300021476411276440945422278019224137184240960044735492488292545242684e-101",
+      "radial_beta_integral_nonzero": true,
+      "finite_diagnostic_pass": true
+    }
+  ]
+}

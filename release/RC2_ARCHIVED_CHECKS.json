@@ -1,0 +1,155 @@
+{
+  "scope": "Additional replay of all 18 archived CR0 scientific scripts. Original procedural loggers supplied only in scratch. Not proof certification.",
+  "groups": [
+    {
+      "group": "CR0_1",
+      "scripts": [
+        {
+          "script": "reproduction/CR0_1/RESULT/code/check_residues.py",
+          "script_sha256": "570ef8595b2bebc7b7acc281fa682c0e999ec4821d097c8d378aa082f682b90d",
+          "exit_code": 0,
+          "seconds": 0.507
+        },
+        {
+          "script": "reproduction/CR0_1/RESULT/code/check_lowtemp.py",
+          "script_sha256": "d9644bba54edbec2dc2821abdcbd57327ec9ff504b4e62f8702aed4526d6cca4",
+          "exit_code": 0,
+          "seconds": 0.045
+        },
+        {
+          "script": "reproduction/CR0_1/RESULT/code/check_cyclotomic.py",
+          "script_sha256": "c3f0074d74729ce0e146e5eb800b4167e9420272be36d0623363ce6c092e816e",
+          "exit_code": 0,
+          "seconds": 0.809
+        },
+        {
+          "script": "reproduction/CR0_1/RESULT/code/check_chi2.py",
+          "script_sha256": "21d21a9c4c1b1151ab41e781b863f51d608c3843574cb686e740e9e6be707852",
+          "exit_code": 0,
+          "seconds": 5.687
+        },
+        {
+          "script": "reproduction/CR0_1/RESULT/code/check_exterior.py",
+          "script_sha256": "efc903a894ebcfa8e30e3a059a54bce93c2e3ac274af6ada595d2cefe8af7b91",
+          "exit_code": 0,
+          "seconds": 0.756
+        },
+        {
+          "script": "reproduction/CR0_1/RESULT/code/check_local_model.py",
+          "script_sha256": "9567a9e7b8ac6d1e458d6dec7f204da7c83362533c5d622e5ef28665b061e276",
+          "exit_code": 0,
+          "seconds": 1.259
+        }
+      ],
+      "all_entrypoints_completed": true,
+      "historical_comparison_differences": [],
+      "procedural_helper": {
+        "path": "code/log_action.py",
+        "sha256": "3514550fdfacb0c041372a7bdfee837f67c34b5778e9f09384670420507ccf30",
+        "source": "Original frozen run",
+        "scope": "Logging only; supplied in scratch, not added to the public repository."
+      }
+    },
+    {
+      "group": "CR0_2",
+      "scripts": [
+        {
+          "script": "reproduction/CR0_2/RESULT/code/exact_geometry.py",
+          "script_sha256": "e51b1e5d88485f668e13e078cbb2994404e72666a938f78205efa7ba493605a0",
+          "exit_code": 0,
+          "seconds": 0.077
+        },
+        {
+          "script": "reproduction/CR0_2/RESULT/code/series_check.py",
+          "script_sha256": "60ce30cabd6beda28bcdc3d09db5da3359c0c65e5fee717701ae7144cd9e7778",
+          "exit_code": 0,
+          "seconds": 0.047
+        },
+        {
+          "script": "reproduction/CR0_2/RESULT/code/self_checks.py",
+          "script_sha256": "32bbfbeda731faabe2604616e54f6ee43dc74b0824cacd57c416be1b34fc55f1",
+          "exit_code": 0,
+          "seconds": 0.553
+        },
+        {
+          "script": "reproduction/CR0_2/RESULT/code/refine_checks.py",
+          "script_sha256": "a1414d85be0064e298fa864ec54e21255255c8e8fa97bf2470af0fc620e69e3a",
+          "exit_code": 0,
+          "seconds": 0.84
+        },
+        {
+          "script": "reproduction/CR0_2/RESULT/code/boundary_contour_check.py",
+          "script_sha256": "a57e4d6e3bf4266190982c512ad5baa7b8ad12f54e1bfc9533486366a36c06cd",
+          "exit_code": 0,
+          "seconds": 3.317
+        },
+        {
+          "script": "reproduction/CR0_2/RESULT/code/series_numeric_crosscheck.py",
+          "script_sha256": "8428e5ae655389d15a89069e88e5e614a3ed018de84d689e5bee73d28ac075ce",
+          "exit_code": 0,
+          "seconds": 0.205
+        }
+      ],
+      "all_entrypoints_completed": true,
+      "historical_comparison_differences": [],
+      "procedural_helper": {
+        "path": "code/log_action.py",
+        "sha256": "edf48446f7a64a270dffc63123558813622d06e412efd8f97ba94f08d0bb880f",
+        "source": "Original frozen run",
+        "scope": "Logging only; supplied in scratch, not added to the public repository."
+      }
+    },
+    {
+      "group": "CR0_3",
+      "scripts": [
+        {
+          "script": "reproduction/CR0_3/RESULT/check_exact.py",
+          "script_sha256": "3f9708510b6af672fae54aefb4e89b91facef629013e09aa8570a488b41db213",
+          "exit_code": 0,
+          "seconds": 1.304
+        },
+        {
+          "script": "reproduction/CR0_3/RESULT/check_kernel_identity.py",
+          "script_sha256": "c5aaa476884d46da395c1672c5a3fa4a240d50542599255c114dfe65e2a85101",
+          "exit_code": 0,
+          "seconds": 0.108
+        },
+        {
+          "script": "reproduction/CR0_3/RESULT/check_local_model.py",
+          "script_sha256": "611bb0cb7cbc9cfc70cbcfc69fbdc64a2337eafa9a20be5b64b62b98bb132631",
+          "exit_code": 0,
+          "seconds": 1.485
+        },
+        {
+          "script": "reproduction/CR0_3/RESULT/check_two_particle.py",
+          "script_sha256": "75b91eef830e5de0a08b2b4d022586512dccd2bd55789e5e53d5248529e3b471",
+          "exit_code": 0,
+          "seconds": 2.263
+        },
+        {
+          "script": "reproduction/CR0_3/RESULT/check_cutoff_bridge.py",
+          "script_sha256": "d4e4e825f29fa8fab4f65c315a1a789c113544018ab7e477185d9dd04ca7fc69",
+          "exit_code": 0,
+          "seconds": 0.179
+        },
+        {
+          "script": "reproduction/CR0_3/RESULT/check_cancellation.py",
+          "script_sha256": "81606fa0322e7f4f8a0940f0ba7a28d0e0cdc638795fd1a67b2eae5428603088",
+          "exit_code": 0,
+          "seconds": 0.079
+        }
+      ],
+      "all_entrypoints_completed": true,
+      "historical_comparison_differences": [],
+      "procedural_helper": {
+        "path": "record_action.py",
+        "sha256": "a8eed3b832766e90379130d3136e6a65dc354ecec0d07b461618f70ec771bb5a",
+        "source": "Original frozen run",
+        "scope": "Logging only; supplied in scratch, not added to the public repository."
+      }
+    }
+  ],
+  "scientific_scripts_unchanged": true,
+  "all_entrypoints_completed": true,
+  "version": "0.1-rc2"
+}

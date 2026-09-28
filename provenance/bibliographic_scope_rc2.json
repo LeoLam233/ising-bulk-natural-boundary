@@ -1,0 +1,238 @@
+{
+  "schema": "ising-current-bibliographic-scope-v1",
+  "manuscript_version": "v0.1-rc2",
+  "record_role": "current final-public source-scope record",
+  "review_date": "2026-09-29",
+  "timezone": "Asia/Hong_Kong",
+  "reference_count": 12,
+  "historical_predecessor": {
+    "path": "bibliographic_scope.json",
+    "role": "Preserved historical rc1-era eleven-source scope record",
+    "sha256": "cfac5905303c9e1505f011cbb7157e874301a04cafc751b0b124519c869d8ff0",
+    "unchanged": true
+  },
+  "scope_limit": "Targeted provenance/attribution verification, not a new mathematical audit or exhaustive priority clearance. Source PDFs are not redistributed.",
+  "no_external_full_bulk_infinite_tail_theorem_imported": true,
+  "new_primary_access": [
+    {
+      "key": "TW2013v3",
+      "url": "https://arxiv.org/pdf/1307.5913v3",
+      "resolved_url": "https://arxiv.org/pdf/1307.5913v3",
+      "sha256": "1062e414ec831372a643bd20ad7ec00d97bcebfafec7183061d2e06c6ec4724d",
+      "bytes": 137283,
+      "pages": 13,
+      "retrieved_utc": "2026-09-28T16:55:55.537860+00:00",
+      "publicly_bundled": false
+    },
+    {
+      "key": "TW2017Toeplitz_v1",
+      "url": "https://arxiv.org/pdf/1502.04922v1",
+      "resolved_url": "https://arxiv.org/pdf/1502.04922v1",
+      "sha256": "5d1b101a826dad1aed32f868bb7b0c736f028c4423723d540bf7e7c45c0b1f7a",
+      "bytes": 186702,
+      "pages": 17,
+      "retrieved_utc": "2026-09-28T16:55:56.558668+00:00",
+      "publicly_bundled": false
+    }
+  ],
+  "references": [
+    {
+      "citation_key": "Boukraa2008",
+      "full_bibliographic_identity": "S. Boukraa, A. J. Guttmann, S. Hassani, I. Jensen, J.-M. Maillard, B. Nickel and N. Zenine. Experimental mathematics on the magnetic susceptibility of the square lattice Ising model. Journal of Physics A: Mathematical and Theoretical 41(45), 455202 (2008). arXiv:0808.0763v1.",
+      "roles": [
+        "comparison only",
+        "historical context"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": false,
+      "actual_access_verification_scope": "Retained previously examined reference and formula comparison; not a new full-paper re-audit in this revision",
+      "sections_pages_or_access_limits": [
+        "Equations (4)–(9), prior formula comparison retained; not newly reread in final closeout."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://arxiv.org/abs/0808.0763"
+    },
+    {
+      "citation_key": "GuttmannEnting1996",
+      "full_bibliographic_identity": "A. J. Guttmann and I. G. Enting. Solvability of some statistical mechanical systems. Physical Review Letters 76, 344–347 (1996). DOI:10.1103/PhysRevLett.76.344.",
+      "roles": [
+        "historical context"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Publisher information, Crossref metadata, and TW2014 historical attribution",
+      "sections_pages_or_access_limits": [
+        "Publisher/Crossref metadata and TW2014 historical attribution; no new primary full-text verification."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.76.344"
+    },
+    {
+      "citation_key": "McCoyMaillard2012",
+      "full_bibliographic_identity": "Barry M. McCoy and Jean-Marie Maillard. The importance of the Ising model. Progress of Theoretical Physics 127(5), 791–817 (2012). arXiv:1203.1456.",
+      "roles": [
+        "comparison only"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": false,
+      "actual_access_verification_scope": "Retained prior definition/amplitude comparison and corrected role description; not a new full-paper re-audit",
+      "sections_pages_or_access_limits": [
+        "Physical definitions and amplitude conventions, as compared in manuscript Appendix F; no new full-paper review or newly asserted page-level access."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://arxiv.org/abs/1203.1456"
+    },
+    {
+      "citation_key": "Nickel1999",
+      "full_bibliographic_identity": "B. Nickel. On the singularity structure of the 2D Ising model susceptibility. Journal of Physics A: Mathematical and General 32(21), 3889–3906 (1999). DOI:10.1088/0305-4470/32/21/303.",
+      "roles": [
+        "historical context"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Crossref metadata and TW2014 attribution; publisher full-text access did not succeed, no full-text reading claimed",
+      "sections_pages_or_access_limits": [
+        "Publisher full text previously unavailable; full-text inspection remains UNVERIFIED. Metadata and TW2014 attribution only."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://doi.org/10.1088/0305-4470/32/21/303"
+    },
+    {
+      "citation_key": "Nickel2000",
+      "full_bibliographic_identity": "B. Nickel. Addendum to “On the singularity structure of the 2D Ising model susceptibility”. Journal of Physics A: Mathematical and General 33(8), 1693–1711 (2000). DOI:10.1088/0305-4470/33/8/313.",
+      "roles": [
+        "historical context"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Crossref metadata and TW2014 attribution; publisher full-text access did not succeed, no full-text reading claimed",
+      "sections_pages_or_access_limits": [
+        "Publisher full text previously unavailable; full-text inspection remains UNVERIFIED. Metadata and TW2014 attribution only."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://doi.org/10.1088/0305-4470/33/8/313"
+    },
+    {
+      "citation_key": "Orrick2001",
+      "full_bibliographic_identity": "W. P. Orrick, B. Nickel, A. J. Guttmann and J. H. H. Perk. The susceptibility of the square lattice Ising model: New developments. Journal of Statistical Physics 102, 795–841 (2001). DOI:10.1023/A:1004850919647. arXiv:cond-mat/0103074v1.",
+      "roles": [
+        "historical context"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Amplitude-based evidence against cancellation; explicitly short of proof. Existing rc2 primary-source verification retained without enhancement.",
+      "sections_pages_or_access_limits": [
+        "Introduction, PDF p. 5; §3.2, PDF pp. 14–17; bibliography, PDF p. 47."
+      ],
+      "access_basis": "Existing rc2 primary-source check, 28 September 2026.",
+      "source_url": "https://arxiv.org/abs/cond-mat/0103074v1",
+      "verification_record": "ORRICK_2001_VERIFICATION.md",
+      "access_record": "SEARCH_LOG_RC2.json",
+      "source_pdf_sha256": "d6069c921d506540e13aec00fa9327aa318cd1096ce16d9eeb44152db013811f"
+    },
+    {
+      "citation_key": "PalmerTracy1981",
+      "full_bibliographic_identity": "John Palmer and Craig Tracy. Two-dimensional Ising correlations: Convergence of the scaling limit. Advances in Applied Mathematics 2(3), 329–388 (1981). DOI:10.1016/0196-8858(81)90010-5.",
+      "roles": [
+        "mathematical premise"
+      ],
+      "used_as_mathematical_premise": true,
+      "used_only_for_attribution_or_priority_positioning": false,
+      "actual_access_verification_scope": "Original paper located, introduction inspected, exact p.375 attribution read in TW2014; not a full proof audit of the 60-page article",
+      "sections_pages_or_access_limits": [
+        "Original introduction; p. 375 identified through TW2014 Appendix A. Not a complete audit of the original 60-page paper."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://www.math.ucdavis.edu/~tracy/selectedPapers/1980s/CV18.pdf"
+    },
+    {
+      "citation_key": "TW2013",
+      "full_bibliographic_identity": "Craig A. Tracy and Harold Widom. On the diagonal susceptibility of the two-dimensional Ising model. Journal of Mathematical Physics 54, 123302 (2013). arXiv:1307.5913v3.",
+      "roles": [
+        "methodological precedent"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Direct technical comparison confirms a divergent chosen derivative plus controlled lower and higher terms. §IV uses local Vandermonde homogeneity, Hadamard estimates and factorial suppression. This is a diagonal-susceptibility precedent, not a bulk-tail theorem.",
+      "sections_pages_or_access_limits": [
+        "Introduction, PDF pp. 1–2; §III representation, pp. 4–6; §IV, pp. 6–11, including Lemmas 1–4 and the concluding sum."
+      ],
+      "access_basis": "Primary HTML and PDF reopened in final closeout, 29 September 2026 (Asia/Hong_Kong).",
+      "source_url": "https://arxiv.org/html/1307.5913v3",
+      "source_pdf_url": "https://arxiv.org/pdf/1307.5913v3",
+      "source_pdf_sha256": "1062e414ec831372a643bd20ad7ec00d97bcebfafec7183061d2e06c6ec4724d",
+      "technical_locators": [
+        "§IV Lemmas 1–2, PDF pp. 7–9: local homogeneity and divergent derivative.",
+        "§IV Lemmas 3–4 and conclusion, pp. 9–11: remainder control; Hadamard and factorial suppression, pp. 9–10."
+      ]
+    },
+    {
+      "citation_key": "TW2014",
+      "full_bibliographic_identity": "Craig A. Tracy and Harold Widom. On the singularities in the susceptibility expansion for the two-dimensional Ising model. Journal of Statistical Physics 156(6), 1125–1135 (2014). arXiv:1403.3966v1 (16 March 2014).",
+      "roles": [
+        "mathematical premise",
+        "comparison only"
+      ],
+      "used_as_mathematical_premise": true,
+      "used_only_for_attribution_or_priority_positioning": false,
+      "actual_access_verification_scope": "Introduction, theorem scope, cancellation caveat, historical citations, and Appendix A source chain checked; not used as a uniform infinite-tail theorem",
+      "sections_pages_or_access_limits": [
+        "Introduction, main fixed-even-order theorem, cancellation caveat and Appendix A source/normalization chain, retained from prior source checks."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://arxiv.org/html/1403.3966v1"
+    },
+    {
+      "citation_key": "TW2017Toeplitz",
+      "full_bibliographic_identity": "Craig A. Tracy and Harold Widom. Natural boundary for a sum involving Toeplitz determinants. In Large Truncated Toeplitz Matrices, Toeplitz Operators, and Related Topics, pp. 703–718. Springer (2017). Preprint: arXiv:1502.04922v1 (2015).",
+      "roles": [
+        "methodological precedent"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Direct reading confirms the technical precedents already attributed in the manuscript: contour partitions, Vandermonde homogeneity, grouping, and Hadamard/factorial suppression. This extends the earlier historical record, which described only abstract/publication access. No bulk estimate is imported.",
+      "sections_pages_or_access_limits": [
+        "§II contour deformation and integral (7), PDF pp. 4–5; §III, pp. 5–9; §IV, pp. 10–13."
+      ],
+      "access_basis": "Primary HTML and PDF reopened in final closeout, 29 September 2026 (Asia/Hong_Kong).",
+      "source_url": "https://arxiv.org/html/1502.04922v1",
+      "source_pdf_url": "https://arxiv.org/pdf/1502.04922v1",
+      "source_pdf_sha256": "5d1b101a826dad1aed32f868bb7b0c736f028c4423723d540bf7e7c45c0b1f7a",
+      "technical_locators": [
+        "§II, PDF p. 5, and §IV, p. 10: cut/circular contour partitions.",
+        "§III Lemma 1 and equations (8)–(10), p. 6; §IV equations (15)–(17), pp. 11–12: homogeneity and grouping.",
+        "§III Lemmas 2–3, pp. 7–9: Hadamard and factorial suppression; §IV, pp. 12–13: grouped higher-order control."
+      ]
+    },
+    {
+      "citation_key": "WMTB1976",
+      "full_bibliographic_identity": "Tai Tsun Wu, Barry M. McCoy, Craig A. Tracy and Eytan Barouch. Spin-spin correlation functions for the two-dimensional Ising model: Exact theory in the scaling region. Physical Review B 13, 316–374 (1976). DOI:10.1103/PhysRevB.13.316.",
+      "roles": [
+        "historical context"
+      ],
+      "used_as_mathematical_premise": false,
+      "used_only_for_attribution_or_priority_positioning": true,
+      "actual_access_verification_scope": "Publisher information, Crossref metadata, and TW2014 historical attribution; not a rederivation of the original expansion",
+      "sections_pages_or_access_limits": [
+        "Publisher/Crossref metadata and TW2014 historical attribution; no new rederivation or full-text audit."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.13.316"
+    },
+    {
+      "citation_key": "Yang1952",
+      "full_bibliographic_identity": "C. N. Yang. The spontaneous magnetization of a two-dimensional Ising model. Physical Review 85, 808–816 (1952). DOI:10.1103/PhysRev.85.808.",
+      "roles": [
+        "mathematical premise"
+      ],
+      "used_as_mathematical_premise": true,
+      "used_only_for_attribution_or_priority_positioning": false,
+      "actual_access_verification_scope": "Publisher information and Crossref metadata; magnetization expression also appears in TW sources, not a reproof of Yang's theorem",
+      "sections_pages_or_access_limits": [
+        "Publisher/Crossref metadata; the working magnetization formula is also displayed in TW sources. No new proof audit."
+      ],
+      "access_basis": "Preserved historical access statement, not a new full-text check in this closeout.",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808"
+    }
+  ]
+}

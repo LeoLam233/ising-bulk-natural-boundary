@@ -1,0 +1,7 @@
+{
+  "clean_snapshot_exit": 0,
+  "modified_copy_exit": 1,
+  "unlisted_file_copy_exit": 1,
+  "original_files_modified": false,
+  "scope": "Integrity tool behavior, not proof correctness."
+}

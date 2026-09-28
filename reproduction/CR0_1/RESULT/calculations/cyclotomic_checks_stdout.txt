@@ -1,0 +1,379 @@
+{
+  "arithmetic": "exact integer polynomial remainders; no floating-point root comparisons",
+  "sympy_version": "1.14.0",
+  "claims_checked": "minimum even candidate index 2p, unique cosine pair at index 2p, for listed finite primes only",
+  "results": [
+    {
+      "prime": 5,
+      "tested_even_n_max": 10,
+      "exact_pair_comparisons": 55,
+      "matches": [
+        {
+          "n": 10,
+          "a": 1,
+          "cosine_index_pairs": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "a": 2,
+          "cosine_index_pairs": [
+            [
+              4,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 7,
+      "tested_even_n_max": 14,
+      "exact_pair_comparisons": 119,
+      "matches": [
+        {
+          "n": 14,
+          "a": 1,
+          "cosine_index_pairs": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 14,
+          "a": 2,
+          "cosine_index_pairs": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 14,
+          "a": 3,
+          "cosine_index_pairs": [
+            [
+              6,
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 11,
+      "tested_even_n_max": 22,
+      "exact_pair_comparisons": 363,
+      "matches": [
+        {
+          "n": 22,
+          "a": 1,
+          "cosine_index_pairs": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 22,
+          "a": 2,
+          "cosine_index_pairs": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 22,
+          "a": 3,
+          "cosine_index_pairs": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "n": 22,
+          "a": 4,
+          "cosine_index_pairs": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "n": 22,
+          "a": 5,
+          "cosine_index_pairs": [
+            [
+              10,
+              10
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 13,
+      "tested_even_n_max": 26,
+      "exact_pair_comparisons": 559,
+      "matches": [
+        {
+          "n": 26,
+          "a": 1,
+          "cosine_index_pairs": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 26,
+          "a": 2,
+          "cosine_index_pairs": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 26,
+          "a": 3,
+          "cosine_index_pairs": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "n": 26,
+          "a": 4,
+          "cosine_index_pairs": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "n": 26,
+          "a": 5,
+          "cosine_index_pairs": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "n": 26,
+          "a": 6,
+          "cosine_index_pairs": [
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 17,
+      "tested_even_n_max": 34,
+      "exact_pair_comparisons": 1139,
+      "matches": [
+        {
+          "n": 34,
+          "a": 1,
+          "cosine_index_pairs": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 2,
+          "cosine_index_pairs": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 3,
+          "cosine_index_pairs": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 4,
+          "cosine_index_pairs": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 5,
+          "cosine_index_pairs": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 6,
+          "cosine_index_pairs": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 7,
+          "cosine_index_pairs": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "n": 34,
+          "a": 8,
+          "cosine_index_pairs": [
+            [
+              16,
+              16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 19,
+      "tested_even_n_max": 38,
+      "exact_pair_comparisons": 1539,
+      "matches": [
+        {
+          "n": 38,
+          "a": 1,
+          "cosine_index_pairs": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 2,
+          "cosine_index_pairs": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 3,
+          "cosine_index_pairs": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 4,
+          "cosine_index_pairs": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 5,
+          "cosine_index_pairs": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 6,
+          "cosine_index_pairs": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 7,
+          "cosine_index_pairs": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 8,
+          "cosine_index_pairs": [
+            [
+              16,
+              16
+            ]
+          ]
+        },
+        {
+          "n": 38,
+          "a": 9,
+          "cosine_index_pairs": [
+            [
+              18,
+              18
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

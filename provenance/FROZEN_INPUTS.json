@@ -1,0 +1,104 @@
+{
+  "scope": "Archive identity does not establish isolation or mathematical correctness. Originals kept unchanged.",
+  "records": [
+    {
+      "id": "ISING-CR0-20260927-ba3792d2458a",
+      "type": "CR0 result",
+      "sha256": "360fd4b4ce69b661b3f67b9902f40f04f0040ba7769d65462a0eeba16b20c945",
+      "bytes": 1820954,
+      "public_distribution": "mathematical views only; full original retained privately",
+      "solver_status": "PARTIAL",
+      "full_natural_boundary_reproduced": false
+    },
+    {
+      "id": "CR0-20260927T183258Z-f97a2fc7",
+      "type": "CR0 result",
+      "sha256": "fee35c26fce83f430075aece172904749410f7a0394ff8664ea692ab81daccbe",
+      "bytes": 3015094,
+      "public_distribution": "mathematical views only; full original retained privately",
+      "solver_status": "PARTIAL",
+      "full_natural_boundary_reproduced": false
+    },
+    {
+      "id": "ISING-CR0-20260927-27b6b643611a",
+      "type": "CR0 result",
+      "sha256": "05f9aa784bc0f4d30f4774574171817a034747a54a345a22c81e76d2f5a3288a",
+      "bytes": 1662429,
+      "public_distribution": "mathematical views only; full original retained privately",
+      "solver_status": "PARTIAL",
+      "full_natural_boundary_reproduced": false
+    },
+    {
+      "id": "ISING-MR1-20260928-7386c73f166f",
+      "type": "MR1 result",
+      "sha256": "7278edc9daa97e7e2201750c406fd4f2565c84c73f1a419f17836c20b440e5b6",
+      "bytes": 1463683,
+      "solver_status": "CLAIMED_TAIL_PROOF",
+      "receiver_entire_tail_certified": false,
+      "full_natural_boundary_reproduced": false,
+      "I3": "unresolved",
+      "I6": "conditional"
+    },
+    {
+      "id": "CR0 input v0.1",
+      "type": "input",
+      "sha256": "e11713be1e4e2a009fd3332540494b8798bd250bbcc053ef89ebb020d0cab6f9",
+      "bytes": 741715,
+      "public_distribution": "project-owned instruction views only; third-party PDFs/text extracts omitted"
+    },
+    {
+      "id": "MR1 input v0.1",
+      "type": "input",
+      "sha256": "ca7d857b5dc58422b9539b79807d9cbc70de0f19fe2e8c5de5a518d56aa83498",
+      "bytes": 762983,
+      "public_distribution": "project-owned instruction views only; third-party PDFs/text extracts omitted"
+    },
+    {
+      "id": "v7 manuscript TeX",
+      "original_relative_path": "outputs/ising_audit_manuscript_v7.tex",
+      "sha256": "a5f8921db8bf0edf596cf83376cf4475dc537462a2a7d32161ae0702256b2bf5",
+      "bytes": 116725
+    },
+    {
+      "id": "v7 manuscript PDF",
+      "original_relative_path": "outputs/ising_audit_manuscript_v7.pdf",
+      "sha256": "f1dc04dbce955ce80d8529b2d1e020603fcd9ee685691ba652e872875c8d74a1",
+      "bytes": 275136
+    },
+    {
+      "id": "v8 baseline TeX",
+      "original_relative_path": "outputs/ising_audit_manuscript_v8.tex",
+      "sha256": "a0f33312455ddf2e6a788b418c59ab8d2d7a32bd0137544ccea96e8be21f1e76",
+      "bytes": 124564
+    },
+    {
+      "id": "v8 baseline PDF",
+      "original_relative_path": "outputs/ising_audit_manuscript_v8.pdf",
+      "sha256": "565636f4debc9fb36a65af2214a868d1f01607d2b399ee7eb0c96524dcb26e42",
+      "bytes": 286682
+    },
+    {
+      "id": "v8 audit packet",
+      "original_relative_path": "outputs/ising_audit_packet_v8.zip",
+      "sha256": "688ab819a36ba8a2e9688a298dea288dd6735c85a8693a76bd4923642333418f",
+      "bytes": 435632
+    },
+    {
+      "id": "CR0 original registry",
+      "original_relative_path": "outputs/ising_clean_room_run_registry.json",
+      "sha256": "3a0d437ef1c8f99303e0659261d2c28f2df9470bb59366190584ef764c4af13f",
+      "bytes": 14119
+    },
+    {
+      "id": "MR1 original registry",
+      "original_relative_path": "outputs/ising_mr1_run_registry.json",
+      "sha256": "82f675a4066fd2b602f79e0702824593852c85b1c1c0b57bf49157549e6273ba",
+      "bytes": 4197
+    },
+    {
+      "id": "v38 source checkpoint",
+      "sha256": "a2142752ec09870431c8e30e96df7710dc11f97067b31af2c71efe6bdb6ee84c",
+      "bytes": 422656
+    }
+  ]
+}

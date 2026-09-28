@@ -1,0 +1,884 @@
+{
+  "schema": "ising-final-public-assembly-validation-v1",
+  "academic_version": "0.1-rc2",
+  "expert_brief_version": "0.1-rc3",
+  "validation_date": "2026-09-29",
+  "scope": "Final editorial integration, file integrity, layout, provenance scope and finite diagnostics. These checks do not certify the uniform infinite-tail proof.",
+  "mathematical_delta": {
+    "result": "NO MATHEMATICAL CHANGE",
+    "baseline_tex_sha256": "f5e7732a6ec67aaf5597bd07bd4297802aaaec3540ca6bfced93c099fcee50e5",
+    "final_tex_sha256": "7a0b1717b0f6b3864b7db2cb3b2403243bacfeb082ed27a9195a027226a23699",
+    "math_fragments": 1379,
+    "math_fragments_identical": true,
+    "numbered_statement_blocks": 29,
+    "numbered_statement_blocks_identical": true,
+    "proof_environments": 29,
+    "proof_environments_identical": true,
+    "complete_sections_2_to_9_and_appendices_A_to_G_identical": true,
+    "equations_1_1_and_1_2_identical": true,
+    "W1_W13_identical": true,
+    "numerical_constants_derivative_ranges_particle_windows_identical": true,
+    "related_work_and_bibliography_identical": true,
+    "sole_manuscript_edit": {
+      "path": "paper/manuscript.tex",
+      "category": "copyright/license wording only",
+      "before": "for this project. Author-created text is offered under CC BY 4.0\nand project code under the MIT license; cited third-party works\nretain their own rights. The accompanying provenance record states",
+      "after": "for this project. Project text is offered under CC BY 4.0 to the extent\nthe author holds rights in it; project code is offered under the MIT\nlicense. Cited third-party works retain their own rights.\nThe accompanying provenance record states"
+    },
+    "mathematical_certification": false
+  },
+  "build_and_visual_review": {
+    "documents": [
+      {
+        "file": "paper/manuscript.pdf",
+        "sha256": "f3f23179c18439631bfcd0281004fe22b165a0e661b30136d4bb3126e61e8352",
+        "pages": 37,
+        "body_font_pt": 11,
+        "warnings": [],
+        "all_fonts_embedded": true,
+        "font_resources": {
+          "/IHAIZV+LMRoman17-Regular": true,
+          "/BZIVMZ+LMRoman12-Regular": true,
+          "/IXFAWU+LMRoman10-Regular": true,
+          "/TQTHRL+LMMono10-Regular": true,
+          "/YEUUOC+LMRoman10-Bold": true,
+          "/AKHCZK+LMRoman12-Bold": true,
+          "/CAFSZL+CMMI10": true,
+          "/DDIEWW+CMR10": true,
+          "/FKPJSN+CMR8": true,
+          "/PVTTLK+CMSY10": true,
+          "/JAGKKY+CMSY8": true,
+          "/NOMARO+CMMI8": true,
+          "/KPXLOM+MSBM10": true,
+          "/UTACNV+CMR6": true,
+          "/FZDNHS+CMEX10": true,
+          "/VDVGTR+LMRoman10-Italic": true,
+          "/DZGKAF+CMSY6": true,
+          "/GJMHKB+CMMI6": true,
+          "/NITCSQ+rsfs10": true,
+          "/UBBQTN+CMEX8": true,
+          "/LPOGEQ+CMMI7": true,
+          "/GQYLQL+CMR7": true,
+          "/WXMALW+CMMI5": true,
+          "/XKCNTN+CMSY7": true
+        },
+        "page_checks": [
+          {
+            "page": 1,
+            "characters": 2327,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 2,
+            "characters": 3444,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 3,
+            "characters": 2266,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 4,
+            "characters": 2154,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 5,
+            "characters": 2673,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 6,
+            "characters": 2941,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 7,
+            "characters": 2869,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 8,
+            "characters": 2824,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 9,
+            "characters": 3354,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 10,
+            "characters": 2640,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 11,
+            "characters": 2713,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 12,
+            "characters": 2609,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 13,
+            "characters": 2824,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 14,
+            "characters": 3568,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 15,
+            "characters": 3412,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 16,
+            "characters": 2755,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 17,
+            "characters": 2748,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 18,
+            "characters": 3426,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 19,
+            "characters": 3287,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 20,
+            "characters": 3299,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 21,
+            "characters": 2970,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 22,
+            "characters": 2959,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 23,
+            "characters": 2893,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 24,
+            "characters": 2941,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 25,
+            "characters": 2467,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 26,
+            "characters": 2234,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 27,
+            "characters": 2905,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 28,
+            "characters": 3074,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 29,
+            "characters": 2728,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 30,
+            "characters": 2191,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 31,
+            "characters": 2840,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 32,
+            "characters": 2809,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 33,
+            "characters": 2447,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 34,
+            "characters": 2844,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 35,
+            "characters": 3791,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 36,
+            "characters": 3099,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          },
+          {
+            "page": 37,
+            "characters": 1235,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              612,
+              792
+            ]
+          }
+        ],
+        "changed_text_pages_from_rc2": [
+          36
+        ],
+        "metadata": {
+          "/Creator": "LaTeX with hyperref",
+          "/Title": "A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility",
+          "/Subject": "Candidate proof, v0.1-rc2; not independently certified",
+          "/Author": "Dehao Lin",
+          "/Producer": "xdvipdfmx (0.1)",
+          "/CreationDate": "D:20260928170411-00'00'"
+        },
+        "visual_review": "PASS: every rendered page inspected; no clipping, overlap, overflow, missing symbols or truncated equations observed.",
+        "build": "Manuscript only: existing cached Tectonic --untrusted --only-cached; brief copied verbatim and never recompiled.",
+        "native_compiler": "compile-failed: Unable to find standard directories for platform; existing cached compiler used for PDF export.",
+        "mathematical_certification": false
+      },
+      {
+        "file": "docs/expert_brief.pdf",
+        "sha256": "73fa822cd7783ae70d37b9547dfcc3b92d486bbe958dedefd1b4772da875e216",
+        "pages": 2,
+        "body_font_pt": 11,
+        "warnings": [],
+        "all_fonts_embedded": true,
+        "font_resources": {
+          "/IHAIZV+LMRoman12-Bold": true,
+          "/BZIVMZ+LMRoman10-Regular": true,
+          "/IXFAWU+LMMono10-Regular": true,
+          "/AKHCZK+CMSY10": true,
+          "/VDVGTR+CMMI10": true,
+          "/CAFSZL+CMR10": true,
+          "/TQTHRL+LMRoman10-Bold": true,
+          "/DDIEWW+CMR8": true,
+          "/FKPJSN+CMSY8": true,
+          "/PVTTLK+CMEX10": true,
+          "/JAGKKY+CMMI8": true,
+          "/YEUUOC+LMRoman10-Italic": true,
+          "/NOMARO+CMR6": true
+        },
+        "page_checks": [
+          {
+            "page": 1,
+            "characters": 3045,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              595.28,
+              841.89
+            ]
+          },
+          {
+            "page": 2,
+            "characters": 2733,
+            "unresolved_references": false,
+            "replacement_characters": false,
+            "edge_characters": 0,
+            "page_points": [
+              595.28,
+              841.89
+            ]
+          }
+        ],
+        "changed_text_pages_from_rc2": null,
+        "metadata": {
+          "/Creator": "LaTeX with hyperref",
+          "/Title": "Bulk Ising susceptibility: a candidate natural-boundary proof",
+          "/Subject": "Expert brief v0.1-rc3; companion to manuscript v0.1-rc2",
+          "/Author": "Dehao Lin",
+          "/Producer": "xdvipdfmx (0.1)",
+          "/CreationDate": "D:20260928163102-00'00'"
+        },
+        "visual_review": "PASS: every rendered page inspected; no clipping, overlap, overflow, missing symbols or truncated equations observed.",
+        "build": "Manuscript only: existing cached Tectonic --untrusted --only-cached; brief copied verbatim and never recompiled.",
+        "native_compiler": "compile-failed: Unable to find standard directories for platform; existing cached compiler used for PDF export.",
+        "mathematical_certification": false
+      }
+    ],
+    "label_index_updated": false,
+    "label_count": 65
+  },
+  "six_released_finite_checks": {
+    "purpose": "Selected finite diagnostic replay; not mathematical certification",
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    },
+    "comparison": {
+      "numeric_rtol": 1e-10,
+      "numeric_atol": 1e-10,
+      "metadata_keys_ignored": [
+        "environment",
+        "generated_at",
+        "input_files",
+        "input_hashes",
+        "input_sha256",
+        "source_sha256",
+        "timestamp",
+        "versions"
+      ],
+      "interval_certified": false
+    },
+    "checks": [
+      {
+        "id": "v7_core",
+        "exit_code": 0,
+        "seconds": 0.413,
+        "output": ".local/checks-tuojeazc/v7_core/check_results.json",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "v7_normalization",
+        "exit_code": 0,
+        "seconds": 0.391,
+        "output": ".local/checks-tuojeazc/v7_normalization/independent_normalization_results.json",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "v7_additional",
+        "exit_code": 0,
+        "seconds": 0.229,
+        "output": ".local/checks-tuojeazc/v7_additional/stdout.txt",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "v6_diagnostics",
+        "exit_code": 0,
+        "seconds": 0.64,
+        "output": ".local/checks-tuojeazc/v6_diagnostics/result.json",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "mr1_algebra",
+        "exit_code": 0,
+        "seconds": 2.443,
+        "output": ".local/checks-tuojeazc/mr1_algebra/stdout.txt",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "mr1_coupled",
+        "exit_code": 0,
+        "seconds": 0.851,
+        "output": ".local/checks-tuojeazc/mr1_coupled/stdout.txt",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      }
+    ],
+    "all_reproduced": true,
+    "full_natural_boundary_certified": false
+  },
+  "eighteen_archived_finite_checks": {
+    "scope": "Additional replay of all 18 archived CR0 scientific scripts. Original procedural loggers supplied only in scratch. Not proof certification.",
+    "groups": [
+      {
+        "group": "CR0_1",
+        "scripts": [
+          {
+            "script": "reproduction/CR0_1/RESULT/code/check_residues.py",
+            "script_sha256": "570ef8595b2bebc7b7acc281fa682c0e999ec4821d097c8d378aa082f682b90d",
+            "exit_code": 0,
+            "seconds": 0.556
+          },
+          {
+            "script": "reproduction/CR0_1/RESULT/code/check_lowtemp.py",
+            "script_sha256": "d9644bba54edbec2dc2821abdcbd57327ec9ff504b4e62f8702aed4526d6cca4",
+            "exit_code": 0,
+            "seconds": 0.05
+          },
+          {
+            "script": "reproduction/CR0_1/RESULT/code/check_cyclotomic.py",
+            "script_sha256": "c3f0074d74729ce0e146e5eb800b4167e9420272be36d0623363ce6c092e816e",
+            "exit_code": 0,
+            "seconds": 0.824
+          },
+          {
+            "script": "reproduction/CR0_1/RESULT/code/check_chi2.py",
+            "script_sha256": "21d21a9c4c1b1151ab41e781b863f51d608c3843574cb686e740e9e6be707852",
+            "exit_code": 0,
+            "seconds": 5.826
+          },
+          {
+            "script": "reproduction/CR0_1/RESULT/code/check_exterior.py",
+            "script_sha256": "efc903a894ebcfa8e30e3a059a54bce93c2e3ac274af6ada595d2cefe8af7b91",
+            "exit_code": 0,
+            "seconds": 0.756
+          },
+          {
+            "script": "reproduction/CR0_1/RESULT/code/check_local_model.py",
+            "script_sha256": "9567a9e7b8ac6d1e458d6dec7f204da7c83362533c5d622e5ef28665b061e276",
+            "exit_code": 0,
+            "seconds": 1.256
+          }
+        ],
+        "all_entrypoints_completed": true,
+        "historical_comparison_differences": [],
+        "procedural_helper": {
+          "path": "code/log_action.py",
+          "sha256": "3514550fdfacb0c041372a7bdfee837f67c34b5778e9f09384670420507ccf30",
+          "source": "Original frozen run",
+          "scope": "Logging only; supplied in scratch, not added to the public repository."
+        }
+      },
+      {
+        "group": "CR0_2",
+        "scripts": [
+          {
+            "script": "reproduction/CR0_2/RESULT/code/exact_geometry.py",
+            "script_sha256": "e51b1e5d88485f668e13e078cbb2994404e72666a938f78205efa7ba493605a0",
+            "exit_code": 0,
+            "seconds": 0.072
+          },
+          {
+            "script": "reproduction/CR0_2/RESULT/code/series_check.py",
+            "script_sha256": "60ce30cabd6beda28bcdc3d09db5da3359c0c65e5fee717701ae7144cd9e7778",
+            "exit_code": 0,
+            "seconds": 0.048
+          },
+          {
+            "script": "reproduction/CR0_2/RESULT/code/self_checks.py",
+            "script_sha256": "32bbfbeda731faabe2604616e54f6ee43dc74b0824cacd57c416be1b34fc55f1",
+            "exit_code": 0,
+            "seconds": 0.545
+          },
+          {
+            "script": "reproduction/CR0_2/RESULT/code/refine_checks.py",
+            "script_sha256": "a1414d85be0064e298fa864ec54e21255255c8e8fa97bf2470af0fc620e69e3a",
+            "exit_code": 0,
+            "seconds": 0.888
+          },
+          {
+            "script": "reproduction/CR0_2/RESULT/code/boundary_contour_check.py",
+            "script_sha256": "a57e4d6e3bf4266190982c512ad5baa7b8ad12f54e1bfc9533486366a36c06cd",
+            "exit_code": 0,
+            "seconds": 3.263
+          },
+          {
+            "script": "reproduction/CR0_2/RESULT/code/series_numeric_crosscheck.py",
+            "script_sha256": "8428e5ae655389d15a89069e88e5e614a3ed018de84d689e5bee73d28ac075ce",
+            "exit_code": 0,
+            "seconds": 0.205
+          }
+        ],
+        "all_entrypoints_completed": true,
+        "historical_comparison_differences": [],
+        "procedural_helper": {
+          "path": "code/log_action.py",
+          "sha256": "edf48446f7a64a270dffc63123558813622d06e412efd8f97ba94f08d0bb880f",
+          "source": "Original frozen run",
+          "scope": "Logging only; supplied in scratch, not added to the public repository."
+        }
+      },
+      {
+        "group": "CR0_3",
+        "scripts": [
+          {
+            "script": "reproduction/CR0_3/RESULT/check_exact.py",
+            "script_sha256": "3f9708510b6af672fae54aefb4e89b91facef629013e09aa8570a488b41db213",
+            "exit_code": 0,
+            "seconds": 1.434
+          },
+          {
+            "script": "reproduction/CR0_3/RESULT/check_kernel_identity.py",
+            "script_sha256": "c5aaa476884d46da395c1672c5a3fa4a240d50542599255c114dfe65e2a85101",
+            "exit_code": 0,
+            "seconds": 0.105
+          },
+          {
+            "script": "reproduction/CR0_3/RESULT/check_local_model.py",
+            "script_sha256": "611bb0cb7cbc9cfc70cbcfc69fbdc64a2337eafa9a20be5b64b62b98bb132631",
+            "exit_code": 0,
+            "seconds": 1.674
+          },
+          {
+            "script": "reproduction/CR0_3/RESULT/check_two_particle.py",
+            "script_sha256": "75b91eef830e5de0a08b2b4d022586512dccd2bd55789e5e53d5248529e3b471",
+            "exit_code": 0,
+            "seconds": 2.085
+          },
+          {
+            "script": "reproduction/CR0_3/RESULT/check_cutoff_bridge.py",
+            "script_sha256": "d4e4e825f29fa8fab4f65c315a1a789c113544018ab7e477185d9dd04ca7fc69",
+            "exit_code": 0,
+            "seconds": 0.182
+          },
+          {
+            "script": "reproduction/CR0_3/RESULT/check_cancellation.py",
+            "script_sha256": "81606fa0322e7f4f8a0940f0ba7a28d0e0cdc638795fd1a67b2eae5428603088",
+            "exit_code": 0,
+            "seconds": 0.082
+          }
+        ],
+        "all_entrypoints_completed": true,
+        "historical_comparison_differences": [],
+        "procedural_helper": {
+          "path": "record_action.py",
+          "sha256": "a8eed3b832766e90379130d3136e6a65dc354ecec0d07b461618f70ec771bb5a",
+          "source": "Original frozen run",
+          "scope": "Logging only; supplied in scratch, not added to the public repository."
+        }
+      }
+    ],
+    "scientific_scripts_unchanged": true,
+    "all_entrypoints_completed": true
+  },
+  "scientific_entrypoints": [
+    {
+      "entrypoint": "scripts/reproduce.py",
+      "exit_code": 0
+    },
+    {
+      "entrypoint": "work/replay_ising_final_archived_checks.py",
+      "exit_code": 0
+    }
+  ],
+  "historical_records": "Existing rc1 and rc2 validation records retain their original bytes and input hashes. They describe their earlier local preparation snapshots, not this final assembly.",
+  "distribution_receipt": "The separate final-public review and ZIP SHA-256 receipt record the final inventory verification, ZIP safety checks and fresh-extraction replay without a circular self-hash.",
+  "full_mathematical_certification": false,
+  "inspection": {
+    "public_files": 206,
+    "parse_syntax_links": {
+      "json": 52,
+      "python": 27,
+      "local_markdown_links": 141
+    },
+    "cff_parse": "PASS",
+    "cff_identifiers_unchanged": true,
+    "broken_links": [],
+    "citations": {
+      "bibliography_entries": 12,
+      "citation_occurrences": 32,
+      "all_entries_and_intext_cites_unchanged": true,
+      "compiled_numbers_and_pdf_destinations_match": true
+    },
+    "label_index": {
+      "count": 65,
+      "byte_identical": true
+    },
+    "brief": {
+      "exact_rc3_bytes": true,
+      "pages": 2,
+      "companion_pages": 37,
+      "companion_version": "v0.1-rc2",
+      "section_pointers_checked": {
+        "sec:first": "4",
+        "sec:tailreduction": "5",
+        "sec:F": "6",
+        "sec:K": "7",
+        "sec:sectors": "8",
+        "sec:conclusion": "9",
+        "app:local": "B",
+        "app:lie": "D",
+        "app:constants": "E",
+        "app:auditmap": "G"
+      }
+    },
+    "privacy": {
+      "high_confidence_findings": 0,
+      "reviewed_TeX_false_positives": 2,
+      "public_pdf_count": 2,
+      "embedded_files": 0,
+      "javascript": 0
+    },
+    "consistency": {
+      "keyword_hits": 187,
+      "files_reviewed": [
+        "paper/manuscript.tex",
+        "README.md",
+        "README.zh.md",
+        "AUTHORSHIP.md",
+        "provenance/PRIOR_ART.md",
+        "provenance/EXTERNAL_PREMISES.md",
+        "provenance/SOURCE_PROVENANCE.md",
+        "provenance/bibliographic_scope_rc2.json",
+        "provenance/bibliographic_scope.json",
+        "docs/expert_brief.tex",
+        "RELEASE_NOTES.md",
+        "release/STATUS.json",
+        "audits/README.md"
+      ],
+      "manual_review": "PASS: current-state claims agree; historical scopes and validation records explicitly identified by version/input hashes.",
+      "conclusions": [
+        "Candidate complete scope retained; no independent human or proof-assistant certification asserted.",
+        "CR0 PARTIAL and MR1 claimed tail/I3 unresolved/I6 conditional facts unchanged.",
+        "Orrick evidence remains explicitly short of proof; TW methodological attribution confirmed from primary sources.",
+        "Twelve current references distinguished from the preserved eleven-source rc1-era record.",
+        "Earlier validation records remain historical, with the final assembly record linked from release notes.",
+        "No exhaustive priority clearance or first-proof claim added."
+      ]
+    },
+    "entrypoint_help_checks": [
+      {
+        "file": "scripts/reproduce.py",
+        "invocation": "--help",
+        "exit_code": 0
+      },
+      {
+        "file": "scripts/build_paper.py",
+        "invocation": "--help",
+        "exit_code": 0
+      }
+    ],
+    "preparation_execution_note": "An initial private inspection-helper read used the Windows default encoding and failed on UTF-8 source-scope text. The helper was corrected to explicit UTF-8 and rerun; no public evidence file was changed to accommodate it.",
+    "finite_checks_do_not_certify_uniform_infinite_tail_proof": true
+  }
+}

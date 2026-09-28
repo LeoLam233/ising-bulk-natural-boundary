@@ -1,0 +1,81 @@
+{
+  "review_date": "2026-09-28",
+  "scope": "Bounded search, not exhaustive priority clearance",
+  "queries": [
+    {
+      "query": "\"Ising susceptibility\" \"natural boundary\" proof -site:researchgate.net -site:scispace.com",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising\" \"bulk susceptibility\" \"natural boundary\"",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising\" \"full susceptibility\" \"natural boundary\" proof 2025 2026",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising\" \"uniform\" \"tail\" \"Nickel\"",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising susceptibility\" \"natural boundary\" \"uniform\" proof",
+      "scope": "arxiv.org; math.ucdavis.edu; lptmc.jussieu.fr"
+    },
+    {
+      "query": "\"Ising susceptibility\" \"natural boundary\" \"Pfaffian\"",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising\" \"Nickel\" \"prime\" \"singularities\"",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising susceptibility\" \"contour deformation\" \"natural boundary\"",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Nickel\" \"On the singularity structure\" 1999 3889 pdf",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising\" \"natural boundary\" \"proof\" 2026 -hyperbolic -\"one-point\"",
+      "scope": "arxiv.org"
+    },
+    {
+      "query": "\"Ising susceptibility\" \"Stokes\" \"tail\"",
+      "scope": "general web"
+    },
+    {
+      "query": "\"Ising susceptibility\" \"natural boundary\" \"proof\" github zenodo",
+      "scope": "general web"
+    },
+    {
+      "query": "ising susceptibility natural boundary",
+      "scope": "GitHub repository search connector; access/index limited"
+    }
+  ],
+  "main_primary_comparisons": [
+    "https://arxiv.org/html/1307.5913v3",
+    "https://arxiv.org/html/1403.3966v1",
+    "https://arxiv.org/html/1502.04922v1",
+    "https://arxiv.org/abs/0808.0763",
+    "https://arxiv.org/abs/1203.1456"
+  ],
+  "other_screened": [
+    "https://arxiv.org/abs/cond-mat/0103074",
+    "https://arxiv.org/abs/1607.04168",
+    "https://arxiv.org/abs/2604.06011"
+  ],
+  "excluded_lookup_error": {
+    "identifier": "0706.3754",
+    "reason": "An initially guessed identifier resolved to unrelated astrophysics. Excluded as evidence and not cited in the manuscript."
+  },
+  "result": "No equivalent complete bulk proof located; no guarantee about unindexed, unpublished or inaccessible work.",
+  "access_limits": [
+    "Nickel publisher full texts not comprehensively re-audited in this pass.",
+    "Some official pages failed direct fetch but were available as indexed snippets; scientific comparisons use primary papers.",
+    "Connector repository search is not an unrestricted search of all GitHub content."
+  ],
+  "raw_tool_record_sha256": "8f22a316a3012557e4e2f311da2573b8df21b9c14cf6c050789f231aa6418842"
+}

@@ -1,0 +1,65 @@
+{
+  "baseline_sha256": "d68b6a0ec15fd2f4e3fd2a1e044700d40d0eb27c8b10f7f5f0beef1e59028f49",
+  "candidate_tex_sha256": "f5e7732a6ec67aaf5597bd07bd4297802aaaec3540ca6bfced93c099fcee50e5",
+  "math_fragments_identical": true,
+  "math_fragments": 1379,
+  "numbered_statement_blocks_identical": true,
+  "statement_blocks": 29,
+  "proof_environments_identical": true,
+  "proof_environments": 29,
+  "complete_sections_2_to_9_and_appendices_A_to_G_before_release_status_byte_identical": true,
+  "label_sequence_identical": true,
+  "equations_1_1_and_1_2_identical": true,
+  "W1_W13_mechanisms_numerical_constants_derivative_ranges_particle_windows_unchanged": true,
+  "edits": [
+    {
+      "category": "release metadata",
+      "reason": "Synchronize PDF subject with the new candidate version.",
+      "before": "pdfsubject={Candidate proof, v0.1 release candidate; not independently certified}",
+      "after": "pdfsubject={Candidate proof, v0.1-rc2; not independently certified}"
+    },
+    {
+      "category": "release metadata",
+      "reason": "Identify rc2 while retaining the preparation date.",
+      "before": "\\date{Version 0.1 release candidate\\\\28 September 2026}",
+      "after": "\\date{Version 0.1-rc2\\\\28 September 2026}"
+    },
+    {
+      "category": "priority wording",
+      "reason": "Distinguish limited literature clearance from relinquishing any originality claim.",
+      "before": "checks and the coverage of all tail sectors. No priority claim or\nindependent validation of the natural-boundary conclusion is made.",
+      "after": "checks and the coverage of all tail sectors. No exhaustive priority\nclearance is claimed; the natural-boundary conclusion has no\nindependent certification."
+    },
+    {
+      "category": "related-work wording",
+      "reason": "Add the verified Orrick-2001 noncancellation evidence with its explicit non-proof limit.",
+      "before": "These findings motivate the full-sum question.\n",
+      "after": "These findings motivate the full-sum question.\n\nOrrick, Nickel, Guttmann, and Perk \\cite[Section~3.2]{Orrick2001}\nexamined the order dependence of singularity amplitudes and argued\nthat it provides strong evidence against cancellation in the full sum.\nTheir introduction explicitly distinguishes this evidence from a proof.\nWe cite that analysis as a heuristic precedent, not as an infinite-tail\ntheorem.\n"
+    },
+    {
+      "category": "priority wording",
+      "reason": "Use semantically precise, non-exhaustive priority language.",
+      "before": "their novelty. No complete literature-priority clearance is asserted.",
+      "after": "their novelty. No exhaustive literature-priority clearance is claimed."
+    },
+    {
+      "category": "release metadata",
+      "reason": "Describe rc2 as an editorial revision without upgrading audit status.",
+      "before": "Version 0.1 is a candidate for public mathematical review, derived\nfrom revision 8 with attribution, authorship, and release-status\nedits. It does not claim a new independent mathematical audit.",
+      "after": "Version 0.1-rc2 is a candidate for public mathematical review.\nIt preserves the mathematics of revision 8 and release candidate rc1;\nthis revision clarifies bibliography, attribution, and presentation.\nIt does not claim a new independent mathematical audit."
+    },
+    {
+      "category": "AI disclosure",
+      "reason": "Use conservative academic language without inferring specific human mathematical roles.",
+      "before": "AI systems generated the research derivations, substantial manuscript\ntext, audit attempts, reconstruction attempts, and checking code.\nThe author organized this workflow, selected and maintained the\nmaterials, and is the human contact responsible for this submission.",
+      "after": "Generative AI was used extensively in research exploration,\nmathematical derivation, manuscript writing, code, internal audits,\nand reconstruction attempts. Dehao Lin is the named human author\nand public contact. No specific division of mathematical contributions\nor line-by-line human verification is asserted here."
+    },
+    {
+      "category": "bibliography",
+      "reason": "Add verified primary-source metadata; existing citation keys are retained.",
+      "before": "\\bibitem{PalmerTracy1981}",
+      "after": "\\bibitem{Orrick2001}\nW.~P. Orrick, B.~Nickel, A.~J. Guttmann, and J.~H.~H. Perk.\n\\newblock The susceptibility of the square lattice {Ising} model:\nNew developments.\n\\newblock \\emph{Journal of Statistical Physics}, 102:795--841, 2001.\n\\newblock \\href{https://doi.org/10.1023/A:1004850919647}{doi:10.1023/A:1004850919647};\n\\href{https://arxiv.org/abs/cond-mat/0103074v1}{arXiv:cond-mat/0103074v1}.\n\n\\bibitem{PalmerTracy1981}"
+    }
+  ],
+  "scope": "Strict editorial whitelist and textual preservation; not mathematical certification."
+}

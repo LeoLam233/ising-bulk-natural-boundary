@@ -1,0 +1,83 @@
+{
+  "purpose": "Selected finite diagnostic replay; not mathematical certification",
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "comparison": {
+    "numeric_rtol": 1e-10,
+    "numeric_atol": 1e-10,
+    "metadata_keys_ignored": [
+      "environment",
+      "generated_at",
+      "input_files",
+      "input_hashes",
+      "input_sha256",
+      "source_sha256",
+      "timestamp",
+      "versions"
+    ],
+    "interval_certified": false
+  },
+  "checks": [
+    {
+      "id": "v7_core",
+      "exit_code": 0,
+      "seconds": 0.404,
+      "output": "release/diagnostic_outputs/v7_core/check_results.json",
+      "historical_differences": [],
+      "status": "REPRODUCED_FINITE_CHECK",
+      "output_sha256": "ce89bc595d3d15f2fd76b26f489bbb640538bc1152ec0eced6a7721c49645a53"
+    },
+    {
+      "id": "v7_normalization",
+      "exit_code": 0,
+      "seconds": 0.369,
+      "output": "release/diagnostic_outputs/v7_normalization/independent_normalization_results.json",
+      "historical_differences": [],
+      "status": "REPRODUCED_FINITE_CHECK",
+      "output_sha256": "4ddcb3e539e4d96188bd500d93f5c4b6946bfbe9aec1f763850c6e9336103582"
+    },
+    {
+      "id": "v7_additional",
+      "exit_code": 0,
+      "seconds": 0.086,
+      "output": "release/diagnostic_outputs/v7_additional/stdout.txt",
+      "historical_differences": [],
+      "status": "REPRODUCED_FINITE_CHECK",
+      "output_sha256": "1d954285f743c35a3a675516589b1ecace368aa208506e867ffc64d7eb6fbbb7"
+    },
+    {
+      "id": "v6_diagnostics",
+      "exit_code": 0,
+      "seconds": 0.405,
+      "output": "release/diagnostic_outputs/v6_diagnostics/result.json",
+      "historical_differences": [],
+      "status": "REPRODUCED_FINITE_CHECK",
+      "output_sha256": "b0192b1f82fd2acae6b020ae11df2833ece8b360893323ced8e07a87101145f6"
+    },
+    {
+      "id": "mr1_algebra",
+      "exit_code": 0,
+      "seconds": 0.647,
+      "output": "release/diagnostic_outputs/mr1_algebra/stdout.txt",
+      "historical_differences": [],
+      "status": "REPRODUCED_FINITE_CHECK",
+      "output_sha256": "034457b60f07d8a6f8575d455b7f557cb4dac8518224d0517d33095e45cfe1d7"
+    },
+    {
+      "id": "mr1_coupled",
+      "exit_code": 0,
+      "seconds": 0.358,
+      "output": "release/diagnostic_outputs/mr1_coupled/stdout.txt",
+      "historical_differences": [],
+      "status": "REPRODUCED_FINITE_CHECK",
+      "output_sha256": "efa55dffbacffce8017b1d4168f18f9d6b55793abb507ad161d0660773ce16ce"
+    }
+  ],
+  "all_reproduced": true,
+  "full_natural_boundary_certified": false,
+  "historical_comparison_note": "Initial literal comparison flagged five complex float strings (maximum absolute delta 1.40e-17) and unavailable historical manuscript-hash metadata. The comparator now parses complex numbers and excludes the declared metadata keys. Original six scientific scripts unchanged. No failed mathematical assertion was suppressed."
+}

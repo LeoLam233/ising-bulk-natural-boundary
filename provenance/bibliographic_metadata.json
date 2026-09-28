@@ -1,0 +1,338 @@
+{
+  "source": "Crossref public metadata API",
+  "retrieved_date": "2026-09-28",
+  "scope": "Publication metadata, not mathematical verification; published year used without inferring an exact day from incomplete Crossref dates",
+  "records": [
+    {
+      "doi": "10.1088/0305-4470/32/21/303",
+      "url": "https://api.crossref.org/works/10.1088%2F0305-4470%2F32%2F21%2F303",
+      "title": [
+        "On the singularity structure of the 2D Ising model susceptibility"
+      ],
+      "author": [
+        {
+          "given": "Bernie",
+          "family": "Nickel",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Physics A: Mathematical and General"
+      ],
+      "volume": "32",
+      "issue": "21",
+      "page": "3889-3906",
+      "published": {
+        "date-parts": [
+          [
+            1999,
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "doi": "10.1088/0305-4470/33/8/313",
+      "url": "https://api.crossref.org/works/10.1088%2F0305-4470%2F33%2F8%2F313",
+      "title": [
+        "Addendum to `On the singularity structure of the 2D Ising model susceptibility'"
+      ],
+      "author": [
+        {
+          "given": "Bernie",
+          "family": "Nickel",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Physics A: Mathematical and General"
+      ],
+      "volume": "33",
+      "issue": "8",
+      "page": "1693-1711",
+      "published": {
+        "date-parts": [
+          [
+            2000,
+            2,
+            22
+          ]
+        ]
+      }
+    },
+    {
+      "doi": "10.1016/0196-8858(81)90010-5",
+      "url": "https://api.crossref.org/works/10.1016%2F0196-8858%2881%2990010-5",
+      "title": [
+        "Two-dimensional Ising correlations: Convergence of the scaling limit"
+      ],
+      "author": [
+        {
+          "given": "John",
+          "family": "Palmer",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Craig",
+          "family": "Tracy",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Advances in Applied Mathematics"
+      ],
+      "volume": "2",
+      "issue": "3",
+      "page": "329-388",
+      "published": {
+        "date-parts": [
+          [
+            1981,
+            9
+          ]
+        ]
+      }
+    },
+    {
+      "doi": "10.1103/PhysRevB.13.316",
+      "url": "https://api.crossref.org/works/10.1103%2FPhysRevB.13.316",
+      "title": [
+        "Spin-spin correlation functions for the two-dimensional Ising model: Exact theory in the scaling region"
+      ],
+      "author": [
+        {
+          "given": "Tai Tsun",
+          "family": "Wu",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Barry M.",
+          "family": "McCoy",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Craig A.",
+          "family": "Tracy",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Eytan",
+          "family": "Barouch",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Physical Review B"
+      ],
+      "volume": "13",
+      "issue": "1",
+      "page": "316-374",
+      "published": {
+        "date-parts": [
+          [
+            1976,
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "doi": "10.1103/PhysRevLett.76.344",
+      "url": "https://api.crossref.org/works/10.1103%2FPhysRevLett.76.344",
+      "title": [
+        "Solvability of Some Statistical Mechanical Systems"
+      ],
+      "author": [
+        {
+          "given": "A. J.",
+          "family": "Guttmann",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "I. G.",
+          "family": "Enting",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Physical Review Letters"
+      ],
+      "volume": "76",
+      "issue": "3",
+      "page": "344-347",
+      "published": {
+        "date-parts": [
+          [
+            1996,
+            1,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "doi": "10.1063/1.4836779",
+      "url": "https://api.crossref.org/works/10.1063%2F1.4836779",
+      "title": [
+        "On the diagonal susceptibility of the two-dimensional Ising model"
+      ],
+      "author": [
+        {
+          "given": "Craig A.",
+          "family": "Tracy",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of California 1 Department of Mathematics, , Davis, California 95616, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Harold",
+          "family": "Widom",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of California 2 Department of Mathematics, , Santa Cruz, California 95064, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Mathematical Physics"
+      ],
+      "volume": "54",
+      "issue": "12",
+      "page": null,
+      "published": {
+        "date-parts": [
+          [
+            2013,
+            12,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "doi": "10.1103/PhysRev.85.808",
+      "url": "https://api.crossref.org/works/10.1103%2FPhysRev.85.808",
+      "title": [
+        "The Spontaneous Magnetization of a Two-Dimensional Ising Model"
+      ],
+      "author": [
+        {
+          "given": "C. N.",
+          "family": "Yang",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Physical Review"
+      ],
+      "volume": "85",
+      "issue": "5",
+      "page": "808-816",
+      "published": {
+        "date-parts": [
+          [
+            1952,
+            3,
+            1
+          ]
+        ]
+      }
+    }
+  ]
+}

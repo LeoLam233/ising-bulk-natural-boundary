@@ -1,0 +1,311 @@
+{
+  "builds": [
+    {
+      "source": "paper/manuscript.tex",
+      "source_sha256": "d68b6a0ec15fd2f4e3fd2a1e044700d40d0eb27c8b10f7f5f0beef1e59028f49",
+      "pdf_sha256": "ee9abf458698ccb0b21d414ef8f329e875ede0f5253e22da2e41c8d47460e7e5",
+      "pages": 36,
+      "warnings": [],
+      "all_fonts_embedded": true,
+      "pages_checked": [
+        {
+          "page": 1,
+          "characters": 2316,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 2,
+          "characters": 3295,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 3,
+          "characters": 2169,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 4,
+          "characters": 2422,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 5,
+          "characters": 2729,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 6,
+          "characters": 2931,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 7,
+          "characters": 3127,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 8,
+          "characters": 2987,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 9,
+          "characters": 3407,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 10,
+          "characters": 2835,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 11,
+          "characters": 2475,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 12,
+          "characters": 3093,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 13,
+          "characters": 3300,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 14,
+          "characters": 3395,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 15,
+          "characters": 2851,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 16,
+          "characters": 2729,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 17,
+          "characters": 3141,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 18,
+          "characters": 3089,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 19,
+          "characters": 3309,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 20,
+          "characters": 3325,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 21,
+          "characters": 2512,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 22,
+          "characters": 2907,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 23,
+          "characters": 2999,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 24,
+          "characters": 3080,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 25,
+          "characters": 2288,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 26,
+          "characters": 2173,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 27,
+          "characters": 3181,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 28,
+          "characters": 3197,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 29,
+          "characters": 2460,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 30,
+          "characters": 2238,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 31,
+          "characters": 3075,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 32,
+          "characters": 2702,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 33,
+          "characters": 2613,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 34,
+          "characters": 3368,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 35,
+          "characters": 3661,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 36,
+          "characters": 2403,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        }
+      ],
+      "label_numbers_unchanged_from_v8": true,
+      "label_count": 65,
+      "seconds": 15.604738399997586,
+      "build": "existing cached Tectonic --untrusted --only-cached",
+      "native_editor_attempt": "failed: Unable to find standard directories for platform",
+      "visual_review": "All rendered pages inspected in contact sheets; first pages and release declarations also examined. No clipping/overlap found.",
+      "mathematical_certification": false,
+      "all_pages_visually_reviewed": true
+    },
+    {
+      "source": "docs/expert_brief.tex",
+      "source_sha256": "e76920a72ab4ebc573af416b3e69bb09e8f9f3d83b2b66ccb6685720d990054f",
+      "pdf_sha256": "e10009a51faa2e5d4ebe9850ba0f0627cde9c28f9220158ec3e4c5da7d623dab",
+      "pages": 2,
+      "warnings": [
+        "Package rerunfilecheck Warning: File `expert_brief.out' has changed."
+      ],
+      "all_fonts_embedded": true,
+      "pages_checked": [
+        {
+          "page": 1,
+          "characters": 2459,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        },
+        {
+          "page": 2,
+          "characters": 2846,
+          "unresolved_reference": false,
+          "replacement_character": false,
+          "edge_characters": 0
+        }
+      ],
+      "label_numbers_unchanged_from_v8": null,
+      "label_count": null,
+      "seconds": 0.6800717000005534,
+      "build": "existing cached Tectonic --untrusted --only-cached",
+      "native_editor_attempt": "failed: Unable to find standard directories for platform",
+      "visual_review": "All rendered pages inspected in contact sheets; first pages and release declarations also examined. No clipping/overlap found.",
+      "mathematical_certification": false,
+      "all_pages_visually_reviewed": true,
+      "warning_assessment": "A rerunfilecheck .out warning remains in the TeX log; this unnumbered two-page brief contains no cross-references. No missing glyphs, overfull boxes or unresolved references remain."
+    }
+  ],
+  "reproducible_pdf_bytes_promised": false,
+  "scope": "Build/layout and label validation, not mathematical proof validation."
+}

@@ -1,0 +1,32 @@
+Finite Nickel grid check, p=11, a=1, b=2 (not a proof for all orders):
+(2, '0.743331454167', [])
+(4, '0.256668545833', [])
+(6, '0.243331454167', [])
+(8, '0.15754501654', [])
+(10, '0.0523484485419', [])
+(12, '0.109356857951', [])
+(14, '0.0096889421156', [])
+(16, '0.0498944190433', [])
+(18, '0.00937589728591', [])
+(20, '0.00340496483703', [])
+(22, '0.0', [(2, 4)])
+
+Relative discrepancy of the two ordered amplitude factors:
+(11, 1, 2) 3.0840564e-100
+(13, 1, 3) 3.0895715e-100
+(17, 2, 4) 6.1115702e-99
+(23, 3, 5) 7.0628132e-99
+
+Normalized residuals of sum V=0 and sum b_i V_i=sum partial_s phi_i:
+1e-6 2.6162703e-102 3.5509489e-102
+1e-12 5.4425845e-102 9.5551603e-102
+1e-24 3.6465653e-102 3.5835827e-102
+1e-48 2.5785111e-102 6.4558578e-103
+
+Minimum full-collision exponents for p=11:
+{'N0': 22, 'k': 241, 'first_tail_N': 24, 'coarea_L': 90, 'flux_exponent': 91}
+
+Endpoint/opposite-group pairs at the limiting boundary (absolute modulus):
+0.0 -2.0 1.0
+-3.1415927 -0.5 1.0
+0.0 -3.1415927 1.0

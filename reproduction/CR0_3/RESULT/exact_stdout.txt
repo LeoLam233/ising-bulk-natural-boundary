@@ -1,0 +1,454 @@
+{
+  "kind": "exact_finite_arithmetic_checks_not_a_universal_proof",
+  "sympy_version": "1.14.0",
+  "series": [
+    {
+      "power_t": 4,
+      "T2_coefficient": "1/4",
+      "full_X_coefficient_below_t16": "1/4"
+    },
+    {
+      "power_t": 6,
+      "T2_coefficient": "1/4",
+      "full_X_coefficient_below_t16": "1/4"
+    },
+    {
+      "power_t": 8,
+      "T2_coefficient": "15/32",
+      "full_X_coefficient_below_t16": "13/32"
+    },
+    {
+      "power_t": 10,
+      "T2_coefficient": "15/32",
+      "full_X_coefficient_below_t16": "13/32"
+    },
+    {
+      "power_t": 12,
+      "T2_coefficient": "175/256",
+      "full_X_coefficient_below_t16": "139/256"
+    },
+    {
+      "power_t": 14,
+      "T2_coefficient": "175/256",
+      "full_X_coefficient_below_t16": "139/256"
+    }
+  ],
+  "prime_pair_checks": [
+    {
+      "p": 7,
+      "k": 1,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 7,
+      "k": 4,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 7,
+      "k": 5,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 7,
+      "k": 6,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 1,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 2,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 3,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 4,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 5,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 6,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 7,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 8,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 9,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 11,
+      "k": 10,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 1,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 3,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 4,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 5,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 6,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 7,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 8,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 9,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 10,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 11,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 13,
+      "k": 12,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 1,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 2,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 3,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 4,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 5,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 6,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 7,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 8,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 9,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 10,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 11,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 12,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 13,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 14,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 15,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 17,
+      "k": 16,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 1,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 2,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 3,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 4,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 5,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 6,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 7,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 8,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 9,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 10,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 11,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 12,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 13,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 14,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 15,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 16,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 17,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    },
+    {
+      "p": 19,
+      "k": 18,
+      "number_of_ordered_solutions": 4,
+      "only_equal_real_parts": true
+    }
+  ],
+  "boundary_flat_jet_checks": [
+    {
+      "n": 1,
+      "L": 1,
+      "K": 1,
+      "jet_degrees_1_through_L_minus_1_zero": true,
+      "coefficient_at_L": "-1"
+    },
+    {
+      "n": 2,
+      "L": 4,
+      "K": 16,
+      "jet_degrees_1_through_L_minus_1_zero": true,
+      "coefficient_at_L": "-3876"
+    },
+    {
+      "n": 3,
+      "L": 9,
+      "K": 81,
+      "jet_degrees_1_through_L_minus_1_zero": true,
+      "coefficient_at_L": "-635627275767"
+    },
+    {
+      "n": 4,
+      "L": 16,
+      "K": 256,
+      "jet_degrees_1_through_L_minus_1_zero": true,
+      "coefficient_at_L": "-25751746463640423324267024"
+    },
+    {
+      "n": 5,
+      "L": 25,
+      "K": 625,
+      "jet_degrees_1_through_L_minus_1_zero": true,
+      "coefficient_at_L": "-816853839252557868941069486554220425353359400"
+    },
+    {
+      "n": 6,
+      "L": 36,
+      "K": 1296,
+      "jet_degrees_1_through_L_minus_1_zero": true,
+      "coefficient_at_L": "-49255941687047007783126494463339150436879977648671840725373133141715740"
+    }
+  ]
+}

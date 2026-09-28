@@ -1,0 +1,64 @@
+{
+  "format": "ising-cr0-primary-sources-v1",
+  "papers": [
+    {
+      "id": "TW2014v1",
+      "filename": "TW2014v1.pdf",
+      "sha256": "ca8d2592602e7e33d0dc762960304990b08758dbabb6950e7a564dcaac218abf",
+      "bytes": 160631,
+      "pages": 13,
+      "title": "On the Singularities in the Susceptibility Expansion for the Two-Dimensional Ising Model",
+      "authors": [
+        "Craig A. Tracy",
+        "Harold Widom"
+      ],
+      "arxiv": "1403.3966v1",
+      "version_date": "2014-03-16",
+      "journal_doi": "10.1007/s10955-014-1061-4",
+      "source_identifier_url": "https://arxiv.org/abs/1403.3966v1",
+      "copy_status": "Unchanged PDF from operator-supplied primary-source material",
+      "text_extraction": {
+        "filename": "TW2014v1_text.txt",
+        "sha256": "120e930a94dfcc9ebc3e5d63d97a1ba240b932d38f570613c80035b879a10ef5",
+        "bytes": 26015,
+        "extractor": "pypdf 6.10.0",
+        "method": "PageObject.extract_text() default mode, UTF-8, one-based PDF-page delimiters",
+        "mathematical_edits": false
+      }
+    },
+    {
+      "id": "BG2008v1",
+      "filename": "Boukraa2008v1.pdf",
+      "sha256": "a67a545cc7776dd3153a65aa5e255e4013c16448aedfda65e900aa956b96edb3",
+      "bytes": 565136,
+      "pages": 54,
+      "title": "Experimental mathematics on the magnetic susceptibility of the square lattice Ising model",
+      "authors": [
+        "S. Boukraa",
+        "A. J. Guttmann",
+        "S. Hassani",
+        "I. Jensen",
+        "J.-M. Maillard",
+        "B. Nickel",
+        "N. Zenine"
+      ],
+      "arxiv": "0808.0763v1",
+      "version_date": "2008-08-06",
+      "journal_doi": "10.1088/1751-8113/41/45/455202",
+      "source_identifier_url": "https://arxiv.org/abs/0808.0763v1",
+      "copy_status": "Unchanged PDF from operator-supplied primary-source material",
+      "text_extraction": {
+        "filename": "Boukraa2008v1_text.txt",
+        "sha256": "228d49e8d731998df9daf1854f17123123158bc5e3476a03bb87267824302cbd",
+        "bytes": 179102,
+        "extractor": "pypdf 6.10.0",
+        "method": "PageObject.extract_text() default mode, UTF-8, one-based PDF-page delimiters",
+        "mathematical_edits": false
+      }
+    }
+  ],
+  "source_urls_are_identifiers_only": true,
+  "runtime_retrieval_permitted": false,
+  "text_authoritative": false,
+  "rights_notice": "../THIRD_PARTY_NOTICES.md"
+}

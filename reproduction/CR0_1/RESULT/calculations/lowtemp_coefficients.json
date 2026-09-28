@@ -1,0 +1,58 @@
+{
+  "arithmetic": "exact rational arithmetic",
+  "q": "1/s",
+  "v": "q^2/4",
+  "valid_full_series_through_q_power": 14,
+  "reason": "All even n>=4 begin at q^(n^2); general leading coefficient is 2^(-n(n-1)).",
+  "coefficients": [
+    {
+      "q_power": 2,
+      "F2_coefficient": "0",
+      "X_coefficient": "0",
+      "v_power": 1,
+      "X_v_coefficient": 0
+    },
+    {
+      "q_power": 4,
+      "F2_coefficient": "1/4",
+      "X_coefficient": "1/4",
+      "v_power": 2,
+      "X_v_coefficient": 4
+    },
+    {
+      "q_power": 6,
+      "F2_coefficient": "1/4",
+      "X_coefficient": "1/4",
+      "v_power": 3,
+      "X_v_coefficient": 16
+    },
+    {
+      "q_power": 8,
+      "F2_coefficient": "15/32",
+      "X_coefficient": "13/32",
+      "v_power": 4,
+      "X_v_coefficient": 104
+    },
+    {
+      "q_power": 10,
+      "F2_coefficient": "15/32",
+      "X_coefficient": "13/32",
+      "v_power": 5,
+      "X_v_coefficient": 416
+    },
+    {
+      "q_power": 12,
+      "F2_coefficient": "175/256",
+      "X_coefficient": "139/256",
+      "v_power": 6,
+      "X_v_coefficient": 2224
+    },
+    {
+      "q_power": 14,
+      "F2_coefficient": "175/256",
+      "X_coefficient": "139/256",
+      "v_power": 7,
+      "X_v_coefficient": 8896
+    }
+  ]
+}

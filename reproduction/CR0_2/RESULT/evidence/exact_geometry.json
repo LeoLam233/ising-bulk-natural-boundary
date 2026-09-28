@@ -1,0 +1,1286 @@
+{
+  "classification": "Exact finite checks of algebraic lemmas, not a proof that any Ising boundary candidate is an actual singularity.",
+  "status": "all_assertions_passed",
+  "prime_cases": [
+    {
+      "prime_q": 7,
+      "first_possible_even_particle_order": 14,
+      "target_count": 3,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 9
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 9
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 37
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 9
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 51
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 37
+        }
+      ]
+    },
+    {
+      "prime_q": 11,
+      "first_possible_even_particle_order": 22,
+      "target_count": 5,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 13
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 13
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 13
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 57
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 101
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 13
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 57
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 145
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 145
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 101
+        }
+      ]
+    },
+    {
+      "prime_q": 13,
+      "first_possible_even_particle_order": 26,
+      "target_count": 6,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "ell": 6,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 15
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 41
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 67
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 41
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 41
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 145
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 15
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 145
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 145
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 41
+        },
+        {
+          "n": 22,
+          "automorphism_exponent_mod_nq": 67
+        },
+        {
+          "n": 24,
+          "automorphism_exponent_mod_nq": 145
+        }
+      ]
+    },
+    {
+      "prime_q": 17,
+      "first_possible_even_particle_order": 34,
+      "target_count": 8,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "ell": 6,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "ell": 7,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "ell": 8,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              16,
+              16
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 19
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 53
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 19
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 121
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 121
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 121
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 155
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 257
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 19
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 121
+        },
+        {
+          "n": 22,
+          "automorphism_exponent_mod_nq": 155
+        },
+        {
+          "n": 24,
+          "automorphism_exponent_mod_nq": 121
+        },
+        {
+          "n": 26,
+          "automorphism_exponent_mod_nq": 53
+        },
+        {
+          "n": 28,
+          "automorphism_exponent_mod_nq": 393
+        },
+        {
+          "n": 30,
+          "automorphism_exponent_mod_nq": 121
+        },
+        {
+          "n": 32,
+          "automorphism_exponent_mod_nq": 257
+        }
+      ]
+    },
+    {
+      "prime_q": 19,
+      "first_possible_even_particle_order": 38,
+      "target_count": 9,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "ell": 6,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "ell": 7,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "ell": 8,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              16,
+              16
+            ]
+          ]
+        },
+        {
+          "ell": 9,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              18,
+              18
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 21
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 21
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 97
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 97
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 21
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 97
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 211
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 97
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 325
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 21
+        },
+        {
+          "n": 22,
+          "automorphism_exponent_mod_nq": 287
+        },
+        {
+          "n": 24,
+          "automorphism_exponent_mod_nq": 97
+        },
+        {
+          "n": 26,
+          "automorphism_exponent_mod_nq": 287
+        },
+        {
+          "n": 28,
+          "automorphism_exponent_mod_nq": 477
+        },
+        {
+          "n": 30,
+          "automorphism_exponent_mod_nq": 211
+        },
+        {
+          "n": 32,
+          "automorphism_exponent_mod_nq": 97
+        },
+        {
+          "n": 34,
+          "automorphism_exponent_mod_nq": 477
+        },
+        {
+          "n": 36,
+          "automorphism_exponent_mod_nq": 325
+        }
+      ]
+    },
+    {
+      "prime_q": 23,
+      "first_possible_even_particle_order": 46,
+      "target_count": 11,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "ell": 6,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "ell": 7,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "ell": 8,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              16,
+              16
+            ]
+          ]
+        },
+        {
+          "ell": 9,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              18,
+              18
+            ]
+          ]
+        },
+        {
+          "ell": 10,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              20,
+              20
+            ]
+          ]
+        },
+        {
+          "ell": 11,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              22,
+              22
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 25
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 25
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 25
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 25
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 71
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 25
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 71
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 209
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 163
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 301
+        },
+        {
+          "n": 22,
+          "automorphism_exponent_mod_nq": 485
+        },
+        {
+          "n": 24,
+          "automorphism_exponent_mod_nq": 25
+        },
+        {
+          "n": 26,
+          "automorphism_exponent_mod_nq": 209
+        },
+        {
+          "n": 28,
+          "automorphism_exponent_mod_nq": 393
+        },
+        {
+          "n": 30,
+          "automorphism_exponent_mod_nq": 301
+        },
+        {
+          "n": 32,
+          "automorphism_exponent_mod_nq": 577
+        },
+        {
+          "n": 34,
+          "automorphism_exponent_mod_nq": 715
+        },
+        {
+          "n": 36,
+          "automorphism_exponent_mod_nq": 577
+        },
+        {
+          "n": 38,
+          "automorphism_exponent_mod_nq": 761
+        },
+        {
+          "n": 40,
+          "automorphism_exponent_mod_nq": 761
+        },
+        {
+          "n": 42,
+          "automorphism_exponent_mod_nq": 715
+        },
+        {
+          "n": 44,
+          "automorphism_exponent_mod_nq": 485
+        }
+      ]
+    },
+    {
+      "prime_q": 29,
+      "first_possible_even_particle_order": 58,
+      "target_count": 14,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "ell": 6,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "ell": 7,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "ell": 8,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              16,
+              16
+            ]
+          ]
+        },
+        {
+          "ell": 9,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              18,
+              18
+            ]
+          ]
+        },
+        {
+          "ell": 10,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              20,
+              20
+            ]
+          ]
+        },
+        {
+          "ell": 11,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              22,
+              22
+            ]
+          ]
+        },
+        {
+          "ell": 12,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              24,
+              24
+            ]
+          ]
+        },
+        {
+          "ell": 13,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              26,
+              26
+            ]
+          ]
+        },
+        {
+          "ell": 14,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              28,
+              28
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 31
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 89
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 31
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 89
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 31
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 205
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 379
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 321
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 379
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 321
+        },
+        {
+          "n": 22,
+          "automorphism_exponent_mod_nq": 89
+        },
+        {
+          "n": 24,
+          "automorphism_exponent_mod_nq": 553
+        },
+        {
+          "n": 26,
+          "automorphism_exponent_mod_nq": 495
+        },
+        {
+          "n": 28,
+          "automorphism_exponent_mod_nq": 785
+        },
+        {
+          "n": 30,
+          "automorphism_exponent_mod_nq": 31
+        },
+        {
+          "n": 32,
+          "automorphism_exponent_mod_nq": 321
+        },
+        {
+          "n": 34,
+          "automorphism_exponent_mod_nq": 205
+        },
+        {
+          "n": 36,
+          "automorphism_exponent_mod_nq": 901
+        },
+        {
+          "n": 38,
+          "automorphism_exponent_mod_nq": 495
+        },
+        {
+          "n": 40,
+          "automorphism_exponent_mod_nq": 321
+        },
+        {
+          "n": 42,
+          "automorphism_exponent_mod_nq": 379
+        },
+        {
+          "n": 44,
+          "automorphism_exponent_mod_nq": 89
+        },
+        {
+          "n": 46,
+          "automorphism_exponent_mod_nq": 553
+        },
+        {
+          "n": 48,
+          "automorphism_exponent_mod_nq": 1249
+        },
+        {
+          "n": 50,
+          "automorphism_exponent_mod_nq": 901
+        },
+        {
+          "n": 52,
+          "automorphism_exponent_mod_nq": 1249
+        },
+        {
+          "n": 54,
+          "automorphism_exponent_mod_nq": 379
+        },
+        {
+          "n": 56,
+          "automorphism_exponent_mod_nq": 785
+        }
+      ]
+    },
+    {
+      "prime_q": 31,
+      "first_possible_even_particle_order": 62,
+      "target_count": 15,
+      "unique_pair_checks": [
+        {
+          "ell": 1,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "ell": 2,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "ell": 3,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "ell": 4,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              8,
+              8
+            ]
+          ]
+        },
+        {
+          "ell": 5,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        {
+          "ell": 6,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              12,
+              12
+            ]
+          ]
+        },
+        {
+          "ell": 7,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "ell": 8,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              16,
+              16
+            ]
+          ]
+        },
+        {
+          "ell": 9,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              18,
+              18
+            ]
+          ]
+        },
+        {
+          "ell": 10,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              20,
+              20
+            ]
+          ]
+        },
+        {
+          "ell": 11,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              22,
+              22
+            ]
+          ]
+        },
+        {
+          "ell": 12,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              24,
+              24
+            ]
+          ]
+        },
+        {
+          "ell": 13,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              26,
+              26
+            ]
+          ]
+        },
+        {
+          "ell": 14,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              28,
+              28
+            ]
+          ]
+        },
+        {
+          "ell": 15,
+          "solutions_in_0_le_j_le_k_le_q": [
+            [
+              30,
+              30
+            ]
+          ]
+        }
+      ],
+      "lower_order_CRT_checks": [
+        {
+          "n": 2,
+          "automorphism_exponent_mod_nq": 33
+        },
+        {
+          "n": 4,
+          "automorphism_exponent_mod_nq": 33
+        },
+        {
+          "n": 6,
+          "automorphism_exponent_mod_nq": 157
+        },
+        {
+          "n": 8,
+          "automorphism_exponent_mod_nq": 33
+        },
+        {
+          "n": 10,
+          "automorphism_exponent_mod_nq": 281
+        },
+        {
+          "n": 12,
+          "automorphism_exponent_mod_nq": 157
+        },
+        {
+          "n": 14,
+          "automorphism_exponent_mod_nq": 281
+        },
+        {
+          "n": 16,
+          "automorphism_exponent_mod_nq": 33
+        },
+        {
+          "n": 18,
+          "automorphism_exponent_mod_nq": 343
+        },
+        {
+          "n": 20,
+          "automorphism_exponent_mod_nq": 281
+        },
+        {
+          "n": 22,
+          "automorphism_exponent_mod_nq": 529
+        },
+        {
+          "n": 24,
+          "automorphism_exponent_mod_nq": 529
+        },
+        {
+          "n": 26,
+          "automorphism_exponent_mod_nq": 157
+        },
+        {
+          "n": 28,
+          "automorphism_exponent_mod_nq": 281
+        },
+        {
+          "n": 30,
+          "automorphism_exponent_mod_nq": 901
+        },
+        {
+          "n": 32,
+          "automorphism_exponent_mod_nq": 33
+        },
+        {
+          "n": 34,
+          "automorphism_exponent_mod_nq": 715
+        },
+        {
+          "n": 36,
+          "automorphism_exponent_mod_nq": 901
+        },
+        {
+          "n": 38,
+          "automorphism_exponent_mod_nq": 343
+        },
+        {
+          "n": 40,
+          "automorphism_exponent_mod_nq": 281
+        },
+        {
+          "n": 42,
+          "automorphism_exponent_mod_nq": 715
+        },
+        {
+          "n": 44,
+          "automorphism_exponent_mod_nq": 529
+        },
+        {
+          "n": 46,
+          "automorphism_exponent_mod_nq": 1335
+        },
+        {
+          "n": 48,
+          "automorphism_exponent_mod_nq": 529
+        },
+        {
+          "n": 50,
+          "automorphism_exponent_mod_nq": 901
+        },
+        {
+          "n": 52,
+          "automorphism_exponent_mod_nq": 157
+        },
+        {
+          "n": 54,
+          "automorphism_exponent_mod_nq": 1459
+        },
+        {
+          "n": 56,
+          "automorphism_exponent_mod_nq": 281
+        },
+        {
+          "n": 58,
+          "automorphism_exponent_mod_nq": 1335
+        },
+        {
+          "n": 60,
+          "automorphism_exponent_mod_nq": 901
+        }
+      ]
+    }
+  ],
+  "number_of_target_checks": 71
+}

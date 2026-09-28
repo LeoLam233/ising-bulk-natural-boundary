@@ -1,0 +1,765 @@
+{
+  "schema": "ising-mr1-obligations-v1",
+  "nodes": [
+    {
+      "id": "I1",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "I1"
+        },
+        {
+          "path": "proofs/P01_EXTERIOR_AND_NORMALIZATION.md",
+          "anchor": "P01.1"
+        },
+        {
+          "path": "proofs/P01_EXTERIOR_AND_NORMALIZATION.md",
+          "anchor": "P01.2"
+        },
+        {
+          "path": "proofs/P01_EXTERIOR_AND_NORMALIZATION.md",
+          "anchor": "P01.3"
+        },
+        {
+          "path": "proofs/P01_EXTERIOR_AND_NORMALIZATION.md",
+          "anchor": "P01.4"
+        }
+      ],
+      "dependencies": [],
+      "assumptions": [
+        "E1",
+        "E2"
+      ],
+      "note": "由 E1 的 Fredholm 角测度独立恢复双轮廓归一化，原点项为 1-M²、offsite 系数为 2T_N；重算 PAIR 与 R0。外部内根单值，紧集上 C^N N^(N/4)/N! 乘严格 n² 压缩给出偶数级数及任意固定阶导数的正规收敛。"
+    },
+    {
+      "id": "I2",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "I2"
+        },
+        {
+          "path": "proofs/P02_ARITHMETIC.md",
+          "anchor": "P02.1"
+        },
+        {
+          "path": "proofs/P02_ARITHMETIC.md",
+          "anchor": "P02.2"
+        },
+        {
+          "path": "proofs/P02_ARITHMETIC.md",
+          "anchor": "P02.3"
+        },
+        {
+          "path": "proofs/P02_ARITHMETIC.md",
+          "anchor": "P02.4"
+        },
+        {
+          "path": "proofs/P02_ARITHMETIC.md",
+          "anchor": "P02.5"
+        }
+      ],
+      "dependencies": [
+        "I1"
+      ],
+      "assumptions": [],
+      "note": "对全部允许素数及 a,b 证明首次偶数阶 N0=2p、任意 Nickel 阶上无序余弦对唯一、点族稠密。迹证明 ξ 非单位根，整数范数给 A=(2p-3)log14 的全部正整数指数分离，不依赖有限枚举。"
+    },
+    {
+      "id": "I3",
+      "status": "unresolved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "I3"
+        },
+        {
+          "path": "proofs/P10_FINITE_PARTICLE_INTERFACE.md",
+          "anchor": "P10.1"
+        },
+        {
+          "path": "proofs/P10_FINITE_PARTICLE_INTERFACE.md",
+          "anchor": "P10.2"
+        },
+        {
+          "path": "proofs/P10_FINITE_PARTICLE_INTERFACE.md",
+          "anchor": "P10.3"
+        },
+        {
+          "path": "proofs/P10_FINITE_PARTICLE_INTERFACE.md",
+          "anchor": "P10.4"
+        }
+      ],
+      "dependencies": [
+        "I1",
+        "I2"
+      ],
+      "assumptions": [
+        "E3"
+      ],
+      "note": "E3 仅闭合 n<N0 的有限个偶数阶。已重算两个局部形式模型及其共同非零模型相位，但尚未证明合法实权重的平均角留数拼接、完整余项 √ε R^(k)→0、完整 T_N0 的 k 阶非零系数及 j<k 的有界性。因此不将 I3 默认为已证。"
+    },
+    {
+      "id": "I4",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "I4"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.3"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.1"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.4"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.6"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.5"
+        }
+      ],
+      "dependencies": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "实际耦合权重上的同伦、三盘、固定 r/实域的任意 j≤k 微分以及全部前置通量闭合。混合活动平台精确保留耦合量；全紧致电流则用完整 logY/Σφ 梯度，不能偷用保持角和的场。"
+    },
+    {
+      "id": "I5",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "I5"
+        },
+        {
+          "path": "proofs/P08_TAIL_SUMMATION_AND_SCOPE.md",
+          "anchor": "P08.1"
+        },
+        {
+          "path": "proofs/P08_TAIL_SUMMATION_AND_SCOPE.md",
+          "anchor": "P08.3"
+        },
+        {
+          "path": "proofs/P08_TAIL_SUMMATION_AND_SCOPE.md",
+          "anchor": "P08.4"
+        },
+        {
+          "path": "CONSTANTS.md",
+          "anchor": "固定常数表"
+        }
+      ],
+      "dependencies": [
+        "I1",
+        "I2",
+        "I4",
+        "T6"
+      ],
+      "assumptions": [],
+      "note": "对每个固定允许点证明 max_{0≤j≤k} √ε Σ_even N>N0 |T_N^(j)(sε)|→0。完整角域、全部尾 N 窗和所有导数已覆盖；不需要粒子项之间的抵消，也未假定 TAIL 或等强尾界。"
+    },
+    {
+      "id": "I6",
+      "status": "conditional",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "I6"
+        },
+        {
+          "path": "proofs/P08_TAIL_SUMMATION_AND_SCOPE.md",
+          "anchor": "P08.6"
+        },
+        {
+          "path": "proofs/P10_FINITE_PARTICLE_INTERFACE.md",
+          "anchor": "P10.4"
+        }
+      ],
+      "dependencies": [
+        "I1",
+        "I2",
+        "I3",
+        "I5"
+      ],
+      "assumptions": [
+        "E2"
+      ],
+      "note": "若 I3 的完整首项 C_*≠0 及低导数估计成立，则 Leibniz 组合给出 Xcal^(k)=2M²(s*)C_* ε^-1/2+o(ε^-1/2)，再由稠密性、偶性与共轭性推出自然边界。I3 未闭合，所以本节点及自然边界不标 proved。"
+    },
+    {
+      "id": "T1",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "T1"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.1"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.2"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.3"
+        }
+      ],
+      "dependencies": [
+        "I1"
+      ],
+      "assumptions": [],
+      "note": "在无穿越的实际闭合同伦上，det M=∏d_i，命名电流替换列比值 2iτ，带权 Stokes 给出精确 F+K+S 及负号；所有 p,m,a 支撑平台均明确。根安全的基础不等式在同一引理直接证明，不与 T2 循环依赖。"
+    },
+    {
+      "id": "T2",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "T2"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.4"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.5"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.6"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.7"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.8"
+        }
+      ],
+      "dependencies": [
+        "T1"
+      ],
+      "assumptions": [],
+      "note": "给出双分支消奇、端点/互逆角完整 PAIR、三组严格余量、所有实际耦合参数的根与产品保护以及不含 P 的一体主函数。原 cε、F 的 c/N、大电流 cλ/N² 盘分别证明；允许紧致根在后两盘局部膨胀。"
+    },
+    {
+      "id": "T3",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "T3"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.3"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.4"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.5"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.6"
+        },
+        {
+          "path": "proofs/P05_TRANSPORT_AND_FLUX.md",
+          "anchor": "P05.7"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.2"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.3"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.4"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.5"
+        }
+      ],
+      "dependencies": [
+        "T1",
+        "T2"
+      ],
+      "assumptions": [],
+      "note": "all-B 的两个完整计数归纳、所有系数/散度/权重 jets、选中极点、hit-pair 计数和逐阶段通量均证明。P07 对混合测度与紧致实差商逐一验证同类传输的实际假设，而不是把它们当成未证类比。"
+    },
+    {
+      "id": "T4",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "T4"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.1"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.2"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.3"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.4"
+        }
+      ],
+      "dependencies": [
+        "W1",
+        "W2",
+        "W3",
+        "W13"
+      ],
+      "assumptions": [],
+      "note": "超高阶双分支 L² 卷积、F 异常 Pfaffian 和完整匹配预算、较高阶高斯压缩及大电流的合法 Cauchy 全部闭合；包括 N!、余 Pfaffian、M_e√N 与 λ 积分成本。"
+    },
+    {
+      "id": "T5",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "T5"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.3"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.5"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.7"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.6"
+        }
+      ],
+      "dependencies": [
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8",
+        "W9",
+        "W10",
+        "W11",
+        "W12"
+      ],
+      "assumptions": [],
+      "note": "中间阶微核、全部符号远区、正负近碰撞、左/混合/全右 K 与小电流覆盖齐全。真实实 Jacobian、像长、重数和所有成本给出 G_j(N,H)，C0 先于 B。"
+    },
+    {
+      "id": "T6",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "T6"
+        },
+        {
+          "path": "proofs/P08_TAIL_SUMMATION_AND_SCOPE.md",
+          "anchor": "P08.2"
+        },
+        {
+          "path": "proofs/P08_TAIL_SUMMATION_AND_SCOPE.md",
+          "anchor": "P08.3"
+        },
+        {
+          "path": "CONSTANTS.md",
+          "anchor": "固定常数表"
+        }
+      ],
+      "dependencies": [
+        "T4",
+        "T5",
+        "I2",
+        "I4"
+      ],
+      "assumptions": [],
+      "note": "COVERAGE 的每一项微分密度归属与精确分割、CONSTANTS 的无循环顺序和所有 N≥N0+2 的包含，合成全部 j≤k 的绝对尾和；不遗漏有限低尾阶或分窗等号。"
+    },
+    {
+      "id": "W1",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W1"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.1"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W1"
+        }
+      ],
+      "dependencies": [
+        "T2"
+      ],
+      "assumptions": [],
+      "note": "超高阶原始完整角域；cε 盘、同半单位圆盘 z、Hy 的 (N-1)!! 完整匹配、双分支 L² 主函数与 N! 给出 [C(H+1)/√N]^N。"
+    },
+    {
+      "id": "W2",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W2"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.7"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.2"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W2"
+        }
+      ],
+      "dependencies": [
+        "T2"
+      ],
+      "assumptions": [],
+      "note": "完整最终 F 的 p=1 锚点与 c/N 盘，保留紧致根膨胀 CM_e√N、异常子集展开、余 Pfaffian 及 N!；仅对完整 F 作 Cauchy。"
+    },
+    {
+      "id": "W3",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W3"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.3"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W3"
+        }
+      ],
+      "dependencies": [
+        "T2"
+      ],
+      "assumptions": [],
+      "note": "较高阶 K/小电流的原 cε 盘，扩大下支撑的 PAIR 高斯压缩，命名上方 q 独立 C^(N-1) 成本，完整 Jacobian 与非耦合 L¹ 主函数。"
+    },
+    {
+      "id": "W4",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W4"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.2"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.3"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W4"
+        }
+      ],
+      "dependencies": [
+        "I2",
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "all-B 微核及 jets；b_N 使 Y 由 ξ^N 分离，一相位场冻结 Z，第四象限锥、曲线长度与 dyadic 简单核积分给 b_N^((N²-1)/2)。"
+    },
+    {
+      "id": "W5",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W5"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.4"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.5"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W5"
+        }
+      ],
+      "dependencies": [
+        "I2",
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "微核补集锚点及全部 jets，ρ≥ρ_N；负锚点、跨符号和全非负逐一覆盖，全非负才用实际 min/max 的 coarea。分支尖端不假定全域凹性。"
+    },
+    {
+      "id": "W6",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W6"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.6"
+        },
+        {
+          "path": "proofs/P06_INTERMEDIATE_ALL_BRANCH.md",
+          "anchor": "P06.7"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W6"
+        }
+      ],
+      "dependencies": [
+        "I2",
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "近全碰撞包含使坐标同号并离单体分支；保留 e^(C0N³)，正区 Jac≥cNρ、负区用阻尼；L≥4N0+2，C0 在 B 前固定，不在 coarea 后再次积分半径。"
+    },
+    {
+      "id": "W7",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W7"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.1"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.2"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W7"
+        }
+      ],
+      "dependencies": [
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "K 的有效左标签提供固定 Z 间隙，允许其余分支；分支正则混合测度及补偿左角方向冻结 Y，按真实积分次序得到对数。"
+    },
+    {
+      "id": "W8",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W8"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.1"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.3"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W8"
+        }
+      ],
+      "dependencies": [
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "K 无左但有分支：外锚点/内分支斜率分离，λ=0 双相位场及完整混合测度；负分支用阻尼，非负用 Jac≥c|b_j| 的实际 coarea。"
+    },
+    {
+      "id": "W9",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W9"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.4"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W9"
+        }
+      ],
+      "dependencies": [
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "K 全紧致右域的真实曲率、差商、Δ(θ)^2 密度、选中通量和近/远 coarea；形状 ρ 与最大差分的 √N 损失明确计入。"
+    },
+    {
+      "id": "W10",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W10"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.1"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.2"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W10"
+        }
+      ],
+      "dependencies": [
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "小电流存在左根时，原命名 q0 与分支平台精确保持耦合量，完整混合 Jacobian 保留；左根间隙控制 Z，Y 冻结并积分。"
+    },
+    {
+      "id": "W11",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W11"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.3"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W11"
+        }
+      ],
+      "dependencies": [
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "小电流混合区使用原命名 q0/真分支平台，任意阶段精确保持 P 及两个乘积；E=ε+λP/N 的真实正负分支几何和混合 coarea 给一致界。"
+    },
+    {
+      "id": "W12",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W12"
+        },
+        {
+          "path": "proofs/P07_MIXED_COMPACT_CURRENT.md",
+          "anchor": "P07.5"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W12"
+        }
+      ],
+      "dependencies": [
+        "T2",
+        "T3"
+      ],
+      "assumptions": [],
+      "note": "小电流全右域采用完整 logY 与 Σφ 梯度，不错误冻结 P。实光滑差商、耦合 Hessian 的 CN²(ε+λ) 扰动、Δ(θ)^2 及所有通量/coarea 重新核查。"
+    },
+    {
+      "id": "W13",
+      "status": "proved",
+      "evidence": [
+        {
+          "path": "DERIVATION.md",
+          "anchor": "W13"
+        },
+        {
+          "path": "proofs/P03_CONTOURS_AND_DISCS.md",
+          "anchor": "P03.8"
+        },
+        {
+          "path": "proofs/P04_LARGE_ORDER_BUDGETS.md",
+          "anchor": "P04.4"
+        },
+        {
+          "path": "COVERAGE.md",
+          "anchor": "W13"
+        }
+      ],
+      "dependencies": [
+        "T2"
+      ],
+      "assumptions": [],
+      "note": "大电流 P≥1；cλ/N² 盘控制紧致根总膨胀与两个 λ 级乘积间隙，完整密度 Cauchy 后 λ 内取绝对值积分，得 C_j λ_*^(-j-1)。"
+    }
+  ]
+}

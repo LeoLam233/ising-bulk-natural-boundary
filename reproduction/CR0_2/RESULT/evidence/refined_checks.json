@@ -1,0 +1,50 @@
+{
+  "classification": "Floating-point convergence checks only; no interval certification.",
+  "origin_refinement": [
+    {
+      "s": 1.08,
+      "nodes": 96,
+      "value_real": 1.3938054269392008,
+      "value_imag": 0.0,
+      "expected": 1.3938009726339107,
+      "abs_error": 4.454305290169103e-06
+    },
+    {
+      "s": 1.08,
+      "nodes": 192,
+      "value_real": 1.393800972725973,
+      "value_imag": 0.0,
+      "expected": 1.3938009726339107,
+      "abs_error": 9.206235773717708e-11
+    },
+    {
+      "s": 1.08,
+      "nodes": 384,
+      "value_real": 1.393800972633923,
+      "value_imag": 0.0,
+      "expected": 1.3938009726339107,
+      "abs_error": 1.2434497875801753e-14
+    }
+  ],
+  "independent_S2_parametrizations": [
+    {
+      "s": "1.3",
+      "theta_integral": "0.31474310188612734115574680126802728",
+      "scaled_u_integral": "(0.31474310188612734115574680126802728 + 1.1746030092715687296724459576857681e-102j)",
+      "abs_difference": "2.37389193644e-66"
+    },
+    {
+      "s": "1.1",
+      "theta_integral": "2.8090164622016111020408538703629307",
+      "scaled_u_integral": "2.8090164622016111020408538703629307",
+      "abs_difference": "7.16915364805e-64"
+    },
+    {
+      "s": "1.01",
+      "theta_integral": "267.71202061449547458923694833863189",
+      "scaled_u_integral": "267.71202061449547458923694833863189",
+      "abs_difference": "3.4579059503e-61"
+    }
+  ],
+  "initial_roundoff_note": "Initial scaled-u quadrature occasionally returned imaginary residuals around 1e-101 at a square-root endpoint. Initial data were not overwritten; the intended integral is real and these residuals are numerical, not physical."
+}

@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX\usepackage[T1]{fontenc}\fi
+\usepackage{amsmath,amssymb}
+\usepackage[margin=23mm]{geometry}
+\usepackage[hidelinks,bookmarks=false]{hyperref}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\newcommand{\heading}[1]{\par\vspace{5pt}{\large\bfseries #1}\par\vspace{1pt}}
+\hypersetup{pdftitle={Bulk Ising susceptibility: a candidate natural-boundary proof},
+ pdfauthor={Dehao Lin},
+ pdfsubject={Expert brief v0.1-rc3; companion to manuscript v0.1-rc2}}
+
+\begin{document}
+{\Large\bfseries Bulk Ising susceptibility: a candidate natural-boundary proof}\par
+{\small Expert brief v0.1-rc3 \quad Companion to manuscript v0.1-rc2}\par
+Dehao Lin, School of Physics, Sun Yat-sen University\\
+\texttt{lindh9@mail2.sysu.edu.cn}\hfill 28 September 2026
+
+\heading{The object and the gap}
+The accompanying manuscript presents a candidate complete proof that \(|s|=1\) is a
+natural boundary for the zero-field, isotropic, infinite square-lattice
+\textbf{bulk susceptibility}, continued from the low-temperature pure phase.
+This brief requests mathematical scrutiny of that candidate argument.
+For \(s=\sinh(2\beta_{\rm phys}J)\), the normalized exterior germ inherited
+from real \(s>1\) is
+\[
+\mathcal X(s)=\beta_{\rm phys}^{-1}\chi(s)
+=1-\mathcal M^2(s)+2\mathcal M^2(s)
+ \sum_{\substack{N\ge2\\N\ {\rm even}}}T_N(s),
+\qquad \mathcal M^2(s)=(1-s^{-4})^{1/4}.
+\]
+The response sums connected correlations over the full lattice and retains
+the infinite particle expansion.
+
+Nickel (1999, 2000) identified fixed-form-factor singularities whose union
+is dense on the unit circle. Orrick et al. (2001) gave amplitude-based
+evidence against cancellation in the full sum, explicitly short of a
+proof. Tracy--Widom (2014) proved smooth extension
+away from Nickel points at each fixed even order. Their diagonal-susceptibility
+(2013) and Toeplitz-sum (2015/2017) works provide rigorous noncancellation
+precedents. The gap addressed here is control of the
+\emph{entire higher-particle tail in the bulk response} near the boundary,
+so that it cannot cancel the first singular contribution.
+
+\heading{Two estimates that carry the conclusion}
+For each fixed point \(s_*\) in the selected cyclotomic family of
+\S3, let \(N_0=2p\) be its first even order, with \(p\ge11\) prime,
+\(k=N_0^2/2-1\), and \(s_\varepsilon=(1+\varepsilon)s_*\).
+The two claimed estimates, as \(\varepsilon\downarrow0\), are
+\begin{align*}
+\partial_s^kT_{N_0}(s_\varepsilon)
+ &=2L_\beta\varepsilon^{-1/2}+o(\varepsilon^{-1/2}),
+ \qquad L_\beta\ne0,\\[5pt]
+\sum_{\substack{N>N_0\\N\ {\rm even}}}
+ \bigl|\partial_s^jT_N(s_\varepsilon)\bigr|
+ &=o(\varepsilon^{-1/2}),\qquad 0\le j\le k.
+\end{align*}
+\textbf{The first supplies a nonzero singular carrier; the second makes
+the entire higher-particle tail too small to cancel it.}
+The first coefficient belongs to the whole form factor, not just a local
+model. The tail covers every higher even order and the full angular domain.
+Constants may depend on the fixed point and finite \(k\). With the stated
+lower-order bounds, normal convergence and symmetries, these estimates
+yield the claimed full natural boundary (\S9).
+
+\heading{The proposed bulk implementation}
+The technical claims are a dense uniquely-first point family, a
+whole-form-factor first-amplitude calculation, an exact weighted
+contour/Stokes decomposition, protected parameter disks, and differentiated
+full-tail/coarea estimates. The noncancellation principle is established
+prior work. Contour partitions, Vandermonde analysis, grouping and
+Hadamard/factorial budgets also have Tracy--Widom precedents (\S1.1).
+No exhaustive priority clearance is claimed.
+
+\textbf{External inputs.} Palmer--Tracy's (1981) low-temperature Fredholm
+correlation representation, as used in Tracy--Widom (2014), Appendix A;
+Yang's (1952) magnetization; and Tracy--Widom's fixed-even-order non-Nickel smoothness.
+None supplies the bulk infinite-tail theorem. Sources and conventions
+are in manuscript \S1.1, \S2 and Appendix F.
+
+\newpage
+\heading{Proof architecture}
+The two branches of the argument meet in the noncancellation step:
+\[
+\begin{aligned}
+\text{Dense uniquely-first family}
+ &\longrightarrow \text{nonzero whole first singularity},\\[3pt]
+T_N=F_N+K_N+S_N
+ &\longrightarrow \text{uniform differentiated full tail},\\[3pt]
+\text{Both estimates}
+ &\longrightarrow \text{dense boundary noncancellation}\\[-1pt]
+ &\longrightarrow \text{natural boundary}.
+\end{aligned}
+\]
+Here \(F_N\) is the final selected-contour integral, \(K_N\) the retained
+original contribution, and \(S_N\) the weighted Stokes correction.
+The tail argument combines protected-disk estimates, pair/Pfaffian
+suppression and differentiation/coarea bounds near collisions.
+
+\heading{Suggested independent reading}
+Each interface below can be read separately as a first check.
+
+\textbf{1. First carrier and amplitude --- \S4, Appendix B.}
+Does the fixed \(y\)-only localization, followed by full \(x\) residues
+and the mean-angle deformation, give the coefficient of the \emph{whole}
+form factor? Check that the two chart coefficients add without cancellation
+and that the complement and lower derivatives remain controlled.
+
+\textbf{2. Weighted contours and pair control --- \S\S5--8.}
+Check the exact identity \(T_N=F_N+K_N+S_N\) on the actual coupled
+support, including its Stokes correction. Do the protected parameter disks,
+regularized complete pairs and same-group contraction survive branch and
+endpoint degeneracies? Does the selected-contour Pfaffian budget retain
+every differentiation and integration cost?
+
+\textbf{3. High-order differentiation and coarea --- Appendices D--E.}
+Does the Lie-derivative recurrence include derivatives of previously
+generated coefficients and real cutoffs? Check puncture flux at each stage,
+the real coarea Jacobian and multiplicity, and the order of constants and
+quantifiers needed for the uniform estimates.
+
+\textbf{4. Complete tail closure --- \S9, Appendix G.}
+Do the thirteen sectors W1--W13 cover all higher even orders and all
+\(0\le j\le k\), including transitions between supports and particle-number
+windows? Verify that their bounds sum to the stated smaller-order tail.
+
+\heading{Specific feedback sought}
+A concrete failing configuration, an unjustified implication or uniformity
+step, or a missed close precedent would be especially useful.
+\textbf{A limited reading of one interface is valuable; a full refereeing
+commitment is not presumed.}
+
+\textbf{Status.} This is an AI-assisted candidate proof with no independent
+human or proof-assistant certification. Internal adversarial checks found
+errors in earlier versions and prompted corrections. Attempts to reconstruct
+the full proof independently have so far been incomplete. Detailed
+version-specific audit and reconstruction records accompany the manuscript
+in the repository.
+
+\vfill
+{\small Section and appendix pointers refer to the accompanying 37-page
+manuscript v0.1-rc2; full bibliographic details are in its reference list.\\
+Project text: CC BY 4.0. Project code: MIT. Cited works retain their own rights.}
+\end{document}

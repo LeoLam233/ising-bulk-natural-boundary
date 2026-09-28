@@ -1,0 +1,20 @@
+{
+  "classification": "Exact finite coefficients from an algebraic expansion and exact angular moments. The O(u^16) tail statement relies on the analytical estimate in RESULT.md, not finite coefficient evidence alone.",
+  "variable": "u=1/s",
+  "S2_coefficients_below_degree_16": {
+    "4": "1/4",
+    "6": "1/4",
+    "8": "15/32",
+    "10": "15/32",
+    "12": "175/256",
+    "14": "175/256"
+  },
+  "full_X_coefficients_below_degree_16": {
+    "4": "1/4",
+    "6": "1/4",
+    "8": "13/32",
+    "10": "13/32",
+    "12": "139/256",
+    "14": "139/256"
+  }
+}

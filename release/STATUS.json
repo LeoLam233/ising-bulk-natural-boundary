@@ -1,0 +1,32 @@
+{
+  "version": "0.1-rc2",
+  "prepared_on": "2026-09-28",
+  "manuscript_status": "CANDIDATE_COMPLETE_PROOF",
+  "full_mathematical_certification": false,
+  "full_blind_reproductions": 0,
+  "blind_runs": 3,
+  "blind_statuses": [
+    "PARTIAL",
+    "PARTIAL",
+    "PARTIAL"
+  ],
+  "method_informed_runs": 1,
+  "mr1_solver_status": "CLAIMED_TAIL_PROOF",
+  "mr1_I3": "unresolved",
+  "mr1_I6": "conditional",
+  "receiver_entire_mr1_tail_certified": false,
+  "source_history_fully_auditable": false,
+  "novelty_search": "bounded; no equivalent located, not exhaustive clearance",
+  "author_confirmed": true,
+  "licenses": [
+    "MIT (code)",
+    "CC-BY-4.0 (project text)"
+  ],
+  "release_stage": "candidate for public mathematical review",
+  "candidate_proof": true,
+  "peer_reviewed": false,
+  "independent_human_certification": false,
+  "proof_assistant_verified": false,
+  "evidence_snapshot_date": "2026-09-28",
+  "status_scope": "Static scholarly status of this version; no publication or contact lifecycle fields."
+}

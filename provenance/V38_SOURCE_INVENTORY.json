@@ -1,0 +1,377 @@
+{
+  "task_date": "2026-09-28",
+  "measured_utc": "2026-09-28T14:26:43.863793+00:00",
+  "scope": "Publication readiness and bounded source inventory; no new full mathematical audit, no comprehensive priority certification, no historical access-log certification",
+  "archive_sha256": "a2142752ec09870431c8e30e96df7710dc11f97067b31af2c71efe6bdb6ee84c",
+  "manifest_sha256": "a20903b810fd21424886fd6121077389716032359431031ae62d001e4b35ce66",
+  "members_verified": 192,
+  "local_extraction_matches_all_members": true,
+  "suffix_counts": {
+    ".pyc": 3,
+    ".md": 157,
+    ".py": 32
+  },
+  "text_files_scanned": 189,
+  "binary_files_not_source_scanned": [
+    "__pycache__/lower_branch_probe.cpython-312.pyc",
+    "__pycache__/nickel_probe.cpython-312.pyc",
+    "__pycache__/noncentral_variance_probe.cpython-312.pyc"
+  ],
+  "unique_explicit_urls": 32,
+  "url_inventory": {
+    "https://arxiv.org/abs/0808.0763": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 37
+      }
+    ],
+    "https://arxiv.org/abs/1003.0751": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 37
+      }
+    ],
+    "https://arxiv.org/abs/1011.6114": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 40
+      }
+    ],
+    "https://arxiv.org/abs/1607.04168": [
+      {
+        "file": "REPRODUCE.md",
+        "line": 8
+      },
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 37
+      }
+    ],
+    "https://arxiv.org/abs/1610.04727": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 40
+      }
+    ],
+    "https://arxiv.org/abs/2006.11417": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 41
+      }
+    ],
+    "https://arxiv.org/abs/2108.12423": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 41
+      }
+    ],
+    "https://arxiv.org/abs/2111.12093": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 38
+      }
+    ],
+    "https://arxiv.org/abs/2411.03680": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 39
+      }
+    ],
+    "https://arxiv.org/abs/2411.15300": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 38
+      }
+    ],
+    "https://arxiv.org/abs/2501.12968": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 41
+      }
+    ],
+    "https://arxiv.org/abs/2504.05842": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 41
+      }
+    ],
+    "https://arxiv.org/abs/2511.06423": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 41
+      }
+    ],
+    "https://arxiv.org/abs/2511.07566": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 40
+      }
+    ],
+    "https://arxiv.org/html/1203.1456": [
+      {
+        "file": "AMPLITUDE_ASYMPTOTICS.md",
+        "line": 29
+      },
+      {
+        "file": "AMPLITUDE_CONVENTION_AND_PATH_AUDIT.md",
+        "line": 51
+      },
+      {
+        "file": "COMPACT_AMPLITUDE_MCCOY_CROSSCHECK.md",
+        "line": 25
+      },
+      {
+        "file": "COMPACT_FOUR_CHART_NORMALIZATION_RESOLUTION.md",
+        "line": 29
+      },
+      {
+        "file": "PINCH_POWER_COUNT.md",
+        "line": 25
+      },
+      {
+        "file": "PRIME_AMPLITUDE_PHASE_SPACE_ROUTE.md",
+        "line": 38
+      },
+      {
+        "file": "PRIME_NICKEL_LEMMA.md",
+        "line": 27
+      },
+      {
+        "file": "REPRODUCE.md",
+        "line": 7
+      }
+    ],
+    "https://arxiv.org/html/1307.5913": [
+      {
+        "file": "REPRODUCE.md",
+        "line": 6
+      },
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 36
+      },
+      {
+        "file": "TAIL_BRIDGE.md",
+        "line": 37
+      }
+    ],
+    "https://arxiv.org/html/1403.3966v1": [
+      {
+        "file": "ALT_ROUTE_AUDIT.md",
+        "line": 19
+      },
+      {
+        "file": "AMPLITUDE_CONVENTION_AND_PATH_AUDIT.md",
+        "line": 51
+      },
+      {
+        "file": "CHI4_NORMALIZATION.md",
+        "line": 26
+      },
+      {
+        "file": "COMPACT_AMPLITUDE_MCCOY_CROSSCHECK.md",
+        "line": 25
+      },
+      {
+        "file": "COMPACT_FOUR_CHART_NORMALIZATION_RESOLUTION.md",
+        "line": 29
+      },
+      {
+        "file": "COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md",
+        "line": 81
+      },
+      {
+        "file": "FORM_FACTOR_NORMALIZATION_AUDIT.md",
+        "line": 15
+      },
+      {
+        "file": "L2_PAIR_TAIL.md",
+        "line": 53
+      },
+      {
+        "file": "ONSITE_GROUPING_EXACT_AUDIT.md",
+        "line": 43
+      },
+      {
+        "file": "PFAFFIAN_TAIL.md",
+        "line": 51
+      },
+      {
+        "file": "PINCH_POWER_COUNT.md",
+        "line": 25
+      },
+      {
+        "file": "REPRODUCE.md",
+        "line": 5
+      },
+      {
+        "file": "RESIDUE_REDUCTION.md",
+        "line": 90
+      },
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 35
+      },
+      {
+        "file": "TAIL_BRIDGE.md",
+        "line": 37
+      },
+      {
+        "file": "TWO_NONZERO_PRIME_FAMILY.md",
+        "line": 56
+      }
+    ],
+    "https://arxiv.org/pdf/0808.0763": [
+      {
+        "file": "COMPACT_FOUR_CHART_NORMALIZATION_RESOLUTION.md",
+        "line": 29
+      },
+      {
+        "file": "FORM_FACTOR_NORMALIZATION_AUDIT.md",
+        "line": 15
+      },
+      {
+        "file": "PRIME_AMPLITUDE_PHASE_SPACE_ROUTE.md",
+        "line": 38
+      }
+    ],
+    "https://arxiv.org/pdf/1203.1456": [
+      {
+        "file": "ONSITE_GROUPING_EXACT_AUDIT.md",
+        "line": 43
+      }
+    ],
+    "https://arxiv.org/pdf/1211.6645": [
+      {
+        "file": "ALT_ROUTE_AUDIT.md",
+        "line": 19
+      },
+      {
+        "file": "REPRODUCE.md",
+        "line": 12
+      }
+    ],
+    "https://arxiv.org/pdf/2206.00862": [
+      {
+        "file": "ALT_ROUTE_AUDIT.md",
+        "line": 19
+      },
+      {
+        "file": "REPRODUCE.md",
+        "line": 12
+      }
+    ],
+    "https://arxiv.org/pdf/cond-mat/0502155": [
+      {
+        "file": "ONSITE_GROUPING_EXACT_AUDIT.md",
+        "line": 43
+      }
+    ],
+    "https://arxiv.org/pdf/hep-th/0106270": [
+      {
+        "file": "FINITE_CYLINDER_ROUTE_AUDIT.md",
+        "line": 15
+      }
+    ],
+    "https://arxiv.org/pdf/math-ph/0506065": [
+      {
+        "file": "AMPLITUDE_CONVENTION_AND_PATH_AUDIT.md",
+        "line": 51
+      },
+      {
+        "file": "CHI4_NORMALIZATION.md",
+        "line": 25
+      },
+      {
+        "file": "PINCH_POWER_COUNT.md",
+        "line": 25
+      },
+      {
+        "file": "REPRODUCE.md",
+        "line": 9
+      }
+    ],
+    "https://cpb-ap-se2.wpmucdn.com/blogs.unimelb.edu.au/dist/0/310/files/2019/09/ising.pdf": [
+      {
+        "file": "REPRODUCE.md",
+        "line": 10
+      },
+      {
+        "file": "RESIDUE_REDUCTION.md",
+        "line": 3
+      }
+    ],
+    "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.076602": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 39
+      }
+    ],
+    "https://link.springer.com/article/10.1007/s11040-025-09515-1": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 38
+      }
+    ],
+    "https://link.springer.com/article/10.1007/s44214-025-00084-6": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 40
+      }
+    ],
+    "https://maths.dur.ac.uk/users/daniel.evans/GaloisTheory/Notes/cyclotomic-extensions.html": [
+      {
+        "file": "PRIME_NICKEL_LEMMA.md",
+        "line": 27
+      },
+      {
+        "file": "REPRODUCE.md",
+        "line": 11
+      },
+      {
+        "file": "TWO_NONZERO_PRIME_FAMILY.md",
+        "line": 56
+      }
+    ],
+    "https://perk.okstate.edu/papers/canberra/chitex.pdf": [
+      {
+        "file": "AMPLITUDE_CONVENTION_AND_PATH_AUDIT.md",
+        "line": 43
+      },
+      {
+        "file": "FORM_FACTOR_NORMALIZATION_AUDIT.md",
+        "line": 29
+      }
+    ],
+    "https://re.public.polimi.it/retrieve/2332a1fb-6d7b-4ef7-a66f-1cbb552b76f8/lemm-lucia-2025-on-the-critical-finite-size-gap-scaling-for-frustration-free-hamiltonians.pdf": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 39
+      }
+    ],
+    "https://www.claymath.org/lectures/yang-mills-and-the-mass-gap/": [
+      {
+        "file": "SELECTION_LEDGER.md",
+        "line": 41
+      }
+    ]
+  },
+  "domains": {
+    "arxiv.org": 24,
+    "cpb-ap-se2.wpmucdn.com": 1,
+    "journals.aps.org": 1,
+    "link.springer.com": 2,
+    "maths.dur.ac.uk": 1,
+    "perk.okstate.edu": 1,
+    "re.public.polimi.it": 1,
+    "www.claymath.org": 1
+  },
+  "explicit_github_zenodo_researchgate_urls": [],
+  "limits": [
+    "An absence of explicit URLs is not proof that an external material was never read.",
+    "This archive is a research checkpoint, not a complete system-level access log.",
+    "AI-authored project derivations are claims requiring proof; they are not external theorem premises.",
+    "Historical influence, formal proof dependency, and mathematical correctness are separate questions.",
+    "Bibliographic attribution records do not certify every cited formula or historical source."
+  ]
+}

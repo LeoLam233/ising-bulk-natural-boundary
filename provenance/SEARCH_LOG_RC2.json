@@ -1,0 +1,25 @@
+{
+  "review_date": "2026-09-28",
+  "scope": "Targeted primary-source verification for rc2 editorial attribution; not a new exhaustive novelty search.",
+  "query": "Orrick Nickel Guttmann Perk 2001 susceptibility square lattice Ising model natural boundary cancellation singularities arxiv",
+  "primary_pages_read": [
+    "https://arxiv.org/abs/cond-mat/0103074",
+    "https://arxiv.org/pdf/cond-mat/0103074v1"
+  ],
+  "pdf_sha256": "d6069c921d506540e13aec00fa9327aa318cd1096ce16d9eeb44152db013811f",
+  "pdf_pages_read": [
+    1,
+    5,
+    14,
+    15,
+    16,
+    17,
+    47
+  ],
+  "result": "VERIFIED_FOR_EDITORIAL_ATTRIBUTION",
+  "interpretation": "Evidence and heuristic noncancellation argument; not a rigorous full bulk natural-boundary theorem.",
+  "previous_log": "SEARCH_LOG.json",
+  "previous_log_unchanged": true,
+  "no_exhaustive_priority_clearance": true,
+  "unverified_items_imported_into_manuscript": []
+}

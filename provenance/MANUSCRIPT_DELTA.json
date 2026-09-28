@@ -1,0 +1,10 @@
+{
+  "baseline_sha256": "a0f33312455ddf2e6a788b418c59ab8d2d7a32bd0137544ccea96e8be21f1e76",
+  "candidate_tex_sha256": "d68b6a0ec15fd2f4e3fd2a1e044700d40d0eb27c8b10f7f5f0beef1e59028f49",
+  "inline_and_display_math_sequences_identical": true,
+  "math_fragments": 1379,
+  "numbered_statement_blocks_identical": true,
+  "statement_blocks": 29,
+  "label_sequence_identical": true,
+  "scope": "Textual comparison only; unchanged text is not evidence of mathematical validity."
+}

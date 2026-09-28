@@ -1,0 +1,14 @@
+{
+  "classification": "exact symbolic algebra; not a proof of analytic estimates, coverage or uniformity",
+  "residue": "-2*z**2/(z**2 - 1)",
+  "residue_equals_R": true,
+  "offsite_factor_two": true,
+  "compact_curvature": true,
+  "all_B_sum_V_zero": true,
+  "all_B_residual_phase_zero": true,
+  "mixed_sum_V_zero": true,
+  "mixed_phase_zero": true,
+  "coupled_Y_frozen": true,
+  "coupled_Z_frozen": true,
+  "minimum_collision_power_L": "4*n0 + 2"
+}

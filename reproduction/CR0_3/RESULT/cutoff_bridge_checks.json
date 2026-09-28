@@ -1,0 +1,235 @@
+{
+  "kind": "floating_point_diagnostic_not_proof",
+  "numpy_version": "2.3.5",
+  "convention": "one factor 1/(2*pi*i) per contour variable; n! division",
+  "rows": [
+    {
+      "grid_per_angle": 128,
+      "contour_radius": 0.6,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.4224916196009227e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 4.8813782354957126e-20
+      },
+      "U2": {
+        "real": 0.0028908677473843637,
+        "imag": 2.168404344971009e-19
+      },
+      "absolute_bridge_discrepancy": 3.4860908114204125e-18,
+      "max_y_pole_modulus": 0.43512075916785864,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 128,
+      "contour_radius": 0.75,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.4224916196009227e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 4.8813782354957126e-20
+      },
+      "U2": {
+        "real": 0.002890867747384365,
+        "imag": 2.168404344971009e-19
+      },
+      "absolute_bridge_discrepancy": 3.4860908114204125e-18,
+      "max_y_pole_modulus": 0.39685506642858354,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 128,
+      "contour_radius": 0.9,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.4224916196009227e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 4.8813782354957126e-20
+      },
+      "U2": {
+        "real": 0.0028908677474269685,
+        "imag": 1.0842021724855044e-19
+      },
+      "absolute_bridge_discrepancy": 8.520614769311817e-14,
+      "max_y_pole_modulus": 0.38387513209565444,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 128,
+      "contour_radius": 0.96,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.4224916196009227e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 4.8813782354957126e-20
+      },
+      "U2": {
+        "real": 0.0028915057202522376,
+        "imag": 5.421010862427522e-19
+      },
+      "absolute_bridge_discrepancy": 1.2759457357416903e-06,
+      "max_y_pole_modulus": 0.3822509606062477,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 256,
+      "contour_radius": 0.6,
+      "A2": {
+        "real": 0.022047227534310335,
+        "imag": 2.038401811914992e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 5.983461292928685e-20
+      },
+      "U2": {
+        "real": 0.0028908677473843646,
+        "imag": -1.0842021724855044e-19
+      },
+      "absolute_bridge_discrepancy": 6.948270176625853e-18,
+      "max_y_pole_modulus": 0.43512075916785864,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 256,
+      "contour_radius": 0.75,
+      "A2": {
+        "real": 0.022047227534310335,
+        "imag": 2.038401811914992e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 5.983461292928685e-20
+      },
+      "U2": {
+        "real": 0.002890867747384365,
+        "imag": 0.0
+      },
+      "absolute_bridge_discrepancy": 6.940388044869784e-18,
+      "max_y_pole_modulus": 0.39685506642858354,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 256,
+      "contour_radius": 0.9,
+      "A2": {
+        "real": 0.022047227534310335,
+        "imag": 2.038401811914992e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 5.983461292928685e-20
+      },
+      "U2": {
+        "real": 0.002890867747384366,
+        "imag": -4.336808689942018e-19
+      },
+      "absolute_bridge_discrepancy": 3.613851958862296e-18,
+      "max_y_pole_modulus": 0.38387513209565444,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 256,
+      "contour_radius": 0.96,
+      "A2": {
+        "real": 0.022047227534310335,
+        "imag": 2.038401811914992e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 5.983461292928685e-20
+      },
+      "U2": {
+        "real": 0.0028908677658440957,
+        "imag": -4.336808689942018e-19
+      },
+      "absolute_bridge_discrepancy": 3.691945360539962e-11,
+      "max_y_pole_modulus": 0.3822509606062477,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 512,
+      "contour_radius": 0.6,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.0378145170731384e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 3.091886784186116e-20
+      },
+      "U2": {
+        "real": 0.0028908677473843646,
+        "imag": 0.0
+      },
+      "absolute_bridge_discrepancy": 3.470211968820893e-18,
+      "max_y_pole_modulus": 0.43512075916785864,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 512,
+      "contour_radius": 0.75,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.0378145170731384e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 3.091886784186116e-20
+      },
+      "U2": {
+        "real": 0.0028908677473843654,
+        "imag": 1.0842021724855044e-19
+      },
+      "absolute_bridge_discrepancy": 3.4724331201468425e-18,
+      "max_y_pole_modulus": 0.39685506642858354,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 512,
+      "contour_radius": 0.9,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.0378145170731384e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 3.091886784186116e-20
+      },
+      "U2": {
+        "real": 0.002890867747384366,
+        "imag": -4.336808689942018e-19
+      },
+      "absolute_bridge_discrepancy": 9.402243218538563e-19,
+      "max_y_pole_modulus": 0.38387513209565444,
+      "poles_inside_contour": true
+    },
+    {
+      "grid_per_angle": 512,
+      "contour_radius": 0.96,
+      "A2": {
+        "real": 0.02204722753431033,
+        "imag": 1.0378145170731384e-19
+      },
+      "O2": {
+        "real": 0.0162654920395416,
+        "imag": 3.091886784186116e-20
+      },
+      "U2": {
+        "real": 0.0028908677473843663,
+        "imag": -2.168404344971009e-19
+      },
+      "absolute_bridge_discrepancy": 5.065434528596545e-19,
+      "max_y_pole_modulus": 0.3822509606062477,
+      "poles_inside_contour": true
+    }
+  ]
+}

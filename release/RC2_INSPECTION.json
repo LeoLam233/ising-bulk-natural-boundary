@@ -1,0 +1,503 @@
+{
+  "json_files_parsed": 50,
+  "cff_parse": "PASS",
+  "cff_no_invented_release_identifiers": true,
+  "python_files_syntax_checked": 27,
+  "python_files": [
+    "checks/mr1_algebra/algebra_checks.py",
+    "checks/mr1_coupled/coupled_diagnostics.py",
+    "checks/v6_diagnostics/ising_v6_audit_checks.py",
+    "checks/v7_additional/ising_v7_audit_checks.py",
+    "checks/v7_core/checks.py",
+    "checks/v7_normalization/independent_normalization.py",
+    "reproduction/CR0_1/RESULT/code/check_chi2.py",
+    "reproduction/CR0_1/RESULT/code/check_cyclotomic.py",
+    "reproduction/CR0_1/RESULT/code/check_exterior.py",
+    "reproduction/CR0_1/RESULT/code/check_local_model.py",
+    "reproduction/CR0_1/RESULT/code/check_lowtemp.py",
+    "reproduction/CR0_1/RESULT/code/check_residues.py",
+    "reproduction/CR0_2/RESULT/code/boundary_contour_check.py",
+    "reproduction/CR0_2/RESULT/code/exact_geometry.py",
+    "reproduction/CR0_2/RESULT/code/refine_checks.py",
+    "reproduction/CR0_2/RESULT/code/self_checks.py",
+    "reproduction/CR0_2/RESULT/code/series_check.py",
+    "reproduction/CR0_2/RESULT/code/series_numeric_crosscheck.py",
+    "reproduction/CR0_3/RESULT/check_cancellation.py",
+    "reproduction/CR0_3/RESULT/check_cutoff_bridge.py",
+    "reproduction/CR0_3/RESULT/check_exact.py",
+    "reproduction/CR0_3/RESULT/check_kernel_identity.py",
+    "reproduction/CR0_3/RESULT/check_local_model.py",
+    "reproduction/CR0_3/RESULT/check_two_particle.py",
+    "scripts/build_paper.py",
+    "scripts/reproduce.py",
+    "scripts/verify_repository.py"
+  ],
+  "local_markdown_links_checked": 132,
+  "unresolved_links": [],
+  "citations": {
+    "entries": 12,
+    "existing_entries_unchanged": true,
+    "existing_citation_keys_and_contexts_unchanged": true,
+    "all_compiled_numbers_match_bibliography_order": true,
+    "all_pdf_citation_destinations_exist": true,
+    "occurrences_checked": 32,
+    "occurrences": [
+      {
+        "line": 82,
+        "command": "\\cite{Yang1952}",
+        "resolved": [
+          {
+            "key": "Yang1952",
+            "rc2_number": 12,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 88,
+        "command": "\\cite{McCoyMaillard2012}",
+        "resolved": [
+          {
+            "key": "McCoyMaillard2012",
+            "rc2_number": 3,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 106,
+        "command": "\\cite{WMTB1976}",
+        "resolved": [
+          {
+            "key": "WMTB1976",
+            "rc2_number": 11,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 108,
+        "command": "\\cite{PalmerTracy1981}",
+        "resolved": [
+          {
+            "key": "PalmerTracy1981",
+            "rc2_number": 7,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 109,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 110,
+        "command": "\\cite{GuttmannEnting1996}",
+        "resolved": [
+          {
+            "key": "GuttmannEnting1996",
+            "rc2_number": 2,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 111,
+        "command": "\\cite{Nickel1999,Nickel2000}",
+        "resolved": [
+          {
+            "key": "Nickel1999",
+            "rc2_number": 4,
+            "entry_unchanged_from_rc1": true
+          },
+          {
+            "key": "Nickel2000",
+            "rc2_number": 5,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 113,
+        "command": "\\cite{Boukraa2008}",
+        "resolved": [
+          {
+            "key": "Boukraa2008",
+            "rc2_number": 1,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 116,
+        "command": "\\cite[Section~3.2]{Orrick2001}",
+        "resolved": [
+          {
+            "key": "Orrick2001",
+            "rc2_number": 6,
+            "entry_unchanged_from_rc1": false
+          }
+        ]
+      },
+      {
+        "line": 123,
+        "command": "\\cite{TW2013}",
+        "resolved": [
+          {
+            "key": "TW2013",
+            "rc2_number": 8,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 127,
+        "command": "\\cite{TW2017Toeplitz}",
+        "resolved": [
+          {
+            "key": "TW2017Toeplitz",
+            "rc2_number": 10,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 131,
+        "command": "\\cite{TW2017Toeplitz}",
+        "resolved": [
+          {
+            "key": "TW2017Toeplitz",
+            "rc2_number": 10,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 143,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 229,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 230,
+        "command": "\\cite[p.~375]{PalmerTracy1981}",
+        "resolved": [
+          {
+            "key": "PalmerTracy1981",
+            "rc2_number": 7,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 245,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 333,
+        "command": "\\cite{Nickel1999,Nickel2000}",
+        "resolved": [
+          {
+            "key": "Nickel1999",
+            "rc2_number": 4,
+            "entry_unchanged_from_rc1": true
+          },
+          {
+            "key": "Nickel2000",
+            "rc2_number": 5,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 333,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 602,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 674,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2332,
+        "command": "\\cite{PalmerTracy1981}",
+        "resolved": [
+          {
+            "key": "PalmerTracy1981",
+            "rc2_number": 7,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2333,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2363,
+        "command": "\\cite{Boukraa2008}",
+        "resolved": [
+          {
+            "key": "Boukraa2008",
+            "rc2_number": 1,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2397,
+        "command": "\\cite{McCoyMaillard2012}",
+        "resolved": [
+          {
+            "key": "McCoyMaillard2012",
+            "rc2_number": 3,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2455,
+        "command": "\\cite{Yang1952}",
+        "resolved": [
+          {
+            "key": "Yang1952",
+            "rc2_number": 12,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2456,
+        "command": "\\cite{PalmerTracy1981}",
+        "resolved": [
+          {
+            "key": "PalmerTracy1981",
+            "rc2_number": 7,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2457,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2458,
+        "command": "\\cite{TW2014}",
+        "resolved": [
+          {
+            "key": "TW2014",
+            "rc2_number": 9,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2460,
+        "command": "\\cite{Boukraa2008}",
+        "resolved": [
+          {
+            "key": "Boukraa2008",
+            "rc2_number": 1,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2460,
+        "command": "\\cite{McCoyMaillard2012}",
+        "resolved": [
+          {
+            "key": "McCoyMaillard2012",
+            "rc2_number": 3,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2465,
+        "command": "\\cite{WMTB1976,GuttmannEnting1996,Nickel1999,Nickel2000}",
+        "resolved": [
+          {
+            "key": "WMTB1976",
+            "rc2_number": 11,
+            "entry_unchanged_from_rc1": true
+          },
+          {
+            "key": "GuttmannEnting1996",
+            "rc2_number": 2,
+            "entry_unchanged_from_rc1": true
+          },
+          {
+            "key": "Nickel1999",
+            "rc2_number": 4,
+            "entry_unchanged_from_rc1": true
+          },
+          {
+            "key": "Nickel2000",
+            "rc2_number": 5,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      },
+      {
+        "line": 2467,
+        "command": "\\cite{TW2013,TW2017Toeplitz}",
+        "resolved": [
+          {
+            "key": "TW2013",
+            "rc2_number": 8,
+            "entry_unchanged_from_rc1": true
+          },
+          {
+            "key": "TW2017Toeplitz",
+            "rc2_number": 10,
+            "entry_unchanged_from_rc1": true
+          }
+        ]
+      }
+    ],
+    "number_mapping": [
+      {
+        "key": "Boukraa2008",
+        "rc1": 1,
+        "rc2": 1
+      },
+      {
+        "key": "GuttmannEnting1996",
+        "rc1": 2,
+        "rc2": 2
+      },
+      {
+        "key": "McCoyMaillard2012",
+        "rc1": 3,
+        "rc2": 3
+      },
+      {
+        "key": "Nickel1999",
+        "rc1": 4,
+        "rc2": 4
+      },
+      {
+        "key": "Nickel2000",
+        "rc1": 5,
+        "rc2": 5
+      },
+      {
+        "key": "PalmerTracy1981",
+        "rc1": 6,
+        "rc2": 7
+      },
+      {
+        "key": "TW2013",
+        "rc1": 7,
+        "rc2": 8
+      },
+      {
+        "key": "TW2014",
+        "rc1": 8,
+        "rc2": 9
+      },
+      {
+        "key": "TW2017Toeplitz",
+        "rc1": 9,
+        "rc2": 10
+      },
+      {
+        "key": "WMTB1976",
+        "rc1": 10,
+        "rc2": 11
+      },
+      {
+        "key": "Yang1952",
+        "rc1": 11,
+        "rc2": 12
+      }
+    ]
+  },
+  "brief": {
+    "pages": 2,
+    "manuscript_pages_synced": 37,
+    "version_synced": true,
+    "section_pointers_match": true
+  },
+  "privacy": {
+    "high_confidence_findings": 0,
+    "temporary_files": 0,
+    "public_pdf_count": 2
+  },
+  "source_inventory_groups": {
+    "Ising susceptibility research / historical route": 13,
+    "Other target / adjacent-model scouting": 16,
+    "Auxiliary mathematics / explored alternative route": 3
+  },
+  "scope": "Editorial, packaging and finite interface checks; no mathematical certification."
+}
