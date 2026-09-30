@@ -1,0 +1,58 @@
+{
+  "version": "0.1-rc4-unreleased",
+  "status": "UNRELEASED_LOCAL_CANDIDATE",
+  "baseline_commit": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
+  "scope": "W2 only",
+  "edited_text_verdict": "PASS_SCOPED_INTERNAL_AUDIT",
+  "WR_verdicts": {
+    "WR1": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR2": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR3": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR4": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR5": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR6": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR7": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR8": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS",
+    "WR9": "VERIFIED-FOR-IMPLEMENTATION / EDITED-TEXT PASS"
+  },
+  "manuscript_source_sha256": "2f92919e54a91b80e0b3a0d04d2e7855d0049d848ef643f652477c703cae8ed3",
+  "pdfs": {
+    "paper/manuscript.pdf": {
+      "pages": 41,
+      "sha256": "4b47af43f843dade5e3dfb47d871f66f8b5b87eb818072cfd82c58192f16e8d9"
+    },
+    "docs/expert_brief.pdf": {
+      "pages": 2,
+      "sha256": "92c6713cee37ad96029244ecf40141a34b7d1a3acacb8dfd05fa2c40042533c4"
+    }
+  },
+  "repository_suites": {
+    "count": 6,
+    "all_reproduced": true
+  },
+  "w2_stage_A_scripts": {
+    "count": 7,
+    "all_exit_zero": true,
+    "proof_certificate": false
+  },
+  "phase2_supplementary_script": {
+    "count": 1,
+    "exit_zero": true,
+    "proof_certificate": false
+  },
+  "missing_generators": [
+    "original e07/e07b scripts absent from supplied handoff; outputs not treated as reruns"
+  ],
+  "visual_review": {
+    "manuscript_pages": 41,
+    "brief_pages": 2,
+    "pass": true
+  },
+  "bibliography_unchanged": true,
+  "W1_selected_blocks_unchanged": true,
+  "full_theorem_certified": false,
+  "E1": "PENDING",
+  "published": false,
+  "publication_authorized": false,
+  "receipt_location": "The external review package binds the final commit, manifest, integrity checks and snapshot; this in-tree record avoids a circular commit hash."
+}

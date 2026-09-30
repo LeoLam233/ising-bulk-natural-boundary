@@ -10,3 +10,7 @@
 8. **Licensing:** the chosen licenses apply to project contributions and whatever rights the author can grant. Cited works, third-party quotes and upstream licenses retain their own rights. Neither the institution nor cited authors are represented as endorsing the claim.
 
 The most valuable next evidence is an independent mathematical reading of the complete-pair compactness, selected-contour Pfaffian budget, and high-order differentiation/coarea interfaces, plus the whole-integral first-term glue. This list is a suggested entry route, not a statement that all other claims are certified.
+
+## Local W2 candidate
+
+Version `0.1-rc4-unreleased` is unpublished. Its W2 argument received a scoped AI derivation and edited-text regression. Finite diagnostics only corroborate sampled cases. E1 source closure and independent human, peer or proof-assistant certification remain outstanding. Historical rc3 records retain their original scope. See [W2 provenance](provenance/W2_REPAIR_AUDIT.md).

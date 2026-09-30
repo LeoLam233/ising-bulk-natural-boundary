@@ -1,0 +1,14 @@
+{
+  "version": "0.1-rc4-unreleased",
+  "status": "UNRELEASED_LOCAL_CANDIDATE",
+  "parent_commit": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
+  "branch": "candidate/w2-repair-20260930",
+  "publication_authorized": false,
+  "published": false,
+  "scope": "W2 repair engineering only",
+  "pre_edit_verification_sha256": "013b6ec490e34ca2d4275594f5ecdab3c6a3adf3ef8337978ad37f57139a2b30",
+  "full_theorem_certified": false,
+  "independent_human_certification": false,
+  "proof_assistant_verified": false,
+  "E1_source_closure": "PENDING"
+}

@@ -7,7 +7,7 @@ authors:
     given-names: Dehao
     affiliation: "School of Physics, Sun Yat-sen University"
     email: "lindh9@mail2.sysu.edu.cn"
-version: "0.1-rc3"
+version: "0.1-rc4-unreleased"
 license: CC-BY-4.0
 abstract: "AI-assisted candidate proof; no independent human, peer-review or proof-assistant certification is claimed."
 keywords:

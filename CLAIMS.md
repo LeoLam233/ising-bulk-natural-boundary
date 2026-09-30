@@ -18,3 +18,5 @@ Together with the stated exterior normal convergence, finite lower-order smoothn
 The W1 repairs in version 0.1-rc3 preserve these claims and quantifiers. Its [scoped audit record](provenance/W1_REPAIR_AUDIT.md) does not certify the full theorem.
 
 Separate statuses: (i) candidate manuscript theorem, (ii) solver's audit/reconstruction verdict, (iii) receiver's executed checks, (iv) external theorem used within its scope. These must not be substituted for one another. See the [evidence limits](LIMITATIONS.md) and [proof guide](docs/PROOF_GUIDE.md).
+
+The local `0.1-rc4-unreleased` W2 revision preserves the theorem, point family, derivative range and particle windows. It makes the K/Stokes pair interface explicit; see [W2 provenance](provenance/W2_REPAIR_AUDIT.md). No full-original-torus uniform pair estimate or external certification is claimed.

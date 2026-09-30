@@ -1,6 +1,6 @@
 {
-  "version": "0.1-rc2",
-  "prepared_on": "2026-09-28",
+  "version": "0.1-rc4-unreleased",
+  "prepared_on": "2026-09-30",
   "manuscript_status": "CANDIDATE_COMPLETE_PROOF",
   "full_mathematical_certification": false,
   "full_blind_reproductions": 0,
@@ -22,11 +22,15 @@
     "MIT (code)",
     "CC-BY-4.0 (project text)"
   ],
-  "release_stage": "candidate for public mathematical review",
+  "release_stage": "UNRELEASED_LOCAL_CANDIDATE",
   "candidate_proof": true,
   "peer_reviewed": false,
   "independent_human_certification": false,
   "proof_assistant_verified": false,
   "evidence_snapshot_date": "2026-09-28",
-  "status_scope": "Static scholarly status of this version; no publication or contact lifecycle fields."
+  "status_scope": "Current local candidate status; historical validation records retain their original versions.",
+  "publication_authorized": false,
+  "published": false,
+  "parent_commit": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
+  "E1_source_closure": "PENDING"
 }

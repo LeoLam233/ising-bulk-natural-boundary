@@ -13,7 +13,7 @@
 \usepackage{microtype}
 \setlength{\emergencystretch}{2em}
 \raggedbottom
-\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={AI-assisted candidate proof, v0.1-rc3; not independently human- or proof-assistant-certified}}
+\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={AI-assisted candidate proof, v0.1-rc4-unreleased; local candidate; not independently human- or proof-assistant-certified}}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -45,7 +45,7 @@ for the bulk square-lattice Ising susceptibility}
 \author{Dehao Lin\\
 \small School of Physics, Sun Yat-sen University\\
 \small\texttt{lindh9@mail2.sysu.edu.cn}}
-\date{Version 0.1-rc3\\30 September 2026}
+\date{Version 0.1-rc4-unreleased (local candidate)\\30 September 2026}
 \begin{document}
 \maketitle
 
@@ -1052,52 +1052,144 @@ compact angular coordinates; no uniform bound on raw branch-angle
 jets is asserted.
 \end{lemma}
 \begin{proof}
-On the closed lower semicircle both \(y\) and \(z\) lie in lower
-unit half-disks, and the Schur inequality gives \(|P_{ij}|\le1\).
-Cover that semicircle by a narrow branch group \(B\), a left compact
-group \(L\), and a right compact group \(R\). Both compact groups
-exclude a fixed neighborhood of the exact branch. On \(B^2\), the
-identity \(P_{ij}=(\phi_i-\phi_j)^2A_s\) gives a strict bound after
-\(B\) is shortened. On \(L^2\), the \(z\)-roots are in a strict
-subdisk. On \(R^2\), they lie in a compact lower arc separated from
-the real axis. The Schur inequalities are strict in both cases.
-On the limiting circle, when both variables approach the same
-endpoint, \(y_i=y_j=1\)
-or \(y_i=y_j=-1\), the canceled numerator vanishes and its
-denominator is nonzero. Endpoint--compact strictness is asserted
-only within the same group. The endpoint \(y=-1\) belongs to
-\(L\), whose \(z\)-roots lie in a strict real subinterval of
-\((0,1)\); the endpoint \(y=1\) belongs to \(R\), whose
-\(z\)-roots lie on a compact lower arc separated from the real
-axis. Thus every same-group supremum is \(q<1\).
-
-Cross-group endpoint pairs need not be strictly contractive.
-For example, at the limiting circle, if \(y_1=1\) and
-\(y_2=e^{\ii\theta}\) lies in the left compact group, then
-\(z_1=\xi\), \(z_2=t\in(0,1)\), and
+\noindent\textbf{Fixed groups and limiting equality loci (rc4 repair).}
+Write \(b=\theta_B\), \(y_B=e^{-\ii b}\), and
+\(t_0=S_*+1-\sqrt{(S_*+1)^2-1}\in(0,1)\).
+Choose a fixed \(w<\min(b,\pi-b)/3\), small enough for the
+regular lower-branch chart, with \([-b-w,-b+w]\) inside the
+\(m=1\) neighborhood. Choose \(0<\ell_L,\ell_R<w\).
+The closed limiting groups are
 \[
- P_{12}=\frac{\xi-t}{1-\xi t},\qquad |P_{12}|=1.
+ B=[-b-w,-b+w],\quad L=[-\pi,-b-\ell_L],\quad
+ R=[-b+\ell_R,0].
 \]
-Similarly \(y_1=-1\) with a point in the right compact group
-can give equality. The opposite endpoints \(1,-1\) also form
-a cross-group pair, not a same-endpoint collision.
-It is essential to exclude the exact branch from \(L,R\):
-\(|P(y_B,1)|=|P(y_B,-1)|=1\).
-All these cross-group equalities are allowed by the subsequent
-\(1+\eta\) bound; no uniform strict bound for all pairs is used.
+They cover the lower semicircle with overlaps. Assign each overlap
+by any fixed rule. Add the upper-left sliver \([\pi-2\delta,\pi]\)
+to \(L\) and the upper-right sliver \([0,2\delta]\) to \(R\),
+identifying \(\pi\) and \(-\pi\). The named current index lies
+in one of the two transition arcs. All cutoff jets retain these
+closed supports. The branch group contains neither endpoint;
+otherwise \(|P(y_B,1)|=|P(y_B,-1)|=1\) would prevent strictness.
 
-The canceled pair is continuous on these resolved compact pair
-sets, including the double branch. Choose \(q'\in(q,1)\), followed
-by \(\eta>0\) with
-\(\log(1+\eta)<-\log(q')/4\). Choose the endpoint slivers and
-\(\tau\) sufficiently small to retain the same-group bound \(q'\)
-and cross-group bound \(1+\eta\), uniformly for the two real
-parameters \(\lambda,P/N\in[0,1]\). These radial deformations
-move the lower branch into the protected interior sheet.
-There is no upper inverse branch on the \(K\) or transition
-support. This is a compactness argument for the complete
-canceled pair, not separate bounds for two possibly singular
-Schur factors.
+At the limit \(W_0(\theta)=S_*-\cos\theta\) and
+\(W_0+1\ge S_*>0\). On \([-\pi,-b]\) the roots are real
+in \([t_0,1]\); on \([-b,0]\) they are \(e^{-\ii v}\),
+\(0\le v\le b\). The identity
+\[
+ |1-zw|^2-|z-w|^2
+ =(1-|z|^2)(1-|w|^2)+4\Im z\Im w
+\]
+and its unit-circle sine version give \(|P|\le1\).
+Apart from the removable configurations described below, equality
+requires an endpoint in the \(y\)-pair and equality in the
+\(z\)-factor. Its complete loci, with either ordering, are
+\(y_i=1,\ \theta_j\in[-\pi,-b]\), and
+\(y_i=-1,\ \theta_j\in[-b,0]\). Common-endpoint pairs have
+canceled value zero. No equality locus lies in a same-group square.
+On \(L^2\) the roots stay in a strict real subinterval of \((0,1)\);
+on \(R^2\) they stay on a compact lower arc away from the real axis.
+On \(B^2\) the \(y\)-factor is bounded by
+\[
+ \frac{\sin w}{\min\{\sin(b-w),\sin(b+w)\}}
+ \le\frac1{2\cos w}<1.
+\]
+The canceled extension below covers its double branch. Thus
+the three compact same-group suprema have a maximum \(q<1\).
+Cross-group suprema may equal one.
+
+\par\smallskip\noindent\textbf{Local continuation and the complete pair.}
+Use thin simply connected neighborhoods of the compact real
+\(W_0>1\) intervals and of the compact intervals inside \((-1,1)\),
+avoiding both branch points. On the former choose the root real
+in \((0,1)\); on the latter choose the continuation of
+\(e^{-\ii\arccos W_0}\). These local roots may leave the unit disk.
+Near the lower branch use \(\phi=\arccos W\) on the
+fourth-quadrant sheet for \(\Im W\ge0\).
+The implicit-function theorem gives the even analytic inverse
+\(y_s(\phi)=G_s(\phi^2)\) near \((s_*,0)\), since
+\(\partial_yW(y_B;s_*)\ne0\). In this neighborhood
+\[
+ y_s(\phi_i)-y_s(\phi_l)
+  =(\phi_i-\phi_l)(\phi_i+\phi_l)H_s(\phi_i,\phi_l),\qquad
+ 1-e^{-\ii(\phi_i+\phi_l)}=(\phi_i+\phi_l)J(\phi_i+\phi_l),
+\]
+where \(J(0)=\ii\). Substitution into \eqref{eq:pair} gives
+\(P_{il}=(\phi_i-\phi_l)^2A_s\), with analytic bounded fixed
+jets and \(A_{s_*}(0,0)=-1/(4\sin^2b)\).
+This resolves the whole local reciprocal-root hypersurface,
+without dividing by a collision zero.
+
+At the limiting lower support \(1-z_i z_l=0\) forces both
+roots to be \(1\) or both \(-1\). The latter is excluded by
+\(W_0+1\ge S_*\); the former is the resolved lower double branch.
+On the closed compact complement of a smaller double-branch
+neighborhood, the denominator therefore has a positive minimum
+\(\mu\). Shrink its neighborhoods to retain \(\mu/2\).
+The regular and rational expressions agree on overlaps by
+\eqref{eq:pair}. This finite cover supplies continuous complete
+pairs and bounded fixed jets in regular branch and compact
+coordinates. No globally glued square-root domain is needed.
+The apparent \(1-y_i y_l\) pole was already canceled; the upper
+inverse branch, which would make a genuine pole with the lower
+branch, is excluded by the selector plateau.
+
+For a named right limiting endpoint root \(\xi=e^{-\ii b}\),
+\(|1-\xi z|=|e^{\ii b}-z|\ge\sin b\) for every limiting lower
+root. For the left endpoint it is at least \(1-t_0\).
+Thus a positive named margin
+\(\mu_S=\min(\sin b,1-t_0)\) persists, with \(\mu_S/2\)
+on sufficiently small neighborhoods. Boundedness of the canceled
+numerator supplies \(C_S\ge1\); no named contraction is needed.
+
+\par\smallskip\noindent\textbf{Uniform support transfer and reserved slack.}
+Project each sliver to its endpoint and keep each lower angle
+fixed; denote the projected angle by \(\bar\theta_i\).
+For \(\rho=P/N\in[0,1]\) and \(0\le\lambda\le1\),
+\[
+ v_i=\log|y_i|=-c_0\eps+\lambda\tau(-2p_i+\rho m_i/2),
+ \qquad |v_i|\le c_0\eps+5\tau/2.
+\]
+Let \(L_S\) bound \(|S'|\) on a fixed parameter neighborhood.
+Uniformly in this entire parameter box, hence for every actual
+coupled occupancy and every \(N\),
+\[
+ |y_i-e^{\ii\bar\theta_i}|+|W_i-W_0(\bar\theta_i)|
+ \le C(\eps+\tau+\delta)+L_S|s-s_\eps|.
+\]
+Compact-root changes are Lipschitz. Near the branch, the factorization
+\(\phi=\sqrt{2(1-W)}h(1-W)\), with analytic \(h\), gives a
+one-half Holder bound on the chosen closed half-plane.
+The regular pair is Lipschitz in \((s,\phi_i,\phi_l)\);
+on the compact complement the denominator margin gives the same
+property in \((y_i,y_l,z_i,z_l)\). A finite cover therefore gives
+one uniform complete-pair modulus, bounded by
+\(C\sqrt{\eps+\tau+\delta+|s-s_\eps|}\) in these neighborhoods.
+It applies whenever the branch-near roots stay on the designated
+sheet; the two disk proofs below verify this condition separately.
+
+Choose \(q<q_1<q'<1\), then \(\eta>0\) with
+\(\log(1+\eta)<-\log(q')/4\).
+Choose the slivers and \(\tau\), and a preliminary \(\eps_0\),
+so the radial-center modulus is smaller than both \(q_1-q\)
+and \(\eta/2\), while retaining the denominator neighborhoods.
+This gives same-group bound \(q_1\) and cross-group bound
+\(1+\eta/2\); reserve \(q'-q_1\) and \(\eta/2\) for the disks.
+The real radial motions increase \(\Im W\), so every radial-center
+root is interior. This transfer includes the slivers in the
+same-group estimate as well as the cross estimate.
+
+For clarity, the limiting branch/upper-sliver moduli for small
+\(a>0\) are
+\[
+ \frac{\sin((b+a)/2)}{\sin((b-a)/2)}
+   =1+a\cot(b/2)+O(a^2),\qquad
+ \frac{\cos((b-a)/2)}{\cos((b+a)/2)}
+   =1+a\tan(b/2)+O(a^2).
+\]
+Holding a sliver fixed while moving a compact-group boundary
+toward the branch can consequently make an \(RR\) or \(LL\)
+pair exceed one. Such a choice does not obey the required
+margin--slack--sliver order; it is a real geometric excess.
 
 Let \(n\) be the number of lower variables: \(n=N\) for \(K\)
 and \(n=N-1\) for a Stokes term. Assign each to one covering group.
@@ -1125,8 +1217,9 @@ fixed compact sets. This also proves the stated fixed-jet bounds.
 
 \begin{lemma}[The original parameter disk]\label{lem:originaldisk}
 For a sufficiently small fixed \(c>0\), the original contour
-and all \(K\) and Stokes transition densities are holomorphic
-on \(|s-s_\eps|\le c\eps\). On these supports,
+density and all \(K\) and Stokes transition densities are holomorphic
+on \(|s-s_\eps|\le c\eps\). On the \(K\) and named Stokes
+supports, the following estimates hold:
 \[
  |1-Y|,\ |1-Z|\ge c'\eps,\qquad
  \left|\prod_{i<j}P_{ij}\right|\le C^Ne^{-\kappa' N^2}.
@@ -1189,11 +1282,26 @@ Thus its product can be integrated with cost \(C^N\) without
 treating \(P\) as constant. The inverse-product numerator
 and the Jacobian in Proposition~\ref{prop:selector} also cost \(C^N\).
 
-A branch root moves by \(O(\sqrt{\eps})\) at most on the disk;
-compact roots move by \(O(\eps)\). The resolved complete-pair
-continuity and the strict slack of Lemma~\ref{lem:contraction}
-therefore persist, uniformly in all occupancies. Counting pairs
-as in that lemma proves the smaller positive \(\kappa'\).
+For an explicit disk choice, let \(b_0\eps\) be the
+undeformed imaginary margin and let \(L_S\) be as in
+Lemma~\ref{lem:contraction}. Choose \(L_Sc\le b_0/4\).
+The monotone radial motions then leave \(\Im W\ge3b_0\eps/4\)
+throughout the disk. Along each disk radius,
+\(\partial_W\phi=-1/\sin\phi\) gives branch-coordinate motion
+\(O(c\sqrt\eps)\); compact roots move by \(O(c\eps)\).
+The finite continuation cover and the regular canceled expression
+of Lemma~\ref{lem:contraction} give a uniform complete-pair change
+\(O(\sqrt\eps)\). Reduce the final \(\eps_0\) to make it
+smaller than both reserved margins \(q'-q_1\) and \(\eta/2\).
+Thus same pairs are at most \(q'\), cross pairs at most
+\(1+\eta\), and named pairs are uniformly bounded.
+The limiting cross supremum need not be strict. The direct
+remaining-pair count proves the estimate with the same
+\(\kappa=-\log(q')/12\), or a smaller common exponent.
+These pair estimates concern the stated \(K\) and current
+supports, which exclude the upper inverse branch. They do not
+assert a uniform pair bound on the unrestricted original torus;
+that contour is handled separately in Proposition~\ref{prop:ultrahigh}.
 No large-\(\lambda\) estimate is used here.
 \end{proof}
 
@@ -1673,41 +1781,72 @@ its complete pairs have bound \(C^Ne^{-\kappa' N^2}\), and its
 one-body factors have integrable majorants with total cost \(C^N\).
 \end{lemma}
 \begin{proof}
-There is a named upper compact \(q\) with \(p_q=1\), so \(P\ge1\).
-A true lower branch is on \(m=1,p=0\). At the radial center,
+There is a named upper compact \(q\) with \(p_q=1\), so
+\(P\ge1\). Fix a lower branch neighborhood inside \(m=1,p=0\)
+and put \(a_B=\min|\sin\theta|>0\) there. With
+\(t=\lambda P/N\), the exact imaginary-part formula gives
 \[
- \Im W\ge c_1(\eps+\lambda P/N).
+ \Im W(s_\eps)\ge b_0\eps+\tfrac12\tau a_Bt
+ \ge b_\tau(\eps+t),\qquad
+ b_\tau=\min(b_0,\tau a_B/2)>0.
 \]
-The perturbation in \(W\) is \(O(\delta_s)\), a small fraction of
-this margin. These branch roots therefore stay on the lower
-interior sheet. Every other root stays a fixed distance from
-\(W=\pm1\), and its analytic continuation moves by \(O(\delta_s)\).
-It can have modulus up to \(\exp(C\delta_s)\); it is not
-asserted to remain inside the unit disk.
+Indeed the increase from the outward shift is at least
+\(\tau a_Bt/2\), since \(\cosh v\ge1\) for real \(v\).
+Write the disk constant as \(c_P\). After fixing \(\tau\), require
+\[
+ L_Sc_P\le b_\tau/4.
+\]
+Since \(t\ge\lambda_*/N\), throughout the disk
+\[
+ |\Delta W|\le L_Sc_P\lambda_*/N^2
+ \le b_\tau t/(4N)\le b_\tau(\eps+t)/4.
+\]
+Thus these branch-near roots remain on the lower interior sheet.
 
-At the radial center the named \(q\) satisfies
-\(|z_q|\le e^{-c_q\lambda}\), since it is on a compact upper
-transition arc and shifted inward by \(2\tau\lambda\).
-Consequently, on the disk,
+Every non-plateau support angle has a fixed limiting distance
+\(d_1>0\) from \(W=1\). Compute it on the preliminary endpoint
+neighborhoods and the complement of the fixed lower plateau,
+before shrinking \(\delta,\tau\); the upper branch is excluded.
+All limiting
+roots also have distance at least \(S_*\) from \(W=-1\).
+For \(d=\min(d_1,S_*)>0\), the choices of
+Lemma~\ref{lem:contraction}, followed by a reduction of \(c_P\),
+ensure
 \[
- |Z|\le\exp(-c_q\lambda+CN\delta_s)
-       \le e^{-c'_q\lambda}.
+ \operatorname{dist}(W,\{1,-1\})
+ \ge d-C(\eps+\tau+\delta)-L_S\delta_s\ge d/2.
 \]
-Also \(|Y|\le e^{-3\tau\lambda P/2}\); \(Y\) is independent of
-\(s\). Both product gaps are thus at least \(c'\lambda\).
+Here \(\delta\) is the fixed endpoint width.
+Use the compact analytic continuations specified in that lemma.
+Their motion is \(O(\delta_s)\); their modulus can exceed one.
+The branch-coordinate motion is at most
+\[
+ C_\tau\frac{\delta_s}{\sqrt{\eps+t}}
+ \le C_\tau c_P\frac{\sqrt{\lambda_*}}{N^{3/2}}.
+\]
+Reduce \(c_P\) further so these motions consume less than
+the reserved \(q'-q_1\) and \(\eta/2\) pair margins and retain
+the compact denominator margins. The regular double-branch
+expression controls the remaining neighborhood. This proves
+same-group bound \(q'\), cross bound \(1+\eta\), and the named
+bound on the whole disk without a unit-disk Schur argument there.
+The direct count in Lemma~\ref{lem:contraction} gives the same
+quadratic exponent, including deletion of at most \(j\) pairs.
 
-A branch coordinate moves by at most
+At the radial center the named upper root has
+\(|z_q|\le e^{-c_q\lambda}\), \(c_q>0\), because its inward
+shift is \(2\tau\lambda\) and its arc has positive sine.
+Branch roots remain interior on the disk and compact roots obey
+\(|z_i(s)|\le |z_i(s_\eps)|e^{C\delta_s}\).
+Adding \(Cc_P\le c_q/2\) to the disk restrictions gives
 \[
- C\frac{\delta_s}{\sqrt{\eps+\lambda P/N}}
- \le Cc\frac{\lambda_*}{N^2\sqrt{\lambda P/N}}.
+ |Z|\le e^{-c_q\lambda+CN\delta_s}\le e^{-c_q\lambda/2}.
 \]
-This tends uniformly to zero with the chosen disk constant.
-Together with the \(O(\delta_s)\) motion of compact roots,
-it preserves the resolved pair sets and the same-group/cross-group
-slack of Lemma~\ref{lem:contraction}. Applying that lemma's
-pair count proves the pair estimate on this disk.
-This step uses only the radial-center estimate, not any
-current integral or derivative bound.
+Also \(|Y|\le e^{-3\tau\lambda P/2}\), independently of \(s\).
+Both product gaps are therefore at least \(c'\lambda\).
+All restrictions on \(c_P\) are imposed after \(\tau\) and
+before the final \(\eps_0\); an oversized disk need not preserve
+the branch sheet. No current integral estimate has been used.
 
 Finally put \(t=\lambda P/N\). The real displacement of the
 branch center is \(O(\eps^2+t^2+\delta_s)\), and the imaginary
@@ -1715,7 +1854,7 @@ margin is at least \(c_2(\eps+t)\).
 Split into \(|u|\le C(\eps+t)\) and its complement.
 The imaginary margin bounds the square root in the first
 case, and the linear real term bounds it in the second, with
-\(\tau,c\) reduced once if necessary. Hence
+the earlier choices of \(\tau\) and then \(c_P\) sufficiently small. Hence
 \[
  |R(y;s)|\le C(|u|+\eps)^{-1/2}.
 \]
@@ -2285,6 +2424,51 @@ operation in the real angular variables. There are no singular
 branch-coordinate changes in this compact case. It does not
 require analytic continuation of a deformation bump.
 
+\paragraph{Coupled occupancy and changed pairs (rc4 repair).}
+The compact-right current field may move a coordinate where
+\(p'\ne0\). The exact contour Jacobian gives
+\[
+ (V\cdot\nabla\log y_i)_{\rm occ}
+   =\frac{\lambda\tau}{2N}m_i\sum_l V_l p'_l.
+\]
+An individual off-diagonal entry is \(O(\lambda\tau/N)\).
+The compact-right field has two nonzero components, each possibly
+\(O(N/|\theta_p-\theta_q|)\), so the contraction can be
+\(O(\lambda\tau/|\theta_p-\theta_q|)\). It moves every
+\(m\)-supported root and must be retained. All these roots are
+compact in this chart; no singular raw branch-angle jet is used.
+
+To count descendants, keep each complete pair \(F_e=P_{il}\)
+as a scalar function of all angles and \(s\), including its
+occupancy dependence. Write the density as \(G\prod_e F_e\).
+The scalar operator \(\partial_s-V\cdot\nabla\) is a derivation;
+the top-form correction is multiplication by
+\(-\operatorname{div}V\). In one product-rule summand a step
+hits a coefficient or \(G\), an already changed pair, or one
+previously unchanged pair. Divergence changes none. Induction
+therefore leaves at most \(j\) changed pairs per descendant at
+order \(j\), even though the sum of descendants involves all pairs.
+In regular coordinates, hitting either the double-zero polynomial
+or its analytic coefficient marks that same pair. No division
+by an original pair is involved.
+
+There are \(O(N^2)\) possible pair choices at a step. Expanding a
+coordinate contraction or an occupancy sum introduces at most
+\(O(N)\) further choices. A fixed number of chain rules therefore
+has \(N^{O(j)}\) descendants. Fixed jets of \(P/N\) are bounded
+by the fixed bump jets, and fixed compact root and pair jets are
+bounded on the continuation neighborhoods of
+Lemma~\ref{lem:contraction}. Sums of phase jets, and inverses of
+the separated smooth divided determinant \(C_{pq}\), have only
+polynomial fixed-jet costs. The explicit selected difference pole
+still adds at most two powers per Lie step. One-body and Jacobian
+products cost \(C_j^N N^{O(j)}\). Consequently the coupled terms
+fit the existing polynomial coefficient and term budgets and
+the unchanged pairs retain \(C_j^N e^{-\kappa N^2}\).
+In mixed Stokes charts the plateau identities
+\(V\cdot\nabla P=V\cdot\nabla\sum m_i=0\) remove this coupling;
+original \(K\) has \(\lambda=0\).
+
 \subsection{Simple kernels and the order of coarea}
 For \(a>0\),
 \[
@@ -2334,7 +2518,8 @@ uses only quantities selected earlier, not the final value of
 \(\eps\) or the particle number.
 \begin{enumerate}
 \item Fix \((p,a,b)\), hence \(N_0,k,S_*,\theta_B\), and the
-original radius and disk constants. There are only finitely many
+original radial constant and a preliminary bound on \(|S'|\).
+The final disk constants are chosen in step 4. There are only finitely many
 derivative orders \(0\le j\le k\).
 \item Fix a sufficiently small branch neighborhood and compact
 margins. Choose the nested ratio \(L\) large enough for the
@@ -2343,12 +2528,19 @@ bounded upper-current slopes on a preliminary endpoint neighborhood
 separated from the upper branch. Fix the smooth nested
 partition and all of its finite derivative bounds.
 \item Obtain the same-group pair constant \(q<1\) at the limiting
-real support. Choose \(q'\in(q,1)\), then the cross-group slack
+real support, with the groups and continuation neighborhoods of
+Lemma~\ref{lem:contraction}. Choose \(q<q_1<q'<1\), then the cross-group slack
 \(\eta\), and then the upper endpoint slivers and deformation
-strength \(\tau\). The upper branch must lie inside \(a=p=1\).
+strength \(\tau\), retaining the reserved same/cross disk slack.
+The upper branch must lie inside \(a=p=1\). Fix the bump jets
+and the positive constants \(b_\tau,c_q\) at this step.
 \item Choose the selected \(c/N\), original \(c\eps\), and
 protected-current \(c\lambda_*/N^2\) disk constants small enough
-for the already fixed margins. Take a common smaller positive
+for the already fixed margins. In particular impose
+\(L_Sc_O\le b_0/4\), \(L_Sc_P\le b_\tau/4\), the
+compact-distance and reserved pair-slack restrictions, and
+\(Cc_P\le c_q/2\) from Lemma~\ref{lem:protected}.
+No reduction of \(\tau\) follows this choice. Take a common smaller positive
 \(\kappa\) for the finitely many pair estimates.
 \item Choose \(C_H\) from the original Pfaffian bound,
 \(0<\alpha_0<1/[2(k+2)]\), and then \(D\) with
@@ -2412,7 +2604,7 @@ Branch and compact margins &
 exclude the exact branch before strict constants are chosen.\\
 \(q,\eta,\kappa,\tau\) &
 The preceding margins and point & Entire stated support, all
-occupancies \(P/N\in[0,1]\); protected complex disks only.\\
+occupancies \(P/N\in[0,1]\); radial centers and both stated disks.\\
 Selected-contour disk \(c/N\) &
 Point, margins, \(\tau\) & All \(\eps\) sufficiently small;
 not an assertion about the original undeformed contour on that disk.\\
@@ -2726,8 +2918,8 @@ The following checks expose their sensitive interfaces:
 closure and its positive \(2\pi\), and the complex phase
 equality \(L_\alpha=L_\beta\). Check the complement of the
 two charts locally; the selected point itself is Nickel.
-\item Verify that the complete-pair constants are strict on
-the actual supports, including endpoint limits, a moving
+\item Verify same-group strictness and the cross-group and named-pair
+bounds on the actual supports, including endpoint limits, a moving
 lower branch, the named upper variable, and each stated
 complex disk. Do not infer this from separate Schur bounds
 where one such factor has a pole.
@@ -2836,6 +3028,19 @@ literature priority, or constitute a completed independent
 adversarial audit.
 
 % END SOURCE
+
+\subsection*{Local rc4 W2 repair}
+Version 0.1-rc4-unreleased adds the explicit support geometry,
+local root-continuation and complete-pair transfer arguments,
+reserved disk slack, tau-dependent protected-disk restrictions,
+and coupled-occupancy product-rule count. Lemma~\ref{lem:originaldisk}
+now explicitly confines its pair estimates to \(K\) and named
+Stokes supports. The theorem, point family, derivative range and
+particle windows are unchanged. These are new scoped proof repairs,
+not arguments attributed retrospectively to rc3. The supplied
+audits and finite diagnostics were treated as untrusted evidence.
+This local candidate is unpublished; E1 source closure remains
+pending, and no human, peer, or proof-assistant certification is claimed.
 
 \subsection*{Release status and AI assistance}
 Version 0.1-rc3 incorporates the W1 proof-interface repairs described in this revision record.
