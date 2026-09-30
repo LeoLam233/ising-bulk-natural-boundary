@@ -1,0 +1,13 @@
+{
+  "version": "0.1-rc3-unreleased",
+  "baseline_commit": "47f95a386d329ae6a3e377fecceafde78ea0886c",
+  "prepared_on": "2026-09-30",
+  "publication_state": "UNRELEASED_LOCAL_CANDIDATE",
+  "manuscript_status": "CANDIDATE_COMPLETE_PROOF_WITH_SCOPED_W1_REPAIRS",
+  "audit_scope": "AI analytic re-derivation and edited-text regression of W1 repair chain; finite diagnostics have limited scope",
+  "full_mathematical_certification": false,
+  "independent_human_certification": false,
+  "proof_assistant_verified": false,
+  "historical_status": "STATUS.json describes rc2 and is preserved byte-for-byte",
+  "validation": "W1_CANDIDATE_VALIDATION.json"
+}

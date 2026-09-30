@@ -15,4 +15,6 @@ Constants may depend on the fixed point and finite `k`; no single derivative ord
 
 Together with the stated exterior normal convergence, finite lower-order smoothness and the local nonzero physical prefactor, these imply the proposed natural-boundary conclusion. The manuscript claims these ingredients; the release records do not independently certify them.
 
+The unreleased W1 revision repairs the intermediate-window proof interfaces while preserving these claims and quantifiers. Its [scoped audit record](provenance/W1_REPAIR_AUDIT.md) does not certify the full theorem.
+
 Separate statuses: (i) candidate manuscript theorem, (ii) solver's audit/reconstruction verdict, (iii) receiver's executed checks, (iv) external theorem used within its scope. These must not be substituted for one another. See the [evidence limits](LIMITATIONS.md) and [proof guide](docs/PROOF_GUIDE.md).

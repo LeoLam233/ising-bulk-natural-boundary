@@ -1,7 +1,7 @@
 {
   "format": "ising-release-manifest-v1",
-  "version": "0.1-rc2",
-  "created_utc": "2026-09-28T17:15:30.744035+00:00",
+  "version": "0.1-rc3-unreleased",
+  "created_utc": "2026-09-30T03:06:24.905062+00:00",
   "self_exclusion": "MANIFEST.json is excluded; the outer archive SHA-256 binds it. Local .git/.local/.venv/__pycache__ are excluded.",
   "mathematics_verified": false,
   "files": [
@@ -22,13 +22,13 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 668,
-      "sha256": "8ecabbb9430777776de1c13e60df85af9f7358ba99e836be3adfcea070415e10"
+      "bytes": 670,
+      "sha256": "f7c57de1ab79666684c1e1f683edf48c830d9b177b0a32fcf8a19597e2cd4e23"
     },
     {
       "path": "CLAIMS.md",
-      "bytes": 1611,
-      "sha256": "29ed7e197273c2a6102f0196d20579030c3b09a51da6eb747f3a037068018055"
+      "bytes": 1827,
+      "sha256": "d8e56d0daa6460f25873e081b3c99d425b47a13f1e4d8e7d9c21aecf7ea6bb53"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -47,23 +47,23 @@
     },
     {
       "path": "LIMITATIONS.md",
-      "bytes": 2523,
-      "sha256": "5dc8b592e8b63bd8fb3316453d70f0f88bf1a217c5dcb9571de67e9bc362f976"
+      "bytes": 2670,
+      "sha256": "cb53c8fdf121310d0c3607c99c6020b4bb69f3df0ec1c75d968c4c3dfd794115"
     },
     {
       "path": "README.md",
-      "bytes": 6396,
-      "sha256": "76241c783b605f7f4614cfc3a38d7a8748d7a665a269176c5f7b60de25f65047"
+      "bytes": 6509,
+      "sha256": "28152e2a3bf5e15379ba3e15f481e4efebbcb461dd82f9cdfb8bddddc04b5d9c"
     },
     {
       "path": "README.zh.md",
-      "bytes": 5489,
-      "sha256": "e453b65574beed970e230a81c8fe293dac63be4286693532b7691dc8f0f1d8f2"
+      "bytes": 5632,
+      "sha256": "752ab80777068cba8f599e7e72fada23d83fd851e74bfc129948fdea66c6f617"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 1875,
-      "sha256": "fe0cadba7f5ffa28a721b7f9740859b48a586f640968626b46677498a31e0366"
+      "bytes": 2626,
+      "sha256": "c3f45194ba6b1cc6a335a760a0c1b8d984f7cc3374da4b2a3354d9abc7a18dab"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -232,38 +232,38 @@
     },
     {
       "path": "docs/PROOF_GUIDE.md",
-      "bytes": 3173,
-      "sha256": "7bc284a3f314faaca0a8c2843dbf39e2d12ed73e7a9e6d46f6bb72d92aa9f5e4"
+      "bytes": 3304,
+      "sha256": "81a8f92b7650a779e69206587ff204b127c991a23627e051e75f91285e0318d4"
     },
     {
       "path": "docs/expert_brief.pdf",
-      "bytes": 48447,
-      "sha256": "73fa822cd7783ae70d37b9547dfcc3b92d486bbe958dedefd1b4772da875e216"
+      "bytes": 48519,
+      "sha256": "249b154d2f57e507513a1b4c75bbcf7ee6b60b293595a27dea251a7d2572ac9a"
     },
     {
       "path": "docs/expert_brief.tex",
-      "bytes": 7205,
-      "sha256": "dd0ca054acfe13636b5d57379d91b64386da6ef9173aeb335ccec9bb37670a3c"
+      "bytes": 7273,
+      "sha256": "5eef24df3a56c0ea6ea31fb5a1838729a856fb3f4982ac1a33dd489a651faaba"
     },
     {
       "path": "paper/LABEL_INDEX.json",
       "bytes": 5022,
-      "sha256": "e0dfaf403fd77ac9cab3188f0da5bf7fa6d79693a0a1931007a99a994327d195"
+      "sha256": "c228835c66799ccbb993c48dc7b35cf14bb61ef1392d4cc1fccffceecbf10583"
     },
     {
       "path": "paper/README.md",
-      "bytes": 1773,
-      "sha256": "fe0bd395947044cacd1c37425e44bd6591d7adb276171df50a8ea98ff5ad4c9a"
+      "bytes": 2157,
+      "sha256": "54f1d794f1328e91228066b75f5d0e23de4be42b16d7bc900d76b3bfdd86f77c"
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 294021,
-      "sha256": "f3f23179c18439631bfcd0281004fe22b165a0e661b30136d4bb3126e61e8352"
+      "bytes": 305648,
+      "sha256": "9cd42b0ecd3efb1d64ffa4709caf0e5088276312a131d6cbcb7219b370cb85db"
     },
     {
       "path": "paper/manuscript.tex",
-      "bytes": 127613,
-      "sha256": "7a0b1717b0f6b3864b7db2cb3b2403243bacfeb082ed27a9195a027226a23699"
+      "bytes": 134093,
+      "sha256": "ecbf83caad3f87ec62b9be31b0172952e0d0ab6d64a783420ff2a0c2e932090d"
     },
     {
       "path": "provenance/EXTERNAL_PREMISES.md",
@@ -319,6 +319,11 @@
       "path": "provenance/VIEW_MANIFEST.json",
       "bytes": 53880,
       "sha256": "74394c666f71f040c30cb2713514f9649e0379e33b1af247640a8be40bddee73"
+    },
+    {
+      "path": "provenance/W1_REPAIR_AUDIT.md",
+      "bytes": 3323,
+      "sha256": "0ba7083723f62251ab419190d5fddf20426f7fd42ee2591994dfebda8af2c32c"
     },
     {
       "path": "provenance/bibliographic_metadata.json",
@@ -414,6 +419,16 @@
       "path": "release/VALIDATION.md",
       "bytes": 2871,
       "sha256": "4a0d6931864cbd890743dbac1080a4f40d7c6747f69d8ac4f827ec2eb43ca1b2"
+    },
+    {
+      "path": "release/W1_CANDIDATE_STATUS.json",
+      "bytes": 661,
+      "sha256": "4e8e76f60f3ca83541e51e44693ba006add572e9e2d799ee441478f76e72c50c"
+    },
+    {
+      "path": "release/W1_CANDIDATE_VALIDATION.json",
+      "bytes": 5966,
+      "sha256": "6222208dda6b7001c4a3e98366f731b6bdbc4e35d9f41ed9b2abc65436a8351f"
     },
     {
       "path": "release/diagnostic_outputs/mr1_algebra/stdout.txt",

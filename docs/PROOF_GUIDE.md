@@ -1,6 +1,6 @@
 # Reading the proposed proof
 
-Read the [manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. Numbering is preserved from revision 8. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
+Read the [manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. Numbering is preserved from revision 8. The [W1 repair record](../provenance/W1_REPAIR_AUDIT.md) identifies the current additions. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
 
 | Stage | Location | Mathematical obligation |
 |---|---|---|
@@ -9,8 +9,8 @@ Read the [manuscript](../paper/manuscript.pdf) for definitions and exact hypothe
 | Whole first term | §4, Appendix B | Fixed y-only localization; legitimate residue/mean-angle deformation; equal nonzero phases; smooth complement and lower derivatives. |
 | Exact decomposition | §5 | Weighted contour deformation with its actual Stokes correction, not invariance of a weighted integral. |
 | Selected contour | §6 | Protected c/N parameter disk and Pfaffian/matching budget with all costs divided by N!. |
-| All-branch tail | §7, Appendices D–E | Pair grouping, branch disks, microcore, far region, near collision and scale order. |
-| Mixed/compact tail | §8, Appendices D–E | Coupled-support fields, fixed real cutoffs, density/coarea coverage and flux removal. |
+| All-branch tail | §7, Appendices D–E | Remaining-pair grouping, branch disks, microcore, corrected near-collision slope costs and scale order. |
+| Mixed/compact tail | §8, Appendices D–E | Explicit current partition, lambda-deformed branch geometry, fixed real cutoffs, coarea and flux removal. |
 | Entire sum | §9, Appendix C | All even orders, W1–W13 and j≤k; normal convergence and product rule; dense derivative blow-up. |
 
 ```mermaid

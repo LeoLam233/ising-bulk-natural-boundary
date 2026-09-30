@@ -172,156 +172,156 @@
   {
     "label": "lem:originaldisk",
     "number": "7.3",
-    "page": 15
+    "page": 16
   },
   {
     "label": "lem:branch",
     "number": "7.4",
-    "page": 16
+    "page": 17
   },
   {
     "label": "prop:micro",
     "number": "7.5",
-    "page": 16
+    "page": 18
   },
   {
     "label": "prop:allB",
     "number": "7.6",
-    "page": 17
+    "page": 18
   },
   {
     "label": "sec:sectors",
     "number": "8",
-    "page": 18
+    "page": 20
   },
   {
     "label": "prop:mixed",
     "number": "8.1",
-    "page": 18
+    "page": 20
   },
   {
     "label": "prop:compactR",
     "number": "8.2",
-    "page": 20
+    "page": 21
   },
   {
     "label": "lem:protected",
     "number": "8.3",
-    "page": 20
+    "page": 22
   },
   {
     "label": "prop:largeS",
     "number": "8.4",
-    "page": 21
+    "page": 23
   },
   {
     "label": "prop:highKS",
     "number": "8.5",
-    "page": 22
+    "page": 23
   },
   {
     "label": "sec:conclusion",
     "number": "9",
-    "page": 22
+    "page": 24
   },
   {
     "label": "thm:tail",
     "number": "9.1",
-    "page": 22
+    "page": 24
   },
   {
     "label": "thm:conditional",
     "number": "9.2",
-    "page": 22
+    "page": 24
   },
   {
     "label": "thm:nb",
     "number": "9.3",
-    "page": 23
+    "page": 24
   },
   {
     "label": "lem:cyclotomic",
     "number": "A.1",
-    "page": 23
+    "page": 25
   },
   {
     "label": "app:local",
     "number": "B",
-    "page": 23
+    "page": 25
   },
   {
     "label": "app:pfaffian",
     "number": "C",
-    "page": 24
+    "page": 26
   },
   {
     "label": "lem:schur",
     "number": "C.1",
-    "page": 24
+    "page": 26
   },
   {
     "label": "app:lie",
     "number": "D",
-    "page": 25
+    "page": 27
   },
   {
     "label": "lem:lie",
     "number": "D.1",
-    "page": 25
+    "page": 27
   },
   {
     "label": "eq:chartwiseLie",
     "number": "D.1",
-    "page": 25
+    "page": 27
   },
   {
     "label": "eq:branchregular",
     "number": "D.2",
-    "page": 25
+    "page": 27
   },
   {
     "label": "eq:twofield",
     "number": "D.3",
-    "page": 26
+    "page": 28
   },
   {
     "label": "eq:pullbackLie",
     "number": "D.4",
-    "page": 26
+    "page": 28
   },
   {
     "label": "lem:jets",
     "number": "D.2",
-    "page": 26
+    "page": 28
   },
   {
     "label": "eq:jetexpansion",
     "number": "D.5",
-    "page": 26
+    "page": 28
   },
   {
     "label": "eq:jetdegree",
     "number": "D.6",
-    "page": 26
+    "page": 28
   },
   {
     "label": "eq:weightjets",
     "number": "D.7",
-    "page": 27
+    "page": 29
   },
   {
     "label": "app:constants",
     "number": "E",
-    "page": 29
+    "page": 31
   },
   {
     "label": "app:normalization",
     "number": "F",
-    "page": 30
+    "page": 32
   },
   {
     "label": "app:auditmap",
     "number": "G",
-    "page": 32
+    "page": 34
   }
 ]

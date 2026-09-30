@@ -1,6 +1,6 @@
 # A candidate natural-boundary proof for the bulk Ising susceptibility
 
-**v0.1-rc2 · candidate for public mathematical review · 28 September 2026 · Dehao Lin**
+**v0.1-rc3-unreleased · local W1 repair candidate · 30 September 2026 · Dehao Lin**
 
 [中文说明](README.zh.md) · [Paper PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf)
 
@@ -38,14 +38,14 @@ The divergent-first-term / controlled-tail strategy is established prior work in
 
 | Evidence | Status and limit in this candidate snapshot |
 |---|---|
-| Manuscript | Candidate complete argument; rc2 preserves the mathematics of revision 8 / rc1. |
+| Manuscript | Candidate complete argument with scoped W1 proof repairs; see the [repair record](provenance/W1_REPAIR_AUDIT.md). |
 | AI adversarial audits | Earlier errors prompted repairs. Favorable verdicts apply only to their input versions and checked scope; they are not peer review or current certification. |
 | Problem-only CR0 | Three returned runs, all `PARTIAL`; complete natural-boundary reconstructions: **0/3**. |
 | Method-informed MR1 | One `CLAIMED_TAIL_PROOF`; I3 unresolved, I6 conditional. Receiver checks did **not** independently certify the entire tail proof. |
 | Finite computations | Reproducible algebra and numerical diagnostics; no continuous-domain or infinite-tail certification. |
 | Human / formal review | No independent human expert certification or proof-assistant verification recorded. |
 
-These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [static candidate status](release/STATUS.json).
+These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [unreleased candidate status](release/W1_CANDIDATE_STATUS.json).
 
 ## How to scrutinize
 
@@ -63,7 +63,7 @@ python -m pip install -r requirements.txt
 python scripts/reproduce.py
 ```
 
-Outputs go to `.local/`, leaving evidence unchanged. Hashes establish identity; finite diagnostics do not prove the theorem. [Check scope](checks/README.md) · [build instructions](paper/README.md) · [final-public validation](release/FINAL_PUBLIC_VALIDATION.md).
+Outputs go to `.local/`, leaving evidence unchanged. Hashes establish identity; finite diagnostics do not prove the theorem. [Check scope](checks/README.md) · [build instructions](paper/README.md) · [candidate validation](release/W1_CANDIDATE_VALIDATION.json) · [historical rc2 validation](release/FINAL_PUBLIC_VALIDATION.md).
 
 ## Citation, authorship and license
 

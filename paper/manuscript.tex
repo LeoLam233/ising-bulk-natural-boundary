@@ -13,7 +13,7 @@
 \usepackage{microtype}
 \setlength{\emergencystretch}{2em}
 \raggedbottom
-\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Candidate proof, v0.1-rc2; not independently certified}}
+\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Unreleased W1 repair candidate, v0.1-rc3-unreleased; not independently certified}}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -45,7 +45,7 @@ for the bulk square-lattice Ising susceptibility}
 \author{Dehao Lin\\
 \small School of Physics, Sun Yat-sen University\\
 \small\texttt{lindh9@mail2.sysu.edu.cn}}
-\date{Version 0.1-rc2\\28 September 2026}
+\date{Version 0.1-rc3-unreleased\\30 September 2026}
 \begin{document}
 \maketitle
 
@@ -956,6 +956,8 @@ left root with a modulus gap, a separated compact/true-branch pair,
 and an all-compact right region. The partition uses at most \(C^N\)
 labels, and every finite cutoff jet retains its named anchor and its
 stated support.
+Each named small-\(\lambda\) Stokes current has the same three
+compact/branch types, with no all-branch sector.
 \end{lemma}
 \begin{proof}
 Use \(u=\theta+\theta_B\) near the lower branch. Fix a small
@@ -998,6 +1000,30 @@ already supplies a modulus gap.
 With no branch label, all roots are compact; either one is left or
 all are right. Finite product differentiation creates at most
 \(N^{O(j)}\) terms and preserves the supports just described.
+
+For the current fix its named index \(q_S\) in
+\(\operatorname{supp}a'\). Split its two upper endpoint arcs;
+this split can be smooth where the current weight vanishes.
+An upper-left \(q_S\) gives a fixed root modulus gap.
+For an upper-right \(q_S\), expand every other index with
+\(\chi_{\mathrm{in}}+(1-\chi_{\mathrm{in}})\) and the compact
+left/right labels. A compact left index again gives a modulus
+gap. Otherwise, if the true-branch label set \(J_B\) is nonempty,
+use \(q_S\) and the fixed index \(\min J_B\) as the mixed pair;
+if it is empty all indices are compact right. These alternatives
+are exhaustive, including when all \(N-1\) other indices are
+true branch. The named upper index prevents an all-branch sector.
+
+The slope of \(q_S\) is uniformly bounded on a preliminary
+endpoint neighborhood separated from the upper branch, independently
+of subsequently shrinking the slivers. Choose the nested branch
+margin so that its limiting slope dominates this bound by more
+than four. Lemma~\ref{lem:branch}'s deformed estimates preserve
+\(|b_{q_S}/b_j|\le1/4\) after the final choice of \(\eps_0\).
+The named index remains on \(p=1,m=0\), and every true branch
+on \(p=0,m=1\), on neighborhoods of all cutoff-jet supports.
+The vanishing on \(J\) proved above applies also to the current.
+Thus no cutoff derivative creates a new support type.
 \end{proof}
 
 % PROV-INTERNAL: PAIR_CONSTANTS_COMPLEX_DISK_FRESH_AUDIT.md;
@@ -1012,6 +1038,18 @@ deformation strength can be chosen so that at \(s=s_\eps\), on
 \]
 This is uniform for \(0\le\lambda\le1\), all permitted occupancies
 \(P/N\in[0,1]\), and sufficiently small \(\eps\).
+More precisely, lower indices can be assigned to three fixed
+covering groups with same-group bound \(q'<1\) and cross-group
+bound \(1+\eta\), where \(\log(1+\eta)<-\log(q')/4\).
+Pairs containing the named Stokes index are bounded by \(C_S\ge1\).
+For every set \(E\) of at most \(j\) pairs, these bounds imply
+\[
+ \prod_{\substack{i<l\\(i,l)\notin E}}|P_{il}|
+       \le C_j^N e^{-\kappa N^2}.
+\]
+Fixed pair jets are bounded in regular branch coordinates and
+compact angular coordinates; no uniform bound on raw branch-angle
+jets is asserted.
 \end{lemma}
 \begin{proof}
 On the closed lower semicircle both \(y\) and \(z\) lie in lower
@@ -1061,14 +1099,28 @@ support. This is a compactness argument for the complete
 canceled pair, not separate bounds for two possibly singular
 Schur factors.
 
-For \(n_B+n_L+n_R=N\), the same-group count is at least
-\(N^2/6-N/2\). The cross-group count is at most \(N^2/3\).
-The chosen slack makes their combined logarithmic quadratic
-coefficient strictly negative. For a Stokes term apply this
-count to the \(N-1\) lower variables. The named upper compact
+Let \(n\) be the number of lower variables: \(n=N\) for \(K\)
+and \(n=N-1\) for a Stokes term. Assign each to one covering group.
+After at most \(j\) pairs have been removed, the remaining
+same-group count is at least \(n^2/6-n/2-j\), while the
+remaining cross-group count is at most \(n^2/3\). Apply the
+individual upper bounds directly to the remaining product:
+\[
+ (q')^{n^2/6-n/2-j}(1+\eta)^{n^2/3}
+       \le(q')^{n^2/12-n/2-j}.
+\]
+This remains valid if the lower bound on the count is negative.
+It involves no division by a removed factor, which may vanish.
+The named upper compact
 \(q\) has at most \(N-1\) additional pairs, each uniformly
 bounded: its \(z_q\) is separated from the inverse of a lower
-root, including the branch root. These pairs cost \(C^{N-1}\).
+root, including the branch root. These pairs cost \(C_S^{N-1}\).
+For \(n=N-1\) the displayed exponent is
+\(N^2/12-2N/3+7/12-j\); the linear correction is included in
+\(C_j^N\). Thus \(\kappa=-\log(q')/12\) works for both objects.
+The canceled double-branch expression is analytic in the regular
+coordinates, and the other pair denominators are separated on the
+fixed compact sets. This also proves the stated fixed-jet bounds.
 \end{proof}
 
 \begin{lemma}[The original parameter disk]\label{lem:originaldisk}
@@ -1169,6 +1221,18 @@ If \(M/\eps\to\infty\) uniformly and \(0\le m\le M/2\),
 \]
 If \(M/2<m<M\) and \(m\gg\eps\), the latter ratio is at most
 \(C\sqrt M/(M-m)\).
+
+On a true-branch plateau of the current put
+\(t=\lambda P/N\), \(E=\eps+t\). Uniformly for
+\(0\le\lambda\le\lambda_*\) and \(|u|\le2r_0\),
+\begin{align*}
+ |\phi_u|&\asymp(|u|+E)^{-1/2},\\
+ -\Im\phi&\ge c\sqrt{|u|+E}\quad(u\le0),&
+ \Re\phi_u&\ge\tfrac23|\phi_u|\quad(u\ge0).
+\end{align*}
+The constants may depend on the fixed \(\tau\), but not on
+\(N,\eps,\lambda,P/N\). Here the margins and then \(\eps_0\)
+are small enough, and \(P\) is fixed during a plateau variation.
 \end{lemma}
 \begin{proof}
 The displayed normal form follows by Taylor expansion of \(S\) and
@@ -1188,6 +1252,35 @@ For comparable \(m,M\), integrate the bound on \(-x''\).
 The sector containing \(\phi'\) also has width less than \(\pi\);
 integrating in \(u\) gives
 \(|\phi(u)-\phi(v)|\ge c|u-v|\).
+
+For the current, write \(y=e^{v+\ii\vartheta}\),
+\(v=-c_0\eps+\tau t/2\), \(\vartheta=-\theta_B+u\).
+Put \(Q=\eps+\tau t\), comparable to \(E\) for fixed \(\tau>0\).
+The exact real and imaginary identities in
+Lemma~\ref{lem:originaldisk}, at the radial center, give
+\begin{gather*}
+ D=1-W=a_Bu-\ii\beta+R,\qquad cQ\le\beta\le CQ,\\
+ R\in\R,\qquad |R|\le C(u^2+Q^2),\qquad
+ D_u=a_B+O(|u|+Q).
+\end{gather*}
+Positivity of \(\beta\) uses \(b_B>0\) and the positive
+\(\tau t\) coefficient. The constants in these \(Q\)-bounds
+can be chosen before shrinking \(\tau\). The model
+\(a_Bu-\ii\beta\) has modulus comparable to \(|u|+Q\), and
+its relative perturbation is \(O(r_0+Q)\). Its square root for \(u\le0\) has argument
+in \([-\pi/2,-\pi/4]\); its inverse square root for \(u\ge0\)
+has argument in \([0,\pi/4]\). Using the exact factorization
+\(\phi=\sqrt{2D}\,h(D)\) and its derivative proves the asserted
+cone and slope bounds after shrinking the fixed margins and
+\(\eps_0\). This argument allows the \(O(E^2)\) real displacement
+of the branch center; it does not require \(\Re D\le0\) at \(u=0\).
+In particular, since all \(|z_i|\le1\), for a negative branch
+coordinate
+\[
+ \frac{|\phi'_v|}{|1-Z|}
+ \le\frac{|\phi'_v|}{1-|Z|}
+ \le\frac C{|u_v|+\eps+\lambda P/N}.
+\]
 \end{proof}
 
 % PROV-INTERNAL: NONRESONANT_BRANCH_EXPONENTIAL_CUTOFF.md;
@@ -1226,10 +1319,13 @@ The branch image lies in a fixed cone of width less than \(\pi\)
 and has radius \(C\sqrt{b_N}\). Decreasing \(c_*\) ensures
 \(N\sqrt{b_N}\) is small, so
 \(|1-Z|\ge c\sum_i|\phi_i|\).
-The rounded branch curve has a bounded number of monotone arms.
-The square-root normal form gives
+The square-root normal form gives, directly on both sides of zero,
+\(|\phi|\ge c\sqrt{|u|+\eps}\) and
+\(|\phi'|\le C(|u|+\eps)^{-1/2}\). Substituting
+\(w=\sqrt{|u|+\eps}\) therefore gives
 \[
  \int_{\mathrm{core}}e^{-t|\phi|}|\dd\phi|
+       \le4C\int_{\sqrt\eps}^{\sqrt{b_N+\eps}}e^{-ctw}\dd w
        \le C\min(\sqrt{b_N},t^{-1}).
 \]
 Using \(1/\sum|\phi_i|=\int_0^\infty e^{-t\sum|\phi_i|}\dd t\)
@@ -1319,10 +1415,24 @@ This proves the far bound
 On the near support, \(|u_i-t|\le\rho\le2\rho_N\le b_N/8\).
 The anchor \(|u_a|\ge b_N/2\) gives \(|t|\ge3b_N/8\), so
 all coordinates have the same sign and \(|u_i|\ge b_N/4\).
-Branch slopes and their fixed jets cost at most \(e^{C_jN}\).
-The full collision numerator has bound
-\(e^{CN^3}\rho^{N(N-1)}\); the factor \(e^{CN^3}\) is retained,
-not replaced by a polynomial. Lie and cutoff jets lose at most
+The pointwise branch-measure product has the bound
+\[
+ \prod_i|\phi'_i|\le(Cb_N^{-1/2})^N
+ =\exp\left(\frac{A+4}{2}N^2+
+             \frac N2\log(N/c_*)+O(N)\right).
+\]
+Segments joining two coordinates stay on this same-sign support,
+so each collision difference is at most \(Cb_N^{-1/2}\rho\).
+The collision coefficient and the branch measures together are
+therefore bounded by \(C^{N^2}b_N^{-N^2/2}\), whose logarithm is
+\[
+ \frac{A+4}{2}N^3+\frac{N^2}{2}\log(N/c_*)+O(N^2).
+\]
+Fixed-\(j\) coefficient and derivative costs can be included in
+the lower-order \(O_j(N^2)\) term. Its constant is fixed before
+\(B\). These bounds are determined
+on the \(B\)-independent anchor neighborhood; the positive cubic
+coefficient is independent of \(B\). Lie and cutoff jets lose at most
 \(2j+1\) powers of \(\rho\).
 The shape measure contributes \(\rho^{N-2}\).
 For negative \(t\), the \(Z\)-gap is \(e^{-O(N)}\) and one mean
@@ -1348,10 +1458,14 @@ already in the preceding estimate. These polynomial factors are
 absorbed in \(e^{C_jN\log(N+1)}\). The coarea variable is not
 integrated a second time. The bound is at most
 \[
- e^{CN^3+C_jN\log(N+1)}(2\rho_N)^L(H+N)^2.
+ \exp\left(\frac{A+4}{2}N^3+\frac{N^2}{2}\log N+C_jN^2\right)
+ (2\rho_N)^L(H+N)^2.
 \]
-Increasing \(B\) absorbs the cubic coefficient for all sufficiently
-large \(N\); finitely many remaining \(N\)'s cost a fixed constant.
+Its logarithm, apart from the simple-kernel factor, is at most
+\(((A+4)/2-B)N^3+\tfrac12N^2\log N+O_j(N^2)+B(2j+4)N\).
+The already required \(B>A+4\) makes this tend to minus infinity.
+Finitely many remaining \(N\)'s cost a fixed, possibly very large,
+\(\eps\)-independent constant.
 At fixed \(\eps>0\) the same positive collision power makes the
 full-equality puncture flux vanish at every preceding Lie stage.
 Thus the identities used on the punctured charts have no residual
@@ -1387,7 +1501,7 @@ Put \(a_i=(\partial_s\phi_i)/b_i\),
 \(b_i=\partial_{\theta_i}\phi_i\),
 \(A=\sum_{i\in J}a_i\), and
 \(D=\sum_{i\notin J}\partial_s\phi_i\).
-With selected \(j\in J\), let
+With \(j=\min J\) fixed for the labelled term, let
 \[
  X=\frac{D+b_qA}{b_j-b_q},\qquad
  V_i=a_i\ (i\in J\setminus\{j\}),\quad
@@ -1430,13 +1544,13 @@ introduces at most polynomial \(N\)-cost. The remaining pair
 factors therefore retain
 \(C_j^N N^{C_j}e^{-\kappa N^2}\).
 
-For positive branch coordinates, the square-root normal form gives
-\(\Re b_j\ge c|b_j|\).
+For positive branch coordinates, Lemma~\ref{lem:branch}, including
+its current version, gives \(\Re b_j\ge(2/3)|b_j|\).
 The compact slope is dominated by the true branch slope; for a
 Stokes upper-right \(q\) it has the opposite sign in the limit.
 The phase map
 \((\theta_q,u_j)\mapsto(\sum\theta_i,\Re\sum\phi_i)\)
-has Jacobian \(\Re(b_j-b_q)\ge c|b_j|\)
+has Jacobian \(\Re(b_j-b_q)\ge(2/3-1/4)|b_j|\)
 and is injective on fixed first-phase slices.
 It absorbs the selected branch measure, and each remaining phase
 kernel integrates with cost \(O(H+\log N)\).
@@ -2224,7 +2338,9 @@ original radius and disk constants. There are only finitely many
 derivative orders \(0\le j\le k\).
 \item Fix a sufficiently small branch neighborhood and compact
 margins. Choose the nested ratio \(L\) large enough for the
-outer-anchor/true-branch slope separation. Fix the smooth nested
+outer-anchor/true-branch slope separation, also relative to the
+bounded upper-current slopes on a preliminary endpoint neighborhood
+separated from the upper branch. Fix the smooth nested
 partition and all of its finite derivative bounds.
 \item Obtain the same-group pair constant \(q<1\) at the limiting
 real support. Choose \(q'\in(q,1)\), then the cross-group slack
@@ -2250,7 +2366,8 @@ Proposition~\ref{prop:allB}, choose
 inclusions \(2\rho_N\le b_N/8\) and \(\delta_N\le b_N/16\)
 for every \(N\ge N_0+2\), including the finitely many low orders.
 Increase \(B\) further so that
-\(e^{CN^3}(2e^{-BN})^{N^2-2j-4}\) is controlled for all large
+\(\exp((A+4)N^3/2+\tfrac12N^2\log N+C_jN^2)
+ (2e^{-BN})^{N^2-2j-4}\) is controlled for all large
 \(N\) and every \(j\le k\). Only the remaining numerical bounds
 at finitely many orders are absorbed into a point-dependent
 constant; their support geometry already satisfies the inclusions.
@@ -2263,6 +2380,16 @@ In the intermediate window, for every fixed \(C,m,r\),
 \]
 These limits also give \(N^{C_j}(\eps+\lambda_*)\to0\).
 They are used only in that window.
+In particular impose \(N\eps e^{AN}\le c\),
+\(\eps/b_N\le c\), and the finitely many compact-jet
+perturbation inequalities for \(j\le k\), as well as
+\(\eps+\lambda_*\) sufficiently small relative to the fixed
+branch and compact margins. For the first two the logarithms
+at \(N\le D\sqrt H\) are bounded by
+\(-H+O(\sqrt H+\log H)\); for the compact perturbations the bound
+is \(-\alpha_0H+O(\log H)\). Thus one \(\eps_0\), independent
+of \(N\), enforces every required condition. Only finitely many
+fixed exponents from the preceding estimates are needed.
 \end{enumerate}
 
 The distinction between costs is essential: an ordinary one-body
@@ -2295,6 +2422,11 @@ compact roots may leave the unit disk.\\
 \(C_j\) in jets &
 Point, fixed bumps, \(j\le k\) & Independent of \(N,\eps\) within
 the stated window; powers \(N^{C_j}\) are explicit.\\
+Final \(C_j\) in \eqref{eq:reqinter} &
+Point, \(j\), all preceding margins, \(\tau,\kappa,\alpha_0,D\),
+\(M,K_0,A,c_*,B,C_1\) & Independent of \(N,\eps,\lambda\).
+Finite small-order constants may be large but are
+\(\eps\)-independent.\\
 \(A,b_N,\rho_N\) &
 Algebraic point; \(B\) also on \(k\) & Exponential \(N\)-dependence
 is retained. \(\eps e^{cN}\to0\) only for \(N\le D\sqrt H\).\\
@@ -2706,10 +2838,12 @@ adversarial audit.
 % END SOURCE
 
 \subsection*{Release status and AI assistance}
-Version 0.1-rc2 is a candidate for public mathematical review.
-It preserves the mathematics of revision 8 and release candidate rc1;
-this revision clarifies bibliography, attribution, and presentation.
-It does not claim a new independent mathematical audit.
+Version 0.1-rc3-unreleased is a local W1 repair candidate.
+It adds the current support partition and deformed branch geometry,
+recounts the remaining pair factors after differentiation, corrects
+the near-collision slope cost, and expands the constant dependencies.
+These substantive proof repairs received a scoped AI analytic audit;
+the historical rc2 records retain their original inputs and verdicts.
 Three problem-only reconstruction runs returned partial results;
 none reconstructed the complete natural-boundary proof. One
 method-informed run claimed the full tail estimate while explicitly

@@ -1,3 +1,13 @@
+# v0.1-rc3-unreleased candidate notes
+
+Local W1 repair candidate from baseline `47f95a386d329ae6a3e377fecceafde78ea0886c`, prepared 30 September 2026. No tag or release is created.
+
+The revision adds an explicit small-lambda current partition, a remaining-pair contraction interface, corrected near-region slope costs and a uniform deformed branch normal form. It also simplifies the microcore integral and records all constant dependencies and final smallness choices. The theorem, observable, derivative range and particle windows are unchanged.
+
+See the [scoped AI audit and repair record](provenance/W1_REPAIR_AUDIT.md) and [candidate validation](release/W1_CANDIDATE_VALIDATION.json). Human and proof-assistant certification remain absent.
+
+---
+
 # v0.1-rc2 release notes
 
 Candidate for public mathematical review. Evidence snapshot: 28 September 2026. This version preserves the mathematics of revision 8 / v0.1-rc1 and makes editorial, bibliographic and release-presentation changes.
