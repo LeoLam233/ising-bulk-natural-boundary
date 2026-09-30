@@ -1,0 +1,125 @@
+{
+  "version": "0.1-rc3",
+  "status": "PREPARED_FOR_RELEASE",
+  "publication_status": "NOT_PUBLISHED",
+  "rc2_baseline_commit": "47f95a386d329ae6a3e377fecceafde78ea0886c",
+  "frozen_mathematical_candidate_commit": "813c6b9a21872ab5358d3da5cbbd99ed05210cf9",
+  "release_prep_commit": {
+    "identity": "the commit containing this new record",
+    "resolution": "git log -1 --format=%H -- release/RC3_RELEASE_PREP_STATUS.json",
+    "exact_sha_receipt": "External RC3_RELEASE_PREP_REVIEW/COMMIT_RECEIPT.json and release_records/RC3_RELEASE_PREP_STATUS.json",
+    "self_reference_note": "Embedding this containing commit SHA in its own contents is impossible; exact SHA is bound externally after the single commit."
+  },
+  "proposed_tag": "v0.1-rc3",
+  "tag_created": false,
+  "published": false,
+  "date_released": null,
+  "release_url": null,
+  "doi": null,
+  "mathematical_freeze": {
+    "status": "PASS",
+    "substantive_mathematical_hunks": 0,
+    "manuscript_metadata_hunks": 3,
+    "expert_brief_metadata_hunks": 4,
+    "unexpected_hunks": 0,
+    "all_16_embedded_source_blocks_byte_identical": true,
+    "bibliography_citations_and_label_index_byte_identical": true
+  },
+  "epistemic_scope": {
+    "AI_assisted_candidate_proof": true,
+    "prior_W1_scope": "Scoped AI analytic recheck and edited-text regression of repair interfaces",
+    "release_prep_scope": "Metadata consistency and exact mathematical preservation only",
+    "independent_human_review": false,
+    "peer_review": false,
+    "proof_assistant_certification": false,
+    "complete_theorem_independently_certified": false,
+    "finite_diagnostics_prove_uniform_estimates": false,
+    "older_audits": "Remain tied to their exact input versions"
+  },
+  "historical_receipts": "W1_CANDIDATE_STATUS.json and W1_CANDIDATE_VALIDATION.json are preserved byte-for-byte.",
+  "artifacts": {
+    "paper/manuscript.tex": {
+      "sha256": "db6e2448eb74302d6652b3f3fdcd646478e9d6191d7d548555c7226dac755140",
+      "bytes": 134076
+    },
+    "paper/manuscript.pdf": {
+      "sha256": "393fba764e55240baab574176e7b14e148db1aa0ddbc950ea2e43031d34ff2a6",
+      "bytes": 305400
+    },
+    "docs/expert_brief.tex": {
+      "sha256": "67b4f7d1b5783f7483e82a600458771887f7bce5c853e849f25b9e7726b4e881",
+      "bytes": 7358
+    },
+    "docs/expert_brief.pdf": {
+      "sha256": "4dd39f245379aa98f677b210cbfe759f8aea2bd4a1910230c2a101cc924a52b3",
+      "bytes": 48623
+    },
+    "paper/LABEL_INDEX.json": {
+      "sha256": "c228835c66799ccbb993c48dc7b35cf14bb61ef1392d4cc1fccffceecbf10583",
+      "bytes": 5022
+    }
+  },
+  "build": {
+    "engine": "Portable Tectonic 0.17.0",
+    "exit_code": 0,
+    "cached_resources_only": true,
+    "source_date_epoch": 1790726400,
+    "native_compiler": "Unavailable: Unable to find standard directories for platform",
+    "manuscript_pages": 39,
+    "expert_brief_pages": 2,
+    "draft_date": "Existing 30 September 2026 document date retained; not a publication date"
+  },
+  "visual_review": {
+    "affected_manuscript_pages": [
+      1,
+      38
+    ],
+    "affected_expert_brief_pages": [
+      1,
+      2
+    ],
+    "all_affected_pages_visually_inspected": true,
+    "all_other_manuscript_pages_pixel_identical_to_frozen_candidate": true,
+    "blocking_defects": []
+  },
+  "structural_validation": {
+    "status": "PASS",
+    "syntax_counts": {
+      ".json": 56,
+      ".cff": 1,
+      ".py": 27
+    },
+    "tex_references": {
+      "labels": 65,
+      "references": 124,
+      "bibliography_items": 12,
+      "citations": 38,
+      "unresolved": [],
+      "numbering_preserved": true,
+      "index_matches_actual_aux": true
+    },
+    "local_markdown_links": 159,
+    "unresolved_links": [],
+    "tex_warnings": [],
+    "pdf_fonts_embedded": true,
+    "pdf_out_of_bounds_glyphs": []
+  },
+  "finite_checks": {
+    "repository_suites": 6,
+    "repository_all_reproduced": true,
+    "active_handoff_scripts": 8,
+    "active_handoff_all_exit_zero": true,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    },
+    "scope": "Finite numerical/symbolic diagnostic replay only; not continuous-domain or infinite-tail proof."
+  },
+  "clean_copy_build": {
+    "status": "PASS",
+    "both_pdfs_byte_identical": true,
+    "same_host_runtime": true
+  },
+  "final_identity_and_integrity": "The current manifest binds all repository files. External final validation records the containing commit SHA, snapshot hash and post-commit export receipts without a self-hash cycle."
+}

@@ -1,3 +1,23 @@
+# v0.1-rc3 — prepared for release; NOT PUBLISHED
+
+This version is prepared for user review. No rc3 tag or GitHub Release has been created. The mathematical content is frozen at `813c6b9a21872ab5358d3da5cbbd99ed05210cf9`, following rc2 baseline `47f95a386d329ae6a3e377fecceafde78ea0886c`. This release-preparation pass changes version/status metadata only.
+
+Compared with rc2, rc3 contains substantive repairs to the W1 intermediate-window proof interfaces:
+
+- an explicit small-lambda Stokes-current partition;
+- a remaining-pair recount after differentiation, without division by removed factors;
+- the corrected near-region branch-slope cost;
+- a lambda-deformed branch normal form allowing branch-center displacement;
+- expanded constant-dependency and epsilon0 bookkeeping.
+
+The theorem statement, physical observable, selected cyclotomic point family, derivative range and particle-number windows are unchanged. These are substantive proof-interface repairs, not merely typographical corrections.
+
+Rc3 remains an AI-assisted candidate proof. The W1 repairs received a scoped AI analytic recheck and edited-text regression; this is not independent human review, peer review or proof-assistant certification. The complete natural-boundary theorem remains independently uncertified. Finite diagnostics do not prove continuous-domain or infinite-tail estimates. Older audit verdicts apply only to their audited versions.
+
+See [release-prep status](release/RC3_RELEASE_PREP_STATUS.json), [validation](release/RC3_RELEASE_PREP_VALIDATION.json), and the [W1 repair record](provenance/W1_REPAIR_AUDIT.md). The following candidate and rc2 notes are preserved as historical records.
+
+---
+
 # v0.1-rc3-unreleased candidate notes
 
 Local W1 repair candidate from baseline `47f95a386d329ae6a3e377fecceafde78ea0886c`, prepared 30 September 2026. No tag or release is created.

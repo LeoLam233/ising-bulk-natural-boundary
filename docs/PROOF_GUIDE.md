@@ -1,6 +1,6 @@
 # Reading the proposed proof
 
-Read the [manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. Numbering is preserved from revision 8. The [W1 repair record](../provenance/W1_REPAIR_AUDIT.md) identifies the current additions. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
+Read the [manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. Numbering is preserved from revision 8. The [W1 repair record](../provenance/W1_REPAIR_AUDIT.md) identifies the repairs already frozen in the mathematical candidate. Version 0.1-rc3 is prepared for release and not yet published. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
 
 | Stage | Location | Mathematical obligation |
 |---|---|---|

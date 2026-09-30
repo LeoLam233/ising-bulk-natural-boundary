@@ -1,0 +1,41 @@
+{
+  "version": "0.1-rc3",
+  "status": "PREPARED_FOR_RELEASE",
+  "publication_status": "NOT_PUBLISHED",
+  "rc2_baseline_commit": "47f95a386d329ae6a3e377fecceafde78ea0886c",
+  "frozen_mathematical_candidate_commit": "813c6b9a21872ab5358d3da5cbbd99ed05210cf9",
+  "release_prep_commit": {
+    "identity": "the commit containing this new record",
+    "resolution": "git log -1 --format=%H -- release/RC3_RELEASE_PREP_STATUS.json",
+    "exact_sha_receipt": "External RC3_RELEASE_PREP_REVIEW/COMMIT_RECEIPT.json and release_records/RC3_RELEASE_PREP_STATUS.json",
+    "self_reference_note": "Embedding this containing commit SHA in its own contents is impossible; exact SHA is bound externally after the single commit."
+  },
+  "proposed_tag": "v0.1-rc3",
+  "tag_created": false,
+  "published": false,
+  "date_released": null,
+  "release_url": null,
+  "doi": null,
+  "mathematical_freeze": {
+    "status": "PASS",
+    "substantive_mathematical_hunks": 0,
+    "manuscript_metadata_hunks": 3,
+    "expert_brief_metadata_hunks": 4,
+    "unexpected_hunks": 0,
+    "all_16_embedded_source_blocks_byte_identical": true,
+    "bibliography_citations_and_label_index_byte_identical": true
+  },
+  "epistemic_scope": {
+    "AI_assisted_candidate_proof": true,
+    "prior_W1_scope": "Scoped AI analytic recheck and edited-text regression of repair interfaces",
+    "release_prep_scope": "Metadata consistency and exact mathematical preservation only",
+    "independent_human_review": false,
+    "peer_review": false,
+    "proof_assistant_certification": false,
+    "complete_theorem_independently_certified": false,
+    "finite_diagnostics_prove_uniform_estimates": false,
+    "older_audits": "Remain tied to their exact input versions"
+  },
+  "historical_receipts": "W1_CANDIDATE_STATUS.json and W1_CANDIDATE_VALIDATION.json are preserved byte-for-byte.",
+  "validation": "RC3_RELEASE_PREP_VALIDATION.json"
+}

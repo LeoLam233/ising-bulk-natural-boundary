@@ -1,10 +1,10 @@
-# W1 repair record — v0.1-rc3-unreleased
+# W1 repair record — v0.1-rc3 release preparation
 
-Prepared 30 September 2026 from repository commit `47f95a386d329ae6a3e377fecceafde78ea0886c` (v0.1-rc2). This is an unreleased local candidate. The rc2 artifacts and historical audit/release records retain their identities.
+Prepared 30 September 2026 from repository commit `47f95a386d329ae6a3e377fecceafde78ea0886c` (v0.1-rc2). The mathematical candidate was frozen, unreleased, at `813c6b9a21872ab5358d3da5cbbd99ed05210cf9`. Version 0.1-rc3 is now prepared for release and is not yet published; this pass changes metadata only. The rc2 artifacts and historical audit/release records retain their identities.
 
-## Independently rechecked interfaces
+## Fresh scoped recheck of repair interfaces
 
-A fresh AI analytic review confirmed four substantive gaps or incorrect intermediate statements in the rc2 W1 proof. Prior AI audit verdicts were treated as leads, not premises. The revision adopts:
+A fresh scoped AI analytic recheck identified four substantive gaps or incorrect intermediate statements in the rc2 W1 proof. Prior AI audit verdicts were treated as leads, not premises. The frozen mathematical candidate adopted:
 
 1. **Lemma 7.1:** an explicit partition of every named small-lambda Stokes current, including cutoff-derivative supports and the upper compact anchor. There is no all-branch current sector.
 2. **Proposition 7.6:** the pointwise product of branch slopes costs exp(O(N²)), and its combined collision coefficient has logarithm `(A+4)N³/2 + N² log N/2 + O_j(N²)`. The positive cubic coefficient is fixed before B; the negative `−BN(N²−2j−4)` term dominates it. Finite small-N constants are epsilon-independent.
@@ -21,4 +21,4 @@ The review rejected an interpretation that deletes factors by dividing the full-
 
 The analytic review re-derived pair compactness at endpoints and the double branch, the remaining-pair count, slope/collision costs, the deformed geometry, the direct kernel integral and the constant order. Scoped symbolic and finite numerical checks were executed separately. Finite grids do not establish continuous-domain bounds, and high precision is not interval certification. The old reconstruction outcomes remain historical.
 
-This is AI hostile audit and computational regression, with correlated-error risk. It is not independent human review, peer review or proof-assistant certification. The review does not newly certify the entire natural-boundary theorem, its external physical premises, or novelty. Build, page-index and finite-check receipts are in [candidate validation](../release/W1_CANDIDATE_VALIDATION.json).
+This is AI hostile audit and computational regression, with correlated-error risk. It is not independent human review, peer review or proof-assistant certification. The review does not newly certify the entire natural-boundary theorem, its external physical premises, or novelty. Historical build, page-index and finite-check receipts remain in [frozen candidate validation](../release/W1_CANDIDATE_VALIDATION.json). Current artifact identities and the mathematical-freeze result are in [release-prep validation](../release/RC3_RELEASE_PREP_VALIDATION.json).

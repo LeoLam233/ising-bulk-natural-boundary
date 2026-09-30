@@ -1,7 +1,7 @@
 {
   "format": "ising-release-manifest-v1",
-  "version": "0.1-rc3-unreleased",
-  "created_utc": "2026-09-30T03:06:24.905062+00:00",
+  "version": "0.1-rc3",
+  "created_utc": "2026-09-30T03:53:51.664112+00:00",
   "self_exclusion": "MANIFEST.json is excluded; the outer archive SHA-256 binds it. Local .git/.local/.venv/__pycache__ are excluded.",
   "mathematics_verified": false,
   "files": [
@@ -22,13 +22,13 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 670,
-      "sha256": "f7c57de1ab79666684c1e1f683edf48c830d9b177b0a32fcf8a19597e2cd4e23"
+      "bytes": 676,
+      "sha256": "b3157aa02eca0833e5350c5169b96568892955331225f7c198cfde81e67a052e"
     },
     {
       "path": "CLAIMS.md",
-      "bytes": 1827,
-      "sha256": "d8e56d0daa6460f25873e081b3c99d425b47a13f1e4d8e7d9c21aecf7ea6bb53"
+      "bytes": 1821,
+      "sha256": "ce003b6c6e4bc6a93c7103ef0a3c572d24d3b6ccf84ae38636538c9c69dfa7a6"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -47,23 +47,23 @@
     },
     {
       "path": "LIMITATIONS.md",
-      "bytes": 2670,
-      "sha256": "cb53c8fdf121310d0c3607c99c6020b4bb69f3df0ec1c75d968c4c3dfd794115"
+      "bytes": 2729,
+      "sha256": "b000a5efb2b9bcaa89a40b83c8d1684b0f27556639855de833f22aa7347da0f9"
     },
     {
       "path": "README.md",
-      "bytes": 6509,
-      "sha256": "28152e2a3bf5e15379ba3e15f481e4efebbcb461dd82f9cdfb8bddddc04b5d9c"
+      "bytes": 6563,
+      "sha256": "2d1d8194696bce7df407fc44e1a70e5555b9cfa62bc61c0cce1a4bf254b1cf84"
     },
     {
       "path": "README.zh.md",
-      "bytes": 5632,
-      "sha256": "752ab80777068cba8f599e7e72fada23d83fd851e74bfc129948fdea66c6f617"
+      "bytes": 5689,
+      "sha256": "2360836b7f0a1379e18d24319ba079aeaf3add05be1c2b7110c5acb327e44daa"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 2626,
-      "sha256": "c3f45194ba6b1cc6a335a760a0c1b8d984f7cc3374da4b2a3354d9abc7a18dab"
+      "bytes": 4312,
+      "sha256": "2f76293220470721154b71f28e7c108a5caad85222c548f252910ecafbeff52f"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -232,18 +232,18 @@
     },
     {
       "path": "docs/PROOF_GUIDE.md",
-      "bytes": 3304,
-      "sha256": "81a8f92b7650a779e69206587ff204b127c991a23627e051e75f91285e0318d4"
+      "bytes": 3402,
+      "sha256": "fc3cf6959ac80850619fb13377c6f5aaba51ac15e04cffcb83496e79881bb305"
     },
     {
       "path": "docs/expert_brief.pdf",
-      "bytes": 48519,
-      "sha256": "249b154d2f57e507513a1b4c75bbcf7ee6b60b293595a27dea251a7d2572ac9a"
+      "bytes": 48623,
+      "sha256": "4dd39f245379aa98f677b210cbfe759f8aea2bd4a1910230c2a101cc924a52b3"
     },
     {
       "path": "docs/expert_brief.tex",
-      "bytes": 7273,
-      "sha256": "5eef24df3a56c0ea6ea31fb5a1838729a856fb3f4982ac1a33dd489a651faaba"
+      "bytes": 7358,
+      "sha256": "67b4f7d1b5783f7483e82a600458771887f7bce5c853e849f25b9e7726b4e881"
     },
     {
       "path": "paper/LABEL_INDEX.json",
@@ -252,18 +252,18 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 2157,
-      "sha256": "54f1d794f1328e91228066b75f5d0e23de4be42b16d7bc900d76b3bfdd86f77c"
+      "bytes": 2353,
+      "sha256": "e898f244b669f4c95e7676214df53769570b938b2cfd7826188500b9cd565a2a"
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 305648,
-      "sha256": "9cd42b0ecd3efb1d64ffa4709caf0e5088276312a131d6cbcb7219b370cb85db"
+      "bytes": 305400,
+      "sha256": "393fba764e55240baab574176e7b14e148db1aa0ddbc950ea2e43031d34ff2a6"
     },
     {
       "path": "paper/manuscript.tex",
-      "bytes": 134093,
-      "sha256": "ecbf83caad3f87ec62b9be31b0172952e0d0ab6d64a783420ff2a0c2e932090d"
+      "bytes": 134076,
+      "sha256": "db6e2448eb74302d6652b3f3fdcd646478e9d6191d7d548555c7226dac755140"
     },
     {
       "path": "provenance/EXTERNAL_PREMISES.md",
@@ -322,8 +322,8 @@
     },
     {
       "path": "provenance/W1_REPAIR_AUDIT.md",
-      "bytes": 3323,
-      "sha256": "0ba7083723f62251ab419190d5fddf20426f7fd42ee2591994dfebda8af2c32c"
+      "bytes": 3695,
+      "sha256": "2ceaa92db9df7b4991f09c4b82d2998be0e7b0a28b32b2f2d6637a2fdcd594eb"
     },
     {
       "path": "provenance/bibliographic_metadata.json",
@@ -404,6 +404,16 @@
       "path": "release/RC2_VALIDATION.md",
       "bytes": 3159,
       "sha256": "f82cbb8fbc6d86415d891fadb3c79402153647fd7201aaea68adbc424ba9e845"
+    },
+    {
+      "path": "release/RC3_RELEASE_PREP_STATUS.json",
+      "bytes": 1889,
+      "sha256": "4804870314d1339c1b8bafb71a3cafe75db372093010fcf822878c08e189153c"
+    },
+    {
+      "path": "release/RC3_RELEASE_PREP_VALIDATION.json",
+      "bytes": 4503,
+      "sha256": "622287ab3b2486086b242d03da0736ce964b21cdecd5c9cd29ce560a85b53355"
     },
     {
       "path": "release/REPRODUCTION_RECORD.json",
@@ -1045,5 +1055,7 @@
       "bytes": 1744,
       "sha256": "1efdf6d5207f0bef2d7c225d7d9fbf2e8112a122aace0c46f8ae1179a7f69bff"
     }
-  ]
+  ],
+  "publication_status": "NOT_PUBLISHED",
+  "release_preparation_status": "PREPARED_FOR_RELEASE"
 }
