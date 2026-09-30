@@ -1,6 +1,6 @@
 # 二维 Ising 完整体磁化率自然边界：候选证明与审查材料
 
-**v0.1-rc3，发布准备稿，尚未发布。作者：Dehao Lin，School of Physics, Sun Yat-sen University。**
+**v0.1-rc3。作者：Dehao Lin，School of Physics, Sun Yat-sen University。**
 
 [论文](paper/manuscript.pdf) · [TeX 源码](paper/manuscript.tex) · [两页专家简报](docs/expert_brief.pdf) · [English](README.md)
 
@@ -41,7 +41,7 @@ $$
 - 三次无方法提示 CR0 均为 `PARTIAL`，完整自然边界复现为 **0/3**。第一、第三次对有限首项提出更完整主张，第二次也保留整体首项未决；三次都未完成完整尾和控制。
 - 一次 MR1 获得方法蓝图后声称完成完整 TAIL，但 I3 未决、I6 条件成立；接收核查没有独立认证整条 TAIL。
 - 不同点族不能直接拼接；不能把复现未完成简单归因于篇幅。会话可能共享模型先验，技术隔离未经独立核验。
-- 没有独立人类专家认证、证明助手验证或完整无提示复现。有限计算不认证连续域和无限尾项。[局限](LIMITATIONS.md) · [发布准备状态](release/RC3_RELEASE_PREP_STATUS.json)。
+- 没有独立人类专家认证、证明助手验证或完整无提示复现。有限计算不认证连续域和无限尾项。[局限](LIMITATIONS.md) · [历史发布准备状态](release/RC3_RELEASE_PREP_STATUS.json)。
 
 ## 如何核查
 
@@ -51,7 +51,7 @@ $$
 
 [审计索引](audits/README.md)说明历史文件名和裁决范围，原文保持不变。[版本表](audits/VERSION_LEDGER.md)、[CR0/MR1 对照](reproduction/README.md)、[来源记录](provenance/SOURCE_PROVENANCE.md)及[原始 URL 清单](provenance/V38_SOURCE_INVENTORY.json)保留负面和未完成结果。原始 v38 的 192 项完整性核对通过；189 个文本的显式来源扫描未发现外部 AI 证明仓库列为研究来源，但历史访问日志不完整，不能保证零未记录接触。本项目的 AI 推导是待核查论证，不是外部可信前提。
 
-在仓库根目录运行 `python scripts/verify_repository.py` 和 `python scripts/reproduce.py`。依赖与命令见英文入口。[计算检查范围](checks/README.md) · [编译说明](paper/README.md) · [发布准备验证记录](release/RC3_RELEASE_PREP_VALIDATION.json) · [冻结候选稿验证记录](release/W1_CANDIDATE_VALIDATION.json) · [历史 rc2 装配记录](release/FINAL_PUBLIC_VALIDATION.md)。输出写入 `.local/`，不改证据。历史发布视图与冻结原件通过散列和转换清单区分；第三方论文全文、系统日志和私人联系草稿不随公开包分发。
+在仓库根目录运行 `python scripts/verify_repository.py` 和 `python scripts/reproduce.py`。依赖与命令见英文入口。[计算检查范围](checks/README.md) · [编译说明](paper/README.md) · [历史发布准备验证记录](release/RC3_RELEASE_PREP_VALIDATION.json) · [冻结候选稿验证记录](release/W1_CANDIDATE_VALIDATION.json) · [历史 rc2 装配记录](release/FINAL_PUBLIC_VALIDATION.md)。输出写入 `.local/`，不改证据。历史发布视图与冻结原件通过散列和转换清单区分；第三方论文全文、系统日志和私人联系草稿不随公开包分发。
 
 ## 引用、作者与许可
 

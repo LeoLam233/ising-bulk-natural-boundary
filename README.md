@@ -1,6 +1,6 @@
 # A candidate natural-boundary proof for the bulk Ising susceptibility
 
-**v0.1-rc3 · prepared for release · NOT PUBLISHED · Dehao Lin**
+**v0.1-rc3 · Dehao Lin**
 
 [中文说明](README.zh.md) · [Paper PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf)
 
@@ -45,7 +45,7 @@ The divergent-first-term / controlled-tail strategy is established prior work in
 | Finite computations | Reproducible algebra and numerical diagnostics; no continuous-domain or infinite-tail certification. |
 | Human / formal review | No independent human expert certification or proof-assistant verification recorded. |
 
-These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [release-prep status](release/RC3_RELEASE_PREP_STATUS.json).
+These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [historical release-prep status](release/RC3_RELEASE_PREP_STATUS.json).
 
 ## How to scrutinize
 
@@ -63,7 +63,7 @@ python -m pip install -r requirements.txt
 python scripts/reproduce.py
 ```
 
-Outputs go to `.local/`, leaving evidence unchanged. Hashes establish identity; finite diagnostics do not prove the theorem. [Check scope](checks/README.md) · [build instructions](paper/README.md) · [release-prep validation](release/RC3_RELEASE_PREP_VALIDATION.json) · [frozen candidate validation](release/W1_CANDIDATE_VALIDATION.json) · [historical rc2 validation](release/FINAL_PUBLIC_VALIDATION.md).
+Outputs go to `.local/`, leaving evidence unchanged. Hashes establish identity; finite diagnostics do not prove the theorem. [Check scope](checks/README.md) · [build instructions](paper/README.md) · [historical release-prep validation](release/RC3_RELEASE_PREP_VALIDATION.json) · [frozen candidate validation](release/W1_CANDIDATE_VALIDATION.json) · [historical rc2 validation](release/FINAL_PUBLIC_VALIDATION.md).
 
 ## Citation, authorship and license
 

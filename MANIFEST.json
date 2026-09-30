@@ -1,7 +1,7 @@
 {
   "format": "ising-release-manifest-v1",
   "version": "0.1-rc3",
-  "created_utc": "2026-09-30T03:53:51.664112+00:00",
+  "created_utc": "2026-09-30T04:14:14.399997+00:00",
   "self_exclusion": "MANIFEST.json is excluded; the outer archive SHA-256 binds it. Local .git/.local/.venv/__pycache__ are excluded.",
   "mathematics_verified": false,
   "files": [
@@ -22,13 +22,13 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 676,
-      "sha256": "b3157aa02eca0833e5350c5169b96568892955331225f7c198cfde81e67a052e"
+      "bytes": 632,
+      "sha256": "7db19b6139fd05df843099b1d636a4b7408e6907d227774602f4708c8284f511"
     },
     {
       "path": "CLAIMS.md",
-      "bytes": 1821,
-      "sha256": "ce003b6c6e4bc6a93c7103ef0a3c572d24d3b6ccf84ae38636538c9c69dfa7a6"
+      "bytes": 1777,
+      "sha256": "0255c84657983c3dac1d88c4e27cd1d0161ce2a462c208c5c092860e1c0dc62d"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -47,23 +47,23 @@
     },
     {
       "path": "LIMITATIONS.md",
-      "bytes": 2729,
-      "sha256": "b000a5efb2b9bcaa89a40b83c8d1684b0f27556639855de833f22aa7347da0f9"
+      "bytes": 2679,
+      "sha256": "b011baceb43335a988a019afeaf46f2c7927d79361e468ea8798be9c5c8955f0"
     },
     {
       "path": "README.md",
-      "bytes": 6563,
-      "sha256": "2d1d8194696bce7df407fc44e1a70e5555b9cfa62bc61c0cce1a4bf254b1cf84"
+      "bytes": 6544,
+      "sha256": "0043c02061d72852236c288ba0d49c03913e8fca9c816bb1b3a18a75a70219a8"
     },
     {
       "path": "README.zh.md",
-      "bytes": 5689,
-      "sha256": "2360836b7f0a1379e18d24319ba079aeaf3add05be1c2b7110c5acb327e44daa"
+      "bytes": 5668,
+      "sha256": "5fc13ae7841f47ab3e39a1f17916cdcf7ddb99618869794dad46db2e2762d50f"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 4312,
-      "sha256": "2f76293220470721154b71f28e7c108a5caad85222c548f252910ecafbeff52f"
+      "bytes": 4197,
+      "sha256": "52a15e262f28e3845b3964f40a1e4cb75e32833cd9a9987c3931f5a5860d2796"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -232,18 +232,18 @@
     },
     {
       "path": "docs/PROOF_GUIDE.md",
-      "bytes": 3402,
-      "sha256": "fc3cf6959ac80850619fb13377c6f5aaba51ac15e04cffcb83496e79881bb305"
+      "bytes": 3339,
+      "sha256": "53d38ade6d2c18174e9f5e27a57f1899b23d5b3cae2aa0d5554b9b1df810c8d3"
     },
     {
       "path": "docs/expert_brief.pdf",
-      "bytes": 48623,
-      "sha256": "4dd39f245379aa98f677b210cbfe759f8aea2bd4a1910230c2a101cc924a52b3"
+      "bytes": 48545,
+      "sha256": "2ae1fbc808b340b955c65764d69191146baa7d4a56b73c8b20cee0ad8e51f61a"
     },
     {
       "path": "docs/expert_brief.tex",
-      "bytes": 7358,
-      "sha256": "67b4f7d1b5783f7483e82a600458771887f7bce5c853e849f25b9e7726b4e881"
+      "bytes": 7300,
+      "sha256": "5bc2420e66842d8e83a1da4c22b54e1f2712c521adf5ab7f295567a845d6c7e0"
     },
     {
       "path": "paper/LABEL_INDEX.json",
@@ -252,18 +252,18 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 2353,
-      "sha256": "e898f244b669f4c95e7676214df53769570b938b2cfd7826188500b9cd565a2a"
+      "bytes": 2328,
+      "sha256": "af8935dfe3df18bfa14e8997adfed45eb5c79f83c6bc7df104a4ab549d9a7c47"
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 305400,
-      "sha256": "393fba764e55240baab574176e7b14e148db1aa0ddbc950ea2e43031d34ff2a6"
+      "bytes": 305416,
+      "sha256": "b7652df4e77f3f7fe901b7acccb725c0111860a134457599013838e757727e77"
     },
     {
       "path": "paper/manuscript.tex",
-      "bytes": 134076,
-      "sha256": "db6e2448eb74302d6652b3f3fdcd646478e9d6191d7d548555c7226dac755140"
+      "bytes": 134130,
+      "sha256": "fa8da014511f54829a1fc40cc043c865761892054aee99bb9977f522fedb9bab"
     },
     {
       "path": "provenance/EXTERNAL_PREMISES.md",
@@ -322,8 +322,8 @@
     },
     {
       "path": "provenance/W1_REPAIR_AUDIT.md",
-      "bytes": 3695,
-      "sha256": "2ceaa92db9df7b4991f09c4b82d2998be0e7b0a28b32b2f2d6637a2fdcd594eb"
+      "bytes": 3709,
+      "sha256": "9f45e3de351effd68abe43a0d8db30081fabc22f2474e4a0fe3a91eb3c3d6e71"
     },
     {
       "path": "provenance/bibliographic_metadata.json",
@@ -1055,7 +1055,5 @@
       "bytes": 1744,
       "sha256": "1efdf6d5207f0bef2d7c225d7d9fbf2e8112a122aace0c46f8ae1179a7f69bff"
     }
-  ],
-  "publication_status": "NOT_PUBLISHED",
-  "release_preparation_status": "PREPARED_FOR_RELEASE"
+  ]
 }

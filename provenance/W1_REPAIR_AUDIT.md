@@ -1,6 +1,6 @@
-# W1 repair record — v0.1-rc3 release preparation
+# W1 repair record — v0.1-rc3
 
-Prepared 30 September 2026 from repository commit `47f95a386d329ae6a3e377fecceafde78ea0886c` (v0.1-rc2). The mathematical candidate was frozen, unreleased, at `813c6b9a21872ab5358d3da5cbbd99ed05210cf9`. Version 0.1-rc3 is now prepared for release and is not yet published; this pass changes metadata only. The rc2 artifacts and historical audit/release records retain their identities.
+Prepared 30 September 2026 from repository commit `47f95a386d329ae6a3e377fecceafde78ea0886c` (v0.1-rc2). The mathematical candidate was frozen, unreleased, at `813c6b9a21872ab5358d3da5cbbd99ed05210cf9`. Version 0.1-rc3 retains that mathematical content; subsequent changes concern metadata only. The rc2 artifacts and historical audit/release records retain their identities.
 
 ## Fresh scoped recheck of repair interfaces
 
@@ -21,4 +21,4 @@ The review rejected an interpretation that deletes factors by dividing the full-
 
 The analytic review re-derived pair compactness at endpoints and the double branch, the remaining-pair count, slope/collision costs, the deformed geometry, the direct kernel integral and the constant order. Scoped symbolic and finite numerical checks were executed separately. Finite grids do not establish continuous-domain bounds, and high precision is not interval certification. The old reconstruction outcomes remain historical.
 
-This is AI hostile audit and computational regression, with correlated-error risk. It is not independent human review, peer review or proof-assistant certification. The review does not newly certify the entire natural-boundary theorem, its external physical premises, or novelty. Historical build, page-index and finite-check receipts remain in [frozen candidate validation](../release/W1_CANDIDATE_VALIDATION.json). Current artifact identities and the mathematical-freeze result are in [release-prep validation](../release/RC3_RELEASE_PREP_VALIDATION.json).
+This is AI hostile audit and computational regression, with correlated-error risk. It is not independent human review, peer review or proof-assistant certification. The review does not newly certify the entire natural-boundary theorem, its external physical premises, or novelty. Historical build, page-index and finite-check receipts remain in [frozen candidate validation](../release/W1_CANDIDATE_VALIDATION.json). Historical release-preparation results remain in [release-prep validation](../release/RC3_RELEASE_PREP_VALIDATION.json); current artifact hashes are in the [manifest](../MANIFEST.json).

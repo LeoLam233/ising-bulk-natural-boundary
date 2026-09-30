@@ -9,7 +9,7 @@ authors:
     email: "lindh9@mail2.sysu.edu.cn"
 version: "0.1-rc3"
 license: CC-BY-4.0
-abstract: "AI-assisted candidate proof, prepared for release and not yet published; no independent human, peer-review or proof-assistant certification is claimed."
+abstract: "AI-assisted candidate proof; no independent human, peer-review or proof-assistant certification is claimed."
 keywords:
   - Ising model
   - susceptibility
