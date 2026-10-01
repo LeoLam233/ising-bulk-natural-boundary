@@ -1,0 +1,80 @@
+{
+  "version": "0.1-rc4",
+  "status": "PREPARED_FOR_RELEASE",
+  "publication_status": "NOT_PUBLISHED",
+  "prepared_on": "2026-10-01",
+  "frozen_mathematical_candidate_commit": "59881ee24f43b8caab60f81ab3f87f758cfc03d5",
+  "baseline_parent": "fc0f82d127081cc372b84ebcfac48da9f5ccd79f",
+  "public_rc3_ancestor": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
+  "release_prep_commit": {
+    "identity": "the commit containing this new record",
+    "resolution": "git log -1 --format=%H -- release/RC4_RELEASE_PREP_STATUS.json",
+    "exact_sha_receipt": "External RC4_RELEASE_PREP_REVIEW/COMMIT_RECEIPT.json",
+    "self_reference_note": "Containing commit SHA and final archive hashes are bound externally after the single commit; no impossible self-hash is embedded."
+  },
+  "proposed_tag": "v0.1-rc4",
+  "proposed_release_title": "v0.1-rc4: W2 proof repairs and E1 source closure",
+  "prerelease": true,
+  "tag_created": false,
+  "published": false,
+  "date_released": null,
+  "release_url": null,
+  "doi": null,
+  "mathematical_freeze": {
+    "status": "PASS",
+    "substantive_mathematical_hunks": 0,
+    "all_displayed_equations_identical": true,
+    "all_theorem_proof_environments_identical": true,
+    "all_sections_3_to_9_appendices_A_to_F_identical": true,
+    "bibliography_and_label_set_identical": true,
+    "label_index_byte_identical": true,
+    "entire_tex_matches_exact_authorized_metadata_substitutions": true,
+    "protected_file_count": 191,
+    "full_mathematical_certification": false
+  },
+  "artifacts": {
+    "paper/manuscript.tex": {
+      "baseline_sha256": "dc9ec33f86c474d7498c55ed3b8feab2f47db45e4aebaa70e825d38f160399d0",
+      "baseline_bytes": 145859,
+      "current_sha256": "2f3ad3af8b893e2387304a680dcf9cc5fa6b12a389e3ab7486e5c71512fd6235",
+      "current_bytes": 145872
+    },
+    "paper/manuscript.pdf": {
+      "baseline_sha256": "20344b42c87f461bf75c172e8cc684c9d0b976085031039e6f3ee2971d2b0e6d",
+      "baseline_bytes": 325544,
+      "current_sha256": "624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693",
+      "current_bytes": 325870
+    },
+    "docs/expert_brief.tex": {
+      "baseline_sha256": "12b6760a80a5cafb63ef9e5dd0875f85552285e5e82bfeceb3ce564c9a5cf920",
+      "baseline_bytes": 7362,
+      "current_sha256": "82f16b3ed23cac943ec1acf577586a970174a0fc2c7d6d0bcb2dd62ae056c447",
+      "current_bytes": 7312
+    },
+    "docs/expert_brief.pdf": {
+      "baseline_sha256": "cfb52245c2d4ff1fbecf134badeee6f5724ebf55cd0971b6b371118a8a5979a7",
+      "baseline_bytes": 48672,
+      "current_sha256": "8373002517e65dc41543f1a2c2230b0c29099f811413829bab923dedc64d882b",
+      "current_bytes": 48629
+    },
+    "paper/LABEL_INDEX.json": {
+      "baseline_sha256": "586aa17ed2db26f14d59a1587fac98fb1d1ac39b353d194dd9e4755071a4a896",
+      "baseline_bytes": 5022,
+      "current_sha256": "586aa17ed2db26f14d59a1587fac98fb1d1ac39b353d194dd9e4755071a4a896",
+      "current_bytes": 5022
+    }
+  },
+  "baseline_snapshot_sha256": "4496460cf1fd70b96dd883450c4447b6b3742d2fa6179bb6f91c21d3a4c8da3c",
+  "current_source_snapshot": "Exact ising-bulk-natural-boundary-v0.1-rc4.zip and its SHA-256 are bound externally in COMMIT_RECEIPT.json and the final receipt.",
+  "epistemic_scope": {
+    "AI_assisted_candidate_proof": true,
+    "release_preparation": "Release metadata, mathematical source preservation, structural/build checks and finite diagnostic replay only",
+    "independent_human_certification": false,
+    "peer_reviewed": false,
+    "proof_assistant_verified": false,
+    "full_mathematical_certification": false,
+    "finite_diagnostics_prove_uniform_or_infinite_tail_claims": false,
+    "exhaustive_novelty_priority_clearance": false
+  },
+  "validation": "RC4_RELEASE_PREP_VALIDATION.json"
+}

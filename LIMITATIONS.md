@@ -11,6 +11,6 @@
 
 The most valuable next evidence is an independent mathematical reading of the complete-pair compactness, selected-contour Pfaffian budget, and high-order differentiation/coarea interfaces, plus the whole-integral first-term glue. This list is a suggested entry route, not a statement that all other claims are certified.
 
-## Local W2 candidate
+## Current rc4 candidate
 
-Version `0.1-rc4-unreleased` is unpublished. Its W2 argument received a scoped AI derivation and edited-text regression. Finite diagnostics only corroborate sampled cases. The E1 state/source/normalization interface has been checked against primary sources and exact derivations; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). Independent human, peer and proof-assistant certification remain outstanding. Historical rc3 records retain their original scope. See [W2 provenance](provenance/W2_REPAIR_AUDIT.md).
+Version `0.1-rc4` is an AI-assisted candidate prepared for public mathematical review. Its W2 argument received a scoped AI derivation and edited-text regression. Finite diagnostics only corroborate sampled cases. The E1 state/source/normalization interface has been checked against primary sources and exact derivations; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). Independent human, peer and proof-assistant certification remain outstanding. Historical rc3 records retain their original scope. See [W2 provenance](provenance/W2_REPAIR_AUDIT.md).

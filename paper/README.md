@@ -1,6 +1,6 @@
 # Standalone manuscript and build
 
-`manuscript.tex` embeds all sections, appendices and twelve bibliography entries. It has no external chapter or bibliography dependency. `manuscript.pdf` is the compiled v0.1-rc3 artifact; its SHA-256 is in the repository manifest. `LABEL_INDEX.json` maps all 65 labels to this PDF's numbering/pages.
+`manuscript.tex` embeds all sections, appendices and twelve bibliography entries. It has no external chapter or bibliography dependency. `manuscript.pdf` is the compiled v0.1-rc4 candidate artifact; its SHA-256 is in the repository manifest. `LABEL_INDEX.json` maps all 65 labels to this PDF's numbering/pages.
 
 Build with an existing Tectonic installation:
 

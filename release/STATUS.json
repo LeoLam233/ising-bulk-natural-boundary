@@ -1,5 +1,5 @@
 {
-  "version": "0.1-rc4-unreleased",
+  "version": "0.1-rc4",
   "prepared_on": "2026-10-01",
   "manuscript_status": "CANDIDATE_COMPLETE_PROOF",
   "full_mathematical_certification": false,
@@ -22,18 +22,17 @@
     "MIT (code)",
     "CC-BY-4.0 (project text)"
   ],
-  "release_stage": "UNRELEASED_LOCAL_CANDIDATE",
   "candidate_proof": true,
   "peer_reviewed": false,
   "independent_human_certification": false,
   "proof_assistant_verified": false,
   "evidence_snapshot_date": "2026-09-28",
-  "status_scope": "Current local candidate status; historical validation records retain their original versions.",
-  "publication_authorized": false,
-  "published": false,
-  "parent_commit": "fc0f82d127081cc372b84ebcfac48da9f5ccd79f",
+  "status_scope": "Static scholarly status for the v0.1-rc4 candidate; publication state belongs in release-prep records and external receipts. Historical validation records retain their original versions.",
   "E1_source_closure": "CLOSED_SCOPED_PRIMARY_SOURCE_INTERFACE",
   "E1_provenance": "provenance/E1_SOURCE_CLOSURE.md",
   "E1_scope": "Real + boundary-condition state, determinant and normalized measures, fixed-N full-site/offsite relation; no full-theorem certification",
-  "public_rc3_ancestor": "c36735380a9746bba5e84f9b6adec2a494d1fd4c"
+  "public_rc3_ancestor": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
+  "review_status": "CANDIDATE_FOR_PUBLIC_MATHEMATICAL_REVIEW",
+  "frozen_mathematical_candidate_commit": "59881ee24f43b8caab60f81ab3f87f758cfc03d5",
+  "release_preparation": "release/RC4_RELEASE_PREP_STATUS.json"
 }

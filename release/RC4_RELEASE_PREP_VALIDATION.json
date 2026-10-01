@@ -1,0 +1,296 @@
+{
+  "version": "0.1-rc4",
+  "status": "PREPARED_FOR_RELEASE",
+  "publication_status": "NOT_PUBLISHED",
+  "prepared_on": "2026-10-01",
+  "frozen_mathematical_candidate_commit": "59881ee24f43b8caab60f81ab3f87f758cfc03d5",
+  "baseline_parent": "fc0f82d127081cc372b84ebcfac48da9f5ccd79f",
+  "public_rc3_ancestor": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
+  "release_prep_commit": {
+    "identity": "the commit containing this new record",
+    "resolution": "git log -1 --format=%H -- release/RC4_RELEASE_PREP_STATUS.json",
+    "exact_sha_receipt": "External RC4_RELEASE_PREP_REVIEW/COMMIT_RECEIPT.json",
+    "self_reference_note": "Containing commit SHA and final archive hashes are bound externally after the single commit; no impossible self-hash is embedded."
+  },
+  "proposed_tag": "v0.1-rc4",
+  "proposed_release_title": "v0.1-rc4: W2 proof repairs and E1 source closure",
+  "prerelease": true,
+  "tag_created": false,
+  "published": false,
+  "date_released": null,
+  "release_url": null,
+  "doi": null,
+  "mathematical_freeze": {
+    "status": "PASS",
+    "substantive_mathematical_hunks": 0,
+    "all_displayed_equations_identical": true,
+    "all_theorem_proof_environments_identical": true,
+    "all_sections_3_to_9_appendices_A_to_F_identical": true,
+    "bibliography_and_label_set_identical": true,
+    "label_index_byte_identical": true,
+    "entire_tex_matches_exact_authorized_metadata_substitutions": true,
+    "protected_file_count": 191,
+    "full_mathematical_certification": false
+  },
+  "artifacts": {
+    "paper/manuscript.tex": {
+      "baseline_sha256": "dc9ec33f86c474d7498c55ed3b8feab2f47db45e4aebaa70e825d38f160399d0",
+      "baseline_bytes": 145859,
+      "current_sha256": "2f3ad3af8b893e2387304a680dcf9cc5fa6b12a389e3ab7486e5c71512fd6235",
+      "current_bytes": 145872
+    },
+    "paper/manuscript.pdf": {
+      "baseline_sha256": "20344b42c87f461bf75c172e8cc684c9d0b976085031039e6f3ee2971d2b0e6d",
+      "baseline_bytes": 325544,
+      "current_sha256": "624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693",
+      "current_bytes": 325870
+    },
+    "docs/expert_brief.tex": {
+      "baseline_sha256": "12b6760a80a5cafb63ef9e5dd0875f85552285e5e82bfeceb3ce564c9a5cf920",
+      "baseline_bytes": 7362,
+      "current_sha256": "82f16b3ed23cac943ec1acf577586a970174a0fc2c7d6d0bcb2dd62ae056c447",
+      "current_bytes": 7312
+    },
+    "docs/expert_brief.pdf": {
+      "baseline_sha256": "cfb52245c2d4ff1fbecf134badeee6f5724ebf55cd0971b6b371118a8a5979a7",
+      "baseline_bytes": 48672,
+      "current_sha256": "8373002517e65dc41543f1a2c2230b0c29099f811413829bab923dedc64d882b",
+      "current_bytes": 48629
+    },
+    "paper/LABEL_INDEX.json": {
+      "baseline_sha256": "586aa17ed2db26f14d59a1587fac98fb1d1ac39b353d194dd9e4755071a4a896",
+      "baseline_bytes": 5022,
+      "current_sha256": "586aa17ed2db26f14d59a1587fac98fb1d1ac39b353d194dd9e4755071a4a896",
+      "current_bytes": 5022
+    }
+  },
+  "baseline_snapshot_sha256": "4496460cf1fd70b96dd883450c4447b6b3742d2fa6179bb6f91c21d3a4c8da3c",
+  "current_source_snapshot": "Exact ising-bulk-natural-boundary-v0.1-rc4.zip and its SHA-256 are bound externally in COMMIT_RECEIPT.json and the final receipt.",
+  "epistemic_scope": {
+    "AI_assisted_candidate_proof": true,
+    "release_preparation": "Release metadata, mathematical source preservation, structural/build checks and finite diagnostic replay only",
+    "independent_human_certification": false,
+    "peer_reviewed": false,
+    "proof_assistant_verified": false,
+    "full_mathematical_certification": false,
+    "finite_diagnostics_prove_uniform_or_infinite_tail_claims": false,
+    "exhaustive_novelty_priority_clearance": false
+  },
+  "validation": "RC4_RELEASE_PREP_VALIDATION.json",
+  "validation_scope": "Mathematical preservation and release consistency; no new mathematical repair or certification",
+  "build": {
+    "exit_code": 0,
+    "seconds": 2.14996600151062,
+    "command": [
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "scripts/build_paper.py",
+      "--tectonic",
+      "C:\\Users\\Administrator\\Documents\\Codex\\2026-09-30\\read-the-supplied-handoff-package-starting\\work\\tooling\\tectonic\\tectonic.exe"
+    ],
+    "environment": {
+      "PYTHONPATH": "C:\\Users\\Administrator\\Documents\\Codex\\2026-09-30\\read-the-supplied-handoff-package-starting-2\\work\\packages",
+      "PYTHONUTF8": "1",
+      "PYTHONIOENCODING": "utf-8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "build_directory": "C:\\Users\\Administrator\\Documents\\Codex\\2026-09-30\\read-the-supplied-handoff-package-starting-2\\work\\repository\\.local\\build-uxvd6_zz",
+    "engine": "Portable Tectonic 0.17.0",
+    "cached_only": true,
+    "source_date_epoch": "1790812800",
+    "label_index_matches_aux": true
+  },
+  "finite_diagnostics": {
+    "purpose": "Selected finite diagnostic replay; not mathematical certification",
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    },
+    "comparison": {
+      "numeric_rtol": 1e-10,
+      "numeric_atol": 1e-10,
+      "metadata_keys_ignored": [
+        "environment",
+        "generated_at",
+        "input_files",
+        "input_hashes",
+        "input_sha256",
+        "source_sha256",
+        "timestamp",
+        "versions"
+      ],
+      "interval_certified": false
+    },
+    "checks": [
+      {
+        "id": "v7_core",
+        "exit_code": 0,
+        "seconds": 0.398,
+        "output": ".local/checks-zbp6z2l5/v7_core/check_results.json",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "v7_normalization",
+        "exit_code": 0,
+        "seconds": 0.374,
+        "output": ".local/checks-zbp6z2l5/v7_normalization/independent_normalization_results.json",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "v7_additional",
+        "exit_code": 0,
+        "seconds": 0.098,
+        "output": ".local/checks-zbp6z2l5/v7_additional/stdout.txt",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "v6_diagnostics",
+        "exit_code": 0,
+        "seconds": 0.403,
+        "output": ".local/checks-zbp6z2l5/v6_diagnostics/result.json",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "mr1_algebra",
+        "exit_code": 0,
+        "seconds": 0.685,
+        "output": ".local/checks-zbp6z2l5/mr1_algebra/stdout.txt",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      },
+      {
+        "id": "mr1_coupled",
+        "exit_code": 0,
+        "seconds": 0.353,
+        "output": ".local/checks-zbp6z2l5/mr1_coupled/stdout.txt",
+        "historical_differences": [],
+        "status": "REPRODUCED_FINITE_CHECK"
+      }
+    ],
+    "all_reproduced": true,
+    "full_natural_boundary_certified": false
+  },
+  "E1_replay": {
+    "status": "PASS",
+    "exact_checks": [
+      {
+        "name": "independent Cartesian lattice generating function minus origin",
+        "exact_residual": "0"
+      },
+      {
+        "name": "journal full-site integrand decomposition",
+        "exact_residual": "0"
+      },
+      {
+        "name": "dispersion polynomial",
+        "exact_residual": "0"
+      },
+      {
+        "name": "normalized auxiliary residue",
+        "exact_residual": "0"
+      },
+      {
+        "name": "candidate ordinary residue",
+        "exact_residual": "0"
+      },
+      {
+        "name": "no spurious pole at zero for nonnegative lattice row",
+        "exact_value": "-2"
+      },
+      {
+        "name": "two pair-sign changes cancel",
+        "exact_residual": "0"
+      },
+      {
+        "name": "all-N measure ratio",
+        "exact_value": "1"
+      },
+      {
+        "name": "bare Eq7 integral to Eq8 for every even N=2n",
+        "exact_value": "1"
+      },
+      {
+        "name": "pair relation is exactly minus common-dispersion numerator",
+        "exact_value": "-1"
+      }
+    ],
+    "supplied_script_sha256": "7e0d9b08d46901f1025146f99bccf394655144a95de9208cf9f163c0a23a2f6d",
+    "supplied_exit_code": 0,
+    "scope": "Replay of the available exact E1 algebra and finite supplied diagnostics; frozen Appendix F and E1 phase record unchanged. No new source audit or full-theorem certification.",
+    "limitations": "Supplied S4d is unconditional True; supplied S7 is numerical. Neither is counted as exact proof. Prior favorable verdicts are records, not mathematical premises.",
+    "full_mathematical_certification": false
+  },
+  "visual_review": {
+    "status": "PASS",
+    "manuscript_pages": 42,
+    "expert_brief_pages": 2,
+    "changed_manuscript_pages": [
+      1,
+      40
+    ],
+    "changed_brief_pages": [
+      1,
+      2
+    ],
+    "all_changed_pages_inspected": true,
+    "other_40_manuscript_pages_pixel_identical": true,
+    "blocking_defects": []
+  },
+  "historical_records": "All audits, reproduction, provenance (including W1/W2/E1), checks and older release records remain byte-identical; older release-note suffix is byte-identical.",
+  "structural_validation": {
+    "status": "PASS",
+    "scope": "Structural and adversarial release-consistency checks; not theorem certification",
+    "tex": {
+      "labels": 65,
+      "references": 134,
+      "citations": 40,
+      "bibliography_items": 12,
+      "unresolved": [],
+      "label_index_matches_aux": true
+    },
+    "manuscript_warnings": [],
+    "expert_brief_warnings": [],
+    "local_markdown_links": {
+      "checked": 185,
+      "missing": []
+    },
+    "relative_to_rc3": {
+      "all_theorem_statements_unchanged": true,
+      "selected_cyclotomic_family_section_unchanged": true,
+      "derivative_and_particle_windows": "All source bytes frozen against E1 baseline; rc3 unchanged theorem statements retain their quantifiers and ranges."
+    },
+    "public_facing_consistency": {
+      "status": "PASS",
+      "current_stale_hits": 0,
+      "intentional_history_occurrences": 14,
+      "static_scholarly_status": true
+    },
+    "actual_diff_review": {
+      "status": "PASS",
+      "substantive_mathematical_hunks": 0,
+      "assessment": "Actual metadata, README, release-note and static-status hunks inspected. Entire TeX equals the baseline after the recorded metadata-only substitutions. New release records parsed and scoped. paper/README.md current PDF version corrected; historical records untouched."
+    },
+    "pdfs": {
+      "paper/manuscript.pdf": {
+        "sha256": "624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693",
+        "pages": 42
+      },
+      "docs/expert_brief.pdf": {
+        "sha256": "8373002517e65dc41543f1a2c2230b0c29099f811413829bab923dedc64d882b",
+        "pages": 2
+      }
+    }
+  },
+  "syntax_counts": {
+    ".json": 60,
+    ".cff": 1,
+    ".py": 27
+  },
+  "final_identity_and_integrity": "External commit, snapshot and package receipts bind exact hashes without self-reference. MANIFEST.json excludes itself and is bound by the exact release ZIP."
+}

@@ -1,10 +1,33 @@
-# v0.1-rc4-unreleased: local E1 integration
+# v0.1-rc4: W2 proof repairs and E1 source closure
 
-Prepared 1 October 2026 above the frozen W2 candidate `fc0f82d127081cc372b84ebcfac48da9f5ccd79f`.
+Prepared 1 October 2026 for public mathematical review. Public predecessor: `v0.1-rc3`, commit `c36735380a9746bba5e84f9b6adec2a494d1fd4c`. The mathematical baseline for this metadata-only release preparation is `59881ee24f43b8caab60f81ab3f87f758cfc03d5`.
 
-The real-axis definition now uses Palmer–Tracy's infinite-volume + boundary-condition state, with the spin-flip relation to the - state. Source locators and determinant/sign and lattice-interchange explanations are explicit. TW2014 formulas are cited from the published journal version, whose normalization agrees with the manuscript. Its full-site coefficient is defined precisely and split as `C_N^std=f00^(N)+2T_N` by an exact numerator identity. The arXiv-v1 history is confined to [E1 provenance](provenance/E1_SOURCE_CLOSURE.md).
+Compared with public rc3, rc4 incorporates two distinct changes:
 
-The theorem, `eq:double`, `eq:bulk`, W1/W2 mathematics, selected points, derivative ranges and particle windows are unchanged. E1 integration closes the scoped source interface; the full theorem remains an AI-assisted candidate without independent human, peer or proof-assistant certification. Historical records retain their original bytes and verdict scopes. Version remains `0.1-rc4-unreleased`; publication is not authorized.
+**W2 proof-interface repairs**, integrated at `fc0f82d127081cc372b84ebcfac48da9f5ccd79f`:
+
+- explicit B/L/R support geometry and strict same-group contraction;
+- local root continuation and regular double-branch treatment;
+- reserved disk slack and tau-dependent protected disk restriction;
+- direct remaining-pair recount and coupled-occupancy bookkeeping;
+- Lemma 7.3 pair estimates explicitly confined to K and named-Stokes supports, rather than the unrestricted original torus.
+
+These are substantive proof-interface repairs. See the frozen [W2 phase record](provenance/W2_REPAIR_AUDIT.md).
+
+**E1 source-interface closure**, integrated at `59881ee24f43b8caab60f81ab3f87f758cfc03d5`:
+
+- Palmer–Tracy's infinite-volume + boundary-condition state and its spin-flip relation to the - state;
+- published Tracy–Widom 2014 normalization, determinant/sign explanations and Appendix 1 source locators;
+- exact fixed-N full-site/offsite relation `C_N^std=f00^(N)+2T_N`;
+- the arXiv-v1-only normalization discrepancy confined to provenance and history.
+
+E1 is source/exposition integration closing a scoped interface, not a new theorem proof. See the frozen [E1 phase record](provenance/E1_SOURCE_CLOSURE.md).
+
+The theorem statement, selected cyclotomic point family, derivative range and particle-number windows are unchanged relative to rc3. Release preparation preserves all mathematical source content at `59881ee...`, including `eq:double`, `eq:bulk` and W1/W2/E1 derivations.
+
+This remains an AI-assisted candidate proof without independent human, peer or proof-assistant certification. Finite diagnostics and hashes do not prove uniform analytic or infinite-tail claims. Older audit verdicts remain tied to their input versions; no exhaustive novelty or priority clearance is claimed.
+
+The proposed tag is `v0.1-rc4`; release preparation creates no tag or publication. [Rc4 release-prep status](release/RC4_RELEASE_PREP_STATUS.json), [validation](release/RC4_RELEASE_PREP_VALIDATION.json) and [static scholarly status](release/STATUS.json) distinguish preparation from mathematical certification. Older release-note sections below retain their exact bytes.
 
 ---
 

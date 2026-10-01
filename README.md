@@ -1,6 +1,6 @@
 # A candidate natural-boundary proof for the bulk Ising susceptibility
 
-**v0.1-rc4-unreleased · Local unpublished candidate · Dehao Lin**
+**v0.1-rc4 · Candidate for public mathematical review · Dehao Lin**
 
 [中文说明](README.zh.md) · [Paper PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf)
 
@@ -36,11 +36,11 @@ The divergent-first-term / controlled-tail strategy is established prior work in
 
 ## Status and limitations
 
-This is an `UNRELEASED_LOCAL_CANDIDATE`. The W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. The E1 state/source/normalization interface has been checked; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). [Current candidate status](release/STATUS.json).
+This is an AI-assisted candidate proof prepared for public mathematical review. The W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. The E1 state/source/normalization interface has been checked; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). [Scholarly status](release/STATUS.json). [Rc4 release-prep status](release/RC4_RELEASE_PREP_STATUS.json) and [validation](release/RC4_RELEASE_PREP_VALIDATION.json).
 
 | Evidence | Status and limit in this candidate snapshot |
 |---|---|
-| Manuscript | Candidate complete argument with historical [W1 repairs](provenance/W1_REPAIR_AUDIT.md) and local [W2 repairs](provenance/W2_REPAIR_AUDIT.md). |
+| Manuscript | Candidate complete argument with historical [W1 repairs](provenance/W1_REPAIR_AUDIT.md) and [W2 repairs](provenance/W2_REPAIR_AUDIT.md). |
 | AI adversarial audits | Earlier errors prompted repairs. Favorable verdicts apply only to their input versions and checked scope; they are not peer review or current certification. |
 | Problem-only CR0 | Three returned runs, all `PARTIAL`; complete natural-boundary reconstructions: **0/3**. |
 | Method-informed MR1 | One `CLAIMED_TAIL_PROOF`; I3 unresolved, I6 conditional. Receiver checks did **not** independently certify the entire tail proof. |

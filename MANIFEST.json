@@ -1,7 +1,7 @@
 {
   "format": "ising-release-manifest-v1",
-  "version": "0.1-rc4-unreleased",
-  "created_utc": "2026-10-01T04:59:33.352370+00:00",
+  "version": "0.1-rc4",
+  "created_utc": "2026-10-01T06:08:56.542306+00:00",
   "self_exclusion": "MANIFEST.json is excluded; the outer archive SHA-256 binds it. Local .git/.local/.venv/__pycache__ are excluded.",
   "mathematics_verified": false,
   "files": [
@@ -22,13 +22,13 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 643,
-      "sha256": "b2446c69df99dd7ba44dd485f10211798438a668bb348d2a43e2af07c568f697"
+      "bytes": 632,
+      "sha256": "b3ae710de0100d4f2f765d412f261afa7d72f7d533f14d5fa595a60f8c46100c"
     },
     {
       "path": "CLAIMS.md",
-      "bytes": 2079,
-      "sha256": "f67fc72212ff8b18deb637b7cf340f49eada61fd8105aeab91efa1f2a7b3a292"
+      "bytes": 2062,
+      "sha256": "527d90067019b0ae5c6c5c22929fe4a24a5120172c24fd6c413d8f31e3848a67"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -47,23 +47,23 @@
     },
     {
       "path": "LIMITATIONS.md",
-      "bytes": 3216,
-      "sha256": "47f45d7b93ec178b4821863da08e35b05f6438a141e8c3f0a1bd8060b595db5a"
+      "bytes": 3261,
+      "sha256": "73ed823960984c02cae005c76a02c8f618a760f7d8ff7fea8fe033ba0e638d01"
     },
     {
       "path": "README.md",
-      "bytes": 6924,
-      "sha256": "50ca7206234175b379ce69cd2911b62c7b62fc68b001723d1d8a56f3cdf624ae"
+      "bytes": 7075,
+      "sha256": "8a592ae448a4c17a4d4d494039aec0a962010fa141f23a9b9a2b7c19da99334a"
     },
     {
       "path": "README.zh.md",
-      "bytes": 6111,
-      "sha256": "0bc0d3780880df8b8b7d81c227c94b75362cc3998757eba3905fe8191ceb8f8f"
+      "bytes": 6196,
+      "sha256": "5941e89b52c7fe154fbd399c267cec134fd855fbb2848964a3ccd94c47e836ea"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 5316,
-      "sha256": "504cf1760ba05fb79b664804cbe3d291d30402944e7c12901227cecf1418605b"
+      "bytes": 6738,
+      "sha256": "3727ba121f5682712029d663a4d897718532b10bb4492dedb31fe21b88363673"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -237,13 +237,13 @@
     },
     {
       "path": "docs/expert_brief.pdf",
-      "bytes": 48672,
-      "sha256": "cfb52245c2d4ff1fbecf134badeee6f5724ebf55cd0971b6b371118a8a5979a7"
+      "bytes": 48629,
+      "sha256": "8373002517e65dc41543f1a2c2230b0c29099f811413829bab923dedc64d882b"
     },
     {
       "path": "docs/expert_brief.tex",
-      "bytes": 7362,
-      "sha256": "12b6760a80a5cafb63ef9e5dd0875f85552285e5e82bfeceb3ce564c9a5cf920"
+      "bytes": 7312,
+      "sha256": "82f16b3ed23cac943ec1acf577586a970174a0fc2c7d6d0bcb2dd62ae056c447"
     },
     {
       "path": "paper/LABEL_INDEX.json",
@@ -252,18 +252,18 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 2328,
-      "sha256": "af8935dfe3df18bfa14e8997adfed45eb5c79f83c6bc7df104a4ab549d9a7c47"
+      "bytes": 2338,
+      "sha256": "271b6a478ffee6b4d9f2d0bf6cfd76902176ebc5bf8b26cac208fc4d265e5a24"
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 325544,
-      "sha256": "20344b42c87f461bf75c172e8cc684c9d0b976085031039e6f3ee2971d2b0e6d"
+      "bytes": 325870,
+      "sha256": "624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693"
     },
     {
       "path": "paper/manuscript.tex",
-      "bytes": 145859,
-      "sha256": "dc9ec33f86c474d7498c55ed3b8feab2f47db45e4aebaa70e825d38f160399d0"
+      "bytes": 145872,
+      "sha256": "2f3ad3af8b893e2387304a680dcf9cc5fa6b12a389e3ab7486e5c71512fd6235"
     },
     {
       "path": "provenance/E1_SOURCE_CLOSURE.md",
@@ -426,14 +426,24 @@
       "sha256": "622287ab3b2486086b242d03da0736ce964b21cdecd5c9cd29ce560a85b53355"
     },
     {
+      "path": "release/RC4_RELEASE_PREP_STATUS.json",
+      "bytes": 3743,
+      "sha256": "31ff13259bdb0584950bef97554d7f1302534a41147b4911756dde9c9d68fcfe"
+    },
+    {
+      "path": "release/RC4_RELEASE_PREP_VALIDATION.json",
+      "bytes": 11171,
+      "sha256": "432ad2bf85dd7fcaf23445e75632699507fa9a3429a8f627da0995ab22d664d9"
+    },
+    {
       "path": "release/REPRODUCTION_RECORD.json",
       "bytes": 2954,
       "sha256": "dfa5718f430dd579c6c9ea692f669295583932fbbacad6dc17402684daaab22f"
     },
     {
       "path": "release/STATUS.json",
-      "bytes": 1483,
-      "sha256": "4ce2019eae83580a6c8cd4567eb6f4e218b128d142af7058f729a340916ad33c"
+      "bytes": 1610,
+      "sha256": "6b210dbad74051111f1f5e1de348f95fea5db99c82d549da84d3c0e5abecac03"
     },
     {
       "path": "release/VALIDATION.md",
