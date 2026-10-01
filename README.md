@@ -36,7 +36,7 @@ The divergent-first-term / controlled-tail strategy is established prior work in
 
 ## Status and limitations
 
-This is an `UNRELEASED_LOCAL_CANDIDATE`. The W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. E1 source closure remains pending. [Current candidate status](release/W2_CANDIDATE_STATUS.json).
+This is an `UNRELEASED_LOCAL_CANDIDATE`. The W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. The E1 state/source/normalization interface has been checked; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). [Current candidate status](release/STATUS.json).
 
 | Evidence | Status and limit in this candidate snapshot |
 |---|---|

@@ -1,7 +1,7 @@
 {
   "format": "ising-release-manifest-v1",
   "version": "0.1-rc4-unreleased",
-  "created_utc": "2026-09-30T11:53:31.084234+00:00",
+  "created_utc": "2026-10-01T04:59:33.352370+00:00",
   "self_exclusion": "MANIFEST.json is excluded; the outer archive SHA-256 binds it. Local .git/.local/.venv/__pycache__ are excluded.",
   "mathematics_verified": false,
   "files": [
@@ -47,23 +47,23 @@
     },
     {
       "path": "LIMITATIONS.md",
-      "bytes": 3078,
-      "sha256": "ccbb496fe296339903395f7b373f153dad8f5c7df34665d6803d5d58920695da"
+      "bytes": 3216,
+      "sha256": "47f45d7b93ec178b4821863da08e35b05f6438a141e8c3f0a1bd8060b595db5a"
     },
     {
       "path": "README.md",
-      "bytes": 6859,
-      "sha256": "7c237d72b0b35a948dcfc34ebdfc6aadcbf83bcc15c67d2ae63007588e3e3061"
+      "bytes": 6924,
+      "sha256": "50ca7206234175b379ce69cd2911b62c7b62fc68b001723d1d8a56f3cdf624ae"
     },
     {
       "path": "README.zh.md",
-      "bytes": 5934,
-      "sha256": "dc9251e10962d8d51566b053aa98ba47f27d25bddeb325e5da960cae7e95acb5"
+      "bytes": 6111,
+      "sha256": "0bc0d3780880df8b8b7d81c227c94b75362cc3998757eba3905fe8191ceb8f8f"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 4197,
-      "sha256": "52a15e262f28e3845b3964f40a1e4cb75e32833cd9a9987c3931f5a5860d2796"
+      "bytes": 5316,
+      "sha256": "504cf1760ba05fb79b664804cbe3d291d30402944e7c12901227cecf1418605b"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -237,13 +237,13 @@
     },
     {
       "path": "docs/expert_brief.pdf",
-      "bytes": 48550,
-      "sha256": "92c6713cee37ad96029244ecf40141a34b7d1a3acacb8dfd05fa2c40042533c4"
+      "bytes": 48672,
+      "sha256": "cfb52245c2d4ff1fbecf134badeee6f5724ebf55cd0971b6b371118a8a5979a7"
     },
     {
       "path": "docs/expert_brief.tex",
-      "bytes": 7248,
-      "sha256": "6d93dd9939e03e97dc2f98b02da2c4a52f95869a03a63eda2b36fc65c93b4291"
+      "bytes": 7362,
+      "sha256": "12b6760a80a5cafb63ef9e5dd0875f85552285e5e82bfeceb3ce564c9a5cf920"
     },
     {
       "path": "paper/LABEL_INDEX.json",
@@ -257,18 +257,23 @@
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 322429,
-      "sha256": "4b47af43f843dade5e3dfb47d871f66f8b5b87eb818072cfd82c58192f16e8d9"
+      "bytes": 325544,
+      "sha256": "20344b42c87f461bf75c172e8cc684c9d0b976085031039e6f3ee2971d2b0e6d"
     },
     {
       "path": "paper/manuscript.tex",
-      "bytes": 144053,
-      "sha256": "2f92919e54a91b80e0b3a0d04d2e7855d0049d848ef643f652477c703cae8ed3"
+      "bytes": 145859,
+      "sha256": "dc9ec33f86c474d7498c55ed3b8feab2f47db45e4aebaa70e825d38f160399d0"
+    },
+    {
+      "path": "provenance/E1_SOURCE_CLOSURE.md",
+      "bytes": 5992,
+      "sha256": "c7243c5ec573e36a4064cc4b74e73c2e9ae0da331716871012910194ad49c6fb"
     },
     {
       "path": "provenance/EXTERNAL_PREMISES.md",
-      "bytes": 3513,
-      "sha256": "200131868a3faf0bf939aac7d4cf9915d46bd18f6eae270523d51b567e62cb8d"
+      "bytes": 3939,
+      "sha256": "54ec768dd615de4a64f6ab0c52da0958ceff190aa3eeddea13e7b604f43fdaf5"
     },
     {
       "path": "provenance/FROZEN_INPUTS.json",
@@ -427,8 +432,8 @@
     },
     {
       "path": "release/STATUS.json",
-      "bytes": 1176,
-      "sha256": "4f8a64eb42252907f7578bf84c0905678fdf06a198841ec766ea11a41f3c1361"
+      "bytes": 1483,
+      "sha256": "4ce2019eae83580a6c8cd4567eb6f4e218b128d142af7058f729a340916ad33c"
     },
     {
       "path": "release/VALIDATION.md",

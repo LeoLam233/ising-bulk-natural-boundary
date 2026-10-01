@@ -1,6 +1,6 @@
 {
   "version": "0.1-rc4-unreleased",
-  "prepared_on": "2026-09-30",
+  "prepared_on": "2026-10-01",
   "manuscript_status": "CANDIDATE_COMPLETE_PROOF",
   "full_mathematical_certification": false,
   "full_blind_reproductions": 0,
@@ -31,6 +31,9 @@
   "status_scope": "Current local candidate status; historical validation records retain their original versions.",
   "publication_authorized": false,
   "published": false,
-  "parent_commit": "c36735380a9746bba5e84f9b6adec2a494d1fd4c",
-  "E1_source_closure": "PENDING"
+  "parent_commit": "fc0f82d127081cc372b84ebcfac48da9f5ccd79f",
+  "E1_source_closure": "CLOSED_SCOPED_PRIMARY_SOURCE_INTERFACE",
+  "E1_provenance": "provenance/E1_SOURCE_CLOSURE.md",
+  "E1_scope": "Real + boundary-condition state, determinant and normalized measures, fixed-N full-site/offsite relation; no full-theorem certification",
+  "public_rc3_ancestor": "c36735380a9746bba5e84f9b6adec2a494d1fd4c"
 }

@@ -2,7 +2,7 @@
 
 **v0.1-rc4-unreleased。作者：Dehao Lin，School of Physics, Sun Yat-sen University。**
 
-本版本为 UNRELEASED_LOCAL_CANDIDATE，仅供本地审阅，尚未发布。W2 修补涵盖分组、根的延拓、复圆盘余量及耦合占据数微分；E1 外部来源审查仍待完成。参见 [W2 修补记录](provenance/W2_REPAIR_AUDIT.md)。
+本版本为 UNRELEASED_LOCAL_CANDIDATE，仅供本地审阅，尚未发布。W2 修补涵盖分组、根的延拓、复圆盘余量及耦合占据数微分；E1 的物理态、文献版本和归一化接口已通过原始文献及精确推导核查，见 [E1 来源记录](provenance/E1_SOURCE_CLOSURE.md)。完整定理仍无独立人类、同行或证明助手认证。参见 [W2 修补记录](provenance/W2_REPAIR_AUDIT.md)。
 
 [论文](paper/manuscript.pdf) · [TeX 源码](paper/manuscript.tex) · [两页专家简报](docs/expert_brief.pdf) · [English](README.md)
 

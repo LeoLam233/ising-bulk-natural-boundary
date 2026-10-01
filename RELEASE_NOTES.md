@@ -1,3 +1,13 @@
+# v0.1-rc4-unreleased: local E1 integration
+
+Prepared 1 October 2026 above the frozen W2 candidate `fc0f82d127081cc372b84ebcfac48da9f5ccd79f`.
+
+The real-axis definition now uses Palmer–Tracy's infinite-volume + boundary-condition state, with the spin-flip relation to the - state. Source locators and determinant/sign and lattice-interchange explanations are explicit. TW2014 formulas are cited from the published journal version, whose normalization agrees with the manuscript. Its full-site coefficient is defined precisely and split as `C_N^std=f00^(N)+2T_N` by an exact numerator identity. The arXiv-v1 history is confined to [E1 provenance](provenance/E1_SOURCE_CLOSURE.md).
+
+The theorem, `eq:double`, `eq:bulk`, W1/W2 mathematics, selected points, derivative ranges and particle windows are unchanged. E1 integration closes the scoped source interface; the full theorem remains an AI-assisted candidate without independent human, peer or proof-assistant certification. Historical records retain their original bytes and verdict scopes. Version remains `0.1-rc4-unreleased`; publication is not authorized.
+
+---
+
 # v0.1-rc3
 
 The mathematical content is frozen at `813c6b9a21872ab5358d3da5cbbd99ed05210cf9`, following rc2 baseline `47f95a386d329ae6a3e377fecceafde78ea0886c`. Subsequent metadata changes preserve that mathematical content.

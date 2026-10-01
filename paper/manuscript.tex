@@ -45,7 +45,7 @@ for the bulk square-lattice Ising susceptibility}
 \author{Dehao Lin\\
 \small School of Physics, Sun Yat-sen University\\
 \small\texttt{lindh9@mail2.sysu.edu.cn}}
-\date{Version 0.1-rc4-unreleased (local candidate)\\30 September 2026}
+\date{Version 0.1-rc4-unreleased (local candidate)\\1 October 2026}
 \begin{document}
 \maketitle
 
@@ -83,9 +83,11 @@ magnetization \cite{Yang1952}; its branch tends to one at infinity.
 The symbol \(\beta_{\mathrm{phys}}\) distinguishes inverse temperature
 from the geometric angle \(\beta\) used below. We study the exterior
 germ inherited from real \(s>1\). On that real interval the response is
-defined by connected correlations in the low-temperature pure phase
-selected by the positive-field limit, as in equations (8)--(9) of
-\cite{McCoyMaillard2012}. The function \(\mathcal X\) is the full
+defined by connected correlations in Palmer--Tracy's infinite-volume
+\(+\) state, obtained as the limit of \(+\) boundary conditions
+\cite[pp.~332, 361]{PalmerTracy1981}. Global spin flip gives the same
+two-point function and the same connected correlation after subtracting
+\(\M^2\) in the \(-\) state. The function \(\mathcal X\) is the full
 bulk response. The proposed conclusion is
 \[
  \text{no point of }|s|=1\text{ admits a local holomorphic
@@ -105,7 +107,7 @@ is unbounded on an exterior radial approach is sufficient.
 The form-factor expansion of the bulk susceptibility goes back to
 Wu, McCoy, Tracy, and Barouch \cite{WMTB1976}. Later correlation
 representations include the low-temperature Fredholm formula of
-Palmer and Tracy \cite{PalmerTracy1981}, used in Appendix A of
+Palmer and Tracy \cite{PalmerTracy1981}, used in Appendix 1 of
 Tracy and Widom \cite{TW2014}. Guttmann and Enting
 \cite{GuttmannEnting1996} supplied early numerical evidence for a
 natural boundary. Nickel \cite{Nickel1999,Nickel2000} identified
@@ -219,15 +221,17 @@ Symbol & Meaning\\
 % BEGIN SOURCE: sections/02_setup.tex
 \section{The normalized bulk representation}\label{sec:setup}
 % PROV-INTERNAL: FORM_FACTOR_NORMALIZATION_AUDIT.md; ONSITE_GROUPING_EXACT_AUDIT.md.
-% PROV-PRIMARY: TW2014 Appendix A (7), normalized auxiliary residue and lattice sum.
+% PROV-PRIMARY: TW2014 Appendix 1 (7), normalized auxiliary residue and lattice sum.
 % RECONSTRUCTION: retain every normalized integration measure.
 Put \(S(s)=s+s^{-1}\) and
 \[
  D(x,y;s)=S(s)-\tfrac12(x+x^{-1})-\tfrac12(y+y^{-1}).
 \]
 We take as external physical input the low-temperature correlation
-expansion in Appendix A of \cite{TW2014}, whose Fredholm
-representation is attributed there to \cite[p.~375]{PalmerTracy1981}.
+expansion in the published Appendix~1, equations~(7)--(8),
+pp.~1132--1133 of \cite{TW2014}. Its upstream source is
+\cite[Cor.~2.0, p.~351; Thm.~4.1, p.~361; Thm.~5.0, p.~374,
+and proof pp.~375--378]{PalmerTracy1981}.
 For even \(N\), let \(T_N\) denote the Fredholm-normalized offsite
 form factor. With positively oriented circles sufficiently close to the
 unit circle, it is
@@ -241,15 +245,16 @@ unit circle, it is
  \mathcal X(s)&=1-\M^2(s)+2\M^2(s)\sum_{\substack{N\ge2\\N\ {\rm even}}}T_N(s).
  \label{eq:bulk}
 \end{align}
-This normalization is obtained by converting the \(N\) normalized angular
-measures in Appendix A, equation (7), of \cite{TW2014} and retaining the
-\(N\) normalized auxiliary residues there. The displayed main-text
-contour prefactor in that source is different if its contour measures are
-read as ordinary measures. We do not use that prefactor to fix a physical
-amplitude; Appendix~\ref{app:normalization} gives the measure count.
+This normalization follows by converting the \(N\) normalized angular
+measures in Appendix~1, equation~(7), of \cite{TW2014} and retaining
+the \(N\) normalized auxiliary residues. It agrees with the prefactor
+\((2\pi\ii)^{-2N}/N!\) displayed with the published equation~(3).
+That coefficient sums all sites, including the origin, and equals
+\(f_{00}^{(N)}+2T_N\) at fixed even \(N\).
+Appendix~\ref{app:normalization} defines these terms and derives the relation.
 
 % PROV-INTERNAL: RESIDUE_REDUCTION.md, lines 9-42.
-% PROV-PRIMARY: TW2014 (2), Appendix A (7) and the normalized residue identity.
+% PROV-PRIMARY: TW2014 (2), Appendix 1 (7) and the normalized residue identity.
 % RECONSTRUCTION: successive residues and subtraction of dispersion equations.
 \begin{lemma}[Residue reduction]\label{lem:residue}
 Let
@@ -301,7 +306,7 @@ Choosing \(c_0<c_3\) verifies the stronger condition \(|z|<r\), not merely
 
 % PROV-INTERNAL: TWO_NONZERO_PRIME_FAMILY.md, lines 46-50;
 % FORM_FACTOR_SIGN_SYMMETRY.md.
-% PROV-PRIMARY: TW2014 contour representation and Appendix A.
+% PROV-PRIMARY: TW2014 contour representation and Appendix 1.
 \begin{lemma}[Symmetries]\label{lem:symmetry}
 The exterior normalized susceptibility and its even form factors are even
 in \(s\) and invariant under conjugation of the argument and value.
@@ -479,7 +484,7 @@ shape cutoff stays fixed. No nonholomorphic angular weight is moved
 through an \(x\) residue or a complex mean deformation.
 
 % PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md, lines 5-41, 55-69.
-% PROV-PRIMARY: TW2014 Appendix A; no printed amplitude is imported.
+% PROV-PRIMARY: TW2014 Appendix 1; no printed amplitude is imported.
 \begin{lemma}[Physical mean residue]\label{lem:mean}
 Choose \(r=e^{-c_0\eps}\) as in Lemma~\ref{lem:residue}. The singular
 part of the localized chart is obtained by moving the real \(v\)-segment
@@ -592,7 +597,7 @@ for the swapped ordered chart, including the phase. Exchanging all
 for even \(N\) and checks this equality before asymptotics.
 
 % PROV-INTERNAL: COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md, lines 73-79.
-% PROV-PRIMARY: TW2014 Section III, proof of Lemmas 1-3 and Appendix B.
+% PROV-PRIMARY: TW2014 Section 3, proof of Lemmas 1-3 and Appendix 2.
 \begin{lemma}[Complement of the two first charts]\label{lem:complement}
 At \(N=N_0\) all other localized charts of the original double contour
 have bounded derivatives of every fixed order on the exterior radial
@@ -2651,16 +2656,24 @@ being differentiated.
 % PROV-INTERNAL: FORM_FACTOR_NORMALIZATION_AUDIT.md;
 % ONSITE_GROUPING_EXACT_AUDIT.md;
 % COMPACT_FOUR_CHART_NORMALIZATION_RESOLUTION.md.
-% PROV-PRIMARY: TW2014 Appendix A (7), its normalized y-residue identity;
+% PROV-PRIMARY: TW2014 Appendix 1 (7), its normalized y-residue identity;
 % Boukraa et al. 2008 (4)-(9); McCoy and Maillard 2012 (67)-(70), comparison only.
-The correlation formula of \cite{PalmerTracy1981}, in the
-representation used by Appendix A of \cite{TW2014}, has
+The squared formula in Theorem~4.1 of \cite{PalmerTracy1981}
+reduces on p.~375 to \(\det_2(I+G)=\det_2(I+g)^2\).
+For the smooth trace-class two-point kernel, the zero diagonal gives
+\(\operatorname{Tr}g=0\), hence \(\det_2(I+g)=\det(I+g)\).
+The determinant is real and continuous for real \(s>1\);
+the Griffiths bound used on p.~359 keeps its modulus at least one,
+and its limit one at infinity fixes the positive square root.
+The resulting unsquared series is Theorem~5.0 and its proof on
+pp.~374--378. In the representation of the published Appendix~1
+of \cite{TW2014}, it has
 \(N\) factors \(\dd\theta/(2\pi)\).
 With \(x=e^{\ii\theta}\), these become \(\dd x/(2\pi\ii x)\).
 Introducing \(N\) auxiliary residues uses another \(N\) factors
 \(\dd y/(2\pi\ii)\). Thus the double contour prefactor is
-\((2\pi\ii)^{-2N}/N!\), not \((2\pi\ii)^{-N}/N!\) when
-all contour integrals are ordinary unnormalized integrals.
+\((2\pi\ii)^{-2N}/N!\) for ordinary unnormalized contours,
+as displayed with the published equation~(3) of \cite{TW2014}.
 Summing the nonorigin lattice sites gives
 \[
  \frac4{(1-X)(1-Y)}-\frac2{1-X}-\frac2{1-Y}
@@ -2668,14 +2681,33 @@ Summing the nonorigin lattice sites gives
 \]
 The factors \(1/(XY)\) in the normalized correlation measures
 then give the numerator in \eqref{eq:double} and the factor two
-in \eqref{eq:bulk}. A literal reading of the printed main-text
-prefactor instead multiplies \(T_N\) by \((2\pi\ii)^N\).
-This is a documented measure discrepancy, not a claimed publisher
-erratum.
+in \eqref{eq:bulk}; its physical origin term is
+\(\langle\sigma_{00}^2\rangle-\M^2=1-\M^2\).
 
-Let \(C_N^{\rm std}\) denote the standard full-site particle term
-and \(f_{00}^{(N)}\) the onsite Fredholm coefficient.
-Order-by-order lattice summation gives
+For fixed real \(s>1\), choose a small common angle strip with
+\(\Re\gamma\ge c>0\) and bounded canceled kernel. Shifting all angles
+by \(\ii\eta\operatorname{sgn}(a)\) and applying Hadamard bounds the
+\(N\)-particle coefficient at the lattice site \((a,b)\) by
+\[
+ \frac{N^{N/2}C^N}{N!}
+ e^{-N(\eta|a|+c|b|)}.
+\]
+The determinant integrand is periodic, and the bound is summable in
+sites and even \(N\ge2\). This justifies the lattice/Fredholm
+interchange on the real interval; it supplies no boundary-uniform
+infinite-tail estimate.
+
+For fixed even \(N\), define \(C_N^{\rm std}\) as the full-site
+coefficient \(\chi^{(N)}\) displayed with the published equation~(3)
+of \cite{TW2014}. Define \(f_{00}^{(N)}\) as its onsite Fredholm
+coefficient: the integral in \eqref{eq:double} with its global rational
+factor replaced by \(1/(XY)\), retaining the same pair factors,
+factorial and measures. The exact numerator identity
+\[
+ \frac{(1+X^{-1})(1+Y^{-1})}{(1-X)(1-Y)}
+ =\frac1{XY}+\frac{2(X^{-1}+Y^{-1})}{(1-X)(1-Y)}
+\]
+therefore gives, without summing over particle number,
 \[
  C_N^{\rm std}=f_{00}^{(N)}+2T_N.
 \]
@@ -2777,7 +2809,7 @@ the mathematics.
 \subsection{External inputs and internally claimed estimates}
 The external physical inputs are the spontaneous magnetization
 \cite{Yang1952}, the low-temperature Fredholm correlation formula
-\cite{PalmerTracy1981} in the representation of Appendix A of
+\cite{PalmerTracy1981} in the representation of Appendix 1 of
 \cite{TW2014}, and the fixed-even-order non-Nickel smoothness
 argument of \cite{TW2014}. Appendix~\ref{app:normalization}
 tracks the measures and compares the independent full-site formula
@@ -2992,8 +3024,8 @@ majorant by displaying its negative \(N^2\log N/2\) term. It also
 records the angle and power conventions required for a comparison
 with the review amplitude, and explicitly includes the unwrapped
 phase lengths and period counts in near-equality coarea estimates.
-The positive-field pure-phase meaning of the real low-temperature
-response is stated at the outset. These are local corrections and
+The physical-state convention is stated at the outset; the current
+E1 integration specifies the \(+\) boundary-condition state. These are local corrections and
 clarifications; the two main estimates, point family, derivative
 range, and particle windows are unchanged. The received audit's
 failure to find a counterexample is not an additional proof premise.
@@ -3039,8 +3071,11 @@ Stokes supports. The theorem, point family, derivative range and
 particle windows are unchanged. These are new scoped proof repairs,
 not arguments attributed retrospectively to rc3. The supplied
 audits and finite diagnostics were treated as untrusted evidence.
-This local candidate is unpublished; E1 source closure remains
-pending, and no human, peer, or proof-assistant certification is claimed.
+This local candidate is unpublished. The subsequent E1 integration
+checks the primary-source interface, specifies the \(+\) state, and
+reconciles the published full-site coefficient with the existing
+offsite formulas. It changes no W1/W2 estimate or theorem statement.
+No human, peer, or proof-assistant certification is claimed.
 
 \subsection*{Release status and AI assistance}
 Version 0.1-rc3 incorporates the W1 proof-interface repairs described in this revision record.
@@ -3139,8 +3174,8 @@ Craig~A. Tracy and Harold Widom.
 \newblock On the singularities in the susceptibility expansion for the
 two-dimensional {Ising} model.
 \newblock \emph{Journal of Statistical Physics}, 156(6):1125--1135, 2014.
-\newblock Formula comparison uses
-\href{https://arxiv.org/abs/1403.3966v1}{arXiv:1403.3966v1}, 16 March 2014.
+\newblock \href{https://doi.org/10.1007/s10955-014-1061-4}{doi:10.1007/s10955-014-1061-4}.
+\newblock Formulas are cited from this published version.
 
 \bibitem{TW2017Toeplitz}
 Craig~A. Tracy and Harold Widom.
