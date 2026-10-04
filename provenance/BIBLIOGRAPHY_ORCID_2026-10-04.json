@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-04",
+  "scope": "Bibliography/author metadata maintenance only; no scientific re-audit or new release.",
+  "baseline_commit": "1b4b506c9cb19d5fdbf9f59d89c7a179739d337d",
+  "scientific_payload_changed": false,
+  "versions_tags_releases_changed": false,
+  "orcid_uri": "https://orcid.org/0009-0001-4551-8490",
+  "citation_added": "Boukraa2007",
+  "primary_source": "https://arxiv.org/abs/math-ph/0701016v2",
+  "attribution_scope": "Sections 1 and 2: Landau conditions and Ising-class surrogate integrals; susceptibility-related singularities, not a full-sum natural-boundary theorem.",
+  "build": {
+    "status": "PASS",
+    "command": "scripts/build_paper.py --tectonic Tectonic-0.17.0 (cached resources)",
+    "clean_source_only_directory": true,
+    "pdf_sha256": "107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4",
+    "source_sha256": {
+      "paper\\manuscript.tex": "6a1e5cfdc8681a6705d64dd648cbc33d46042c1f75aa624070ae1c4e125eaaf8"
+    },
+    "pages": 42,
+    "previous_pages": 42,
+    "latex_failures": [],
+    "log_sha256": "6061853dee8192f61faf2b31c5f386304121dfd3c79536bfb673144ba7607bc0",
+    "bibliography_keys": [
+      "Boukraa2007",
+      "Boukraa2008",
+      "GuttmannEnting1996",
+      "McCoyMaillard2012",
+      "Nickel1999",
+      "Nickel2000",
+      "Orrick2001",
+      "PalmerTracy1981",
+      "TW2013",
+      "TW2014",
+      "TW2017Toeplitz",
+      "WMTB1976",
+      "Yang1952"
+    ],
+    "pdf_author_orcid_count": 1,
+    "added_reference_visible": true,
+    "visual_review": "All pages inspected as rendered contact sheets; title/ORCID and reference pages checked. No clipping, overlap or unexpected blank pages.",
+    "historical_build_receipts": "Preserved with their original source/PDF identities; this receipt describes current main."
+  },
+  "historical_records": "Old provenance, audit evidence, release metadata snapshots, tags and published release assets retained; historical no-ORCID descriptions refer to their original dates.",
+  "final_checks": {
+    "citation_cff_unique_fields": "PASS",
+    "all_author_records_orcid": "PASS",
+    "incorrect_orcid_values": [],
+    "preserved_historical_no_orcid_context_files": [],
+    "theorem_proof_source_comparison": "PASS: unchanged outside introduction/author/bibliography edits",
+    "pdf_rendering": "PASS"
+  }
+}

@@ -69,6 +69,6 @@ Outputs go to `.local/`, leaving evidence unchanged. Hashes establish identity; 
 
 ## Citation, authorship and license
 
-Dehao Lin is the named human author and public contact. Generative AI was used extensively in exploration, derivations, writing, code and internal audits. [Authorship and declarations](AUTHORSHIP.md) · [versioned citation](CITATION.cff).
+Dehao Lin is the named human author and public contact. ORCID: [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490). Generative AI was used extensively in exploration, derivations, writing, code and internal audits. [Authorship and declarations](AUTHORSHIP.md) · [versioned citation](CITATION.cff).
 
 Code: [MIT](LICENSE). Manuscript and project-authored prose: [CC BY 4.0](LICENSE-DOCUMENTATION.md). Third-party cited works retain their own rights; full external papers are not bundled. [Third-party notices](THIRD_PARTY_NOTICES.md).

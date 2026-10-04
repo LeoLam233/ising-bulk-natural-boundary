@@ -1,6 +1,7 @@
 # Authorship, AI assistance and declarations
 
 **Dehao Lin**  
+ORCID: [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490)<br>
 School of Physics, Sun Yat-sen University  
 lindh9@mail2.sysu.edu.cn
 

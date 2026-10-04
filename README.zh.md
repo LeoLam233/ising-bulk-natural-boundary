@@ -57,4 +57,4 @@ $$
 
 ## 引用、作者与许可
 
-Dehao Lin 是署名人类作者及公开联系人；生成式 AI 广泛参与研究探索、推导、写作、代码和内部审计。[作者声明](AUTHORSHIP.md) · [版本引用](CITATION.cff)。代码采用 [MIT](LICENSE)；论文及项目自撰文档采用 [CC BY 4.0](LICENSE-DOCUMENTATION.md)；第三方作品保留自身权利。[第三方说明](THIRD_PARTY_NOTICES.md)。
+Dehao Lin 是署名人类作者及公开联系人；ORCID：[0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490)；生成式 AI 广泛参与研究探索、推导、写作、代码和内部审计。[作者声明](AUTHORSHIP.md) · [版本引用](CITATION.cff)。代码采用 [MIT](LICENSE)；论文及项目自撰文档采用 [CC BY 4.0](LICENSE-DOCUMENTATION.md)；第三方作品保留自身权利。[第三方说明](THIRD_PARTY_NOTICES.md)。

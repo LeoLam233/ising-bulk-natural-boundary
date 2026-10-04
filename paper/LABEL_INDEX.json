@@ -7,12 +7,12 @@
   {
     "label": "eq:roadmapfirst",
     "number": "1.1",
-    "page": 2
+    "page": 3
   },
   {
     "label": "eq:roadmaptail",
     "number": "1.2",
-    "page": 2
+    "page": 3
   },
   {
     "label": "sec:setup",
@@ -22,12 +22,12 @@
   {
     "label": "eq:double",
     "number": "2.1",
-    "page": 4
+    "page": 5
   },
   {
     "label": "eq:bulk",
     "number": "2.2",
-    "page": 4
+    "page": 5
   },
   {
     "label": "lem:residue",
@@ -47,7 +47,7 @@
   {
     "label": "lem:symmetry",
     "number": "2.2",
-    "page": 5
+    "page": 6
   },
   {
     "label": "sec:arithmetic",
@@ -72,7 +72,7 @@
   {
     "label": "lem:mean",
     "number": "4.1",
-    "page": 7
+    "page": 8
   },
   {
     "label": "lem:period",
@@ -92,7 +92,7 @@
   {
     "label": "thm:first",
     "number": "4.4",
-    "page": 9
+    "page": 10
   },
   {
     "label": "sec:tailreduction",
@@ -107,17 +107,17 @@
   {
     "label": "prop:selector",
     "number": "5.1",
-    "page": 10
+    "page": 11
   },
   {
     "label": "eq:FKS",
     "number": "5.2",
-    "page": 10
+    "page": 11
   },
   {
     "label": "eq:current",
     "number": "5.3",
-    "page": 10
+    "page": 11
   },
   {
     "label": "prop:ultrahigh",
@@ -157,12 +157,12 @@
   {
     "label": "sec:K",
     "number": "7",
-    "page": 13
+    "page": 14
   },
   {
     "label": "lem:partition",
     "number": "7.1",
-    "page": 13
+    "page": 14
   },
   {
     "label": "lem:contraction",
@@ -192,12 +192,12 @@
   {
     "label": "sec:sectors",
     "number": "8",
-    "page": 21
+    "page": 22
   },
   {
     "label": "prop:mixed",
     "number": "8.1",
-    "page": 21
+    "page": 22
   },
   {
     "label": "prop:compactR",
@@ -287,7 +287,7 @@
   {
     "label": "eq:pullbackLie",
     "number": "D.4",
-    "page": 29
+    "page": 30
   },
   {
     "label": "lem:jets",
@@ -307,7 +307,7 @@
   {
     "label": "eq:weightjets",
     "number": "D.7",
-    "page": 30
+    "page": 31
   },
   {
     "label": "app:constants",
@@ -322,6 +322,6 @@
   {
     "label": "app:auditmap",
     "number": "G",
-    "page": 36
+    "page": 37
   }
 ]
