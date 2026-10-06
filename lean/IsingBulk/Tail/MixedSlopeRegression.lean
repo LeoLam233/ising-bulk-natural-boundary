@@ -1,0 +1,5 @@
+import IsingBulk.Tail.MixedSlopeSeparation
+
+#print axioms IsingBulk.Tail.mixed_actual_profile_slope_separation
+#print axioms IsingBulk.Tail.mixed_actual_nested_slope_separation
+#print axioms IsingBulk.Tail.mixed_actual_current_slope_separation

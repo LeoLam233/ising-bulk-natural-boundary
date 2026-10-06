@@ -1,0 +1,6 @@
+import IsingBulk.Tail.MixedSeparatedLieStages
+#print axioms IsingBulk.Tail.mixedSeparatedDomain_isOpen
+#print axioms IsingBulk.Tail.mixedSeparated_velocity_smooth
+#print axioms IsingBulk.Tail.mixedSeparated_density_smooth
+#print axioms IsingBulk.Tail.mixedSeparated_weighted_lie_stages
+#print axioms IsingBulk.Tail.mixedSeparated_weighted_lie_stage_analytic

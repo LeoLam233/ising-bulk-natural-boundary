@@ -1,0 +1,4 @@
+import IsingBulk.Tail.MixedActualActiveJets
+#print axioms IsingBulk.Tail.mixed_actual_branch_chart_neighborhood
+#print axioms IsingBulk.Tail.mixed_active_residual_component_jets
+#print axioms IsingBulk.Tail.mixed_actual_active_data_jets

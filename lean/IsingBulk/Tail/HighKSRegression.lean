@@ -1,0 +1,7 @@
+import IsingBulk.Tail.HighKSTail
+
+#print axioms IsingBulk.Tail.original_current_complete_envelope
+#print axioms IsingBulk.Tail.original_current_small_integral_gaussian_bound
+#print axioms IsingBulk.Tail.actual_highKS_gaussian_bound
+#print axioms IsingBulk.Tail.actual_highKS_epsilon_tail
+#print axioms IsingBulk.Tail.actual_highKS_epsilon_tail_finite_j

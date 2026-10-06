@@ -1,0 +1,9 @@
+import IsingBulk.Tail.OriginalLowerCauchy
+import IsingBulk.Tail.ProtectedCompletePairProduct
+import IsingBulk.Tail.OriginalCurrentOneBody
+
+#print axioms IsingBulk.Tail.protected_actual_complete_pair_product
+#print axioms IsingBulk.Tail.original_actual_source_pair_product
+#print axioms IsingBulk.Tail.original_residue_l1_oneperiod
+#print axioms IsingBulk.Tail.original_lower_derivative_gaussian_bound
+#print axioms IsingBulk.Tail.original_current_actual_onebody_bound
