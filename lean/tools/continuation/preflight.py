@@ -77,6 +77,42 @@ def read_command(args: list[str], cwd: Path, env: dict[str, str]) -> str:
     return result.stdout.strip()
 
 
+def check_dependency_source(dep_path: Path, revision: str, env: dict[str, str]) -> str:
+    """Shared pinned-HEAD, tracked-source and Lake-override checks."""
+    git = ["git", "--no-optional-locks", "-c", "core.fsmonitor=false", "-C", str(dep_path)]
+    head = read_command(git + ["rev-parse", "HEAD"], dep_path, env)
+    dirty = read_command(git + ["status", "--porcelain=v1", "--untracked-files=no"], dep_path, env)
+    require(head == revision and not dirty, f"Dependency pin/source mismatch: {dep_path.name}\n{dirty}")
+    tracked_configs = set(read_command(git + ["ls-tree", "--name-only", "HEAD", "--",
+        "lakefile.lean", "lakefile.toml"], dep_path, env).splitlines())
+    for config_name in ("lakefile.lean", "lakefile.toml"):
+        config_file = dep_path / config_name
+        if config_file.exists() or config_file.is_symlink():
+            require(config_name in tracked_configs and not config_file.is_symlink(),
+                    f"Unbound dependency configuration: {dep_path.name}/{config_name}")
+    return head
+
+
+def reject_dependency_project_namespaces(project: Path) -> None:
+    """Reject the audited LEAN_PATH attack without deleting dependency outputs."""
+    packages = project / ".lake/packages"
+    if not packages.exists():
+        return
+    for dep_path in sorted(packages.iterdir()):
+        build = dep_path / ".lake/build"
+        seen: set[Path] = set()
+        # Follow output-directory links too; visit each resolved directory once.
+        for directory, dirs, files in os.walk(build, followlinks=True):
+            for name in dirs + files:
+                require(name not in {"IsingBulk", "Audit"}
+                        and not name.startswith(("IsingBulk.olean", "Audit.olean")),
+                        f"Foreign project namespace in dependency build: {Path(directory) / name}")
+            resolved = Path(directory).resolve()
+            if resolved in seen:
+                dirs.clear()
+            seen.add(resolved)
+
+
 def lean_code(text: str) -> str:
     """Blank comments and Lean string/character literals, preserving positions.
 
@@ -211,6 +247,7 @@ def snapshot(project: Path, lean_bin: Path, contract_path: Path = HERE / "endpoi
             "Unbound alternative root lakefile.lean is forbidden; the frozen config is lakefile.toml")
     require(project == HERE.parents[1].resolve(),
             "Use the verification tools copied inside the selected candidate project; external mixed-tree drivers are unsupported")
+    reject_dependency_project_namespaces(project)
     contract = json.loads(contract_path.read_text())
     require(contract["root_module"] == "IsingBulk", "Unexpected root module")
     freeze = json.loads(safe_path(project, "TOOLCHAIN_FREEZE.json").read_text())
@@ -264,19 +301,7 @@ def snapshot(project: Path, lean_bin: Path, contract_path: Path = HERE / "endpoi
                 f"Unsupported or unpinned dependency: {dep['name']}")
         dep_path = project / manifest["packagesDir"] / dep["name"]
         require(dep_path.is_dir(), f"Dependency is absent; no download attempted: {dep['name']}")
-        git = ["git", "--no-optional-locks", "-c", "core.fsmonitor=false", "-C", str(dep_path)]
-        head = read_command(git + ["rev-parse", "HEAD"], project, env)
-        dirty = read_command(git + ["status", "--porcelain=v1", "--untracked-files=no"], project, env)
-        require(head == dep["rev"] and not dirty, f"Dependency pin/source mismatch: {dep['name']}\n{dirty}")
-        # Lake chooses an existing .lean config before a .toml config. A clean
-        # tracked tree alone does not exclude an untracked overriding config.
-        tracked_configs = set(read_command(git + ["ls-tree", "--name-only", "HEAD", "--",
-            "lakefile.lean", "lakefile.toml"], project, env).splitlines())
-        for config_name in ("lakefile.lean", "lakefile.toml"):
-            config_file = dep_path / config_name
-            if config_file.exists() or config_file.is_symlink():
-                require(config_name in tracked_configs and not config_file.is_symlink(),
-                        f"Unbound dependency configuration: {dep['name']}/{config_name}")
+        head = check_dependency_source(dep_path, dep["rev"], env)
         dependency_records.append({"name": dep["name"], "revision": head, "url": dep["url"]})
         dependency_roots.append(dep_path.resolve())
 

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - codex/ising-lean-acceptance-20261006
+      - codex/ising-v0.2.1-post-audit-remediation-20261007
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Bind every proof-critical source and configuration byte
-        run: python3 ci/verify_payload.py
+        run: python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')"
       - name: Install exact official Lean runtime
         run: |
           curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
@@ -32,8 +33,8 @@ jobs:
         run: |
           lean --version
           lake -f lakefile.toml exe cache get
-          python3 ci/verify_payload.py --dependencies
+          python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')" --dependencies
       - name: Actually build the production Schur identity module
         run: lake -f lakefile.toml build IsingBulk.Algebra.SchurPfaffian
       - name: Recheck complete payload after execution
-        run: python3 ci/verify_payload.py --dependencies
+        run: python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')" --dependencies

@@ -120,3 +120,17 @@ and the complete release tree identity. This packet is verification tooling;
 its synthetic four-file manifest is neither of those final candidate IDs.
 Do not infer that a tooling-only or release-only edit changes the production
 proof payload. Bind each receipt to the actual scope it checked.
+
+## Targeted post-audit controls
+
+`PositiveInterfaces.lean` now also applies the exact FIRST type with its E3
+premise and the complete TAIL type with positive-parameter norm summability.
+`E3Guard.lean` checks the actual E3 non-Nickel guard by definitional equality,
+proves the selected point is Nickel at order 2p, and refutes a guard-less
+comparison premise from FIRST. Its three named theorems are checked against
+the approved logical axiom set. This is a narrow E3 regression.
+
+`run_remediation_controls.py` invokes the production `ci/verify_payload.py`
+on isolated copies for coherent source/manifest tampering, dependency HEAD,
+tracked-file and Lake-override changes, and project namespace shadowing.
+The existing manifest/toy controls are retained with their bounded scope.

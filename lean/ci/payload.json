@@ -1,5 +1,5 @@
 {
-  "PROOF_CRITICAL_PAYLOAD_ID": "bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2",
+  "PROOF_CRITICAL_PAYLOAD_ID": "6989420e855e0c3d882ce51e302dbc6579890da81aa0fd866176bab583067715",
   "mathematical_evidence": {
     "axioms": [
       "propext",
@@ -10,7 +10,7 @@
     "executed_candidate": "255c825ba4f530541f16f8ed90a8e85fdc34feff",
     "execution_archive_sha256": "e209e8b9a5cd9ea07f45bf9da8e1d7c3acedea8138505b7a5ea95424cd8af9c1",
     "kernel_log_sha256": "d48e97e2dc647132e46c237cfd63ed64094aabddf2e573d19ae40c9af55346c7",
-    "scope": "One local full clean build, full fresh kernel replay, declaration/axiom and controls checks, and local Round 1 review. Remote workflow is infrastructure and production smoke validation, not another full kernel replay."
+    "scope": "Historical v0.2.0 evidence for proof payload bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2 only. Remediation candidate build/replay receipts are separate."
   },
   "proof_inputs": {
     "dependencies": [
@@ -160,7 +160,7 @@
       "IsingBulk/Final/PhysicalInputs.lean": "8553a3be4ebd38a985c283cc95b8cb3bcb1d258f96ab0b2faa5b8596764e82cb",
       "IsingBulk/Final/RadialNoncancellation.lean": "e4672a0dc77e2ff64437b4a3c2369fed1900b613e90530321d79eae99ff2bf16",
       "IsingBulk/Final/SymmetryObstruction.lean": "046a8c2df054c7dbf57a377ffce3a0ce54e378452908bab5b7eea353f93861a4",
-      "IsingBulk/Final/UnconditionalNaturalBoundary.lean": "a3d82928529c7bb7cc2e3101b22c94c08ef5a2adf644b7f4f809b30ee5f7ac95",
+      "IsingBulk/Final/UnconditionalNaturalBoundary.lean": "5698b7be197b58f124b4a1316c6ca935840abdf7d6935e4c071065073eab0edb",
       "IsingBulk/Final/UpperNoncancellation.lean": "34e4c611d8a77541b11124da5cee397519df58fda713ee27b4657596da6f3a6f",
       "IsingBulk/First/ActualAmplitudeNeighborhood.lean": "f8bacc8214cc767e834f2cc9a2c2cf634bb6190a80a1d48bac6243ee5a33d3e2",
       "IsingBulk/First/ActualDensityAnalytic.lean": "f7847d372d598e9e64c52d432231f598c8ce1e4d0803a23299e1a9e563ff9701",

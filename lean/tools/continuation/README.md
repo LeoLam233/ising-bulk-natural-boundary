@@ -1,3 +1,5 @@
+The post-audit gate rejects foreign `IsingBulk`/`Audit` namespaces anywhere under dependency build outputs before every environment-resolving stage. The project axiom audit runs as the declared Lake target `Audit`, whose per-module mappings bind project imports. Dependency source integrity uses the same checks as the production payload verifier.
+
 # Current launch policy
 
 The runner binds Lake to `-f lakefile.toml`, refuses an alternative root configuration, and rejects untracked overriding dependency configurations. It invokes pinned Lean and leanchecker by absolute paths. Subprocess environments clear inherited Lean/Lake and dynamic-loader overrides; the local artifact cache is explicitly disabled, the system cache directory is empty, and the system Lake configuration is `/dev/null` (empty input).
@@ -31,7 +33,7 @@ dependency repair, or system configuration change is performed by these tools.
   text for the existing forbidden constructs, and checks declaration names and
   source-map entries lexically. Compiled type/origin checks remain separate.
 - `final_gate.py` defaults to a plan. With explicit execution enabled, it runs
-  a clean project build, `Audit.lean`, generated exact endpoint checks, five
+  a clean project build, `Audit.lean`, generated exact endpoint checks, six
   bounded mathematical controls, and the official `leanchecker --fresh --verbose IsingBulk`, in that order. Each stage
   has independent stdout/stderr, exact argv, exit status, elapsed time and
   Linux `wait4` RSS/CPU measurements. RSS is the maximum child/descendant RSS,
@@ -117,7 +119,7 @@ verified absolute runtime directory; `PYTHON` is the current interpreter):
 
 ```text
 PINNED_BIN/lake -f lakefile.toml --no-cache build IsingBulk
-PINNED_BIN/lake -f lakefile.toml env PINNED_BIN/lean -DwarningAsError=true Audit.lean
+PINNED_BIN/lake -f lakefile.toml --no-cache build Audit
 PINNED_BIN/lake -f lakefile.toml env PINNED_BIN/lean -DwarningAsError=true <new-log-directory>/EndpointCheck.lean
 PYTHON control_packet/continuation/run_lean_controls.py --lean-bin-dir PINNED_BIN
 PINNED_BIN/lake -f lakefile.toml env PINNED_BIN/leanchecker --fresh --verbose IsingBulk
@@ -136,7 +138,7 @@ run directory. Lean compilation errors fail that stage rather than being
 treated as evidence.
 
 Success is reported as `CHECK_SEQUENCE_PASSED_NOT_AUDIT_ROUND`. This records only
-the listed build, axiom, typed-endpoint, five mathematical-control and replay
+the listed build, axiom, typed-endpoint, six mathematical-control and replay
 checks. Broader mutation attacks, semantic/source review, any authorized CI
 work, and formal audit adjudication remain separate; the script does not claim
 completion of those activities.

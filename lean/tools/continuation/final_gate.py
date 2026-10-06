@@ -154,7 +154,7 @@ def inspect_audit(logs: Path, source_references: list[dict]) -> int:
     found = {name.strip() for name in unions[0].split(",") if name.strip()}
     require(found == APPROVED_AXIOMS, f"Unexpected Audit axiom union: {found}")
     require(int(counts[0]) > 0, "Audit enumerated no project declarations")
-    actual = set(re.findall(r"^DECLARATION:\s*([^;\r\n]+);\s*AXIOMS:", text, re.M))
+    actual = set(re.findall(r"^(?:info: [^\r\n]+:\d+:\d+: )?DECLARATION:\s*([^;\r\n]+);\s*AXIOMS:", text, re.M))
     expected = {entry["target"] for entry in source_references if entry["kind"] == "declaration"}
     require(expected <= actual,
             f"Ledger declaration references absent from actual Audit output: {sorted(expected-actual)}")
@@ -176,7 +176,7 @@ def command_plan(lean_bin: Path) -> dict[str, list[str]]:
     lake = str(lean_bin / "lake")
     return {
         "01_clean_project_build": [lake, "-f", "lakefile.toml", "--no-cache", "build", "IsingBulk"],
-        "02_axiom_audit": [lake, "-f", "lakefile.toml", "env", str(lean_bin / "lean"), "-DwarningAsError=true", "Audit.lean"],
+        "02_axiom_audit": [lake, "-f", "lakefile.toml", "--no-cache", "build", "Audit"],
         "03_endpoints": [lake, "-f", "lakefile.toml", "env", str(lean_bin / "lean"), "-DwarningAsError=true", "<new-log-directory>/EndpointCheck.lean"],
         "03b_math_controls": [sys.executable, "control_packet/continuation/run_lean_controls.py", "--lean-bin-dir", str(lean_bin)],
         "04_kernel_replay": [lake, "-f", "lakefile.toml", "env", str(lean_bin / "leanchecker"), "--fresh", "--verbose", "IsingBulk"],

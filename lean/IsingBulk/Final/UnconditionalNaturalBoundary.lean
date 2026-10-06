@@ -18,6 +18,19 @@ theorem theorem_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j :=
   selected_absolute_upper_tail_small hp hp11 ha hb hab
 
+/-- Complete TAIL package: convergence of the exact higher-even norm sequence
+at each positive radial parameter, together with the existing little-o bound. -/
+theorem theorem_tail_with_summability {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+    {a b : ℤ} (ha : PrimeFamily.Admissible p a)
+    (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
+    ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+      (∀ eps : ℝ, 0 < eps → Summable (fun n : ℕ =>
+        ‖iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+          (IsingBulk.Branch.radialParameter (selectedOrderedChart ha hb).theta eps)‖)) ∧
+      AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j := fun j hj =>
+  ⟨fun _ heps => actual_upper_tail_summable p j (selectedOrderedChart ha hb).sin_theta_pos heps,
+   theorem_tail hp hp11 ha hb hab j hj⟩
+
 /-- Natural boundary of the internally constructed exterior normalized bulk
 series, with the absolute-tail premise discharged. -/
 theorem theorem_nb

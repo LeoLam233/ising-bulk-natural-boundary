@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - codex/ising-lean-final-20261006
+      - codex/ising-v0.2.1-post-audit-remediation-20261007
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Verify full proof payload
-        run: python3 ci/verify_payload.py
+        run: python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')"
       - name: Install exact official runtime
         run: |
           curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
@@ -32,7 +33,7 @@ jobs:
       - name: Fetch pinned dependency cache and establish clean project
         run: |
           "$ISING_LEAN_BIN/lake" -f lakefile.toml exe cache get
-          python3 ci/verify_payload.py --dependencies
+          python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')" --dependencies
           python3 - <<'PY'
           import pathlib,shutil
           for name in ('build','config'):
@@ -53,11 +54,12 @@ jobs:
           print('ALL_THREE_IDENTITIES_MATCH')
           PY
           python3 control_packet/continuation/run_manifest_controls.py
+          python3 control_packet/continuation/run_remediation_controls.py
       - name: Full clean build, axioms, endpoints, controls and fresh kernel replay
         run: |
           python3 -u tools/continuation/final_gate.py --lean-bin "$ISING_LEAN_BIN" --approved-preflight "$RUNNER_TEMP/ising-evidence/preflight.json" --logs "$RUNNER_TEMP/ising-evidence/full" --threads 2 --execute
       - name: Final payload identity
-        run: python3 ci/verify_payload.py --dependencies
+        run: python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')" --dependencies
       - name: Preserve complete execution evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

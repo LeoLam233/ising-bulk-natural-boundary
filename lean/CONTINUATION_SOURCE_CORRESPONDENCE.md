@@ -1,9 +1,13 @@
-# Provisional continuation source correspondence
+# Continuation source correspondence
 
-Prepared 2026-10-06 at 11:44 UTC for coordinator review. This document is an
-additive source map and update proposal. It does not change the historical
-ledgers, assign final candidate status, or constitute an independent audit.
-All five modules and final wrappers now have focused compilation and endpoint axiom checks. Final candidate verification and formal audits remain pending.
+Current status, 2026-10-07: audited release v0.2.0, commit
+`50ec73db799ba8f72dff802b4a6fecdc69b61932`, passed its clean build,
+project-wide audit of 9,199 safe declarations, exact endpoint controls and
+fresh kernel replay with axiom union `propext`, `Classical.choice`, `Quot.sound`.
+The independent Opus audit returned `PASS_WITH_NONBLOCKING_ISSUES`.
+The original five-module mathematical assembly is preserved. The post-audit
+remediation adds only the complete TAIL wrapper and verification controls;
+its final-commit receipts are separate from baseline evidence.
 
 ## Source identity and preserved scope
 
@@ -46,7 +50,7 @@ The 9,125-declaration audit receipt is distinct from these two TSVs.
 | `IsingBulk/Tail/ExactSectorNormDomination.lean` | `IsingBulk.Tail.originalKSNorm_le_sectors`; `IsingBulk.Tail.constructed_originalKSNorm_le_sectors` | Attaches the existing exact original/current finite decomposition to the categories from `lem:partition` (manuscript line 957), discharging the finite norm comparison needed after `eq:FKS` (line 736). The norm of each actual current interval integral is retained. All-branch current vanishing is proved for the constructed selector. |
 | `IsingBulk/Tail/IntermediateWindowAssembly.lean` | `IsingBulk.Tail.common_intermediateKSNormWindow_radialSeriesSmall`; `IsingBulk.Tail.common_intermediateKSNormWindow_littleO` | Combines the actual all-B, mixed/left and compact-right endpoints from `prop:allB` (line 1458), `prop:mixed` (line 1596), and `prop:compactR` (line 1695). The exact strict intermediate window is contained in the existing weak all-B/right windows; they are not asserted equal. Eventual summability and little-o of the infinite norm sum are both retained. |
 | `IsingBulk/Tail/AbsoluteTailAssembly.lean` | `IsingBulk.Tail.common_absoluteUpperTailSmall`; `IsingBulk.Tail.selected_absolute_upper_tail_small`; `IsingBulk.Tail.actual_upper_tail_summable` | Combines the proved full F and large-current series, exact intermediate window, and high-KS tail using `actual_higher_tail_domination`. This implements the literal `thm:tail` target (line 1919). Actual upper-tail summability is separately available at every positive radial parameter. |
-| `IsingBulk/Final/UnconditionalNaturalBoundary.lean` | `IsingBulk.Final.theorem_tail`; `IsingBulk.Final.theorem_nb`; `IsingBulk.Final.theorem_nb_physical` | Exposes the exact selected-point tail and supplies it to existing `theorem_conditional`/`theorem_conditional_physical`, corresponding to `thm:conditional` (line 1956) and `thm:nb` (line 1992). Only the TAIL premise is discharged; the published and physical inputs below remain explicit. |
+| `IsingBulk/Final/UnconditionalNaturalBoundary.lean` | `IsingBulk.Final.theorem_tail`; `IsingBulk.Final.theorem_tail_with_summability`; `IsingBulk.Final.theorem_nb`; `IsingBulk.Final.theorem_nb_physical` | Exposes the exact selected-point tail, packages positive-parameter norm summability in theorem_tail_with_summability, and supplies the unchanged theorem_tail to existing `theorem_conditional`/`theorem_conditional_physical`, corresponding to `thm:conditional` (line 1956) and `thm:nb` (line 1992). Only the TAIL premise is discharged; the published and physical inputs below remain explicit. |
 
 ### Common parameter order
 
@@ -100,12 +104,11 @@ Accordingly, “unconditional” in the new wrapper filename means that the
 previously open internal TAIL premise has been discharged; it must not be
 reported as elimination of E1/E2/E3.
 
-## Validation snapshot: provisional, targeted only
+## Historical focused verification (2026-10-06)
 
-The following observations are based on the named local logs as read at
-11:47 UTC; final freeze and source-hash reconciliation remain coordinator
-work. They do not establish a whole-project clean candidate or independent
-audit.
+The focused observations below preceded the completed v0.2.0 full build and
+independent Opus audit recorded above. Their original receipts are preserved
+as stage-specific evidence.
 
 | Module | Observed focused result | Evidence |
 |---|---|---|
@@ -118,94 +121,20 @@ audit.
 All five module results above are observed focused checks. No new full-build job count,
 build-job count, declaration count, or whole-project axiom total is asserted.
 
-## Reviewer notes: exact documentation update map
+## Proof status and endpoint path
 
-Apply these proposals only after the required final focused wrapper passes.
-They are not edits to the original files.
+`CLAIM_LEDGER.tsv` records proved source-mapped declarations; it does not
+assert that each named wrapper is reachable from the final endpoints.
+In particular, `lem:resultant` uses the on-path exponential separation,
+resultant nonvanishing and selected-branch infinite-order route; `lem:lie`
+uses the core divergence/flux, lieStep and transport machinery. Their
+source-facing wrappers are proved off-path. The separate UltraHigh wrappers
+are also proved off-path: the on-path `CommonAllSectorParameters.high_tendsto`
+and full F/full large-current series subsume their final-tail role.
+The auditor's 106 off-path modules remain preserved, including regressions
+and alternate/source-facing routes. No theorem is removed or weakened.
 
-### CLAIM_LEDGER.tsv
-
-Physical line numbers below refer to the inspected baseline table, including
-its header on line 1.
-
-- Line 24, `thm:tail`: replace the old `Tail.SummationGrowth`-only pointer
-  with the actual common-choice, sector-domination, intermediate and
-  selected-tail endpoints plus `IsingBulk.Final.theorem_tail`. Describe
-  the literal higher-even absolute sum and full finite derivative ceiling.
-  Remove the now-superseded common-selector/decomposition/little-o blocker
-  and old stop-at-compact-right note. Record actual targeted receipts.
-  E1/E2/E3 are not inputs to this theorem.
-- Line 25, `thm:conditional`: preserve the two conditional theorem
-  statements and their explicit hTail parameter; record that separate
-  proved wrapper endpoints now supply hTail. Do not rewrite the original
-  conditional theorem as though its statement lost a premise. Preserve
-  its physical nonvacuity regression and narrow E1/E2/E3 boundaries.
-- Line 26, `thm:nb`: replace the pending-assembly pointer with
-  `IsingBulk.Final.theorem_nb` and `IsingBulk.Final.theorem_nb_physical`;
-  describe the internally discharged TAIL premise and retained E3 or
-  E1/E2/E3 inputs. Keep final source/candidate and independent-audit gates
-  explicit unless separately completed.
-- Lines 12 (`prop:F`), 13 (`lem:partition`), 15 (`lem:originaldisk`),
-  21 (`lem:protected`), 22 (`prop:largeS`), 23 (`prop:highKS`): reconcile
-  the stale common-selector/final-instantiation remaining-work phrases.
-  Do not silently discharge line 15's separate raw-source-clause
-  reconciliation or any source/candidate gate merely because the wrapper
-  compiles. Preserve each prior mathematical status unless separately
-  justified by its own source review.
-- Lines 18–20 (`prop:allB`, `prop:mixed`, `prop:compactR`): preserve
-  IMPLEMENTED and original receipts; update only superseded downstream
-  open-work notes and append the actual new attachment references.
-- Line 17 (`prop:micro`): its “allB exterior ... open” note is already
-  superseded by the preserved implemented all-B endpoint; reconcile that
-  note without changing the microcore proof or its historical gate status.
-- Line 14 (`lem:contraction`): any change to its source-wide finite-jet
-  attachment note needs its own source-clause review, not merely inference
-  from final theorem use.
-- Preserve all existing CLOSED and six FIRST CANDIDATE_CLOSED statuses.
-  Targeted compilation alone warrants at most an IMPLEMENTED/targeted
-  acceptance description for new source nodes, not CANDIDATE_CLOSED or
-  AUDITED_CLOSED.
-
-### COVERAGE.md, CORRESPONDENCE.md and GAP_MANIFEST.md
-
-All three inspected files have the same top checkpoint authority block at
-lines 1–30. Its current-status sentence is line 9, baseline metrics are
-lines 11–19, obsolete stop/open assertions are lines 21–26, and a stage-local
-one-agent directive appears at line 30. Add a dated new authority block and
-explicitly identify the old block as historical checkpoint evidence. Do
-not replace its measured 1066/4830/9125 figures with invented new totals.
-
-The compact-right closure chronology is lines 217–220 and the older
-`TAIL_CONTINUATION_CURRENT` block is lines 224–232. Line 229 contains old
-open-node claims and an obsolete three-audit workflow. Preserve these as
-stage-local history, with the new authority block explicitly superseding
-them. The preserved FIRST history begins at line 234; its candidate
-statuses and original evidence must remain unchanged.
-
-In COVERAGE.md, the old source-status table at lines 586–619, including
-NOT_STARTED tail/final rows at 614–616, is historical branch-era reporting,
-not a table to silently rewrite as current. GAP_MANIFEST.md's “Remaining
-proof obligations — after branch closure” section begins at line 738 and
-is likewise historical. Put the actual remaining current obligations in
-the new dated authority block: focused checks still pending, source/freeze
-reconciliation and whichever normal candidate gate the coordinator
-actually authorizes. No independent-audit completion is implied.
-
-CORRESPONDENCE.md should additionally link the source/endpoint table above,
-record the stronger full-F/full-current route and the strict-to-weak window
-bridge, and explicitly retain the physical/published input boundaries.
-
-### Separate continuation declaration inventory
-
-Preserve `AUTHORED_DECLARATIONS.tsv` and `DECLARATIONS.tsv` unchanged as the
-FIRST-era snapshots described above. A separate continuation source map
-may list the 24 authored declarations currently present in the five new
-source files, but this source count is not an environment declaration count.
-Structure projections, recursors, generated equations and private helpers
-must be collected from the actual final loaded environment.
-
-After the final focused wrapper/root checks, create the separate inventory
-from actual declaration names, types, defining modules and reachable axiom
-lists. Do not assign the endpoint axiom union to every individual entry or
-reuse the historical 9,125 count as the candidate inventory. Record actual
-source hashes, command/log receipts and the exact scope of the export.
+The pinned manuscript self-label `0.1-rc4` identifies the analytic baseline.
+It is intentionally retained; the Lean release/remediation version is separate.
+E1/E2/E3 remain explicit external premises, and the E3 non-Nickel guard is
+checked by `control_packet/continuation/fixtures/E3Guard.lean`.

@@ -48,19 +48,21 @@ def main():
                              + '-' + uuid.uuid4().hex[:8])
     run.mkdir(parents=True, exist_ok=False)
     sys.path.insert(0, str(ROOT / 'tools/continuation'))
-    from preflight import clean_environment, snapshot
+    from preflight import clean_environment, snapshot, reject_dependency_project_namespaces
     env = clean_environment(args.lean_bin_dir)
     env['LEAN_NUM_THREADS'] = '1'
     initial_context = snapshot(ROOT, args.lean_bin_dir)
     cases = [
         ('PositiveArithmetic.lean', None),
         ('PositiveInterfaces.lean', None),
+        ('E3Guard.lean', None),
         ('InvalidArithmetic.lean', r"Tactic [`'‘]?rfl[`'’]? failed"),
         ('InvalidStrictWindow.lean', r'Type mismatch'),
         ('InvalidCancellation.lean', r'unsolved goals'),
     ]
     records = []
     for filename, expected_failure in cases:
+        reject_dependency_project_namespaces(ROOT)
         fixture = HERE / 'fixtures' / filename
         source = fixture.read_text()
         # Diagnostics must point at the marked mathematical proof/declaration.

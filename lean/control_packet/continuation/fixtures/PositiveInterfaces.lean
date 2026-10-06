@@ -44,3 +44,38 @@ example {J : ℝ} (hJ : 0 < J) {chi : ℂ → ℂ} {M : ℝ → ℂ}
       (∀ x : ℝ, 16 < x → chi (x:ℂ) = rightPhysicalBulk J (x:ℂ)) ∧
       (∀ z : ℂ, ‖z‖ = 1 → ¬ HasPhysicalBoundaryExtension J exteriorNormalizedBulk z) :=
   theorem_nb_physical hJ hE1 hE2 hTW
+
+-- Exact FIRST application, including its published E3 premise.
+example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
+    (ha : IsingBulk.PrimeFamily.Admissible p a) (hb : IsingBulk.PrimeFamily.Admissible p b) (hab : a ≠ b)
+    (hTW : PublishedTWFixedOrderInput (IsingBulk.PrimeFamily.selectedPoint p a b)) :
+    let k := (2*p)^2/2-1
+    let A := selectedOrderedChart ha hb
+    let L := localLeadingCoefficient A (2*p-1) k
+    L ≠ 0 ∧
+      Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+        (fun epsilon => (deriv^[k] (doubleFormFactor (2*p) (sourceRadialPair A.theta epsilon).1))
+          (sourceRadialPair A.theta epsilon).2 - (Real.sqrt epsilon:ℂ)⁻¹*(2*L))
+        (fun epsilon => (Real.sqrt epsilon:ℂ)⁻¹) ∧
+      (∃ e : ℝ, 0 < e ∧ ∀ j : ℕ, j < k → ∃ C : ℝ, 0 ≤ C ∧ ∀ epsilon : ℝ,
+        0 < epsilon → epsilon < e →
+        ‖(deriv^[j] (doubleFormFactor (2*p) (sourceRadialPair A.theta epsilon).1))
+          (sourceRadialPair A.theta epsilon).2‖ ≤ C) ∧
+      (∀ N : ℕ, 0 < N → Even N → N < 2*p → ∀ j : ℕ,
+        ∃ e C : ℝ, 0 < e ∧ 0 ≤ C ∧ ∀ epsilon : ℝ, 0 < epsilon → epsilon < e →
+          ‖(deriv^[j] (doubleFormFactor N (sourceRadialPair A.theta epsilon).1))
+            (sourceRadialPair A.theta epsilon).2‖ ≤ C) :=
+  theorem_first hp hp11 ha hb hab hTW
+
+-- Complete TAIL application, with explicit positive-parameter convergence.
+example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
+    (ha : IsingBulk.PrimeFamily.Admissible p a)
+    (hb : IsingBulk.PrimeFamily.Admissible p b) (hab : a ≠ b) :
+    ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+      (∀ eps : ℝ, 0 < eps → Summable (fun n : ℕ =>
+        ‖iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+          (radialParameter (selectedOrderedChart ha hb).theta eps)‖)) ∧
+      (fun eps : ℝ => ∑' n : ℕ, ‖iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+        (radialParameter (selectedOrderedChart ha hb).theta eps)‖)
+        =o[𝓝[>] 0] (fun eps : ℝ => (Real.sqrt eps)⁻¹) :=
+  theorem_tail_with_summability hp hp11 ha hb hab

@@ -105,6 +105,20 @@
       "source": "IsingBulk/Final/UnconditionalNaturalBoundary.lean",
       "source_label": "thm:nb",
       "require_ledger_declaration": true
+    },
+    {
+      "declaration": "IsingBulk.First.theorem_first",
+      "module": "IsingBulk.First.FirstTheorem",
+      "source": "IsingBulk/First/FirstTheorem.lean",
+      "source_label": "thm:first",
+      "require_ledger_declaration": true
+    },
+    {
+      "declaration": "IsingBulk.Final.theorem_tail_with_summability",
+      "module": "IsingBulk.Final.UnconditionalNaturalBoundary",
+      "source": "IsingBulk/Final/UnconditionalNaturalBoundary.lean",
+      "source_label": "thm:tail",
+      "require_ledger_declaration": true
     }
   ]
 }
