@@ -10,6 +10,8 @@ It does not publish a release or merge into main.
 The verification gate rejects foreign `IsingBulk` and `Audit` namespaces
 under dependency build outputs before environment-resolving checks, and
 runs the project axiom audit through `lake -f lakefile.toml --no-cache build Audit`.
+An unreadable dependency build directory fails closed; readable artifacts
+behind an unlistable directory cannot silently escape the scan.
 The production payload verifier requires `--expected-id` from its caller
 and shares preflight's dependency HEAD, tracked-source and Lake-override checks.
 The workflow's `ci/accepted_identity.json` pin is separate from `payload.json`,
@@ -36,8 +38,12 @@ release version. Neither the frozen manuscript nor the v0.2.0 tag/release
 assets are changed by this branch. Internal Lean kernel verification and AI
 audit evidence do not imply human peer review.
 
-The final candidate is committed before its single local clean build and
-fresh kernel replay. Exact candidate identities, before/after regression
+The first frozen candidate passed its local clean build and fresh kernel
+replay. A subsequent targeted regression exposed silent skipping of an
+unlistable dependency cache. The scanner was repaired, the candidate was
+recommitted, and the final heavy validation was repeated for those corrected
+bytes, as required by the contract's genuine-failure repair exception.
+Exact candidate identities, before/after regression
 logs, final validation results and remote CI status are reported separately
 after execution, so historical v0.2.0 receipts are not assigned to new bytes.
 Dependencies use the pinned official cache; binary/source correspondence

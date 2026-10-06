@@ -122,6 +122,25 @@ def main():
         check('audited_complete_mutant_tree', 'Foreign project namespace in dependency build:', dependencies=True)
         (build / 'IsingBulk').unlink()
         (build / 'IsingBulk.olean').unlink()
+    # A traversable but unlistable cache must fail closed: artifacts can still
+    # be loaded by their known paths even when os.walk cannot enumerate them.
+    hidden_artifact = build / 'IsingBulk.olean'
+    hidden_artifact.write_bytes(b'readable foreign artifact behind an unlistable directory\n')
+    cache = build.parents[1]
+    cache.chmod(0o111)
+    try:
+        if not hidden_artifact.read_bytes():
+            raise RuntimeError('The cache-error control requires a readable artifact')
+        try:
+            list(cache.iterdir())
+        except PermissionError:
+            pass
+        else:
+            raise RuntimeError('Run the cache-error control as an unprivileged user')
+        check('unlistable_dependency_build', 'Cannot inspect dependency build:', dependencies=True)
+    finally:
+        cache.chmod(0o755)
+        hidden_artifact.unlink()
     check('positive_restored_dependencies', dependencies=True)
     summary = dict(all_controls_pass=all(record['passed'] for record in records), case_count=len(records),
                    expected_id=expected_id, source_payload_id=payload['PROOF_CRITICAL_PAYLOAD_ID'], cases=records,

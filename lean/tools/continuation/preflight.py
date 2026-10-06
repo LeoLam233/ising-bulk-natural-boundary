@@ -100,9 +100,15 @@ def reject_dependency_project_namespaces(project: Path) -> None:
         return
     for dep_path in sorted(packages.iterdir()):
         build = dep_path / ".lake/build"
+        if not build.exists() and not build.is_symlink():
+            continue
         seen: set[Path] = set()
+
+        def scan_error(error: OSError) -> None:
+            raise PreflightError(f"Cannot inspect dependency build: {error}") from error
+
         # Follow output-directory links too; visit each resolved directory once.
-        for directory, dirs, files in os.walk(build, followlinks=True):
+        for directory, dirs, files in os.walk(build, followlinks=True, onerror=scan_error):
             for name in dirs + files:
                 require(name not in {"IsingBulk", "Audit"}
                         and not name.startswith(("IsingBulk.olean", "Audit.olean")),
