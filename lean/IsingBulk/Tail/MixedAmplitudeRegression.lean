@@ -1,0 +1,3 @@
+import IsingBulk.Tail.MixedAmplitudeSource
+#print axioms IsingBulk.Tail.mixed_actual_smooth_amplitude_jets
+#print axioms IsingBulk.Tail.mixedActiveSmoothAmplitude_source

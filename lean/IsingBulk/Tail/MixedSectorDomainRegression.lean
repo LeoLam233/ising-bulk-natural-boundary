@@ -1,0 +1,4 @@
+import IsingBulk.Tail.MixedSectorDomain
+#print axioms IsingBulk.Tail.mixed_original_sector_domain
+#print axioms IsingBulk.Tail.mixed_current_sector_domain
+#print axioms IsingBulk.Tail.named_nested_sector_support_subset

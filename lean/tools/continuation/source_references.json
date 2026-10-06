@@ -1,0 +1,1667 @@
+{
+  "schema": "ising-source-reference-map-v1",
+  "references": [
+    {
+      "source_label": "lem:residue",
+      "ledger_token": "IsingBulk.First.lemma_residue",
+      "kind": "declaration",
+      "target": "IsingBulk.First.lemma_residue"
+    },
+    {
+      "source_label": "lem:residue",
+      "ledger_token": "IsingBulk.First.radial_disk_globalRoot_admissible",
+      "kind": "declaration",
+      "target": "IsingBulk.First.radial_disk_globalRoot_admissible"
+    },
+    {
+      "source_label": "lem:symmetry",
+      "ledger_token": "IsingBulk.First.normalizedBulkSeries_nearInfinity_source",
+      "kind": "declaration",
+      "target": "IsingBulk.First.normalizedBulkSeries_nearInfinity_source"
+    },
+    {
+      "source_label": "lem:symmetry",
+      "ledger_token": "IsingBulk.First.normalizedSusceptibility_real_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.First.normalizedSusceptibility_real_germ"
+    },
+    {
+      "source_label": "lem:symmetry",
+      "ledger_token": "IsingBulk.First.lemma_symmetry_exterior",
+      "kind": "declaration",
+      "target": "IsingBulk.First.lemma_symmetry_exterior"
+    },
+    {
+      "source_label": "lem:symmetry",
+      "ledger_token": "IsingBulk.First.exterior_continuation_unique_from_real_near_infinity",
+      "kind": "declaration",
+      "target": "IsingBulk.First.exterior_continuation_unique_from_real_near_infinity"
+    },
+    {
+      "source_label": "lem:symmetry",
+      "ledger_token": "IsingBulk.First.doubleFormFactor_even",
+      "kind": "declaration",
+      "target": "IsingBulk.First.doubleFormFactor_even"
+    },
+    {
+      "source_label": "lem:symmetry",
+      "ledger_token": "IsingBulk.First.doubleFormFactor_conjugate",
+      "kind": "declaration",
+      "target": "IsingBulk.First.doubleFormFactor_conjugate"
+    },
+    {
+      "source_label": "thm:prime",
+      "ledger_token": "IsingBulk.PrimeFamily.prime_family",
+      "kind": "declaration",
+      "target": "IsingBulk.PrimeFamily.prime_family"
+    },
+    {
+      "source_label": "thm:prime",
+      "ledger_token": "IsingBulk.PrimeFamily.selectedFamily_subset_arc",
+      "kind": "declaration",
+      "target": "IsingBulk.PrimeFamily.selectedFamily_subset_arc"
+    },
+    {
+      "source_label": "thm:prime",
+      "ledger_token": "IsingBulk.PrimeFamily.selectedBranch_unit_lower",
+      "kind": "declaration",
+      "target": "IsingBulk.PrimeFamily.selectedBranch_unit_lower"
+    },
+    {
+      "source_label": "lem:resultant",
+      "ledger_token": "IsingBulk.PrimeFamily.selected_exponential_separation",
+      "kind": "declaration",
+      "target": "IsingBulk.PrimeFamily.selected_exponential_separation"
+    },
+    {
+      "source_label": "lem:mean",
+      "ledger_token": "IsingBulk.First.physical_mean_residue",
+      "kind": "declaration",
+      "target": "IsingBulk.First.physical_mean_residue"
+    },
+    {
+      "source_label": "lem:mean",
+      "ledger_token": "IsingBulk.First.selected_physical_mean_residue",
+      "kind": "declaration",
+      "target": "IsingBulk.First.selected_physical_mean_residue"
+    },
+    {
+      "source_label": "lem:mean",
+      "ledger_token": "IsingBulk.First.actual_physical_mean_prescribed_delta",
+      "kind": "declaration",
+      "target": "IsingBulk.First.actual_physical_mean_prescribed_delta"
+    },
+    {
+      "source_label": "lem:period",
+      "ledger_token": "IsingBulk.First.lemma_period",
+      "kind": "declaration",
+      "target": "IsingBulk.First.lemma_period"
+    },
+    {
+      "source_label": "lem:period",
+      "ledger_token": "IsingBulk.First.shapeRadialIntegral_positive_beta",
+      "kind": "declaration",
+      "target": "IsingBulk.First.shapeRadialIntegral_positive_beta"
+    },
+    {
+      "source_label": "lem:period",
+      "ledger_token": "IsingBulk.First.localLeadingCoefficient_ne_zero",
+      "kind": "declaration",
+      "target": "IsingBulk.First.localLeadingCoefficient_ne_zero"
+    },
+    {
+      "source_label": "lem:complement",
+      "ledger_token": "IsingBulk.First.selected_complement_global_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.First.selected_complement_global_bound"
+    },
+    {
+      "source_label": "lem:complement",
+      "ledger_token": "IsingBulk.First.selected_compatible_complement_bounded",
+      "kind": "declaration",
+      "target": "IsingBulk.First.selected_compatible_complement_bounded"
+    },
+    {
+      "source_label": "thm:first",
+      "ledger_token": "IsingBulk.First.theorem_first",
+      "kind": "declaration",
+      "target": "IsingBulk.First.theorem_first"
+    },
+    {
+      "source_label": "thm:first",
+      "ledger_token": "IsingBulk.First.first_fixed_source_asymptotic",
+      "kind": "declaration",
+      "target": "IsingBulk.First.first_fixed_source_asymptotic"
+    },
+    {
+      "source_label": "thm:first",
+      "ledger_token": "IsingBulk.First.selected_local_pair_profile",
+      "kind": "declaration",
+      "target": "IsingBulk.First.selected_local_pair_profile"
+    },
+    {
+      "source_label": "thm:first",
+      "ledger_token": "IsingBulk.First.selected_lower_orders_fixed_radius_bounded",
+      "kind": "declaration",
+      "target": "IsingBulk.First.selected_lower_orders_fixed_radius_bounded"
+    },
+    {
+      "source_label": "prop:selector",
+      "ledger_token": "IsingBulk.Tail.proposition_selector",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.proposition_selector"
+    },
+    {
+      "source_label": "prop:selector",
+      "ledger_token": "IsingBulk.Tail.radial_weighted_retraction",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.radial_weighted_retraction"
+    },
+    {
+      "source_label": "prop:selector",
+      "ledger_token": "IsingBulk.Tail.selector_iteratedDeriv_eq",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selector_iteratedDeriv_eq"
+    },
+    {
+      "source_label": "prop:ultrahigh",
+      "ledger_token": "IsingBulk.Tail.proposition_ultrahigh",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.proposition_ultrahigh"
+    },
+    {
+      "source_label": "prop:ultrahigh",
+      "ledger_token": "IsingBulk.Tail.ultraHigh_cutoff_exact",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.ultraHigh_cutoff_exact"
+    },
+    {
+      "source_label": "prop:F",
+      "ledger_token": "IsingBulk.Tail.selected_actual_full_series_reqF",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_actual_full_series_reqF"
+    },
+    {
+      "source_label": "prop:F",
+      "ledger_token": "IsingBulk.Tail.selected_actual_epsilon_tail",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_actual_epsilon_tail"
+    },
+    {
+      "source_label": "lem:partition",
+      "ledger_token": "ConstructedSectorPartition",
+      "kind": "module",
+      "target": "IsingBulk.Tail.ConstructedSectorPartition"
+    },
+    {
+      "source_label": "lem:partition",
+      "ledger_token": "SectorPartitionSupport",
+      "kind": "module",
+      "target": "IsingBulk.Tail.SectorPartitionSupport"
+    },
+    {
+      "source_label": "lem:partition",
+      "ledger_token": "SectorAssignmentPartition",
+      "kind": "module",
+      "target": "IsingBulk.Tail.SectorAssignmentPartition"
+    },
+    {
+      "source_label": "lem:partition",
+      "ledger_token": "NestedSectorPartition",
+      "kind": "module",
+      "target": "IsingBulk.Tail.NestedSectorPartition"
+    },
+    {
+      "source_label": "lem:partition",
+      "ledger_token": "MixedSlopeSeparation",
+      "kind": "module",
+      "target": "IsingBulk.Tail.MixedSlopeSeparation"
+    },
+    {
+      "source_label": "lem:contraction",
+      "ledger_token": "Tail.CompactPairUniform",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactPairUniform"
+    },
+    {
+      "source_label": "lem:contraction",
+      "ledger_token": "CompactRootGroups",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactRootGroups"
+    },
+    {
+      "source_label": "lem:contraction",
+      "ledger_token": "ProtectedCompletePairTransfer",
+      "kind": "module",
+      "target": "IsingBulk.Tail.ProtectedCompletePairTransfer"
+    },
+    {
+      "source_label": "lem:contraction",
+      "ledger_token": "IndexedPairSuppression",
+      "kind": "module",
+      "target": "IsingBulk.Tail.IndexedPairSuppression"
+    },
+    {
+      "source_label": "lem:contraction",
+      "ledger_token": "ChangedPairProductJets",
+      "kind": "module",
+      "target": "IsingBulk.Tail.ChangedPairProductJets"
+    },
+    {
+      "source_label": "lem:originaldisk",
+      "ledger_token": "Tail.OriginalBothBranches",
+      "kind": "module",
+      "target": "IsingBulk.Tail.OriginalBothBranches"
+    },
+    {
+      "source_label": "lem:originaldisk",
+      "ledger_token": "OriginalCompactResidue",
+      "kind": "module",
+      "target": "IsingBulk.Tail.OriginalCompactResidue"
+    },
+    {
+      "source_label": "lem:originaldisk",
+      "ledger_token": "OriginalDiskGlobalFactors",
+      "kind": "module",
+      "target": "IsingBulk.Tail.OriginalDiskGlobalFactors"
+    },
+    {
+      "source_label": "lem:originaldisk",
+      "ledger_token": "OriginalResidueL1",
+      "kind": "module",
+      "target": "IsingBulk.Tail.OriginalResidueL1"
+    },
+    {
+      "source_label": "lem:originaldisk",
+      "ledger_token": "OriginalCompletePairProduct",
+      "kind": "module",
+      "target": "IsingBulk.Tail.OriginalCompletePairProduct"
+    },
+    {
+      "source_label": "lem:originaldisk",
+      "ledger_token": "OriginalCurrentCompletePair",
+      "kind": "module",
+      "target": "IsingBulk.Tail.OriginalCurrentCompletePair"
+    },
+    {
+      "source_label": "lem:branch",
+      "ledger_token": "IsingBulk.Branch.lemma_branch",
+      "kind": "declaration",
+      "target": "IsingBulk.Branch.lemma_branch"
+    },
+    {
+      "source_label": "lem:branch",
+      "ledger_token": "IsingBulk.Branch.BranchEstimates.current_occupancy",
+      "kind": "declaration",
+      "target": "IsingBulk.Branch.BranchEstimates.current_occupancy"
+    },
+    {
+      "source_label": "lem:branch",
+      "ledger_token": "IsingBulk.Branch.OriginalQuotientData.separated_eventually",
+      "kind": "declaration",
+      "target": "IsingBulk.Branch.OriginalQuotientData.separated_eventually"
+    },
+    {
+      "source_label": "lem:branch",
+      "ledger_token": "IsingBulk.Branch.OriginalQuotientData.comparable_eventually",
+      "kind": "declaration",
+      "target": "IsingBulk.Branch.OriginalQuotientData.comparable_eventually"
+    },
+    {
+      "source_label": "prop:micro",
+      "ledger_token": "IsingBulk.Tail.selected_all_branch_microcore_epsilon",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_all_branch_microcore_epsilon"
+    },
+    {
+      "source_label": "prop:micro",
+      "ledger_token": "IsingBulk.Tail.selected_sector_microcore",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_sector_microcore"
+    },
+    {
+      "source_label": "prop:micro",
+      "ledger_token": "IsingBulk.Tail.microcore_compact_integral_iteratedDeriv",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.microcore_compact_integral_iteratedDeriv"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "Tail.AllBranchExteriorShape",
+      "kind": "module",
+      "target": "IsingBulk.Tail.AllBranchExteriorShape"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "AllBranchExteriorCutoffs",
+      "kind": "module",
+      "target": "IsingBulk.Tail.AllBranchExteriorCutoffs"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "CoordinateProductJets",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CoordinateProductJets"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "CoareaRectangleKernel",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CoareaRectangleKernel"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_single_truncation_derivatives_tendsto",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_single_truncation_derivatives_tendsto"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_positive_diameter_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_positive_diameter_integral"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_negative_kernel_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_negative_kernel_integral"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_positive_separated_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_positive_separated_integral"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_positive_weighted_density_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_positive_weighted_density_integral"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_source_term_collision_power",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_source_term_collision_power"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_original_near_numerator",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_original_near_numerator"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_single_truncated_pole",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_single_truncated_pole"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.cutoffJet_product_diameter_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.cutoffJet_product_diameter_bound"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_chart_cutoff_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_chart_cutoff_jets"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_source_budget",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_source_budget"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_pair_derivative_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_pair_derivative_bound"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_kernel_majorant_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_kernel_majorant_integral"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_chart_common_sign",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_chart_common_sign"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_pair_derivative",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_pair_derivative"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_chart_pair_derivative",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_chart_pair_derivative"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_weighted_jet_representation",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_weighted_jet_representation"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_pair_partition_derivatives",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_pair_partition_derivatives"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_chart_derivative",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_chart_derivative"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_source_budget",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_source_budget"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_kernel_majorant_dominates",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_kernel_majorant_dominates"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_chart_cutoff_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_chart_cutoff_jets"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_pair_derivative",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_pair_derivative"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_chart_derivative",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_chart_derivative"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_kernel_cost_radial",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_kernel_cost_radial"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_kernel_cost_scalar",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_kernel_cost_scalar"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_kernel_cost_radial_scalar",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_kernel_cost_radial_scalar"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.NatExponentialEnvelope.const_pow",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.NatExponentialEnvelope.const_pow"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_local_prefactor_envelope",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_local_prefactor_envelope"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.collision_scale_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.collision_scale_summable"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_scale_majorant_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_scale_majorant_summable"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.linear_envelope_numerator_gaussian_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.linear_envelope_numerator_gaussian_summable"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_scale_majorant_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_scale_majorant_summable"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_scale_geometry",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_scale_geometry"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_window_epsilon_multiple",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_window_epsilon_multiple"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_source_degree",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_source_degree"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_near_chart_window",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_near_chart_window"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_far_chart_window",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_far_chart_window"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_angular_chart_derivatives",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_angular_chart_derivatives"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_angular_window",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_angular_window"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_angular_window_finite",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_angular_window_finite"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.allBranchExterior_window_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.allBranchExterior_window_littleO"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.original_allBranch_micro_exterior_domination",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_allBranch_micro_exterior_domination"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.proposition_allB",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.proposition_allB"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.particleOffset_tsum",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.particleOffset_tsum"
+    },
+    {
+      "source_label": "prop:allB",
+      "ledger_token": "IsingBulk.Tail.selected_original_allBranch_window_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_original_allBranch_window_littleO"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "Tail.MixedFrozenPhase",
+      "kind": "module",
+      "target": "IsingBulk.Tail.MixedFrozenPhase"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "MixedHybridChart",
+      "kind": "module",
+      "target": "IsingBulk.Tail.MixedHybridChart"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "MixedCoarea",
+      "kind": "module",
+      "target": "IsingBulk.Tail.MixedCoarea"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "MixedBranchCone",
+      "kind": "module",
+      "target": "IsingBulk.Tail.MixedBranchCone"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "MixedSlopeSeparation",
+      "kind": "module",
+      "target": "IsingBulk.Tail.MixedSlopeSeparation"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_transport_column",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_transport_column"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_active_scalar_transport",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_active_scalar_transport"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_frozen_scalar_transport",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_frozen_scalar_transport"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_residuals_active_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_residuals_active_germ"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedHybridDivergence_active_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedHybridDivergence_active_germ"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_frozen_regular_lie",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_frozen_regular_lie"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_kernel_frozen",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_kernel_frozen"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedFrozenDensityModel_eq_analytic",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedFrozenDensityModel_eq_analytic"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_analytic_density_lie_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_analytic_density_lie_germ"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.MixedDensityJetTerm.source_step_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.MixedDensityJetTerm.source_step_germ"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedDensityJetTerms_all_order_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedDensityJetTerms_all_order_germ"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_weighted_iterate_freeze",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_weighted_iterate_freeze"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_density_all_order",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_density_all_order"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedDensityJetTerms_pointwise_budget",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedDensityJetTerms_pointwise_budget"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_coefficient_jet_family",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_coefficient_jet_family"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_current_source_jet_family",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_current_source_jet_family"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_original_source_jet_family",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_original_source_jet_family"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_density_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_density_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_original_weight_pointwise",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_original_weight_pointwise"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_current_weight_pointwise",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_current_weight_pointwise"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedPairAngles_deformed_spectator",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedPairAngles_deformed_spectator"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_branch_slope_majorant",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_branch_slope_majorant"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedCoordinatePhase_injOn",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedCoordinatePhase_injOn"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_positive_global_kernel_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_positive_global_kernel_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixedSpectatorMajorant_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedSpectatorMajorant_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_current_anchor_cover",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_current_anchor_cover"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_actual_source_volume_majorant",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_actual_source_volume_majorant"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_positive_source_cell_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_positive_source_cell_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.finite_cover_integral_norm_le",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.finite_cover_integral_norm_le"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_original_positive_density_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_original_positive_density_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_current_positive_density_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_current_positive_density_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.angular_one_phase_weighted_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.angular_one_phase_weighted_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_negative_source_kernel_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_negative_source_kernel_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_negative_supported_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_negative_supported_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_original_negative_density_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_original_negative_density_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_current_negative_density_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_current_negative_density_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_integral_norm_le_signed_halves",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_integral_norm_le_signed_halves"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_positive_kernel_radial_budget",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_positive_kernel_radial_budget"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_negative_kernel_radial_budget",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_negative_kernel_radial_budget"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_gaussian_log_majorant_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_gaussian_log_majorant_littleO"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.originalSectorIntegral_lie_iterate",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.originalSectorIntegral_lie_iterate"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.currentSectorIntegral_lie_iterate",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.currentSectorIntegral_lie_iterate"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_original_sector_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_original_sector_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_current_sector_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_current_sector_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.constructed_current_named_branch_zero",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.constructed_current_named_branch_zero"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.originalMixedSectorNorm_le",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.originalMixedSectorNorm_le"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.integratedMixedSectorNorm_le",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.integratedMixedSectorNorm_le"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.original_mixed_sector_sum_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_mixed_sector_sum_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.current_mixed_sector_sum_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_mixed_sector_sum_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.original_mixed_sector_sum_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_mixed_sector_sum_littleO"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.current_mixed_sector_sum_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_mixed_sector_sum_littleO"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.compact_pulledDensity_parameter_germ",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_pulledDensity_parameter_germ"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.left_compact_original_pointwise",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.left_compact_original_pointwise"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.left_compact_current_pointwise",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.left_compact_current_pointwise"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.left_compact_source_kernel_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.left_compact_source_kernel_integral"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.left_compact_original_sector_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.left_compact_original_sector_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.left_compact_current_sector_gaussian_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.left_compact_current_sector_gaussian_bound"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.original_left_compact_sector_sum_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_left_compact_sector_sum_littleO"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.current_left_compact_sector_sum_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_left_compact_sector_sum_littleO"
+    },
+    {
+      "source_label": "prop:mixed",
+      "ledger_token": "IsingBulk.Tail.mixed_left_sector_sum_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixed_left_sector_sum_littleO"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "Tail.CompactRightCurvature",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactRightCurvature"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "CompactRightShapeCoarea",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactRightShapeCoarea"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "CompactRightPhaseJets",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactRightPhaseJets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "CompactAnalyticJetBounds",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactAnalyticJetBounds"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "CompactRightPhaseTube",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CompactRightPhaseTube"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "CoupledOccupancyJets",
+      "kind": "module",
+      "target": "IsingBulk.Tail.CoupledOccupancyJets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_diameter_integral_of_pair_bounds",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_diameter_integral_of_pair_bounds"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_right_diameter_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_right_diameter_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_near_diameter_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_near_diameter_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_far_diameter_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_far_diameter_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_right_radial_kernel_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_right_radial_kernel_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_actual_simple_kernel_floor",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_actual_simple_kernel_floor"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_right_source_kernel_budget",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_right_source_kernel_budget"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactSource_phase_smooth",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactSource_phase_smooth"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactSource_kernel_smooth",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactSource_kernel_smooth"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.currentAveragedField_kernel_frozen",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.currentAveragedField_kernel_frozen"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.currentSelectedPairField_smooth",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.currentSelectedPairField_smooth"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.currentSelectedPairField_kernel_frozen",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.currentSelectedPairField_kernel_frozen"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_pulledDensity_factorization",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_pulledDensity_factorization"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactRegularDensity_smooth",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactRegularDensity_smooth"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_selected_density_all_order",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_selected_density_all_order"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_selected_density_stages_smooth",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_selected_density_stages_smooth"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_selected_window",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_selected_window"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.RealScaledJetBound.mul",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.RealScaledJetBound.mul"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.realScaledJetBound_iterate_lieStep",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.realScaledJetBound_iterate_lieStep"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.real_reciprocal_scaled_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.real_reciprocal_scaled_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.selected_pair_scaled_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_pair_scaled_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.unwrappedLogY_joint_positive_finite_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.unwrappedLogY_joint_positive_finite_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_freezing_coefficient_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_freezing_coefficient_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_selected_field_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_selected_field_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.RealScaledJetBound.inv",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.RealScaledJetBound.inv"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.RealScaledJetBound.pow",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.RealScaledJetBound.pow"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactPairWeightDenom_inverse_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactPairWeightDenom_inverse_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactPairWeight_selected_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactPairWeight_selected_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_weighted_lie_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_weighted_lie_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.real_smooth_composition_jet_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.real_smooth_composition_jet_bound"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.deformedPoint_joint_finite_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.deformedPoint_joint_finite_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.deformedPoint_difference_scaled_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.deformedPoint_difference_scaled_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.deformed_vandermonde_scaled_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.deformed_vandermonde_scaled_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_scalar_pair_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_scalar_pair_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_regular_scalar_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_regular_scalar_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_pair_product_collision_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_pair_product_collision_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.real_normalized_determinant_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.real_normalized_determinant_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.mixedDensityNormalization_joint_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.mixedDensityNormalization_joint_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_prefactor_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_prefactor_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_regular_numerator_collision_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_regular_numerator_collision_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_deleted_pairs_all_angles",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_deleted_pairs_all_angles"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_actual_deleted_pairs_global",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_actual_deleted_pairs_global"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_actual_deleted_pairs_global",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_actual_deleted_pairs_global"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_regular_numerator_deleted_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_regular_numerator_deleted_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_compact_regular_gaussian_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_compact_regular_gaussian_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_compact_regular_gaussian_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_compact_regular_gaussian_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.sector_joint_real_jets_common",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.sector_joint_real_jets_common"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_sector_collision_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_sector_collision_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_compact_sector_gaussian_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_compact_sector_gaussian_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_compact_sector_gaussian_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_compact_sector_gaussian_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.smooth_parameter_bounded_weight_derivatives_tendsto",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.smooth_parameter_bounded_weight_derivatives_tendsto"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_parameter_lie_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_parameter_lie_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_selected_guard_real_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_selected_guard_real_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_guarded_integral_derivatives_tendsto",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_guarded_integral_derivatives_tendsto"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_guarded_lie_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_guarded_lie_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_guarded_weighted_lie_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_guarded_weighted_lie_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactSignedWeight_smooth",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactSignedWeight_smooth"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_guarded_lie_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_guarded_lie_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactAllowedDiameter_le_full",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactAllowedDiameter_le_full"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_allowed_near_far_integral",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_allowed_near_far_integral"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_guarded_regular_values",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_guarded_regular_values"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_pair_integral_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_pair_integral_bound"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_pair_derivative_reconstruction",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_pair_derivative_reconstruction"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_pair_derivative_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_pair_derivative_bound"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.actual_compact_full_integral_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_compact_full_integral_bound"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_near_far_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_near_far_summable"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactSourceMajorant_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactSourceMajorant_summable"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_compact_sector_gaussian_jets_uniform",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_compact_sector_gaussian_jets_uniform"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_compact_sector_gaussian_jets_uniform",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_compact_sector_gaussian_jets_uniform"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_sector_compact_integral_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_sector_compact_integral_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_sector_compact_integral_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_sector_compact_integral_jets"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compactSourceMajorant_weighted_summable",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compactSourceMajorant_weighted_summable"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_compact_sector_window_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_compact_sector_window_bound"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_compact_sector_window_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_compact_sector_window_bound"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.originalRightCompactSectorNorm_le",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.originalRightCompactSectorNorm_le"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.integratedRightCompactSectorNorm_le",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.integratedRightCompactSectorNorm_le"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.original_compact_sector_window_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.original_compact_sector_window_littleO"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.current_compact_sector_window_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.current_compact_sector_window_littleO"
+    },
+    {
+      "source_label": "prop:compactR",
+      "ledger_token": "IsingBulk.Tail.compact_right_sector_sum_littleO",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.compact_right_sector_sum_littleO"
+    },
+    {
+      "source_label": "lem:protected",
+      "ledger_token": "IsingBulk.Tail.protected_named_source",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.protected_named_source"
+    },
+    {
+      "source_label": "lem:protected",
+      "ledger_token": "IsingBulk.Tail.protected_current_disk_and_envelope",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.protected_current_disk_and_envelope"
+    },
+    {
+      "source_label": "prop:largeS",
+      "ledger_token": "IsingBulk.Tail.large_current_positive_even_series",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.large_current_positive_even_series"
+    },
+    {
+      "source_label": "prop:largeS",
+      "ledger_token": "IsingBulk.Tail.large_current_positive_even_littleo",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.large_current_positive_even_littleo"
+    },
+    {
+      "source_label": "prop:highKS",
+      "ledger_token": "Tail.HighKSBound",
+      "kind": "module",
+      "target": "IsingBulk.Tail.HighKSBound"
+    },
+    {
+      "source_label": "prop:highKS",
+      "ledger_token": "IsingBulk.Tail.actual_highKS_epsilon_tail",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.actual_highKS_epsilon_tail"
+    },
+    {
+      "source_label": "thm:tail",
+      "ledger_token": "IsingBulk.Tail.selected_absolute_upper_tail_small",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_absolute_upper_tail_small"
+    },
+    {
+      "source_label": "thm:tail",
+      "ledger_token": "IsingBulk.Final.theorem_tail",
+      "kind": "declaration",
+      "target": "IsingBulk.Final.theorem_tail"
+    },
+    {
+      "source_label": "thm:conditional",
+      "ledger_token": "IsingBulk.Final.theorem_conditional",
+      "kind": "declaration",
+      "target": "IsingBulk.Final.theorem_conditional"
+    },
+    {
+      "source_label": "thm:conditional",
+      "ledger_token": "IsingBulk.Final.theorem_conditional_physical",
+      "kind": "declaration",
+      "target": "IsingBulk.Final.theorem_conditional_physical"
+    },
+    {
+      "source_label": "thm:nb",
+      "ledger_token": "IsingBulk.Final.theorem_nb",
+      "kind": "declaration",
+      "target": "IsingBulk.Final.theorem_nb"
+    },
+    {
+      "source_label": "thm:nb",
+      "ledger_token": "IsingBulk.Final.theorem_nb_physical",
+      "kind": "declaration",
+      "target": "IsingBulk.Final.theorem_nb_physical"
+    },
+    {
+      "source_label": "lem:cyclotomic",
+      "ledger_token": "IsingBulk.cyclotomic_intersection",
+      "kind": "declaration",
+      "target": "IsingBulk.cyclotomic_intersection"
+    },
+    {
+      "source_label": "lem:schur",
+      "ledger_token": "IsingBulk.Schur.rationalIdentity",
+      "kind": "declaration",
+      "target": "IsingBulk.Schur.rationalIdentity"
+    },
+    {
+      "source_label": "lem:schur",
+      "ledger_token": "IsingBulk.Schur.schur_fraction_specialization",
+      "kind": "declaration",
+      "target": "IsingBulk.Schur.schur_fraction_specialization"
+    },
+    {
+      "source_label": "lem:schur",
+      "ledger_token": "IsingBulk.Schur.schur_subdisk",
+      "kind": "declaration",
+      "target": "IsingBulk.Schur.schur_subdisk"
+    },
+    {
+      "source_label": "lem:schur",
+      "ledger_token": "IsingBulk.Schur.schur_appendix_C",
+      "kind": "declaration",
+      "target": "IsingBulk.Schur.schur_appendix_C"
+    },
+    {
+      "source_label": "lem:lie",
+      "ledger_token": "IsingBulk.Lie.lemma_lie_on_torus",
+      "kind": "declaration",
+      "target": "IsingBulk.Lie.lemma_lie_on_torus"
+    },
+    {
+      "source_label": "lem:lie",
+      "ledger_token": "IsingBulk.Lie.lemma_lie",
+      "kind": "declaration",
+      "target": "IsingBulk.Lie.lemma_lie"
+    },
+    {
+      "source_label": "lem:lie",
+      "ledger_token": "IsingBulk.Lie.fixed_domain_lie_kernel_of_regular",
+      "kind": "declaration",
+      "target": "IsingBulk.Lie.fixed_domain_lie_kernel_of_regular"
+    },
+    {
+      "source_label": "lem:jets",
+      "ledger_token": "IsingBulk.Jets.lemma_jets",
+      "kind": "declaration",
+      "target": "IsingBulk.Jets.lemma_jets"
+    },
+    {
+      "source_label": "lem:jets",
+      "ledger_token": "IsingBulk.Jets.sourceJetTerms_all_order",
+      "kind": "declaration",
+      "target": "IsingBulk.Jets.sourceJetTerms_all_order"
+    },
+    {
+      "source_label": "lem:jets",
+      "ledger_token": "IsingBulk.Jets.sourceJetTerms_uniform",
+      "kind": "declaration",
+      "target": "IsingBulk.Jets.sourceJetTerms_uniform"
+    }
+  ]
+}

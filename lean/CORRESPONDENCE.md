@@ -1,0 +1,1510 @@
+<!-- CONTINUATION_20261006_CURRENT_BEGIN -->
+# Current Ising continuation
+
+The exact proof payload `bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2` has completed the current-round guarded desktop clean build (1,071 production imports plus root, all 1,072 actually Built), 9,199-declaration axiom census, twelve endpoint checks, literal interface/negative controls, and genuine full fresh kernel replay. Exact encoded root axioms are `propext`, `Classical.choice`, `Quot.sound`.
+
+This is local build/kernel/trust evidence. Source/semantic and reverse-dependency audits remain pending; remote CI is deferred, not passed. The normalized natural-boundary theorem retains E3 and the physical theorem retains E1/E2/E3. No complete final scientific acceptance is claimed yet.
+
+Historical counts, stop instructions, open-tail claims and earlier audit schedules below remain historical. Current source mapping is in `CONTINUATION_SOURCE_CORRESPONDENCE.md`; exact declaration inventories are the separately named continuation TSVs. The old FIRST inventories are not complete current inventories.
+<!-- CONTINUATION_20261006_CURRENT_END -->
+
+<!-- ASTRA_RECOVERY_CURRENT_BEGIN -->
+# Astra continuation — current authority
+
+Recovered from the verified 2026-10-04 00:40:48 UTC partial TAIL checkpoint.
+All 1,585 payload files passed its verifier; the writable tree was separately
+copied and hash-checked. Recovery deltas are already integrated; newer live
+proof repairs were retained. See [recovery reconciliation](../../recovery_receipts/RECOVERY_RECONCILIATION.md).
+
+Current status: COMPACT_RIGHT_VERIFIED — continuation checkpoint; TAIL remains partial.
+The all-B exterior, mixed/left, and compact-right estimates are implemented.
+The aggregate root build reaches 1,066 production modules (4,830 build jobs).
+The compact-right endpoint is `IsingBulk.Tail.compact_right_sector_sum_littleO`.
+It includes literal original and integrated named-current sectors, finite label
+sums, and the permitted particle-window absolute sum, with one common selector
+choice before width and derivative order. See [compact-right acceptance](../../recovery_receipts/compact_right_closure_acceptance.json).
+The root build and all eight endpoint axiom checks passed. The subsequent full
+declaration trust check passed for 9,125 kernel-safe project declarations, with
+axiom union exactly `propext`, `Classical.choice`, `Quot.sound`.
+See [full trust receipt](../../recovery_receipts/compact_right_checkpoint_full_trust.log).
+
+The latest user instruction stops this run after the verified compact-right
+continuation checkpoint. No new proof development on absolute TAIL or the final
+natural-boundary theorem is authorized in this run. The next central target is
+common-parameter and exact full-sector attachment to the intermediate KS window,
+then the actual absolute TAIL little-o. Existing conditional endpoints retain
+their explicit absolute-tail premise; `thm:tail` and `thm:nb` remain open.
+No final clean candidate gate or independent adversarial audit is claimed.
+The chronological continuation notes below retain their stage-local status.
+Recovery evidence, historical FIRST evidence and dependency pins stay unchanged.
+Use one agent; do not run `lake update` or mutate any remote repository.
+<!-- ASTRA_CUTOFF_LIMIT_BEGIN -->
+Verified continuation: the selected-pair cutoff now converges in every actual
+parameter derivative of the original all-B integral. The source chart radius is
+chosen before epsilon and the particle number. Removal uses the actual analytic
+density on the compact chart, bounded measurable pair weights, and dominated
+convergence at fixed positive epsilon; no puncture-flux premise is added.
+This closes the qualitative truncation-removal step only. Uniform quantitative
+near/far estimates, their integration, and full TAIL composition remain open.
+See [compiled endpoint and trust receipt](../../recovery_receipts/cutoff_limit_acceptance.json).
+<!-- ASTRA_CUTOFF_LIMIT_END -->
+
+<!-- ASTRA_POSITIVE_DIAMETER_BEGIN -->
+Verified continuation: the full positive-region two-kernel integral, including
+all original branch arclength factors, is bounded with a positive diameter power.
+Actual minimum/maximum pairs are selected after absolute values; their finite
+cover costs at most N squared. The collision Jacobian is absorbed by one diameter
+power. This is an alternative coordinate route to the source near-diagonal
+mean/shape coarea, with a different intermediate power, not a claim of the source
+polar exponent. Quantitative differentiated-numerator attachment, negative
+coordinates, all-B closure, and final TAIL composition remain open.
+See [compiled endpoint and trust receipt](../../recovery_receipts/positive_diameter_acceptance.json).
+<!-- ASTRA_POSITIVE_DIAMETER_END -->
+
+<!-- ASTRA_NEGATIVE_KERNEL_BEGIN -->
+Verified continuation: the genuine regular-kernel density, including every
+original branch arclength factor, has a full anchored negative-region integral
+bound. A negative anchor supplies its own separated Z gap; a positive anchor
+uses a distinct negative coordinate and the explicit reciprocal-distance log
+integral. This equivalent decomposition needs no auxiliary negative cutoff
+scale. The chart radius precedes epsilon and particle number. The separated
+positive integral is also bounded. No external estimate is introduced.
+Differentiated numerator/cutoff attachment, uniform all-B closure, the remaining
+mixed/left and compact-right estimates, and final TAIL composition remain open.
+See [compiled endpoints and trust receipt](../../recovery_receipts/negative_kernel_acceptance.json).
+<!-- ASTRA_NEGATIVE_KERNEL_END -->
+
+<!-- ASTRA_COLLISION_ATTACHMENT_BEGIN -->
+Verified continuation: the positive weighted kernel integral is attached to the genuine regular-kernel density with an internally derived common radius. Actual near-numerator jets retain their natural collision powers; the recovered Lie filtration leaves diameter power N(N-1)-2j. The selected-pair guard has a pole bound independent of its removal scale. Multiplication by fixed cutoffs preserves one inverse scale per spatial derivative. These are intermediate attachments: the complete spatial cutoff, generated-term integration, uniform all-B estimate, remaining mixed/left and compact-right estimates, and final TAIL composition remain open. No new external input is added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/collision_attachment_acceptance.json).
+<!-- ASTRA_COLLISION_ATTACHMENT_END -->
+
+<!-- ASTRA_NEAR_SOURCE_BEGIN -->
+Verified continuation: the complete generated near-source Lie sum now has a uniform local bound with diameter power N(N-1)-2j, using actual numerator jets and actual regular coefficients. The radius and constants precede particle number, epsilon, the spatial cutoff, and the artificial pair-cutoff scale. The remaining spatial-jet input is separately proved for the actual fixed chart cutoff times the near-equality anchor cutoff, without an exponential equality-scale factor in its constant. Support/parameter assembly, integration and limit passage for the full source estimate, uniform all-B closure, and final TAIL composition remain open. No new external input is added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/near_source_acceptance.json).
+<!-- ASTRA_NEAR_SOURCE_END -->
+
+<!-- ASTRA_NEAR_INTEGRAL_BEGIN -->
+Verified continuation: the actual full near-chart parameter derivative is bounded, with original numerator/regular coefficients/kernel, actual smooth anchor and equality cutoffs, finite pair partition, and removal of the artificial pair cutoff. The intermediate majorants are proved internally. Constants are fixed before epsilon, particle number, microcore radius b and equality radius rho; fixed chart cutoff constants precede b and rho. The explicit bound retains N(N-1)-2j collision powers and the one inverse diameter in the positive-kernel cost. This equivalent extreme-pair route differs from the manuscript's polar shape calculation but is not yet promoted to its final uniform estimate. Exponential-scale growth absorption, the complete far-chart bound, source partition/window assembly, remaining sector estimates and final TAIL composition are open. No new external input is added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/near_integral_acceptance.json).
+<!-- ASTRA_NEAR_INTEGRAL_END -->
+
+<!-- ASTRA_FAR_INTEGRAL_BEGIN -->
+Verified continuation: the actual complete far-chart derivative is bounded after internally estimating the generated source sum, integrating its majorant, removing the artificial pair puncture and summing the finite pair partition. The original numerator retains the exact Gaussian pair budget; cutoff and separation losses are explicit. The support has a named anchor and arbitrary coordinate signs. For negative coordinates the already verified anchor/logarithmic alternative is reused; the majorant conservatively adds an extra inverse far separation. All constants precede particle number, epsilon, b and rho, apart from explicit displayed dependence. Both near and far actual chart derivative bounds now compile. Exponential-scale growth absorption, source partition/window assembly, the remaining sector estimates and final TAIL composition remain open; prop:allB remains PARTIAL. No new external input is added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/far_integral_acceptance.json).
+<!-- ASTRA_FAR_INTEGRAL_END -->
+
+<!-- ASTRA_KERNEL_SCALAR_BEGIN -->
+Verified continuation: the exact near/far kernel cost at epsilon=exp(-H) is bounded by K*N^4*max(1,lengthC)^N*a^(-1)*D^(Q-1)*(H+1)^2 for H>=0, 0<a,D<=1, 0<=R<=1 and N,Q>=1. K is fixed before all these variables. This isolates the full radial dependence without a new analytic premise and retains the single positive-Jacobian diameter loss. Full exponential-scale absorption and source-window assembly are still open; prop:allB and final TAIL remain PARTIAL. No new external input is added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/kernel_scalar_acceptance.json).
+<!-- ASTRA_KERNEL_SCALAR_END -->
+
+<!-- ASTRA_EXTERIOR_SCALE_BEGIN -->
+Verified continuation: scalar majorants including the anchor/pair polynomial count, actual near/far cutoff costs, regular coefficient budgets, and the simplified kernel cost are summable after the prescribed exponential radii are substituted. The near majorant uses a conservative collision slope (1+2U)/b, whose geometric applicability remains to be attached. Its positive cubic bound is fixed independently of the equality exponent B; a threshold B0 is chosen first and every B>=B0 yields summability. This is a coarser constant selection than the manuscript's half-coefficient cubic calculation, with the same final decay and no strengthened external premise. The far majorant is summable for every fixed B by the already proved Gaussian numerator estimate. Attaching the geometric conditions and uniform epsilon window, the actual source partition, remaining sectors and final TAIL chain is still required. prop:allB remains PARTIAL.
+See [compiled endpoints and trust receipt](../../recovery_receipts/exterior_scale_acceptance.json).
+<!-- ASTRA_EXTERIOR_SCALE_END -->
+
+<!-- ASTRA_EXTERIOR_GEOMETRY_BEGIN -->
+Verified continuation: the coarse near slope (1+2U)/b is now proved to dominate U/sqrt(b/4). A single lower threshold for the equality exponent ensures its product with 4rho is at most one, as well as the source's common-sign scale inclusion, for every N>=1. Every fixed multiple of epsilon is uniformly smaller than b throughout N<=D*sqrt(H) at one eventual H threshold. The source higher-even-order condition implies 2j+2<=N(N-1). These discharge the geometric premises of the near/far scale route; assembly into the actual source-window theorem, remaining sectors and final TAIL composition is still open. prop:allB remains PARTIAL.
+See [compiled endpoints and trust receipt](../../recovery_receipts/exterior_geometry_acceptance.json).
+<!-- ASTRA_EXTERIOR_GEOMETRY_END -->
+
+<!-- ASTRA_ALLB_CLOSURE_BEGIN -->
+Verified continuation: prop:allB is now IMPLEMENTED. The actual near/far chart derivatives are identified with every term of the literal angular partition. A common cutoff choice handles all j<=k; the named-anchor norm sum has the displayed source bound and the stronger summable-N bound S(N)(H+1)^2. Its absolute window sum is proved o(epsilon^(-1/2)). The source endpoint constructs BranchEstimates internally, and the original all-B sector is bounded by its microcore plus this complement. The positive-region proof uses the already verified min/max diameter-weighted coarea route; the larger conservative near slope is absorbed by choosing the equality exponent after all fixed-order constants. No external TAIL premise is added. Mixed/left, compact-right, combined-sector attachment, final TAIL composition, and the clean candidate gate remain open; this is not a completed project candidate.
+See [compiled endpoints and trust receipt](../../recovery_receipts/allb_closure_acceptance.json).
+<!-- ASTRA_ALLB_CLOSURE_END -->
+
+<!-- ASTRA_ALLB_ATTACHMENT_BEGIN -->
+The original all-B sector's full absolute window sum is now attached: selected_original_allBranch_window_littleO combines the compiled microcore and complement estimates on the literal original contour. One angular width handles all j <= (2p)^2/2-1. For each fixed D >= 0, the sum over 2p+2 <= N <= D sqrt(log(1/epsilon)) is eventually summable and is o(epsilon^(-1/2)). Particle-offset padding preserves the actual particle index and exact infinite sum. This closes the all-B attachment previously listed as subsequent work. Mixed/left, compact-right, final composition, and the clean candidate gate remain open.
+See [compiled endpoints and trust receipt](../../recovery_receipts/allb_attachment_acceptance.json).
+<!-- ASTRA_ALLB_ATTACHMENT_END -->
+
+<!-- ASTRA_MIXED_SCALAR_TRANSPORT_BEGIN -->
+The literal mixed-sector scalar transport is now identified with the three active analytic directions. The compact residual has the required minus sign. The identity holds at arbitrary nearby source points with background, analytic function, and residual models fixed before differentiation; it retains the coupled contour and all spectator parameter dependence. Assumptions are explicit source smoothness, active selector plateaus, branch sign, and the actual separated domain, with no estimate imported as a new premise. Hybrid-volume divergence and the iterated full-density/integral estimate remain open; prop:mixed is still PARTIAL.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_scalar_transport_acceptance.json).
+<!-- ASTRA_MIXED_SCALAR_TRANSPORT_END -->
+
+<!-- ASTRA_MIXED_DENSITY_GERM_BEGIN -->
+The actual mixed density has a compiled recurrence on a joint source neighborhood with its analytic background fixed. The hybrid divergence equals the sum of the two residual directional derivatives; both simple global kernels are proved frozen and the full coupled determinant and factorial/contour normalization are preserved exactly. Source smoothness, selector plateaus, branch sign, and separated-domain facts are explicit. Residual and amplitude analyticity are the same local analytic properties already established by the actual source jet modules, not external estimates. The new source-germ bridge supports iteration but does not itself close the real-cutoff descendant recurrence, kernel coarea estimates, or uniform mixed/left integrated bound. prop:mixed remains PARTIAL; the final theorem chain and clean candidate gate remain open.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_density_germ_acceptance.json).
+<!-- ASTRA_MIXED_DENSITY_GERM_END -->
+
+<!-- ASTRA_MIXED_DENSITY_EXPANSION_BEGIN -->
+The literal unfrozen mixed source density now has an exact finite all-order expansion in the existing sparse analytic recurrence. Every real-cutoff derivative is retained, and restriction to active coordinates is proved to commute with the actual Lie iterates on the source smoothness domain. The finite expansion has (N+1)^k terms and its pointwise norm budget exposes the original normalization, both simple kernels, and the full hybrid branch volume for subsequent absolute integration. Analyticity and finite jet bounds remain explicit internally supplied hypotheses of the reusable attachment theorem; no quantitative mixed estimate is asserted before instantiating the source constants and integrating. Uniform mixed/left source estimates, compact-right, final composition, and the clean candidate gate remain open.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_density_expansion_acceptance.json).
+<!-- ASTRA_MIXED_DENSITY_EXPANSION_END -->
+
+<!-- ASTRA_MIXED_SOURCE_POINTWISE_BEGIN -->
+Actual original and named-current mixed-sector pointwise estimates are now proved from internal source geometry and finite jet estimates. Uniform constants are selected after any sufficiently small positive inner width; the Gaussian coefficient precedes the derivative order and particle number. The complete Lie iterate, including real cutoff derivatives, full contour determinant, factorial/contour normalization, and actual -2 i tau current multiplier, is bounded by C^N N^(5 order) exp(-kappa N^2) times the norm of the two simple kernels and full branch-volume product, for every k <= order on the actual sector support. Source slope separation and current selector plateau germs are discharged internally; original lambda-zero selector independence removes any plateau requirement on its outer anchor. No quantitative integrated mixed estimate is asserted: positive/negative absolute kernel integration and the left-sector route remain open, along with compact-right, final composition, and the clean candidate gate. No external inputs were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_source_pointwise_acceptance.json).
+<!-- ASTRA_MIXED_SOURCE_POINTWISE_END -->
+
+<!-- ASTRA_MIXED_POSITIVE_COAREA_BEGIN -->
+The actual mixed two-phase coordinate map, its determinant, and injectivity on convex source cells are compiled. Its full-dimensional positive-branch coarea bound retains coupled occupancy and integrates all unchanged spectator coordinates with their scalar L1 costs. A common branch majorant is uniform in particle number, epsilon, lambda, and admissible occupancy, and has a fixed integral cost on the whole angular interval. These are internal tools with explicit cell geometry hypotheses, not yet the full source mixed estimate: the source angular cover, negative-branch integration, and left-sector route remain open. No external inputs were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_positive_coarea_acceptance.json).
+<!-- ASTRA_MIXED_POSITIVE_COAREA_END -->
+
+<!-- ASTRA_MIXED_POSITIVE_DENSITY_BEGIN -->
+The positive branch half of the literal all-order original and current mixed Lie densities is now integrated from internal source estimates. A finite scalar interval cover includes all compact-anchor support endpoints; source geometry proves the selected slope cone, separation and selector plateaus on its enlarged convex cells. Every actual unselected branch factor is dominated uniformly in the coupled occupancy by the proved scalar L1 majorant, while compact spectators pay the unit measure. The final positive-half endpoints have no caller-supplied density, geometric or integration bound: they compose the actual Gaussian pointwise theorem, Lie integrability and exact support inheritance with these cell estimates. The Gaussian coefficient precedes derivative order and dimension; the current estimate is uniform in lambda subject to the recorded small-product constraint. These endpoints explicitly require a selected branch and a nonbranch compact anchor, and estimate only the positive angular half. Negative-half integration, zero-support assignments, the left route and the full source-window little-o composition remain open; prop:mixed remains PARTIAL. No external inputs were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_positive_density_acceptance.json).
+<!-- ASTRA_MIXED_POSITIVE_DENSITY_END -->
+
+<!-- ASTRA_MIXED_NEGATIVE_DENSITY_BEGIN -->
+Actual original and current all-order mixed Lie densities now have negative-half absolute integral estimates, complementing the positive-half endpoints. The selected branch attenuation absorbs the actual Z denominator; the true angular sum phase handles the Y denominator, and unchanged spectators retain the proved uniform L1 majorant. Both logarithmic costs are explicit. The final endpoints use internally proved source support, plateau, kernel, volume, integrability and Gaussian jet facts; the current multiplier and coupled occupancy are retained, lambda is uniform under its recorded small-product constraint, and kappa precedes derivative order. A compiled sign-combination lemma splits only the final absolute integral and requires no differentiated sign cutoff. These endpoints retain the explicit selected-branch/nonbranch-anchor conditions. Uniform scalar budget simplification, parameter reconciliation across the two signs, zero-support assignments and source-window composition are still needed before declaring the separated mixed estimate closed. The left all-compact route, compact-right estimate and final theorem composition also remain open. prop:mixed stays PARTIAL and no external inputs were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_negative_density_acceptance.json).
+<!-- ASTRA_MIXED_NEGATIVE_DENSITY_END -->
+
+<!-- ASTRA_MIXED_SECTOR_GAUSSIAN_BEGIN -->
+The actual original and current separated mixed-sector derivatives now have full angular integral Gaussian bounds, after combining the two signs and simplifying both logarithmic kernel budgets. The bound is C^N N^(5*order+2) exp(-kappa*N^2) (H+1)^2 with epsilon=exp(-H), with kappa preceding derivative order and one eventual H cutoff uniform in N, labelled sector and k<=order. The literal source sector integral is identified with its full Lie iterate. A summable Gaussian envelope with this logarithmic cost is proved little-o of epsilon^(-1/2). The original endpoint allows arbitrary nonnegative tau; the current endpoint retains its stated positive small tau and lambda*tau<t constraints, with lambda uniform on that domain. Both endpoints still explicitly require a selected branch label and nonbranch anchor. Zero-support labels, whole-current lambda coverage, finite sector aggregation, the left all-compact and compact-right estimates, and final composition remain to be completed. prop:mixed remains PARTIAL, and no external inputs were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_sector_gaussian_acceptance.json).
+<!-- ASTRA_MIXED_SECTOR_GAUSSIAN_END -->
+
+<!-- ASTRA_MIXED_SECTOR_ASYMPTOTIC_BEGIN -->
+The separated mixed route now includes all nested labels containing a true branch, their finite absolute original sum, and the finite absolute current sum after actual integration from zero to epsilon^beta. Impossible anchor-branch and named-current-branch assignments vanish identically; no nonbranch-label premise survives on the aggregate endpoints. The label counts are absorbed into the dimension-exponential factor. Both complete positive-particle sums are eventually absolutely summable and little-o of epsilon^(-1/2), proving a stronger full-sum conclusion for this component than the requested intermediate particle window. One inner width works for all k<=order. The current small-product restriction is satisfied uniformly on [0,epsilon^beta] for every fixed beta>0; the existing large-current route covers the rest. Source derivatives, the current multiplier, nested cutoffs and actual homotopy integral are retained. The left case with no true branch, compact-right estimate, common parameter composition and final theorem chain remain open. prop:mixed remains PARTIAL solely because its left all-compact case remains unclosed; no external inputs were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_sector_asymptotic_acceptance.json).
+<!-- ASTRA_MIXED_SECTOR_ASYMPTOTIC_END -->
+
+<!-- ASTRA_MIXED_LEFT_CLOSURE_BEGIN -->
+prop:mixed is implemented. The left all-compact route now differentiates the actual density using the existing compact-root and fixed Z-gap jets, retains the Y kernel, integrates its true angular sum phase, and obtains a Gaussian particle envelope with logarithmic radial cost. Both original and current literal sector integrals and finite absolute sums are attached; the current determinant and multiplier are retained. MixedLeftAsymptotic reconciles the four previously separate parameter families into one acyclic selector/inner-width choice for all k<=order and every fixed beta>0, proving eventual absolute summability and little-o of epsilon^(-1/2) for their combined full particle sum. Exhaustive label classification leaves only all-compact right assignments beyond these components. Source Gaussian coefficients precede derivative order, and radial cutoffs are uniform in particle number, labels and the permitted lambda interval. Compact-right, attachment to the complete source decomposition, final TAIL/conditional/NB composition, and the single clean candidate gate remain open. No external inputs were added and no independent adversarial audit is claimed.
+See [compiled endpoints and trust receipt](../../recovery_receipts/mixed_left_closure_acceptance.json).
+<!-- ASTRA_MIXED_LEFT_CLOSURE_END -->
+
+<!-- ASTRA_COMPACT_SOURCE_COAREA_BEGIN -->
+Compact-right now has a compiled actual whole-cube two-pole coarea estimate. A finite ordered extreme-pair cover is taken only after absolute values, with every cell's injectivity already proved for the coupled source phase. Generic near/far integral attachments charge one diameter power or one inverse separation. The actual source kernel has no assumed root-modulus or phase multiplicity input: the existing original-disk coupled-root theorem and damping domain prove its floor, including the lambda interval. Differentiated compact-right numerator/Lie bounds, source-sector support and periodic attachment, finite-window summation, final TAIL composition, and the single clean candidate gate remain open. No external inputs or project axioms were added.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_source_coarea_acceptance.json).
+<!-- ASTRA_COMPACT_SOURCE_COAREA_END -->
+
+<!-- ASTRA_COMPACT_SELECTED_TRANSPORT_BEGIN -->
+Compact-right source transport is now attached: joint source regularity, actual Y/Z kernel freezing, exact regular-density factorization, and all-order selected-pair Lie factorization compile. The selected-pair representation uses the raw angular determinant and will permit the existing polynomial pair weights to cancel selected-diagonal poles; it does not assume smoothness across a pole. The named current coordinate can be excluded explicitly. Curvature and the verified divided-determinant margin prove membership of the regular locus on the actual source intermediate window. Quantitative differentiated numerator/field jets, selected/full-diagonal flux control, periodic source-sector attachment, particle-window summation and final TAIL/conditional/NB composition remain open. No new external input or project axiom is used.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_selected_transport_acceptance.json).
+<!-- ASTRA_COMPACT_SELECTED_TRANSPORT_END -->
+
+<!-- ASTRA_COMPACT_SELECTED_JETS_BEGIN -->
+The compact-right quantitative field blocker is closed: true joint source/angular log-Y and phase jets give polynomial bounds on the actual angular and parameter coefficients and raw determinant. The internal determinant margin then yields selected-pair field jets with polynomial N cost and degree -1. A real scaled jet calculus proves multiplication, reciprocal bounds, directional differentiation and the all-order two-scale-degree loss under Lie iteration. This does not yet close prop:compactR: weighted numerator jets, selected/full collision removal, source-sector integration and window summation are still required. The full TAIL/conditional/NB composition and normal final candidate gate also remain open. No new external premise or project axiom is introduced.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_selected_jets_acceptance.json).
+<!-- ASTRA_COMPACT_SELECTED_JETS_END -->
+
+<!-- ASTRA_COMPACT_WEIGHTED_JETS_BEGIN -->
+The rational-weight quantitative calculus is implemented for arbitrary fixed allowed pair sets, including current free pairs. Polynomial numerator zeros and homogeneous denominator jets are retained separately through every Lie order. For M large enough, selected-pair poles are canceled by the weight without discarding the full-collision degree. The proof remains a real smooth argument and does not divide by a vanishing pair factor. The next load-bearing task is the actual regular-density numerator jet bound, followed by selected/full collision removal, periodic source-sector integration and compact-right window summation. TAIL and final conditional/NB composition remain open. No new external input or project axiom is used.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_weighted_jets_acceptance.json).
+<!-- ASTRA_COMPACT_WEIGHTED_JETS_END -->
+
+<!-- ASTRA_DEFORMED_VANDERMONDE_BEGIN -->
+Actual coupled-coordinate and Vandermonde finite jets are implemented with constants chosen before particle number. The occupancy coupling is differentiated and diagonal vanishing is proved for the literal deformation. No pair factor is divided out. The full regular-density numerator and its far Gaussian bounds, collision removal and source-sector integration remain open, followed by compact-right window summation and TAIL/final composition. No new external premise or project mathematical axiom is introduced.
+See [compiled endpoints and trust receipt](../../recovery_receipts/deformed_vandermonde_acceptance.json).
+<!-- ASTRA_DEFORMED_VANDERMONDE_END -->
+
+<!-- ASTRA_COMPACT_NUMERATOR_JETS_BEGIN -->
+The actual compact regular numerator collision jets are implemented, including every source factor and the exact normalization. Direct determinant expansion cancels its factorial cost against the source factorial; no matrix inverse or stronger premise is used. The selected-pair weight and Lie calculus can now consume a proved numerator input. Remaining work is far-region Gaussian attachment, sector cutoff/current multiplier jets, selected/full collision removal and integral identities, compact-right window summation, and TAIL/final composition. No new external input or project mathematical axiom is introduced.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_numerator_jets_acceptance.json).
+<!-- ASTRA_COMPACT_NUMERATOR_JETS_END -->
+
+<!-- ASTRA_COMPACT_GAUSSIAN_JETS_BEGIN -->
+Actual original and current Gaussian numerator jets are implemented by reusing the compiled source deleted-pair estimates. Periodic support transfer is proved rather than assuming signed-angle bounds. The decay rate is fixed before derivative order; no internal estimate is promoted to an external premise. Remaining work is sector cutoff/current-multiplier jets, selected/full collision removal and integral identities, compact-right window summation, and TAIL/final composition. No new external input or project mathematical axiom is introduced.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_gaussian_jets_acceptance.json).
+<!-- ASTRA_COMPACT_GAUSSIAN_JETS_END -->
+
+<!-- ASTRA_COMPACT_SECTOR_JETS_BEGIN -->
+Compiled the actual sector-weighted near-collision and Gaussian numerator jets, including the complete current multiplier and full joint real derivatives. All constants are fixed before particle number and sector labels; kappa is fixed before derivative order. Remaining compact-right work is selected Lie attachment, collision cutoff removal, integral identities and window summation, followed by TAIL/final composition. No new external input or project mathematical axiom is introduced.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_sector_jets_acceptance.json).
+<!-- ASTRA_COMPACT_SECTOR_JETS_END -->
+
+<!-- ASTRA_COMPACT_GUARDED_INTEGRAL_BEGIN -->
+Compiled the actual guarded source integral identity, convergence of all true parameter derivatives as the guard shrinks, radius-uniform real guard jets, and source attachment of guarded weighted Lie jets. The all-right signed sector has a smooth compact zero extension with unchanged local jets and integral. This route proves compactly supported flux cancellation and derives the cutoff limit without adding a flux premise or assuming analytic angular bumps. The next remaining attachment is the numerical near/far Lie bound and its coarea integral, then compact-right window summation and TAIL/final composition. No new external input or project mathematical axiom is introduced.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_guarded_integral_acceptance.json).
+<!-- ASTRA_COMPACT_GUARDED_INTEGRAL_END -->
+
+<!-- ASTRA_COMPACT_PAIR_INTEGRAL_BEGIN -->
+Compiled allowed-pair diameter geometry, near/far value bounds for the actual guarded Lie operator, and a cutoff-free bound for every actual parameter derivative of the pair-weighted compact source integral. The source kernel and coarea estimates give Q^N N^4 (H+1)^2; the proof removes the guard by the established derivative limit, without a flux premise. Finite rational pair partitions reconstruct the full integral derivative with N^2 cost. Remaining: attach actual sector numerator jets to this bound, select a summable near scale, sum compact-right windows and compose TAIL/final theorems. No new external input or mathematical axiom.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_pair_integral_acceptance.json).
+<!-- ASTRA_COMPACT_PAIR_INTEGRAL_END -->
+
+<!-- ASTRA_COMPACT_SUMMABLE_MAJORANT_BEGIN -->
+Compiled the complete near/far full-integral composition estimate, the explicit summable particle majorant with an exponential collision split, uniform-in-interval selector/Gaussian quantifiers, and exact literal-sector to compact-integral derivative bridges. The stronger uniform Gaussian statements reuse the existing deleted-pair proof; no prior claim is assumed with strengthened quantifiers. The exponential split is documented as an alternative proof representation. The live compact-right source node remains partial until actual source jets are combined into a uniform window estimate and the sector sums are closed. No new external premise or mathematical axiom.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_summable_majorant_acceptance.json).
+<!-- ASTRA_COMPACT_SUMMABLE_MAJORANT_END -->
+
+<!-- ASTRA_COMPACT_RIGHT_CLOSURE_BEGIN -->
+Closed prop:compactR from the actual normalized source density, real smooth sector jets, source selected field, rational pair partition, coarea estimate, and cutoff derivative limit. Literal original and integrated-current compact-right windows have summable absolute norms with one common selector choice and all permitted derivative orders. The exponential near-radius alternative and its Gaussian far estimate preserve the source interval, branches, current range, and quantifier order. No compact-right estimate or flux identity is externalized. Remaining work: common parameters and exact full-sector decomposition for TAIL, then thm:conditional/thm:nb and the single normal clean candidate gate. No independent adversarial audit has been run.
+See [compiled endpoints and trust receipt](../../recovery_receipts/compact_right_closure_acceptance.json).
+<!-- ASTRA_COMPACT_RIGHT_CLOSURE_END -->
+
+<!-- ASTRA_RECOVERY_CURRENT_END -->
+
+<!-- TAIL_CONTINUATION_CURRENT_BEGIN -->
+# TAIL and final-chain continuation
+
+The user has authorized all TAIL nodes through thm:conditional and thm:nb. The prior FIRST-only boundary below is preserved historical evidence, not the current task scope. All older NOT_STARTED FIRST tables and FIRST-only/TAIL-unadvanced instructions below are historical and superseded for live status by this continuation header and the latest claim ledger; they do not undo verified FIRST candidate status. All 387 FIRST candidate source hashes matched at continuation start. Historical records were snapshotted before this additive update; see ../../tail_integration/CONTINUATION_BASELINE_RECEIPT.json.
+
+Current stage: implementation in progress, no TAIL source node is CANDIDATE_CLOSED. Recovery 18:27–18:47 restored verified 18:18 source plus separately logged reconstructed deltas, exact pinned runtime/dependencies, and a fresh 4,132-job FIRST module build. The whole-exterior series and full conditional natural-boundary endpoint now have fresh targeted acceptance. Their genuine source statements retain all necessary hypotheses; no unconditional TAIL/nb conclusion follows yet. New generic final-chain supporting lemmas do not establish the physical sector estimates. Whole-exterior series convergence, actual sector attachment, full summation and the final natural-boundary theorem remain open. Three same-candidate full hostile audits are required after final clean freeze.
+
+Dependency map: ../../tail_integration/DEPENDENCY_MAP.md. Baseline preflight: ../../environment/tail_continuation_preflight_20261003T1742Z/receipt.json. No new whole-tree clean build has yet been claimed.
+<!-- TAIL_CONTINUATION_CURRENT_END -->
+
+<!-- FIRST_PILOT_CURRENT_BEGIN -->
+# FIRST pilot: current verified progress
+
+Final source scope: all six FIRST nodes are CANDIDATE_CLOSED, not AUDITED_CLOSED. Symmetry is the internally constructed physical exterior germ plus symmetry of any continuation under consideration; its global existence and whole-exterior full-series convergence are not asserted. The three exact user-authorized Jets replacements are recorded separately from the preserved immutable r1. TAIL is unadvanced.
+
+Baseline clean Linux build PASS on 2026-10-03 at 11:25 UTC: 3,629 jobs, 1,666 baseline declarations; exact three-axiom whitelist. Original baseline evidence remains unchanged.
+
+The held modified tree received coordinated canonical-equivalent clean verification: environment/final_six_node_clean_20261003T1615Z. All production modules were included and frozen sources preserved. Source-node status is separate from this kernel verification. TAIL remains unadvanced.
+
+- `lem:residue`: **CANDIDATE_CLOSED** — Actual normalized double-contour residue reduction, the complete canceled pair identity, the same arbitrary fixed continuous y-weight reduction, and absolute/stage integrability are proved from precisely the source enclosed-root/radius hypotheses. Apparent zero poles, every remaining rational denominator and successive Cauchy legality are discharged. The actual global radial root, branch identity and uniform complex-disk admissibility are constructed. Subsequent radius-locality and source-attachment bridges are proved.
+- `lem:symmetry`: **CANDIDATE_CLOSED** — Actual normalized susceptibility exterior-germ symmetry is proved: the literal fixed-quarter-radius even-order series has an internally derived summable geometric majorant, absolute convergence and holomorphy near infinity, and both symmetry identities. Real-only physical E1 identifies that actual germ with the normalized physical real response. Any named holomorphic continuation on the unit exterior is proved unique and symmetric. Actual normalized even form-factor contour symmetries, including orientations, measures and prefactor branch, are also proved.
+- `lem:mean`: **CANDIDATE_CLOSED** — The actual mean/zero-sum shape coordinate map and Jacobian, selected lower chart, b,d positivity, true Y pole derivative, explicit clockwise orientation and +2π residue are proved. Uniform source rectangles and pair/Z-pole exclusion are constructed. Actual displaced-side and smooth-edge integrals have every fixed-s derivative bounded on a common tube. The actual nonlinear denominator gap c(ε+Σt²) and full fixed-cutoff physical mean identity are proved, with selected arithmetic instantiated and arbitrary sufficiently small prescribed delta supported.
+- `lem:period`: **CANDIDATE_CLOSED** — The literal constrained coordinate integral is absolutely convergent, equals the displayed beta formula and is nonzero. The actual zero-sum hyperplane, Euclidean measure/Jacobian 1/√N, Vandermonde degree, positive angular constant and precise source radial exponent are proved. A genuine real-positive scalar integral evaluation, complex half-plane analytic continuation and boundary dominated limit with explicit integrable majorant yield the principal-branch value, with every factor nonzero.
+- `lem:complement`: **CANDIDATE_CLOSED** — The actual complementary double-contour integral has bounded fixed-order s derivatives. Exhaustive active-factor classification, real separation, true half-line exponential representation, all-q integration by parts including generated coefficient derivatives, actual fixed-radius differentiation/Fubini, uniform small/tail auxiliary integrability, genuine finite smooth torus refinement, seam lifts and finite integral sums are proved. The constructed compatible y-only remainder satisfies the exact support hypotheses. One epsilon threshold precedes all derivative orders; each bound may depend on its fixed order.
+- `thm:first`: **CANDIDATE_CLOSED** — The literal source fixed-radius offsite T_(2p) has kth derivative 2L epsilon^(−1/2)+o(epsilon^(−1/2)) with actual L nonzero. Both local residues are attached through the same constructed delta, eta and chi; their actual coefficients are equal. The actual smooth/hard mean error is bounded and the true complement is controlled. Every j<k of this first term is bounded on one common interval. Every positive even lower N and every fixed derivative order is bounded via the narrow published full-site theorem and internally proved onsite subtraction/radius transfer.
+
+## Module verification evidence
+
+- `IsingBulk.First.ActualAmplitudeNeighborhood`: 4 kernel-safe declarations; source SHA-256 `f8bacc8214cc767e834f2cc9a2c2cf634bb6190a80a1d48bac6243ee5a33d3e2`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualAmplitudeNeighborhood.receipt.json`
+- `IsingBulk.First.ActualDensityAnalytic`: 14 kernel-safe declarations; source SHA-256 `f7847d372d598e9e64c52d432231f598c8ce1e4d0803a23299e1a9e563ff9701`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityAnalytic.receipt.json`
+- `IsingBulk.First.ActualDensityBounds`: 9 kernel-safe declarations; source SHA-256 `c806b021ed8d3ac7c7074a0829a2e84e450239bd6f2ff6dece38489a6ad9b7a5`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityBounds.receipt.json`
+- `IsingBulk.First.ActualDensityCenter`: 30 kernel-safe declarations; source SHA-256 `cb135892e94f8ccbf33a1682d6250e260ac13a70e4a472a3b975878518fadc1c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityCenter.receipt.json`
+- `IsingBulk.First.ActualDensityExpansion`: 4 kernel-safe declarations; source SHA-256 `8cda27b2e4fb1ec8a0e4b390372679ad54eb67d73b4c4b9c1c8e34344a4eb06b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityExpansion.receipt.json`
+- `IsingBulk.First.ActualDensityJets`: 7 kernel-safe declarations; source SHA-256 `8c80a06eec4c5767174f9b917a1ea3e7075bbc325e9fad3f29f2d4026bcb79a6`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityJets.receipt.json`
+- `IsingBulk.First.ActualDensityNeighborhood`: 3 kernel-safe declarations; source SHA-256 `ee690852ac69120d800a130961eeeb91350416e21c68016de30ebbb4c8f02f45`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityNeighborhood.receipt.json`
+- `IsingBulk.First.ActualLeadingCoordinateLimit`: 7 kernel-safe declarations; source SHA-256 `2791cac1b3e00579aca1afcc5c0283e9943172adbdc6bcc55613eabb58f76bd7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLeadingCoordinateLimit.receipt.json`
+- `IsingBulk.First.ActualLeadingDensity`: 14 kernel-safe declarations; source SHA-256 `5bd3f467db837a5bd5c867dbefedaace72435a046ba554f39df73b557f1bc1c7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLeadingDensity.receipt.json`
+- `IsingBulk.First.ActualLeadingShapeLimit`: 2 kernel-safe declarations; source SHA-256 `9d535937e1d2ff63b390f4b896abbe98334dcb3a17813b872213c4401e1d764b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLeadingShapeLimit.receipt.json`
+- `IsingBulk.First.ActualLocalFullProfile`: 1 kernel-safe declarations; source SHA-256 `0112a592e5d9dbbde88c5ba81e3f42a55340ef5ecb6489b50aad7c5e51ee7e0a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalFullProfile.receipt.json`
+- `IsingBulk.First.ActualLocalLowerBounds`: 1 kernel-safe declarations; source SHA-256 `44790062d9066d3f2de0eebf66c18a1718eed3306bea450cfce12b8e7914e0b1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalLowerBounds.receipt.json`
+- `IsingBulk.First.ActualLocalMeanAsymptotic`: 1 kernel-safe declarations; source SHA-256 `b4da51b970e0d0ee3fdad540df1a61e49e7454e139e9831a9a3d4c46833a2ed4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalMeanAsymptotic.receipt.json`
+- `IsingBulk.First.ActualLocalizedPostMeanAsymptotic`: 3 kernel-safe declarations; source SHA-256 `8ec67947e65b093b12bbb3978ec0caf04230b5bc9d87af2e5d23bcbe8403ce64`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalizedPostMeanAsymptotic.receipt.json`
+- `IsingBulk.First.ActualLowerDerivativeBound`: 12 kernel-safe declarations; source SHA-256 `6f73a5c26aa1250a6aa92e50022d606e519cf55fef26c4a6c9c1d0837d9e5c0d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLowerDerivativeBound.receipt.json`
+- `IsingBulk.First.ActualLowerIntegralBounds`: 3 kernel-safe declarations; source SHA-256 `28583b2f91dcdfb95cb4e3ff4d50f7021b57d18a9c4791de3d4b9a5f975f0b36`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLowerIntegralBounds.receipt.json`
+- `IsingBulk.First.ActualPoleDerivative`: 5 kernel-safe declarations; source SHA-256 `d442795c2e444aa1e0f79a31822e0e4ba96633623969bf2cd51cdd951d9d4118`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPoleDerivative.receipt.json`
+- `IsingBulk.First.ActualPostMeanAnalyticTube`: 12 kernel-safe declarations; source SHA-256 `1b616eaed42d8bd8f77e8471186ca3e09d3d484c3100009516041c507af87fff`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanAnalyticTube.receipt.json`
+- `IsingBulk.First.ActualPostMeanCoordinateLimit`: 7 kernel-safe declarations; source SHA-256 `02b2c21bb9ec8b5714c05d75ac4253b51cbea44c68ddab1e022e128c12ab3ba0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanCoordinateLimit.receipt.json`
+- `IsingBulk.First.ActualPostMeanInterchange`: 12 kernel-safe declarations; source SHA-256 `5166dd138c3fdf0938fe907cfe7f24ae2ccdbd19eb86cabb59f4488edf45b38a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanInterchange.receipt.json`
+- `IsingBulk.First.ActualPostMeanLocalRegularity`: 4 kernel-safe declarations; source SHA-256 `0de290e05bfd54a16fc8809f9a5e89fd7f709742e6b9916ef0b1b59a3a2479a3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanLocalRegularity.receipt.json`
+- `IsingBulk.First.ActualPostMeanShapeLimit`: 1 kernel-safe declarations; source SHA-256 `dfdc78dec5993e0e6b7562f81fcfd478e7a18262946b20b21a930b7f4f637183`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanShapeLimit.receipt.json`
+- `IsingBulk.First.ActualRemainderShapeBound`: 4 kernel-safe declarations; source SHA-256 `77b1f1bb1f301acde2057cebe676995225a697f3281db6336979b6d1e02f5c6d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualRemainderShapeBound.receipt.json`
+- `IsingBulk.First.ActualShapeAmplitude`: 11 kernel-safe declarations; source SHA-256 `eb6956c229ab0dda15cf0fe23b803859f2733c034af8382ab5e285640d8d766e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeAmplitude.receipt.json`
+- `IsingBulk.First.ActualShapeDenominator`: 10 kernel-safe declarations; source SHA-256 `486380535523a13067b40ff5d0353e6983c4fe1b14d3f80abf9b4cff4857836b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeDenominator.receipt.json`
+- `IsingBulk.First.ActualShapeDerivative`: 5 kernel-safe declarations; source SHA-256 `264e1e6eb507fbcf6a21a506979051c34e4637c563bc16639d45f2750dac06cc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeDerivative.receipt.json`
+- `IsingBulk.First.ActualShapeIntegrability`: 2 kernel-safe declarations; source SHA-256 `d8abc9e20767e456dfd3794b38d24a41f344d4c7efda4eea94a5298fd323bfbc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeIntegrability.receipt.json`
+- `IsingBulk.First.ActualShapeNeighborhood`: 3 kernel-safe declarations; source SHA-256 `822414283bd71dd34437a08d865f8832969799991a9001e5ae781de7982059df`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeNeighborhood.receipt.json`
+- `IsingBulk.First.ActualVandermonde`: 21 kernel-safe declarations; source SHA-256 `f3936b68101eba26a79330cec3e383fe07dd9bd4549896c0da015781478b98a6`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualVandermonde.receipt.json`
+- `IsingBulk.First.AnalyticQuadraticLimit`: 9 kernel-safe declarations; source SHA-256 `a18bc408cbf002337f251a7be3dafff49e1d45de8d767362f5add033c2ae8bc9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnalyticQuadraticLimit.receipt.json`
+- `IsingBulk.First.AngularCoordinateSplit`: 1 kernel-safe declarations; source SHA-256 `0bf466b2dc75414d7d0cc4b058698a3f425da4aa434adc168a6ebbcac07124b6`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularCoordinateSplit.receipt.json`
+- `IsingBulk.First.AngularFubini`: 7 kernel-safe declarations; source SHA-256 `9ef2cae98031c8b6ba8e6eb97bbe1467a6351aae3d45ae2316fff9863a04e911`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularFubini.receipt.json`
+- `IsingBulk.First.AngularReindex`: 15 kernel-safe declarations; source SHA-256 `3745dc86a0a161a4043e386e20d10927fcb88731a04587f1ef0f1e913eb8c474`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularReindex.receipt.json`
+- `IsingBulk.First.AngularResolvent`: 10 kernel-safe declarations; source SHA-256 `993fd6d3423d3acccc3ec3e4cba4b01263157d8313da8541dd080906c34b5a6f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularResolvent.receipt.json`
+- `IsingBulk.First.AnnularDensity`: 4 kernel-safe declarations; source SHA-256 `3693eb80c6c2d39322323735c81755057c9796e9b2058ed7232059de53e5e3b6`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnularDensity.receipt.json`
+- `IsingBulk.First.AnnularOnsiteDensity`: 3 kernel-safe declarations; source SHA-256 `0f959b17d194a0696601cb4d6b2d8f0a5dc8d3d52023306abb306777f3096e5a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnularOnsiteDensity.receipt.json`
+- `IsingBulk.First.AnnulusContour`: 9 kernel-safe declarations; source SHA-256 `8b40a60b94a1a24478aa7d4ee1994bba8370a37d20e5f528990ef7c19d2c0681`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnulusContour.receipt.json`
+- `IsingBulk.First.AnnulusProduct`: 4 kernel-safe declarations; source SHA-256 `e54a8a9fc5211f7fa7ba0fa124234d6689508fe872d610f81636869f7ee6cf6e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnulusProduct.receipt.json`
+- `IsingBulk.First.AuxiliaryDomination`: 4 kernel-safe declarations; source SHA-256 `b10b5424066d46d7ebb0bbd17792d44eb050f1bf98bc835067e0d6d0e3bbf228`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AuxiliaryDomination.receipt.json`
+- `IsingBulk.First.BulkSymmetry`: 12 kernel-safe declarations; source SHA-256 `c981ebf6140008225ff81af439c8527fcbe727c4d206d8b685806f9ac5cdf8e3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/BulkSymmetry.receipt.json`
+- `IsingBulk.First.CoefficientPhase`: 9 kernel-safe declarations; source SHA-256 `6c219354a306530d83f8884a389dfcb9d285009663b5aa1bf9a8ba9e76b98344`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CoefficientPhase.receipt.json`
+- `IsingBulk.First.CompactAnalyticShapeIntegral`: 6 kernel-safe declarations; source SHA-256 `3386e74710a4fe365272c76e200a7e8691934a65efe201a700631c492d377da4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactAnalyticShapeIntegral.receipt.json`
+- `IsingBulk.First.CompactIntegralHolomorphic`: 2 kernel-safe declarations; source SHA-256 `8a6c1879fb153c297776b3e53633029ce21a384dc10d12bc39a2e9798780e838`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactIntegralHolomorphic.receipt.json`
+- `IsingBulk.First.CompactJetIntegral`: 2 kernel-safe declarations; source SHA-256 `68dd4c2bc43b150c61b604870689979cbe9102adcf027fa5265411e2a9646ff1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactJetIntegral.receipt.json`
+- `IsingBulk.First.CompactParameterContinuity`: 1 kernel-safe declarations; source SHA-256 `973f39a9aaa894ba85b1287d12119d7e8387be5fca6fba1449c590d0f709c2ae`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactParameterContinuity.receipt.json`
+- `IsingBulk.First.CompactParameterIntegral`: 1 kernel-safe declarations; source SHA-256 `807f3e2c02e23a0de4d16fdac7c3d84a80a4137adf378c61738dbbbac13d63f4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactParameterIntegral.receipt.json`
+- `IsingBulk.First.CompatibleComplement`: 8 kernel-safe declarations; source SHA-256 `69cc3f88ff4426d5b762be9b5c37e4a21481a4c9de5a8ee023d6cef5079b0507`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleComplement.receipt.json`
+- `IsingBulk.First.CompatibleMeanAttachment`: 2 kernel-safe declarations; source SHA-256 `6f5c306be90c3a24670c710589775ddd937f024815b3528ead492147f3077ff0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleMeanAttachment.receipt.json`
+- `IsingBulk.First.CompatibleMeanSource`: 3 kernel-safe declarations; source SHA-256 `0511b62fe8392dae2a0a8eb0d94bb4e0262d9f41e19d28a128e52451421ec63b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleMeanSource.receipt.json`
+- `IsingBulk.First.CompatibleYCutoffAtDelta`: 7 kernel-safe declarations; source SHA-256 `ae6b52163661e86c7d94a6e45630aa1770f4cdc69709424c7579cbc9743201d8`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleYCutoffAtDelta.receipt.json`
+- `IsingBulk.First.CompatibleYCutoffData`: 48 kernel-safe declarations; source SHA-256 `b7278ef6543b269ca8a6a3398d6e0c60141b53ffcb6581f6b8bc96d93850c65d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleYCutoffData.receipt.json`
+- `IsingBulk.First.CompatibleYLocalization`: 11 kernel-safe declarations; source SHA-256 `49c16d63e5c0e6d716bad0d1afb5e952d46c337753b88a04af1a103367617c20`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleYLocalization.receipt.json`
+- `IsingBulk.First.ComplementActiveChart`: 2 kernel-safe declarations; source SHA-256 `97d1d5aca066931fccd2918c2809593fdd9068ab06d9f9a6469ff2f3735fafd9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementActiveChart.receipt.json`
+- `IsingBulk.First.ComplementAuxiliary`: 17 kernel-safe declarations; source SHA-256 `7d739354dbcbf8a3525e76bf783b448ae1c49259b13058511cd4659927ef73e6`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliary.receipt.json`
+- `IsingBulk.First.ComplementAuxiliaryJets`: 8 kernel-safe declarations; source SHA-256 `56924417751fc97edae02f3e530a359c01b7a0312dac34099d6f691679da3157`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliaryJets.receipt.json`
+- `IsingBulk.First.ComplementAuxiliaryMajorant`: 2 kernel-safe declarations; source SHA-256 `1c9b836a3b17fbf9c7ad03ddf934abaecde0f02827fcbc26fa9a0a4edc3e3310`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliaryMajorant.receipt.json`
+- `IsingBulk.First.ComplementAuxiliaryTailBound`: 4 kernel-safe declarations; source SHA-256 `b4001e6493cb1a13f9dbf665c93610157cc4864f008bd26d54309f6af8de1fce`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliaryTailBound.receipt.json`
+- `IsingBulk.First.ComplementClosedDamping`: 3 kernel-safe declarations; source SHA-256 `cc77da30348b383abf4fa7b4a7d6595edb0d6cc0d00f4c5ce80e3727b6abbb47`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementClosedDamping.receipt.json`
+- `IsingBulk.First.ComplementDampedGradients`: 30 kernel-safe declarations; source SHA-256 `02e57bb1fa66a467d575c7101c74bcd3004b9741abb747ffb1c14db95fa0ab91`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementDampedGradients.receipt.json`
+- `IsingBulk.First.ComplementDamping`: 5 kernel-safe declarations; source SHA-256 `021762fd383c05562a502741ea3bb4c5e7de62d9a19f4a74ba1b7c5b7806592d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementDamping.receipt.json`
+- `IsingBulk.First.ComplementDecay`: 10 kernel-safe declarations; source SHA-256 `42dd3771b875b2bae242215e8a1b8e4a9a172f35b7ab8aee80c948c6cadea174`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementDecay.receipt.json`
+- `IsingBulk.First.ComplementExponentialProduct`: 5 kernel-safe declarations; source SHA-256 `caad3dcdaa3a54a7fcc3a00a79df24fffb5b8b4db7f2ba59f1a1966f5dda1a42`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementExponentialProduct.receipt.json`
+- `IsingBulk.First.ComplementFactorization`: 25 kernel-safe declarations; source SHA-256 `6f36da5c19d8682228aba60311ee5e027ed0c6e1e8da86bd43366d9932ad5953`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFactorization.receipt.json`
+- `IsingBulk.First.ComplementFiniteAuxiliary`: 7 kernel-safe declarations; source SHA-256 `5f19abfbf9985785b8a7e25006434d2968a164d12160b3361ec004db4eef0fac`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFiniteAuxiliary.receipt.json`
+- `IsingBulk.First.ComplementFiniteRefinement`: 2 kernel-safe declarations; source SHA-256 `55486eaf8faa6d0fe2ae5f049d5378ff5354e6e46077f05d9b3246516338ff4f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFiniteRefinement.receipt.json`
+- `IsingBulk.First.ComplementFiniteSum`: 3 kernel-safe declarations; source SHA-256 `4316bb83358736ea76743fdee8d73f9159c6610a8c501382f9df15ced60e4c8c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFiniteSum.receipt.json`
+- `IsingBulk.First.ComplementFubini`: 5 kernel-safe declarations; source SHA-256 `d670a7d85283b35bd0db15a12a12eb01a800441ca69d8671e90e98f15292fb0f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFubini.receipt.json`
+- `IsingBulk.First.ComplementFullPhaseJets`: 11 kernel-safe declarations; source SHA-256 `1d0058c1775f6486d11c6f1fc3bce9df8ce3f646977a3af2020a77d11f548d65`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFullPhaseJets.receipt.json`
+- `IsingBulk.First.ComplementGeometry`: 65 kernel-safe declarations; source SHA-256 `bdc8e289813f04d4b8e4960306af23313c2997bf2644781098d906b5bfe18280`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementGeometry.receipt.json`
+- `IsingBulk.First.ComplementGlobalBound`: 2 kernel-safe declarations; source SHA-256 `0633dfdd3a8158a890a345b442f1de039829f081a2d753d451b30099425dfa90`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementGlobalBound.receipt.json`
+- `IsingBulk.First.ComplementGradients`: 16 kernel-safe declarations; source SHA-256 `75aa090bf27ed145ff8f3b56445cb5cac62c1f629803f7c4947471c5a51469aa`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementGradients.receipt.json`
+- `IsingBulk.First.ComplementIBP`: 24 kernel-safe declarations; source SHA-256 `d5ca7e95bb17ecfd9e0eae6d2ff7d14a45f546b8b3eb78e9cfdebfde7e544a97`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementIBP.receipt.json`
+- `IsingBulk.First.ComplementInactiveNeighborhood`: 3 kernel-safe declarations; source SHA-256 `28d121ac7af3146cc7c8e3d516e4f7253e0198044e8c34b282179ca4bc03bebe`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementInactiveNeighborhood.receipt.json`
+- `IsingBulk.First.ComplementLocalBound`: 3 kernel-safe declarations; source SHA-256 `3c935d475b8cb829ffea3079e569234ace6f873a5ea927865b78ac8eda82a97a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalBound.receipt.json`
+- `IsingBulk.First.ComplementLocalFormFactor`: 1 kernel-safe declarations; source SHA-256 `ae51709b518a232ffd7f3f0056984ef979b23e3167ec2aa915286161c72e02ca`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalFormFactor.receipt.json`
+- `IsingBulk.First.ComplementLocalParameterRegularity`: 4 kernel-safe declarations; source SHA-256 `091f8889f25c7695cd374c09c9333576f13b8ee73a2556c65750ebedd2e07331`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalParameterRegularity.receipt.json`
+- `IsingBulk.First.ComplementLocalizedFactors`: 18 kernel-safe declarations; source SHA-256 `7261b54e3dc47144b62d66184a2451df437331444629e642f13bd57adedb117c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalizedFactors.receipt.json`
+- `IsingBulk.First.ComplementMixedRegularity`: 2 kernel-safe declarations; source SHA-256 `cb911f3c48b3239e45467aab3b5bb0d55950169b9f9db2691488d6b281398167`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementMixedRegularity.receipt.json`
+- `IsingBulk.First.ComplementNormalizedJets`: 21 kernel-safe declarations; source SHA-256 `1eb3352835d3b84896f30452375f2bdff3fd967b7ca1f5c3c30ca61e51957b39`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementNormalizedJets.receipt.json`
+- `IsingBulk.First.ComplementOnsiteGeometry`: 5 kernel-safe declarations; source SHA-256 `ba12605d3e8bf179bf96aac91f2a58a8d4017426a7209d5092adb09dda595d5e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementOnsiteGeometry.receipt.json`
+- `IsingBulk.First.ComplementParameterJets`: 50 kernel-safe declarations; source SHA-256 `faf97aed8c0605b64141275ffa13442d19eef71ff60234f53536b10117a4dde5`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementParameterJets.receipt.json`
+- `IsingBulk.First.ComplementParameterRegularity`: 5 kernel-safe declarations; source SHA-256 `12dced171bd0b6ad256710ae77ba313d8216a391b88b2b512d534b74013194d4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementParameterRegularity.receipt.json`
+- `IsingBulk.First.ComplementPhase`: 9 kernel-safe declarations; source SHA-256 `c2e4c1e001254b44bff5e897a3b5f81e076120254aaacadafd099f6216c1b3aa`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementPhase.receipt.json`
+- `IsingBulk.First.ComplementPhaseSum`: 14 kernel-safe declarations; source SHA-256 `75f883e4b7a0f4b7f390795dc0d0878a3b876e7811fc00d5b471ba7eca3e8395`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementPhaseSum.receipt.json`
+- `IsingBulk.First.ComplementRadialChartDecay`: 1 kernel-safe declarations; source SHA-256 `148d3612d03f11c14f87ed32a1addf3c288b2e0030f6a6f1d25d0e2118798696`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementRadialChartDecay.receipt.json`
+- `IsingBulk.First.ComplementRadialCompact`: 8 kernel-safe declarations; source SHA-256 `3eb96802b54b8285a82acee2f282ec25f679773dc54b409b5398fda35b1d706d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementRadialCompact.receipt.json`
+- `IsingBulk.First.ComplementRadialRegularChart`: 1 kernel-safe declarations; source SHA-256 `16e6aba4c8ae51a5d900e3ac6f46cef5530eb427b408c59e8d8ebae71e506670`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementRadialRegularChart.receipt.json`
+- `IsingBulk.First.ComplementSeparation`: 33 kernel-safe declarations; source SHA-256 `778d18d68dc2712130edfc059332e2cd5a7cf0e600f3ae69b2fd8d0349b2c80f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSeparation.receipt.json`
+- `IsingBulk.First.ComplementSimplex`: 4 kernel-safe declarations; source SHA-256 `f0cac1f9cbc72dd9428dd22b2d7856d41fabb34a5a8031bfff23b18d63b9be09`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSimplex.receipt.json`
+- `IsingBulk.First.ComplementSmallAuxiliary`: 3 kernel-safe declarations; source SHA-256 `039ba3ad21aa9bfc342b65977867623b87b649400c8cfe4b08e5fe865399bd0b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSmallAuxiliary.receipt.json`
+- `IsingBulk.First.ComplementSourceAmplitudeSupport`: 2 kernel-safe declarations; source SHA-256 `193369f7b5fc55bf0a553d6dfc05f8723c64553d54b5e9b5ccc7a9b77f47caaf`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceAmplitudeSupport.receipt.json`
+- `IsingBulk.First.ComplementSourceAnalytic`: 5 kernel-safe declarations; source SHA-256 `9b4ea173b7872b1fde7b3cc2f290427e47eebc3aebe2a28b8da8d4358290a66c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceAnalytic.receipt.json`
+- `IsingBulk.First.ComplementSourceNormalizedJets`: 7 kernel-safe declarations; source SHA-256 `810808a7617cc2bf650c7dbb4b2b63876ae9d9ede1d62fbb84fe56e8bf6c9fb4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceNormalizedJets.receipt.json`
+- `IsingBulk.First.ComplementSourcePhaseSmooth`: 2 kernel-safe declarations; source SHA-256 `be35d0959d971a10a483b8a1250ab2cb2939c0c937708ebd66f710b81b84a875`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourcePhaseSmooth.receipt.json`
+- `IsingBulk.First.ComplementSourceSmooth`: 6 kernel-safe declarations; source SHA-256 `07a7c58a273ece567ce441cd3185d51d8478cc0edb261d741a72b9098d2da7a1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceSmooth.receipt.json`
+- `IsingBulk.First.ComplementSourceUniform`: 7 kernel-safe declarations; source SHA-256 `e084a8b2c7acb997dcd4bebea913dbe98942c2d19141b58738ea4489e96d4c8c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceUniform.receipt.json`
+- `IsingBulk.First.ComplementUniform`: 2 kernel-safe declarations; source SHA-256 `622ca2f145dd00b41a341b36ef6914df4415e3d0212fa049d8e05133f96fb69e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementUniform.receipt.json`
+- `IsingBulk.First.ComplementVectors`: 36 kernel-safe declarations; source SHA-256 `67695147a952a0bc3f31dbda4b1bf7832c7c756b267889c19f33bcb2f71801d0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementVectors.receipt.json`
+- `IsingBulk.First.ContourAngular`: 19 kernel-safe declarations; source SHA-256 `00d9392a9215e60c14bbecf1d1ec0db38eb68e9ecde5b7d360d14fdfe9894834`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourAngular.receipt.json`
+- `IsingBulk.First.ContourDefinitions`: 33 kernel-safe declarations; source SHA-256 `d74981f80deaa2bf1aae0881b3b0608dd0b915ca72d7e9b1d1463b925f219d43`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourDefinitions.receipt.json`
+- `IsingBulk.First.ContourIntegrability`: 15 kernel-safe declarations; source SHA-256 `1805d37a51f9cc39405fad1102444d65431f3aef39817e3429f5727f7ebb5a92`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourIntegrability.receipt.json`
+- `IsingBulk.First.ContourNormBounds`: 4 kernel-safe declarations; source SHA-256 `8caf47872a82b68fd8752bb6c5b7571ae47bfc7c15879e06dce7e6343c2de840`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourNormBounds.receipt.json`
+- `IsingBulk.First.ContourParameterDomain`: 2 kernel-safe declarations; source SHA-256 `74c62e8219391fae4e228628cc7ee2bbe4905ec944db4d283f8803eae9a29126`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourParameterDomain.receipt.json`
+- `IsingBulk.First.DominatedAnalyticIntegral`: 4 kernel-safe declarations; source SHA-256 `6f6d8961655455a4a3d815b36248e33a96fa9a957f36414316efa5d232309e43`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DominatedAnalyticIntegral.receipt.json`
+- `IsingBulk.First.DoubleContourFubini`: 1 kernel-safe declarations; source SHA-256 `4f8912e03572d8bf5b948e4d3fbaf49d8dcc71d95c0b2879ad43ecfc8ef79761`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoubleContourFubini.receipt.json`
+- `IsingBulk.First.DoublePeriodicBump`: 12 kernel-safe declarations; source SHA-256 `f260f1004700252e893bec5a7990e9ae1b1b7745e53a7f4f39f470e7b52b2131`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoublePeriodicBump.receipt.json`
+- `IsingBulk.First.DoublePeriodicIntegral`: 3 kernel-safe declarations; source SHA-256 `656cc62cc306f2c88ca0bcf19a47360257fc0151473271847434073ad74a3650`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoublePeriodicIntegral.receipt.json`
+- `IsingBulk.First.DoublePeriodicLiftIntegral`: 3 kernel-safe declarations; source SHA-256 `236946bd22e272fd32ab5566045d463546d846bcad5601107128fa1f2058cdd4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoublePeriodicLiftIntegral.receipt.json`
+- `IsingBulk.First.ExteriorAnalyticGeometry`: 7 kernel-safe declarations; source SHA-256 `c6b5a7adb7b689b6114b290608c2a1251aef39f254383fb2f52a8e5993a0caa9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorAnalyticGeometry.receipt.json`
+- `IsingBulk.First.ExteriorContinuationUniqueness`: 1 kernel-safe declarations; source SHA-256 `e468bc3a1db59014812a34906423f6f81cef6b7d8415135bfaa908a3be3325a8`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorContinuationUniqueness.receipt.json`
+- `IsingBulk.First.ExteriorIdentitySymmetry`: 5 kernel-safe declarations; source SHA-256 `d0bd5dc1e1800fba8333b57a0789a19c504940667dda6aa204cd78f5a18540f3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorIdentitySymmetry.receipt.json`
+- `IsingBulk.First.ExteriorSymmetry`: 3 kernel-safe declarations; source SHA-256 `1f5cd9d892d3c9bec1bab3b029585542033749e0d539cac928e768fad9c32383`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorSymmetry.receipt.json`
+- `IsingBulk.First.FarExteriorAnnularDensity`: 6 kernel-safe declarations; source SHA-256 `05724b837fd09284da2e32ad04bfa2768128e43fd71d643d510a7d715649ddb3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorAnnularDensity.receipt.json`
+- `IsingBulk.First.FarExteriorDensityBound`: 1 kernel-safe declarations; source SHA-256 `df37ed7a5600066696d9c03b5e1fae67f31a0e5a93aa688f545ccfc27aac4e3e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorDensityBound.receipt.json`
+- `IsingBulk.First.FarExteriorFormFactor`: 3 kernel-safe declarations; source SHA-256 `977a470733da0182ce7369d6eb70c23779bd153a24728129c3d03047c6c254de`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorFormFactor.receipt.json`
+- `IsingBulk.First.FarExteriorMixedContour`: 3 kernel-safe declarations; source SHA-256 `1451d429a6a3d770e9a4a5d0c119f32026d8064335e51bc97df6862310daacc4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorMixedContour.receipt.json`
+- `IsingBulk.First.FarExteriorRadiusIndependence`: 2 kernel-safe declarations; source SHA-256 `aad219beb4f09be9e45919cbde4aa4e9ec19f0ab307793976d243fcfb11f89f9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorRadiusIndependence.receipt.json`
+- `IsingBulk.First.FiniteTorusBumpCover`: 3 kernel-safe declarations; source SHA-256 `29e25d9649f20b9b51656e4255966bbc59f4b5c5704ce1fbfb3181839091bd41`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FiniteTorusBumpCover.receipt.json`
+- `IsingBulk.First.FiniteTorusRefinement`: 12 kernel-safe declarations; source SHA-256 `148c0d546479d9f8bae733bc0fd297586d25026e59f8a0efa30b46f4b46f7775`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FiniteTorusRefinement.receipt.json`
+- `IsingBulk.First.FirstCoefficient`: 8 kernel-safe declarations; source SHA-256 `51f73c9fd7a9eb1c24a732b3a97e02598c29bdc76554731c4d780eacb18f5d58`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FirstCoefficient.receipt.json`
+- `IsingBulk.First.FirstTheorem`: 5 kernel-safe declarations; source SHA-256 `ff911290da8735d017b9982a35b09faaa227a5fba59aa088c5445d9bb098152c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FirstTheorem.receipt.json`
+- `IsingBulk.First.FirstUpperAsymptotic`: 5 kernel-safe declarations; source SHA-256 `26be86815ec2a2eb67f186e02db95c38b20d3a77ada9436690a793d8c05d9ff3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FirstUpperAsymptotic.receipt.json`
+- `IsingBulk.First.FixedRadiusAnalytic`: 3 kernel-safe declarations; source SHA-256 `634784e1623992fb47df706f48d5f4600ea9e76bddb0211936f544d38501ca47`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FixedRadiusAnalytic.receipt.json`
+- `IsingBulk.First.FormFactorAnalytic`: 5 kernel-safe declarations; source SHA-256 `f46f8195953788400211e755d04edea94507c25ad6b173f32c57344706780000`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FormFactorAnalytic.receipt.json`
+- `IsingBulk.First.FormFactorNormalization`: 2 kernel-safe declarations; source SHA-256 `ab0ae202491f05a32b2dbd2cf0fe68390106ad9694057bf99b25cb71bc1cb005`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FormFactorNormalization.receipt.json`
+- `IsingBulk.First.GlobalResidueRoot`: 11 kernel-safe declarations; source SHA-256 `4e051613e9ff5d9f44ffe29b9630b77ca337be3c60111260d5e40a5c9c472a51`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/GlobalResidueRoot.receipt.json`
+- `IsingBulk.First.GlobalRootChartBridge`: 2 kernel-safe declarations; source SHA-256 `bbd90042f34516396c5a55d0a3640029c6e5a08ac877b62631b24592a9df2bd8`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/GlobalRootChartBridge.receipt.json`
+- `IsingBulk.First.IntegratedMeanDecomposition`: 12 kernel-safe declarations; source SHA-256 `f206a304605a8ce1ecfaa7fe2e4ae3ed9f24057ee8ee641a9bc439db4c6397c7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/IntegratedMeanDecomposition.receipt.json`
+- `IsingBulk.First.InteriorRoot`: 13 kernel-safe declarations; source SHA-256 `867fa530034f7296c83dad36d06b2220cd620d3467e3be8de1f87f301746b92e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/InteriorRoot.receipt.json`
+- `IsingBulk.First.JointPoleRegularity`: 7 kernel-safe declarations; source SHA-256 `de67564e63005f983404e22d6944314c918703812ed853d009cbc2e79af08516`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/JointPoleRegularity.receipt.json`
+- `IsingBulk.First.LiftedSourceIntegrability`: 3 kernel-safe declarations; source SHA-256 `e6383ea3c5df5df298c17a91c5b46bd202b74be42832b0b9140bfc99ced3f53c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LiftedSourceIntegrability.receipt.json`
+- `IsingBulk.First.LocalizedAnalytic`: 4 kernel-safe declarations; source SHA-256 `4d1065b74fadca5b2e1b9842d489d284cda109c2e1232496a5bfd760945518c1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LocalizedAnalytic.receipt.json`
+- `IsingBulk.First.LocalizedDouble`: 6 kernel-safe declarations; source SHA-256 `31b0a3bba092bd408f8f2dfe1202e93f3b2a7fee9a64d58b187fe34ae5c1f75f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LocalizedDouble.receipt.json`
+- `IsingBulk.First.LocalizedPartition`: 4 kernel-safe declarations; source SHA-256 `7ba1b636bab9e79daef531b427a9bf1109897a70e6814f1a88bb8261752104ef`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LocalizedPartition.receipt.json`
+- `IsingBulk.First.LowerOrderCommonInterval`: 3 kernel-safe declarations; source SHA-256 `034f4c7751de6792467e199ab4372d6eafd2782a0bfb3d48f3bd4079485d5ef7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderCommonInterval.receipt.json`
+- `IsingBulk.First.LowerOrderFiniteWindow`: 3 kernel-safe declarations; source SHA-256 `033f35a8a90251e7284796c1eafdd494678a4382e74376f1080c189836d33546`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderFiniteWindow.receipt.json`
+- `IsingBulk.First.LowerOrderFixedRadius`: 2 kernel-safe declarations; source SHA-256 `856bc0cc2e9308f743ff94358df315c51f85292bc28dd630d144b8c54f4c3f26`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderFixedRadius.receipt.json`
+- `IsingBulk.First.LowerOrderTransfer`: 2 kernel-safe declarations; source SHA-256 `942799dc5ba3c1d1f50c7a2ac15ac7d0d82262399e64c522e7dc267adfd66dac`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderTransfer.receipt.json`
+- `IsingBulk.First.MeanAnalyticIntegral`: 4 kernel-safe declarations; source SHA-256 `7e6d564a0e4a7d01bf6014d2fb727c35ab8a679a95022c717c697a823bfb3bb4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAnalyticIntegral.receipt.json`
+- `IsingBulk.First.MeanAnalyticTube`: 2 kernel-safe declarations; source SHA-256 `c6126c7f4091b6e8ba1f8c28ce7abdbeebcc20df10b8a6345020f7447fcfb284`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAnalyticTube.receipt.json`
+- `IsingBulk.First.MeanAngularIdentity`: 5 kernel-safe declarations; source SHA-256 `064c4df06ab771723ec36004af71c357b7cc15dbc0304177a4b5bebf29c6c02e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAngularIdentity.receipt.json`
+- `IsingBulk.First.MeanAttenuation`: 6 kernel-safe declarations; source SHA-256 `2e206d37fe6bfa6d7c79bd8d3ccfce6b530a22d7e3f1196143aa50fd721bfd8d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAttenuation.receipt.json`
+- `IsingBulk.First.MeanCompatibleLemma`: 1 kernel-safe declarations; source SHA-256 `5e581026fc83a8eefe57950ca66261765ba4952f8687a0cbccc6327fb61983ac`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanCompatibleLemma.receipt.json`
+- `IsingBulk.First.MeanConstrainedConcavity`: 2 kernel-safe declarations; source SHA-256 `00dbd54f879d0903f3c746409fa723ce63477f4c15ffd1c0825c530b9bc95c78`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanConstrainedConcavity.receipt.json`
+- `IsingBulk.First.MeanCoordinateMeasure`: 6 kernel-safe declarations; source SHA-256 `909ca20fc74e05e89217e92e4c5c6c1ab1f80107808b135c94b49a30d7632267`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanCoordinateMeasure.receipt.json`
+- `IsingBulk.First.MeanCoordinates`: 23 kernel-safe declarations; source SHA-256 `3152a2d75ecd584cdd338a1cc3620483f435e9374d049d6f116564fc32beb1cd`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanCoordinates.receipt.json`
+- `IsingBulk.First.MeanDeformedDomain`: 6 kernel-safe declarations; source SHA-256 `af51abc34c8102022ee73b9747c43fd23e15d69e664f95e393d8dd191d53371d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanDeformedDomain.receipt.json`
+- `IsingBulk.First.MeanDerivativeTube`: 9 kernel-safe declarations; source SHA-256 `6480bea5612dbab8d4d7a2e60d039bf159a408d53b78afa0c846cc294848968b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanDerivativeTube.receipt.json`
+- `IsingBulk.First.MeanEdgeBounds`: 6 kernel-safe declarations; source SHA-256 `9be48f5afa31f8a6b69b60e47324d59a128da6ee3d8d524901dfceb70dfc9c18`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanEdgeBounds.receipt.json`
+- `IsingBulk.First.MeanErrorShapeContinuity`: 5 kernel-safe declarations; source SHA-256 `a21752a0f358661026b19ccf4f42c6b5ca1457458f7e90f7e6087417efcb0262`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeContinuity.receipt.json`
+- `IsingBulk.First.MeanErrorShapeIntegral`: 7 kernel-safe declarations; source SHA-256 `ae68ca4abdff0715d7caf88aea47c6ceec204a96b52fce4ed532033887cbf927`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeIntegral.receipt.json`
+- `IsingBulk.First.MeanErrorShapeLimit`: 7 kernel-safe declarations; source SHA-256 `6d9073f0ce4c44f299e198c24f48c773f7066046fe5b0586b6aa72ab2239f7a3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeLimit.receipt.json`
+- `IsingBulk.First.MeanErrorShapeRegularity`: 3 kernel-safe declarations; source SHA-256 `078ce665caf136571b05a53d50c643ce56802c8a9d04b70c5bdd14402c32cab4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeRegularity.receipt.json`
+- `IsingBulk.First.MeanFullIntegral`: 1 kernel-safe declarations; source SHA-256 `d624ef64f18976dcd4b83ac55b4a4ee390775ad92d37142448eed0bbb5fd7e04`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanFullIntegral.receipt.json`
+- `IsingBulk.First.MeanImaginaryMargin`: 14 kernel-safe declarations; source SHA-256 `ab7fa61f1b7d5f44d0ce06d1dba25905b530c5fc51f6e7f5051dd500c6c2c8f1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanImaginaryMargin.receipt.json`
+- `IsingBulk.First.MeanJacobian`: 17 kernel-safe declarations; source SHA-256 `b310ba742ec5f8a6475377963465a28a72b635fd8b91647302b4d12dbceab6b2`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanJacobian.receipt.json`
+- `IsingBulk.First.MeanJointAnalytic`: 13 kernel-safe declarations; source SHA-256 `a58d601f703d9ffcba935830f36ab3b3568bd37b9681e67c5c04980a4850e846`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanJointAnalytic.receipt.json`
+- `IsingBulk.First.MeanLocalDensity`: 8 kernel-safe declarations; source SHA-256 `71daee7694c7a0863bb249af0929f87334d355c9f5d9c0cc243f363bd0e1c369`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanLocalDensity.receipt.json`
+- `IsingBulk.First.MeanLocalDomain`: 5 kernel-safe declarations; source SHA-256 `272ae6ef9de356ed9d1ecaf7f2d4bdbfe207f014fe7221e1f293c7beb71dab5f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanLocalDomain.receipt.json`
+- `IsingBulk.First.MeanLocalRegularity`: 5 kernel-safe declarations; source SHA-256 `d8ef3f4c4e45ceb26313c2a4e9999fe98dcff928b21255cf9bc441922d5a1e69`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanLocalRegularity.receipt.json`
+- `IsingBulk.First.MeanMotion`: 6 kernel-safe declarations; source SHA-256 `a3f0747d3e09d0f9f444a6e9ca8651ec3a969c321580b629cf96c288736615ae`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanMotion.receipt.json`
+- `IsingBulk.First.MeanNonlinearBound`: 3 kernel-safe declarations; source SHA-256 `9cf14549ea6b2df47e8afcbdb15dfd6d7f6ad74e524d688a9b014575d07b1307`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanNonlinearBound.receipt.json`
+- `IsingBulk.First.MeanParameterDisk`: 1 kernel-safe declarations; source SHA-256 `d2f487ac091accbe4ffd65e21461e52944240df4d3f9c41b21082e2274f726ba`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterDisk.receipt.json`
+- `IsingBulk.First.MeanParameterDomain`: 7 kernel-safe declarations; source SHA-256 `22e3c9c9c0ad5172695613fe7af613d9f05d499f46d15bbdc6d705231721ed9d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterDomain.receipt.json`
+- `IsingBulk.First.MeanParameterIntegral`: 2 kernel-safe declarations; source SHA-256 `4a530b80f57854664dd4e59d1b58ae3798cab5b80fba17d24858644dfee62406`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterIntegral.receipt.json`
+- `IsingBulk.First.MeanParameterRectangle`: 3 kernel-safe declarations; source SHA-256 `a35f9998e36978f6ee8605386a759240fe1193e847cbc35b05db9c55fa48c952`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterRectangle.receipt.json`
+- `IsingBulk.First.MeanPhase`: 43 kernel-safe declarations; source SHA-256 `8392c679066fd08c224bd987eac4fbb2baf969cd5150a91d1a95a8424cd8b179`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhase.receipt.json`
+- `IsingBulk.First.MeanPhaseSecond`: 13 kernel-safe declarations; source SHA-256 `0b2f8f82905f7a444e3009ecabc5e19e339aa21e8de36c56bb2e3ff189e5afd0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhaseSecond.receipt.json`
+- `IsingBulk.First.MeanPhysicalDecomposition`: 5 kernel-safe declarations; source SHA-256 `22cad71b3082d63f1383a5a0d7e3222e05a1aaa791af57e7ae979fdd3261ab69`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhysicalDecomposition.receipt.json`
+- `IsingBulk.First.MeanPhysicalLemma`: 2 kernel-safe declarations; source SHA-256 `94d0f16f6c1231de8fa4c9e3d28c23a7ae5b8284c5be0a5b9964176f6b3ace5c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhysicalLemma.receipt.json`
+- `IsingBulk.First.MeanPole`: 18 kernel-safe declarations; source SHA-256 `d8f5ff0c368737f78b74cafc581d6793ff81658c16f35db381268d108f51bb66`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPole.receipt.json`
+- `IsingBulk.First.MeanPoleExclusion`: 9 kernel-safe declarations; source SHA-256 `ad26591505aa5cf5bbfb181e7e42ea7294142154ef62f073e6bb7b5ac246a866`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPoleExclusion.receipt.json`
+- `IsingBulk.First.MeanPrescribedLemma`: 1 kernel-safe declarations; source SHA-256 `70d68f6573fe499d0ee46ad56243375dc827bcf5b25732d9568369bd98639b7c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPrescribedLemma.receipt.json`
+- `IsingBulk.First.MeanRadialPhase`: 17 kernel-safe declarations; source SHA-256 `370c64e4a50ad8a4aae10a96978405304a555d683d42f9d6095b9b8fc85ee46a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRadialPhase.receipt.json`
+- `IsingBulk.First.MeanRadialTaylor`: 3 kernel-safe declarations; source SHA-256 `72b5013167bcac982510e6aa8b2bcbf613e958bd17e3a9a76bed17cc335c1a7d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRadialTaylor.receipt.json`
+- `IsingBulk.First.MeanRealDomain`: 5 kernel-safe declarations; source SHA-256 `2c23a505eb347e953cbb1de38e04c20939c2585c2c2bacfd539ceab368750618`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRealDomain.receipt.json`
+- `IsingBulk.First.MeanRealPhase`: 6 kernel-safe declarations; source SHA-256 `ceefb601543147ccc8c0d29036f55667dc7d9eecd37730a5549d0ae6d900a4a2`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRealPhase.receipt.json`
+- `IsingBulk.First.MeanRectangle`: 9 kernel-safe declarations; source SHA-256 `4fab5f281b36de64347797529aca5394585f631e98efc43b4b21900007b6e6a0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRectangle.receipt.json`
+- `IsingBulk.First.MeanRectanglePhysical`: 4 kernel-safe declarations; source SHA-256 `69ca0504b1b8402d7319c24614cf0ab23b0de9daa4e038f1db03e61e5d170f75`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRectanglePhysical.receipt.json`
+- `IsingBulk.First.MeanRectangleResidue`: 14 kernel-safe declarations; source SHA-256 `4cf790cc3a8bba83ce0416bf166e37e5546e55e6d7f6899b0beb69dbe636a774`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRectangleResidue.receipt.json`
+- `IsingBulk.First.MeanRegularDerivatives`: 24 kernel-safe declarations; source SHA-256 `65025360872a01266ba672b51cb9fc95f19d282a8d57bd30fbd73080bc1243c0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRegularDerivatives.receipt.json`
+- `IsingBulk.First.MeanRegularError`: 3 kernel-safe declarations; source SHA-256 `a9a2b13ebf35d6f60df62bd914dbb7ef729358e5d10f362a3c57f73ef5815bea`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRegularError.receipt.json`
+- `IsingBulk.First.MeanRegularPhase`: 12 kernel-safe declarations; source SHA-256 `1d74954dea862378b11f4a76693a6a4f49435bf8383aebebb4118fb8be827e5f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRegularPhase.receipt.json`
+- `IsingBulk.First.MeanResidueDomain`: 9 kernel-safe declarations; source SHA-256 `9eba5d80ec7a53aeee65f21103e262c39f7e08640567ba6ed9eb46bf4467041d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanResidueDomain.receipt.json`
+- `IsingBulk.First.MeanRootBridge`: 3 kernel-safe declarations; source SHA-256 `fe1424d19b85b914dff81986619bf5cedeae715b1341956f18475522e6dd390a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRootBridge.receipt.json`
+- `IsingBulk.First.MeanSelectedData`: 10 kernel-safe declarations; source SHA-256 `f16ae96d2b7a3410440ec46a5ee889b5334378d11ec1e245aa919844c261b7fb`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSelectedData.receipt.json`
+- `IsingBulk.First.MeanSeparatedDerivativeBounds`: 12 kernel-safe declarations; source SHA-256 `9187ae4de00e131747f6c6084fb91d75878954cd25fa44db39b6454ac7b6177d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSeparatedDerivativeBounds.receipt.json`
+- `IsingBulk.First.MeanSeparatedIntegral`: 5 kernel-safe declarations; source SHA-256 `ab9d579314344c200ad5c7f024e53fe31a1d3bd70ef3975b05135c2b6769581d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSeparatedIntegral.receipt.json`
+- `IsingBulk.First.MeanShapeContinuity`: 2 kernel-safe declarations; source SHA-256 `7977ac0764145176887d1096427e6d960d8d603af179c53f0c27530e9e5e7c82`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeContinuity.receipt.json`
+- `IsingBulk.First.MeanShapeDensity`: 12 kernel-safe declarations; source SHA-256 `38e7b19f49163857a2045f6fa821eed493a78e57e0d6b781d0250e47e3ace6a6`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeDensity.receipt.json`
+- `IsingBulk.First.MeanShapeGap`: 10 kernel-safe declarations; source SHA-256 `b40c6a1a7aa42e7ce57a9ebd260ee1ec6e24ca30f707381950b0db8311e74556`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeGap.receipt.json`
+- `IsingBulk.First.MeanShapeIntegral`: 2 kernel-safe declarations; source SHA-256 `17823af35e714b60afaf61bab11a9b5a2e8934ce092e2ab4870216ad02f00e50`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeIntegral.receipt.json`
+- `IsingBulk.First.MeanShapePhaseSum`: 2 kernel-safe declarations; source SHA-256 `c006a46133c2fa14b0ee3b22ac8204906096a0e82b46e8da6167c15b621df7ba`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapePhaseSum.receipt.json`
+- `IsingBulk.First.MeanSideBounds`: 1 kernel-safe declarations; source SHA-256 `d7a6099f21a6f3a3eb457594b21804b16e6f8bea09bb59df84713341e3e4a494`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSideBounds.receipt.json`
+- `IsingBulk.First.MeanSideCurves`: 15 kernel-safe declarations; source SHA-256 `1b227b8dd4e16a887f675c6b3a729ac368d80227ce397a0cbd8f402eebe952bd`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSideCurves.receipt.json`
+- `IsingBulk.First.MeanSideIsolation`: 16 kernel-safe declarations; source SHA-256 `92a50ce83bb1aba27c6a5b6d55cbcc1ac5d11d719a6d351e292acf1c196423ae`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSideIsolation.receipt.json`
+- `IsingBulk.First.MeanSmallAnnulus`: 2 kernel-safe declarations; source SHA-256 `e9965e053c129af17e56b51cbd072ff202c5ce14a030eb0e8813c605425dc01a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSmallAnnulus.receipt.json`
+- `IsingBulk.First.MeanSmallRectangle`: 1 kernel-safe declarations; source SHA-256 `65fa94550a54a497a19f1ed3836a07b385056d06d8966d24c994a8cb236e4bd5`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSmallRectangle.receipt.json`
+- `IsingBulk.First.MeanSmoothDecomposition`: 5 kernel-safe declarations; source SHA-256 `2ec7f77f2b7a8f578d1f3bedbe68273bf3b01f472b99bfa8d578a0bfaef962bc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSmoothDecomposition.receipt.json`
+- `IsingBulk.First.MeanSourceIntegral`: 5 kernel-safe declarations; source SHA-256 `dfe2f097f49b15447b3efa2eeedd91c92f457f021919caf262e59e2f64220f9a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSourceIntegral.receipt.json`
+- `IsingBulk.First.MeanUniformConcavity`: 8 kernel-safe declarations; source SHA-256 `e8cc909c7dc7567ef2b9cd5ddbcf50b33c56e71b27727768bd10f901e2393ea7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanUniformConcavity.receipt.json`
+- `IsingBulk.First.MeanUniformRectangle`: 1 kernel-safe declarations; source SHA-256 `db8ea1aaa140b27a66f1a841dae34302273e583e346e396ad4eca3b932fb8ca0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanUniformRectangle.receipt.json`
+- `IsingBulk.First.MeanYResidue`: 17 kernel-safe declarations; source SHA-256 `356888285c6462f256e59fef474eb41e931064e0845dfc08df9692909a37ee51`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanYResidue.receipt.json`
+- `IsingBulk.First.MixedDoubleContour`: 5 kernel-safe declarations; source SHA-256 `87cadf9cb437d3db6b843a649097d7fb2ff608ca7d415f8f7d1cb614b0bc83dc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MixedDoubleContour.receipt.json`
+- `IsingBulk.First.MixedOnsiteContour`: 5 kernel-safe declarations; source SHA-256 `c8ecf6de8365dbbd708f9ee163d623d797aa6f096fb56264e5e7dd453a361811`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MixedOnsiteContour.receipt.json`
+- `IsingBulk.First.MixedRadiusDamping`: 5 kernel-safe declarations; source SHA-256 `b7ea0ce4c2782e11161c647ea2190f866f60982fbd11e3632a61edde792a875b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MixedRadiusDamping.receipt.json`
+- `IsingBulk.First.NearInfinityBulkSeries`: 12 kernel-safe declarations; source SHA-256 `624749341a263beb0c8bcf4bb63c6a85d3a8ee47bba30bc4036350d67bf6f0cc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NearInfinityBulkSeries.receipt.json`
+- `IsingBulk.First.NormalizationDerivatives`: 3 kernel-safe declarations; source SHA-256 `c33ea6a8aeab97d15adc42cd2d818df34f03ed833fa0c1ad46d2d8ebe7c4ee9e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizationDerivatives.receipt.json`
+- `IsingBulk.First.NormalizationIntegral`: 3 kernel-safe declarations; source SHA-256 `10778fee2cf53208ad9c11da597efd639ecd9ea6f506764ee644349cb527a564`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizationIntegral.receipt.json`
+- `IsingBulk.First.NormalizationRegularity`: 2 kernel-safe declarations; source SHA-256 `ed9712390da3dc89c29ec87a253dcc0b9e018d4cf722bf8f62c7efae86a8bf5b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizationRegularity.receipt.json`
+- `IsingBulk.First.NormalizedContour`: 16 kernel-safe declarations; source SHA-256 `4b6c70284395649631c491ebfe3fe6773f2d5ce40987132f56116d28dc61d606`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizedContour.receipt.json`
+- `IsingBulk.First.OnsiteActiveChart`: 1 kernel-safe declarations; source SHA-256 `efb34049db4a96dfdccebd8353ecb3ed881eff075c2cfe33ab17ec979f8b1710`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteActiveChart.receipt.json`
+- `IsingBulk.First.OnsiteAmplitudeSupport`: 2 kernel-safe declarations; source SHA-256 `d76696f5b0a115528d51e18358d0d561dcb82d179e25667691736e0dac20885e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAmplitudeSupport.receipt.json`
+- `IsingBulk.First.OnsiteAuxiliaryDomination`: 3 kernel-safe declarations; source SHA-256 `3e97c7e7c60b63e0a68df441284de256b2565c4a2a5364e28351cfe29e874c83`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryDomination.receipt.json`
+- `IsingBulk.First.OnsiteAuxiliaryInterchange`: 5 kernel-safe declarations; source SHA-256 `9649671a3bdae2a9d59070cb0c754aa51431a46b92f906dc6332899c25442351`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryInterchange.receipt.json`
+- `IsingBulk.First.OnsiteAuxiliaryJets`: 6 kernel-safe declarations; source SHA-256 `91697818c130b35605428d86af8ec4d4346360936bada54c301b14c7c8733b5d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryJets.receipt.json`
+- `IsingBulk.First.OnsiteAuxiliaryRegularity`: 5 kernel-safe declarations; source SHA-256 `9a667119f317051023b2111318a784c1e81151531e0bd1cddc7e83ecee79807c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryRegularity.receipt.json`
+- `IsingBulk.First.OnsiteAuxiliaryTailBound`: 3 kernel-safe declarations; source SHA-256 `7ac6688cf9d0e6892f08667337e5ac9bee589bbf1e1867e456ab739ea86c8427`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryTailBound.receipt.json`
+- `IsingBulk.First.OnsiteFactorization`: 24 kernel-safe declarations; source SHA-256 `fd56429e68661d9f9e20a4ed6f19142841845aad40012374ca2fe7217b05e528`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteFactorization.receipt.json`
+- `IsingBulk.First.OnsiteFiniteRefinement`: 2 kernel-safe declarations; source SHA-256 `8f2281616d2052bfb83d6198708101e1a64d4b4a856183a0c746c94e07872493`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteFiniteRefinement.receipt.json`
+- `IsingBulk.First.OnsiteFiniteSum`: 4 kernel-safe declarations; source SHA-256 `878dcafcebb1e0c1ddd3524356560828c479b4ac1a867dfcc0b9e7cfce94111d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteFiniteSum.receipt.json`
+- `IsingBulk.First.OnsiteGlobalBound`: 1 kernel-safe declarations; source SHA-256 `5239657b18e044b2a7bc3b2c2faeb72cced86b6539a9d77ba4e88899bdffd069`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteGlobalBound.receipt.json`
+- `IsingBulk.First.OnsiteInactiveNeighborhood`: 3 kernel-safe declarations; source SHA-256 `47e9f7da69b5e5f2d5c0142859809721dfcfb1b2072e8d6a306445a51ab978b1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteInactiveNeighborhood.receipt.json`
+- `IsingBulk.First.OnsiteLocalBound`: 2 kernel-safe declarations; source SHA-256 `a8deb0a5e1f71c6168b596e03ca168aac2af7bef41ba1ba5c2459a8b9cb73bf9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteLocalBound.receipt.json`
+- `IsingBulk.First.OnsiteLocalFormFactor`: 1 kernel-safe declarations; source SHA-256 `1941de76a4fc17da93fbd27bc79d0b84a5174f3d4fd83fecc58695ea33d6175b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteLocalFormFactor.receipt.json`
+- `IsingBulk.First.OnsiteLocalizationAlgebra`: 1 kernel-safe declarations; source SHA-256 `c330123f8e1a8ee3fa4b62d86b2e0128cd637539710c9a860a6237df03e53eb9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteLocalizationAlgebra.receipt.json`
+- `IsingBulk.First.OnsiteNormalizedJets`: 4 kernel-safe declarations; source SHA-256 `e39aa97bf1ec0c573ada1272eb6a1aed42c4380318ec4c679d336f4b4a2cb7f4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteNormalizedJets.receipt.json`
+- `IsingBulk.First.OnsitePeriodicLift`: 5 kernel-safe declarations; source SHA-256 `e2a380070d871ef1b857a3c2a67bca24329a8f5e20782f87a618f9b85e585ebe`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsitePeriodicLift.receipt.json`
+- `IsingBulk.First.OnsiteRadialChartDecay`: 1 kernel-safe declarations; source SHA-256 `0ba2b7ac092f532a5bee5bed9f751ebccdcf653de394824a654e6ad71c3e2a3f`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRadialChartDecay.receipt.json`
+- `IsingBulk.First.OnsiteRadialRegularChart`: 1 kernel-safe declarations; source SHA-256 `5baa9bc1c3d01540f30ee552c49c3bb9e55ec54b6b2b480bb1026d85f88eb355`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRadialRegularChart.receipt.json`
+- `IsingBulk.First.OnsiteRadiusIndependence`: 5 kernel-safe declarations; source SHA-256 `2b7dd395af3ba634ff6200b356bcf7a20b6911d50ee43a242170d3106a991a72`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRadiusIndependence.receipt.json`
+- `IsingBulk.First.OnsiteRegularity`: 5 kernel-safe declarations; source SHA-256 `ba8938aa22dbf809617a9deb89418ca84ace636fb13f5459cbdb3c12afdd14c9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRegularity.receipt.json`
+- `IsingBulk.First.OnsiteSeparation`: 1 kernel-safe declarations; source SHA-256 `7e658ffc933752955db5cbef1f3e264a0041505fe88d07f61d8e4f7c791fa949`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteSeparation.receipt.json`
+- `IsingBulk.First.OnsiteSmallAuxiliary`: 3 kernel-safe declarations; source SHA-256 `cc7f89986bf6b60968d19ba5ee00d90d77c58de1f5d00b89e47288579aecd6db`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteSmallAuxiliary.receipt.json`
+- `IsingBulk.First.OnsiteUniform`: 3 kernel-safe declarations; source SHA-256 `2401f8c2e0f85fa6a8f1c65434a878b8b32f811d52cbb74479f16a43bcbb3d89`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteUniform.receipt.json`
+- `IsingBulk.First.PeriodicAngularChart`: 19 kernel-safe declarations; source SHA-256 `34134e6d81ee08784aa6a64e3d45c64cca4b947cc48ed4362441caac7d54516c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicAngularChart.receipt.json`
+- `IsingBulk.First.PeriodicBoxIntegral`: 6 kernel-safe declarations; source SHA-256 `c39743fd57f49741b1db139106bc28e176e17943364d967545313b75dc3de61b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicBoxIntegral.receipt.json`
+- `IsingBulk.First.PeriodicBump`: 11 kernel-safe declarations; source SHA-256 `5d55ffa796f97dab5f72677e7564659e4ab8427570bad50b640eb1e43f19b68c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicBump.receipt.json`
+- `IsingBulk.First.PeriodicLiftIntegral`: 2 kernel-safe declarations; source SHA-256 `37cdd7eec5c5d419397b96d982c90a0e2ae22ec91b6df6ea1f29c53e7725045b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicLiftIntegral.receipt.json`
+- `IsingBulk.First.PeriodicWrapInvariant`: 5 kernel-safe declarations; source SHA-256 `50acd3cd47a4e7cef2c5126b55b5316ce4fa3cc480110e847221c8a69b6b51dc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicWrapInvariant.receipt.json`
+- `IsingBulk.First.PeriodicYCutoff`: 12 kernel-safe declarations; source SHA-256 `724369af769a1b75ecfbc68df0a510edeeb4e014465db080c448b43d75475e42`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicYCutoff.receipt.json`
+- `IsingBulk.First.PeriodicYPartition`: 7 kernel-safe declarations; source SHA-256 `0dfb4d8b1bd556cc865765d339c2bc58020fff97aeea3af17b5feb11938287c5`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicYPartition.receipt.json`
+- `IsingBulk.First.PeriodicYSupport`: 7 kernel-safe declarations; source SHA-256 `3455876c00a8f68c88875ad6448a80b5410bd3ba27ba12a8c9ce55072caa95a8`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicYSupport.receipt.json`
+- `IsingBulk.First.PhysicalMeanResidue`: 1 kernel-safe declarations; source SHA-256 `c15f650082b359b843f83d8d4e5d00084823fe66121705e4fe650e4fa20273c2`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PhysicalMeanResidue.receipt.json`
+- `IsingBulk.First.PoleDifferentiation`: 31 kernel-safe declarations; source SHA-256 `7fc11ca84e24460c631d389da929efa7c95918b79b49d06c1a2d1e50665cd7e2`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PoleDifferentiation.receipt.json`
+- `IsingBulk.First.PublishedFixedOrder`: 4 kernel-safe declarations; source SHA-256 `a3a27b64bd5287a27f9731522be88416802826fe20f07db18b524b9bb8c66493`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PublishedFixedOrder.receipt.json`
+- `IsingBulk.First.QuarterContourBound`: 1 kernel-safe declarations; source SHA-256 `ada768b7f433dd3ee0f61aa1281530c1dd818780a1488198d39802ec3f4c8a4e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/QuarterContourBound.receipt.json`
+- `IsingBulk.First.RadialAdmissibility`: 9 kernel-safe declarations; source SHA-256 `0c4cffa0bfb8a5a1685e923ffa209922c8cbfcaf0f4a5571c65154838882ce28`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadialAdmissibility.receipt.json`
+- `IsingBulk.First.RadialDiskAdmissibility`: 2 kernel-safe declarations; source SHA-256 `dc06ee5dbbac9001bbacc965e3c60accbf419853a265a20b01184c60e1b97627`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadialDiskAdmissibility.receipt.json`
+- `IsingBulk.First.RadialFirstRepresentation`: 1 kernel-safe declarations; source SHA-256 `6ebb1a92840eb89007218de57391cc1802986c79287a0ac753063365defcc4af`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadialFirstRepresentation.receipt.json`
+- `IsingBulk.First.RadiusIndependence`: 11 kernel-safe declarations; source SHA-256 `ff22c7401ef21050c7a18121cccdd88fc136f1cfa76d165050e88479d66f4546`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadiusIndependence.receipt.json`
+- `IsingBulk.First.RealFredholmIdentification`: 5 kernel-safe declarations; source SHA-256 `65445c241ad06446e59d721157d0f32fd90eaf6efd4eb37f788b9aeb60fb8ce7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RealFredholmIdentification.receipt.json`
+- `IsingBulk.First.ReducedLocalization`: 4 kernel-safe declarations; source SHA-256 `0ab8a559380a3e14587b3c8f0cf8d9541c48b40e222e53a2b0ee6c9af6c288d9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ReducedLocalization.receipt.json`
+- `IsingBulk.First.ResidueAdmissibility`: 14 kernel-safe declarations; source SHA-256 `f87cdcdb0634cc5158db7c3cba2930307c2e743c2241a41cc2d9eebf4bc8e72e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueAdmissibility.receipt.json`
+- `IsingBulk.First.ResidueAlgebra`: 16 kernel-safe declarations; source SHA-256 `fc0233ed82e7d082dc2fe40d564c519078246ec6253a579d20332e7b8f70244e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueAlgebra.receipt.json`
+- `IsingBulk.First.ResidueBounds`: 6 kernel-safe declarations; source SHA-256 `248e3beab2b037b33bff41e4ea0480dac51e84d660628d60c7fe7988bf12f126`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueBounds.receipt.json`
+- `IsingBulk.First.ResidueBranch`: 6 kernel-safe declarations; source SHA-256 `fcdf9ae9bca18c92a06cca704e3cc3151119783e4d30f787a85cf8b3d9f29fcc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueBranch.receipt.json`
+- `IsingBulk.First.ResidueCancellation`: 14 kernel-safe declarations; source SHA-256 `d2ef7d0f6dbf9ea9a2c1816ad8d3de4e23fe7916e3ff74fde0021c069e287a73`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueCancellation.receipt.json`
+- `IsingBulk.First.ResidueEndpoint`: 2 kernel-safe declarations; source SHA-256 `92384ae591edbf617b3fe97c2f1bcb997550d029f3e4a03467a632c39c4464d2`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueEndpoint.receipt.json`
+- `IsingBulk.First.ResidueIntegral`: 6 kernel-safe declarations; source SHA-256 `c8529d4dbf623c4f37b0794b891a064ee45eec32f3f95d172a1ed23b03907981`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueIntegral.receipt.json`
+- `IsingBulk.First.ResidueRegularity`: 8 kernel-safe declarations; source SHA-256 `ed95d4c786a7fbb5c773ec13d40e7971dce95c7d36d4d6879a515506489a3660`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueRegularity.receipt.json`
+- `IsingBulk.First.ResolventParameterIntegral`: 7 kernel-safe declarations; source SHA-256 `47197df737f3919035ef2c7d10c5cb793cb63ff98801a3a247c27145eac07cef`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResolventParameterIntegral.receipt.json`
+- `IsingBulk.First.ScalarBeta`: 26 kernel-safe declarations; source SHA-256 `893e8860d4f9d1c474fb0c6e1dcf8870170c3049c81d35e5ad11d85fa6860340`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ScalarBeta.receipt.json`
+- `IsingBulk.First.SelectedComplementBound`: 5 kernel-safe declarations; source SHA-256 `20ebec93dea17461e4ec2d79e7e899f2ada3c0c57278b5f8edd1b960dfa7537d`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedComplementBound.receipt.json`
+- `IsingBulk.First.SelectedLocalPair`: 3 kernel-safe declarations; source SHA-256 `357daf6d0a82bec49f15391e1f53d889cc832ebfa05b51a4731c67aae55b327a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedLocalPair.receipt.json`
+- `IsingBulk.First.SelectedPhysicalMean`: 2 kernel-safe declarations; source SHA-256 `b5ae2e4b24cdfb81c3efd1fe8532f4e43015e57458f892c10597fd69148e6851`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedPhysicalMean.receipt.json`
+- `IsingBulk.First.SelectedYCutoffs`: 6 kernel-safe declarations; source SHA-256 `ac824a5f2193834e4c1b2f6b1b9ee0eb10c9413222ab8ab690c3e02695050eb1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedYCutoffs.receipt.json`
+- `IsingBulk.First.ShapeArithmetic`: 5 kernel-safe declarations; source SHA-256 `e6828474b902efb72c7e2d129041ab6c8f762f180f9484f7303213dfde332afb`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeArithmetic.receipt.json`
+- `IsingBulk.First.ShapeCutoffBounds`: 5 kernel-safe declarations; source SHA-256 `b080a14a58e4e366afe9510d23eff1339925660bc9ea3a34d7cbc66a95c86e3b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeCutoffBounds.receipt.json`
+- `IsingBulk.First.ShapeCutoffLift`: 12 kernel-safe declarations; source SHA-256 `a5a6d7692c034320c9e8d98a56cc2562058686628f1128624af0a35261014e9e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeCutoffLift.receipt.json`
+- `IsingBulk.First.ShapeCutoffLimit`: 2 kernel-safe declarations; source SHA-256 `faf70c874491ce5c1698dacb4a332f69400a50052fc9b3222e41998f8f4a4671`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeCutoffLimit.receipt.json`
+- `IsingBulk.First.ShapeDominatedLimit`: 5 kernel-safe declarations; source SHA-256 `6059f47044330d5082e55c8f361d49356501504e63e628685a981df8074436ca`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeDominatedLimit.receipt.json`
+- `IsingBulk.First.ShapeGeometry`: 25 kernel-safe declarations; source SHA-256 `cc81c29a31c16bc85bac9e0accf81b53bc7fa665075899c596a72b861366cb24`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeGeometry.receipt.json`
+- `IsingBulk.First.ShapeIntegrability`: 4 kernel-safe declarations; source SHA-256 `28b009661efecb0f036f9c4fcf735dd195cbb36b5fdc7e1f0476c155dcacb188`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeIntegrability.receipt.json`
+- `IsingBulk.First.ShapeLimitTransfer`: 11 kernel-safe declarations; source SHA-256 `d1e6ca7421bdd24ec492e0c1c9f991ca8d2756d30230a4ef87f7b4134a59d054`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeLimitTransfer.receipt.json`
+- `IsingBulk.First.ShapeLowerOrderBounds`: 4 kernel-safe declarations; source SHA-256 `b23c4f6f15415896c4e2194ebb7938ff814dbf894550751256c2480b2eedd90e`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeLowerOrderBounds.receipt.json`
+- `IsingBulk.First.ShapeLowerOrders`: 3 kernel-safe declarations; source SHA-256 `1384e080087ab0914a7f8ba068faa3ef983bf8804ce3ced57c120e2e11c51bcb`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeLowerOrders.receipt.json`
+- `IsingBulk.First.ShapeMeasure`: 4 kernel-safe declarations; source SHA-256 `b1707f719698a20a3ca5ed59c0b14eca9c295f3949157d7147307992300cf0fd`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeMeasure.receipt.json`
+- `IsingBulk.First.ShapePeriodTheorem`: 7 kernel-safe declarations; source SHA-256 `8375fb1dc825f646420c861e1e4b386b9b88e224416944ddea6f1d41baa26813`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapePeriodTheorem.receipt.json`
+- `IsingBulk.First.ShapePolar`: 14 kernel-safe declarations; source SHA-256 `31c1f5ac5f20c5e6c4014fa492ee0a853cfcb6ac98ee5a90fc57df425db82093`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapePolar.receipt.json`
+- `IsingBulk.First.ShapeRadialAnalytic`: 7 kernel-safe declarations; source SHA-256 `60a1e5be1aefbd17e498596e317005abea19ac2b60277f539636fce5c1772d68`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialAnalytic.receipt.json`
+- `IsingBulk.First.ShapeRadialBounds`: 14 kernel-safe declarations; source SHA-256 `73c6b20f88e35d37b57245fc899df429a5323a6ee8d24963455e62141e3545a3`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialBounds.receipt.json`
+- `IsingBulk.First.ShapeRadialContinuation`: 2 kernel-safe declarations; source SHA-256 `d47da701cac87412c76df87735651ecb90724192b364aeb070a24b11bb896b59`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialContinuation.receipt.json`
+- `IsingBulk.First.ShapeRadialLimit`: 2 kernel-safe declarations; source SHA-256 `6eff111277741e01820fce811c1ac90dc863fa099b81b8fa745c6d1dfcb7c103`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialLimit.receipt.json`
+- `IsingBulk.First.ShapeRadialValue`: 11 kernel-safe declarations; source SHA-256 `a574c0ee9c8c18e7703ecc552db4cf1531c595be22f5f100320e955dfa25d4c4`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialValue.receipt.json`
+- `IsingBulk.First.ShapeRescaling`: 8 kernel-safe declarations; source SHA-256 `c3ffdc910809f36eb4fcb9d46e596276ec0b628a85331aa7bf2456c53e8da7dc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRescaling.receipt.json`
+- `IsingBulk.First.ShapeScaledDenominator`: 24 kernel-safe declarations; source SHA-256 `3814330b96f249ea014a8faa7425a097473b4f845404c4b25798528599c752c0`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeScaledDenominator.receipt.json`
+- `IsingBulk.First.ShapeScaledPhase`: 26 kernel-safe declarations; source SHA-256 `2e8cb87e15b4178ab71953c98cd2c991b2bf34e6bf6b7986f8e9fee4e527386c`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeScaledPhase.receipt.json`
+- `IsingBulk.First.ShapeSource`: 8 kernel-safe declarations; source SHA-256 `75fcf0f15d8a81c73740b85e00ad34368acd5fe63e92e48cc8cd3209529e1d2a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeSource.receipt.json`
+- `IsingBulk.First.ShapeSphere`: 9 kernel-safe declarations; source SHA-256 `b1edd7a445c7f7d5d9b4de7845c916c82ff4f88f066efdec8d6f92222dce0c16`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeSphere.receipt.json`
+- `IsingBulk.First.ShapeVandermonde`: 27 kernel-safe declarations; source SHA-256 `2215baf472c4ddd9787edcbd42abcdc226f6a7bb9e4870e94bcb245b0d44f2a9`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeVandermonde.receipt.json`
+- `IsingBulk.First.SmallRadiusDensityBounds`: 8 kernel-safe declarations; source SHA-256 `29a9752870885a471ae9a963d0815e74c75c6dc9c837e4e580d7ff63e4fa8fff`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SmallRadiusDensityBounds.receipt.json`
+- `IsingBulk.First.SmoothCutoffConstruction`: 5 kernel-safe declarations; source SHA-256 `396380d181cc3263b657e817e82bc855fe8b703c05171310a07102136c38e0b7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SmoothCutoffConstruction.receipt.json`
+- `IsingBulk.First.SourceAngularPeriodicity`: 10 kernel-safe declarations; source SHA-256 `27d702dd80ea1251bb9e1f2e25285631585385f05a99af654defb4749b5be5cc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAngularPeriodicity.receipt.json`
+- `IsingBulk.First.SourceAsymptoticAttachment`: 4 kernel-safe declarations; source SHA-256 `e53461d6182d6c3a492f1d148ecd0edca123ef87bf97e79e88d17d614f989f01`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAsymptoticAttachment.receipt.json`
+- `IsingBulk.First.SourceAuxiliaryDomination`: 4 kernel-safe declarations; source SHA-256 `b1ac254fcba9d5ba364d279e9a68369d2bc7d0aa1ecfffb603747cd7cbc02ef5`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryDomination.receipt.json`
+- `IsingBulk.First.SourceAuxiliaryInterchange`: 3 kernel-safe declarations; source SHA-256 `3cad7edda4b4ff711b1b6fdbcf2fcdd5981f7dca5d4e9149d2c636e02ec7a403`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryInterchange.receipt.json`
+- `IsingBulk.First.SourceAuxiliaryJets`: 1 kernel-safe declarations; source SHA-256 `98c70c67d9ea60839d958ca00df5feb7282660780293024b2d18c45567d75283`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryJets.receipt.json`
+- `IsingBulk.First.SourceAuxiliaryRegularity`: 8 kernel-safe declarations; source SHA-256 `336450512e9db09dd1362472b94c386f49745e8b399ab3624ed800f194ec71c5`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryRegularity.receipt.json`
+- `IsingBulk.First.SourceLowerAttachment`: 1 kernel-safe declarations; source SHA-256 `e0936faa0207e5f1a3419dae5f0a3704d1945fe4fdc79a8739585fd3eb909c0b`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceLowerAttachment.receipt.json`
+- `IsingBulk.First.SourceParameterBounds`: 10 kernel-safe declarations; source SHA-256 `aa161ff9cd18a35f73c609889bbaa839f1ac44d302e20226de0015998248a571`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceParameterBounds.receipt.json`
+- `IsingBulk.First.SwappedChartCoefficient`: 39 kernel-safe declarations; source SHA-256 `6dbd8378c8d94e15a7cb64c046d1e5a0d1dbcc3acbbd00442a9f5471db16db75`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SwappedChartCoefficient.receipt.json`
+- `IsingBulk.First.SwappedPeriodScaling`: 8 kernel-safe declarations; source SHA-256 `8262ca16f9b704a2a7b613ee93a366339a2423f95215b7edca1c8560623b06ec`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SwappedPeriodScaling.receipt.json`
+- `IsingBulk.First.SymmetryAlgebra`: 18 kernel-safe declarations; source SHA-256 `873b8adfc0b67adc8ed318692b3d981a9a489ffe89f2964381cc816a0dc00ad1`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SymmetryAlgebra.receipt.json`
+- `IsingBulk.First.SymmetryEndpoint`: 3 kernel-safe declarations; source SHA-256 `90cdcd8b6c6690bd7e1f882229914c52a3603414b095c5605819aac4e55907c7`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SymmetryEndpoint.receipt.json`
+- `IsingBulk.First.SymmetryIntegral`: 7 kernel-safe declarations; source SHA-256 `8b66a1b56f60b36c78b6283f0d1ddb73f588d7811296704d07de71eb622f85cc`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SymmetryIntegral.receipt.json`
+- `IsingBulk.First.VariableContour`: 10 kernel-safe declarations; source SHA-256 `8b159dbfb7fa755f72a5018be8f0c7c534c7c3da773fd0bbab215c1f869950ab`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/VariableContour.receipt.json`
+- `IsingBulk.First.WeightedResidue`: 24 kernel-safe declarations; source SHA-256 `15731b7ae2cb3be967baf3d36ac640e6c9b9bd0aa7015a51a56f2b484329601a`; `../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/WeightedResidue.receipt.json`
+## lem:period — CANDIDATE_CLOSED
+
+SOURCE ENDPOINT: manuscript lines 541–567; constrained shape period and its nonzero beta expression
+
+LEAN ENDPOINT: IsingBulk.First.lemma_period; IsingBulk.First.shapeRadialIntegral_positive_beta; IsingBulk.First.localLeadingCoefficient_ne_zero
+
+DEPENDENCIES: Pinned mathlib improper integrals, beta/Gamma identities, analytic identity principle, finite-dimensional polar integration and dominated convergence. Only source dimension/evenness and positive Q,d are hypotheses.
+
+COMPLETED OBLIGATIONS: The literal constrained coordinate integral is absolutely convergent, equals the displayed beta formula and is nonzero. The actual zero-sum hyperplane, Euclidean measure/Jacobian 1/√N, Vandermonde degree, positive angular constant and precise source radial exponent are proved. A genuine real-positive scalar integral evaluation, complex half-plane analytic continuation and boundary dominated limit with explicit integrable majorant yield the principal-branch value, with every factor nonzero.
+
+REMAINING OBLIGATIONS: No internal source obligation remains. Independent external audit remains; later manuscript stages are outside this pilot.
+
+ROUTES TRIED: Concrete Gram/norm-determinant calculation, actual polar factorization, integration-by-parts beta recurrence and positive rescaling, holomorphy under a fixed local majorant, identity theorem and boundary DCT.
+
+SMALLEST BLOCKER: None for CANDIDATE_CLOSED; independent external audit is required before any AUDITED_CLOSED designation.
+
+UNTRIED ACTIONABLE AUDIT STEP: Independent external audit of the exact final source/receipt/source-correspondence/kill bundle. No further FIRST implementation or TAIL work is authorized by this completion.
+
+FILES: IsingBulk/First/AnalyticQuadraticLimit.lean; IsingBulk/First/CoefficientPhase.lean; IsingBulk/First/CompactAnalyticShapeIntegral.lean; IsingBulk/First/FirstCoefficient.lean; IsingBulk/First/JointPoleRegularity.lean; IsingBulk/First/MeanErrorShapeContinuity.lean; IsingBulk/First/MeanErrorShapeIntegral.lean; IsingBulk/First/MeanErrorShapeLimit.lean; IsingBulk/First/MeanErrorShapeRegularity.lean; IsingBulk/First/MeanShapeContinuity.lean; IsingBulk/First/MeanShapeIntegral.lean; IsingBulk/First/PoleDifferentiation.lean; IsingBulk/First/ScalarBeta.lean; IsingBulk/First/ShapeArithmetic.lean; IsingBulk/First/ShapeCutoffBounds.lean; IsingBulk/First/ShapeCutoffLift.lean; IsingBulk/First/ShapeCutoffLimit.lean; IsingBulk/First/ShapeDominatedLimit.lean; IsingBulk/First/ShapeGeometry.lean; IsingBulk/First/ShapeIntegrability.lean; IsingBulk/First/ShapeLimitTransfer.lean; IsingBulk/First/ShapeLowerOrderBounds.lean; IsingBulk/First/ShapeLowerOrders.lean; IsingBulk/First/ShapeMeasure.lean; IsingBulk/First/ShapePeriodTheorem.lean; IsingBulk/First/ShapePolar.lean; IsingBulk/First/ShapeRadialAnalytic.lean; IsingBulk/First/ShapeRadialBounds.lean; IsingBulk/First/ShapeRadialContinuation.lean; IsingBulk/First/ShapeRadialLimit.lean; IsingBulk/First/ShapeRadialValue.lean; IsingBulk/First/ShapeRescaling.lean; IsingBulk/First/ShapeScaledDenominator.lean; IsingBulk/First/ShapeScaledPhase.lean; IsingBulk/First/ShapeSource.lean; IsingBulk/First/ShapeSphere.lean; IsingBulk/First/ShapeVandermonde.lean
+
+BUILD STATUS: canonical-equivalent clean PASS for the held snapshot environment/final_six_node_clean_20261003T1615Z. ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnalyticQuadraticLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CoefficientPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactAnalyticShapeIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FirstCoefficient.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/JointPoleRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeContinuity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanErrorShapeRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeContinuity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PoleDifferentiation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ScalarBeta.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeArithmetic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeCutoffBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeCutoffLift.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeCutoffLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeDominatedLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeGeometry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeIntegrability.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeLimitTransfer.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeLowerOrderBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeLowerOrders.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeMeasure.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapePeriodTheorem.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapePolar.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialContinuation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRadialValue.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeRescaling.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeScaledDenominator.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeScaledPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeSource.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeSphere.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ShapeVandermonde.receipt.json
+
+AXIOMS: verified reachable union no larger than propext, Classical.choice, Quot.sound. No new global mathematical axiom.
+
+EXTERNAL THEOREM INPUTS: NONE.
+
+SOURCE CORRESPONDENCE: For N=n+1 and k=N²/2−1 the actual radial exponent is N²−2=2k and beta argument a0=(N²−1)/2=k+1/2. The positive-real evaluation is source-equivalently proved by an integration-by-parts recurrence with actual zero endpoint terms, rather than claiming the printed substitution was implemented. The same principal complex power branch continues to −id. Angular measure is the Euclidean polar surface measure with coordinate Jacobian incorporated. See FIRST_PERIOD_SOURCE_AUDIT.md and independent residue-lane period review.
+
+## lem:residue — CANDIDATE_CLOSED
+
+SOURCE ENDPOINT: manuscript lines 259–296: actual normalized double-contour integral equals the reduced N-contour integral, including the complete pair identity
+
+LEAN ENDPOINT: IsingBulk.First.lemma_residue; IsingBulk.First.radial_disk_globalRoot_admissible
+
+DEPENDENCIES: Pinned mathlib contour/Cauchy, finite-dimensional integration and algebra; genuine source quadratic root and strict enclosed-root radius hypotheses. Global radial admissibility is proved separately.
+
+COMPLETED OBLIGATIONS: Actual normalized double-contour residue reduction, the complete canceled pair identity, the same arbitrary fixed continuous y-weight reduction, and absolute/stage integrability are proved from precisely the source enclosed-root/radius hypotheses. Apparent zero poles, every remaining rational denominator and successive Cauchy legality are discharged. The actual global radial root, branch identity and uniform complex-disk admissibility are constructed. Subsequent radius-locality and source-attachment bridges are proved.
+
+REMAINING OBLIGATIONS: No internal source obligation remains. Independent external audit remains; later manuscript stages are outside this pilot.
+
+ROUTES TRIED: Complete rational cancellation, genuine finite normalized Cauchy iteration, explicit domain exclusion and actual absolute/stage integrability; continued interior-root construction and mixed-annulus deformation.
+
+SMALLEST BLOCKER: None for CANDIDATE_CLOSED; independent external audit is required before any AUDITED_CLOSED designation.
+
+UNTRIED ACTIONABLE AUDIT STEP: Independent external audit of the exact final source/receipt/source-correspondence/kill bundle. No further FIRST implementation or TAIL work is authorized by this completion.
+
+FILES: IsingBulk/First/AngularCoordinateSplit.lean; IsingBulk/First/AngularFubini.lean; IsingBulk/First/AngularResolvent.lean; IsingBulk/First/AnnularDensity.lean; IsingBulk/First/AnnularOnsiteDensity.lean; IsingBulk/First/AnnulusContour.lean; IsingBulk/First/AnnulusProduct.lean; IsingBulk/First/AuxiliaryDomination.lean; IsingBulk/First/CompactIntegralHolomorphic.lean; IsingBulk/First/CompactJetIntegral.lean; IsingBulk/First/CompactParameterContinuity.lean; IsingBulk/First/CompactParameterIntegral.lean; IsingBulk/First/ContourAngular.lean; IsingBulk/First/ContourDefinitions.lean; IsingBulk/First/ContourIntegrability.lean; IsingBulk/First/DominatedAnalyticIntegral.lean; IsingBulk/First/DoubleContourFubini.lean; IsingBulk/First/DoublePeriodicIntegral.lean; IsingBulk/First/DoublePeriodicLiftIntegral.lean; IsingBulk/First/FixedRadiusAnalytic.lean; IsingBulk/First/FormFactorAnalytic.lean; IsingBulk/First/FormFactorNormalization.lean; IsingBulk/First/GlobalResidueRoot.lean; IsingBulk/First/GlobalRootChartBridge.lean; IsingBulk/First/InteriorRoot.lean; IsingBulk/First/LiftedSourceIntegrability.lean; IsingBulk/First/LocalizedAnalytic.lean; IsingBulk/First/LocalizedDouble.lean; IsingBulk/First/LocalizedPartition.lean; IsingBulk/First/MixedDoubleContour.lean; IsingBulk/First/MixedOnsiteContour.lean; IsingBulk/First/MixedRadiusDamping.lean; IsingBulk/First/NormalizationDerivatives.lean; IsingBulk/First/NormalizationIntegral.lean; IsingBulk/First/NormalizationRegularity.lean; IsingBulk/First/NormalizedContour.lean; IsingBulk/First/PeriodicBoxIntegral.lean; IsingBulk/First/PeriodicBump.lean; IsingBulk/First/PeriodicLiftIntegral.lean; IsingBulk/First/RadialAdmissibility.lean; IsingBulk/First/RadialDiskAdmissibility.lean; IsingBulk/First/RadialFirstRepresentation.lean; IsingBulk/First/RadiusIndependence.lean; IsingBulk/First/ReducedLocalization.lean; IsingBulk/First/ResidueAdmissibility.lean; IsingBulk/First/ResidueAlgebra.lean; IsingBulk/First/ResidueBounds.lean; IsingBulk/First/ResidueBranch.lean; IsingBulk/First/ResidueCancellation.lean; IsingBulk/First/ResidueEndpoint.lean; IsingBulk/First/ResidueIntegral.lean; IsingBulk/First/ResidueRegularity.lean; IsingBulk/First/ResolventParameterIntegral.lean; IsingBulk/First/SourceAngularPeriodicity.lean; IsingBulk/First/SourceAuxiliaryDomination.lean; IsingBulk/First/SourceAuxiliaryInterchange.lean; IsingBulk/First/SourceAuxiliaryJets.lean; IsingBulk/First/SourceAuxiliaryRegularity.lean; IsingBulk/First/SourceParameterBounds.lean; IsingBulk/First/VariableContour.lean; IsingBulk/First/WeightedResidue.lean
+
+BUILD STATUS: canonical-equivalent clean PASS for the held snapshot environment/final_six_node_clean_20261003T1615Z. ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularCoordinateSplit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularFubini.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularResolvent.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnularDensity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnularOnsiteDensity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnulusContour.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AnnulusProduct.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AuxiliaryDomination.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactIntegralHolomorphic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactJetIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactParameterContinuity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompactParameterIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourAngular.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourDefinitions.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourIntegrability.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DominatedAnalyticIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoubleContourFubini.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoublePeriodicIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoublePeriodicLiftIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FixedRadiusAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FormFactorAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FormFactorNormalization.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/GlobalResidueRoot.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/GlobalRootChartBridge.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/InteriorRoot.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LiftedSourceIntegrability.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LocalizedAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LocalizedDouble.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LocalizedPartition.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MixedDoubleContour.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MixedOnsiteContour.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MixedRadiusDamping.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizationDerivatives.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizationIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizationRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NormalizedContour.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicBoxIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicBump.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicLiftIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadialAdmissibility.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadialDiskAdmissibility.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadialFirstRepresentation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RadiusIndependence.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ReducedLocalization.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueAdmissibility.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueAlgebra.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueBranch.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueCancellation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueEndpoint.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResidueRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ResolventParameterIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAngularPeriodicity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryDomination.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryInterchange.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAuxiliaryRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceParameterBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/VariableContour.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/WeightedResidue.receipt.json
+
+AXIOMS: verified reachable union no larger than propext, Classical.choice, Quot.sound. No new global mathematical axiom.
+
+EXTERNAL THEOREM INPUTS: NONE.
+
+SOURCE CORRESPONDENCE: The source T_N is doubleFormFactor with one 1/N! and 2N normalized positively oriented contours. The reduced expression contains literal R=2z²/(1-z²), the complete P_ij and all remaining normalized y measures. The admissibility predicate contains only source geometric/algebraic domain conditions, no integral identity. The chosen interior polynomial root is identified with the source square-root branch. See RESIDUE_SYMMETRY_SOURCE_AUDIT.md and TORUS_MEAN_SOURCE_BRIDGE_AUDIT.md.
+
+## lem:complement — CANDIDATE_CLOSED
+
+SOURCE ENDPOINT: manuscript lines 601–655: bounded fixed-order derivatives of the actual complementary double-contour integral
+
+LEAN ENDPOINT: IsingBulk.First.selected_complement_global_bound; IsingBulk.First.selected_compatible_complement_bounded
+
+DEPENDENCIES: Frozen prime-family uniqueness and non-root-of-unity results; actual source active denominators and gradients; genuine C∞ compact local amplitudes; constructed finite torus refinement and actual auxiliary integral interchange.
+
+COMPLETED OBLIGATIONS: The actual complementary double-contour integral has bounded fixed-order s derivatives. Exhaustive active-factor classification, real separation, true half-line exponential representation, all-q integration by parts including generated coefficient derivatives, actual fixed-radius differentiation/Fubini, uniform small/tail auxiliary integrability, genuine finite smooth torus refinement, seam lifts and finite integral sums are proved. The constructed compatible y-only remainder satisfies the exact support hypotheses. One epsilon threshold precedes all derivative orders; each bound may depend on its fixed order.
+
+REMAINING OBLIGATIONS: No internal source obligation remains. Independent external audit remains; later manuscript stages are outside this pilot.
+
+ROUTES TRIED: Source active-vector convex separation; exact Laplace products; arbitrary-order real C∞ transpose calculus; normalized source jets on compact parameter families; L1 auxiliary bounds; finite periodic refinement and exact lifted integral/derivative sums.
+
+SMALLEST BLOCKER: None for CANDIDATE_CLOSED; independent external audit is required before any AUDITED_CLOSED designation.
+
+UNTRIED ACTIONABLE AUDIT STEP: Independent external audit of the exact final source/receipt/source-correspondence/kill bundle. No further FIRST implementation or TAIL work is authorized by this completion.
+
+FILES: IsingBulk/First/ComplementActiveChart.lean; IsingBulk/First/ComplementAuxiliary.lean; IsingBulk/First/ComplementAuxiliaryJets.lean; IsingBulk/First/ComplementAuxiliaryMajorant.lean; IsingBulk/First/ComplementAuxiliaryTailBound.lean; IsingBulk/First/ComplementClosedDamping.lean; IsingBulk/First/ComplementDampedGradients.lean; IsingBulk/First/ComplementDamping.lean; IsingBulk/First/ComplementDecay.lean; IsingBulk/First/ComplementExponentialProduct.lean; IsingBulk/First/ComplementFactorization.lean; IsingBulk/First/ComplementFiniteAuxiliary.lean; IsingBulk/First/ComplementFiniteRefinement.lean; IsingBulk/First/ComplementFiniteSum.lean; IsingBulk/First/ComplementFubini.lean; IsingBulk/First/ComplementFullPhaseJets.lean; IsingBulk/First/ComplementGeometry.lean; IsingBulk/First/ComplementGlobalBound.lean; IsingBulk/First/ComplementGradients.lean; IsingBulk/First/ComplementIBP.lean; IsingBulk/First/ComplementInactiveNeighborhood.lean; IsingBulk/First/ComplementLocalBound.lean; IsingBulk/First/ComplementLocalFormFactor.lean; IsingBulk/First/ComplementLocalParameterRegularity.lean; IsingBulk/First/ComplementLocalizedFactors.lean; IsingBulk/First/ComplementMixedRegularity.lean; IsingBulk/First/ComplementNormalizedJets.lean; IsingBulk/First/ComplementOnsiteGeometry.lean; IsingBulk/First/ComplementParameterJets.lean; IsingBulk/First/ComplementParameterRegularity.lean; IsingBulk/First/ComplementPhase.lean; IsingBulk/First/ComplementPhaseSum.lean; IsingBulk/First/ComplementRadialChartDecay.lean; IsingBulk/First/ComplementRadialCompact.lean; IsingBulk/First/ComplementRadialRegularChart.lean; IsingBulk/First/ComplementSeparation.lean; IsingBulk/First/ComplementSimplex.lean; IsingBulk/First/ComplementSmallAuxiliary.lean; IsingBulk/First/ComplementSourceAmplitudeSupport.lean; IsingBulk/First/ComplementSourceAnalytic.lean; IsingBulk/First/ComplementSourceNormalizedJets.lean; IsingBulk/First/ComplementSourcePhaseSmooth.lean; IsingBulk/First/ComplementSourceSmooth.lean; IsingBulk/First/ComplementSourceUniform.lean; IsingBulk/First/ComplementUniform.lean; IsingBulk/First/ComplementVectors.lean; IsingBulk/First/DoublePeriodicBump.lean; IsingBulk/First/FiniteTorusBumpCover.lean; IsingBulk/First/FiniteTorusRefinement.lean; IsingBulk/First/OnsiteActiveChart.lean; IsingBulk/First/OnsiteAmplitudeSupport.lean; IsingBulk/First/OnsiteAuxiliaryDomination.lean; IsingBulk/First/OnsiteAuxiliaryInterchange.lean; IsingBulk/First/OnsiteAuxiliaryJets.lean; IsingBulk/First/OnsiteAuxiliaryRegularity.lean; IsingBulk/First/OnsiteAuxiliaryTailBound.lean; IsingBulk/First/OnsiteFactorization.lean; IsingBulk/First/OnsiteFiniteRefinement.lean; IsingBulk/First/OnsiteFiniteSum.lean; IsingBulk/First/OnsiteGlobalBound.lean; IsingBulk/First/OnsiteInactiveNeighborhood.lean; IsingBulk/First/OnsiteLocalBound.lean; IsingBulk/First/OnsiteLocalFormFactor.lean; IsingBulk/First/OnsiteLocalizationAlgebra.lean; IsingBulk/First/OnsiteNormalizedJets.lean; IsingBulk/First/OnsitePeriodicLift.lean; IsingBulk/First/OnsiteRadialChartDecay.lean; IsingBulk/First/OnsiteRadialRegularChart.lean; IsingBulk/First/OnsiteRadiusIndependence.lean; IsingBulk/First/OnsiteRegularity.lean; IsingBulk/First/OnsiteSeparation.lean; IsingBulk/First/OnsiteSmallAuxiliary.lean; IsingBulk/First/OnsiteUniform.lean; IsingBulk/First/PeriodicWrapInvariant.lean; IsingBulk/First/PublishedFixedOrder.lean; IsingBulk/First/SelectedComplementBound.lean
+
+BUILD STATUS: canonical-equivalent clean PASS for the held snapshot environment/final_six_node_clean_20261003T1615Z. ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementActiveChart.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliary.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliaryJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliaryMajorant.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementAuxiliaryTailBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementClosedDamping.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementDampedGradients.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementDamping.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementDecay.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementExponentialProduct.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFactorization.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFiniteAuxiliary.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFiniteRefinement.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFiniteSum.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFubini.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementFullPhaseJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementGeometry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementGlobalBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementGradients.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementIBP.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementInactiveNeighborhood.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalFormFactor.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalParameterRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementLocalizedFactors.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementMixedRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementNormalizedJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementOnsiteGeometry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementParameterJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementParameterRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementPhaseSum.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementRadialChartDecay.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementRadialCompact.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementRadialRegularChart.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSeparation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSimplex.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSmallAuxiliary.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceAmplitudeSupport.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceNormalizedJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourcePhaseSmooth.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceSmooth.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementSourceUniform.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementUniform.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ComplementVectors.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/DoublePeriodicBump.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FiniteTorusBumpCover.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FiniteTorusRefinement.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteActiveChart.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAmplitudeSupport.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryDomination.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryInterchange.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteAuxiliaryTailBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteFactorization.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteFiniteRefinement.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteFiniteSum.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteGlobalBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteInactiveNeighborhood.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteLocalBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteLocalFormFactor.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteLocalizationAlgebra.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteNormalizedJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsitePeriodicLift.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRadialChartDecay.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRadialRegularChart.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRadiusIndependence.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteSeparation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteSmallAuxiliary.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/OnsiteUniform.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicWrapInvariant.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PublishedFixedOrder.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedComplementBound.receipt.json
+
+AXIOMS: verified reachable union no larger than propext, Classical.choice, Quot.sound. No new global mathematical axiom.
+
+EXTERNAL THEOREM INPUTS: NONE. Published non-Nickel smoothness is not used at the selected Nickel order or for the complement.
+
+SOURCE CORRESPONDENCE: The source complete double density, normalized measures and N! are retained. The full phase and all its parameter derivatives are used, with the s-independent exponential shift kept inside the phase. Initially inactive denominator factors remain in the amplitude and are proved nonzero on the fixed support. Empty active sets are covered by the genuine small auxiliary estimate. The finite cover and torus seam identities are constructed, not assumed. See GLOBAL_COMPLEMENT_LOWER_N_INDEPENDENT_REVIEW.md and FIRST_FINITE_TORUS_REFINEMENT_AUDIT.md.
+
+## lem:mean — CANDIDATE_CLOSED
+
+SOURCE ENDPOINT: manuscript lines 427–434 and 488–537: physical mean residue, its exact +2pi coefficient and nonlinear post-residue denominator bound
+
+LEAN ENDPOINT: IsingBulk.First.physical_mean_residue; IsingBulk.First.selected_physical_mean_residue; IsingBulk.First.actual_physical_mean_prescribed_delta
+
+DEPENDENCIES: Actual residue density, selected prime-family root identities, genuine analytic regular branch, explicit rectangle contour and source denominator geometry. OrderedChartData contains fixed angles and cosine relation only.
+
+COMPLETED OBLIGATIONS: The actual mean/zero-sum shape coordinate map and Jacobian, selected lower chart, b,d positivity, true Y pole derivative, explicit clockwise orientation and +2π residue are proved. Uniform source rectangles and pair/Z-pole exclusion are constructed. Actual displaced-side and smooth-edge integrals have every fixed-s derivative bounded on a common tube. The actual nonlinear denominator gap c(ε+Σt²) and full fixed-cutoff physical mean identity are proved, with selected arithmetic instantiated and arbitrary sufficiently small prescribed delta supported.
+
+REMAINING OBLIGATIONS: No internal source obligation remains. Independent external audit remains; later manuscript stages are outside this pilot.
+
+ROUTES TRIED: Explicit source coordinates and measure transport; logarithmic rectangle computation; local source branch differentiation; compact analytic annuli; uniform concavity, radial Taylor and attenuation; actual parameter-integral differentiation.
+
+SMALLEST BLOCKER: None for CANDIDATE_CLOSED; independent external audit is required before any AUDITED_CLOSED designation.
+
+UNTRIED ACTIONABLE AUDIT STEP: Independent external audit of the exact final source/receipt/source-correspondence/kill bundle. No further FIRST implementation or TAIL work is authorized by this completion.
+
+FILES: IsingBulk/First/MeanAnalyticIntegral.lean; IsingBulk/First/MeanAnalyticTube.lean; IsingBulk/First/MeanAngularIdentity.lean; IsingBulk/First/MeanAttenuation.lean; IsingBulk/First/MeanCompatibleLemma.lean; IsingBulk/First/MeanConstrainedConcavity.lean; IsingBulk/First/MeanCoordinateMeasure.lean; IsingBulk/First/MeanCoordinates.lean; IsingBulk/First/MeanDeformedDomain.lean; IsingBulk/First/MeanDerivativeTube.lean; IsingBulk/First/MeanEdgeBounds.lean; IsingBulk/First/MeanFullIntegral.lean; IsingBulk/First/MeanImaginaryMargin.lean; IsingBulk/First/MeanJacobian.lean; IsingBulk/First/MeanJointAnalytic.lean; IsingBulk/First/MeanLocalDensity.lean; IsingBulk/First/MeanLocalDomain.lean; IsingBulk/First/MeanLocalRegularity.lean; IsingBulk/First/MeanMotion.lean; IsingBulk/First/MeanNonlinearBound.lean; IsingBulk/First/MeanParameterDisk.lean; IsingBulk/First/MeanParameterDomain.lean; IsingBulk/First/MeanParameterIntegral.lean; IsingBulk/First/MeanParameterRectangle.lean; IsingBulk/First/MeanPhase.lean; IsingBulk/First/MeanPhaseSecond.lean; IsingBulk/First/MeanPhysicalDecomposition.lean; IsingBulk/First/MeanPhysicalLemma.lean; IsingBulk/First/MeanPole.lean; IsingBulk/First/MeanPoleExclusion.lean; IsingBulk/First/MeanPrescribedLemma.lean; IsingBulk/First/MeanRadialPhase.lean; IsingBulk/First/MeanRadialTaylor.lean; IsingBulk/First/MeanRealDomain.lean; IsingBulk/First/MeanRealPhase.lean; IsingBulk/First/MeanRectangle.lean; IsingBulk/First/MeanRectanglePhysical.lean; IsingBulk/First/MeanRectangleResidue.lean; IsingBulk/First/MeanRegularDerivatives.lean; IsingBulk/First/MeanRegularError.lean; IsingBulk/First/MeanRegularPhase.lean; IsingBulk/First/MeanResidueDomain.lean; IsingBulk/First/MeanRootBridge.lean; IsingBulk/First/MeanSelectedData.lean; IsingBulk/First/MeanSeparatedDerivativeBounds.lean; IsingBulk/First/MeanSeparatedIntegral.lean; IsingBulk/First/MeanShapeDensity.lean; IsingBulk/First/MeanShapeGap.lean; IsingBulk/First/MeanShapePhaseSum.lean; IsingBulk/First/MeanSideBounds.lean; IsingBulk/First/MeanSideCurves.lean; IsingBulk/First/MeanSideIsolation.lean; IsingBulk/First/MeanSmallAnnulus.lean; IsingBulk/First/MeanSmallRectangle.lean; IsingBulk/First/MeanSmoothDecomposition.lean; IsingBulk/First/MeanSourceIntegral.lean; IsingBulk/First/MeanUniformConcavity.lean; IsingBulk/First/MeanUniformRectangle.lean; IsingBulk/First/MeanYResidue.lean; IsingBulk/First/PhysicalMeanResidue.lean; IsingBulk/First/SelectedPhysicalMean.lean
+
+BUILD STATUS: canonical-equivalent clean PASS for the held snapshot environment/final_six_node_clean_20261003T1615Z. ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAnalyticIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAnalyticTube.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAngularIdentity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanAttenuation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanCompatibleLemma.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanConstrainedConcavity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanCoordinateMeasure.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanCoordinates.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanDeformedDomain.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanDerivativeTube.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanEdgeBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanFullIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanImaginaryMargin.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanJacobian.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanJointAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanLocalDensity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanLocalDomain.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanLocalRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanMotion.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanNonlinearBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterDisk.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterDomain.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanParameterRectangle.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhaseSecond.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhysicalDecomposition.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPhysicalLemma.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPole.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPoleExclusion.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanPrescribedLemma.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRadialPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRadialTaylor.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRealDomain.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRealPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRectangle.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRectanglePhysical.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRectangleResidue.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRegularDerivatives.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRegularError.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRegularPhase.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanResidueDomain.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanRootBridge.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSelectedData.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSeparatedDerivativeBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSeparatedIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeDensity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapeGap.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanShapePhaseSum.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSideBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSideCurves.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSideIsolation.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSmallAnnulus.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSmallRectangle.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSmoothDecomposition.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanSourceIntegral.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanUniformConcavity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanUniformRectangle.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/MeanYResidue.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PhysicalMeanResidue.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedPhysicalMean.receipt.json
+
+AXIOMS: verified reachable union no larger than propext, Classical.choice, Quot.sound. No new global mathematical axiom.
+
+EXTERNAL THEOREM INPUTS: NONE.
+
+SOURCE CORRESPONDENCE: physical_mean_residue concerns the literal normalized meanLocalDensity on the actual complex s disk with fixed rho=−sin(theta)ε/4, keeping N! and the real shape weight outside. The derivative of 1−Y is −i and the explicitly clockwise 1/v integral is −2πi, hence +2π. Only the hard mean interval moves; real smooth cutoff edge terms are retained. The code's inner half-width delta and outer 2delta are the source convention after renaming. Actual joint analytic tubes and source concavity/attenuation/no-wrapping prove the needed conclusions without assuming the printed mixed-Taylor estimate. See FIRST_PHYSICAL_MEAN_SOURCE_AUDIT.md and MEAN_PHYSICAL_ENDPOINT_REVIEW.md.
+
+## lem:symmetry — CANDIDATE_CLOSED
+
+SOURCE ENDPOINT: manuscript lines 310–322: evenness/conjugation of actual even form factors and the exterior normalized susceptibility
+
+LEAN ENDPOINT: IsingBulk.First.normalizedBulkSeries_nearInfinity_source; IsingBulk.First.normalizedSusceptibility_real_germ; IsingBulk.First.lemma_symmetry_exterior; IsingBulk.First.exterior_continuation_unique_from_real_near_infinity; IsingBulk.First.doubleFormFactor_even; IsingBulk.First.doubleFormFactor_conjugate
+
+DEPENDENCIES: Actual even-N normalized contour substitutions and source magnetization branch; concrete quarter-radius density/contour bound; genuine norm-domain annulus/Fubini transport; compact parameter analyticity; actual normally convergent near-infinity sum; connected-domain identity theorem and double-conjugation holomorphy.
+
+COMPLETED OBLIGATIONS: Actual normalized susceptibility exterior-germ symmetry is proved: the literal fixed-quarter-radius even-order series has an internally derived summable geometric majorant, absolute convergence and holomorphy near infinity, and both symmetry identities. Real-only physical E1 identifies that actual germ with the normalized physical real response. Any named holomorphic continuation on the unit exterior is proved unique and symmetric. Actual normalized even form-factor contour symmetries, including orientations, measures and prefactor branch, are also proved.
+
+REMAINING OBLIGATIONS: No internal source obligation remains within the stated germ/conditional-continuation scope. Global continuation existence and whole-exterior series convergence are not asserted. Independent external audit remains.
+
+ROUTES TRIED: Initial admissible-contour physical transfer was retained as a valid limited theorem but rejected as full source closure. A proposed whole-exterior convergent-series input was rejected as stronger than E1. The accepted route constructs the actual near-infinity normal sum internally and uses only real E1 plus a genuine identity theorem for any continuation under consideration.
+
+SMALLEST BLOCKER: None for CANDIDATE_CLOSED; independent external audit is required before any AUDITED_CLOSED designation.
+
+UNTRIED ACTIONABLE AUDIT STEP: Independent external audit of the exact final source/receipt/source-correspondence/kill bundle. No further FIRST implementation or TAIL work is authorized by this completion.
+
+FILES: IsingBulk/First/BulkSymmetry.lean; IsingBulk/First/ContourNormBounds.lean; IsingBulk/First/ContourParameterDomain.lean; IsingBulk/First/ExteriorAnalyticGeometry.lean; IsingBulk/First/ExteriorContinuationUniqueness.lean; IsingBulk/First/ExteriorIdentitySymmetry.lean; IsingBulk/First/ExteriorSymmetry.lean; IsingBulk/First/FarExteriorAnnularDensity.lean; IsingBulk/First/FarExteriorDensityBound.lean; IsingBulk/First/FarExteriorFormFactor.lean; IsingBulk/First/FarExteriorMixedContour.lean; IsingBulk/First/FarExteriorRadiusIndependence.lean; IsingBulk/First/NearInfinityBulkSeries.lean; IsingBulk/First/QuarterContourBound.lean; IsingBulk/First/RealFredholmIdentification.lean; IsingBulk/First/SmallRadiusDensityBounds.lean; IsingBulk/First/SymmetryAlgebra.lean; IsingBulk/First/SymmetryEndpoint.lean; IsingBulk/First/SymmetryIntegral.lean
+
+BUILD STATUS: canonical-equivalent clean PASS for the held snapshot environment/final_six_node_clean_20261003T1615Z. ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/BulkSymmetry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourNormBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ContourParameterDomain.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorAnalyticGeometry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorContinuationUniqueness.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorIdentitySymmetry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ExteriorSymmetry.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorAnnularDensity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorDensityBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorFormFactor.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorMixedContour.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FarExteriorRadiusIndependence.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/NearInfinityBulkSeries.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/QuarterContourBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/RealFredholmIdentification.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SmallRadiusDensityBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SymmetryAlgebra.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SymmetryEndpoint.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SymmetryIntegral.receipt.json
+
+AXIOMS: verified reachable union no larger than propext, Classical.choice, Quot.sound. No new global mathematical axiom.
+
+EXTERNAL THEOREM INPUTS: RealNormalizedFredholmRepresentation: the translated published real low-temperature normalized physical expansion for real x>1 with sufficiently near-unit contour radius. No complex full-series convergence is assumed. Full-unit-exterior symmetry is explicitly conditional on any continuation under consideration being holomorphic there; existence of such a continuation is not E1 and is not asserted.
+
+SOURCE CORRESPONDENCE: Manuscript75–89 defines the normalized response X=beta_phys^(-1)*chi and its exterior germ inherited from real s>1;310–322 states the symmetry. The construction proves a non-vacuous actual germ on |s|>16 and identifies its physical real restriction. The supplied-analytic-continuation theorem propagates its evenness/conjugation on |s|>1 without constructing that continuation. The E1 radius threshold may depend on the real point; a radius above max(r0,1/4) is constructed and actual annulus identities identify every coefficient. See SYMMETRY_EXTERIOR_REPAIR_AUDIT.md, SYMMETRY_E1_INDEPENDENT_SOURCE_AUDIT.md and FIRST_EXTERIOR_IDENTITY_SOURCE_AUDIT.md.
+
+## thm:first — CANDIDATE_CLOSED
+
+SOURCE ENDPOINT: manuscript lines578–594 and659–678: actual highest-derivative local amplitudes, two-chart equality, full first-term asymptotic and lower-order boundedness
+
+LEAN ENDPOINT: IsingBulk.First.theorem_first; IsingBulk.First.first_fixed_source_asymptotic; IsingBulk.First.selected_local_pair_profile; IsingBulk.First.selected_lower_orders_fixed_radius_bounded
+
+DEPENDENCIES: Source residue, mean, period, constructed compatible localization, actual numerator/denominator and pole derivatives, source shape DCT and lower-order majorants, equal two-chart coefficients, actual global complement, actual onsite normalization/radius locality, and frozen prime arithmetic.
+
+COMPLETED OBLIGATIONS: The literal source fixed-radius offsite T_(2p) has kth derivative 2L epsilon^(−1/2)+o(epsilon^(−1/2)) with actual L nonzero. Both local residues are attached through the same constructed delta, eta and chi; their actual coefficients are equal. The actual smooth/hard mean error is bounded and the true complement is controlled. Every j<k of this first term is bounded on one common interval. Every positive even lower N and every fixed derivative order is bounded via the narrow published full-site theorem and internally proved onsite subtraction/radius transfer.
+
+REMAINING OBLIGATIONS: No internal source obligation remains. Independent external audit remains; later manuscript stages are outside this pilot.
+
+ROUTES TRIED: Coincidence-safe exact density factorization, joint analytic source jets, actual denominator scale limit and constrained-shape DCT, fixed-cutoff physical mean/error assembly, prescribed common two-chart cutoff construction, genuine integral derivative split, true complement bound and fixed-radius source transfer.
+
+SMALLEST BLOCKER: None for CANDIDATE_CLOSED; independent external audit is required before any AUDITED_CLOSED designation.
+
+UNTRIED ACTIONABLE AUDIT STEP: Independent external audit of the exact final source/receipt/source-correspondence/kill bundle. No further FIRST implementation or TAIL work is authorized by this completion.
+
+FILES: IsingBulk/First/ActualAmplitudeNeighborhood.lean; IsingBulk/First/ActualDensityAnalytic.lean; IsingBulk/First/ActualDensityBounds.lean; IsingBulk/First/ActualDensityCenter.lean; IsingBulk/First/ActualDensityExpansion.lean; IsingBulk/First/ActualDensityJets.lean; IsingBulk/First/ActualDensityNeighborhood.lean; IsingBulk/First/ActualLeadingCoordinateLimit.lean; IsingBulk/First/ActualLeadingDensity.lean; IsingBulk/First/ActualLeadingShapeLimit.lean; IsingBulk/First/ActualLocalFullProfile.lean; IsingBulk/First/ActualLocalLowerBounds.lean; IsingBulk/First/ActualLocalMeanAsymptotic.lean; IsingBulk/First/ActualLocalizedPostMeanAsymptotic.lean; IsingBulk/First/ActualLowerDerivativeBound.lean; IsingBulk/First/ActualLowerIntegralBounds.lean; IsingBulk/First/ActualPoleDerivative.lean; IsingBulk/First/ActualPostMeanAnalyticTube.lean; IsingBulk/First/ActualPostMeanCoordinateLimit.lean; IsingBulk/First/ActualPostMeanInterchange.lean; IsingBulk/First/ActualPostMeanLocalRegularity.lean; IsingBulk/First/ActualPostMeanShapeLimit.lean; IsingBulk/First/ActualRemainderShapeBound.lean; IsingBulk/First/ActualShapeAmplitude.lean; IsingBulk/First/ActualShapeDenominator.lean; IsingBulk/First/ActualShapeDerivative.lean; IsingBulk/First/ActualShapeIntegrability.lean; IsingBulk/First/ActualShapeNeighborhood.lean; IsingBulk/First/ActualVandermonde.lean; IsingBulk/First/AngularReindex.lean; IsingBulk/First/CompatibleComplement.lean; IsingBulk/First/CompatibleMeanAttachment.lean; IsingBulk/First/CompatibleMeanSource.lean; IsingBulk/First/CompatibleYCutoffAtDelta.lean; IsingBulk/First/CompatibleYCutoffData.lean; IsingBulk/First/CompatibleYLocalization.lean; IsingBulk/First/FirstTheorem.lean; IsingBulk/First/FirstUpperAsymptotic.lean; IsingBulk/First/IntegratedMeanDecomposition.lean; IsingBulk/First/LowerOrderCommonInterval.lean; IsingBulk/First/LowerOrderFiniteWindow.lean; IsingBulk/First/LowerOrderFixedRadius.lean; IsingBulk/First/LowerOrderTransfer.lean; IsingBulk/First/PeriodicAngularChart.lean; IsingBulk/First/PeriodicYCutoff.lean; IsingBulk/First/PeriodicYPartition.lean; IsingBulk/First/PeriodicYSupport.lean; IsingBulk/First/SelectedComplementBound.lean; IsingBulk/First/SelectedLocalPair.lean; IsingBulk/First/SelectedYCutoffs.lean; IsingBulk/First/SmoothCutoffConstruction.lean; IsingBulk/First/SourceAsymptoticAttachment.lean; IsingBulk/First/SourceLowerAttachment.lean; IsingBulk/First/SwappedChartCoefficient.lean; IsingBulk/First/SwappedPeriodScaling.lean
+
+BUILD STATUS: canonical-equivalent clean PASS for the held snapshot environment/final_six_node_clean_20261003T1615Z. ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualAmplitudeNeighborhood.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityAnalytic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityCenter.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityExpansion.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityJets.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualDensityNeighborhood.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLeadingCoordinateLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLeadingDensity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLeadingShapeLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalFullProfile.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalLowerBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalMeanAsymptotic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLocalizedPostMeanAsymptotic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLowerDerivativeBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualLowerIntegralBounds.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPoleDerivative.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanAnalyticTube.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanCoordinateLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanInterchange.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanLocalRegularity.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualPostMeanShapeLimit.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualRemainderShapeBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeAmplitude.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeDenominator.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeDerivative.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeIntegrability.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualShapeNeighborhood.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/ActualVandermonde.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/AngularReindex.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleComplement.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleMeanAttachment.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleMeanSource.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleYCutoffAtDelta.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleYCutoffData.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/CompatibleYLocalization.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FirstTheorem.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/FirstUpperAsymptotic.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/IntegratedMeanDecomposition.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderCommonInterval.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderFiniteWindow.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderFixedRadius.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/LowerOrderTransfer.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicAngularChart.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicYCutoff.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicYPartition.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/PeriodicYSupport.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedComplementBound.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedLocalPair.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SelectedYCutoffs.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SmoothCutoffConstruction.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceAsymptoticAttachment.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SourceLowerAttachment.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SwappedChartCoefficient.receipt.json; ../../integration/canonical_modules_final_six_node_clean_20261003T1615Z/SwappedPeriodScaling.receipt.json
+
+AXIOMS: verified reachable union no larger than propext, Classical.choice, Quot.sound. No new global mathematical axiom.
+
+EXTERNAL THEOREM INPUTS: Only PublishedTWFixedOrderInput at the selected point, a local theorem parameter for the published non-Nickel full-site fixed-even-order result. It is used solely for lower even N. No global mathematical axiom or selected-order/internal estimate is assumed.
+
+SOURCE CORRESPONDENCE: Manuscript lines659–679 with the exact T_N normalization from235–253 and coefficient from578–594. N0=2p and k=N0²/2−1. Each s derivative holds rε=exp(−sin(theta)ε/4) fixed and is evaluated at sε=(1+ε)exp(i theta). The two source chart contributions add to2L, not merely two model coefficients. The same-N lower derivative interval is chosen before all j<k; lower-N external bounds correctly retain ∀N∀j∃epsilon0,C. Explicit finite-window minima are available separately. No TAIL theorem is invoked. See FIRST_FINAL_AUTHOR_KILL_REPORT.md and the two exact-byte independent final reports.
+
+
+Historical frozen machinery record follows; earlier statements about FIRST reflect that baseline.
+<!-- FIRST_PILOT_CURRENT_END -->
+
+<!-- AUTHORIZED_JETS_REPAIR_20261003_BEGIN -->
+## Authorized Jets smooth-cutoff repair, 2026-10-03 13:15 UTC
+
+The user-approved three-file working overlay passed exact input/hash verification, affected-path compilation and the complete original1666-declaration axiom audit. The final `lemma_jets` bundle now accepts `ContDiff ℝ ∞ w`; regular coefficient analyticity is unchanged. Immutable `_r1` and historical clean snapshots are preserved. This targeted acceptance does not assert a new whole-current-FIRST clean build. Receipt/report: `../../integration/jets_repair_20261003T1308Z/REPAIR_REPORT.md`. Future canonical-equivalent verification explicitly uses `--jets-repair-20261003`. FIRST statuses below are unchanged.
+<!-- AUTHORIZED_JETS_REPAIR_20261003_END -->
+
+# Statement and source correspondence audit
+
+## Authority and verified context
+
+Normative source: rc4 snapshot `1b4b506c9cb19d5fdbf9f59d89c7a179739d337d`,
+`paper/manuscript.tex`, Git blob `1c6c0f47e3f1e4d13e59b49c52c18414e9dd3939`.
+The local byte-preserving copy is `source_snapshot/manuscript.tex`. It was downloaded
+from the commit-specific raw URL and checked with `git hash-object`. All 30 files
+in the packet's checksum list were verified. Source excerpts were read before
+project edits. Packet notes and historical summaries were not used as axioms.
+
+Relevant full-source locations (one-based lines):
+
+- 329–336: Nickel order definition.
+- 345–392: `thm:prime`, including the branch-point algebraicity/nonresonance claim.
+- 396–413: `lem:resultant` and its selected-point context.
+- 2010–2041: `lem:cyclotomic`.
+- 2099–2119: `lem:schur`, its sign convention, and rational continuation.
+- 2130–2144: compact exterior application, `q < r < 1` and root modulus bounds.
+
+## CLOSED: `lem:cyclotomic`
+
+Source: if p is prime and p does not divide n, then
+Q(ζ_p) ∩ Q(ζ_n) = Q.
+
+Lean: `IsingBulk.cyclotomic_intersection`, for every field L with a Q-algebra
+structure, every p,n : N, and arbitrary primitive p-th/n-th roots ζ,η in L:
+
+```text
+p.Prime → ¬ p ∣ n → IsPrimitiveRoot ζ p → IsPrimitiveRoot η n →
+  (Q⟮ζ⟯ ⊓ Q⟮η⟯ : IntermediateField Q L) = ⊥
+```
+
+Representation audit:
+
+- `IntermediateField.adjoin Q {ζ}` is the smallest intermediate field containing ζ.
+- Infimum is set intersection; bottom is the image of Q in L.
+- The Q-algebra map into a field is injective. Specializing L to C gives the
+  manuscript's embedded number fields. Allowing any common ambient field is a
+  generalization, with no extra condition on the manuscript's roots.
+- Primitive-root hypotheses unpack ζ_m notation. They do not restrict the choice
+  of primitive root. The theorem holds for every such choice.
+- n > 0 follows from p not dividing n; p > 0 follows from primality.
+- All integrality and finite-dimensionality facts are proved in Lean. They are
+  not additional caller hypotheses. No restriction p ≥ 11 is imposed here.
+- The proof uses the degree lower bound φ(lcm(p,n)) and the upper product-degree
+  bound for the compositum, then linear disjointness. An explicit equality with
+  a chosen Q(ζ_pn) is unnecessary for this equivalent argument.
+
+Quantifiers: all parameters and root choices are universally quantified before the
+hypotheses. There are no existential constants or hidden uniformity changes.
+Dependencies are mathlib theorems, with no external physics premise. The final
+ordinary source build and axiom audit are the closure receipt.
+
+## CLOSED: `lem:schur`
+
+The manuscript states a rational identity for every even N. Its representation is:
+
+1. `pfaffian`: first-row expansion for n pairs on a list of length 2n. Partner
+   position j in the tail has sign (-1)^j. For four entries this is
+   A01 A23 − A02 A13 + A03 A12, matching the source convention.
+2. `pairProduct`: the ordered product over all positions i < j.
+3. `RationalIdentity n`: the fraction-field statement over
+   `FractionRing (MvPolynomial (Fin (2*n)) Q)`. The definition is a specification;
+   the theorem `rationalIdentity n` now proves it for every n, including n=0.
+4. `generic_denominator_ne_zero`: for every n and indices i,j, the generic
+   denominator is nonzero. Evaluation of the underlying polynomial at all zeros
+   gives 1; injectivity into the fraction field then proves nonvanishing.
+5. `cleared_two`, `cleared_four`, `fraction_four`: symbolic low-dimensional tests,
+   never counted as closure of the general source node.
+
+Proof route: `monic_ratio_partial_fractions` uses exact polynomial interpolation
+for a monic numerator and nodal denominator of equal degree. Their difference
+has smaller degree. `schur_residue_weight` computes the coefficients of that
+interpolation. Evaluation at zero and odd cardinality give `schur_weights_sum`,
+then `schur_weighted_identity`. No finite-N check or analytic residue premise
+is used. `pairProduct_eraseIdx` proves the expansion signs, and
+`pairProduct_weight` cancels the minor factors with justified nonzero factors.
+`xKernel_recurrence` and induction prove `pfaffian_xKernel_of_nodup` for every
+even size. `mobius_kernel` proves exactly the source substitution
+x=(1+v)/(1-v). Generic variables are injective, avoid ±1, and have all pair
+denominators nonzero, so `rationalIdentity` closes the source rational identity.
+
+Specialization: `schur_fraction_of_nodup` is the shared algebraic result over
+any characteristic-zero field. The generic theorem and complex specialization
+both instantiate this result; no homomorphism evaluating every element of a
+fraction field at a possibly algebraically dependent tuple is assumed.
+`schur_fraction_specialization` extends the complex result to coincident values:
+v_i(t)=v_i+i*t is injective in a sufficiently small punctured neighborhood of
+zero, and the finite Pfaffian and product are continuous wherever their pair
+denominators stay nonzero. Equality passes to the limit. This is a proved
+continuation bridge for the same finite rational expressions.
+
+The chart theorem explicitly assumes 1-v_i*v_j≠0 for **all** i,j, including
+i=j. These diagonal conditions exclude v_i=±1, as required by this Cayley-chart
+implementation. They are stronger than pair-denominator conditions for i<j
+alone; the ledger does not equate this chart theorem alone with source closure.
+The separate generic rational identity is complete, and the chart includes the
+entire actual Appendix C application. A theorem covering chart-boundary tuples
+with v_i=±1 and all off-diagonal denominators nonzero is optional, not a blocker.
+
+Application-domain audit: source lines 2130–2134 choose an admissible radius r < 1,
+q < r, with |y_i| = r and |z_i| ≤ q on K+. Therefore both variable families lie
+in strict subdisks. `denominator_ne_zero` and `subdisk_denominators` prove the
+resulting pair-denominator nonvanishing, for every number of variables, even when
+two variable values coincide. `schur_subdisk`, `schur_compact_exterior` and
+`schur_appendix_C` prove the resulting identities, the last simultaneously for
+the y and z families under exactly these modulus bounds. The analytic
+construction of the dispersion roots and the existence of those compact bounds
+belong to later source nodes; no such construction is claimed here.
+
+Continuation semantics: the equality is proved in the generic fraction field,
+and its pole-free complex realization is proved by the shared algebraic identity
+and continuity. Coincident variables are permitted; denominator poles are not
+assigned values by an analytic-continuation assertion.
+`totalized_division_counterexample` verifies that the unrestricted pointwise Lean
+statement is false: on [2,1/2,3,4], the fraction Pfaffian is 51/70 and the pair
+product is zero. This regression witness is not a proof of Schur's identity.
+
+All n and tuples are universally quantified. There are no existential constants
+in Schur's identity. The compact radius is fixed before the variable tuple, with
+no bound depending on N introduced by the identity.
+
+`SchurRecurrence R` remains OPEN/UNUSED: it asks for a universal CommRing
+polynomial identity stronger than the implementation needed here. The old
+`cleared_eq_of_recurrence` remains conditional, and no new proof depends on it.
+The unproved general clearing bridge for `clearedPfaffian` is also unused.
+Neither is a blocker or a premise of `rationalIdentity` or the application.
+
+## CLOSED selected-point application: `lem:resultant`
+
+The general algebraic theorem is fully proved:
+
+```text
+∀ ξ : C, IsAlgebraic Q ξ → (∀ N ≥ 1, ξ^N ≠ 1) →
+  ∃ A : R, 0 < A ∧ ∀ N ≥ 1, exp(-A*N) ≤ ‖1-ξ^N‖.
+```
+
+`exponential_separation_of_not_isOfFinOrder` supplies the equivalent standard
+not-a-root-of-unity formulation. No assumption |ξ|=1 or integrality of ξ is needed.
+`IsAlgebraic Q ξ` gives an integral element over the field Q, not an algebraic
+integer. The proof clears the denominators of its rational minimal polynomial
+to obtain a nonzero integer polynomial whose rational image is irreducible.
+It does not claim the normalized integer polynomial is monic or primitive.
+Those stronger properties are unnecessary for the nonzero-integer-resultant bound.
+
+Proof audit: a rational common factor with X^N−1 would force ξ^N=1. The integer
+resultant is therefore nonzero and its complex norm is at least 1. The splitting
+product formula isolates one occurrence of ξ in the multiset of roots. Remaining
+factors obey `‖z^N−1‖ ≤ (‖z‖+1)^N`, proved symbolically for every N≥1. The fixed
+quantity B = 2 max(1,|leading coefficient|) ∏other roots (|z|+1) is greater than 1.
+It is chosen before N. Setting A=log B gives the required uniform inequality.
+
+Source context supplies algebraicity and non-root-of-unity for the selected
+`ξ = exp(-i arccos(2c−1))` in `thm:prime`, lines 357–391. The generic theorem has
+exactly these explicit inputs and proves the source estimate whenever they hold.
+`PrimeFamily.selected_exponential_separation` now instantiates the generic theorem
+with that exact expression. `selectedBranch_algebraic` and
+`selectedBranch_not_isOfFinOrder` prove both required inputs. The statement is
+`∃ A : ℝ, 0 < A ∧ ∀ N : ℕ, 1 ≤ N → exp(-A*N) ≤ ‖1-ξ^N‖`.
+No algebraic-integer assumption, N-dependent constant, or finite-N restriction is
+introduced. The result holds for all primes with admissible indices, including
+the source's p≥11 and a≠b domain. These extra source restrictions are unnecessary
+for this clause, and are retained in the full `prime_family` endpoint.
+
+## CLOSED: `thm:prime`
+
+- `prime_not_dvd_even_below_double`: for any prime p>2 and positive even n<2p,
+  p does not divide n. This includes the source p≥11 domain. The positivity of n
+  makes explicit the particle-order convention; n=0 would violate the claim.
+- `not_mem_smaller_cyclotomic`: with c in Q(ζ_p) and c not rational as explicit
+  hypotheses, c cannot be in Q(ζ_n) for those smaller orders. It uses the closed
+  intersection theorem. The new `cosineAverage_mem_cyclotomic` and
+  `cosineAverage_not_rational` discharge those inputs for the exact source average.
+- `trace_primitive_root`: the trace of a primitive p-th root in Q(ζ_p) is −1,
+  proved from its cyclotomic minimal polynomial and its next coefficient.
+  The completed proof uses normalized trace in the relative algebraic closure
+  of Q inside C. A primitive p-th root has normalized trace -1/(p-1).
+  This is an equivalent trace obstruction: four primitive roots minus 2 have
+  normalized trace -4/(p-1)-2 < -2, whereas a root of unity plus its inverse
+  has normalized trace at least -2. The latter bound is proved by summing real
+  parts of complex embeddings of its finite simple extension. We do not claim
+  to have separately formalized the real-subfield trace formula.
+
+Source-facing endpoint: `PrimeFamily.prime_family`. Its hypotheses are p prime,
+p≥11, distinct integers a,b, and exactly 0<2πa/p<π/2 and 0<2πb/p<π/2.
+It simultaneously exposes all five clauses for `selectedPoint p a b` and
+`selectedBranch p a b`, plus membership in the same `selectedFamily` used by
+the density clause. No unproved proposition is an input.
+
+Representation and domain audit:
+
+- `angle`, `cosineAverage`, `selectedPoint`, `branchAngle`, `selectedBranch`
+  are literal source formulas. Multiplication by i is written on the right;
+  complex multiplication is commutative. There is no replacement root choice.
+- `NickelAt` includes unit-circle location and the source cosine equation with
+  arbitrary integer l,m. `first_even_Nickel_order` proves order 2p and excludes
+  every positive even n<2p. Zero is excluded as an order, not as a lost source case.
+- `unique_cosine_pair` returns equality of both real cosine values, either in
+  source order or swapped. The polynomial relation is lifted below degree p,
+  divisible by Φp, and its zero constant coefficient forces it to vanish.
+  Before that comparison, normalized traces exclude ±1 and negative primitive
+  roots at order 2p. This equivalent proof avoids requiring the stronger general
+  sparse-relation infrastructure described in the source prose.
+- `neighboring_prime_angles` constructs distinct integer floor neighbors at
+  arbitrarily large primes, with arbitrarily small angle error. The continuous
+  source map gives `selectedFamily_dense_arc`: every exp(i t), 0<t<π/2, lies
+  in the closure of this family. `selectedFamily_subset_arc` proves every family
+  member lies in that open arc. Both statements use the same p≥11, a≠b family.
+- The branch satisfies its exact quadratic relation. Algebraicity is obtained
+  by transitivity from a monic quadratic over the embedded algebraic closure,
+  not by assuming an integer minimal polynomial is monic.
+- `selectedBranch_unit_lower` proves norm one and strictly negative imaginary
+  part. The original `arccos` expression fixes the branch and its orientation.
+- All indices are universal before their hypotheses; density allows a new
+  prime and two indices for each neighborhood. The separation constant is
+  chosen after the point and before all N. No later uniform constants occur.
+
+The root source build and axiom audit passed in `../run_logs/longrun_AB_root_build.log`
+(3,538 jobs, 142 safe declarations). The final clean receipt supersedes that
+intermediate build after the rest of this run.
+
+## Analytic source and closure audit
+
+The source remains snapshot `1b4b506c9cb19d5fdbf9f59d89c7a179739d337d`,
+manuscript blob `1c6c0f47e3f1e4d13e59b49c52c18414e9dd3939`.
+All previously CLOSED endpoints and their proofs were preserved. The focused Lie, Jets and Branch closure runs each close their designated node. Their source audits are recorded below; the earlier proofs are preserved.
+
+### `lem:lie` — CLOSED
+
+**Authority and exact source.** Appendix D, statement 2186–2197, proof
+2198–2207 in the verified manuscript. The statement is fixed-domain
+differentiation for a smooth, parameter-independent weight w, a complex
+parameter-dependent field V and a top form A_s, with D = partial_s - Lie_V:
+if the puncture fluxes vanish at every intermediate stage, then
+`partial_s^j integral(w A_s) = integral(D^j(w A_s))`. The transport equations
+for Y and Z preserve the simple factors `(1-Y)^-1` and `(1-Z)^-1`.
+The proof uses top-form divergence, its boundary flux, and iteration on the
+entire preceding density. It explicitly allows complex V without a real flow
+or a holomorphic extension of w.
+
+**Bundled endpoint.** `IsingBulk.Lie.lemma_lie_on_torus` in
+`IsingBulk/Analysis/LiePeriodicity.lean`. Its four proved clauses are:
+
+1. `EqOn (deriv^[j] (s ↦ integral(w A_s)))
+   (s ↦ integral((lieStep V)^[j](w A) s)) U`.
+2. Every density at stage k <= j is integrable on the same punctured domain.
+3. The real cutoff product rule, including exactly `-(V · grad w) A`.
+4. For any local factorization A = K B, with
+   `K = (1-Y)^-1 (1-Z)^-1` and the source transport equations, all k <= j
+   satisfy `D^k(w A) = K D^k(w B)` on U times the regular locus.
+
+`lemma_lie` is the corresponding endpoint with explicit stagewise periodic
+face identifications. `fixed_domain_lie`, `fixed_weight_cutoff`,
+`lie_stages_integrable`, and `fixed_domain_lie_kernel_of_regular` expose its
+clauses independently. None takes the desired derivative identity as input.
+
+**Precise geometric class.** `PuncturedTorus n` fixes one angular cell
+Q = [lower,upper] with each side length 2*pi and opposite faces identified.
+Its open regular locus R is invariant under integer angular translations.
+The integration measure is `volume.restrict (Q ∩ R)`, independent of s.
+For each exhaustion index k, `PeriodicBoxCut` is a finite union E_k of actual
+closed coordinate boxes inside Q, with pairwise null overlaps. E_k increases
+and its union is exactly Q ∩ R. The removed regions are Q minus E_k.
+These are geometric set and position hypotheses; no integral or derivative
+identity is included in them.
+
+Each box face has a coordinate axis, transverse rectangle and lower/upper
+orientation. A permutation matches the non-puncture faces. `FacesMatch`
+requires the same axis and transverse rectangle, opposite orientations,
+and either equal positions (internal face) or the two exterior periodic
+positions. Every unmatched face is certified to lie in the topological
+frontier of the actual removed region. The shape class is finite piecewise
+rectangular excision with such matching certificates, as permitted by the
+closure request. This is not a claim that arbitrary smooth puncture geometry
+has already been converted into this representation.
+
+**Actual instance.** `puncturedCircle` constructs the complete model for a
+circle punctured at the seam. Its regular locus is
+`sin(x_0/2) != 0`, its retained boxes are
+`[pi/(k+2), 2*pi-pi/(k+2)]`, and their union in the cell is `(0,2*pi)`.
+Openness, periodicity, endpoint/frontier certificates, monotonicity and
+coverage are proved. This is a symbolic geometric instance, not a finite
+test or an assumed analytic equality.
+
+**Flux and Stokes correspondence.** `signedFaceIntegral` integrates the
+normal component of the complex vector density with sign + on an upper
+face and - on a lower face. This is the outward orientation of the retained
+domain, pointing into a removed puncture at its inner boundary.
+`PeriodicBoxCut.boundary_eq_punctureFlux` derives cancellation from the
+geometric matches and periodic values. `PuncturedTorus.punctureFlux F k`
+is precisely the surviving sum. `VanishingFlux F` means that this sum tends
+to zero as k tends to infinity. `componentFlux` partitions these actual
+faces into any fixed finite set of puncture labels; `sum_componentFlux` and
+`vanishingFlux_of_components` prove that vanishing of every component implies
+the total condition. Assuming the weaker total condition makes the analytic
+theorem stronger; it does not require cancellation to be claimed for an
+individual nonvanishing puncture.
+
+`integral_convergence` derives convergence of the excised integrals from
+monotone geometric coverage, null overlaps and integrability. It is no longer
+an arbitrary caller field. `toFluxExhaustion` constructs the older analytic
+interface from this geometry, actual field regularity and VanishingFlux.
+`integral_divergence_zero` follows by the previously proved rectangular
+Bochner divergence theorem and uniqueness of limits. Thus the flux premise
+is a genuine Stokes boundary premise, not the desired integral identity.
+
+**Top forms and dimension.** `CoordinateTopForm n` represents the coefficient
+of `dx_0 wedge ... wedge dx_n`. `coordinateContraction` and
+`coordinateExteriorDerivative` explicitly use the alternating signs for the
+omitted coordinate. `coordinateLieDerivative_eq_divergence` proves their
+composition is `div(V A)`, and `lieStep_eq_parameter_sub_Lie` identifies D.
+The differential and integral are over real coordinates with complex
+coefficients. `positive_dimension_iff_successor` proves
+`0 < N iff exists n, N = n+1`, covering every source positive dimension.
+
+**Regularity and hypothesis comparison.** The manuscript leaves analytic
+well-definedness/interchange implicit. The endpoint exposes a sufficient
+admissible class explicitly, as required by the closure request. A
+`StageRegularity` record at each k < j requires parameter and spatial
+differentiability of the entire generated density on U times R, continuity
+in x of its parameter derivative, integrability of that density and its
+Lie-divergence, and a locally common integrable derivative majorant.
+For each s in U, one neighborhood W and one spatial majorant are chosen
+before all t in W and all x in R. Smoothness alone near a puncture is not
+asserted to imply domination or integrability. These analytic premises are
+separate from flux vanishing and must be checked in later applications.
+
+`StageRegularity.differentiationData` derives measurability from continuity
+on the measurable regular domain, and converts the pointwise local bounds
+into the almost-everywhere bounds of dominated complex differentiation.
+`StageRegularity.first_stage` proves the first derivative identity.
+`lieStep_integrable` proves integrability of the next density. No
+DifferentiationData record, integral limit, or desired identity is left as
+an unexplained independent field in the final source endpoint.
+
+**Periodicity, weight and iteration.** `AngularPeriodic` gives the ordinary
+2*pi coordinate translations for the original w, A_s and V_s. Derivative
+translation identities prove `angularPeriodic_lie_iterate`, and
+`periodic_stages_face_eq` supplies all stage face identifications. They are
+not separately assumed in `lemma_lie_on_torus`. The fixed weight has type
+`AngularSpace n -> Real` and is smooth on R; it has no s argument.
+`fixed_weight_cutoff` uses its real spatial differential only. Iteration
+always applies the actual `lieStep V` to the complete previous density.
+The same function V(s,x) remains inside the differentiated expressions, so
+its parameter dependence, divergence and generated coefficients are included.
+
+**Local kernel clause.** `FrozenKernel` contains the actual transport
+equations, parameter/spatial derivatives and nonzero denominators only on
+U times R. `transport_zero` and `nonzero` are proved consequences for K.
+`lieStep_congr_on` proves locality on the two open sets.
+`iterate_lieStep_factor_from_full` applies the frozen inverse K^-1 to the
+full densities. Consequently the final kernel clause uses the same stage
+regularity as the integral clause; there is no extra premise about generated
+numerator stages. Equality through a puncture or a kernel pole is never used.
+The conclusion preserves one copy of each explicit kernel factor; it does
+not assert unrelated pole bounds for coefficients already in V or B.
+
+**Quantifier and closure checklist.** n and j are arbitrary naturals; the
+source dimension is n+1. T, R and its entire geometric exhaustion are fixed
+before s. U is open. For every k < j and every s in U, regularity and actual
+flux vanishing are required. The conclusion holds for every s in U and the
+kernel clause for every k <= j and every regular x. No N-uniform constants
+are claimed by this lemma. No derivative identity is an assumption; no
+project axiom, real flow, holomorphic weight, or later Ising flux estimate
+is used. The source-to-coordinate Cartan, dimension, weight, periodicity,
+Stokes, interchange, iteration and local-kernel bridges are all proved.
+
+**Downstream boundary.** Selected-diagonal tubes, full-equality neighborhoods,
+their removal order and quantitative vanishing estimates are application
+obligations. They are not prerequisites for this generic source lemma. The
+old Long-Run B gap record incorrectly made those specific constructions a
+closure condition; this focused run corrects that scope. No jets, branch,
+FIRST or TAIL result is advanced. `eq:chartwiseLie` is not claimed here.
+
+### `lem:jets` — CLOSED
+
+**Authority and scope.** Exact source: regular-coordinate setup 2220–2288,
+`eq:branchregular` at 2231, `eq:twofield` at 2257, `eq:pullbackLie` at 2282,
+and `lem:jets` 2291–2342 in the verified manuscript blob. The preceding
+focused run supplied seventeen modules. This closure run adds eight modules
+and preserves those proofs. No quantitative branch, FIRST, TAIL or new Lie
+geometry is used. The source-facing endpoint is
+`IsingBulk.Jets.lemma_jets`, which constructs `SourceJetExpansion`.
+The structure is a proved conclusion bundle, never an assumed setup.
+
+**Notation and representation map.** `sourceS s = s+s^-1` and
+`sourceSPrime s = 1-(s^2)^-1`. `angularY v theta u` is
+`exp(v+i(u-theta))`; v and theta are fixed during parameter differentiation.
+`chartW` is the actual dispersion relation; `chartPhase` is the previously
+proved fourth-quadrant `lowerArccos` branch. `chartA=S'/(-angularG)` is
+source a_i, and `chartB=angularG/sin(chartPhase)` is source b_i.
+`aSum` means only sum a_i. It is distinct from `regularPairCoefficient`
+(the two-variable pair coefficient) and the global regular factor passed
+to `unfactoredNumerator`. `regularBeta` is the scalar even numerator in
+b(phi)=beta(phi)/phi, and is distinct from `regularResidualField` B.
+The recorded difference is delta=phi_q-phi_p; reversing the manuscript's
+occasionally opposite convention only changes the regular numerator's sign.
+
+**Chart and regular local form.** `chartPhase_parameter` and
+`chartPhase_angular` derive the actual derivatives from dispersion and the
+selected branch. `regularY_chartPhase` identifies the inverse with the
+same angular y, using Re(angularG)>0 to select the square-root sign.
+`regularY_hasDerivAt` and `one_body_jacobian` prove the source one-body
+Jacobian. These comparisons require the displayed denominators nonzero;
+they do not evaluate an uncanceled fraction at a true pole. The prior
+`regular_pair_cancellation` remains the exact complete-pair comparison
+where the original fraction is defined, including coincident variables
+when that fraction has no pole. `regularPairCoefficient_joint_analytic`
+extends the previous fixed-s result to joint (s,phi_p,phi_q) analyticity.
+The base parameter uses c_B=S_*-1=2*c_average-1, with |c_B|<1; c_B is not
+the cosine average. The actual global physical numerator is not instantiated.
+
+**Selected field and freezing.** `phase_sum_parameter`,
+`chartB_mul_chartA`, and `actualField_weighted_sum` identify sum b_i a_i
+with the actual parameter phase derivative. `actualField_sum` proves zero
+sum for the instantiated field. `actualY_eq_product`, `actualZ_eq_product`,
+`actualY_frozen`, `actualZ_frozen`, and `actual_simpleKernel_frozen` prove
+the source transport equations. `actualResidual_eq` identifies parameter
+chart derivative minus pushforward V with the algebraic residual;
+`actualResidual_two_entries` proves its literal two-entry formula for p!=q.
+These are symbolic finite-dimensional proofs for arbitrary dimension.
+
+**Selected poles and regular factors.** `regularBeta_even`,
+`regularBeta_analytic_base`, and `selected_factors_eventually` give the
+even analytic nonzero factor on a fixed scalar neighborhood, chosen before
+N. `selected_denominator_identity` rationalizes the difference of regularG
+using its explicit square. `selected_difference_pole` isolates H/delta.
+`selectedRegularFactor_analytic_base` and `selected_factors_eventually`
+prove the analytic nonvanishing denominator needed for that identity.
+This explicit rationalization supersedes the uninstantiated abstract
+divided-difference route. `field_one_pole`, `residual_one_pole`, and
+`residual_two_poles` prove the actual V/B/div B pole orders. The last uses
+local analytic numerator and continuity hypotheses; the actual base germs
+are supplied by `field_numerators_analytic`.
+
+The quotient comparisons require sin(phi_p), sin(phi_q), delta,
+regularG_p+regularG_q, and selectedDenominator nonzero. Kernel comparisons
+also require K!=0. Such hypotheses describe the regular locus; regular
+numerators are analytic through the selected diagonal. No identity through
+an actual pole is inferred from totalized division.
+
+**Pullback and one kernel factor.** `chart_mixed_commute` differentiates
+the actual b and parameter chart derivative. `residual_chart_spatial` and
+`chartJacobian_lie` derive the Jacobian/divergence calculation.
+`regularDensityStep_eq_divergence` identifies the coordinate coefficient of
+parameter differentiation plus Lie_B with partial_s F+div(B F).
+`pullbackLie_selected` proves the full real-weighted `eq:pullbackLie` and
+derives V/B differentiability from their formulas. Its chart hypotheses
+are s!=0, Re W>0, Im W>0, Re angularG>0, nonzero sin(phi_i), nonzero
+selected b difference, and the explicit inverse square-root slit domain.
+They are transparent local branch/regular-locus conditions, not global
+branch estimates. No flow or holomorphic extension of w is introduced.
+
+`regularKernel_frozen` and `regularKernel_inverse_frozen` prove freezing of
+the actual regular-coordinate K=(1-product regularY)(1-exp(-i sum phi)).
+`regularKernel_chart` proves its equality to the angular source kernel.
+`regularDensityStep_coefficient_numerator` derives the five regular-density
+product-rule contributions with one undifferentiated K denominator. The
+real cutoff contribution is retained separately by the proved pullback.
+
+**Genuine derivatives and semantic terms.** `directionJet` is recursive
+coordinate differentiation, not an order counter. `directionJet_perm` uses
+analytic second-derivative symmetry and locality. `numeratorJet_canonical`
+reorders each mixed word to parameter letters followed by spatial letters.
+`mixed_word_degree` identifies its total degree. `cutoffJet` is recursive
+real-coordinate differentiation; `cutoffJet_contDiff` proves that a smooth
+real cutoff supplies all these derivatives.
+
+`SourceJetTerm` records a cutoff word, mixed numerator word, selected pole
+order and an explicit regular coefficient. Its density is c*Q_jet/K.
+`unfactoredNumerator A` is literally the squared Vandermonde polynomial
+times A. `SourceJetTerm.unfactored_density` identifies its numerator word
+with the canonical partial derivatives of this unfactored object. No
+division by the Vandermonde or unselected differences occurs.
+
+`pole_power_fderiv` proves the general update
+D_e(r/delta^m)=(delta D_e r-m r D_e delta)/delta^(m+1), and
+`pole_power_fderiv_fixed` preserves m when D_e delta=0. The parameter
+direction has this property. `SourceJetTerm.child_coefficient` identifies
+every child coefficient with the actual derivative or V/B/div B product.
+It includes derivatives of coefficients generated at earlier stages.
+`SourceJetTerm.stepValue_eq_children` proves the exact six-action sum,
+including cutoff derivatives, using the actual kernel freezing proof.
+`SourceJetTerm.source_step` connects this differential expression to
+lieStep of the real-chart term, with its actual Jacobian.
+`sourceValue_differentiable` and `lieStep_finite_sum` supply the regularity
+and finite-sum linearity used in the proved local iteration.
+
+**All-order equality and locality.** `sourceJetTerms_all_order` proves the
+actual iterated `lieStep (actualField v theta p q)` equals the sum of
+`SourceJetTerm.sourceValue` over `sourceJetTerms p q j`. Its initial density
+is exactly `initialSourceDensity v theta w (unfactoredNumerator A)`:
+the real weight times `chartPullback(Q/K)`, including the actual Jacobian.
+`sourceTermSum_zero` identifies the singleton term with pole 0, empty words
+and regularPart 1. The successor uses `lieStep_congr_on` with the induction
+equality on open parameter and angular sets, then the proved finite-sum
+linearity and `source_step_children`. That wrapper reuses `source_step`,
+`stepValue_eq_children` and `sourceValue_eq`. The entire preceding density
+remains under the operator; V and generated coefficients are differentiated.
+No pointwise equality is substituted into a derivative. This module was
+hash-frozen after its first successful build and remained unchanged while
+the estimates were developed.
+
+**Two domains, with different roles.** `coefficient_neighborhoods` and
+`scalar_bounds_uniform` construct an open scalar set U about (s_*,0) and
+an open selected-pair set P about (s_*,0,0), before N,p,q. A coefficient
+point satisfies (s,phi_i) in U for every i and (s,phi_p,phi_q) in P.
+These sets contain the selected diagonal; neither the coefficient bound
+nor its construction assumes delta!=0 or K!=0. In particular they include
+the full zero-coordinate base for every dimension.
+
+For the actual expression, `ActualJetPoint` exposes the branch, slit and
+nonzero-denominator conditions listed above, including delta!=0 and K!=0,
+and the scalar analytic field germs (`CoefficientPoint`). The all-order
+theorem is on any fixed open parameter/angular product S x R satisfying
+those explicit conditions throughout. This is the common local chart for
+every stage through j; no stage-dependent domains are used. Such a chart
+is the regular-chart input in the source setup, not a derivative identity.
+`CoefficientPoint.regular_numerators` derives actual V/B analyticity from
+the scalar formulas, and `sourceJetTerms_analytic` derives every generated
+term's analyticity. `regular_coefficients` also proves `CoefficientPoint`
+throughout the uniform coefficient neighborhood. The actual equality is
+valid on any admissible regular chart; the estimates apply where its image
+lies in these fixed scalar/pair neighborhoods. There is no claim of one
+literal full-dimensional open set shared across different N.
+
+**Uniform field bounds and finite budget.** `JetBound` records actual joint
+complex iterated Fréchet-derivative operator norms through a finite order,
+together with local analyticity. Thus it controls coordinate jets without
+an extra dimension factor. `pairFactor` consists of the actual analytic
+H, the two selected-field correction factors, and delta. Their local
+analyticity and `finite_analytic_jets_bounded` give constants before N.
+`scalarCoordinate_norm` and `pairCoordinate_norm` are at most one.
+The aSum estimate reuses `aSum_jet_bound`, the same proved estimate behind
+`aSum_uniform_jets`. No N-dimensional compactness is used.
+
+For scalar jets bounded by D through J, `ScalarBounds.field` and
+`ScalarBounds.residual` bound the actual regular numerators by
+3*2^J*D^2*N. With one extra scalar derivative,
+`ScalarBounds.divergence` bounds div B's regular numerator by
+2^J*(D+2)*(3*2^(J+1)*D^2)*N^2. `ScalarBounds.all_fields` combines these
+and the delta bound into B*N^2, with B=`fieldBoundConstant J D`>=2.
+These statements are about the cleared regular numerators, across delta=0.
+
+For recurrence depth j and any fixed requested output jet order r, the
+scalar budget is **j+r+1**. The extra one supplies div B; each child consumes
+at most one further derivative of its parent regularPart. The generated
+bound at depth k has remaining budget j+r-k. `child_jet_bound` checks all
+six exact updates, including D_s r, the full poleJetNumerator, div B,
+numerator-spatial, numerator-parameter, and the real-cutoff child.
+`sourceJetTerms_valid` gives m<=2j when the scalar m enters the estimate.
+Neither m nor the particular generated term is an unbounded input.
+
+`sourceJetTerms_budget_bound` proves this induction. Writing J=j+r,
+B=`fieldBoundConstant J D` and H=`stepScale J (2*j) B`, the resulting
+`generated_regularPart_bound` is **H^j*N^(4*j)** through output order r.
+`sourceJetTerms_uniform` chooses an integer C before N that dominates this
+prefactor and exponent and the existing `sourceJetTerms_source_bound`
+constant. It proves both norm<=C*N^C and length<=C*N^C for the same list.
+The source's "fixed coefficient jets" is made explicit by choosing r
+before the neighborhoods and C; no bound uniform over unbounded r is
+asserted. This is the fixed-jet dependence suppressed in the symbol C_j.
+
+**Bundled closure and quantifiers.** `lemma_jets` has order:
+fixed base s_*, c_B with s_*!=0, S_*=1+c_B, |c_B|<1; fixed j and output
+jet order r; then choose positive integer C, U and P; then every n and
+every distinct p,q in Fin(n+1). Its `SourceJetExpansion` projections are:
+`actual_iteration`, `source_form`, `pole_certificate`, `filtration`,
+`regular_coefficients`, and `count`. All use `sourceJetTerms p q j`.
+`source_form` reuses `unfactored_density` and canonical mixed words,
+with exactly one undifferentiated kernel denominator. The existing
+`sourceJetTerms_valid` and `cleared_coefficient` are reused directly.
+
+The representation N=n+1 covers every positive finite dimension; the
+explicit hypothesis p!=q implies N>=2 (`distinct_pair_dimension`). No
+selected-field identity for p=q is assumed or claimed by the endpoint.
+The coefficient estimates internally need no distinctness, but the
+source-facing bundle and uniform selected-pair theorem require it.
+
+**Hypothesis and downstream audit.** Remaining inputs are the source base
+data, a smooth real fixed cutoff, an admissible open regular chart, and
+analyticity of the preceding local regular factor A there. Q=Delta^2*A is
+derived analytic and remains unfactored. The result does not assume any
+stage identity, generated-term estimate, recurrence conclusion, frozen
+kernel equation, or uniform constant depending on N. It does not require
+analyticity of w in a complex variable. The regular factor input is the
+preceding local setup explicitly allowed for this lemma; identifying the
+full global Ising term is a later application, not a premise imported here.
+No E1/E2/E3, MR1, W1/W2 or unformalized manuscript lemma is used. No source
+closure obligation remains for lem:jets. Branch/FIRST/TAIL were not advanced.
+
+### `lem:branch` — CLOSED
+
+**Source.** Displayed statement 1315-1349; proof 1350-1397. The source definitions
+of S, W, radial parameter and original radius are at 226-305; lambda_* and
+occupancy at 687-725; branch supports and inner plateau at 968-1000; the lower
+sheet at 1110-1128. All references are to the verified manuscript blob above.
+
+**Endpoint.** `IsingBulk.Branch.lemma_branch d` constructs a nonempty
+`BranchEstimates d`. Its fields prove the normal form, branch quadrant, both
+derivative bounds, negative attenuation, length, source current range and
+current estimates on one common closed arc. Its constructed `original` field
+contains the slope, concavity and differentiability estimates. Proved
+`BranchEstimates.positive_slope`, `.concavity`, `.separated`, `.comparable`,
+`.original_sheet`, `.current_sheet`, `.current_occupancy`, `.source_inner_radius`, and `.length_restrict`
+expose these conclusions on the common arc. The two
+`OriginalQuotientData.*_eventually` theorems give the exact asymptotic regime
+interpretation. Neither conclusion structure is assumed by `lemma_branch`;
+`original_quotient_data` constructs the inner bundle from actual analytic proofs.
+`CurrentParameters` only names the source parameter range and is not a proof.
+
+**Fixed setup, not assumed estimates.** `LocalBranchData` has fixed angles
+0<theta<pi/2, 0<thetaB<pi, cos(thetaB)=2*cos(theta)-1, c0>0,
+2*sin(theta)-c0*sin(thetaB)>0, tau>0 and alpha>0. These are precisely the allowed
+preceding local source data. `a=sin(thetaB)` and `b=2*sin(theta)-c0*a` are
+definitions; their positivity is proved. The structure contains no normal form,
+derivative, attenuation, slope, concavity, quotient or cone estimate. The angle
+range and cosine relation identify the manuscript thetaB without an arbitrary
+inverse-cosine choice. No prime-family reconstruction is needed for this local
+lemma. Occupancy N>0 and 0<=P<=N is explicit preceding setup in the corollary.
+
+**Actual expressions and branch.** `currentW d epsilon t u` is exactly
+`plateauW (radialParameter theta epsilon) (-c0*epsilon+tau*t/2) thetaB u`.
+`currentW_dispersion` identifies it with S(s_epsilon)-(y+y^-1)/2 for the
+actual exponential plateau y. Original objects are t=0, and
+`originalW_dispersion` identifies y with exp(-c0*epsilon+i*(-thetaB+u)).
+`originalD/currentD=1-W`, `originalPhase/currentPhase=lowerArccos W`, and
+`originalRealPhase=Re(originalPhase)` are literal definitions.
+
+The preserved `lowerArccos W=-i log(W+i sqrt(1-W^2))` solves cos(phi)=W.
+`current_branch_inclusion` and its original specialization prove Re W>0 and
+Im W>0 on fixed small arcs. The endpoint's sheet projections use the proved
+orientation 0<Re phi<pi/2 and Im phi<0; the preserved uniqueness theorem
+identifies this with the source fourth-quadrant sheet. No arbitrary square-root
+branch or presumed branch-domain inclusion is used.
+
+**Normal form and modulus.** `original_normal_form` proves explicitly
+norm(D-(a*u-i*b*epsilon)) <= C*(u^2+epsilon*abs(u)+epsilon^2), with C and a
+positive radius before epsilon,u. The proof uses the exact radial trace and
+a local analytic cosh remainder. Its analytic extension is identified with
+the actual radial expression before estimates are transferred.
+
+`current_imaginary_factorization` keeps beta=Im W=-Im D exact:
+beta=epsilon*betaE+tau*t*betaT, with betaE(0)=b>0 and betaT(0)=a/2>0.
+`current_imaginary_margin` proves c*Q<=beta<=C*Q. These coefficients may depend
+on u. `current_real_remainder` proves abs(Re D-a*u)<=C*(u^2+Q^2), Q=epsilon+tau*t.
+Thus the real O(E^2) center displacement is retained, including at u=0; no
+Re D<=0 assumption is made there. `current_modulus_Q` proves both modulus
+bounds from these actual components. `current_factors_near_zero` supplies
+1<=norm(2-D)<=3 and a/2<=norm(D_u)<=2*a. The original conclusions follow at t=0.
+
+**Derivative transfer, slope and attenuation.** The proof takes the shorter
+direct logarithmic/square-root route rather than introducing h(D).
+`sin_lowerArccos`, `currentPhase_hasDerivAt` and `currentPhase_deriv` give the
+actual real-u derivative D_u/sqrt(1-W^2). The norm denominator is
+sqrt(norm(D*(2-D))). `current_derivative_magnitude_Q` proves two-sided bounds;
+`current_derivative_magnitude` converts Q to E=epsilon+t using the preserved
+min(1,tau), max(1,tau) scale comparison. This is uniform for fixed tau>0, not
+as tau tends to zero.
+
+`current_positive_cone` proves the exact 2/3 bound using a square-root real
+margin and D_u near the positive a. `original_positive_slope` combines this
+with the norm bounds and the proved identity x'=Re phi'. The endpoint also
+proves strict x'>0. `logarithmic_attenuation` estimates the actual logarithmic
+inverse cosine. Combined with the actual negative-side factor margin it gives
+`current_negative_attenuation` and its original specialization, tolerating the
+quadratic center displacement. These are not model-only square-root estimates.
+
+**Length and second derivative.** `original_branch_length` proves integrability
+and a uniform bound on a fixed interval [-r,r]. Its scalar majorant integrates
+to at most 4*C*sqrt(r), independently of positive epsilon. The final bundle
+restricts to its smaller common arc; `BranchEstimates.length_restrict` gives
+the integral bound on any source support subset of that arc.
+
+`currentPhase_second_hasDerivAt` differentiates the actual first derivative:
+phi''=D_uu/sin(phi)-D_u^2*W/sin(phi)^3. The expression for the first derivative
+holds on an eventual open quadrant neighborhood before it is differentiated.
+`realPhase_second_deriv` similarly uses locality to prove x''=Re phi''.
+No bare pointwise identity is rewritten under a derivative.
+
+For concavity the representation epsilon=u*v factors D=u*scaledOriginalD.
+`scaledSecond_identity` scales the already-computed derivative at fixed epsilon;
+it does not differentiate along epsilon=u*v. The scaled expression is continuous
+at (u,v)=(0,0), where it equals -a^2/sqrt(2*a)^3<0. This proves
+`original_concavity` for u>=C0*epsilon, with c/(u*sqrt(u)) on the left.
+`reciprocal_three_halves_rpow` and the endpoint projection identify this exactly
+with c*u^(-3/2). `reciprocal_sqrt_rpow` likewise identifies reciprocal square
+roots with the source negative half powers.
+
+**Separated and comparable regimes.** All constants below belong to the
+constructed inner bundle, before the varying parameters. Write a,C,k,C0 for
+its positive slope lower, upper, concavity and scale constants (this a is a
+bound constant, distinct from the normal-form coefficient d.a).
+
+The separated threshold is R_sep=4*C^2*(C0+1)/a^2>0. If R_sep*epsilon<=M
+and 0<=m<=M/2, `separated_difference` gives the lower constant
+min(k/4,a/2)>0 over sqrt(m+epsilon). The m>=C0*epsilon case uses concavity
+on [m,2m] and monotonicity to M. The m<=C0*epsilon case uses the actual slope
+lower bound at m and the upper bound at M; the threshold makes the latter
+at most half the former. Thus the full source range, including m=0, is covered.
+`separated_quotient` proves denominator positivity and upper bound
+(C^2/min(k/4,a/2))/sqrt(M).
+
+For M/2<m<M and C0*epsilon<=m, the actual slope is differentiable and the
+mean value theorem gives slope(m)-slope(M)>=k*(M-m)/(M*sqrt(M)). This is an
+exact alternative to integrating concavity. `comparable_quotient` proves
+denominator positivity and upper bound (2*C^2/k)*sqrt(M)/(M-m). Thus R_cmp=C0
+is a fixed sufficient threshold, not an assumed positive denominator.
+
+`ratio_atTop_eventually_threshold` proves for any filter that positive epsilon
+and M/epsilon tending to atTop imply eventually R*epsilon<=M for every fixed R.
+`separated_eventually` and `comparable_eventually` apply this to the actual
+quotient bounds, under the corresponding eventual local arc conditions.
+An arbitrary filter includes uniform parameter-family regimes. This supplies
+the source meanings of M/epsilon tending uniformly to infinity and m much
+larger than epsilon; no fixed-ratio assertion replaces the asymptotic premise.
+
+**Current range and order of choices.** For each fixed d, first choose analytic
+and sector margins, branch radii, estimate constants, C0 and R_sep/R_cmp.
+`lemma_branch` then takes a smaller common closed radius r and uses t0=r as
+the fixed current threshold. Only afterwards does `source_current_range`
+choose epsilon0 small enough that epsilon^alpha<t0 for every 0<epsilon<=epsilon0.
+This follows from continuity at zero and alpha>0. Multiplying lambda<=epsilon^alpha
+by rho in [0,1] proves 0<=t=lambda*rho<t0 in Lean. The final epsilon0 is also
+intersected with all original analytic/length restrictions.
+
+`BranchEstimates.current_occupancy` substitutes rho=P/N from N>0, 0<=P<=N.
+It exposes both the small-t conclusion and the actual current estimates on
+abs(u)<=r. `BranchEstimates.source_inner_radius` proves the source restriction:
+choose deltaB<=r and L>=1, then r0=deltaB/(2*L^2) has 2*r0<=r. This retains
+the manuscript's outer/inner support relation. `length_restrict` covers the
+outer source support. Current
+derivatives are of `fun u => currentPhase d epsilon (lambda*(P/N)) u`:
+P,lambda,t,E,Q are fixed, and s is always s_epsilon, not a free complex parameter.
+Every constant and radius precedes epsilon,N,lambda,P/N,u,m,M. The source's
+generic c,C may be chosen by the minimum/maximum of the finitely many fixed
+positive constants; no varying-parameter dependence is introduced.
+
+**Closure and dependency audit.** Every displayed clause is proved and exposed
+by the constructed bundle and the stated projections/eventual theorems. No
+normal-form, derivative, attenuation, concavity, quotient or cone bound is an
+external hypothesis. No source-serving open proposition remains. The exact
+local identities cited by the paper from lem:originaldisk were derived directly;
+the global originaldisk, selector, contraction, MR1, W1/W2, FIRST and TAIL claims
+are not premises. The proof-internal chord and |phi'|/|1-Z| consequences are
+optional downstream results and are not claimed here. Previous closed proofs
+and the original three Branch modules remain unchanged. The final clean build
+and project-wide axiom audit certify the declarations separately from this
+statement/domain/quantifier/representation audit.
+
+## Trust and excluded evidence
+
+All production modules are imported by `IsingBulk.lean` and audited by module
+origin, including generated safe declarations. The only allowed reachable axioms
+are `propext`, `Classical.choice`, and `Quot.sound`. Classical choice is used for
+ordinary mathematical constructions such as fraction fields and polynomial
+normalization. There are no project-local mathematical axioms, holes, or native
+decision shortcuts. The audit is a metaprogram and supplies no mathematical proof.
+
+No external E1/E2/E3 premise is used by these algebraic results. The manuscript's
+MR1 tail claims, W1/W2 records, finite diagnostics, and release status remain
+evidence limitations; none contributes a theorem to this project.

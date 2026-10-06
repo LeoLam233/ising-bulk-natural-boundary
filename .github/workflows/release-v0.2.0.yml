@@ -1,0 +1,102 @@
+name: Publish accepted Ising v0.2.0
+on:
+  workflow_dispatch:
+    inputs:
+      expected_commit:
+        description: Exact full-CI-tested main commit
+        required: true
+        type: string
+      expected_tree:
+        description: Exact full-CI-tested Git tree
+        required: true
+        type: string
+      full_ci_run:
+        description: Successful full release-acceptance workflow run ID
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main' && github.repository == 'LeoLam233/ising-bulk-natural-boundary'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      actions: read
+    env:
+      EXPECTED_COMMIT: ${{ inputs.expected_commit }}
+      EXPECTED_TREE: ${{ inputs.expected_tree }}
+      FULL_CI_RUN: ${{ inputs.full_ci_run }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify exact main and successful full CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          [[ "$EXPECTED_COMMIT" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$EXPECTED_TREE" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$FULL_CI_RUN" =~ ^[0-9]+$ ]]
+          test "$(git rev-parse HEAD)" = "$EXPECTED_COMMIT"
+          test "$(git rev-parse HEAD^{tree})" = "$EXPECTED_TREE"
+          test "$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)" = "$EXPECTED_COMMIT"
+          mkdir -p "$RUNNER_TEMP/ising-release"
+          gh api "repos/$GH_REPO/actions/runs/$FULL_CI_RUN" > "$RUNNER_TEMP/ising-release/full-run.json"
+          python3 - "$RUNNER_TEMP/ising-release/full-run.json" <<'PY'
+          import json,os,sys
+          r=json.load(open(sys.argv[1]))
+          assert r['head_sha']==os.environ['EXPECTED_COMMIT']
+          assert r['path']=='.github/workflows/lean-full-acceptance.yml'
+          assert r['status']=='completed' and r['conclusion']=='success'
+          PY
+          python3 lean/ci/verify_payload.py
+          gh run download "$FULL_CI_RUN" --name "ising-full-acceptance-$EXPECTED_COMMIT" --dir "$RUNNER_TEMP/ising-release/full-ci"
+          python3 lean/ci/prepare_release_assets.py --state "$RUNNER_TEMP/ising-release" --commit "$EXPECTED_COMMIT" --tree "$EXPECTED_TREE" --run "$FULL_CI_RUN"
+      - name: Create annotated tag and draft without replacing history
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          STATE="$RUNNER_TEMP/ising-release"
+          gh api --paginate "repos/$GH_REPO/releases?per_page=100" --jq '.[] | select(.tag_name == "v0.2.0") | .id' > "$STATE/existing-releases.txt"
+          git ls-remote --tags origin refs/tags/v0.2.0 > "$STATE/existing-tag.txt"
+          test ! -s "$STATE/existing-releases.txt"
+          test ! -s "$STATE/existing-tag.txt"
+          gh api --method POST "repos/$GH_REPO/git/tags" -f tag=v0.2.0 -f object="$EXPECTED_COMMIT" -f type=commit -f message="Ising v0.2.0 Lean formalization. Exact tree $EXPECTED_TREE. Full CI run $FULL_CI_RUN passed. Three internal adversarial rounds; explicit E1/E2/E3 premises retained. Proof payload bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2." > "$STATE/tag-object.json"
+          TAG_OBJECT="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["sha"])' "$STATE/tag-object.json")"
+          [[ "$TAG_OBJECT" =~ ^[0-9a-f]{40}$ ]]
+          gh api --method POST "repos/$GH_REPO/git/refs" -f ref=refs/tags/v0.2.0 -f sha="$TAG_OBJECT" > "$STATE/tag-ref.json"
+          gh release create v0.2.0 --verify-tag --draft --title 'Ising v0.2.0 — Lean formalization' --notes-file RELEASE_v0.2.0.md "$STATE"/assets/*
+      - name: Verify every uploaded asset digest and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          STATE="$RUNNER_TEMP/ising-release"
+          gh api --paginate "repos/$GH_REPO/releases?per_page=100" --jq '.[] | select(.tag_name == "v0.2.0")' > "$STATE/draft.json"
+          python3 - "$STATE" <<'PY'
+          import hashlib,json,pathlib,sys
+          p=pathlib.Path(sys.argv[1]);r=json.load(open(p/'draft.json'))
+          expected={x.name:x for x in (p/'assets').iterdir()};assets=r['assets']
+          assert r['draft'] and len(assets)==len(expected) and len({a['name'] for a in assets})==len(assets)
+          for a in assets:
+              x=expected[a['name']]
+              assert a['state']=='uploaded' and a['size']==x.stat().st_size
+              assert a['digest']=='sha256:'+hashlib.sha256(x.read_bytes()).hexdigest()
+          (p/'ASSET_INTEGRITY_PASS.json').write_text(json.dumps({'release_id':r['id'],'assets':assets,'status':'PASS_GITHUB_API_DIGEST_SIZE_COUNT'},indent=2)+'\n')
+          PY
+          gh release edit v0.2.0 --draft=false
+          gh api "repos/$GH_REPO/releases/tags/v0.2.0" > "$STATE/published-release.json"
+      - name: Preserve publication receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ising-v020-publication-${{ github.run_id }}
+          path: ${{ runner.temp }}/ising-release/
+          if-no-files-found: warn

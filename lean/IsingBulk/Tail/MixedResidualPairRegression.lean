@@ -1,0 +1,5 @@
+import IsingBulk.Tail.MixedActualResidualCoreJets
+import IsingBulk.Tail.MixedCompactPairJets
+#print axioms IsingBulk.Tail.mixed_actual_residual_core_jets
+#print axioms IsingBulk.Tail.actual_residual_dimension_scale
+#print axioms IsingBulk.Tail.mixed_actual_compact_pair_jets

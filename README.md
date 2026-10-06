@@ -4,6 +4,10 @@
 
 [中文说明](README.zh.md) · [Paper PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf)
 
+## Lean formalization v0.2.0
+
+The complete internal form-factor and absolute-tail chain is formalized in [Lean](lean/README.md). The physical E1/E2 and published fixed-order E3 premises remain explicit. The source has passed three internal adversarial review rounds; full remote build, axiom/control checks and fresh kernel replay are required on the tagged commit. Detailed evidence is supplied with the [v0.2.0 release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.0).
+
 ## Object and claim
 
 This repository presents an AI-assisted candidate proof concerning the **zero-field, isotropic, infinite square-lattice bulk susceptibility**, continued from its low-temperature pure-phase exterior germ. It claims that the unit circle in $s=\sinh(2\beta_{\rm phys}J)$ is a natural boundary. The observable includes all lattice separations and the entire even-particle expansion. See [precise claims](CLAIMS.md) and [external premises](provenance/EXTERNAL_PREMISES.md).

@@ -1,0 +1,70 @@
+name: Ising Lean full release acceptance
+on:
+  push:
+    branches:
+      - codex/ising-lean-final-20261006
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-build-axioms-controls-kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+        working-directory: lean
+    env:
+      LEAN_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify full proof payload
+        run: python3 ci/verify_payload.py
+      - name: Install exact official runtime
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+          echo "ISING_LEAN_BIN=$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_ENV"
+      - name: Fetch pinned dependency cache and establish clean project
+        run: |
+          "$ISING_LEAN_BIN/lake" -f lakefile.toml exe cache get
+          python3 ci/verify_payload.py --dependencies
+          python3 - <<'PY'
+          import pathlib,shutil
+          for name in ('build','config'):
+              path=pathlib.Path('.lake')/name
+              if path.exists():
+                  if path.is_dir() and not path.is_symlink(): shutil.rmtree(path)
+                  else: path.unlink()
+          PY
+      - name: Cheap source trust and exact identity preflight
+        run: |
+          mkdir -p "$RUNNER_TEMP/ising-evidence"
+          python3 tools/continuation/preflight.py --lean-bin "$ISING_LEAN_BIN" --output "$RUNNER_TEMP/ising-evidence/preflight.json"
+          python3 - "$RUNNER_TEMP/ising-evidence/preflight.json" <<'PY'
+          import json,sys
+          expected=json.load(open('ci/accepted_identity.json'))
+          actual=json.load(open(sys.argv[1]))
+          assert all(actual[k]==v for k,v in expected.items()), 'Frozen identity mismatch'
+          print('ALL_THREE_IDENTITIES_MATCH')
+          PY
+          python3 control_packet/continuation/run_manifest_controls.py
+      - name: Full clean build, axioms, endpoints, controls and fresh kernel replay
+        run: |
+          python3 -u tools/continuation/final_gate.py --lean-bin "$ISING_LEAN_BIN" --approved-preflight "$RUNNER_TEMP/ising-evidence/preflight.json" --logs "$RUNNER_TEMP/ising-evidence/full" --threads 2 --execute
+      - name: Final payload identity
+        run: python3 ci/verify_payload.py --dependencies
+      - name: Preserve complete execution evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ising-full-acceptance-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/ising-evidence/
+            lean/control_packet/continuation/results/
+          if-no-files-found: error
+          retention-days: 90

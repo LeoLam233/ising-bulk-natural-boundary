@@ -1,0 +1,6 @@
+import IsingBulk.Tail.MixedActualPairFamily
+import IsingBulk.Tail.MixedCurrentResidualCoreJets
+#print axioms IsingBulk.Tail.mixed_actual_current_residual_core_jets
+#print axioms IsingBulk.Tail.mixed_actual_active_branch_compact_pair_jets
+#print axioms IsingBulk.Tail.mixed_actual_active_compact_pair_jets
+#print axioms IsingBulk.Tail.mixed_actual_sector_pair_family

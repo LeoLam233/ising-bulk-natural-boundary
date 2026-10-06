@@ -1,0 +1,27 @@
+{
+  "repository": "LeoLam233/ising-bulk-natural-boundary",
+  "release": "v0.1-rc4",
+  "repository_snapshot_commit": "1b4b506c9cb19d5fdbf9f59d89c7a179739d337d",
+  "expected_tree_sha": "40162496194df9243c022abb423812da73218c5d",
+  "manuscript_path": "paper/manuscript.tex",
+  "manuscript_raw_url": "https://raw.githubusercontent.com/LeoLam233/ising-bulk-natural-boundary/1b4b506c9cb19d5fdbf9f59d89c7a179739d337d/paper/manuscript.tex",
+  "local_copy": "source_snapshot/manuscript.tex",
+  "expected_git_blob": "1c6c0f47e3f1e4d13e59b49c52c18414e9dd3939",
+  "computed_git_blob": "1c6c0f47e3f1e4d13e59b49c52c18414e9dd3939",
+  "sha256": "2f3ad3af8b893e2387304a680dcf9cc5fa6b12a389e3ab7486e5c71512fd6235",
+  "verification": "Commit-specific raw download plus expected Git blob match; no checkout of historical branches",
+  "workspace_mode": "Separate formalization workspace; no source repository checkout modified",
+  "packet_path": "control_packet/Ising_Lean_Input_v0.1.2",
+  "packet_checksum_receipt": "../run_logs/packet_checksums.json",
+  "source_context_lines": {
+    "schur": "2099-2119",
+    "compact_exterior": "2130-2144",
+    "cyclotomic": "2010-2041",
+    "nickel_definition": "329-336",
+    "resultant": "396-413",
+    "prime": "345-392"
+  },
+  "external_physics_premises_used": [],
+  "upstream_payload_modified": false,
+  "remote_mutations": []
+}

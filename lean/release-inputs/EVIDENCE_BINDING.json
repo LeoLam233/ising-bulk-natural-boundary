@@ -1,0 +1,72 @@
+{
+  "name": "Ising_v0.2.0_Internal_Evidence.tar.gz",
+  "bytes": 6482503,
+  "sha256": "e21f340e675e657dff75844f8e11acffe0b68a93ef0a6726c5afa708c1c86b38",
+  "parts": [
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part000",
+      "bytes": 524288,
+      "sha256": "b26c7662e31634f961927e7a537ea489996f89830a1979b333a44967ca0cf5bd"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part001",
+      "bytes": 524288,
+      "sha256": "15ef71ca70b02eac77d016b16b74c96d11936aa2d0437a52f131bc2b605ebd6b"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part002",
+      "bytes": 524288,
+      "sha256": "f73750f39015ca0b532347366598afd31344965ffe22d5eb0dbe82f374770c84"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part003",
+      "bytes": 524288,
+      "sha256": "f514a29e79af7a4895fd3a1108569e0a60f3c79754beca263113d5bd1b236c77"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part004",
+      "bytes": 524288,
+      "sha256": "570d70b24dfed2f0853d7aecfcb8ba9d1b8fcd29f6a27182f5c69ff4be8a6286"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part005",
+      "bytes": 524288,
+      "sha256": "354be663c35875b95fdfcfd751e8399d9ecbf6dcc24ecce14a588f8f8a4c6a7a"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part006",
+      "bytes": 524288,
+      "sha256": "ca9c7bd17b1ca4886987caad545cdfe3f86935fc901f83944e100a7cb0d1f5f6"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part007",
+      "bytes": 524288,
+      "sha256": "33faf6e95a7429b7bdb1b29bb4b90ad86d9ee2cfc95c93eb9e333be948b0339f"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part008",
+      "bytes": 524288,
+      "sha256": "35b27a6bad6537cc2f2fec6865b7a7e6b49530138fa3210163736ef899f19b82"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part009",
+      "bytes": 524288,
+      "sha256": "9c18ec5f291444f432ab5751412c450609e15b53efe83bb6b12e4f9f4c5ee072"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part010",
+      "bytes": 524288,
+      "sha256": "ba2483076b830afd8a9d344da614725960164937d67d331ba0d273dc7208521f"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part011",
+      "bytes": 524288,
+      "sha256": "53eb1ee35ea716c23d554f7b53633fe6e2e6f073c4962625c179addc0b4628b0"
+    },
+    {
+      "name": "Ising_v0.2.0_Internal_Evidence.tar.gz.part012",
+      "bytes": 191047,
+      "sha256": "4a826c0359af8a51bc31be9c07d8f272f5ec0716075211ce438ce730c25c670f"
+    }
+  ]
+}

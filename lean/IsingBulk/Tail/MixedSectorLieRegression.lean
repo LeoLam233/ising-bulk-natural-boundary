@@ -1,0 +1,6 @@
+import IsingBulk.Tail.MixedSectorLieIntegral
+#print axioms IsingBulk.Tail.iterate_lieStep_zero_off_weight
+#print axioms IsingBulk.Tail.supported_periodic_lie_integral
+#print axioms IsingBulk.Tail.original_mixed_sector_lie_integral
+#print axioms IsingBulk.Tail.current_mixed_sector_lie_integral
+#print axioms IsingBulk.Tail.SectorLieIntegralIdentity.iteratedDeriv_eq
