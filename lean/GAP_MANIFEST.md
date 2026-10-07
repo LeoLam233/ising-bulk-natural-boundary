@@ -1,11 +1,17 @@
 <!-- CONTINUATION_20261006_CURRENT_BEGIN -->
-# Current Ising continuation
+# Current Ising continuation: v0.2.1
 
-The exact proof payload `bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2` has completed the current-round guarded desktop clean build (1,071 production imports plus root, all 1,072 actually Built), 9,199-declaration axiom census, twelve endpoint checks, literal interface/negative controls, and genuine full fresh kernel replay. Exact encoded root axioms are `propext`, `Classical.choice`, `Quot.sound`.
+The frozen v0.2.0 baseline (9,199 safe declarations) received an independent adversarial audit with verdict `PASS_WITH_NONBLOCKING_ISSUES` and no blocking or load-bearing mathematical defect. The Lean/post-audit release [v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1), published on 2026-10-07, completes targeted remediation of those findings, including verification hardening and complete TAIL endpoint packaging. Its final validation is separate from that baseline audit; no independent re-audit of the entire v0.2.1 tree is claimed.
 
-This is local build/kernel/trust evidence. Source/semantic and reverse-dependency audits remain pending; remote CI is deferred, not passed. The normalized natural-boundary theorem retains E3 and the physical theorem retains E1/E2/E3. No complete final scientific acceptance is claimed yet.
+- Release commit: `de23d9475744fb4625666142d5a03b3d688195e6`
+- Release tree: `c4f8dd4e81dba9e88e18dadfdb0778cf3771d1d2`
+- Proof payload: `6989420e855e0c3d882ce51e302dbc6579890da81aa0fd866176bab583067715`
 
-Historical counts, stop instructions, open-tail claims and earlier audit schedules below remain historical. Current source mapping is in `CONTINUATION_SOURCE_CORRESPONDENCE.md`; exact declaration inventories are the separately named continuation TSVs. The old FIRST inventories are not complete current inventories.
+The exact v0.2.1 commit passed a clean full build, the project-wide axiom audit of 9,200 safe declarations, 14/14 endpoint checks, 13/13 targeted production regressions, 13/13 manifest controls, 6/6 Lean controls, and fresh kernel replay. The axiom union is exactly `propext`, `Classical.choice`, `Quot.sound`. Exact-commit [full CI run 37518976590](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/37518976590) and [smoke CI run 37518976672](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/37518976672) both completed with `SUCCESS`.
+
+The core natural-boundary theorems are unchanged: the normalized theorem retains E3 and the physical theorem retains E1/E2/E3 as explicit external literature premises. The manuscript remains the frozen `v0.1-rc4` AI-assisted candidate proof; no independent human expert validation or peer review is claimed. Cached dependency binary/source correspondence remains trusted; build and fresh replay use the same Lean kernel implementation; the expected-ID pin is inside the Git commit, not cryptographically external.
+
+Historical counts, stop instructions, open-tail claims and earlier audit schedules below remain historical. Current source mapping is in [CONTINUATION_SOURCE_CORRESPONDENCE.md](CONTINUATION_SOURCE_CORRESPONDENCE.md). Historical declaration inventories and receipts remain stage-specific evidence, not complete current-project inventories.
 <!-- CONTINUATION_20261006_CURRENT_END -->
 
 <!-- ASTRA_RECOVERY_CURRENT_BEGIN -->

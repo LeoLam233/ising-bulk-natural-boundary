@@ -1,13 +1,43 @@
 # Continuation source correspondence
 
-Current status, 2026-10-07: audited release v0.2.0, commit
-`50ec73db799ba8f72dff802b4a6fecdc69b61932`, passed its clean build,
-project-wide audit of 9,199 safe declarations, exact endpoint controls and
-fresh kernel replay with axiom union `propext`, `Classical.choice`, `Quot.sound`.
-The independent Opus audit returned `PASS_WITH_NONBLOCKING_ISSUES`.
-The original five-module mathematical assembly is preserved. The post-audit
-remediation adds only the complete TAIL wrapper and verification controls;
-its final-commit receipts are separate from baseline evidence.
+Current status, 2026-10-07: the Lean/post-audit release is
+[v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1);
+the frozen analytic manuscript remains `v0.1-rc4`.
+
+The independently audited baseline is frozen v0.2.0, commit
+`50ec73db799ba8f72dff802b4a6fecdc69b61932`. Its clean build,
+project-wide audit of 9,199 safe declarations, endpoint controls and fresh
+kernel replay are baseline evidence. The independent adversarial Opus audit
+returned `PASS_WITH_NONBLOCKING_ISSUES`, with no blocking or load-bearing
+mathematical defect.
+
+v0.2.1 completes targeted remediation of those audit findings, including
+verification hardening and complete TAIL endpoint packaging. The original
+five-module mathematical assembly is preserved, and
+`IsingBulk.Final.theorem_nb` and `IsingBulk.Final.theorem_nb_physical` are
+unchanged. The final release identities are:
+
+- Commit: `de23d9475744fb4625666142d5a03b3d688195e6`
+- Tree: `c4f8dd4e81dba9e88e18dadfdb0778cf3771d1d2`
+- Proof payload: `6989420e855e0c3d882ce51e302dbc6579890da81aa0fd866176bab583067715`
+
+That exact commit passed a clean full build, a project-wide axiom audit of
+9,200 safe declarations with union exactly `propext`, `Classical.choice`,
+`Quot.sound`, 14/14 endpoints, 13/13 targeted production regressions,
+13/13 manifest controls, 6/6 Lean controls, and fresh
+`leanchecker --fresh --verbose IsingBulk` replay.
+[Full CI run 37518976590](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/37518976590)
+and [smoke CI run 37518976672](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/37518976672)
+both completed with `SUCCESS` for the exact release commit. These final
+receipts are separate from baseline audit evidence; no independent re-audit
+of the entire v0.2.1 tree is claimed.
+
+E1/E2/E3 remain explicit external literature premises. This is still an
+AI-assisted candidate proof; no independent human expert validation or peer
+review is claimed. Cached dependency binary/source correspondence remains
+trusted, the build and fresh replay use the same Lean kernel implementation,
+and the expected-ID pin is inside the Git commit rather than cryptographically
+external to it.
 
 ## Source identity and preserved scope
 

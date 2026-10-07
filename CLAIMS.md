@@ -1,5 +1,7 @@
 # Claims and quantifiers
 
+**Current status (7 October 2026).** The mathematical claims below belong to the frozen AI-assisted candidate manuscript v0.1-rc4. The internal form-factor / higher-tail chain is formalized and kernel-verified in [Lean v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1), with E1/E2/E3 retained as explicit external literature premises. This separate formalization release does not relabel the manuscript; independent human expert validation and peer review remain outstanding. See [current repository / Lean status](release/CURRENT_STATUS.json).
+
 The manuscript studies `X = beta_phys^{-1} chi`, with the pure-phase connected bulk susceptibility continued from real `s>1`, and `M²=(1-s^{-4})^{1/4}` on the exterior branch. It does not replace the observable by diagonal susceptibility.
 
 For each **fixed** selected nonaxis point `s_*`, let `N_0=2p`, `k=N_0²/2-1` and `s_epsilon=(1+epsilon)s_*`. The manuscript's two central claims are

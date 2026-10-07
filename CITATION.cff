@@ -10,7 +10,7 @@ authors:
     email: "lindh9@mail2.sysu.edu.cn"
 version: "0.1-rc4"
 license: CC-BY-4.0
-abstract: "AI-assisted candidate proof; no independent human, peer-review or proof-assistant certification is claimed."
+abstract: "Frozen v0.1-rc4 AI-assisted candidate manuscript; Lean 4 formalization and kernel verification of the pinned formal statements are released separately as v0.2.1, with E1/E2/E3 retained as explicit external premises. No independent human expert validation or peer review is claimed."
 keywords:
   - Ising model
   - susceptibility

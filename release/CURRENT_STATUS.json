@@ -1,0 +1,33 @@
+{
+  "manuscript_version": "0.1-rc4",
+  "lean_release": "v0.2.1",
+  "lean_commit": "de23d9475744fb4625666142d5a03b3d688195e6",
+  "lean_tree": "c4f8dd4e81dba9e88e18dadfdb0778cf3771d1d2",
+  "proof_payload_id": "6989420e855e0c3d882ce51e302dbc6579890da81aa0fd866176bab583067715",
+  "independent_adversarial_audit_target": "v0.2.0",
+  "independent_adversarial_audit_verdict": "PASS_WITH_NONBLOCKING_ISSUES",
+  "post_audit_remediation_complete": true,
+  "clean_full_build": true,
+  "safe_project_declarations": 9200,
+  "endpoint_count": 14,
+  "fresh_kernel_replay": true,
+  "full_ci_run": {
+    "id": 37518976590,
+    "conclusion": "SUCCESS"
+  },
+  "smoke_ci_run": {
+    "id": 37518976672,
+    "conclusion": "SUCCESS"
+  },
+  "E1_E2_E3_external_premises": true,
+  "independent_human_expert_validation": false,
+  "peer_reviewed": false,
+  "status_scope": "Current repository/Lean status for the exact released v0.2.1 commit; this does not relabel the frozen v0.1-rc4 AI-assisted candidate manuscript or replace historical release/STATUS.json.",
+  "verification_limits": [
+    "E1/E2/E3 remain explicit external literature premises.",
+    "Cached dependency binary/source correspondence remains trusted.",
+    "Build and fresh replay use the same Lean kernel implementation.",
+    "The expected-ID pin is within the Git commit, not cryptographically external.",
+    "No independent human expert validation or peer review is claimed."
+  ]
+}

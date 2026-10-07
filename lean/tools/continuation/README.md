@@ -19,7 +19,7 @@ dependency repair, or system configuration change is performed by these tools.
 ## Files and evidence boundaries
 
 - `endpoint_contract.json` records the frozen compiler/configuration/dependency
-  pins and twelve actual bridge/final declaration names, their source modules,
+  pins and fourteen actual bridge/final declaration names, their source modules,
   and manuscript source labels. It preserves the conditional theorem alongside
   the tail-discharged endpoints; it does not certify statement equivalence.
 - `source_references.json` maps every semicolon-separated ledger token to an

@@ -1,5 +1,17 @@
 # Ising v0.2.1 post-audit remediation
 
+## Post-publication note (2026-10-07)
+
+The historical record below was written on the remediation branch before
+publication. The exact final candidate was later fast-forwarded to `main` and
+published as [v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1)
+on 2026-10-07, at tagged commit
+`de23d9475744fb4625666142d5a03b3d688195e6`.
+Statements below such as “does not publish a release or merge into main” describe
+the pre-publication scope and are intentionally preserved.
+
+## Historical remediation record
+
 This branch starts at immutable audited release `v0.2.0`, commit
 `50ec73db799ba8f72dff802b4a6fecdc69b61932`, tree
 `2babc765011d98a524c37494724b91ec8c451521`. The authoritative Opus verdict

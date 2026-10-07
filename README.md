@@ -1,12 +1,14 @@
 # A candidate natural-boundary proof for the bulk Ising susceptibility
 
-**v0.1-rc4 · Candidate for public mathematical review · Dehao Lin**
+**Manuscript v0.1-rc4 (frozen) · Lean/post-audit release v0.2.1 · Candidate for public mathematical review · Dehao Lin**
 
 [中文说明](README.zh.md) · [Paper PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf)
 
-## Lean formalization v0.2.0
+## Lean formalization / post-audit release v0.2.1
 
-The complete internal form-factor and absolute-tail chain is formalized in [Lean](lean/README.md). The physical E1/E2 and published fixed-order E3 premises remain explicit. The source has passed three internal adversarial review rounds; full remote build, axiom/control checks and fresh kernel replay are required on the tagged commit. Detailed evidence is supplied with the [v0.2.0 release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.0).
+The internal form-factor / higher-tail proof chain is formalized in [Lean 4](lean/README.md). The frozen v0.2.0 formalization received an independent adversarial audit with verdict `PASS_WITH_NONBLOCKING_ISSUES`, with no blocking or load-bearing mathematical defect found. The [v0.2.1 release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1) implements targeted post-audit verification hardening and complete TAIL endpoint packaging without changing the core natural-boundary theorems. It is not a new independent audit of the entire v0.2.1 tree.
+
+The exact v0.2.1 commit, `de23d9475744fb4625666142d5a03b3d688195e6`, passed a clean full build, an axiom audit of 9,200 safe project declarations, all 14 endpoint checks, targeted controls, fresh kernel replay, and full/smoke CI on that same commit. The project-wide axiom union is exactly `propext`, `Classical.choice`, and `Quot.sound`. E1/E2/E3 remain explicit external literature premises. No independent human expert validation or peer review is claimed. [Current repository / Lean status](release/CURRENT_STATUS.json).
 
 ## Object and claim
 
@@ -40,18 +42,21 @@ The divergent-first-term / controlled-tail strategy is established prior work in
 
 ## Status and limitations
 
-This is an AI-assisted candidate proof prepared for public mathematical review. The W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. The E1 state/source/normalization interface has been checked; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). [Scholarly status](release/STATUS.json). [Rc4 release-prep status](release/RC4_RELEASE_PREP_STATUS.json) and [validation](release/RC4_RELEASE_PREP_VALIDATION.json).
+This is an AI-assisted candidate proof prepared for public mathematical review. The manuscript remains frozen at v0.1-rc4; its W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. The E1 state/source/normalization interface has been checked; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). [Historical manuscript status](release/STATUS.json). [Rc4 release-prep status](release/RC4_RELEASE_PREP_STATUS.json) and [validation](release/RC4_RELEASE_PREP_VALIDATION.json).
 
-| Evidence | Status and limit in this candidate snapshot |
+| Evidence | Status and scope |
 |---|---|
 | Manuscript | Candidate complete argument with historical [W1 repairs](provenance/W1_REPAIR_AUDIT.md) and [W2 repairs](provenance/W2_REPAIR_AUDIT.md). |
 | AI adversarial audits | Earlier errors prompted repairs. Favorable verdicts apply only to their input versions and checked scope; they are not peer review or current certification. |
-| Problem-only CR0 | Three returned runs, all `PARTIAL`; complete natural-boundary reconstructions: **0/3**. |
-| Method-informed MR1 | One `CLAIMED_TAIL_PROOF`; I3 unresolved, I6 conditional. Receiver checks did **not** independently certify the entire tail proof. |
+| Historical problem-only CR0 | Three returned runs, all `PARTIAL`; complete natural-boundary reconstructions: **0/3**. |
+| Historical method-informed MR1 | One `CLAIMED_TAIL_PROOF`; I3 unresolved, I6 conditional. Receiver checks did **not** independently certify the entire tail proof. |
 | Finite computations | Reproducible algebra and numerical diagnostics; no continuous-domain or infinite-tail certification. |
-| Human / formal review | No independent human expert certification or proof-assistant verification recorded. |
+| Lean formal verification | v0.2.1 verifies the pinned formal statements, with E1/E2/E3 explicit; the independent adversarial audit targeted v0.2.0, followed by targeted v0.2.1 remediation and exact-commit validation. |
+| Human review | No independent human expert validation or peer review is claimed. |
 
 These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [historical release-prep status](release/RC3_RELEASE_PREP_STATUS.json).
+
+Formal verification still trusts cached dependency binary/source correspondence. The build and fresh replay use the same Lean kernel implementation, and the expected-ID pin is inside the Git commit rather than cryptographically external.
 
 ## How to scrutinize
 

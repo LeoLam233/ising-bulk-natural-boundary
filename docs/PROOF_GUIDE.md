@@ -1,5 +1,7 @@
 # Reading the proposed proof
 
+**Current-status note (7 October 2026).** This guide describes the frozen manuscript v0.1-rc4. Its CR0/MR1 references are historical provenance, not the current formalization status. The internal form-factor / higher-tail proof chain is now formalized and kernel-verified in [Lean v0.2.1](../lean/README.md), with E1/E2/E3 explicit external literature premises. Independent human expert validation and peer review remain outstanding.
+
 Read the [manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. Numbering is preserved from revision 8. The [W1 repair record](../provenance/W1_REPAIR_AUDIT.md) identifies the repairs already frozen in the mathematical candidate. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
 
 | Stage | Location | Mathematical obligation |

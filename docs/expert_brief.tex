@@ -1,6 +1,9 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{iftex}
-\ifPDFTeX\usepackage[T1]{fontenc}\fi
+\ifPDFTeX
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\pdfsuppressptexinfo=15
+\fi
 \usepackage{amsmath,amssymb}
 \usepackage[margin=23mm]{geometry}
 \usepackage[hidelinks,bookmarks=false]{hyperref}
@@ -12,14 +15,15 @@
 \newcommand{\heading}[1]{\par\vspace{5pt}{\large\bfseries #1}\par\vspace{1pt}}
 \hypersetup{pdftitle={Bulk Ising susceptibility: a candidate natural-boundary proof},
  pdfauthor={Dehao Lin},
- pdfsubject={Expert brief and manuscript v0.1-rc4; AI-assisted candidate proof}}
+ pdfsubject={Expert brief for manuscript v0.1-rc4 and Lean formalization / post-audit release v0.2.1; AI-assisted candidate proof}}
 
 \begin{document}
 {\Large\bfseries Bulk Ising susceptibility: a candidate natural-boundary proof}\par
-{\small Expert brief and manuscript: v0.1-rc4}\par
+{\small Expert brief for manuscript v0.1-rc4; Lean formalization / post-audit release v0.2.1}\par
 Dehao Lin, School of Physics, Sun Yat-sen University\\
 {\small ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}}\\
-\texttt{lindh9@mail2.sysu.edu.cn}\hfill 1 October 2026
+\texttt{lindh9@mail2.sysu.edu.cn}\hfill 7 October 2026\\
+{\small Repository: \url{https://github.com/LeoLam233/ising-bulk-natural-boundary}}
 
 \heading{The object and the gap}
 The accompanying manuscript presents a candidate complete proof that \(|s|=1\) is a
@@ -135,13 +139,17 @@ step, or a missed close precedent would be especially useful.
 \textbf{A limited reading of one interface is valuable; a full refereeing
 commitment is not presumed.}
 
-\textbf{Status.} This is an AI-assisted candidate proof with no independent
-human or proof-assistant certification. The rc4 revision adds W2 pair
-geometry, root continuation, disk slack and coupled-occupancy bookkeeping
-to the historical rc3 W1 repairs. Scoped AI checks and finite diagnostics
-do not certify the full theorem. E1 now has a primary-source and exact
-normalization check, with the \( + \) state and published formulas specified.
-Version-specific records accompany the manuscript.
+\textbf{Current verification status.} The internal form-factor and higher-tail proof chain is
+formalized in Lean 4. An independent adversarial audit of frozen v0.2.0 gave
+\texttt{PASS\_WITH\_NONBLOCKING\_ISSUES}, finding no blocking or load-bearing defect.
+Release v0.2.1 applied targeted post-audit remediation without changing the core
+natural-boundary theorems. The exact v0.2.1 commit passed the final targeted
+regressions and controls, a clean full build, a project-wide axiom audit of 9,200
+safe declarations, 14 endpoint checks, fresh kernel replay, and full and smoke CI.
+E1/E2/E3 remain explicit external literature inputs: the low-temperature correlation
+representation, Yang's spontaneous-magnetization formula, and Tracy--Widom's
+fixed-even-order non-Nickel smoothness. This remains an AI-assisted candidate
+proof: no independent human expert validation or peer review is claimed.
 
 \vfill
 {\small Section and appendix pointers refer to the accompanying
