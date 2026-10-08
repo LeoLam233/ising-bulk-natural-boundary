@@ -2,17 +2,11 @@
 
 **Manuscript v0.1-rc4 (frozen) · Lean/post-audit release v0.2.1 · Candidate for public mathematical review · Dehao Lin**
 
-[中文说明](README.zh.md) · [Paper PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf)
-
-## Lean formalization / post-audit release v0.2.1
-
-The internal form-factor / higher-tail proof chain is formalized in [Lean 4](lean/README.md). The frozen v0.2.0 formalization received an independent adversarial audit with verdict `PASS_WITH_NONBLOCKING_ISSUES`, with no blocking or load-bearing mathematical defect found. The [v0.2.1 release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1) implements targeted post-audit verification hardening and complete TAIL endpoint packaging without changing the core natural-boundary theorems. It is not a new independent audit of the entire v0.2.1 tree.
-
-The exact v0.2.1 commit, `de23d9475744fb4625666142d5a03b3d688195e6`, passed a clean full build, an axiom audit of 9,200 safe project declarations, all 14 endpoint checks, targeted controls, fresh kernel replay, and full/smoke CI on that same commit. The project-wide axiom union is exactly `propext`, `Classical.choice`, and `Quot.sound`. E1/E2/E3 remain explicit external literature premises. No independent human expert validation or peer review is claimed. [Current repository / Lean status](release/CURRENT_STATUS.json).
+[中文说明](README.zh.md) · [Frozen v0.1-rc4 manuscript](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf) · [Proof guide](docs/PROOF_GUIDE.md)
 
 ## Object and claim
 
-This repository presents an AI-assisted candidate proof concerning the **zero-field, isotropic, infinite square-lattice bulk susceptibility**, continued from its low-temperature pure-phase exterior germ. It claims that the unit circle in $s=\sinh(2\beta_{\rm phys}J)$ is a natural boundary. The observable includes all lattice separations and the entire even-particle expansion. See [precise claims](CLAIMS.md) and [external premises](provenance/EXTERNAL_PREMISES.md).
+This repository presents an AI-assisted candidate proof concerning the **zero-field, isotropic, infinite square-lattice bulk susceptibility**, continued from its low-temperature pure-phase exterior germ. It claims that the unit circle in $s=\sinh(2\beta_{\rm phys}J)$ is a natural boundary. The observable includes all lattice separations and the entire even-particle expansion. See [precise claims](CLAIMS.md). The [external premises](provenance/EXTERNAL_PREMISES.md) are the physical correlation representation (E1), spontaneous magnetization (E2), and fixed-even-order non-Nickel smoothness (E3); none supplies the bulk infinite-tail estimate.
 
 ## Historical gap
 
@@ -36,6 +30,10 @@ The first supplies a nonzero singular carrier; the second makes the entire highe
 
 The dense uniquely-first family leads to a nonzero **whole-form-factor** first singularity. In parallel, the exact weighted contour identity $T_N=F_N+K_N+S_N$ leads to differentiated control of all higher even orders. With the lower-order bounds and exterior normal convergence, the two branches give noncancellation on a dense boundary set and the claimed natural boundary. [Proof guide](docs/PROOF_GUIDE.md); manuscript §§3–9 and Appendices B–G.
 
+## How to scrutinize
+
+Choose one interface: first carrier and complement (§4, App. B); exact weighted contours and protected pair control (§§5–8); high-order differentiation, flux and coarea (Apps. D–E); or complete W1–W13 tail closure (§9, App. G). A concrete failing configuration, unjustified implication or uniformity step, or missed close precedent is especially useful. A limited reading of one interface is valuable; full refereeing is not presumed. [Feedback guidance](CONTRIBUTING.md).
+
 ## Proposed contribution and prior precedents
 
 The divergent-first-term / controlled-tail strategy is established prior work in Tracy–Widom's diagonal-susceptibility analysis. Their Toeplitz work also provides close precedents for contour partitions, Vandermonde analysis, grouping and Hadamard/factorial estimates. This manuscript's proposed technical contribution is the **specific implementation for full bulk susceptibility**: the selected point family, compatible whole-integral first-amplitude calculation, coupled weighted contours, protected parameter disks and differentiated full-tail/coarea estimates. Correctness and priority for these details remain open to scrutiny. No exhaustive priority clearance is claimed.
@@ -56,17 +54,17 @@ This is an AI-assisted candidate proof prepared for public mathematical review. 
 
 These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [historical release-prep status](release/RC3_RELEASE_PREP_STATUS.json).
 
+## Separate Lean formalization
+
+The [Lean formalization](lean/README.md) covers the pinned internal form-factor and absolute-tail chain. The current [v0.2.1 release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1) preserves the theorem content and passed exact-commit validation; see [release/CURRENT_STATUS.json](https://github.com/LeoLam233/ising-bulk-natural-boundary/blob/main/release/CURRENT_STATUS.json). The independent adversarial AI audit targeted [v0.2.0](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.0); v0.2.1 implements the [post-audit remediation](REMEDIATION_v0.2.1.md), and its successful validation does not extend that audit's scope. Evidence and trust assumptions are version-specific. E1/E2/E3 remain explicit external premises. This formal evidence does not constitute independent human or peer-review certification of the candidate manuscript. The manuscript remains frozen at v0.1-rc4; the expert brief includes the later verification-status update.
+
 Formal verification still trusts cached dependency binary/source correspondence. The build and fresh replay use the same Lean kernel implementation, and the expected-ID pin is inside the Git commit rather than cryptographically external.
-
-## How to scrutinize
-
-Choose one interface: first carrier and complement (§4, App. B); exact weighted contours and protected pair control (§§5–8); high-order differentiation, flux and coarea (Apps. D–E); or complete W1–W13 tail closure (§9, App. G). A concrete failing configuration, unjustified implication or uniformity step, or missed close precedent is especially useful. A limited reading of one interface is valuable; full refereeing is not presumed. [Feedback guidance](CONTRIBUTING.md).
 
 ## Audit, reconstruction and provenance
 
 The [audit index](audits/README.md) explains the historical names and verdicts without rewriting them. The [version ledger](audits/VERSION_LEDGER.md), [CR0/MR1 records](reproduction/README.md), [source history](provenance/SOURCE_PROVENANCE.md), and [raw source inventory](provenance/V38_SOURCE_INVENTORY.json) preserve both favorable and negative findings. Historical access records are incomplete; no zero-exposure or exhaustive source-cleanliness certification is claimed.
 
-From the repository root:
+`scripts/verify_repository.py` checks the historical rc4 manifest and is expected to return a nonzero exit status on the current tree because of subsequent Lean additions and documentation changes. This snapshot mismatch does not itself indicate a mathematical proof failure. From the repository root:
 
 ```sh
 python scripts/verify_repository.py
