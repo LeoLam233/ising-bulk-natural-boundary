@@ -1,0 +1,22 @@
+# Crosswalk: initial prototype → subsequent manuscript audits → Lean
+
+**Status: preliminary source-level mapping, not a proof-equivalence certificate.** This table associates mathematical obligations and documented follow-up artifacts. A named Lean theorem can prove a formal statement while the identification with a historical analytic claim or external physical object still requires semantic checking. The initial v1–v38 session archive does not contain the following later audit or Lean stages.
+
+| Initial-session obligation / failure | Later written evidence | Lean-facing entry / check | What is not licensed |
+|---|---|---|---|
+| Nonzero whole-form-factor first singularity, local Y-residue, physical chart multiplicities | [current claims](../CLAIMS.md), [proof guide](../docs/PROOF_GUIDE.md); source v38 `COMPACT_PRIME_MEAN_RESIDUE_AMPLITUDE.md`, `COMPACT_FOUR_CHART_NORMALIZATION_RESOLUTION.md` | [`IsingBulk.First.theorem_first`](../lean/README.md) and [claim ledger](../lean/CLAIM_LEDGER.tsv) | Do not assume an old candidate chart computation is identical to a later Lean theorem merely from matching names |
+| Differentiated absolute higher-even tail for all `j <= k` | [W1 repaired tail accounting](../provenance/W1_REPAIR_AUDIT.md), [W2 supported contours](../provenance/W2_REPAIR_AUDIT.md), [current manuscript](../paper/manuscript.tex) | [`IsingBulk.Final.theorem_tail`](../lean/README.md); `theorem_tail_with_summability` in [v0.2.1 remediation](../REMEDIATION_v0.2.1.md) | A finite computation, AI audit or theorem named TAIL does not alone certify every source-estimate transfer |
+| Pair compactness, endpoint equality and continuation in complex disks | Initial F09/F22; later [W2 repair](../provenance/W2_REPAIR_AUDIT.md) | [Lean coverage](../lean/COVERAGE.md), [gap manifest](../lean/GAP_MANIFEST.md) | No unexamined assumption of universal `|pair|<1` or `|root|<1` |
+| Near-collision `exp(CN³)` and high-order cutoff jets | Initial F24/F26; later [W1 repair](../provenance/W1_REPAIR_AUDIT.md) | [formalization correspondence](../lean/CORRESPONDENCE.md), [claim ledger](../lean/CLAIM_LEDGER.tsv) | No interchange of a fixed-N constant with a uniform-in-N bound without quantified proof |
+| Exact contour identity `T_N=F_N+K_N+S_N`, Stokes orientation and connector supports | Initial `STOKES_TOP_FORM_ORIENTATION_REDERIVATION.md`, `COMPACT_R_STOKES_EQUALITY_DESOURCE.md`; later [W2](../provenance/W2_REPAIR_AUDIT.md) | [coverage](../lean/COVERAGE.md), [continuation correspondence](../lean/CONTINUATION_SOURCE_CORRESPONDENCE.md) | An estimate on a final deformed graph does not prove equality with the original physical contour |
+| Natural boundary of normalized series and physical bulk susceptibility | [exact claims](../CLAIMS.md), [external premises](../provenance/EXTERNAL_PREMISES.md) | [`IsingBulk.Final.theorem_nb`, `theorem_nb_physical`](../lean/README.md) | E1/E2/E3 remain explicit external literature premises; Lean checking is not independent human peer review |
+
+## Later version-specific audit evidence
+
+The original-session prototype did **not** already contain these later discoveries. The [audit-version ledger](../audits/VERSION_LEDGER.md) records, among other items, the v2 false N-independent inverse-product bound; v3 complex-parameter perturbation omission; v4 glue/exposition problem; v5 support/seam issues; v6 negative microcore and phase/coarea accounting; W1 revised near-collision accounting; and W2 continuation, disk slack and occupancy coupling. Some audits disputed allegations rather than confirming every alleged defect.
+
+The repository's published Lean release is [v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1), validated at its exact commit; the independent adversarial audit specifically targeted v0.2.0, with subsequent bounded remediation and validation. Refer to [current status](../release/CURRENT_STATUS.json) for exact evidence and limits. Historical reports must not be retroactively assigned to newer bytes.
+
+## Next editorial requirement before claiming an exact bridge
+
+For each row, a mathematical reviewer should write (1) the exact initial statement and quantifiers; (2) the exact final manuscript statement and source location; (3) the Lean fully qualified name and complete type including assumptions; (4) a proof that symbols, constants and physical objects refer to the same things; (5) version identity and any applicable negative control. This file currently supplies **navigation and candidate associations**, not all five certificates.

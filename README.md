@@ -4,6 +4,10 @@
 
 [中文说明](README.zh.md) · [Frozen v0.1-rc4 manuscript](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf) · [Proof guide](docs/PROOF_GUIDE.md)
 
+## Research history and failed attempts
+
+The [research-history section](research-history/README.md) preserves a **first-session-only** retrospective of the original autonomous Codex exploration (nine route categories, 38 saved checkpoints and 27 classes of failures/limitations), and links it to **subsequent** adversarial audits, mathematical repairs and Lean verification. That first session yielded an initial proof prototype, **not** this repository's later manuscript or an independently certified result. Read its [scope and source identity](research-history/original-session/README.md) before interpreting the historical counts.
+
 ## Object and claim
 
 This repository presents an AI-assisted candidate proof concerning the **zero-field, isotropic, infinite square-lattice bulk susceptibility**, continued from its low-temperature pure-phase exterior germ. It claims that the unit circle in $s=\sinh(2\beta_{\rm phys}J)$ is a natural boundary. The observable includes all lattice separations and the entire even-particle expansion. See [precise claims](CLAIMS.md). The [external premises](provenance/EXTERNAL_PREMISES.md) are the physical correlation representation (E1), spontaneous magnetization (E2), and fixed-even-order non-Nickel smoothness (E3); none supplies the bulk infinite-tail estimate.
