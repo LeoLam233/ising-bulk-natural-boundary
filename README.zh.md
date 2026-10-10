@@ -6,6 +6,10 @@
 
 [冻结的 v0.1-rc4 论文](paper/manuscript.pdf) · [TeX 源码](paper/manuscript.tex) · [两页专家简报](docs/expert_brief.pdf) · [证明路线](docs/PROOF_GUIDE.md) · [English](README.md)
 
+## 研究历程与失败尝试
+
+新增的[研究历史专栏](research-history/README.md)保存了**仅限最初一次 Codex 自主研究会话**的回顾（9 类主路线、38 个已保存检查点、27 类错误或证明不足），并单独链接**后续**多轮敌对审计、数学修补及 Lean 形式化。最初会话产出的是初代证明雏形，**不是**仓库后续论文版本或得到独立认证的定理。请先阅读[档案范围及来源说明](research-history/original-session/README.md)，再引用上述历史计数。
+
 ## 对象与主张
 
 本仓库呈现一份 AI 辅助候选证明，研究低温纯相外部解析芽对应的无限正方晶格、零场、各向同性**完整体磁化率**，包括所有格点间距及完整偶数粒子展开。论文声称单位圆是自然边界；这一主张尚无独立人类专家或同行评审认证。[精确主张](CLAIMS.md)。[外部前提](provenance/EXTERNAL_PREMISES.md)包括物理关联表示（E1）、自发磁化（E2）及固定偶阶非 Nickel 光滑性（E3）；它们均不提供完整体磁化率的无限尾项估计。
