@@ -28,27 +28,20 @@ example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
         =o[𝓝[>] 0] (fun eps : ℝ => (Real.sqrt eps)⁻¹) :=
   theorem_tail hp hp11 ha hb hab
 
-example
-    (hTW : ∀ p : ℕ, ∀ a b : ℤ, p.Prime → 11 ≤ p →
-      IsingBulk.PrimeFamily.Admissible p a → IsingBulk.PrimeFamily.Admissible p b → a ≠ b →
-      PublishedTWFixedOrderInput (IsingBulk.PrimeFamily.selectedPoint p a b)) :
+example :
     ∀ z : ℂ, ‖z‖ = 1 → ¬ HasExteriorExtension exteriorNormalizedBulk z :=
-  theorem_nb hTW
+  theorem_nb
 
 example {J : ℝ} (hJ : 0 < J) {chi : ℂ → ℂ} {M : ℝ → ℂ}
-    (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M)
-    (hTW : ∀ p : ℕ, ∀ a b : ℤ, p.Prime → 11 ≤ p →
-      IsingBulk.PrimeFamily.Admissible p a → IsingBulk.PrimeFamily.Admissible p b → a ≠ b →
-      PublishedTWFixedOrderInput (IsingBulk.PrimeFamily.selectedPoint p a b)) :
+    (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M) :
     AnalyticOnNhd ℂ (rightPhysicalBulk J) {s : ℂ | 1 < ‖s‖ ∧ 0 < s.re} ∧
       (∀ x : ℝ, 16 < x → chi (x:ℂ) = rightPhysicalBulk J (x:ℂ)) ∧
       (∀ z : ℂ, ‖z‖ = 1 → ¬ HasPhysicalBoundaryExtension J exteriorNormalizedBulk z) :=
-  theorem_nb_physical hJ hE1 hE2 hTW
+  theorem_nb_physical hJ hE1 hE2
 
--- Exact FIRST application, including its published E3 premise.
+-- Exact FIRST application with no E3 premise.
 example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
-    (ha : IsingBulk.PrimeFamily.Admissible p a) (hb : IsingBulk.PrimeFamily.Admissible p b) (hab : a ≠ b)
-    (hTW : PublishedTWFixedOrderInput (IsingBulk.PrimeFamily.selectedPoint p a b)) :
+    (ha : IsingBulk.PrimeFamily.Admissible p a) (hb : IsingBulk.PrimeFamily.Admissible p b) (hab : a ≠ b) :
     let k := (2*p)^2/2-1
     let A := selectedOrderedChart ha hb
     let L := localLeadingCoefficient A (2*p-1) k
@@ -65,7 +58,7 @@ example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
         ∃ e C : ℝ, 0 < e ∧ 0 ≤ C ∧ ∀ epsilon : ℝ, 0 < epsilon → epsilon < e →
           ‖(deriv^[j] (doubleFormFactor N (sourceRadialPair A.theta epsilon).1))
             (sourceRadialPair A.theta epsilon).2‖ ≤ C) :=
-  theorem_first hp hp11 ha hb hab hTW
+  theorem_first hp hp11 ha hb hab
 
 -- Complete TAIL application, with explicit positive-parameter convergence.
 example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}

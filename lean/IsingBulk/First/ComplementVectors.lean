@@ -134,6 +134,12 @@ def activeSingularVectorSet {N : ℕ} (x y : Fin N → ℂ) (S : ℝ) :
   range (fun f : {f : SingularFactorIndex N // singularFactorActive x y S f} =>
     singularFactorVector x y f.val)
 
+/-- A quantitative separator for the literal active source factors. This is
+derived from the geometry, rather than postulated for the final theorem. -/
+def ActiveSourceSeparated {N : ℕ} (x y : Fin N → ℂ) (S : ℝ) : Prop :=
+  ∃ (f : StrongDual ℝ (DoubleAngularVector N)) (δ : ℝ),
+    0 < δ ∧ ∀ i, singularFactorActive x y S i → δ < f (singularFactorVector x y i)
+
 /-- Actual active vectors have no zero convex combination off the two charts. -/
 theorem zero_not_mem_active_convexHull {p : ℕ} {a b : ℤ}
     {x y : Fin (2*p) → ℂ} (hp : p.Prime) (hp11 : 11 ≤ p)

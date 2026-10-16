@@ -41,25 +41,23 @@ theorem sourceAuxiliaryJet_tail_bound_of_decay {N : ℕ} (r : ℝ) (s : ℂ)
 
 /-- Actual source local-chart fixed-order derivatives have a uniform
 integrable auxiliary tail along the selected radial approach. -/
-theorem selected_radial_chart_auxiliary_tail {p : ℕ} {a b : ℤ}
-    (hp : p.Prime) (hp11 : 11 ≤ p)
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+theorem source_radial_chart_auxiliary_tail {N : ℕ} (hN : 0 < N) (S : ℝ)
     (θ : ℝ) (hθ : 0 < Real.sin θ)
     (hS : sourceS (Complex.exp ((θ : ℂ)*Complex.I)) =
-      ((2*PrimeFamily.cosineAverage p a b : ℝ) : ℂ))
-    (u₀ : DoubleAngularVector (2*p))
-    (hgood : ¬ selectedBadConfiguration a b (angleTuple 1 u₀.1) (angleTuple 1 u₀.2))
-    (J : Finset (SingularFactorIndex (2*p)))
+      (S : ℂ))
+    (u₀ : DoubleAngularVector N)
+    (hsep : ActiveSourceSeparated (angleTuple 1 u₀.1) (angleTuple 1 u₀.2) S)
+    (J : Finset (SingularFactorIndex N))
     (hJ : ∀ f, f ∈ J ↔ singularFactorActive (angleTuple 1 u₀.1) (angleTuple 1 u₀.2)
-      (2*PrimeFamily.cosineAverage p a b) f) :
+      (S) f) :
     ∃ γ ε₀ : ℝ, 0 < γ ∧ 0 < ε₀ ∧
-      ∀ w : DoubleAngularVector (2*p) → ℝ, ContDiff ℝ ∞ w →
+      ∀ w : DoubleAngularVector N → ℝ, ContDiff ℝ ∞ w →
       tsupport w ⊆ Metric.closedBall u₀ γ → ∀ j : ℕ,
       ∃ C : ℝ, 0 ≤ C ∧ ∀ ε : ℝ, 0 < ε → ε ≤ ε₀ →
       ∀ ξ ∈ finiteAuxiliaryTail J,
         ‖∫ u, sourceAuxiliaryJet (sourceRadialPair θ ε).1 (sourceRadialPair θ ε).2 w J j ξ u‖ ≤
           (finiteAuxiliaryRadius ξ)⁻¹^(Fintype.card J+1)*C := by
-  obtain ⟨γ,e,hγ,he,hdecay⟩ := selected_radial_chart_decay hp hp11 ha hb θ hθ hS u₀ hgood J hJ
+  obtain ⟨γ,e,hγ,he,hdecay⟩ := source_radial_chart_decay S θ hθ hS u₀ hsep J hJ
   obtain ⟨d,hd,_,hm⟩ := radial_disk_source_trace_margin hθ
   refine ⟨γ,min e (d/2),hγ,lt_min he (by positivity),?_⟩
   intro w hw hsupp j
@@ -79,8 +77,32 @@ theorem selected_radial_chart_auxiliary_tail {p : ℕ} {a b : ℤ}
     unfold sourceRadialPair IsingBulk.Branch.radialParameter
     exact mul_ne_zero (Complex.ofReal_ne_zero.mpr (by linarith)) (Complex.exp_ne_zero _)
   exact sourceAuxiliaryJet_tail_bound_of_decay _ _ w J j hs
-    (fun u f _ => sourceFactorDenominator_ne_zero_of_damping (Nat.mul_pos (by omega) hp.pos)
+    (fun u f _ => sourceFactorDenominator_ne_zero_of_damping hN
       hr hr1 hmargin u f) C (hbound ε hεe) ξ hξ
+
+/-- Compatibility wrapper for the frozen selected first-order charts. -/
+theorem selected_radial_chart_auxiliary_tail {p : ℕ} {a b : ℤ}
+    (hp : p.Prime) (hp11 : 11 ≤ p)
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (θ : ℝ) (hθ : 0 < Real.sin θ)
+    (hS : sourceS (Complex.exp ((θ : ℂ)*Complex.I)) =
+      ((2*PrimeFamily.cosineAverage p a b : ℝ) : ℂ))
+    (u₀ : DoubleAngularVector (2*p))
+    (hgood : ¬ selectedBadConfiguration a b (angleTuple 1 u₀.1) (angleTuple 1 u₀.2))
+    (J : Finset (SingularFactorIndex (2*p)))
+    (hJ : ∀ f, f ∈ J ↔ singularFactorActive (angleTuple 1 u₀.1) (angleTuple 1 u₀.2)
+      (2*PrimeFamily.cosineAverage p a b) f) :
+    ∃ γ ε₀ : ℝ, 0 < γ ∧ 0 < ε₀ ∧
+      ∀ w : DoubleAngularVector (2*p) → ℝ, ContDiff ℝ ∞ w →
+      tsupport w ⊆ Metric.closedBall u₀ γ → ∀ j : ℕ,
+      ∃ C : ℝ, 0 ≤ C ∧ ∀ ε : ℝ, 0 < ε → ε ≤ ε₀ →
+      ∀ ξ ∈ finiteAuxiliaryTail J,
+        ‖∫ u, sourceAuxiliaryJet (sourceRadialPair θ ε).1 (sourceRadialPair θ ε).2 w J j ξ u‖ ≤
+          (finiteAuxiliaryRadius ξ)⁻¹^(Fintype.card J+1)*C := by
+  exact source_radial_chart_auxiliary_tail (Nat.mul_pos (by omega) hp.pos) (2*PrimeFamily.cosineAverage p a b) θ hθ hS u₀ (selected_active_separating_functional hp hp11 ha hb
+      (fun _ => anglePoint_norm (by norm_num) _)
+      (fun _ => anglePoint_norm (by norm_num) _) hgood) J hJ
+
 
 end
 end IsingBulk.First

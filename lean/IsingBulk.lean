@@ -1069,3 +1069,6 @@ import IsingBulk.Tail.ExactSectorNormDomination
 import IsingBulk.Tail.IntermediateWindowAssembly
 import IsingBulk.Tail.AbsoluteTailAssembly
 import IsingBulk.Final.UnconditionalNaturalBoundary
+import IsingBulk.First.NonNickelGeometry
+import IsingBulk.First.NonNickelRadialBounds
+import IsingBulk.Final.SmoothExtension

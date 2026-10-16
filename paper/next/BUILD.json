@@ -1,0 +1,51 @@
+{
+  "manuscript": "v0.1-rc5",
+  "lean_candidate": "v0.3.0-rc1",
+  "engine": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)",
+  "source_sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf",
+  "pdf_sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f",
+  "label_index_sha256": "e9550e1c7cdb06b8a9b28441f06892b3d39273fa121f5a38b1b213121b9e36f4",
+  "label_count": 67,
+  "old_labels_retaining_numbers": 65,
+  "commands": [
+    {
+      "argv": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "manuscript.tex"
+      ],
+      "pass": 1,
+      "exit_code": 0,
+      "stdout_sha256": "9510abfff734853c557be754c9208b325911f6d84dc581d302cbd64171f37c08",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "manuscript.tex"
+      ],
+      "pass": 2,
+      "exit_code": 0,
+      "stdout_sha256": "a772d794d50c1906c371f1ade28ad4701eac2fef5e68dc152539c0c7a7539d7a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "manuscript.tex"
+      ],
+      "pass": 3,
+      "exit_code": 0,
+      "stdout_sha256": "e903257145419784e21c9d21b5603496c534a24ba4264e4f82f0fe21f9d217bb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "log_directory": ".local/rc5-paper-vriv8e_a",
+  "final_tex_diagnostics": [],
+  "visual_qa": "Recorded separately; compilation alone is not visual QA."
+}

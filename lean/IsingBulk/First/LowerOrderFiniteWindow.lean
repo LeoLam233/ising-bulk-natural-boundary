@@ -22,15 +22,14 @@ private theorem positive_finite_common_threshold {ι : Type*} (I : Finset ι)
 
 theorem selected_lower_finite_window_bounded {p : ℕ} {a b : ℤ}
     (hp : p.Prime) (hp11 : 11 ≤ p)
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b)) (k : ℕ) :
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (k : ℕ) :
     ∃ ε₀ C : ℝ, 0 < ε₀ ∧ 0 ≤ C ∧ ∀ ε : ℝ, 0 < ε → ε < ε₀ →
       ∀ N : ℕ, 0 < N → Even N → N < 2*p → ∀ j : ℕ, j ≤ k →
         ‖(deriv^[j] (doubleFormFactor N (sourceRadialPair (selectedOrderedChart ha hb).theta ε).1))
           (sourceRadialPair (selectedOrderedChart ha hb).theta ε).2‖ ≤ C := by
   classical
   let I := {n : Fin (2*p) // 0 < n.1 ∧ Even n.1} × Fin (k+1)
-  have hlocal (i : I) := selected_lower_orders_fixed_radius_bounded hp hp11 ha hb hTW
+  have hlocal (i : I) := selected_lower_orders_fixed_radius_bounded hp hp11 ha hb
     i.1.1.1 i.1.2.1 i.1.2.2 i.1.1.2 i.2.1
   choose e C he hC hbnd using hlocal
   obtain ⟨d,hd,hmin⟩ := positive_finite_common_threshold Finset.univ e (fun i _ => he i)

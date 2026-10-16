@@ -3,7 +3,8 @@ import IsingBulk.First.PublishedFixedOrder
 
 /-! Narrow separated E1/E2 boundaries. Both apply only to real low-temperature
 physical data. All complex continuation, noncancellation and tail bounds stay
-internal. E3 is the existing fixed-order non-Nickel full-site input. -/
+internal. The historical fixed-order comparison interface is imported
+for compatibility; it is absent from the canonical proof dependency chain. -/
 namespace IsingBulk.Final
 noncomputable section
 open IsingBulk.First

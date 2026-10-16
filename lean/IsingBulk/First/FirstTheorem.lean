@@ -2,9 +2,8 @@ import IsingBulk.First.FirstUpperAsymptotic
 import IsingBulk.First.LowerOrderFixedRadius
 import IsingBulk.First.LowerOrderFiniteWindow
 
-/-! FIRST, in the literal source fixed-radius T_N representation. The only
-external premise is the named published full-site fixed-order theorem, used
-solely for lower even N via the proved onsite subtraction and radius transfer. -/
+/-! FIRST, in the literal source fixed-radius T_N representation. Every lower even order is bounded internally by non-Nickel gradient
+separation and the original offsite contour integration-by-parts estimate. -/
 namespace IsingBulk.First
 noncomputable section
 open Complex Filter IsingBulk.Branch
@@ -65,11 +64,10 @@ theorem first_fixed_source_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
     exact h
 
 /-- Source theorem thm:first. The lower-even-order clause retains the correct
-published quantifier order: each fixed N and each fixed j has its own approach
+fixed-order quantifier order: each fixed N and each fixed j has its own approach
 threshold and bound. No uniformity over infinitely many j or any tail is asserted. -/
 theorem theorem_first {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (hab : a ≠ b)
-    (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b)) :
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
     let k := (2*p)^2/2-1
     let A := selectedOrderedChart ha hb
     let L := localLeadingCoefficient A (2*p-1) k
@@ -88,7 +86,7 @@ theorem theorem_first {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
             (sourceRadialPair A.theta epsilon).2‖ ≤ C) := by
   dsimp only
   have h := first_fixed_source_asymptotic hp hp11 ha hb hab
-  exact ⟨h.1,h.2.1,h.2.2,selected_lower_orders_fixed_radius_bounded hp hp11 ha hb hTW⟩
+  exact ⟨h.1,h.2.1,h.2.2,selected_lower_orders_fixed_radius_bounded hp hp11 ha hb⟩
 
 end
 end IsingBulk.First

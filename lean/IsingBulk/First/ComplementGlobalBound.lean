@@ -10,23 +10,21 @@ noncomputable section
 open Set MeasureTheory Filter
 open scoped Topology ContDiff BigOperators
 
-theorem selected_complement_global_bound {p : ℕ} {a b : ℤ}
-    (hp : p.Prime) (hp11 : 11 ≤ p)
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+theorem source_complement_global_bound {N : ℕ} (hN : 0 < N) (S : ℝ)
     (θ : ℝ) (hθ : 0 < Real.sin θ)
     (hS : sourceS (Complex.exp ((θ:ℂ)*Complex.I)) =
-      ((2*PrimeFamily.cosineAverage p a b:ℝ):ℂ))
-    (W : DoubleAngularVector (2*p) → ℝ) (hW : ContDiff ℝ ∞ W)
+      (S:ℂ))
+    (W : DoubleAngularVector N → ℝ) (hW : ContDiff ℝ ∞ W)
     (hWp : DoubleCoordinatePeriodic W)
-    (hgood : ∀ u ∈ tsupport W,
-      ¬ selectedBadConfiguration a b (angleTuple 1 u.1) (angleTuple 1 u.2)) :
+    (hsep : ∀ u ∈ tsupport W,
+      ActiveSourceSeparated (angleTuple 1 u.1) (angleTuple 1 u.2) S) :
     ∃ ε₀ : ℝ, 0 < ε₀ ∧ ∀ j : ℕ, ∃ C : ℝ, 0 ≤ C ∧
       ∀ ε : ℝ, 0 < ε → ε ≤ ε₀ →
-        ‖(deriv^[j] (fun s => localizedDoubleFormFactor (2*p) (sourceRadialPair θ ε).1 s W))
+        ‖(deriv^[j] (fun s => localizedDoubleFormFactor N (sourceRadialPair θ ε).1 s W))
           (sourceRadialPair θ ε).2‖ ≤ C := by
   classical
   obtain ⟨I,w,e₀,he₀,hw,hpart,hbound⟩ :=
-    selected_complement_finite_refinement hp hp11 ha hb θ hθ hS W hW hWp hgood
+    source_complement_finite_refinement hN S θ hθ hS W hW hWp hsep
   obtain ⟨d,hd,_,hm⟩ := radial_disk_source_trace_margin hθ
   let ε₀ := min e₀ (d/2)
   refine ⟨ε₀,lt_min he₀ (by positivity),?_⟩
@@ -44,8 +42,7 @@ theorem selected_complement_global_bound {p : ℕ} {a b : ℤ}
     change Real.exp (-(Real.sin θ/4)*ε) < 1
     rw [Real.exp_lt_one_iff]
     exact mul_neg_of_neg_of_pos (by linarith) hε
-  have hN : 0 < 2*p := Nat.mul_pos (by omega) hp.pos
-  let v : I → DoubleAngularVector (2*p) → ℝ := fun c => doublePeriodicizeBump c.1.1 (w c.1)
+  let v : I → DoubleAngularVector N → ℝ := fun c => doublePeriodicizeBump c.1.1 (w c.1)
   have hv (c : I) : Continuous (v c) :=
     (doublePeriodicizeBump_contDiff c.1.1 (w c.1) (hw c.1).1 (hw c.1).2.2).continuous
   have hsum : (fun u => ∑ c : I, v c u) = W := by
@@ -53,23 +50,46 @@ theorem selected_complement_global_bound {p : ℕ} {a b : ℤ}
     dsimp only [v]
     exact (Finset.sum_finset_coe
       (fun c : torusSupportBox W => doublePeriodicizeBump c.1 (w c) u) I).trans (hpart u)
-  have hfun : (fun s => localizedDoubleFormFactor (2*p) (sourceRadialPair θ ε).1 s W) =
-      (fun s => localizedDoubleFormFactor (2*p) (sourceRadialPair θ ε).1 s (fun u => ∑ c : I, v c u)) :=
-    congrArg (fun U : DoubleAngularVector (2*p) → ℝ =>
-      fun s => localizedDoubleFormFactor (2*p) (sourceRadialPair θ ε).1 s U) hsum.symm
+  have hfun : (fun s => localizedDoubleFormFactor N (sourceRadialPair θ ε).1 s W) =
+      (fun s => localizedDoubleFormFactor N (sourceRadialPair θ ε).1 s (fun u => ∑ c : I, v c u)) :=
+    congrArg (fun U : DoubleAngularVector N → ℝ =>
+      fun s => localizedDoubleFormFactor N (sourceRadialPair θ ε).1 s U) hsum.symm
   rw [hfun, ← iteratedDeriv_eq_iterate,
-    localizedDoubleFormFactor_iteratedDeriv_sum (2*p) hN j hr hr1 (s := (sourceRadialPair θ ε).2) hmargin Finset.univ v (fun c _ => hv c)]
+    localizedDoubleFormFactor_iteratedDeriv_sum N hN j hr hr1 (s := (sourceRadialPair θ ε).2) hmargin Finset.univ v (fun c _ => hv c)]
   calc
-    ‖∑ c : I, iteratedDeriv j (fun s => localizedDoubleFormFactor (2*p)
+    ‖∑ c : I, iteratedDeriv j (fun s => localizedDoubleFormFactor N
       (sourceRadialPair θ ε).1 s (v c)) (sourceRadialPair θ ε).2‖
-        ≤ ∑ c : I, ‖iteratedDeriv j (fun s => localizedDoubleFormFactor (2*p)
+        ≤ ∑ c : I, ‖iteratedDeriv j (fun s => localizedDoubleFormFactor N
           (sourceRadialPair θ ε).1 s (v c)) (sourceRadialPair θ ε).2‖ := norm_sum_le _ _
     _ ≤ ∑ c : I, C c := by
       apply Finset.sum_le_sum
       intro c _
-      rw [localizedDoubleFormFactor_iteratedDeriv_periodicLift (2*p) hN j hr hr1 (s := (sourceRadialPair θ ε).2) hmargin
+      rw [localizedDoubleFormFactor_iteratedDeriv_periodicLift N hN j hr hr1 (s := (sourceRadialPair θ ε).2) hmargin
         c.1.1 (w c.1) (hw c.1).1 (hw c.1).2.2, iteratedDeriv_eq_iterate]
       exact hb c ε hε hεe
+
+/-- Compatibility with the selected first-order complement. -/
+theorem selected_complement_global_bound {p : ℕ} {a b : ℤ}
+    (hp : p.Prime) (hp11 : 11 ≤ p)
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (θ : ℝ) (hθ : 0 < Real.sin θ)
+    (hS : sourceS (Complex.exp ((θ:ℂ)*Complex.I)) =
+      ((2*PrimeFamily.cosineAverage p a b:ℝ):ℂ))
+    (W : DoubleAngularVector (2*p) → ℝ) (hW : ContDiff ℝ ∞ W)
+    (hWp : DoubleCoordinatePeriodic W)
+    (hgood : ∀ u ∈ tsupport W,
+      ¬ selectedBadConfiguration a b (angleTuple 1 u.1) (angleTuple 1 u.2)) :
+    ∃ ε₀ : ℝ, 0 < ε₀ ∧ ∀ j : ℕ, ∃ C : ℝ, 0 ≤ C ∧
+      ∀ ε : ℝ, 0 < ε → ε ≤ ε₀ →
+        ‖(deriv^[j] (fun s => localizedDoubleFormFactor (2*p) (sourceRadialPair θ ε).1 s W))
+          (sourceRadialPair θ ε).2‖ ≤ C := by
+  apply source_complement_global_bound (Nat.mul_pos (by omega) hp.pos)
+    (2*PrimeFamily.cosineAverage p a b) θ hθ hS W hW hWp
+  intro u hu
+  exact selected_active_separating_functional hp hp11 ha hb
+    (fun _ => anglePoint_norm (by norm_num) _)
+    (fun _ => anglePoint_norm (by norm_num) _) (hgood u hu)
+
 
 end
 end IsingBulk.First

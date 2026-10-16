@@ -1,0 +1,23 @@
+{
+  "manuscript": "v0.1-rc5",
+  "pdf_sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f",
+  "pages": 45,
+  "render_command": [
+    "pdftoppm",
+    "-png",
+    "-scale-to",
+    "650",
+    "paper/next/manuscript.pdf",
+    "page"
+  ],
+  "visual_review": "All 45 rendered pages inspected in five contact sheets; no clipped text, formula overflow, overlap, broken glyphs or malformed tables observed.",
+  "contact_sheet_sha256": {
+    "contact-1.png": "49857186ee1542407d03ae8eddf2af8b1eb917c92284b223b33f289c6ad59ce9",
+    "contact-2.png": "d3ddabf69abc9a2a63f30e94aaef372bf105ae89ea0f85c305aca2f64a158bc3",
+    "contact-3.png": "a78fda9406630f6a4c8d74edefe296ec03f54da6142cfdcf965b4dc612251630",
+    "contact-4.png": "aa894b833039b8944d81168ac275f665feb95dfde1ff83600627fd0f4ce26466",
+    "contact-5.png": "16d7b923eccb32c4f9565fe240a666b5f16038f85e437927fc20b4fcb551d392"
+  },
+  "compiled_label_numbers": "All 65 pre-existing labels retain their numbers; two new labels are added.",
+  "scope": "Layout QA and compilation do not establish mathematical correctness."
+}

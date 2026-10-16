@@ -24,6 +24,37 @@ private theorem finite_positive_lower_bound {ι : Type*} (S : Finset ι) (f : ι
 /-- A true finite partition into local lifted source integrals exists for any
 fixed smooth periodic weight whose topological support excludes the two selected
 bad configurations. Every local form-factor derivative is uniformly bounded. -/
+theorem source_complement_finite_refinement {N : ℕ} (hN : 0 < N) (S : ℝ)
+    (theta : ℝ) (htheta : 0 < Real.sin theta)
+    (hS : sourceS (Complex.exp ((theta:ℂ)*Complex.I)) =
+      (S:ℂ))
+    (W : DoubleAngularVector N → ℝ) (hW : ContDiff ℝ ∞ W)
+    (hWp : DoubleCoordinatePeriodic W)
+    (hsep : ∀ u ∈ tsupport W,
+      ActiveSourceSeparated (angleTuple 1 u.1) (angleTuple 1 u.2) S) :
+    ∃ (S : Finset (torusSupportBox W))
+      (w : torusSupportBox W → DoubleAngularVector N → ℝ) (epsilon₀ : ℝ), 0 < epsilon₀ ∧
+      (∀ c, ContDiff ℝ ∞ (w c) ∧ HasCompactSupport (w c) ∧
+        (∀ u, w c u ≠ 0 → ∀ i, |u.1 i-c.1.1 i| ≤ 1/2 ∧ |u.2 i-c.1.2 i| ≤ 1/2)) ∧
+      (∀ u, ∑ c ∈ S, doublePeriodicizeBump (c:DoubleAngularVector N) (w c) u = W u) ∧
+      (∀ c ∈ S, ∀ j : ℕ, ∃ C : ℝ, 0 ≤ C ∧ ∀ epsilon : ℝ,
+        0 < epsilon → epsilon ≤ epsilon₀ →
+        ‖(deriv^[j] (fun s => liftedLocalizedDoubleFormFactor N
+          (sourceRadialPair theta epsilon).1 s (w c))) (sourceRadialPair theta epsilon).2‖ ≤ C) := by
+  classical
+  have hlocal (c : torusSupportBox W) := source_radial_local_formFactor_bound hN S
+    theta htheta hS (c:DoubleAngularVector N) (hsep c c.2.1)
+  choose radius eps hr he hbound using hlocal
+  obtain ⟨S,w,hw,hpartition⟩ := finite_smooth_torus_refinement W hW hWp radius hr
+  obtain ⟨epsilon₀,he₀,hmin⟩ := finite_positive_lower_bound S eps (fun c _ => he c)
+  refine ⟨S,w,epsilon₀,he₀,?_,hpartition,?_⟩
+  · intro c
+    exact ⟨(hw c).1,(hw c).2.1,(hw c).2.2.2⟩
+  · intro c hc j
+    obtain ⟨C,hC,hb⟩ := hbound c (w c) (hw c).1 (hw c).2.2.1 j
+    exact ⟨C,hC,fun epsilon hpos hsmall => hb epsilon hpos (hsmall.trans (hmin c hc))⟩
+
+/-- Compatibility with the selected first-order complement. -/
 theorem selected_complement_finite_refinement {p : ℕ} {a b : ℤ}
     (hp : p.Prime) (hp11 : 11 ≤ p)
     (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
@@ -43,18 +74,13 @@ theorem selected_complement_finite_refinement {p : ℕ} {a b : ℤ}
         0 < epsilon → epsilon ≤ epsilon₀ →
         ‖(deriv^[j] (fun s => liftedLocalizedDoubleFormFactor (2*p)
           (sourceRadialPair theta epsilon).1 s (w c))) (sourceRadialPair theta epsilon).2‖ ≤ C) := by
-  classical
-  have hlocal (c : torusSupportBox W) := selected_radial_local_formFactor_bound hp hp11 ha hb
-    theta htheta hS (c:DoubleAngularVector (2*p)) (hgood c c.2.1)
-  choose radius eps hr he hbound using hlocal
-  obtain ⟨S,w,hw,hpartition⟩ := finite_smooth_torus_refinement W hW hWp radius hr
-  obtain ⟨epsilon₀,he₀,hmin⟩ := finite_positive_lower_bound S eps (fun c _ => he c)
-  refine ⟨S,w,epsilon₀,he₀,?_,hpartition,?_⟩
-  · intro c
-    exact ⟨(hw c).1,(hw c).2.1,(hw c).2.2.2⟩
-  · intro c hc j
-    obtain ⟨C,hC,hb⟩ := hbound c (w c) (hw c).1 (hw c).2.2.1 j
-    exact ⟨C,hC,fun epsilon hpos hsmall => hb epsilon hpos (hsmall.trans (hmin c hc))⟩
+  apply source_complement_finite_refinement (Nat.mul_pos (by omega) hp.pos)
+    (2*PrimeFamily.cosineAverage p a b) theta htheta hS W hW hWp
+  intro u hu
+  exact selected_active_separating_functional hp hp11 ha hb
+    (fun _ => anglePoint_norm (by norm_num) _)
+    (fun _ => anglePoint_norm (by norm_num) _) (hgood u hu)
+
 
 end
 end IsingBulk.First

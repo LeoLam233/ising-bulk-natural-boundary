@@ -38,12 +38,31 @@ theorem exteriorNormalizedBulk_symmetry :
 
 theorem selected_exterior_nonextension_of_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hab : a ≠ b) (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b))
+    (hab : a ≠ b)
     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
     ¬ HasExteriorExtension exteriorNormalizedBulk (PrimeFamily.selectedPoint p a b) := by
-  have hlocal := selected_bulk_nonextension_of_absolute_tail hp hp11 ha hb hab hTW hTail
+  have hlocal := selected_bulk_nonextension_of_absolute_tail hp hp11 ha hb hab hTail
   apply no_extension_of_eventuallyEq_exterior _ hlocal
+  have hi : 0 < (PrimeFamily.selectedPoint p a b).im := by
+    rw [PrimeFamily.selectedPoint,Complex.exp_ofReal_mul_I_im]
+    exact (selectedOrderedChart ha hb).sin_theta_pos
+  filter_upwards [Complex.continuous_im.continuousAt.eventually (Ioi_mem_nhds hi)] with s hs
+  intro hse
+  have hu := sourceS_im_pos_of_upper_exterior hse hs
+  simp only [normalizedUpperBulk,exteriorNormalizedBulk,exteriorEvenSeries_eq_upper hu]
+
+/-- The same selected singularity forbids genuine real C^k extension of
+the whole exterior normalized bulk germ. -/
+theorem selected_exterior_no_Ck_extension_of_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+    {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (hab : a ≠ b)
+    (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+      AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+    ¬ HasExteriorCkExtension exteriorNormalizedBulk (PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) := by
+  have hlocal := selected_bulk_no_Ck_extension_of_absolute_tail hp hp11 ha hb hab hTail
+  intro hext
+  apply hlocal (Ck_extension_of_eventuallyEq_exterior ?_ hext)
   have hi : 0 < (PrimeFamily.selectedPoint p a b).im := by
     rw [PrimeFamily.selectedPoint,Complex.exp_ofReal_mul_I_im]
     exact (selectedOrderedChart ha hb).sin_theta_pos
@@ -56,9 +75,6 @@ theorem selected_exterior_nonextension_of_tail {p : ℕ} (hp : p.Prime) (hp11 : 
 premise is the literal all-j absolute higher-even tail for every selected point.
 No root continuation, full-series holomorphy or noncancellation is external. -/
 theorem theorem_conditional
-    (hTW : ∀ p : ℕ, ∀ a b : ℤ, p.Prime → 11 ≤ p →
-      PrimeFamily.Admissible p a → PrimeFamily.Admissible p b → a ≠ b →
-      PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b))
     (hTail : ∀ p : ℕ, ∀ a b : ℤ, ∀ _hp : p.Prime, ∀ _hp11 : 11 ≤ p,
       ∀ ha : PrimeFamily.Admissible p a, ∀ hb : PrimeFamily.Admissible p b,
       a ≠ b → ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
@@ -68,8 +84,7 @@ theorem theorem_conditional
     (fun s hs => (exteriorNormalizedBulk_symmetry s hs).1)
     (fun s hs => (exteriorNormalizedBulk_symmetry s hs).2)
   rintro z ⟨p,a,b,hp,hp11,hab,ha,hb,rfl⟩
-  exact selected_exterior_nonextension_of_tail hp hp11 ha hb hab
-    (hTW p a b hp hp11 ha hb hab) (hTail p a b hp hp11 ha hb hab)
+  exact selected_exterior_nonextension_of_tail hp hp11 ha hb hab (hTail p a b hp hp11 ha hb hab)
 
 /-- E1 and E2 identify the real restriction of the internally constructed
 exterior germ. They do not supply its complex convergence or analyticity. -/

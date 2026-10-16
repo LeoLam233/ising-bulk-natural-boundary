@@ -1,6 +1,6 @@
 import IsingBulk.First.LowerOrderFixedRadius
 
-/-! The approved published fixed-order input yields a common positive radial
+/-! The internal fixed-order radial theorem yields a common positive radial
 interval for any finite set of lower particle and derivative orders. No
 common interval over infinitely many derivative orders is asserted. -/
 namespace IsingBulk.First
@@ -21,8 +21,7 @@ private theorem finite_positive_common_radius {ι : Type*} (S : Finset ι) (r : 
 
 theorem selected_lower_orders_common_interval {p : ℕ} {a b : ℤ}
     (hp : p.Prime) (hp11 : 11 ≤ p)
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b)) (m : ℕ) :
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (m : ℕ) :
     ∃ epsilon₀ : ℝ, 0 < epsilon₀ ∧ ∀ N : ℕ, 0 < N → Even N → N < 2*p →
       ∀ j : ℕ, j ≤ m → ∃ C : ℝ, 0 ≤ C ∧ ∀ epsilon : ℝ,
         0 < epsilon → epsilon < epsilon₀ →
@@ -30,7 +29,7 @@ theorem selected_lower_orders_common_interval {p : ℕ} {a b : ℤ}
           (sourceRadialPair (selectedOrderedChart ha hb).theta epsilon).2‖ ≤ C := by
   classical
   let I := {N : Fin (2*p) // 0 < N.val ∧ Even N.val} × Fin (m+1)
-  have hfixed (i : I) := selected_lower_orders_fixed_radius_bounded hp hp11 ha hb hTW
+  have hfixed (i : I) := selected_lower_orders_fixed_radius_bounded hp hp11 ha hb
     i.1.1 i.1.2.1 i.1.2.2 i.1.1.2 i.2
   choose radius bound hr hC hB using hfixed
   obtain ⟨epsilon₀,he0,hmin⟩ := finite_positive_common_radius Finset.univ radius (fun i _ => hr i)
