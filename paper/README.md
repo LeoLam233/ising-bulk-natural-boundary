@@ -1,5 +1,7 @@
 # Standalone manuscript and build
 
+**Exact rc4 artifact identity (16 October 2026).** The original `v0.1-rc4` tag PDF and the current bibliography/ORCID editorial PDF have different bytes and some different pages. Future audits should pin the current PDF SHA-256 `107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4`, matching TeX and label index, rather than the rc4 title alone. See the [identity check and page/reference crosswalk](../provenance/RC4_IDENTITY_2026-10-16.md). The frozen mathematics and historical tag are unchanged.
+
 `manuscript.tex` embeds all sections, appendices and thirteen bibliography entries. It has no external chapter or bibliography dependency. `manuscript.pdf` is the compiled v0.1-rc4 candidate artifact; its SHA-256 is in the repository manifest. `LABEL_INDEX.json` maps all 65 labels to this PDF's numbering/pages.
 
 Build with an existing Tectonic installation:

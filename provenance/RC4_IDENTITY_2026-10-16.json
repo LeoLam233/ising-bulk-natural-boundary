@@ -1,0 +1,752 @@
+{
+  "date": "2026-10-16",
+  "repository_head": "e07ffa811e6661f932dda07ead5833b74853b1ac",
+  "rc4_tag_object": "40d31b51d012e627b87967e996185c7fef33dd02",
+  "rc4_tag_commit": "1b4b506c9cb19d5fdbf9f59d89c7a179739d337d",
+  "editorial_commit": "a322ee43f8593a2fc5f9331f56a7052eb7f1dfe0",
+  "files": [
+    {
+      "variant": "tag-original",
+      "drive_file_id": "13kJcFtuB7KgDcSVZW0uAsPPxNi3WoyTf",
+      "artifacts": {
+        "paper/manuscript.pdf": {
+          "sha256": "624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693",
+          "bytes": 325870,
+          "git_blob": "cca85dc23abe3f5646003b220370961975bb700e"
+        },
+        "paper/manuscript.tex": {
+          "sha256": "2f3ad3af8b893e2387304a680dcf9cc5fa6b12a389e3ab7486e5c71512fd6235",
+          "bytes": 145872,
+          "git_blob": "1c6c0f47e3f1e4d13e59b49c52c18414e9dd3939"
+        },
+        "paper/LABEL_INDEX.json": {
+          "sha256": "586aa17ed2db26f14d59a1587fac98fb1d1ac39b353d194dd9e4755071a4a896",
+          "bytes": 5022,
+          "git_blob": "ca125bebecbea56e46bc41ec6bde2355a1f03138"
+        }
+      },
+      "drive_pdf_byte_identical": true
+    },
+    {
+      "variant": "bibliography-orcid",
+      "drive_file_id": "1JgDFaBzg-QdZDVeCdxELNuEm4lIvezuw",
+      "artifacts": {
+        "paper/manuscript.pdf": {
+          "sha256": "107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4",
+          "bytes": 327486,
+          "git_blob": "1fc2fbbd49512be738d79c3a9ca058c7203eb554"
+        },
+        "paper/manuscript.tex": {
+          "sha256": "6a1e5cfdc8681a6705d64dd648cbc33d46042c1f75aa624070ae1c4e125eaaf8",
+          "bytes": 146714,
+          "git_blob": "c7f2a1767d16312bd986c9df6bab0622cf5cdd53"
+        },
+        "paper/LABEL_INDEX.json": {
+          "sha256": "a0be0b74df94a0f1908c492f120cd0f2b2405e3ebcdf68b09381580b8fe1f698",
+          "bytes": 5023,
+          "git_blob": "0db5123ed589c37207166d47bae2ce9bb95969be"
+        }
+      },
+      "drive_pdf_byte_identical": true
+    }
+  ],
+  "checks": {
+    "entire_source_equal_after_removing_three_editorial_insertions": true,
+    "sections_3_through_appendices_byte_identical": true,
+    "all_65_labels_and_numbers_unchanged": true,
+    "label_count": 65,
+    "changed_label_pages": 17,
+    "both_pdf_pages": 42
+  },
+  "page_changes": [
+    {
+      "label": "eq:roadmapfirst",
+      "number": "1.1",
+      "old_page": 2,
+      "current_page": 3
+    },
+    {
+      "label": "eq:roadmaptail",
+      "number": "1.2",
+      "old_page": 2,
+      "current_page": 3
+    },
+    {
+      "label": "eq:double",
+      "number": "2.1",
+      "old_page": 4,
+      "current_page": 5
+    },
+    {
+      "label": "eq:bulk",
+      "number": "2.2",
+      "old_page": 4,
+      "current_page": 5
+    },
+    {
+      "label": "lem:symmetry",
+      "number": "2.2",
+      "old_page": 5,
+      "current_page": 6
+    },
+    {
+      "label": "lem:mean",
+      "number": "4.1",
+      "old_page": 7,
+      "current_page": 8
+    },
+    {
+      "label": "thm:first",
+      "number": "4.4",
+      "old_page": 9,
+      "current_page": 10
+    },
+    {
+      "label": "prop:selector",
+      "number": "5.1",
+      "old_page": 10,
+      "current_page": 11
+    },
+    {
+      "label": "eq:FKS",
+      "number": "5.2",
+      "old_page": 10,
+      "current_page": 11
+    },
+    {
+      "label": "eq:current",
+      "number": "5.3",
+      "old_page": 10,
+      "current_page": 11
+    },
+    {
+      "label": "sec:K",
+      "number": "7",
+      "old_page": 13,
+      "current_page": 14
+    },
+    {
+      "label": "lem:partition",
+      "number": "7.1",
+      "old_page": 13,
+      "current_page": 14
+    },
+    {
+      "label": "sec:sectors",
+      "number": "8",
+      "old_page": 21,
+      "current_page": 22
+    },
+    {
+      "label": "prop:mixed",
+      "number": "8.1",
+      "old_page": 21,
+      "current_page": 22
+    },
+    {
+      "label": "eq:pullbackLie",
+      "number": "D.4",
+      "old_page": 29,
+      "current_page": 30
+    },
+    {
+      "label": "eq:weightjets",
+      "number": "D.7",
+      "old_page": 30,
+      "current_page": 31
+    },
+    {
+      "label": "app:auditmap",
+      "number": "G",
+      "old_page": 36,
+      "current_page": 37
+    }
+  ],
+  "bibliography": [
+    {
+      "key": "Boukraa2008",
+      "old_number": 1,
+      "current_number": 2
+    },
+    {
+      "key": "GuttmannEnting1996",
+      "old_number": 2,
+      "current_number": 3
+    },
+    {
+      "key": "McCoyMaillard2012",
+      "old_number": 3,
+      "current_number": 4
+    },
+    {
+      "key": "Nickel1999",
+      "old_number": 4,
+      "current_number": 5
+    },
+    {
+      "key": "Nickel2000",
+      "old_number": 5,
+      "current_number": 6
+    },
+    {
+      "key": "Orrick2001",
+      "old_number": 6,
+      "current_number": 7
+    },
+    {
+      "key": "PalmerTracy1981",
+      "old_number": 7,
+      "current_number": 8
+    },
+    {
+      "key": "TW2013",
+      "old_number": 8,
+      "current_number": 9
+    },
+    {
+      "key": "TW2014",
+      "old_number": 9,
+      "current_number": 10
+    },
+    {
+      "key": "TW2017Toeplitz",
+      "old_number": 10,
+      "current_number": 11
+    },
+    {
+      "key": "WMTB1976",
+      "old_number": 11,
+      "current_number": 12
+    },
+    {
+      "key": "Yang1952",
+      "old_number": 12,
+      "current_number": 13
+    }
+  ],
+  "historical_coverage_navigation": [
+    {
+      "label": "lem:lie",
+      "historical_location": "D.1, p. 21",
+      "current_number": "D.1",
+      "current_page": 28
+    },
+    {
+      "label": "lem:branch",
+      "historical_location": "7.4, p. 13",
+      "current_number": "7.4",
+      "current_page": 18
+    },
+    {
+      "label": "prop:allB",
+      "historical_location": "7.6, p. 14",
+      "current_number": "7.6",
+      "current_page": 20
+    },
+    {
+      "label": "eq:branchregular",
+      "historical_location": "D.2, p. 22",
+      "current_number": "D.2",
+      "current_page": 29
+    },
+    {
+      "label": "lem:jets",
+      "historical_location": "D.2, p. 23",
+      "current_number": "D.2",
+      "current_page": 30
+    },
+    {
+      "label": "app:normalization",
+      "historical_location": "F, p. 27",
+      "current_number": "F",
+      "current_page": 35
+    },
+    {
+      "label": "app:normalization",
+      "historical_location": "F, p. 27",
+      "current_number": "F",
+      "current_page": 35
+    },
+    {
+      "label": "lem:mean",
+      "historical_location": "4.1, p. 6",
+      "current_number": "4.1",
+      "current_page": 8
+    },
+    {
+      "label": "lem:period",
+      "historical_location": "4.2, p. 7",
+      "current_number": "4.2",
+      "current_page": 8
+    },
+    {
+      "label": "lem:complement",
+      "historical_location": "4.3, p. 7",
+      "current_number": "4.3",
+      "current_page": 9
+    },
+    {
+      "label": "thm:first",
+      "historical_location": "4.4, p. 8",
+      "current_number": "4.4",
+      "current_page": 10
+    },
+    {
+      "label": "prop:compactR",
+      "historical_location": "8.2, p. 16",
+      "current_number": "8.2",
+      "current_page": 23
+    },
+    {
+      "label": "prop:compactR",
+      "historical_location": "8.2, p. 16",
+      "current_number": "8.2",
+      "current_page": 23
+    },
+    {
+      "label": "prop:compactR",
+      "historical_location": "8.2, p. 16",
+      "current_number": "8.2",
+      "current_page": 23
+    },
+    {
+      "label": "thm:conditional",
+      "historical_location": "9.2, p. 19",
+      "current_number": "9.2",
+      "current_page": 26
+    },
+    {
+      "label": "thm:nb",
+      "historical_location": "9.3, p. 19",
+      "current_number": "9.3",
+      "current_page": 26
+    },
+    {
+      "label": "sec:setup",
+      "historical_location": "2, p. 3",
+      "current_number": "2",
+      "current_page": 4
+    },
+    {
+      "label": "lem:symmetry",
+      "historical_location": "2.2, p. 5",
+      "current_number": "2.2",
+      "current_page": 6
+    },
+    {
+      "label": "lem:branch",
+      "historical_location": "7.4, p. 13",
+      "current_number": "7.4",
+      "current_page": 18
+    },
+    {
+      "label": "lem:contraction",
+      "historical_location": "7.2, p. 12",
+      "current_number": "7.2",
+      "current_page": 14
+    },
+    {
+      "label": "prop:mixed",
+      "historical_location": "8.1, p. 15",
+      "current_number": "8.1",
+      "current_page": 22
+    },
+    {
+      "label": "prop:ultrahigh",
+      "historical_location": "5.2, p. 9",
+      "current_number": "5.2",
+      "current_page": 11
+    },
+    {
+      "label": "prop:selector",
+      "historical_location": "5.1, p. 8",
+      "current_number": "5.1",
+      "current_page": 11
+    },
+    {
+      "label": "prop:F",
+      "historical_location": "6.1, p. 10",
+      "current_number": "6.1",
+      "current_page": 12
+    },
+    {
+      "label": "prop:selector",
+      "historical_location": "5.1, p. 8",
+      "current_number": "5.1",
+      "current_page": 11
+    },
+    {
+      "label": "lem:contraction",
+      "historical_location": "7.2, p. 12",
+      "current_number": "7.2",
+      "current_page": 14
+    },
+    {
+      "label": "lem:originaldisk",
+      "historical_location": "7.3, p. 12",
+      "current_number": "7.3",
+      "current_page": 17
+    },
+    {
+      "label": "lem:schur",
+      "historical_location": "C.1, p. 21",
+      "current_number": "C.1",
+      "current_page": 27
+    },
+    {
+      "label": "prop:ultrahigh",
+      "historical_location": "5.2, p. 9",
+      "current_number": "5.2",
+      "current_page": 11
+    },
+    {
+      "label": "prop:largeS",
+      "historical_location": "8.4, p. 18",
+      "current_number": "8.4",
+      "current_page": 25
+    },
+    {
+      "label": "lem:protected",
+      "historical_location": "8.3, p. 17",
+      "current_number": "8.3",
+      "current_page": 24
+    },
+    {
+      "label": "lem:lie",
+      "historical_location": "D.1, p. 21",
+      "current_number": "D.1",
+      "current_page": 28
+    },
+    {
+      "label": "lem:jets",
+      "historical_location": "D.2, p. 23",
+      "current_number": "D.2",
+      "current_page": 30
+    },
+    {
+      "label": "lem:partition",
+      "historical_location": "7.1, p. 11",
+      "current_number": "7.1",
+      "current_page": 14
+    },
+    {
+      "label": "prop:mixed",
+      "historical_location": "8.1, p. 15",
+      "current_number": "8.1",
+      "current_page": 22
+    },
+    {
+      "label": "lem:resultant",
+      "historical_location": "3.2, p. 5",
+      "current_number": "3.2",
+      "current_page": 6
+    },
+    {
+      "label": "prop:micro",
+      "historical_location": "7.5, p. 14",
+      "current_number": "7.5",
+      "current_page": 19
+    },
+    {
+      "label": "prop:micro",
+      "historical_location": "7.5, p. 14",
+      "current_number": "7.5",
+      "current_page": 19
+    },
+    {
+      "label": "prop:allB",
+      "historical_location": "7.6, p. 14",
+      "current_number": "7.6",
+      "current_page": 20
+    },
+    {
+      "label": "sec:setup",
+      "historical_location": "2, p. 3",
+      "current_number": "2",
+      "current_page": 4
+    },
+    {
+      "label": "app:normalization",
+      "historical_location": "F, p. 27",
+      "current_number": "F",
+      "current_page": 35
+    },
+    {
+      "label": "lem:lie",
+      "historical_location": "D.1, p. 21",
+      "current_number": "D.1",
+      "current_page": 28
+    },
+    {
+      "label": "lem:jets",
+      "historical_location": "D.2, p. 23",
+      "current_number": "D.2",
+      "current_page": 30
+    },
+    {
+      "label": "lem:contraction",
+      "historical_location": "7.2, p. 12",
+      "current_number": "7.2",
+      "current_page": 14
+    },
+    {
+      "label": "lem:contraction",
+      "historical_location": "7.2, p. 12",
+      "current_number": "7.2",
+      "current_page": 14
+    },
+    {
+      "label": "prop:largeS",
+      "historical_location": "8.4, p. 18",
+      "current_number": "8.4",
+      "current_page": 25
+    },
+    {
+      "label": "lem:originaldisk",
+      "historical_location": "7.3, p. 12",
+      "current_number": "7.3",
+      "current_page": 17
+    },
+    {
+      "label": "lem:protected",
+      "historical_location": "8.3, p. 17",
+      "current_number": "8.3",
+      "current_page": 24
+    },
+    {
+      "label": "lem:schur",
+      "historical_location": "C.1, p. 21",
+      "current_number": "C.1",
+      "current_page": 27
+    },
+    {
+      "label": "app:pfaffian",
+      "historical_location": "C, p. 21",
+      "current_number": "C",
+      "current_page": 27
+    },
+    {
+      "label": "prop:ultrahigh",
+      "historical_location": "5.2, p. 9",
+      "current_number": "5.2",
+      "current_page": 11
+    },
+    {
+      "label": "lem:residue",
+      "historical_location": "2.1, p. 4",
+      "current_number": "2.1",
+      "current_page": 5
+    },
+    {
+      "label": "app:pfaffian",
+      "historical_location": "C, p. 21",
+      "current_number": "C",
+      "current_page": 27
+    },
+    {
+      "label": "eq:branchregular",
+      "historical_location": "D.2, p. 22",
+      "current_number": "D.2",
+      "current_page": 29
+    },
+    {
+      "label": "thm:tail",
+      "historical_location": "9.1, p. 19",
+      "current_number": "9.1",
+      "current_page": 25
+    },
+    {
+      "label": "thm:conditional",
+      "historical_location": "9.2, p. 19",
+      "current_number": "9.2",
+      "current_page": 26
+    },
+    {
+      "label": "thm:nb",
+      "historical_location": "9.3, p. 19",
+      "current_number": "9.3",
+      "current_page": 26
+    },
+    {
+      "label": "lem:partition",
+      "historical_location": "7.1, p. 11",
+      "current_number": "7.1",
+      "current_page": 14
+    },
+    {
+      "label": "lem:partition",
+      "historical_location": "7.1, p. 11",
+      "current_number": "7.1",
+      "current_page": 14
+    },
+    {
+      "label": "prop:highKS",
+      "historical_location": "8.5, p. 18",
+      "current_number": "8.5",
+      "current_page": 25
+    },
+    {
+      "label": "lem:lie",
+      "historical_location": "D.1, p. 21",
+      "current_number": "D.1",
+      "current_page": 28
+    },
+    {
+      "label": "thm:tail",
+      "historical_location": "9.1, p. 19",
+      "current_number": "9.1",
+      "current_page": 25
+    },
+    {
+      "label": "lem:jets",
+      "historical_location": "D.2, p. 23",
+      "current_number": "D.2",
+      "current_page": 30
+    },
+    {
+      "label": "prop:highKS",
+      "historical_location": "8.5, p. 18",
+      "current_number": "8.5",
+      "current_page": 25
+    },
+    {
+      "label": "prop:mixed",
+      "historical_location": "8.1, p. 15",
+      "current_number": "8.1",
+      "current_page": 22
+    },
+    {
+      "label": "prop:selector",
+      "historical_location": "5.1, p. 8",
+      "current_number": "5.1",
+      "current_page": 11
+    },
+    {
+      "label": "thm:tail",
+      "historical_location": "9.1, p. 19",
+      "current_number": "9.1",
+      "current_page": 25
+    },
+    {
+      "label": "prop:micro",
+      "historical_location": "7.5, p. 14",
+      "current_number": "7.5",
+      "current_page": 19
+    },
+    {
+      "label": "prop:allB",
+      "historical_location": "7.6, p. 14",
+      "current_number": "7.6",
+      "current_page": 20
+    },
+    {
+      "label": "lem:cyclotomic",
+      "historical_location": "A.1, p. 20",
+      "current_number": "A.1",
+      "current_page": 26
+    },
+    {
+      "label": "thm:prime",
+      "historical_location": "3.1, p. 5",
+      "current_number": "3.1",
+      "current_page": 6
+    },
+    {
+      "label": "lem:resultant",
+      "historical_location": "3.2, p. 5",
+      "current_number": "3.2",
+      "current_page": 6
+    },
+    {
+      "label": "lem:symmetry",
+      "historical_location": "2.2, p. 5",
+      "current_number": "2.2",
+      "current_page": 6
+    },
+    {
+      "label": "prop:selector",
+      "historical_location": "5.1, p. 8",
+      "current_number": "5.1",
+      "current_page": 11
+    },
+    {
+      "label": "prop:F",
+      "historical_location": "6.1, p. 10",
+      "current_number": "6.1",
+      "current_page": 12
+    },
+    {
+      "label": "prop:F",
+      "historical_location": "6.1, p. 10",
+      "current_number": "6.1",
+      "current_page": 12
+    }
+  ],
+  "scope": "Identity and navigation only; no scientific re-audit. Repository-visible reports only; no inference about unprovided private audits.",
+  "audit_views": [
+    {
+      "path": "audits/views/v2_a1v2_reassessment.md",
+      "sha256": "4f70cd49497e7aab922f724aa0fd29fd94d9a580dacabd3a7ba8e6ecf6c1582e"
+    },
+    {
+      "path": "audits/views/v2_external_reassessment.md",
+      "sha256": "b817d4d9434b282d4ec6f4e5a933a8807c64c58d13b49ea85454537fe63aa2cf"
+    },
+    {
+      "path": "audits/views/v2_two_audits_comparison.md",
+      "sha256": "2bff9a3e4644a4eac17927874456bae661701672c10f052bb3f7327f397d2d48"
+    },
+    {
+      "path": "audits/views/v3_complex_disk_reassessment.md",
+      "sha256": "168e8aca7ec83830442e8f1ed22f1abfe581c179de59f33ce15709da6f455efe"
+    },
+    {
+      "path": "audits/views/v4_glue_reassessment.md",
+      "sha256": "13c7bc55ae297033468ffa994d3f0beaed6d0fc637c221742e55cc2f1757e4ab"
+    },
+    {
+      "path": "audits/views/v5_freeform_reassessment.md",
+      "sha256": "24acf651fdb91d4523706963a48d76238e25dad823a4f142ffef363dd2eb7fab"
+    },
+    {
+      "path": "audits/views/v6_reassessment.md",
+      "sha256": "f8e5e48567541e13750cca37e3d23e5208984f6edb65aa56af31cb889d315c23"
+    },
+    {
+      "path": "audits/views/v7_a1v2_auditor.md",
+      "sha256": "be414963e5d6cef3f7ce3bbc3ee24d1765df63f8631fd49d859b7fe36381e248"
+    },
+    {
+      "path": "audits/views/v7_a1v2_receiver.md",
+      "sha256": "1f089154641920ce48090f34182a507da8dcd0828cf121bd482e39cc12f92682"
+    },
+    {
+      "path": "audits/views/v7_additional_auditor.md",
+      "sha256": "aeeb9740dc9abb60bf3b8fa7ee022c8484700688c19725ea4a595df3ffb17733"
+    },
+    {
+      "path": "audits/views/v7_additional_receiver.md",
+      "sha256": "461ff7f27213e7977456c11a17861045c5c02454025d1ef0647c7221454f3817"
+    },
+    {
+      "path": "audits/views/v7_first_auditor.md",
+      "sha256": "29e55a901b79c3789af250d2fbfdf913e32a6f91f11e8d61a9080d8044c80a04"
+    },
+    {
+      "path": "audits/views/v7_first_matrix.md",
+      "sha256": "51d47877c5bfd2704af4c80eb0fd428242e60418f93cea83a8d170ffc34e6b29"
+    },
+    {
+      "path": "audits/views/v7_first_receipt.md",
+      "sha256": "3765d7b8d42ba1e60abc0156a63ec3741f667d7ba5139d7e559816f50814658f"
+    },
+    {
+      "path": "audits/views/v8_review_scope.md",
+      "sha256": "418800ec3b74e985ac06c462faa488859357dd0874a858b50cabc71dc7b97b37"
+    },
+    {
+      "path": "audits/views/v8_revision_notes.md",
+      "sha256": "8eb2cbd1a61fa63448d5538184764e8c81b4b4f102f4d93deba721a4423dd548"
+    }
+  ]
+}

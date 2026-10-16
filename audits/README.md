@@ -1,5 +1,7 @@
 # Reading the historical audit records
 
+**Rc4 input identity (16 October 2026).** Two editorial rc4 PDF artifacts share the same title/date. Use the [exact identity and navigation record](../provenance/RC4_IDENTITY_2026-10-16.md) when supplying a new audit input. Historical reports below retain their original version scope and pages; this crosswalk does not extend their audit coverage.
+
 These files are historical AI-generated or AI-assisted audit, receiver and editorial records supplied in this project. None is human peer review or current proof certification. Labels such as `PASS`, `CLOSED` or `SURVIVES` report the stated result of a particular check; they do not upgrade another version. The words `external` and `first_auditor` identify a receiving sequence or a separate AI session, not an independent human referee.
 
 All existing audit views and the version ledger are preserved byte-for-byte from rc1. Earlier transformations used to create those public views remain documented in [VIEW_MANIFEST.json](../provenance/VIEW_MANIFEST.json); this index does not turn a derived view into an untouched original. Input identity and limitations must be read in the individual record; where a hash was absent, a version label alone is not a byte-identity certificate. Dates below come from explicit text, not filesystem timestamps.
