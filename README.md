@@ -2,7 +2,9 @@
 
 **Manuscript v0.1-rc4 (frozen) · Lean/post-audit release v0.2.1 · Candidate for public mathematical review · Dehao Lin**
 
-[中文说明](README.zh.md) · [Frozen v0.1-rc4 manuscript](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf) · [Proof guide](docs/PROOF_GUIDE.md)
+[中文说明](README.zh.md) · [Current rc4 manuscript PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf) · [Proof guide](docs/PROOF_GUIDE.md)
+
+**Exact PDF identity for audits.** The published [`v0.1-rc4` tag](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.1-rc4) pins commit `1b4b506c9cb19d5fdbf9f59d89c7a179739d337d` and `paper/manuscript.pdf` SHA-256 `624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693`. The PDF on `main` has SHA-256 `107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4` after the [2026-10-04 ORCID/bibliography update](https://github.com/LeoLam233/ising-bulk-natural-boundary/commit/a322ee43f8593a2fc5f9331f56a7052eb7f1dfe0); theorem/proof text and equation/theorem numbering were preserved, but some page locations and bibliography numbers changed. Use the [main label index](paper/LABEL_INDEX.json) for the current PDF and the [tagged label index](https://github.com/LeoLam233/ising-bulk-natural-boundary/blob/v0.1-rc4/paper/LABEL_INDEX.json) for the published PDF. When citing an audit input, pin the exact PDF hash; see the [maintenance receipt](provenance/BIBLIOGRAPHY_ORCID_2026-10-04.json).
 
 ## Research history and failed attempts
 
