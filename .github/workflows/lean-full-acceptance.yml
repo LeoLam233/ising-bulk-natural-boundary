@@ -4,6 +4,7 @@ on:
     branches:
       - codex/ising-lean-final-20261006
       - codex/ising-v0.2.1-post-audit-remediation-20261007
+      - research/next-internal-regularity-20261017
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,6 +22,8 @@ jobs:
       LAKE_NO_CACHE: 'true'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
       - name: Verify full proof payload
         run: python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')"
       - name: Install exact official runtime
@@ -60,6 +63,10 @@ jobs:
           python3 -u tools/continuation/final_gate.py --lean-bin "$ISING_LEAN_BIN" --approved-preflight "$RUNNER_TEMP/ising-evidence/preflight.json" --logs "$RUNNER_TEMP/ising-evidence/full" --threads 2 --execute
       - name: Final payload identity
         run: python3 ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')" --dependencies
+      - name: Complete compiled-namespace verifier controls
+        run: python3 control_packet/continuation/run_remediation_controls.py --shadow-tree .lake/build/lib/lean/IsingBulk
+      - name: Candidate repository consistency
+        run: python3 ../scripts/verify_candidate.py
       - name: Preserve complete execution evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

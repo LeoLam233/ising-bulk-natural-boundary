@@ -4,6 +4,7 @@ on:
     branches:
       - codex/ising-lean-acceptance-20261006
       - codex/ising-v0.2.1-post-audit-remediation-20261007
+      - research/next-internal-regularity-20261017
   workflow_dispatch:
 permissions:
   contents: read

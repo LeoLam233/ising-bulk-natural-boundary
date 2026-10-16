@@ -1,0 +1,16 @@
+{
+  "protected_historical_files": 211,
+  "preserved_record_copies": 17,
+  "production_files_including_root": 1075,
+  "endpoint_count": 18,
+  "source_labels": 67,
+  "old_label_numbers_preserved": 65,
+  "proof_id": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+  "verification_id": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+  "safe_project_declarations": 9225,
+  "fresh_kernel_replay_exit": 0,
+  "verified_archived_files": 326,
+  "status": "VERIFIED_CANDIDATE",
+  "current_inventory_files": 1406,
+  "manifest_excludes_itself": true
+}

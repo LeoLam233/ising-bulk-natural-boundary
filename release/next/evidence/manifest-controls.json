@@ -1,0 +1,309 @@
+{
+  "scope": "isolated bounded-payload byte and inventory controls only",
+  "formal_audit": false,
+  "all_controls_pass": true,
+  "case_count": 13,
+  "trusted_manifest_id": "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7",
+  "results_directory": "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed",
+  "cases": [
+    {
+      "case": "positive_untouched",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/positive_untouched/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/positive_untouched/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 0,
+      "expected_error_code": null,
+      "expected_error_path": null,
+      "actual": {
+        "file_count": 4,
+        "manifest_id": "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7",
+        "status": "PASS"
+      }
+    },
+    {
+      "case": "source_byte_tamper",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/source_byte_tamper/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/source_byte_tamper/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "SHA256_MISMATCH",
+      "expected_error_path": "IsingBulk/Control.lean",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "SHA256_MISMATCH",
+        "path": "IsingBulk/Control.lean"
+      }
+    },
+    {
+      "case": "toolchain_pin_byte_tamper",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/toolchain_pin_byte_tamper/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/toolchain_pin_byte_tamper/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "SHA256_MISMATCH",
+      "expected_error_path": "lean-toolchain",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "SHA256_MISMATCH",
+        "path": "lean-toolchain"
+      }
+    },
+    {
+      "case": "missing_source",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/missing_source/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/missing_source/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "MISSING_FILE",
+      "expected_error_path": "IsingBulk/Control.lean",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "MISSING_FILE",
+        "path": "IsingBulk/Control.lean"
+      }
+    },
+    {
+      "case": "undeclared_hidden_file",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/undeclared_hidden_file/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/undeclared_hidden_file/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "UNDECLARED_FILE",
+      "expected_error_path": ".hidden-proof-input.txt",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "UNDECLARED_FILE",
+        "path": ".hidden-proof-input.txt"
+      }
+    },
+    {
+      "case": "manifest_byte_tamper",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/manifest_byte_tamper/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/manifest_byte_tamper/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "MANIFEST_ID_MISMATCH",
+      "expected_error_path": null,
+      "actual": {
+        "status": "FAIL",
+        "error_code": "MANIFEST_ID_MISMATCH",
+        "path": null
+      }
+    },
+    {
+      "case": "bad_digest_with_test_pin",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/bad_digest_with_test_pin/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/bad_digest_with_test_pin/manifest.json",
+        "--expected-id",
+        "182eb0166ea5fc27ae5926b246a354e0eb40a9ae9bfff5ca2d247cff01d9a0b5"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "SHA256_MISMATCH",
+      "expected_error_path": "IsingBulk/Control.lean",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "SHA256_MISMATCH",
+        "path": "IsingBulk/Control.lean"
+      }
+    },
+    {
+      "case": "omitted_entry_with_test_pin",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/omitted_entry_with_test_pin/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/omitted_entry_with_test_pin/manifest.json",
+        "--expected-id",
+        "92e36e10254d8b76a88e022e97f8b50c86621a20a85733aa23c43783d5ef1d5f"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "UNDECLARED_FILE",
+      "expected_error_path": "IsingBulk/Control.lean",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "UNDECLARED_FILE",
+        "path": "IsingBulk/Control.lean"
+      }
+    },
+    {
+      "case": "duplicate_entry_with_test_pin",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_entry_with_test_pin/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_entry_with_test_pin/manifest.json",
+        "--expected-id",
+        "7e37f2834dd1fcd0046636119a277e39c8418c0b326bfff2640358cff1f81f2c"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "DUPLICATE_PATH",
+      "expected_error_path": "IsingBulk/Control.lean",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "DUPLICATE_PATH",
+        "path": "IsingBulk/Control.lean"
+      }
+    },
+    {
+      "case": "traversal_entry_with_test_pin",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/traversal_entry_with_test_pin/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/traversal_entry_with_test_pin/manifest.json",
+        "--expected-id",
+        "b0bab130b59132cd83b2af2439d792995b9dbdbcdfc295a5581d6a2ac44c91bf"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "UNSAFE_PATH",
+      "expected_error_path": "../outside.lean",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "UNSAFE_PATH",
+        "path": "../outside.lean"
+      }
+    },
+    {
+      "case": "coherent_source_and_manifest_tamper",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/coherent_source_and_manifest_tamper/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/coherent_source_and_manifest_tamper/manifest.json",
+        "--expected-id",
+        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "MANIFEST_ID_MISMATCH",
+      "expected_error_path": null,
+      "actual": {
+        "status": "FAIL",
+        "error_code": "MANIFEST_ID_MISMATCH",
+        "path": null
+      }
+    },
+    {
+      "case": "invalid_json_with_test_pin",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/invalid_json_with_test_pin/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/invalid_json_with_test_pin/manifest.json",
+        "--expected-id",
+        "86158a37c4021be8fbfa95733f98ac90b4bc8da2595bd164452b3f750c78a378"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "MANIFEST_PARSE_ERROR",
+      "expected_error_path": null,
+      "actual": {
+        "status": "FAIL",
+        "error_code": "MANIFEST_PARSE_ERROR",
+        "path": null
+      }
+    },
+    {
+      "case": "duplicate_json_key_with_test_pin",
+      "control_pass": true,
+      "argv": [
+        "/usr/bin/python3",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "verify",
+        "--payload-root",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_json_key_with_test_pin/payload",
+        "--manifest",
+        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_json_key_with_test_pin/manifest.json",
+        "--expected-id",
+        "fcee514468d5e7967f1a6eecd03df765adb3fc83ff9785c56ea308df0b56cb1c"
+      ],
+      "exit_code": 1,
+      "expected_error_code": "DUPLICATE_JSON_KEY",
+      "expected_error_path": "schema",
+      "actual": {
+        "status": "FAIL",
+        "error_code": "DUPLICATE_JSON_KEY",
+        "path": "schema"
+      }
+    }
+  ]
+}

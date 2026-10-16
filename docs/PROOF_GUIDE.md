@@ -1,45 +1,39 @@
-# Reading the proposed proof
+# Reading manuscript v0.1-rc5 and Lean v0.3.0-rc1
 
-**Current-status note (7 October 2026).** This guide describes the frozen manuscript v0.1-rc4. Its CR0/MR1 references are historical provenance, not the current formalization status. The internal form-factor / higher-tail proof chain is now formalized and kernel-verified in [Lean v0.2.1](../lean/README.md), with E1/E2/E3 explicit external literature premises. Independent human expert validation and peer review remain outstanding.
+[Candidate PDF](../paper/next/manuscript.pdf) · [Current labels/pages](../paper/next/LABEL_INDEX.json) · [Version identities](VERSIONS.md). All 65 previous mathematical label numbers remain unchanged.
 
-Read the [two-page expert brief](expert_brief.pdf) for orientation and the [frozen v0.1-rc4 manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. The first singularity is Theorem 4.4 (p. 10), the absolute tail estimate is Theorem 9.1 (p. 25), and the noncancellation criterion and natural-boundary conclusion are Theorem 9.2 and Corollary 9.3 (p. 26).
-
-Numbering refers to that manuscript. The [W1](../provenance/W1_REPAIR_AUDIT.md) and [W2](../provenance/W2_REPAIR_AUDIT.md) repair records identify the repairs already frozen in the mathematical candidate. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
-
-| Stage | Location | Mathematical obligation |
+| Stage | Manuscript | Actual interface |
 |---|---|---|
-| Observable and measures | §2, Appendix F | Full lattice connected response; normalized double contour measure; actual inner-root residues. |
-| Dense first-order family | §3, Appendix A | First even order, unique allowed cosine pair, dense family and endpoint exponential separation. |
-| Whole first term | Theorem 4.4 (§4), Appendix B | Fixed y-only localization; legitimate residue/mean-angle deformation; equal nonzero phases; smooth complement and lower derivatives. |
-| Exact decomposition | §5 | Weighted contour deformation with its actual Stokes correction, not invariance of a weighted integral. |
-| Selected contour | §6 | Protected c/N parameter disk and Pfaffian/matching budget with all costs divided by N!. |
-| All-branch tail | §7, Appendices D–E | Remaining-pair grouping, branch disks, microcore, corrected near-collision slope costs and scale order. |
-| Mixed/compact tail | §8, Appendices D–E | Explicit current partition, lambda-deformed branch geometry, fixed real cutoffs, coarea and flux removal. |
-| Entire sum | §9, Appendices C and G | Theorem 9.1's absolute tail estimate; W1–W13 coverage for all higher even orders and j≤k; normal convergence, product rule and dense derivative blow-up. |
+| Physical identification | §2, Appendix F | E1/E2, real low-temperature data and local inverse-temperature sheets. |
+| Dense first-order family | Theorem 3.1 | First even Nickel order and exact non-Nickel facts below it. |
+| Whole first singularity | Theorem 4.4, Lemma 4.3 | Actual residues, nonzero coefficient, bounded lower derivatives and compatible remainder. |
+| Internal lower orders | Unnumbered argument before Theorem 4.4 | NonNickelGeometry → generic complement IBP → NonNickelRadialBounds → lower-order endpoints. No E3. |
+| Selected contour | Proposition 6.1 | Actual protected `c/N` disk and `1+C/N` pair bound, already present in baseline Lean. |
+| Entire higher tail | Theorem 9.1, §§5–8, Appendices C–E/G | Existing complete contour and all-j absolute-tail assembly. |
+| Final composition | Theorem 9.2, Corollary 9.3 | Canonical NB endpoints with lower-order and tail estimates discharged internally. |
+| Regularity | Corollary 9.4 | Genuine selected-point real Ck obstruction formalized; quantitative prime covering manuscript-only. |
+| Closed amplitude | Appendix B (B.1), Appendix F | Factorial evaluation manuscript-only; existing formal nonvanishing retained. |
 
 ```mermaid
 flowchart TD
- E[External representation and fixed-order theorem] --> A[Dense first-order family]
- A --> H[Whole-integral nonzero first derivative]
- A --> T[Endpoint separation and entire tail]
- D[Weighted contour plus protected disks] --> T
- L[Lie recurrence, flux and coarea] --> T
- P[Pfaffian and factorial budgets] --> T
- H --> N[Absolute noncancellation]
+ A[Selected prime arithmetic] --> L[Internal lower-order bounds]
+ A --> F[Whole first singularity]
+ A --> T[Absolute all-j higher tail]
+ P[Exact FKS contours and pair/Lie estimates] --> T
+ L --> N[Bulk noncancellation]
+ F --> N
  T --> N
- N --> B[Natural boundary candidate]
+ N --> B[Normalized natural boundary and selected Ck obstruction]
+ E[E1/E2 real physical identification] --> H[Physical natural boundary]
+ B --> H
 ```
 
-For the absolute tail, start with Appendix G's W1–W13 coverage table and trace each row to its estimate before reading the summation in Theorem 9.1. Check coverage of all higher even orders and all $0\le j\le k$, including transitions between supports and particle windows. The particle-number and current-parameter splits occur after differentiation.
+For E3, read the coordinate balances and `ActiveCombination.nickel_of_productX_pos` / `zero_of_nonNickel`. The single-product case matters: the other coordinates are +1, hence it too yields a Nickel equation. The analytic core retains actual smooth weights, denominators, half-line exponentials, generated IBP coefficient derivatives, derivative interchange, finite torus refinement and radius locality. The radius is selected at the evaluation point and held fixed while differentiating. The stronger published neighborhood-uniform proposition is not claimed as an internally proved substitute.
 
-For a short independent attack, select an actual named support and check **all** parameter values in its allowed disk. Inspect the already cancelled complete pair, not its separately singular factors. At branch/endpoint degeneracies, a compactness statement needs a regular extension and a strict margin only for the claimed same-group sets; cross-group equality is allowed.
+For Proposition 6.1, hold the branch root at its complex-disk value and move only the compact radial-center root. Its denominator stays uniformly separated from the closed lower disk. Existing actual root-image theorems cover transition supports and strict same-group contraction. The weaker downstream square-root inflation remains a valid budget.
 
-For high derivatives (Appendix D, Lemmas D.1–D.2; Appendix E), follow terms generated by differentiating previously generated coefficients and cutoffs. Keep the unfactored numerator, prove flux vanishes at every stage, and use the real coarea Jacobian with phase-length/period counts. Fix the point and finite derivative order before choosing the large constants. These are central obligations, not premises granted by the guide.
+For the amplitude, distinguish `L_beta` (one chart's kth complex derivative) from `A_chart` (its radial singular-power coefficient). Offsite/full-site totals have multiplicities two/four. Inverse angle and principal power in the review comparison are specified, not inferred from its cosine equation.
 
-For the first term, distinguish a model saddle amplitude from the entire original torus integral. The local-to-global glue is a separate proof obligation. MR1 leaves this step unresolved; the manuscript asserts it. CR0 head claims use a different point family in some runs and do not verify this manuscript's first term automatically.
+For regularity, an agreeing real smooth extension on a neighborhood is stronger than a boundary trace. The formal proof restricts complex Fréchet derivatives to real scalars; it does not assume a smooth extension is holomorphic. The finite prime precedes point-dependent constants and limits.
 
-The diagonal/Toeplitz papers are close methodological precedents. They do not directly supply this bulk tail bound with two global product denominators. See [prior-art matrix](../provenance/PRIOR_ART.md).
-
-## Local rc4 W2 reading route
-
-Read the new proof paragraphs in Lemma 7.2, then the reserved-slack transfer in Lemma 7.3 and the tau-dependent disk restrictions in Lemma 8.3. The pair bounds apply to K and named Stokes supports; the unrestricted original contour uses Proposition 5.2. Appendix D proves the changed-pair count with coupled occupancy; Appendix E fixes the constant order. The [W2 record](../provenance/W2_REPAIR_AUDIT.md) distinguishes these repairs from rc3 and from finite diagnostics.
+Historical W1/W2 repairs and CR0/MR1 failures retain their [original scope](VERSIONS.md). [Coverage](../lean/COVERAGE.md), [mathematical changes](UPGRADE_v0.3.0-rc1.md), and [validation](../release/next/VALIDATION.json) govern this candidate.

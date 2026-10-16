@@ -1,67 +1,10 @@
 {
-  "PROOF_CRITICAL_PAYLOAD_ID": "6989420e855e0c3d882ce51e302dbc6579890da81aa0fd866176bab583067715",
-  "mathematical_evidence": {
-    "axioms": [
-      "propext",
-      "Classical.choice",
-      "Quot.sound"
-    ],
-    "current_candidate": "60c788fcd420c28c44fa795180bc7b50498bf12d",
-    "executed_candidate": "255c825ba4f530541f16f8ed90a8e85fdc34feff",
-    "execution_archive_sha256": "e209e8b9a5cd9ea07f45bf9da8e1d7c3acedea8138505b7a5ea95424cd8af9c1",
-    "kernel_log_sha256": "d48e97e2dc647132e46c237cfd63ed64094aabddf2e573d19ae40c9af55346c7",
-    "scope": "Historical v0.2.0 evidence for proof payload bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2 only. Remediation candidate build/replay receipts are separate."
-  },
+  "candidate_version": "v0.3.0-rc1",
+  "manuscript_version": "v0.1-rc5",
+  "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
   "proof_inputs": {
-    "dependencies": [
-      {
-        "name": "Cli",
-        "revision": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
-        "url": "https://github.com/leanprover/lean4-cli"
-      },
-      {
-        "name": "LeanSearchClient",
-        "revision": "ddf04cf3949fa556442341e87d47f9f6e6074707",
-        "url": "https://github.com/leanprover-community/LeanSearchClient"
-      },
-      {
-        "name": "Qq",
-        "revision": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
-        "url": "https://github.com/leanprover-community/quote4"
-      },
-      {
-        "name": "aesop",
-        "revision": "355695d523e41d0554926416cba2a2b3544fbbc9",
-        "url": "https://github.com/leanprover-community/aesop"
-      },
-      {
-        "name": "batteries",
-        "revision": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
-        "url": "https://github.com/leanprover-community/batteries"
-      },
-      {
-        "name": "importGraph",
-        "revision": "e928b72544873815af278d38681b31c0293588e3",
-        "url": "https://github.com/leanprover-community/import-graph"
-      },
-      {
-        "name": "mathlib",
-        "revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
-        "url": "https://github.com/leanprover-community/mathlib4.git"
-      },
-      {
-        "name": "plausible",
-        "revision": "118aa17ee84656b8bd727fef7c458ee8c833385c",
-        "url": "https://github.com/leanprover-community/plausible"
-      },
-      {
-        "name": "proofwidgets",
-        "revision": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
-        "url": "https://github.com/leanprover-community/ProofWidgets4"
-      }
-    ],
     "files": {
-      "IsingBulk.lean": "25b1604faa4e9381c1bce7dc966cbb7412ab1abd665a2488b92e150f226e4e10",
+      "IsingBulk.lean": "de734f70797c50650bf874c11a5a46a3fc64f3d6f5225262c479ce22e8a3194d",
       "IsingBulk/Algebra/BranchArithmetic.lean": "74c34606a8f77e32b793025209cca357bdfbd3b277b9d7356589e281eee0a25d",
       "IsingBulk/Algebra/Cyclotomic.lean": "e7e129015f755c2af26ebc923f25518073c53fae5217e2f26ee2b04fad353cf7",
       "IsingBulk/Algebra/NickelOrder.lean": "db10d16741ec7e24344431420ea05d6a88899f94e0b5501e1ce93d0d94a70026",
@@ -141,8 +84,8 @@
       "IsingBulk/Analysis/SelectedField.lean": "19db77d60a24b792f77c54fa9a3ec08c27bc87bf4d083291df89af41996376cf",
       "IsingBulk/Final/AbsoluteTail.lean": "f10b82029493dff28b3af7e37658e974c0bdaeca7e3f3f252c3382c70e350f67",
       "IsingBulk/Final/AnalyticFactorTransfer.lean": "df765e3872db3fcdc3e80b1bd2ba8bb07d12ec24abca3c22ff523beb218e869d",
-      "IsingBulk/Final/ConditionalNaturalBoundary.lean": "057d14220800867914d818eab3e6272d818c07fc042fbed20b19a0487d4abe59",
-      "IsingBulk/Final/ConditionalPhysicalBoundary.lean": "ea371b8a85650864fd438d07215a67d7f5ace87b3d81d451a9feda63cd5de6f0",
+      "IsingBulk/Final/ConditionalNaturalBoundary.lean": "372335b7cf6231264d8f0be7adf0b2afbad8a45cd8d694a1cb6ce5c0b8ca968d",
+      "IsingBulk/Final/ConditionalPhysicalBoundary.lean": "219e07cbdbf621cc8c0898ec3ac25edf0828761d497a83b035d3f4f4ff0d8d28",
       "IsingBulk/Final/DenseBoundary.lean": "01ffb3caf005420ec9180094de0457e5b5287b67e18492bd96b497014521598b",
       "IsingBulk/Final/ExteriorCrescent.lean": "361e0c599efdce6651181e6fd5d58d6836d74746e0c70cbbef7866d067484523",
       "IsingBulk/Final/FirstCarrierObstruction.lean": "f4ff804d9d6e704a2c81912e0c0d83665cfb66a7b20bf92797144a49c9b385ba",
@@ -151,17 +94,18 @@
       "IsingBulk/Final/InverseTemperatureSheets.lean": "54c9211531ffb0f6392baeab0620ff73c1edd3cee30b265d60e56ee4c6ea9ad0",
       "IsingBulk/Final/LeibnizLimit.lean": "49c0a58c1b603c38bb129bd0471b40a9a30083b0fef97032484835900f684e47",
       "IsingBulk/Final/LocalExtension.lean": "e6bd284c1b4fca8c06d2832245a53a88816b45a828793ab95d741785a32e4522",
-      "IsingBulk/Final/LowerEvenSum.lean": "e2fabfba27e0bc6ab27ad08cd740d69d10b9fa37d1959e9b3ab894ab52e2990f",
+      "IsingBulk/Final/LowerEvenSum.lean": "c5ddeae9a1ef2e3771a4268f6d9eb68cb6f76291975e5a237bf73697e5d020bd",
       "IsingBulk/Final/MagnetizationBoundary.lean": "5bf2522b8c2cc94bfb7fd557a8baedbd8e21071702c882c4bc5450e380f85868",
       "IsingBulk/Final/PhysicalBoundaryExtension.lean": "35cce60686e2287447843eba56312dfb0becc0c2dc17df05dfffe91259330c1c",
       "IsingBulk/Final/PhysicalBoundaryRegression.lean": "a120db0b411d5c3ab63c8672800d2f99645050bf17db40cbcc915642b24a4641",
       "IsingBulk/Final/PhysicalGerm.lean": "2c3d3120d05755300241c132717c26a8a147a203398f231c2adeb4b68df4afc4",
       "IsingBulk/Final/PhysicalGermRegression.lean": "9f09e8c9598ed6ce1271ffe04f6ad4f41382e818d8ae087ef7e64b89cd693856",
-      "IsingBulk/Final/PhysicalInputs.lean": "8553a3be4ebd38a985c283cc95b8cb3bcb1d258f96ab0b2faa5b8596764e82cb",
+      "IsingBulk/Final/PhysicalInputs.lean": "a27ac41ccc02bf0f42a0b912edb762fbf6a8a67443fe2b1b61ad57ff47382efb",
       "IsingBulk/Final/RadialNoncancellation.lean": "e4672a0dc77e2ff64437b4a3c2369fed1900b613e90530321d79eae99ff2bf16",
+      "IsingBulk/Final/SmoothExtension.lean": "6cde66fd3818ff16714be6a5af1b267ceea546d42ea1bb55c0b94bbd800fdbbc",
       "IsingBulk/Final/SymmetryObstruction.lean": "046a8c2df054c7dbf57a377ffce3a0ce54e378452908bab5b7eea353f93861a4",
-      "IsingBulk/Final/UnconditionalNaturalBoundary.lean": "5698b7be197b58f124b4a1316c6ca935840abdf7d6935e4c071065073eab0edb",
-      "IsingBulk/Final/UpperNoncancellation.lean": "34e4c611d8a77541b11124da5cee397519df58fda713ee27b4657596da6f3a6f",
+      "IsingBulk/Final/UnconditionalNaturalBoundary.lean": "0cc4a58d5346350379eab66f8c0841ea1474510960d20ac5a6e1b351ecb206dc",
+      "IsingBulk/Final/UpperNoncancellation.lean": "9f069552ec7f4ae0916269269be2aac991c3d4027ce4251155774297fe83c411",
       "IsingBulk/First/ActualAmplitudeNeighborhood.lean": "f8bacc8214cc767e834f2cc9a2c2cf634bb6190a80a1d48bac6243ee5a33d3e2",
       "IsingBulk/First/ActualDensityAnalytic.lean": "f7847d372d598e9e64c52d432231f598c8ce1e4d0803a23299e1a9e563ff9701",
       "IsingBulk/First/ActualDensityBounds.lean": "c806b021ed8d3ac7c7074a0829a2e84e450239bd6f2ff6dece38489a6ad9b7a5",
@@ -214,11 +158,11 @@
       "IsingBulk/First/CompatibleYCutoffAtDelta.lean": "ae6b52163661e86c7d94a6e45630aa1770f4cdc69709424c7579cbc9743201d8",
       "IsingBulk/First/CompatibleYCutoffData.lean": "b7278ef6543b269ca8a6a3398d6e0c60141b53ffcb6581f6b8bc96d93850c65d",
       "IsingBulk/First/CompatibleYLocalization.lean": "49c16d63e5c0e6d716bad0d1afb5e952d46c337753b88a04af1a103367617c20",
-      "IsingBulk/First/ComplementActiveChart.lean": "97d1d5aca066931fccd2918c2809593fdd9068ab06d9f9a6469ff2f3735fafd9",
+      "IsingBulk/First/ComplementActiveChart.lean": "23dafb636b6ba0205f9619526fe7033075a42c83686196c5a3f7faff0d16538d",
       "IsingBulk/First/ComplementAuxiliary.lean": "7d739354dbcbf8a3525e76bf783b448ae1c49259b13058511cd4659927ef73e6",
       "IsingBulk/First/ComplementAuxiliaryJets.lean": "56924417751fc97edae02f3e530a359c01b7a0312dac34099d6f691679da3157",
       "IsingBulk/First/ComplementAuxiliaryMajorant.lean": "1c9b836a3b17fbf9c7ad03ddf934abaecde0f02827fcbc26fa9a0a4edc3e3310",
-      "IsingBulk/First/ComplementAuxiliaryTailBound.lean": "b4001e6493cb1a13f9dbf665c93610157cc4864f008bd26d54309f6af8de1fce",
+      "IsingBulk/First/ComplementAuxiliaryTailBound.lean": "24537e7315041c496cfdc16f0342fb2889e7362d627488ac90a2727df0bc307f",
       "IsingBulk/First/ComplementClosedDamping.lean": "cc77da30348b383abf4fa7b4a7d6595edb0d6cc0d00f4c5ce80e3727b6abbb47",
       "IsingBulk/First/ComplementDampedGradients.lean": "02e57bb1fa66a467d575c7101c74bcd3004b9741abb747ffb1c14db95fa0ab91",
       "IsingBulk/First/ComplementDamping.lean": "021762fd383c05562a502741ea3bb4c5e7de62d9a19f4a74ba1b7c5b7806592d",
@@ -226,17 +170,17 @@
       "IsingBulk/First/ComplementExponentialProduct.lean": "caad3dcdaa3a54a7fcc3a00a79df24fffb5b8b4db7f2ba59f1a1966f5dda1a42",
       "IsingBulk/First/ComplementFactorization.lean": "6f36da5c19d8682228aba60311ee5e027ed0c6e1e8da86bd43366d9932ad5953",
       "IsingBulk/First/ComplementFiniteAuxiliary.lean": "5f19abfbf9985785b8a7e25006434d2968a164d12160b3361ec004db4eef0fac",
-      "IsingBulk/First/ComplementFiniteRefinement.lean": "55486eaf8faa6d0fe2ae5f049d5378ff5354e6e46077f05d9b3246516338ff4f",
+      "IsingBulk/First/ComplementFiniteRefinement.lean": "63bdf95a475199b57a7db6872ccf8657ec7aea8832c14063bc05f4a78fe8326c",
       "IsingBulk/First/ComplementFiniteSum.lean": "4316bb83358736ea76743fdee8d73f9159c6610a8c501382f9df15ced60e4c8c",
       "IsingBulk/First/ComplementFubini.lean": "d670a7d85283b35bd0db15a12a12eb01a800441ca69d8671e90e98f15292fb0f",
       "IsingBulk/First/ComplementFullPhaseJets.lean": "1d0058c1775f6486d11c6f1fc3bce9df8ce3f646977a3af2020a77d11f548d65",
       "IsingBulk/First/ComplementGeometry.lean": "bdc8e289813f04d4b8e4960306af23313c2997bf2644781098d906b5bfe18280",
-      "IsingBulk/First/ComplementGlobalBound.lean": "0633dfdd3a8158a890a345b442f1de039829f081a2d753d451b30099425dfa90",
+      "IsingBulk/First/ComplementGlobalBound.lean": "98fbbccae4bd4d1efb4501a80dff64affb1f6a38505bddb4dc61297ffab1e60b",
       "IsingBulk/First/ComplementGradients.lean": "75aa090bf27ed145ff8f3b56445cb5cac62c1f629803f7c4947471c5a51469aa",
       "IsingBulk/First/ComplementIBP.lean": "d5ca7e95bb17ecfd9e0eae6d2ff7d14a45f546b8b3eb78e9cfdebfde7e544a97",
       "IsingBulk/First/ComplementInactiveNeighborhood.lean": "28d121ac7af3146cc7c8e3d516e4f7253e0198044e8c34b282179ca4bc03bebe",
-      "IsingBulk/First/ComplementLocalBound.lean": "3c935d475b8cb829ffea3079e569234ace6f873a5ea927865b78ac8eda82a97a",
-      "IsingBulk/First/ComplementLocalFormFactor.lean": "ae51709b518a232ffd7f3f0056984ef979b23e3167ec2aa915286161c72e02ca",
+      "IsingBulk/First/ComplementLocalBound.lean": "59e2ca0b4733156f37155a0279e3e7551a4141f04f758d0575e8d2e581901601",
+      "IsingBulk/First/ComplementLocalFormFactor.lean": "ca73d70713089ae868a2de7dc7aa0df412f81aba818d35c327f40df874e2594c",
       "IsingBulk/First/ComplementLocalParameterRegularity.lean": "091f8889f25c7695cd374c09c9333576f13b8ee73a2556c65750ebedd2e07331",
       "IsingBulk/First/ComplementLocalizedFactors.lean": "7261b54e3dc47144b62d66184a2451df437331444629e642f13bd57adedb117c",
       "IsingBulk/First/ComplementMixedRegularity.lean": "cb911f3c48b3239e45467aab3b5bb0d55950169b9f9db2691488d6b281398167",
@@ -246,10 +190,10 @@
       "IsingBulk/First/ComplementParameterRegularity.lean": "12dced171bd0b6ad256710ae77ba313d8216a391b88b2b512d534b74013194d4",
       "IsingBulk/First/ComplementPhase.lean": "c2e4c1e001254b44bff5e897a3b5f81e076120254aaacadafd099f6216c1b3aa",
       "IsingBulk/First/ComplementPhaseSum.lean": "75f883e4b7a0f4b7f390795dc0d0878a3b876e7811fc00d5b471ba7eca3e8395",
-      "IsingBulk/First/ComplementRadialChartDecay.lean": "148d3612d03f11c14f87ed32a1addf3c288b2e0030f6a6f1d25d0e2118798696",
+      "IsingBulk/First/ComplementRadialChartDecay.lean": "39458e047c9bffa5f89db40e0d6b103223330f85f596139b1def2b1bd6412f00",
       "IsingBulk/First/ComplementRadialCompact.lean": "3eb96802b54b8285a82acee2f282ec25f679773dc54b409b5398fda35b1d706d",
       "IsingBulk/First/ComplementRadialRegularChart.lean": "16e6aba4c8ae51a5d900e3ac6f46cef5530eb427b408c59e8d8ebae71e506670",
-      "IsingBulk/First/ComplementSeparation.lean": "778d18d68dc2712130edfc059332e2cd5a7cf0e600f3ae69b2fd8d0349b2c80f",
+      "IsingBulk/First/ComplementSeparation.lean": "7b6609445385ddcd793158618f39f0fd9cbcb059b0d4ca18c5ecc60c3bee33d0",
       "IsingBulk/First/ComplementSimplex.lean": "f0cac1f9cbc72dd9428dd22b2d7856d41fabb34a5a8031bfff23b18d63b9be09",
       "IsingBulk/First/ComplementSmallAuxiliary.lean": "039ba3ad21aa9bfc342b65977867623b87b649400c8cfe4b08e5fe865399bd0b",
       "IsingBulk/First/ComplementSourceAmplitudeSupport.lean": "193369f7b5fc55bf0a553d6dfc05f8723c64553d54b5e9b5ccc7a9b77f47caaf",
@@ -259,7 +203,7 @@
       "IsingBulk/First/ComplementSourceSmooth.lean": "07a7c58a273ece567ce441cd3185d51d8478cc0edb261d741a72b9098d2da7a1",
       "IsingBulk/First/ComplementSourceUniform.lean": "e084a8b2c7acb997dcd4bebea913dbe98942c2d19141b58738ea4489e96d4c8c",
       "IsingBulk/First/ComplementUniform.lean": "622ca2f145dd00b41a341b36ef6914df4415e3d0212fa049d8e05133f96fb69e",
-      "IsingBulk/First/ComplementVectors.lean": "67695147a952a0bc3f31dbda4b1bf7832c7c756b267889c19f33bcb2f71801d0",
+      "IsingBulk/First/ComplementVectors.lean": "a2b35cb5d74460d737bd61547ad379aa6190e1efbe26ad1d150a1e7fe35f0069",
       "IsingBulk/First/ContourAngular.lean": "00d9392a9215e60c14bbecf1d1ec0db38eb68e9ecde5b7d360d14fdfe9894834",
       "IsingBulk/First/ContourDefinitions.lean": "d74981f80deaa2bf1aae0881b3b0608dd0b915ca72d7e9b1d1463b925f219d43",
       "IsingBulk/First/ContourIntegrability.lean": "1805d37a51f9cc39405fad1102444d65431f3aef39817e3429f5727f7ebb5a92",
@@ -282,7 +226,7 @@
       "IsingBulk/First/FiniteTorusBumpCover.lean": "29e25d9649f20b9b51656e4255966bbc59f4b5c5704ce1fbfb3181839091bd41",
       "IsingBulk/First/FiniteTorusRefinement.lean": "148c0d546479d9f8bae733bc0fd297586d25026e59f8a0efa30b46f4b46f7775",
       "IsingBulk/First/FirstCoefficient.lean": "51f73c9fd7a9eb1c24a732b3a97e02598c29bdc76554731c4d780eacb18f5d58",
-      "IsingBulk/First/FirstTheorem.lean": "ff911290da8735d017b9982a35b09faaa227a5fba59aa088c5445d9bb098152c",
+      "IsingBulk/First/FirstTheorem.lean": "30032ae64b902c5f7d3288a27c13f459ef5bc9f951dfa9cc8fd0e27f5881630f",
       "IsingBulk/First/FirstUpperAsymptotic.lean": "26be86815ec2a2eb67f186e02db95c38b20d3a77ada9436690a793d8c05d9ff3",
       "IsingBulk/First/FixedRadiusAnalytic.lean": "634784e1623992fb47df706f48d5f4600ea9e76bddb0211936f544d38501ca47",
       "IsingBulk/First/FormFactorAnalytic.lean": "f46f8195953788400211e755d04edea94507c25ad6b173f32c57344706780000",
@@ -296,10 +240,10 @@
       "IsingBulk/First/LocalizedAnalytic.lean": "4d1065b74fadca5b2e1b9842d489d284cda109c2e1232496a5bfd760945518c1",
       "IsingBulk/First/LocalizedDouble.lean": "31b0a3bba092bd408f8f2dfe1202e93f3b2a7fee9a64d58b187fe34ae5c1f75f",
       "IsingBulk/First/LocalizedPartition.lean": "7ba1b636bab9e79daef531b427a9bf1109897a70e6814f1a88bb8261752104ef",
-      "IsingBulk/First/LowerOrderCommonInterval.lean": "034f4c7751de6792467e199ab4372d6eafd2782a0bfb3d48f3bd4079485d5ef7",
-      "IsingBulk/First/LowerOrderFiniteWindow.lean": "033f35a8a90251e7284796c1eafdd494678a4382e74376f1080c189836d33546",
-      "IsingBulk/First/LowerOrderFixedRadius.lean": "856bc0cc2e9308f743ff94358df315c51f85292bc28dd630d144b8c54f4c3f26",
-      "IsingBulk/First/LowerOrderTransfer.lean": "942799dc5ba3c1d1f50c7a2ac15ac7d0d82262399e64c522e7dc267adfd66dac",
+      "IsingBulk/First/LowerOrderCommonInterval.lean": "9c2450cfd34e0b720a96706d7b4e971113969421bec97747f66eb8d5eb48e607",
+      "IsingBulk/First/LowerOrderFiniteWindow.lean": "b8d08c3e025b26daecf6a7b5356b141873e2121402463814cc2aaede574c9aec",
+      "IsingBulk/First/LowerOrderFixedRadius.lean": "15b57610e2a3b532e7df6dfb5e1be07831b9d5e1449b64bb3351b10ede9ae105",
+      "IsingBulk/First/LowerOrderTransfer.lean": "ed739b2cb2dd6ff88853fba89b24f2524eb3213e473bb5dc2eb9062eca13b58b",
       "IsingBulk/First/MeanAnalyticIntegral.lean": "7e6d564a0e4a7d01bf6014d2fb727c35ab8a679a95022c717c697a823bfb3bb4",
       "IsingBulk/First/MeanAnalyticTube.lean": "c6126c7f4091b6e8ba1f8c28ce7abdbeebcc20df10b8a6345020f7447fcfb284",
       "IsingBulk/First/MeanAngularIdentity.lean": "064c4df06ab771723ec36004af71c357b7cc15dbc0304177a4b5bebf29c6c02e",
@@ -369,6 +313,8 @@
       "IsingBulk/First/MixedOnsiteContour.lean": "c8ecf6de8365dbbd708f9ee163d623d797aa6f096fb56264e5e7dd453a361811",
       "IsingBulk/First/MixedRadiusDamping.lean": "b7ea0ce4c2782e11161c647ea2190f866f60982fbd11e3632a61edde792a875b",
       "IsingBulk/First/NearInfinityBulkSeries.lean": "624749341a263beb0c8bcf4bb63c6a85d3a8ee47bba30bc4036350d67bf6f0cc",
+      "IsingBulk/First/NonNickelGeometry.lean": "bda49b39327146f5c3b0dc0e4425374c053f6aa753e8e1187d4df297ea242d0e",
+      "IsingBulk/First/NonNickelRadialBounds.lean": "1582e7656d8b63e814a6568c37fbce9902f615c47de3bbf01df9b36c68dc85b6",
       "IsingBulk/First/NormalizationDerivatives.lean": "c33ea6a8aeab97d15adc42cd2d818df34f03ed833fa0c1ad46d2d8ebe7c4ee9e",
       "IsingBulk/First/NormalizationIntegral.lean": "10778fee2cf53208ad9c11da597efd639ecd9ea6f506764ee644349cb527a564",
       "IsingBulk/First/NormalizationRegularity.lean": "ed9712390da3dc89c29ec87a253dcc0b9e018d4cf722bf8f62c7efae86a8bf5b",
@@ -1133,13 +1079,61 @@
       "IsingBulk/Tail/WeightedCompactSourceMajorant.lean": "510b007c75b7b192fe1681a728cc4da296e7be2621bbf1ff83635a6cc16e1969",
       "IsingBulk/Tail/WeightedCurrentInterval.lean": "18be4953d96ae09e291522435b44eabd9909dcc08785c31fc1f0bdfd25c6c961",
       "IsingBulk/Tail/WeightedPairingIntegral.lean": "82f9619d780b9c8f17b896a0e0139efa00fb53b81ef5047bd65dd3f3e20327eb",
-      "SOURCE.json": "a3b3b9c435ba44b97409bae139f582280d411bc5fe101d07379d576fcd77d240",
-      "TOOLCHAIN_FREEZE.json": "de84e939db3eec74a165c7cfdeacda289b3d93b3ea9a61a5ebb1a57362c8b5b3",
+      "SOURCE.json": "fe1f1ca908f6fd3a0201688f8cdfa153d48a5ffdb48c774c776efb8644bbd55d",
+      "TOOLCHAIN_FREEZE.json": "c1cb68f6ba4a500d94e7453766e85c0c0344bcc690498d74e55474c2c7b066f7",
       "lake-manifest.json": "58516f4af07d70237aa9ff8651004a0bd493e7a7f7e5b92eaea99865f01ee805",
-      "lakefile.toml": "510dd1105975953be41008df8d4dc6ab0f309ca9ead929dec8f5b20599765401",
+      "lakefile.toml": "278703b648e0cdadfcd0dfdee13cac73e4a7967276fc7941a47a5f6212489e91",
       "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
-      "source_snapshot/manuscript.tex": "2f3ad3af8b893e2387304a680dcf9cc5fa6b12a389e3ab7486e5c71512fd6235"
+      "source_snapshot/manuscript-rc5.tex": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf"
     },
+    "dependencies": [
+      {
+        "name": "Cli",
+        "revision": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+        "url": "https://github.com/leanprover/lean4-cli"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+        "url": "https://github.com/leanprover-community/LeanSearchClient"
+      },
+      {
+        "name": "Qq",
+        "revision": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+        "url": "https://github.com/leanprover-community/quote4"
+      },
+      {
+        "name": "aesop",
+        "revision": "355695d523e41d0554926416cba2a2b3544fbbc9",
+        "url": "https://github.com/leanprover-community/aesop"
+      },
+      {
+        "name": "batteries",
+        "revision": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+        "url": "https://github.com/leanprover-community/batteries"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e928b72544873815af278d38681b31c0293588e3",
+        "url": "https://github.com/leanprover-community/import-graph"
+      },
+      {
+        "name": "mathlib",
+        "revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+        "url": "https://github.com/leanprover-community/mathlib4.git"
+      },
+      {
+        "name": "plausible",
+        "revision": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+        "url": "https://github.com/leanprover-community/plausible"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+        "url": "https://github.com/leanprover-community/ProofWidgets4"
+      }
+    ],
     "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52"
-  }
+  },
+  "evidence": "Executed exact-input evidence is recorded separately in release/next/VALIDATION.json. No historical receipt is reassigned."
 }

@@ -1,41 +1,33 @@
-# Ising bulk natural boundary: Lean formalization
+# Lean candidate v0.3.0-rc1
 
-This source formalizes the pinned manuscript's original form-factor chain and the internally proved absolute higher-even tail in Lean 4. The current Lean/post-audit release is [v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1), published on 2026-10-07; the frozen analytic manuscript remains `v0.1-rc4`. The physical identification and published fixed-order smoothness interfaces remain explicit E1/E2/E3 premises.
+The internal form-factor and absolute-tail chain now has an internally proved lower-order replacement for E3. The manuscript snapshot is **v0.1-rc5**, `source_snapshot/manuscript-rc5.tex`, byte-identical to `paper/next/manuscript.tex` at the commit in `SOURCE.json`. The rc4 snapshot and historical v0.2.1 records remain separate. [Versions](../docs/VERSIONS.md).
 
-Core declarations:
+Canonical endpoints:
 
-- `IsingBulk.First.theorem_first`: first-particle singular asymptotic and lower even orders.
-- `IsingBulk.Final.theorem_tail_with_summability`: convergence of the exact higher-even derivative-norm sequence for every positive radial parameter, together with the unchanged TAIL little-o bound.
-- `IsingBulk.Final.theorem_tail`: the literal infinite sum of norms of every permitted derivative of the higher even form factors is little-o of the first singular scale.
-- `IsingBulk.Final.theorem_nb`: no local holomorphic continuation of the constructed exterior normalized bulk series through any unit-circle point, conditional on the explicit published fixed-order interface.
-- `IsingBulk.Final.theorem_nb_physical`: physical germ identification and boundary nonextension, conditional on E1, E2, and the same fixed-order interface, with positive coupling.
+- `IsingBulk.First.theorem_first`: actual first singularity, lower derivatives and all lower even orders, with no E3 premise.
+- `IsingBulk.Final.theorem_tail_with_summability`: positive-parameter summability and all-j absolute higher-tail little-o.
+- `IsingBulk.Final.theorem_nb`: normalized exterior natural boundary, with no external physics, E3 or tail premise.
+- `IsingBulk.Final.theorem_nb_physical`: physical-germ identification and boundary conclusion, with E1/E2 and positive coupling only.
+- `IsingBulk.Final.theorem_selected_no_Ck_extension`: actual selected-point real finite-order obstruction, TAIL discharged internally.
 
-The reachable axiom union is `propext`, `Classical.choice`, and `Quot.sound`. The formalization does not construct the infinite-volume probability measure or reprove the external physics publications.
+Published full-site interfaces and transfer helpers remain comparison theorems. `InternalRegularity.lean` traverses compiled types and proof bodies, excludes them from FIRST/NB dependencies, and requires reachability of the internal separator/global-IBP/radial-bound route. An axiom-only query cannot detect an explicit theorem parameter.
 
-## Reproduction and evidence scope
+The runtime remains Lean 4.34.1, commit `5045d0056413266e57c625dcd7c365b10e377c52`; all nine dependency revisions are unchanged. There are 1,074 production subtree modules plus the public root. Accepted source identities are in `ci/accepted_identity.json`; [validation](../release/next/VALIDATION.json) records exact executions and runtime identity.
 
-Lean 4.34.1, commit `5045d0056413266e57c625dcd7c365b10e377c52`, and all nine dependency revisions are frozen. There are 1,071 production subtree modules and the public root, totaling 1,072 production `.lean` files.
+With exact Linux/WSL runtime and pinned dependency sources/cache:
 
-### Independently audited v0.2.0 baseline
+```bash
+python3 tools/continuation/preflight.py --lean-bin "$LEAN_BIN" --output "$PREFLIGHT_RECEIPT"
+python3 ci/verify_payload.py --expected-id "$PROOF_ID" --dependencies
+python3 control_packet/continuation/run_manifest_controls.py
+python3 control_packet/continuation/run_remediation_controls.py
+python3 tools/continuation/final_gate.py --lean-bin "$LEAN_BIN" --approved-preflight "$PREFLIGHT_RECEIPT" --logs "$NEW_LOG_DIRECTORY" --threads 2 --execute
+```
 
-The frozen v0.2.0 release received an independent adversarial Opus audit with verdict `PASS_WITH_NONBLOCKING_ISSUES` and no blocking or load-bearing mathematical defect. Its proof-critical payload ID was `bf9e537fb5a963000ab1a7f1aef969144ba8e3fc7780b5cf1b56cba1c4bf37b2`. Baseline evidence records a clean project build, 9,199 safe declaration/axiom checks, endpoint and positive/negative controls, and full `leanchecker --fresh --verbose IsingBulk` replay. The full acceptance workflow completed for v0.2.0 in run `37481273735`. These receipts and the three internal adversarial rounds are historical v0.2.0 evidence.
+Supply actual paths and the reviewed proof ID. Preflight receipt and log paths must be new. The heavy gate requires a source-only project with `.lake/packages` as its only Lake entry. It builds the full public root and Audit, elaborates 18 exact endpoints, runs seven Lean positive/negative controls including no-E3 traversal, and performs fresh official kernel replay. The 13 manifest and 13 production-verifier controls are separate checks. No `lake update` is required.
 
-### Final v0.2.1 release validation
+The axiom policy remains `propext`, `Classical.choice`, `Quot.sound`. Tracked dependency sources and namespace scans are checked. Cached binary/source correspondence remains trusted; this is not a Mathlib source rebuild or second kernel implementation. Accepted pins are inside Git. No independent human review is claimed.
 
-v0.2.1 completes targeted remediation of the v0.2.0 audit findings, including verification hardening and complete TAIL endpoint packaging. It does not change `IsingBulk.Final.theorem_nb` or `IsingBulk.Final.theorem_nb_physical`. Its final exact-commit validation is separate from the baseline independent audit; no independent re-audit of the entire v0.2.1 tree is claimed.
+The production-verifier command above executes 12 cases before a compiled project tree exists. After the build, execute the complete 13-case variant with `python3 control_packet/continuation/run_remediation_controls.py --shadow-tree .lake/build/lib/lean/IsingBulk`. The additional case supplies a complete compiled namespace in a dependency cache and requires rejection before loading it. The local receipt uses a healthy compiled project tree for this foreign-namespace test; it does not claim a separate semantic mutant was built.
 
-- Release commit: `de23d9475744fb4625666142d5a03b3d688195e6`
-- Release tree: `c4f8dd4e81dba9e88e18dadfdb0778cf3771d1d2`
-- Proof payload: `6989420e855e0c3d882ce51e302dbc6579890da81aa0fd866176bab583067715`
-- Verification input ID: `99165310d8040d145faecdd2e9bb899f6db576e074049d357621b067b48ad0e2`
-- Runtime ID: `6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780`
-
-The exact v0.2.1 commit passed the clean full build, the project-wide axiom audit of 9,200 safe declarations with union exactly `propext`, `Classical.choice`, `Quot.sound`, all 14 endpoint checks, 13/13 targeted production regressions, 13/13 manifest controls, 6/6 Lean controls, and fresh `leanchecker --fresh --verbose IsingBulk` replay. Exact-commit [full CI run 37518976590](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/37518976590) and [smoke CI run 37518976672](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/37518976672) both completed with `SUCCESS`.
-
-### Trust and publication boundaries
-
-The supplied execution records and artifact hashes bind the validation under the documented trusted-operator/runtime/distribution assumptions. Cached dependency binary/source correspondence remains trusted; the build and fresh replay use the same Lean kernel implementation. Callers pass the expected proof ID explicitly to `ci/verify_payload.py`, and the accepted identities are recorded in `ci/accepted_identity.json`; this expected-ID pin is inside the Git commit, not cryptographically external to it.
-
-E1/E2/E3 remain explicit external literature premises. This is still an AI-assisted candidate proof, and no independent human expert validation or peer review is claimed. The manuscript PDF self-label `0.1-rc4` records the frozen analytic baseline separately from the Lean release version. See [the remediation record](../REMEDIATION_v0.2.1.md) for the targeted post-audit scope.
-
-Publication warning: `.github/workflows/release-v0.2.0.yml` and `lean/ci/prepare_release_assets.py` are historical **v0.2.0-specific** publication machinery, not a generic future-release publisher.
+The factorial amplitude and finite-prime covering are manuscript-only. [Coverage](COVERAGE.md) distinguishes them from the real Ck endpoint. [History](history/v0.2.1/README.md) preserves old counts, E3 premises and verdicts. The v0.2.0 publication machinery is not a publisher for this candidate.

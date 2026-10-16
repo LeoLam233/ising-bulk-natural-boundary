@@ -1,3 +1,17 @@
+# Development candidate v0.3.0-rc1 / manuscript v0.1-rc5
+
+17 October 2026. E3 is replaced internally in canonical FIRST and NB; E1/E2
+remain for physical identification. The manuscript states the already formal
+stronger pair bound, evaluates the amplitude and adds the arc smoothness
+obstruction with correctly scoped constants. A real selected-point Ck endpoint
+is formalized. [Changes](docs/UPGRADE_v0.3.0-rc1.md) · [Validation](release/next/VALIDATION.json)
+· [Consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md).
+
+This is a branch candidate, not a published release or default-branch merge.
+All entries below retain their original historical version scope and wording.
+
+---
+
 # v0.1-rc4: W2 proof repairs and E1 source closure
 
 Prepared 1 October 2026 for public mathematical review. Public predecessor: `v0.1-rc3`, commit `c36735380a9746bba5e84f9b6adec2a494d1fd4c`. The mathematical baseline for this metadata-only release preparation is `59881ee24f43b8caab60f81ab3f87f758cfc03d5`.

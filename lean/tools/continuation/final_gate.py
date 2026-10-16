@@ -179,6 +179,7 @@ def command_plan(lean_bin: Path) -> dict[str, list[str]]:
         "02_axiom_audit": [lake, "-f", "lakefile.toml", "--no-cache", "build", "Audit"],
         "03_endpoints": [lake, "-f", "lakefile.toml", "env", str(lean_bin / "lean"), "-DwarningAsError=true", "<new-log-directory>/EndpointCheck.lean"],
         "03b_math_controls": [sys.executable, "control_packet/continuation/run_lean_controls.py", "--lean-bin-dir", str(lean_bin)],
+        "03c_dependency_negative_control": [sys.executable, "control_packet/continuation/run_dependency_control.py", "--lean-bin-dir", str(lean_bin)],
         "04_kernel_replay": [lake, "-f", "lakefile.toml", "env", str(lean_bin / "leanchecker"), "--fresh", "--verbose", "IsingBulk"],
     }
 

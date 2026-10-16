@@ -1,0 +1,23 @@
+{
+  "case": "unused_E3_parameter_rejected",
+  "passed": true,
+  "exit_code": 1,
+  "expected_diagnostic": "E3 is transitively reachable from IsingBulkControls.counterfeit_nb: IsingBulk.First.PublishedTWFixedOrderInput",
+  "argv": [
+    "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lake",
+    "-f",
+    "lakefile.toml",
+    "env",
+    "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+    "-j1",
+    "-DwarningAsError=true",
+    "/tmp/ising-next-final-20261017-a2/lean/.local/unused-e3-control-g_cnb6s7/UnusedE3.lean"
+  ],
+  "context": {
+    "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+    "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+    "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+  },
+  "context_unchanged": true,
+  "scope": "The same compiled type/body traversal must reject an unused E3 hypothesis on an otherwise valid NB wrapper."
+}

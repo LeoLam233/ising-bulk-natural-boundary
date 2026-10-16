@@ -72,3 +72,10 @@ example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
         (radialParameter (selectedOrderedChart ha hb).theta eps)‖)
         =o[𝓝[>] 0] (fun eps : ℝ => (Real.sqrt eps)⁻¹) :=
   theorem_tail_with_summability hp hp11 ha hb hab
+
+example {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
+    (ha : IsingBulk.PrimeFamily.Admissible p a)
+    (hb : IsingBulk.PrimeFamily.Admissible p b) (hab : a ≠ b) :
+    ¬ HasExteriorCkExtension exteriorNormalizedBulk
+      (IsingBulk.PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) :=
+  theorem_selected_no_Ck_extension hp hp11 ha hb hab

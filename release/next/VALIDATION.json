@@ -1,0 +1,197 @@
+{
+  "schema": "ising-next-validation-v1",
+  "status": "VERIFIED_CANDIDATE",
+  "created_utc": "2026-10-16T20:28:07.615997+00:00",
+  "manuscript": "v0.1-rc5",
+  "lean_candidate": "v0.3.0-rc1",
+  "development_branch": "research/next-internal-regularity-20261017",
+  "mathematical_source_commit": "a79c2f5701111b5234bbc0ff8481e75aec8c21d0",
+  "identities": {
+    "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+    "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+    "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+  },
+  "clean_acceptance_sequence": "release/next/evidence/clean-sequence.json",
+  "counts": {
+    "production_subtree_modules": 1074,
+    "production_with_public_root": 1075,
+    "safe_project_declarations": 9225,
+    "exact_endpoints": 18,
+    "root_build_jobs": 4838,
+    "manifest_controls": 13,
+    "production_verifier_controls_full_variant": 13,
+    "ordinary_lean_controls": 7,
+    "additional_unused_E3_control": 1
+  },
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_kernel_replay_exit": 0,
+  "canonical_dependencies": {
+    "normalized_external_premises": [],
+    "physical_external_premises": [
+      "E1",
+      "E2"
+    ],
+    "E3_transitively_absent": true,
+    "compiled_types_and_proof_bodies_traversed": true,
+    "internal_separator_global_IBP_and_radial_bound_required_reachable": true,
+    "original_endpoint_conclusions_and_domains_retained": true
+  },
+  "dependency_negative_control": {
+    "case": "unused_E3_parameter_rejected",
+    "passed": true,
+    "exit_code": 1,
+    "expected_diagnostic": "E3 is transitively reachable from IsingBulkControls.counterfeit_nb: IsingBulk.First.PublishedTWFixedOrderInput",
+    "argv": [
+      "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lake",
+      "-f",
+      "lakefile.toml",
+      "env",
+      "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-j1",
+      "-DwarningAsError=true",
+      "/tmp/ising-next-final-20261017-a2/lean/.local/unused-e3-control-g_cnb6s7/UnusedE3.lean"
+    ],
+    "context": {
+      "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+      "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+      "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+    },
+    "context_unchanged": true,
+    "scope": "The same compiled type/body traversal must reject an unused E3 hypothesis on an otherwise valid NB wrapper."
+  },
+  "historical_diagnostics": {
+    "all_reproduced": true,
+    "checks": 6,
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "continuous_or_infinite_certificate": false,
+    "receipt": "evidence/historical-diagnostics.json"
+  },
+  "new_checks": {
+    "exit_code": 0,
+    "receipt": "evidence/new-mathematical-checks.json",
+    "exact_schur_identities": 3,
+    "seeded_half_disk_samples": 5000,
+    "exact_gaussian_moment_dimensions": [
+      2,
+      4,
+      6,
+      10,
+      22,
+      26
+    ],
+    "independent_N2_shape_quadrature": true,
+    "amplitude_precision_decimal_digits": 80,
+    "amplitude_dimensions": [
+      22,
+      26,
+      34,
+      58
+    ],
+    "finite_prime_diagnostics": 91,
+    "rejected_finite_80_constant_certificate": "exact rational Machin/alternating-Taylor bounds at ell=8/5",
+    "continuous_or_infinite_certificate": false
+  },
+  "paper": {
+    "manuscript": "v0.1-rc5",
+    "lean_candidate": "v0.3.0-rc1",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)",
+    "source_sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf",
+    "pdf_sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f",
+    "label_index_sha256": "e9550e1c7cdb06b8a9b28441f06892b3d39273fa121f5a38b1b213121b9e36f4",
+    "label_count": 67,
+    "old_labels_retaining_numbers": 65,
+    "commands": [
+      {
+        "argv": [
+          "pdflatex",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "manuscript.tex"
+        ],
+        "pass": 1,
+        "exit_code": 0,
+        "stdout_sha256": "9510abfff734853c557be754c9208b325911f6d84dc581d302cbd64171f37c08",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "pdflatex",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "manuscript.tex"
+        ],
+        "pass": 2,
+        "exit_code": 0,
+        "stdout_sha256": "a772d794d50c1906c371f1ade28ad4701eac2fef5e68dc152539c0c7a7539d7a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "pdflatex",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "manuscript.tex"
+        ],
+        "pass": 3,
+        "exit_code": 0,
+        "stdout_sha256": "e903257145419784e21c9d21b5603496c534a24ba4264e4f82f0fe21f9d217bb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "log_directory": ".local/rc5-paper-vriv8e_a",
+    "final_tex_diagnostics": [],
+    "visual_qa": "release/next/PDF_QA.json",
+    "pages": 45,
+    "passes": 3,
+    "final_diagnostics": [],
+    "all_pages_rendered_and_inspected": true
+  },
+  "consistency_audit": {
+    "report": "docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md",
+    "mathematical_sequence_finished_utc": "2026-10-16T20:19:27.089478+00:00",
+    "fresh_scan_started_utc": "2026-10-16T20:20:39.241960+00:00",
+    "initial_scan_files": 1392,
+    "initial_text_files": 1369,
+    "protected_original_assets": 211,
+    "byte_preserved_former_metadata_records": 17,
+    "verification_command": "python3 scripts/verify_candidate.py",
+    "final_inventory": "release/next/MANIFEST.json",
+    "current_claim_scope_review": "completed; final inventory and repeat verifier are required before delivery",
+    "final_verifier_result": "release/next/CONSISTENCY_RESULT.json"
+  },
+  "remaining_current_inconsistencies": [],
+  "failed_attempts_and_unavailable_checks": "release/next/FAILURES.md",
+  "executed_record_archive": "release/next/evidence/execution-records.tar.gz",
+  "executed_record_index": "release/next/evidence/INDEX.json",
+  "reproduce": [
+    "python scripts/build_candidate_paper.py",
+    "python scripts/reproduce.py",
+    "python checks/next_version/run_checks.py --output NEW_RESULT.json",
+    "cd lean; python3 tools/continuation/preflight.py --lean-bin OFFICIAL_LEAN_BIN --output NEW_PREFLIGHT.json",
+    "python3 ci/verify_payload.py --expected-id 19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b --dependencies",
+    "python3 control_packet/continuation/run_manifest_controls.py",
+    "python3 control_packet/continuation/run_remediation_controls.py",
+    "python3 tools/continuation/final_gate.py --lean-bin OFFICIAL_LEAN_BIN --approved-preflight NEW_PREFLIGHT.json --logs NEW_LOG_DIRECTORY --threads 2 --execute",
+    "python3 control_packet/continuation/run_remediation_controls.py --shadow-tree .lake/build/lib/lean/IsingBulk",
+    "cd ..; python3 scripts/verify_candidate.py"
+  ],
+  "evidence_scope": [
+    "The mechanical sequence deliberately says NOT_AUDIT_ROUND and leaves its own final_candidate_gate/audit_round_completed flags false. Mathematical hostile checks and the mandatory repository consistency audit are separate reports; these original runner bytes are not relabeled.",
+    "Fresh replay uses the same official Lean kernel. Pinned tracked dependency sources/cache are checked; their binary/source correspondence remains trusted. No complete Mathlib rebuild or second kernel.",
+    "Finite algebra/rational certificates and numerical samples have their explicitly stated finite scopes. Analytic proofs carry the general claims.",
+    "Factorial amplitude and finite-prime quantitative covering are manuscript-only. Formal selected-point real Ck obstruction is exported.",
+    "No unconditional equality with the review complete printed amplitude convention, exhaustive novelty clearance, human expert certification or peer review.",
+    "This is the local acceptance receipt. Remote branch CI and final Git commit identity are recorded in the review/delivery record, not retroactively inserted into a self-hashed receipt."
+  ],
+  "historical_releases_modified": false,
+  "published_release": false,
+  "default_branch_merged": false,
+  "independent_human_review": false,
+  "peer_reviewed": false
+}
