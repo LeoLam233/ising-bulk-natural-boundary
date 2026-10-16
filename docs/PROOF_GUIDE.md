@@ -2,7 +2,7 @@
 
 **Current-status note (7 October 2026).** This guide describes the frozen manuscript v0.1-rc4. Its CR0/MR1 references are historical provenance, not the current formalization status. The internal form-factor / higher-tail proof chain is now formalized and kernel-verified in [Lean v0.2.1](../lean/README.md), with E1/E2/E3 explicit external literature premises. Independent human expert validation and peer review remain outstanding.
 
-Read the [two-page expert brief](expert_brief.pdf) for orientation and the [frozen v0.1-rc4 manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. The first singularity is Theorem 4.4 (p. 10), the absolute tail estimate is Theorem 9.1 (p. 25), and the noncancellation criterion and natural-boundary conclusion are Theorems 9.2–9.3 (p. 26).
+Read the [two-page expert brief](expert_brief.pdf) for orientation and the [frozen v0.1-rc4 manuscript](../paper/manuscript.pdf) for definitions and exact hypotheses; this guide does not replace them. The first singularity is Theorem 4.4 (p. 10), the absolute tail estimate is Theorem 9.1 (p. 25), and the noncancellation criterion and natural-boundary conclusion are Theorem 9.2 and Corollary 9.3 (p. 26).
 
 Numbering refers to that manuscript. The [W1](../provenance/W1_REPAIR_AUDIT.md) and [W2](../provenance/W2_REPAIR_AUDIT.md) repair records identify the repairs already frozen in the mathematical candidate. Machine-readable labels are in [LABEL_INDEX.json](../paper/LABEL_INDEX.json).
 
