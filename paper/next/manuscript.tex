@@ -13,7 +13,7 @@
 \usepackage{microtype}
 \setlength{\emergencystretch}{2em}
 \raggedbottom
-\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={AI-assisted candidate proof, v0.1-rc5; Lean candidate v0.3.0-rc1; no independent human certification}}
+\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={AI-assisted candidate proof, v0.1-rc6; Lean candidate v0.3.0-rc2; no independent human certification}}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -46,7 +46,7 @@ for the bulk square-lattice Ising susceptibility}
 \small School of Physics, Sun Yat-sen University\\
 \small\texttt{lindh9@mail2.sysu.edu.cn}\\
 \small ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}}
-\date{Version 0.1-rc5 (candidate for mathematical review)\\17 October 2026}
+\date{Version 0.1-rc6 (candidate for mathematical review)\\17 October 2026}
 \begin{document}
 \maketitle
 
@@ -71,8 +71,10 @@ clearance is claimed; the natural-boundary conclusion has no
 independent human certification. This revision proves the required
 lower-order radial bounds internally, strengthens the selected-contour
 pair bound, evaluates the singular coefficient, and records a finite-order
-obstruction to smooth extension on every boundary arc. The corresponding
-Lean candidate is version 0.3.0-rc1; the frozen 0.1-rc4 manuscript and
+obstruction to smooth extension on every boundary arc. It also identifies
+the complete selected-point amplitude relative to the literature
+formula, including its four-chart degeneracy and physical branch. The corresponding
+Lean candidate is version 0.3.0-rc2; the frozen 0.1-rc4 manuscript and
 0.2.1 Lean release retain their separate identities.
 \end{abstract}
 
@@ -2931,7 +2933,16 @@ factor bounds every fixed derivative of the onsite term at the
 selected point. Smoothness is sufficient here; it is not silently
 promoted to an analytic-extension theorem.
 
-Boukraa et al.'s equations (5)--(9) \cite{Boukraa2008} give
+\paragraph{The same observable in the original literature.}
+The low-temperature expansion (45) of \cite{McCoyMaillard2012}
+places \(\M^2\) outside the sum of \(\chi^{(N)}\).
+Its cited integral source, \cite[(1.10), (3.13), (3.17)--(3.20)]{Orrick2001},
+has the full angular torus, the factorial \(1/N!\), and the factor
+\((1+Z)/(1-Z)\). At isotropy its anisotropy factor \(\cot\alpha\)
+is one; that source's anisotropy symbol is unrelated to our geometric
+angle. Thus its \(\widehat\chi^{(N)}\), the review's \(\chi^{(N)}\),
+and our \(C_N^{\rm std}\) are the same normalized full-site coefficient.
+Equations (4)--(9) of \cite{Boukraa2008} independently give this form:
 \[
  C_N^{\rm std}=\frac1{N!}
  \int\prod_{i<N}\frac{\dd\varphi_i}{2\pi}
@@ -2940,97 +2951,190 @@ Boukraa et al.'s equations (5)--(9) \cite{Boukraa2008} give
  \prod_{i<j}\left[
   \frac{\sin((\varphi_i-\varphi_j)/2)}
        {\sinh((\gamma_i+\gamma_j)/2)}
-             \right]^2 ,
+             \right]^2 .
 \]
-where \(\sum_i\varphi_i=0\pmod{2\pi}\),
+Here \(\sum_i\varphi_i=0\pmod{2\pi}\),
 \(\cosh\gamma_i=S-\cos\varphi_i\), and \(z_i=e^{-\gamma_i}\).
-The source variable \(w=s/[2(1+s^2)]\) satisfies \(1/(2w)=S\).
-Its \(x_i\) is our \(z_i\), and its \(y_i\) is
-\(1/\sinh\gamma_i\), not our contour coordinate \(y_i\).
-These substitutions verify the observable, temperature side,
-measures, and squared pair factor.
+The last source's \(w=s/[2(1+s^2)]\) satisfies \(1/(2w)=S\);
+its \(x_i\) is our \(z_i\), and its \(y_i=1/\sinh\gamma_i\)
+is not our contour coordinate. In particular the source's \(y_i\)
+includes its numerator \(2w\). These are literal substitutions,
+not a normalization inferred from a numerical match.
 
-At the first selected order there are four signed ordered compact
-charts, centered at \(+\alpha,-\alpha,+\beta,-\beta\).
-Simultaneous angle reversal preserves both the density and real
-integration measure. The \(\alpha/\beta\) exchange gives the same
-coefficient by the sine-power calculation.
-For any one chart the pair coefficient is
-\(-1/(4\sin^2\beta)\), identical to its reduced lower-contour
-counterpart. The product \(y_0^Nz_0^N=1\) removes the apparent
-one-body phase discrepancy. The missing angular measure is
-exactly the positive \(2\pi\) from the mean residue, so a single
-standard chart has coefficient \(L_\beta\). Four standard charts
-and two lower offsite charts agree with
-\(C_N^{\rm std}=f_{00}^{(N)}+2T_N\).
+\paragraph{The physical branch and four angular charts.}
+Continue the positive root \(\gamma_i>0\) from real \(s>1\).
+For \(s=r e^{\ii\theta_*}\), \(r>1\),
+\(\Im S=(r-r^{-1})\sin\theta_*>0\). The root
+\[
+ z=(W+\sqrt{W-1}\sqrt{W+1})^{-1},\qquad W=S-\cos\varphi,
+\]
+with principal square roots is the analytic interior root in this
+upper half-plane. No root can cross the unit circle there, since
+\(z+z^{-1}=2W\); continuation from large positive \(W\) fixes
+the interior root. The same equation then forces \(\Im z<0\).
+It has \(|z|<1\) and \(\Im z<0\), and tends to
+\(e^{-\ii\beta}\) at \(\varphi=\pm\alpha\).
+Consequently \(\gamma\to\ii\beta\), not \(-\ii\beta\).
+Writing \(\gamma=\ii u\), implicit differentiation gives, at
+\(\varphi=\alpha\),
+\[
+ u_\varphi=-\frac{\sin\alpha}{\sin\beta},\qquad
+ u_{\varphi\varphi}=-\frac{H_{\alpha\beta}}{\sin^3\beta},\qquad
+ s_*u_s=-\frac{2\ii\sin\theta_*}{\sin\beta}.
+\]
+For \(\varphi_i=\alpha+\tau_i\),
+\(\tau_N=-\sum_{i<N}\tau_i\), the linear angular sum vanishes.
+With \(a_0=(N^2-1)/2=k+1/2\), \(\nu=k-1/2\),
+\(Q=2N\sin\theta_*/\sin\beta\), and
+\(d=H_{\alpha\beta}/(2\sin^3\beta)>0\), the denominator begins as
+\[
+ 1-Z=Q\eps-\ii d\sum_i\tau_i^2
+       +O(\eps^2+\eps|\tau|+|\tau|^3).
+\]
+Each one-body coefficient is \(-\ii/\sin\beta\), and each
+squared pair contributes \(-1/(4\sin^2\beta)\).
+For \(N=2m\) their total phase is
+\((-\ii)^N(-1)^{N(N-1)/2}=(-1)^{2m^2}=1\).
+The numerator \(1+Z\) tends to two. Thus the chart prefactor is
+\[
+ p_0=\frac{2\,2^{-N(N-1)}}{N!(2\pi)^{N-1}\sin^{N^2}\beta}
+     =2\pi K_\beta.
+\]
+This is the same constrained coordinate measure and normal form
+as after our mean residue. Its \(k\)-th complex derivative
+therefore has coefficient \(L_\beta\), with the finite-jet and
+remainder control already used in Section~\ref{sec:first}.
+The factor \(\sqrt N\) converting hyperplane area to this coordinate
+measure is already in \(\mathscr C_N\); it must not be inserted again.
 
-\paragraph{Angle and power conventions in the review comparison.}
-The printed amplitude in equation (69) of \cite{McCoyMaillard2012}
-is not used to establish the internal coefficient, sign, or
-multiplicity above. To make the comparison precise, put
-\(a_0=(N^2-1)/2\) and \(\nu=a_0-1=k-1/2\).
-The single-chart coefficient corresponding to an original-function
-term \(A_{\rm chart}\eps^\nu\), modulo regular Taylor terms, is
-\[
- A_{\rm chart}=L_\beta e^{\ii k\theta_*}
-                      \frac{\sqrt\pi}{\Gamma(a_0)}.
-\]
-This follows by taking \(k\) derivatives with
-\(\partial_s=e^{-\ii\theta_*}\partial_\eps\) along the radius.
-For \(0<\theta_*<\pi/2\), the positive real factors in the local
-formula leave the phase
-\[
- \frac{A_{\rm chart}}{|A_{\rm chart}|}
-      =(-1)^k e^{\ii\pi a_0/2}.
-\]
-Here \((-\ii d)^{-a_0}\) has the continuation specified in
-Lemma~\ref{lem:period}. In the review's formula, substituting the
-same positive angle and using the principal power of
-\(N\ii\sin\theta_*\) gives phase \(e^{\ii\pi\nu/2}\).
-The geometric denominator is positive for our selected angles.
-The ratio of these phases is
-\[
- (-1)^k e^{\ii\pi(a_0-\nu)/2}=-\ii,
-\]
-since \(k\) is odd. Substituting the negative angle instead gives
-phase \(e^{-\ii\pi\nu/2}\) and phase ratio one. At \(|s_*|=1\),
-that negative angle is \(\arg(s_*^{-1})\).
+The selected point has exactly the two distinct nonzero cosine
+values from Theorem~\ref{thm:prime}. In this angular representation
+they give four signed centers \(+\alpha,-\alpha,+\beta,-\beta\).
+All satisfy the periodic constraint because \(N\alpha,N\beta\in2\pi\Z\).
+Angle reversal preserves the real measure and squared Vandermonde;
+the \(\alpha/\beta\) exchange preserves \eqref{eq:amplitudeclosed}.
+Thus all four coefficients agree. Particle permutations fix each
+all-equal center, so no further \(N!\) is attached to this count.
+Completeness is also forced by the already proved identity
+\(C_N^{\rm std}=f_{00}^{(N)}+2T_N\): the two offsite charts give
+\(2L_\beta\), and the onsite term has bounded fixed derivatives.
+There is no unestimated same-order contribution in this comparison.
 
-The review defines its angle through a cosine relation in (70);
-that relation alone does not choose between these two signs or
-identify its power branch with the exterior germ used here.
-Consequently the last computation is a comparison under stated
-conventions, not evidence that the review explicitly makes that
-inverse-angle choice. Its low-temperature parameter is
-\(\eps_{\rm rev}=1-s_*/s=\eps/(1+\eps)\); this real first-order
-change cannot itself remove the phase difference. A full comparison
-must also specify the continuation side, power branch, and single-chart
-versus total-chart multiplicity. It is not justified to claim that
-multiplicity is the only possible difference. None of these external
-conventions enters the internal identity \(L_\alpha=L_\beta\).
-No conclusion about the degenerate four-particle endpoint normalization
-is imported into the present distinct, nonzero-angle family.
-
-In particular \eqref{eq:amplitudeclosed} makes the magnitude comparison
-exact: if the right-hand side of that review's (69) is evaluated with
-\(N\), \(\phi^{(j)}=\alpha\), \(\phi^{(l)}=\beta\), and the
-principal power, call the resulting expression \(R_N(\vartheta)\).
-Then the internal coefficient satisfies the algebraic identities
+\begin{proposition}[Complete-amplitude conversion]\label{prop:amplitudecomparison}
+Fix the selected prime family and its first even order \(N=2p\).
+In the review's index convention take \(j=2a\), \(l=2b\), so that
+\(\phi^{(j)}=\alpha\), \(\phi^{(l)}=\beta\).
+For \(\vartheta=\pm\theta_*\), define the expressly evaluated
+printed scalar
 \[
- A_{\rm chart}=R_N(-\theta_*)=-\ii R_N(\theta_*).
+ R_N(\vartheta)=
+ \frac{(N\ii\sin\vartheta)^\nu P_N}
+ {H_{\alpha\beta}^{a_0}\pi^{(N-3)/2}\sqrt N\,\Gamma(a_0)},
 \]
-This is an identity between specified expressions, not an assignment
-of a continuation convention that the review does not state.
-The complete fixed-order offsite coefficient of the singular power
-is \(2A_{\rm chart}\); the full-site coefficient is
-\(4A_{\rm chart}\), because the onsite term has bounded derivatives.
-The corresponding \(k\)-th \(s\)-derivative coefficients are
-\(2L_\beta\) and \(4L_\beta\). Multiplication by \(\M^2\)
-then gives the normalized physical bulk coefficient
-\(4\M^2(s_*)L_\beta\). The analytic inverse-temperature factor
-is included only when passing from \(\mathcal X\) to \(\chi\).
-Thus neither a factor of four nor a phase is silently absorbed into
-the single-chart definition.
+using the principal power in the numerator and the positive real
+power of \(H_{\alpha\beta}\). This is (69) in the arXiv version
+of \cite{McCoyMaillard2012}, or (70) on p.~801 of the journal
+version; its angle relation is respectively (70) or (71).
+The root is fixed by \(S_*=\cos\alpha+\cos\beta\), as in
+\cite[(3.24)]{Orrick2001}. The plus sign printed in the review's
+(64) conflicts with its immediately following explicit root formula
+and its cosine relation; that isolated sign is not used here.
+On the physical low-temperature exterior germ put
+\(\delta=1-s_*/s=\eps/(1+\eps)>0\).
+Modulo a radial Taylor polynomial of degree at most \(k-1\), the
+coefficient of \(\delta^\nu\) is
+\[
+ \begin{array}{c|c}
+  \text{observable}&\text{coefficient}\\ \hline
+  \text{one chart}&A_{\rm chart}=R_N(-\theta_*)=-\ii R_N(\theta_*)\\
+  T_N&2A_{\rm chart}\\
+  C_N^{\rm std}=\chi^{(N)}\text{ of the review}&4A_{\rm chart}\\
+  \text{physical normalized bulk }\mathcal X&4\M^2(s_*)A_{\rm chart}\\
+  \text{physical }\chi&4\beta_{\rm phys}(s_*)\M^2(s_*)A_{\rm chart}
+ \end{array}
+\]
+The last two rows use the physical identification and the first-order
+and tail results of Theorem~\ref{thm:conditional}. Before multiplication
+by \(\M^2\), the full offsite lattice coefficient is \(2T_N\), whereas
+\(T_N\) denotes the lower double-contour coefficient. Its full
+offsite singular coefficient equals that of \(C_N^{\rm std}\).
+The corresponding \(k\)-th complex derivative coefficients are
+\(L_\beta,2L_\beta,4L_\beta,4\M^2(s_*)L_\beta\), and
+\(4\beta_{\rm phys}(s_*)\M^2(s_*)L_\beta\).
+\end{proposition}
+\begin{proof}
+Taking \(k\) radial derivatives multiplies a complex derivative by
+\(s_*^k\). If \(f^{(k)}(\eps)=B\eps^{-1/2}+o(\eps^{-1/2})\),
+its integrability gives finite limits for all lower derivatives.
+The integral Taylor remainder is
+\[
+ \frac1{(k-1)!}\int_0^\eps(\eps-t)^{k-1}f^{(k)}(t)\dd t
+ =\frac{B\sqrt\pi}{\Gamma(k+1/2)}\eps^{k-1/2}
+       +o(\eps^{k-1/2}).
+\]
+The same estimate with the error bounded by
+\(\sup_{0<t<\eps}o(1)\,t^{-1/2}\) justifies the last little-o.
+Changing to \(\delta=\eps/(1+\eps)\) changes the Taylor polynomial
+but preserves this first fractional coefficient. In particular
+\[
+ A_{\rm chart}=s_*^kL_\beta\frac{\sqrt\pi}{\Gamma(a_0)}.
+\]
+Equation~\eqref{eq:amplitudeclosed} gives its positive magnitude
+factor and phase \((-1)^ke^{\ii\pi a_0/2}\).
+For even \(N\), \(k=2(N/2)^2-1\) is odd, hence this phase equals
+\(e^{-\ii\pi\nu/2}\). The latter is exactly the principal power
+phase at \(\vartheta=-\theta_*\); at \(+\theta_*\) the ratio is
+\(-\ii\). The geometric denominator and every factorial factor
+are identical, proving the scalar identities.
+The two/four chart counts, bounded onsite derivative and bulk
+product rule above give the remaining rows. The Taylor integration
+also applies to the full bulk because its already proved \(k\)-th
+derivative has precisely the indicated leading term.
+
+As a separate check of the local phase, the radial normal-form
+integral has integrand \(r^{2k}/(q+b r^2)\), with \(q=Q\eps\)
+and \(b=-\ii d\). Polynomial division leaves
+\[
+ \int_0^\eta\frac{r^{2k}}{q+b r^2}\dd r
+ =\text{polynomial in }q+
+ \frac{(-q)^k}{b^k\sqrt{qb}}
+             \arctan\!\left(\eta\sqrt{b/q}\right).
+\]
+Continue \(b\) from the positive real axis to \(-\ii d\), with
+\(q>0\). The last factor tends to \(\pi/2\); its noninteger term
+is \((\pi/2)(-1)^kq^{k-1/2}b^{-k-1/2}\).
+Multiplying by \(p_0\mathscr C_N\) gives the same coefficient.
+This check concerns the normal form; the original finite-jet proof,
+not the polynomial calculation alone, controls its replacement error.
+\end{proof}
+
+The physical prefactors have fixed branches too. On this quadrant,
+the continuation with \(\M^2\to1\) at infinity has
+\[
+ \M^2(s_*)=(2\sin2\theta_*)^{1/4}
+             e^{\ii(\pi/8-\theta_*/2)},\qquad
+ \beta_{\rm phys}(s_*)=\frac{\operatorname{arsinh}(s_*)}{2J},
+\]
+where \(\operatorname{arsinh}\) is continued from positive real
+\(s>1\) through the right half-plane. These factors are analytic
+and nonzero locally. They are absent from the review's normalized
+\(\chi^{(N)}\). For another local coordinate
+\(x=\lambda\delta+O(\delta^2)\), the coefficient instead acquires
+\(\lambda^{-\nu}\) with the continued power branch; here
+\(\lambda=1\) for the two stated radial variables.
+
+Thus the printed scalar is a single-chart value in these conventions.
+Reading that scalar as the complete \(\chi^{(N)}\) coefficient without
+the degeneracy sum misses a factor four. This conclusion is independent
+of the review's unspecified angle sign: all branches of the displayed
+half-integer powers have the same magnitude, whereas the complete
+coefficient has four times that magnitude. The review's cosine relation
+alone does not fix the physical phase; the integral continuation above
+does. We do not attribute an intended single-pinch convention to an
+unexamined derivation, or import any conclusion about degenerate angles,
+the four-particle endpoint, or nonphysical continuation sheets.
+Neither the printed formula nor its interpretation is a premise of
+our nonvanishing or natural-boundary argument.
 
 % END SOURCE
 
@@ -3348,7 +3452,7 @@ The accompanying provenance record states
 the limits of the available historical access evidence.
 
 \subsection*{Rc5 internal regularity and formal scope}
-The current manuscript is 0.1-rc5, paired with Lean candidate 0.3.0-rc1.
+Version 0.1-rc5 was paired with Lean candidate 0.3.0-rc1.
 The original rc4 source, PDF and label index remain separate frozen
 artifacts. The internal lower-order proof removes E3 from the canonical
 FIRST and natural-boundary theorem statements and their proof dependency
@@ -3360,6 +3464,21 @@ The closed-form amplitude evaluation and finite-prime covering calculation
 are analytic manuscript results, not new Lean exports of those formulas.
 Lean proves the actual selected-point real \(C^k\) obstruction with the tail
 internally discharged. The all-arc quantitative covering is not formalized.
+
+\subsection*{Rc6 complete-amplitude comparison and formal scope}
+The current manuscript is 0.1-rc6, paired with Lean candidate 0.3.0-rc2.
+Proposition~\ref{prop:amplitudecomparison} identifies the full-site
+observable from the review's cited integral, fixes the exterior branch,
+and proves the four-chart conversion of its printed scalar. It also
+distinguishes the lower double-contour coefficient from the full offsite
+lattice coefficient and includes both physical prefactors. The new
+conversion and radial Taylor reconstruction are manuscript results;
+the factorial and literature-amplitude identities are not new Lean exports.
+The production Lean theorem sources and their mathematical dependency
+chain are unchanged from the verified rc5/0.3.0-rc1 candidate. Updated
+source correspondence and verification identities belong to this revision;
+the preserved commit records the earlier candidate without reassigning its
+receipts to new bytes.
 
 Exact build, transitive-dependency, axiom, kernel-replay, and PDF receipts
 are supplied separately with their candidate hashes. They do not extend
@@ -3399,9 +3518,10 @@ A.~J. Guttmann and I.~G. Enting.
 Barry~M. McCoy and Jean-Marie Maillard.
 \newblock The importance of the {Ising} model.
 \newblock \emph{Progress of Theoretical Physics}, 127(5):791--817, 2012.
-\newblock \href{https://arxiv.org/abs/1203.1456}{arXiv:1203.1456}.
-Physical definitions and amplitude conventions; the printed amplitude
-is not used as a premise for the internal coefficient.
+\newblock \href{https://arxiv.org/abs/1203.1456}{arXiv:1203.1456};
+\href{https://www.lptmc.jussieu.fr/files/maillard/PUB2/The_Importance_Ising.pdf}{journal PDF}.
+The amplitude formula is preprint (69), journal (70).
+It is compared with the derived coefficient, not imported as a premise.
 
 \bibitem{Nickel1999}
 B.~Nickel.

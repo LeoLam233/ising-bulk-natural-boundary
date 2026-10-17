@@ -1,4 +1,4 @@
-"""Build only manuscript v0.1-rc5; frozen rc4 assets are never overwritten."""
+"""Build only manuscript v0.1-rc6; historical versions retain their Git identities."""
 import argparse
 import hashlib
 import json
@@ -18,7 +18,7 @@ def main():
     a=parser.parse_args()
     source=ROOT/'paper/next/manuscript.tex'
     scratch=ROOT/'.local';scratch.mkdir(exist_ok=True)
-    work=Path(tempfile.mkdtemp(prefix='rc5-paper-',dir=scratch))
+    work=Path(tempfile.mkdtemp(prefix='rc6-paper-',dir=scratch))
     shutil.copyfile(source,work/source.name)
     commands=[]
     for n in range(1,4):
@@ -40,19 +40,24 @@ def main():
     assert len(source_labels)==len(set(source_labels))
     assert set(source_labels)=={r['label'] for r in labels}
     old=json.loads((ROOT/'paper/LABEL_INDEX.json').read_text(encoding='utf-8'))
+    previous=json.loads(subprocess.check_output(
+        ['git','-c','safe.directory=*','show',
+         'dd977048c2380e775d83b97ae1fba354c04c349a:paper/next/LABEL_INDEX.json'],cwd=ROOT,text=True))
     numbers={r['label']:r['number'] for r in labels}
     assert all(numbers[r['label']]==r['number'] for r in old),'Existing mathematical label numbering drifted'
+    assert all(numbers[r['label']]==r['number'] for r in previous),'Verified rc5 label numbering drifted'
     dest=source.parent
     shutil.copyfile(work/'manuscript.pdf',dest/'manuscript.pdf')
-    (dest/'LABEL_INDEX.json').write_text(json.dumps(labels,indent=2)+'\n',encoding='utf-8')
+    (dest/'LABEL_INDEX.json').write_text(json.dumps(labels,indent=2)+'\n',encoding='utf-8',newline='\n')
     version=subprocess.check_output([a.pdflatex,'--version'],text=True).splitlines()[0]
-    receipt={'manuscript':'v0.1-rc5','lean_candidate':'v0.3.0-rc1','engine':version,
+    receipt={'manuscript':'v0.1-rc6','lean_candidate':'v0.3.0-rc2','engine':version,
              'source_sha256':digest(source),'pdf_sha256':digest(dest/'manuscript.pdf'),
              'label_index_sha256':digest(dest/'LABEL_INDEX.json'),
              'label_count':len(labels),'old_labels_retaining_numbers':len(old),
+             'rc5_labels_retaining_numbers':len(previous),
              'commands':commands,'log_directory':work.relative_to(ROOT).as_posix(),
              'final_tex_diagnostics':bad,'visual_qa':'Recorded separately; compilation alone is not visual QA.'}
-    (dest/'BUILD.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
+    (dest/'BUILD.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(receipt,indent=2))
 
 

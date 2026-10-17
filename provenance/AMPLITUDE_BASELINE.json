@@ -1,0 +1,109 @@
+{
+  "schema": "ising-amplitude-baseline-v1",
+  "verified_commit": "dd977048c2380e775d83b97ae1fba354c04c349a",
+  "verified_tree": "c375181b7057f6aa4b069559d3aaf9119a5244cf",
+  "manuscript": "v0.1-rc5",
+  "lean_candidate": "v0.3.0-rc1",
+  "research_branch": "research/amplitude-identification-20261017",
+  "existing_pr": "https://github.com/LeoLam233/ising-bulk-natural-boundary/pull/3",
+  "historical_assets_in_immutable_git": [
+    {
+      "path": "paper/next/manuscript.tex",
+      "git_blob": "2142867e9b269c75375a90f55aa8ce0896853508",
+      "bytes": 159821,
+      "sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf"
+    },
+    {
+      "path": "paper/next/manuscript.pdf",
+      "git_blob": "55b6037deba48d2d28a7a0b1d7166e8206ead987",
+      "bytes": 666902,
+      "sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f"
+    },
+    {
+      "path": "paper/next/BUILD.json",
+      "git_blob": "e7158a00bf36e60d9c9054f731bd8a934cfc83ab",
+      "bytes": 1769,
+      "sha256": "821e019290e8833e1bbcd26eec7f8fd199cb8ad652de54426bc3c42107d86a96"
+    },
+    {
+      "path": "paper/next/LABEL_INDEX.json",
+      "git_blob": "d87d3d4d5cdd052b7b6b22afca676627f1606afc",
+      "bytes": 5188,
+      "sha256": "e9550e1c7cdb06b8a9b28441f06892b3d39273fa121f5a38b1b213121b9e36f4"
+    },
+    {
+      "path": "lean/SOURCE.json",
+      "git_blob": "d207ec515a850eecc3a1852c758aae46142652cd",
+      "bytes": 1169,
+      "sha256": "fe1f1ca908f6fd3a0201688f8cdfa153d48a5ffdb48c774c776efb8644bbd55d"
+    },
+    {
+      "path": "lean/TOOLCHAIN_FREEZE.json",
+      "git_blob": "fa43c608802b9c182deb2fb08492432b930e6962",
+      "bytes": 788,
+      "sha256": "c1cb68f6ba4a500d94e7453766e85c0c0344bcc690498d74e55474c2c7b066f7"
+    },
+    {
+      "path": "lean/ci/payload.json",
+      "git_blob": "b36fe5a3b2adbb1b033da013612d54b57a2d0c5c",
+      "bytes": 131621,
+      "sha256": "df6302b079643133796f6359a8fbde7f3e2ff726bf9eb1e903895479c543d160"
+    },
+    {
+      "path": "lean/ci/accepted_identity.json",
+      "git_blob": "a02f2bc5dde92d7d850be2e72c83f428dd94f606",
+      "bytes": 281,
+      "sha256": "57b0c2a07df4488a458d2990710fc15f4d8652064f0fa567e9728c6203e22e55"
+    },
+    {
+      "path": "release/CURRENT_STATUS.json",
+      "git_blob": "0e4c458ac51cb4b9cddf6f5f311cfc9def78c5ba",
+      "bytes": 980,
+      "sha256": "af75bf49d27f40179d3350443b57b63e883c91b7226b73e66d5ab238fa41a0f1"
+    },
+    {
+      "path": "release/next/VALIDATION.json",
+      "git_blob": "dc49b77f1c5e3dfe1414ccbaa2a696642e5b041c",
+      "bytes": 8591,
+      "sha256": "143fd445ad44ab423a579b8702d128d1997ea949bbc5295666ca643a123cde8e"
+    },
+    {
+      "path": "release/next/MANIFEST.json",
+      "git_blob": "6f7a839ff8a9f36e1e98c1c3cf858c66150cf349",
+      "bytes": 254139,
+      "sha256": "a81eb366cf9cb416b154aa8c36f2c8706b7f0ffdc44b96b684386323a6fcebe6"
+    },
+    {
+      "path": "release/next/evidence/INDEX.json",
+      "git_blob": "8607f29b823292a3bef9536c36c847e9159ed824",
+      "bytes": 67228,
+      "sha256": "82cad59b010e97b21971f5d601788e509856f0ceef865fef0519ec07a969d5d5"
+    },
+    {
+      "path": "release/next/evidence/execution-records.tar.gz",
+      "git_blob": "774b44edd1a95d6066517f60f1b2335bee4a2f77",
+      "bytes": 7723362,
+      "sha256": "e4fdad84b11d464904f063f1e08203ad5a7331f96a565447e72b6f95cda4b353"
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "lean/source_snapshot/manuscript-rc5.tex",
+      "sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf"
+    },
+    {
+      "path": "docs/UPGRADE_v0.3.0-rc1.md",
+      "sha256": "1ca65130b23a4a445931a006006fbd3ba047669a582ca707a271d3d7404e2eb1"
+    },
+    {
+      "path": "docs/MATHEMATICAL_AUDIT_v0.3.0-rc1.md",
+      "sha256": "fb6a5f5485d9b05af35ba879f6647d736ec28b739d3ec8020f29011d2ca63412"
+    },
+    {
+      "path": "docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md",
+      "sha256": "4e631f7921b05f402872f90a7d7597edf7bad0f0829878d152d7a0c04a11353b"
+    }
+  ],
+  "production_Lean_sources": "All 1075 production Lean source files remain byte-identical to this commit; checked against its proof payload.",
+  "preservation": "The verified commit remains an ancestor, with its own manuscript/PDF, identities, receipts and historical reports. No release tag is moved."
+}

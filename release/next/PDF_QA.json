@@ -1,23 +1,30 @@
 {
-  "manuscript": "v0.1-rc5",
-  "pdf_sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f",
-  "pages": 45,
-  "render_command": [
-    "pdftoppm",
+  "pdf_sha256": "15abf6703a8d97668d64c3a82901f8accb271bba822f7eac2cbdcc7aaef3c5aa",
+  "pages": 47,
+  "argv": [
+    "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.exe",
     "-png",
     "-scale-to",
     "650",
-    "paper/next/manuscript.pdf",
-    "page"
+    "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\paper\\next\\manuscript.pdf",
+    "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\amplitude_research\\pdfqa-rc6\\page"
   ],
-  "visual_review": "All 45 rendered pages inspected in five contact sheets; no clipped text, formula overflow, overlap, broken glyphs or malformed tables observed.",
+  "paragraph_page_hits": {
+    "Complete-amplitudeconversion": 39,
+    "Thephysicalbranchandfourangularcharts": 39,
+    "Rc6complete-amplitudecomparison": 46
+  },
   "contact_sheet_sha256": {
-    "contact-1.png": "49857186ee1542407d03ae8eddf2af8b1eb917c92284b223b33f289c6ad59ce9",
+    "contact-1.png": "b40cdd1bec33b4139a7e3c14616352c8b86a10cc5abae0e374248cfc400b30d6",
     "contact-2.png": "d3ddabf69abc9a2a63f30e94aaef372bf105ae89ea0f85c305aca2f64a158bc3",
     "contact-3.png": "a78fda9406630f6a4c8d74edefe296ec03f54da6142cfdcf965b4dc612251630",
     "contact-4.png": "aa894b833039b8944d81168ac275f665feb95dfde1ff83600627fd0f4ce26466",
-    "contact-5.png": "16d7b923eccb32c4f9565fe240a666b5f16038f85e437927fc20b4fcb551d392"
+    "contact-5.png": "d58fb69a2994c421efa9442519bc0fe75dcdb6d1d077881edd476e8cfd8efde6",
+    "contact-6.png": "b5c78f9e03b3d6a54b1d832e491baceed59c3bcb4334e89b23d173a8fde026ae"
   },
-  "compiled_label_numbers": "All 65 pre-existing labels retain their numbers; two new labels are added.",
+  "status": "VISUALLY_REVIEWED",
+  "manuscript": "v0.1-rc6",
+  "visual_review": "All 47 rendered pages inspected in six contact sheets, with pages 39-41 also inspected at 1550-pixel detail. No clipped text, formula overflow, overlap, broken glyphs or malformed table observed.",
+  "compiled_label_numbers": "All 67 verified rc5 label numbers retained; new Proposition F.1 added.",
   "scope": "Layout QA and compilation do not establish mathematical correctness."
 }

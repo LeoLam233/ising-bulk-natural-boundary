@@ -330,8 +330,13 @@
     "page": 37
   },
   {
+    "label": "prop:amplitudecomparison",
+    "number": "F.1",
+    "page": 39
+  },
+  {
     "label": "app:auditmap",
     "number": "G",
-    "page": 39
+    "page": 41
   }
 ]

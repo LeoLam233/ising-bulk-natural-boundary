@@ -1,51 +1,52 @@
 {
-  "manuscript": "v0.1-rc5",
-  "lean_candidate": "v0.3.0-rc1",
+  "manuscript": "v0.1-rc6",
+  "lean_candidate": "v0.3.0-rc2",
   "engine": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)",
-  "source_sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf",
-  "pdf_sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f",
-  "label_index_sha256": "e9550e1c7cdb06b8a9b28441f06892b3d39273fa121f5a38b1b213121b9e36f4",
-  "label_count": 67,
+  "source_sha256": "44dd21ea379b66f186d3fcc322bee7b0f5497e7c1dfc54d76dfa79bd0f2720c3",
+  "pdf_sha256": "15abf6703a8d97668d64c3a82901f8accb271bba822f7eac2cbdcc7aaef3c5aa",
+  "label_index_sha256": "c07ec31d800591636d2ce5c138c9042649e2041b12a2c69ebb580f6ab1ef7085",
+  "label_count": 68,
   "old_labels_retaining_numbers": 65,
+  "rc5_labels_retaining_numbers": 67,
   "commands": [
     {
       "argv": [
-        "pdflatex",
+        "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
         "-interaction=nonstopmode",
         "-halt-on-error",
         "manuscript.tex"
       ],
       "pass": 1,
       "exit_code": 0,
-      "stdout_sha256": "9510abfff734853c557be754c9208b325911f6d84dc581d302cbd64171f37c08",
+      "stdout_sha256": "7a1796a115c5964f9ee1315135dfa51fc7965a42eeb7a56941f15a877ab75296",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "argv": [
-        "pdflatex",
+        "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
         "-interaction=nonstopmode",
         "-halt-on-error",
         "manuscript.tex"
       ],
       "pass": 2,
       "exit_code": 0,
-      "stdout_sha256": "a772d794d50c1906c371f1ade28ad4701eac2fef5e68dc152539c0c7a7539d7a",
+      "stdout_sha256": "5e3fb23eb38e1011967718099a0fd2831e7b309ed037c12de54af5d796745811",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "argv": [
-        "pdflatex",
+        "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
         "-interaction=nonstopmode",
         "-halt-on-error",
         "manuscript.tex"
       ],
       "pass": 3,
       "exit_code": 0,
-      "stdout_sha256": "e903257145419784e21c9d21b5603496c534a24ba4264e4f82f0fe21f9d217bb",
+      "stdout_sha256": "106ef16dff375c7d567062bfc07a283f9ad384bca83dbd5d0918b74e87356705",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ],
-  "log_directory": ".local/rc5-paper-vriv8e_a",
+  "log_directory": ".local/rc6-paper-7kmyqofc",
   "final_tex_diagnostics": [],
   "visual_qa": "Recorded separately; compilation alone is not visual QA."
 }
