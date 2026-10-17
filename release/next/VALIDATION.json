@@ -1,14 +1,16 @@
 {
   "schema": "ising-next-validation-v1",
   "status": "VERIFIED_CANDIDATE",
-  "created_utc": "2026-10-16T20:28:07.615997+00:00",
-  "manuscript": "v0.1-rc5",
-  "lean_candidate": "v0.3.0-rc1",
+  "created_utc": "2026-10-17T05:01:53.981422+00:00",
+  "manuscript": "v0.1-rc6",
+  "lean_candidate": "v0.3.0-rc2",
   "development_branch": "research/next-internal-regularity-20261017",
-  "mathematical_source_commit": "a79c2f5701111b5234bbc0ff8481e75aec8c21d0",
+  "research_branch": "research/amplitude-identification-20261017",
+  "mathematical_source_commit": "dce74bc7ce1106e96b0d754360ac9fbed5f2feea",
+  "preserved_previous_verified_commit": "dd977048c2380e775d83b97ae1fba354c04c349a",
   "identities": {
-    "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
-    "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+    "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+    "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
     "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
   },
   "clean_acceptance_sequence": "release/next/evidence/clean-sequence.json",
@@ -19,7 +21,8 @@
     "exact_endpoints": 18,
     "root_build_jobs": 4838,
     "manifest_controls": 13,
-    "production_verifier_controls_full_variant": 13,
+    "production_controls_before_build": 12,
+    "production_controls_full_variant": 13,
     "ordinary_lean_controls": 7,
     "additional_unused_E3_control": 1
   },
@@ -37,8 +40,8 @@
     ],
     "E3_transitively_absent": true,
     "compiled_types_and_proof_bodies_traversed": true,
-    "internal_separator_global_IBP_and_radial_bound_required_reachable": true,
-    "original_endpoint_conclusions_and_domains_retained": true
+    "production_Lean_sources_unchanged_from_verified_predecessor": true,
+    "endpoint_domains_and_conclusions_retained": true
   },
   "dependency_negative_control": {
     "case": "unused_E3_parameter_rejected",
@@ -53,11 +56,11 @@
       "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
       "-j1",
       "-DwarningAsError=true",
-      "/tmp/ising-next-final-20261017-a2/lean/.local/unused-e3-control-g_cnb6s7/UnusedE3.lean"
+      "/tmp/ising-amplitude-rc2-20261017-a1/lean/.local/unused-e3-control-17xxlhnw/UnusedE3.lean"
     ],
     "context": {
-      "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
-      "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+      "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+      "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
       "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
     },
     "context_unchanged": true,
@@ -75,123 +78,136 @@
   "new_checks": {
     "exit_code": 0,
     "receipt": "evidence/new-mathematical-checks.json",
-    "exact_schur_identities": 3,
-    "seeded_half_disk_samples": 5000,
-    "exact_gaussian_moment_dimensions": [
-      2,
-      4,
-      6,
-      10,
-      22,
-      26
-    ],
-    "independent_N2_shape_quadrature": true,
-    "amplitude_precision_decimal_digits": 80,
-    "amplitude_dimensions": [
-      22,
-      26,
-      34,
-      58
-    ],
-    "finite_prime_diagnostics": 91,
-    "rejected_finite_80_constant_certificate": "exact rational Machin/alternating-Taylor bounds at ell=8/5",
+    "scope": "Retained rc5 algebra, Mehta, amplitude and finite-prime diagnostics, rerun under pinned packages.",
     "continuous_or_infinite_certificate": false
   },
+  "amplitude_checks": {
+    "exit_code": 0,
+    "receipt": "evidence/amplitude-checks.json",
+    "script_sha256": "a0e61fc1988acf1fe2f8ab7a58980ef55a4ade2a611259661b2b2c818205c566",
+    "exact_symbolic_checks": 9,
+    "exact_cyclotomic_instance": {
+      "p": 11,
+      "N": 22,
+      "physical_angular_centers": 4
+    },
+    "quadrature_cases": 3,
+    "quadrature_dps": 90,
+    "continuous_asymptotic_certificate": false,
+    "supplementary_exact_phase_coordinate_checks": 3,
+    "supplementary_archive_path": "additional-math/phase-coordinate-results.json"
+  },
   "paper": {
-    "manuscript": "v0.1-rc5",
-    "lean_candidate": "v0.3.0-rc1",
+    "manuscript": "v0.1-rc6",
+    "lean_candidate": "v0.3.0-rc2",
     "engine": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)",
-    "source_sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf",
-    "pdf_sha256": "b2dd7dc7cbbb9b7d3262c98a8daf76e871f048db0abb5fed5043da3296b9532f",
-    "label_index_sha256": "e9550e1c7cdb06b8a9b28441f06892b3d39273fa121f5a38b1b213121b9e36f4",
-    "label_count": 67,
+    "source_sha256": "44dd21ea379b66f186d3fcc322bee7b0f5497e7c1dfc54d76dfa79bd0f2720c3",
+    "pdf_sha256": "15abf6703a8d97668d64c3a82901f8accb271bba822f7eac2cbdcc7aaef3c5aa",
+    "label_index_sha256": "c07ec31d800591636d2ce5c138c9042649e2041b12a2c69ebb580f6ab1ef7085",
+    "label_count": 68,
     "old_labels_retaining_numbers": 65,
+    "rc5_labels_retaining_numbers": 67,
     "commands": [
       {
         "argv": [
-          "pdflatex",
+          "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
           "-interaction=nonstopmode",
           "-halt-on-error",
           "manuscript.tex"
         ],
         "pass": 1,
         "exit_code": 0,
-        "stdout_sha256": "9510abfff734853c557be754c9208b325911f6d84dc581d302cbd64171f37c08",
+        "stdout_sha256": "7a1796a115c5964f9ee1315135dfa51fc7965a42eeb7a56941f15a877ab75296",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       {
         "argv": [
-          "pdflatex",
+          "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
           "-interaction=nonstopmode",
           "-halt-on-error",
           "manuscript.tex"
         ],
         "pass": 2,
         "exit_code": 0,
-        "stdout_sha256": "a772d794d50c1906c371f1ade28ad4701eac2fef5e68dc152539c0c7a7539d7a",
+        "stdout_sha256": "5e3fb23eb38e1011967718099a0fd2831e7b309ed037c12de54af5d796745811",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       {
         "argv": [
-          "pdflatex",
+          "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
           "-interaction=nonstopmode",
           "-halt-on-error",
           "manuscript.tex"
         ],
         "pass": 3,
         "exit_code": 0,
-        "stdout_sha256": "e903257145419784e21c9d21b5603496c534a24ba4264e4f82f0fe21f9d217bb",
+        "stdout_sha256": "106ef16dff375c7d567062bfc07a283f9ad384bca83dbd5d0918b74e87356705",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       }
     ],
-    "log_directory": ".local/rc5-paper-vriv8e_a",
+    "log_directory": ".local/rc6-paper-7kmyqofc",
     "final_tex_diagnostics": [],
     "visual_qa": "release/next/PDF_QA.json",
-    "pages": 45,
+    "pages": 47,
     "passes": 3,
-    "final_diagnostics": [],
     "all_pages_rendered_and_inspected": true
   },
   "consistency_audit": {
-    "report": "docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md",
-    "mathematical_sequence_finished_utc": "2026-10-16T20:19:27.089478+00:00",
-    "fresh_scan_started_utc": "2026-10-16T20:20:39.241960+00:00",
-    "initial_scan_files": 1392,
-    "initial_text_files": 1369,
+    "report": "docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md",
+    "mathematical_sequence_finished_utc": "2026-10-17T04:57:47.365528+00:00",
+    "fresh_scan_started_utc": "2026-10-17T04:58:48.646096+00:00",
+    "post_validation_inventory_files": 1416,
+    "text_files_scanned": 1392,
     "protected_original_assets": 211,
-    "byte_preserved_former_metadata_records": 17,
-    "verification_command": "python3 scripts/verify_candidate.py",
-    "final_inventory": "release/next/MANIFEST.json",
-    "current_claim_scope_review": "completed; final inventory and repeat verifier are required before delivery",
-    "final_verifier_result": "release/next/CONSISTENCY_RESULT.json"
+    "preserved_former_metadata_records": 17,
+    "retained_rc5_snapshot_reports": 4,
+    "immutable_predecessor_assets_checked": 13,
+    "verification_command": "python scripts/verify_candidate.py",
+    "final_inventory": "release/next/MANIFEST.json"
   },
   "remaining_current_inconsistencies": [],
   "failed_attempts_and_unavailable_checks": "release/next/FAILURES.md",
   "executed_record_archive": "release/next/evidence/execution-records.tar.gz",
   "executed_record_index": "release/next/evidence/INDEX.json",
+  "manuscript_only": [
+    "factorial amplitude identity",
+    "complete literature-amplitude conversion",
+    "radial Taylor reconstruction",
+    "quantitative finite-prime covering"
+  ],
+  "remaining_mathematical_obligations_for_stated_amplitude_conversion": [],
+  "source_attribution_limit": "Original Nickel 1999/2000 text could not be read. No original intended convention or original-paper error is attributed; the inspected review scalar/full-observable conversion is derived.",
   "reproduce": [
     "python scripts/build_candidate_paper.py",
     "python scripts/reproduce.py",
-    "python checks/next_version/run_checks.py --output NEW_RESULT.json",
+    "python checks/next_version/run_checks.py --output NEW_RC5_DIAGNOSTIC_RESULT.json",
+    "python checks/amplitude_identification/check_amplitude.py --output NEW_AMPLITUDE_RESULT.json",
     "cd lean; python3 tools/continuation/preflight.py --lean-bin OFFICIAL_LEAN_BIN --output NEW_PREFLIGHT.json",
-    "python3 ci/verify_payload.py --expected-id 19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b --dependencies",
+    "python3 ci/verify_payload.py --expected-id 90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124 --dependencies",
     "python3 control_packet/continuation/run_manifest_controls.py",
     "python3 control_packet/continuation/run_remediation_controls.py",
     "python3 tools/continuation/final_gate.py --lean-bin OFFICIAL_LEAN_BIN --approved-preflight NEW_PREFLIGHT.json --logs NEW_LOG_DIRECTORY --threads 2 --execute",
     "python3 control_packet/continuation/run_remediation_controls.py --shadow-tree .lake/build/lib/lean/IsingBulk",
-    "cd ..; python3 scripts/verify_candidate.py"
+    "cd ..; python scripts/verify_candidate.py",
+    "python checks/amplitude_identification/repository_controls.py --output NEW_REPOSITORY_CONTROL_RESULT.json"
   ],
   "evidence_scope": [
-    "The mechanical sequence deliberately says NOT_AUDIT_ROUND and leaves its own final_candidate_gate/audit_round_completed flags false. Mathematical hostile checks and the mandatory repository consistency audit are separate reports; these original runner bytes are not relabeled.",
-    "Fresh replay uses the same official Lean kernel. Pinned tracked dependency sources/cache are checked; their binary/source correspondence remains trusted. No complete Mathlib rebuild or second kernel.",
-    "Finite algebra/rational certificates and numerical samples have their explicitly stated finite scopes. Analytic proofs carry the general claims.",
-    "Factorial amplitude and finite-prime quantitative covering are manuscript-only. Formal selected-point real Ck obstruction is exported.",
-    "No unconditional equality with the review complete printed amplitude convention, exhaustive novelty clearance, human expert certification or peer review.",
-    "This is the local acceptance receipt. Remote branch CI and final Git commit identity are recorded in the review/delivery record, not retroactively inserted into a self-hashed receipt."
+    "The completed gate says CHECK_SEQUENCE_PASSED_NOT_AUDIT_ROUND; its own audit flags are not relabeled. The scoped mathematical and repository audits are separate.",
+    "Fresh replay uses the exact official Lean implementation already pinned. Build and replay share that kernel. Cached dependency binary/source correspondence remains trusted; no complete Mathlib source rebuild or second kernel.",
+    "Finite exact identities and diagnostics are not a continuous asymptotic or infinite-tail certificate. The analytic arguments establish the general conversion.",
+    "Function coefficients are radial first fractional coefficients modulo finite Taylor polynomials. No new convergent full Puiseux or uniform sectoral expansion theorem.",
+    "This receipt records local acceptance. Later remote CI and final Git head identity are recorded separately, without self-referential receipt rewriting."
   ],
   "historical_releases_modified": false,
   "published_release": false,
   "default_branch_merged": false,
   "independent_human_review": false,
-  "peer_reviewed": false
+  "peer_reviewed": false,
+  "repository_guard_controls": {
+    "all_controls_pass": true,
+    "negative_cases": 5,
+    "positive_before_after": true,
+    "input_tree_unchanged": true,
+    "receipt": "evidence/repository-controls.json"
+  }
 }

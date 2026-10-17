@@ -1,8 +1,8 @@
 {
   "status": "CHECK_SEQUENCE_PASSED_NOT_AUDIT_ROUND",
-  "finished_utc": "2026-10-16T20:19:27.089478+00:00",
-  "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
-  "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+  "finished_utc": "2026-10-17T04:57:47.365528+00:00",
+  "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+  "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
   "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780",
   "stages": [
     {
@@ -15,8 +15,8 @@
         "build",
         "IsingBulk"
       ],
-      "cwd": "/tmp/ising-next-final-20261017-a2/lean",
-      "started_utc": "2026-10-16T19:55:15.242989+00:00",
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:12:38.334873+00:00",
       "environment": {
         "LEAN_NUM_THREADS": "2",
         "LAKE_NO_CACHE": "true",
@@ -25,13 +25,13 @@
         "LAKE_CONFIG": "/dev/null"
       },
       "status": "PROCESS_EXIT_ZERO",
-      "finished_utc": "2026-10-16T20:11:43.174670+00:00",
-      "elapsed_seconds": 907.4479620250004,
+      "finished_utc": "2026-10-17T04:42:37.217716+00:00",
+      "elapsed_seconds": 1798.8803384260027,
       "exit_code": 0,
       "interrupted": false,
-      "user_seconds": 1569.548989,
-      "system_seconds": 348.591381,
-      "max_rss_kib_wait4": 4008192,
+      "user_seconds": 2601.428454,
+      "system_seconds": 549.16388,
+      "max_rss_kib_wait4": 4008916,
       "rss_scope": "Linux wait4 maximum child/descendant RSS, not summed concurrent tree RSS"
     },
     {
@@ -44,8 +44,8 @@
         "build",
         "Audit"
       ],
-      "cwd": "/tmp/ising-next-final-20261017-a2/lean",
-      "started_utc": "2026-10-16T20:11:46.242604+00:00",
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:42:45.151905+00:00",
       "environment": {
         "LEAN_NUM_THREADS": "2",
         "LAKE_NO_CACHE": "true",
@@ -54,13 +54,13 @@
         "LAKE_CONFIG": "/dev/null"
       },
       "status": "PROCESS_EXIT_ZERO",
-      "finished_utc": "2026-10-16T20:12:37.321720+00:00",
-      "elapsed_seconds": 45.12886197700027,
+      "finished_utc": "2026-10-17T04:44:31.951626+00:00",
+      "elapsed_seconds": 106.7915143479986,
       "exit_code": 0,
       "interrupted": false,
-      "user_seconds": 48.198852,
-      "system_seconds": 1.532921,
-      "max_rss_kib_wait4": 4033708,
+      "user_seconds": 87.539972,
+      "system_seconds": 2.20028,
+      "max_rss_kib_wait4": 4034224,
       "rss_scope": "Linux wait4 maximum child/descendant RSS, not summed concurrent tree RSS"
     },
     {
@@ -72,10 +72,10 @@
         "env",
         "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
         "-DwarningAsError=true",
-        "/mnt/i/Codex/_Projectless/2026-10-17/ising-bulk-natural-boundary-autonomous-research-2/work/logs/acceptance-02/full/EndpointCheck.lean"
+        "/mnt/i/Codex/_Projectless/2026-10-17/ising-bulk-natural-boundary-autonomous-research-2/work/amplitude_research/logs/acceptance-rc2-01/full/EndpointCheck.lean"
       ],
-      "cwd": "/tmp/ising-next-final-20261017-a2/lean",
-      "started_utc": "2026-10-16T20:12:40.371288+00:00",
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:44:38.999825+00:00",
       "environment": {
         "LEAN_NUM_THREADS": "2",
         "LAKE_NO_CACHE": "true",
@@ -84,13 +84,13 @@
         "LAKE_CONFIG": "/dev/null"
       },
       "status": "PROCESS_EXIT_ZERO",
-      "finished_utc": "2026-10-16T20:12:41.867144+00:00",
-      "elapsed_seconds": 1.4938183379999828,
+      "finished_utc": "2026-10-17T04:44:42.893996+00:00",
+      "elapsed_seconds": 3.887528049002867,
       "exit_code": 0,
       "interrupted": false,
-      "user_seconds": 1.084319,
-      "system_seconds": 0.6302639999999999,
-      "max_rss_kib_wait4": 4014120,
+      "user_seconds": 1.992622,
+      "system_seconds": 1.042399,
+      "max_rss_kib_wait4": 4015272,
       "rss_scope": "Linux wait4 maximum child/descendant RSS, not summed concurrent tree RSS"
     },
     {
@@ -101,8 +101,8 @@
         "--lean-bin-dir",
         "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin"
       ],
-      "cwd": "/tmp/ising-next-final-20261017-a2/lean",
-      "started_utc": "2026-10-16T20:12:44.966325+00:00",
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:44:50.279707+00:00",
       "environment": {
         "LEAN_NUM_THREADS": "2",
         "LAKE_NO_CACHE": "true",
@@ -111,13 +111,13 @@
         "LAKE_CONFIG": "/dev/null"
       },
       "status": "PROCESS_EXIT_ZERO",
-      "finished_utc": "2026-10-16T20:13:09.611770+00:00",
-      "elapsed_seconds": 21.664929679000124,
+      "finished_utc": "2026-10-17T04:45:47.845612+00:00",
+      "elapsed_seconds": 57.561049176998495,
       "exit_code": 0,
       "interrupted": false,
-      "user_seconds": 20.173511,
-      "system_seconds": 3.160039,
-      "max_rss_kib_wait4": 4182372,
+      "user_seconds": 36.115789,
+      "system_seconds": 5.843827,
+      "max_rss_kib_wait4": 4183480,
       "rss_scope": "Linux wait4 maximum child/descendant RSS, not summed concurrent tree RSS"
     },
     {
@@ -128,8 +128,8 @@
         "--lean-bin-dir",
         "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin"
       ],
-      "cwd": "/tmp/ising-next-final-20261017-a2/lean",
-      "started_utc": "2026-10-16T20:13:12.673785+00:00",
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:45:55.323666+00:00",
       "environment": {
         "LEAN_NUM_THREADS": "2",
         "LAKE_NO_CACHE": "true",
@@ -138,13 +138,13 @@
         "LAKE_CONFIG": "/dev/null"
       },
       "status": "PROCESS_EXIT_ZERO",
-      "finished_utc": "2026-10-16T20:13:17.886229+00:00",
-      "elapsed_seconds": 5.210184462999678,
+      "finished_utc": "2026-10-17T04:46:08.365103+00:00",
+      "elapsed_seconds": 13.039218616999278,
       "exit_code": 0,
       "interrupted": false,
-      "user_seconds": 4.734254,
-      "system_seconds": 0.9191819999999999,
-      "max_rss_kib_wait4": 4013392,
+      "user_seconds": 8.604951,
+      "system_seconds": 1.459398,
+      "max_rss_kib_wait4": 4013880,
       "rss_scope": "Linux wait4 maximum child/descendant RSS, not summed concurrent tree RSS"
     },
     {
@@ -159,8 +159,8 @@
         "--verbose",
         "IsingBulk"
       ],
-      "cwd": "/tmp/ising-next-final-20261017-a2/lean",
-      "started_utc": "2026-10-16T20:13:20.892946+00:00",
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:46:15.807717+00:00",
       "environment": {
         "LEAN_NUM_THREADS": "2",
         "LAKE_NO_CACHE": "true",
@@ -169,13 +169,13 @@
         "LAKE_CONFIG": "/dev/null"
       },
       "status": "PROCESS_EXIT_ZERO",
-      "finished_utc": "2026-10-16T20:19:24.028706+00:00",
-      "elapsed_seconds": 333.2918296120006,
+      "finished_utc": "2026-10-17T04:57:43.427217+00:00",
+      "elapsed_seconds": 687.6172311430055,
       "exit_code": 0,
       "interrupted": false,
-      "user_seconds": 359.583396,
-      "system_seconds": 3.322992,
-      "max_rss_kib_wait4": 4373840,
+      "user_seconds": 587.284696,
+      "system_seconds": 9.708537,
+      "max_rss_kib_wait4": 4368620,
       "rss_scope": "Linux wait4 maximum child/descendant RSS, not summed concurrent tree RSS"
     }
   ],

@@ -1,4 +1,4 @@
-# Current v0.3.0-rc1 verification gate
+# Current v0.3.0-rc2 verification gate
 
 This Linux/WSL gate binds the exact candidate manuscript snapshot, every production
 source, configuration/dependency pins, checking scripts, source map, coverage records

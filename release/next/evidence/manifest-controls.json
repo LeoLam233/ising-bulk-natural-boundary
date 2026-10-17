@@ -3,29 +3,29 @@
   "formal_audit": false,
   "all_controls_pass": true,
   "case_count": 13,
-  "trusted_manifest_id": "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7",
-  "results_directory": "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed",
+  "trusted_manifest_id": "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424",
+  "results_directory": "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e",
   "cases": [
     {
       "case": "positive_untouched",
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/positive_untouched/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/positive_untouched/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/positive_untouched/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/positive_untouched/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 0,
       "expected_error_code": null,
       "expected_error_path": null,
       "actual": {
         "file_count": 4,
-        "manifest_id": "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7",
+        "manifest_id": "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424",
         "status": "PASS"
       }
     },
@@ -34,14 +34,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/source_byte_tamper/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/source_byte_tamper/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/source_byte_tamper/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/source_byte_tamper/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 1,
       "expected_error_code": "SHA256_MISMATCH",
@@ -57,14 +57,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/toolchain_pin_byte_tamper/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/toolchain_pin_byte_tamper/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/toolchain_pin_byte_tamper/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/toolchain_pin_byte_tamper/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 1,
       "expected_error_code": "SHA256_MISMATCH",
@@ -80,14 +80,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/missing_source/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/missing_source/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/missing_source/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/missing_source/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 1,
       "expected_error_code": "MISSING_FILE",
@@ -103,14 +103,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/undeclared_hidden_file/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/undeclared_hidden_file/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/undeclared_hidden_file/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/undeclared_hidden_file/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 1,
       "expected_error_code": "UNDECLARED_FILE",
@@ -126,14 +126,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/manifest_byte_tamper/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/manifest_byte_tamper/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/manifest_byte_tamper/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/manifest_byte_tamper/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 1,
       "expected_error_code": "MANIFEST_ID_MISMATCH",
@@ -149,14 +149,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/bad_digest_with_test_pin/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/bad_digest_with_test_pin/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/bad_digest_with_test_pin/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/bad_digest_with_test_pin/manifest.json",
         "--expected-id",
-        "182eb0166ea5fc27ae5926b246a354e0eb40a9ae9bfff5ca2d247cff01d9a0b5"
+        "a4d460b66eb81198cc8c09479eee400fc57364bbe54de5b7637ba44e7103289e"
       ],
       "exit_code": 1,
       "expected_error_code": "SHA256_MISMATCH",
@@ -172,14 +172,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/omitted_entry_with_test_pin/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/omitted_entry_with_test_pin/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/omitted_entry_with_test_pin/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/omitted_entry_with_test_pin/manifest.json",
         "--expected-id",
-        "92e36e10254d8b76a88e022e97f8b50c86621a20a85733aa23c43783d5ef1d5f"
+        "c70496eda33c5a57c8824586e0ca01da413e6925039e8bba0b87f47a02ca786f"
       ],
       "exit_code": 1,
       "expected_error_code": "UNDECLARED_FILE",
@@ -195,14 +195,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_entry_with_test_pin/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/duplicate_entry_with_test_pin/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_entry_with_test_pin/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/duplicate_entry_with_test_pin/manifest.json",
         "--expected-id",
-        "7e37f2834dd1fcd0046636119a277e39c8418c0b326bfff2640358cff1f81f2c"
+        "c965aceaf1ad05b489807910c5ee59df36ae9aeaa3c9038b09a9b6a1762d9fb0"
       ],
       "exit_code": 1,
       "expected_error_code": "DUPLICATE_PATH",
@@ -218,14 +218,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/traversal_entry_with_test_pin/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/traversal_entry_with_test_pin/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/traversal_entry_with_test_pin/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/traversal_entry_with_test_pin/manifest.json",
         "--expected-id",
-        "b0bab130b59132cd83b2af2439d792995b9dbdbcdfc295a5581d6a2ac44c91bf"
+        "c4d076d252f46a8cc6d916c123c9bca776e2db4ee114572f313dec6957788c2d"
       ],
       "exit_code": 1,
       "expected_error_code": "UNSAFE_PATH",
@@ -241,14 +241,14 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/coherent_source_and_manifest_tamper/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/coherent_source_and_manifest_tamper/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/coherent_source_and_manifest_tamper/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/coherent_source_and_manifest_tamper/manifest.json",
         "--expected-id",
-        "7888f467a33bae64d5c0fc39d5dcc57f3701a4d4f3d18f759bf10d2bc3e67ed7"
+        "1316b28a4e09c7d336907d7ee5d839375a6393136205f71ab0b4dbb3f0189424"
       ],
       "exit_code": 1,
       "expected_error_code": "MANIFEST_ID_MISMATCH",
@@ -264,12 +264,12 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/invalid_json_with_test_pin/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/invalid_json_with_test_pin/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/invalid_json_with_test_pin/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/invalid_json_with_test_pin/manifest.json",
         "--expected-id",
         "86158a37c4021be8fbfa95733f98ac90b4bc8da2595bd164452b3f750c78a378"
       ],
@@ -287,12 +287,12 @@
       "control_pass": true,
       "argv": [
         "/usr/bin/python3",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/payload_manifest.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/payload_manifest.py",
         "verify",
         "--payload-root",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_json_key_with_test_pin/payload",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/duplicate_json_key_with_test_pin/payload",
         "--manifest",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/manifest-20261016T195501Z-5663b0ed/duplicate_json_key_with_test_pin/manifest.json",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/manifest-20261017T041223Z-5958593e/duplicate_json_key_with_test_pin/manifest.json",
         "--expected-id",
         "fcee514468d5e7967f1a6eecd03df765adb3fc83ff9785c56ea308df0b56cb1c"
       ],

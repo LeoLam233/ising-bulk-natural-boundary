@@ -1,0 +1,131 @@
+{
+  "all_controls_pass": true,
+  "case_count": 5,
+  "cases": [
+    {
+      "argv": [
+        "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "scripts/verify_candidate.py",
+        "--write-manifest"
+      ],
+      "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "CANDIDATE_CONSISTENCY_FAILED: Retained rc5 snapshot/report changed: lean/source_snapshot/manuscript-rc5.tex\n",
+      "name": "retained_rc5_snapshot",
+      "mutated_path": "lean/source_snapshot/manuscript-rc5.tex",
+      "expected_diagnostic": "Retained rc5 snapshot/report changed:",
+      "control_pass": true
+    },
+    {
+      "argv": [
+        "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "scripts/verify_candidate.py",
+        "--write-manifest"
+      ],
+      "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "CANDIDATE_CONSISTENCY_FAILED: Retained rc5 snapshot/report changed: docs/UPGRADE_v0.3.0-rc1.md\n",
+      "name": "retained_rc1_report",
+      "mutated_path": "docs/UPGRADE_v0.3.0-rc1.md",
+      "expected_diagnostic": "Retained rc5 snapshot/report changed:",
+      "control_pass": true
+    },
+    {
+      "argv": [
+        "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "scripts/verify_candidate.py",
+        "--write-manifest"
+      ],
+      "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "CANDIDATE_CONSISTENCY_FAILED: Production Lean source differs from the verified predecessor: IsingBulk/Algebra/NickelOrder.lean\n",
+      "name": "production_source",
+      "mutated_path": "lean/IsingBulk/Algebra/NickelOrder.lean",
+      "expected_diagnostic": "Production Lean source differs from the verified predecessor:",
+      "control_pass": true
+    },
+    {
+      "argv": [
+        "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "scripts/verify_candidate.py",
+        "--write-manifest"
+      ],
+      "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "CANDIDATE_CONSISTENCY_FAILED: Literature identity incorrectly presented as a Lean export\n",
+      "name": "fake_formal_amplitude",
+      "mutated_path": "lean/CLAIM_LEDGER.tsv",
+      "expected_diagnostic": "Literature identity incorrectly presented as a Lean export",
+      "control_pass": true
+    },
+    {
+      "argv": [
+        "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "scripts/verify_candidate.py"
+      ],
+      "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "CANDIDATE_CONSISTENCY_FAILED: Current manifest version drift\n",
+      "name": "old_manifest_version",
+      "mutated_path": "release/next/MANIFEST.json",
+      "expected_diagnostic": "Current manifest version drift",
+      "control_pass": true
+    }
+  ],
+  "positive_before": {
+    "argv": [
+      "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-B",
+      "scripts/verify_candidate.py",
+      "--write-manifest"
+    ],
+    "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+    "exit_code": 0,
+    "stdout": "{\n  \"protected_historical_files\": 211,\n  \"preserved_record_copies\": 17,\n  \"verified_predecessor_assets\": 13,\n  \"retained_rc5_files\": 4,\n  \"production_files_including_root\": 1075,\n  \"endpoint_count\": 18,\n  \"source_labels\": 68,\n  \"old_label_numbers_preserved\": 65,\n  \"rc5_label_numbers_preserved\": 67,\n  \"proof_id\": \"90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124\",\n  \"verification_id\": \"6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c\",\n  \"safe_project_declarations\": 9225,\n  \"fresh_kernel_replay_exit\": 0,\n  \"verified_archived_files\": 353,\n  \"status\": \"VERIFIED_CANDIDATE\",\n  \"current_inventory_files\": 1415,\n  \"manifest_excludes_itself\": true\n}\n",
+    "stderr": ""
+  },
+  "positive_after": {
+    "argv": [
+      "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-B",
+      "scripts/verify_candidate.py",
+      "--write-manifest"
+    ],
+    "cwd": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837\\repo",
+    "exit_code": 0,
+    "stdout": "{\n  \"protected_historical_files\": 211,\n  \"preserved_record_copies\": 17,\n  \"verified_predecessor_assets\": 13,\n  \"retained_rc5_files\": 4,\n  \"production_files_including_root\": 1075,\n  \"endpoint_count\": 18,\n  \"source_labels\": 68,\n  \"old_label_numbers_preserved\": 65,\n  \"rc5_label_numbers_preserved\": 67,\n  \"proof_id\": \"90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124\",\n  \"verification_id\": \"6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c\",\n  \"safe_project_declarations\": 9225,\n  \"fresh_kernel_replay_exit\": 0,\n  \"verified_archived_files\": 353,\n  \"status\": \"VERIFIED_CANDIDATE\",\n  \"current_inventory_files\": 1415,\n  \"manifest_excludes_itself\": true\n}\n",
+    "stderr": ""
+  },
+  "context": {
+    "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+    "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
+    "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+  },
+  "input_tree_unchanged": true,
+  "input_file_sha256": {
+    "lean/ci/accepted_identity.json": "f2291c1ae869b325929d521575c36e98d41d07cf4ec88bc59fceea88d9804862",
+    "checks/amplitude_identification/check_amplitude.py": "a0e61fc1988acf1fe2f8ab7a58980ef55a4ade2a611259661b2b2c818205c566",
+    "checks/amplitude_identification/repository_controls.py": "8573a3d1764c960ed21b4e0bda4d53f50dcd65fe63e8b55b658ad57731a1a932",
+    "scripts/verify_candidate.py": "03fc2f53b2fb59b329e2095455375c118d85bcc5b488368e869dcde6e7c817dc",
+    "lean/source_snapshot/manuscript-rc5.tex": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf",
+    "docs/UPGRADE_v0.3.0-rc1.md": "1ca65130b23a4a445931a006006fbd3ba047669a582ca707a271d3d7404e2eb1",
+    "lean/IsingBulk/Algebra/NickelOrder.lean": "db10d16741ec7e24344431420ea05d6a88899f94e0b5501e1ce93d0d94a70026",
+    "lean/CLAIM_LEDGER.tsv": "15efa7780911f4a2abc869e498b9a6375a02b6caf3a25fa42322d12d627cc47a"
+  },
+  "input_tree_files": 1416,
+  "input_tree_before_id": "de82d929ca7f217144e0968d119663ba65a379594e9e78c7cc694413363fa2b6",
+  "input_tree_after_id": "de82d929ca7f217144e0968d119663ba65a379594e9e78c7cc694413363fa2b6",
+  "tree_check_scope": "All tracked/unignored file bytes before and after this run; ignored throwaway clones/results excluded. Later receipt assembly may change metadata while the separately listed critical inputs remain bound.",
+  "isolated_workspace": "I:\\Codex\\_Projectless\\2026-10-17\\ising-bulk-natural-boundary-autonomous-research-2\\work\\repo\\.local\\rc2-repository-controls-e5b8o837",
+  "scope": "Repository provenance/version/formal-scope controls, not new mathematical proofs or kernel checks."
+}

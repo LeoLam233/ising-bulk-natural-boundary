@@ -1,7 +1,7 @@
 {
-  "candidate_version": "v0.3.0-rc1",
-  "manuscript_version": "v0.1-rc5",
-  "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+  "candidate_version": "v0.3.0-rc2",
+  "manuscript_version": "v0.1-rc6",
+  "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
   "proof_inputs": {
     "files": {
       "IsingBulk.lean": "de734f70797c50650bf874c11a5a46a3fc64f3d6f5225262c479ce22e8a3194d",
@@ -1079,12 +1079,12 @@
       "IsingBulk/Tail/WeightedCompactSourceMajorant.lean": "510b007c75b7b192fe1681a728cc4da296e7be2621bbf1ff83635a6cc16e1969",
       "IsingBulk/Tail/WeightedCurrentInterval.lean": "18be4953d96ae09e291522435b44eabd9909dcc08785c31fc1f0bdfd25c6c961",
       "IsingBulk/Tail/WeightedPairingIntegral.lean": "82f9619d780b9c8f17b896a0e0139efa00fb53b81ef5047bd65dd3f3e20327eb",
-      "SOURCE.json": "fe1f1ca908f6fd3a0201688f8cdfa153d48a5ffdb48c774c776efb8644bbd55d",
-      "TOOLCHAIN_FREEZE.json": "c1cb68f6ba4a500d94e7453766e85c0c0344bcc690498d74e55474c2c7b066f7",
+      "SOURCE.json": "4fbe62bda70cdadfcbabdbbb8b05ade97261a88fd477cefc2f2b903ece30350b",
+      "TOOLCHAIN_FREEZE.json": "82d8141426a0c2e5f703d7343066ac258795caaa74d42a729b748d1e990af958",
       "lake-manifest.json": "58516f4af07d70237aa9ff8651004a0bd493e7a7f7e5b92eaea99865f01ee805",
-      "lakefile.toml": "278703b648e0cdadfcd0dfdee13cac73e4a7967276fc7941a47a5f6212489e91",
+      "lakefile.toml": "da1572c2080d6c23106bfacece1546626b664dd15f895e0a59b55676e2134b9a",
       "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
-      "source_snapshot/manuscript-rc5.tex": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf"
+      "source_snapshot/manuscript-rc6.tex": "44dd21ea379b66f186d3fcc322bee7b0f5497e7c1dfc54d76dfa79bd0f2720c3"
     },
     "dependencies": [
       {
@@ -1135,5 +1135,5 @@
     ],
     "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52"
   },
-  "evidence": "Executed exact-input evidence is recorded separately in release/next/VALIDATION.json. No historical receipt is reassigned."
+  "evidence": "Fresh exact-input execution status belongs to release/next/VALIDATION.json. The verified predecessor is dd977048; no old receipt is reassigned."
 }

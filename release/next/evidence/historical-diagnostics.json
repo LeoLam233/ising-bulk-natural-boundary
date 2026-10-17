@@ -25,48 +25,48 @@
     {
       "id": "v7_core",
       "exit_code": 0,
-      "seconds": 0.763,
-      "output": ".local/checks-rhk47qxq/v7_core/check_results.json",
+      "seconds": 0.669,
+      "output": ".local/checks-3g77c3uj/v7_core/check_results.json",
       "historical_differences": [],
       "status": "REPRODUCED_FINITE_CHECK"
     },
     {
       "id": "v7_normalization",
       "exit_code": 0,
-      "seconds": 0.472,
-      "output": ".local/checks-rhk47qxq/v7_normalization/independent_normalization_results.json",
+      "seconds": 0.541,
+      "output": ".local/checks-3g77c3uj/v7_normalization/independent_normalization_results.json",
       "historical_differences": [],
       "status": "REPRODUCED_FINITE_CHECK"
     },
     {
       "id": "v7_additional",
       "exit_code": 0,
-      "seconds": 0.145,
-      "output": ".local/checks-rhk47qxq/v7_additional/stdout.txt",
+      "seconds": 0.172,
+      "output": ".local/checks-3g77c3uj/v7_additional/stdout.txt",
       "historical_differences": [],
       "status": "REPRODUCED_FINITE_CHECK"
     },
     {
       "id": "v6_diagnostics",
       "exit_code": 0,
-      "seconds": 0.518,
-      "output": ".local/checks-rhk47qxq/v6_diagnostics/result.json",
+      "seconds": 0.626,
+      "output": ".local/checks-3g77c3uj/v6_diagnostics/result.json",
       "historical_differences": [],
       "status": "REPRODUCED_FINITE_CHECK"
     },
     {
       "id": "mr1_algebra",
       "exit_code": 0,
-      "seconds": 0.907,
-      "output": ".local/checks-rhk47qxq/mr1_algebra/stdout.txt",
+      "seconds": 1.148,
+      "output": ".local/checks-3g77c3uj/mr1_algebra/stdout.txt",
       "historical_differences": [],
       "status": "REPRODUCED_FINITE_CHECK"
     },
     {
       "id": "mr1_coupled",
       "exit_code": 0,
-      "seconds": 0.415,
-      "output": ".local/checks-rhk47qxq/mr1_coupled/stdout.txt",
+      "seconds": 0.516,
+      "output": ".local/checks-3g77c3uj/mr1_coupled/stdout.txt",
       "historical_differences": [],
       "status": "REPRODUCED_FINITE_CHECK"
     }

@@ -4,10 +4,10 @@
   "lean_toolchain": "leanprover/lean4:v4.34.1",
   "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
   "mathlib_rev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
-  "manuscript_git_blob": "2142867e9b269c75375a90f55aa8ce0896853508",
+  "manuscript_git_blob": "7d7beba3ab16f1def88dbdd0132661459f9dc404",
   "frozen_config_sha256": {
     "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
-    "lakefile.toml": "278703b648e0cdadfcd0dfdee13cac73e4a7967276fc7941a47a5f6212489e91",
+    "lakefile.toml": "da1572c2080d6c23106bfacece1546626b664dd15f895e0a59b55676e2134b9a",
     "lake-manifest.json": "58516f4af07d70237aa9ff8651004a0bd493e7a7f7e5b92eaea99865f01ee805"
   },
   "dependency_revisions": {

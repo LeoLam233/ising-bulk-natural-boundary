@@ -1,6 +1,6 @@
 # Current continuation source and endpoint chain
 
-The manuscript is v0.1-rc5, pinned by `SOURCE.json`. [CORRESPONDENCE](CORRESPONDENCE.md) and [COVERAGE](COVERAGE.md) describe the current scope. The old document is preserved byte for byte in [history/v0.2.1/CONTINUATION_SOURCE_CORRESPONDENCE.md](history/v0.2.1/CONTINUATION_SOURCE_CORRESPONDENCE.md).
+The manuscript is v0.1-rc6, pinned by `SOURCE.json`. [CORRESPONDENCE](CORRESPONDENCE.md) and [COVERAGE](COVERAGE.md) describe the current scope. The old document is preserved byte for byte in [history/v0.2.1/CONTINUATION_SOURCE_CORRESPONDENCE.md](history/v0.2.1/CONTINUATION_SOURCE_CORRESPONDENCE.md).
 
 NonNickelGeometry derives the actual separator. The generic complement estimates construct the same charts, auxiliary integrals, generated IBP coefficients, finite refinement and actual offsite fixed-radius bound. Prime arithmetic discharges the guard below 2p. LowerOrderTransfer, LowerEvenSum and UpperNoncancellation use this internal result. The canonical wrappers supply the existing absolute TAIL; physical identification adds only E1/E2 and positive coupling.
 

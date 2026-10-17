@@ -1,4 +1,4 @@
-# Claims and quantifiers: manuscript v0.1-rc5 / Lean v0.3.0-rc1
+# Claims and quantifiers: manuscript v0.1-rc6 / Lean v0.3.0-rc2
 
 The object is the zero-field isotropic infinite square-lattice connected bulk response `X=beta_phys^(-1) chi`, continued from the low-temperature pure phase. It includes all sites and the full even-particle expansion. The magnetization branch `M^2=(1-s^-4)^(1/4)` tends to one at infinity.
 
@@ -10,8 +10,8 @@ The canonical `IsingBulk.Final.theorem_nb` has no E1, E2, E3 or external tail pr
 
 Proposition 6.1 bounds branch–compact pairs by `1+C/N` on the actual protected disk. Only the compact root is displaced; the branch stays at its disk-point value in the closed lower unit disk. Existing weaker downstream estimates remain valid.
 
-The factorial expression evaluates the same single-chart coefficient with the original continuation. Complete offsite and full-site coefficients have multiplicities two and four. McCoy–Maillard (69) matches the specified single-chart expression at inverse angle with the stated principal power; no claim is made that the source explicitly selects that branch or includes the full chart sum in its printed amplitude.
+The factorial expression evaluates the same single-chart coefficient. Proposition F.1 identifies the review's normalized full-site observable through its cited integral and proves `A_full=4A_chart=4R_N(-theta_*)=-4iR_N(theta_*)` on the specified physical exterior germ, with `delta=1-s_*/s`. The lower double-contour `T_N` has amplitude `2A_chart`; the complete offsite normalized particle coefficient is `2T_N`, with amplitude `4A_chart`, equal to full-site. Physical X and chi multiply by M²(s_*) and by beta_phys(s_*)M²(s_*), respectively. Changing angle sign or half-integer power branch cannot supply the missing magnitude factor four. No intended convention is attributed to an unread original derivation.
 
 Corollary 9.4 excludes a real smooth extension agreeing on an exterior neighborhood through every nonempty boundary arc. For angular length `ell`, any prime `p>=11` with `2 sqrt(10) pi/p<ell` supplies a selected obstruction of order `2p^2-1`. An elementary sufficient ceiling is `max(968,320 pi^2/ell^2)`. The asymptotic leading constant `80 pi^2` additionally uses the prime number theorem; it is not a uniform finite-length bound. No claim concerns a boundary trace without an agreeing exterior extension or one finite derivative order at every point.
 
-The selected-point real `C^k` obstruction is formalized. The factorial evaluation, finite-prime covering and full quantitative physical arc statement are manuscript-only. Original formal nonvanishing and tail arguments remain. These are internally checked candidate claims, not independent human certification. [Versions](docs/VERSIONS.md) · [Executed checks](release/next/VALIDATION.json).
+The selected-point real `C^k` obstruction is formalized. The factorial evaluation, complete-amplitude conversion/radial Taylor reconstruction, finite-prime covering and full quantitative physical arc statement are manuscript-only. Original formal nonvanishing and tail arguments remain. These are internally checked candidate claims, not independent human certification. [Versions](docs/VERSIONS.md) · [Executed checks](release/next/VALIDATION.json).

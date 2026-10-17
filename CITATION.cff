@@ -8,9 +8,9 @@ authors:
     orcid: "https://orcid.org/0009-0001-4551-8490"
     affiliation: "School of Physics, Sun Yat-sen University"
     email: "lindh9@mail2.sysu.edu.cn"
-version: "0.1-rc5"
+version: "0.1-rc6"
 license: CC-BY-4.0
-abstract: "Development candidate manuscript v0.1-rc5 with Lean v0.3.0-rc1. Canonical lower-order and natural-boundary proofs no longer require E3; physical identification retains E1/E2. Exact validation is recorded separately. No independent human expert validation or peer review is claimed."
+abstract: "Development candidate manuscript v0.1-rc6 with Lean v0.3.0-rc2. Canonical lower-order and natural-boundary proofs no longer require E3; physical identification retains E1/E2. Proposition F.1 derives the complete-amplitude conversion on the physical exterior germ; this literature identity is manuscript-only. Exact validation is recorded separately. No independent human expert validation or peer review is claimed."
 keywords:
   - Ising model
   - susceptibility

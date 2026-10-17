@@ -1,26 +1,28 @@
 # A candidate natural-boundary proof for the bulk Ising susceptibility
 
-**Development candidate: manuscript v0.1-rc5 / Lean v0.3.0-rc1 · 17 October 2026 · Dehao Lin**
+**Development candidate: manuscript v0.1-rc6 / Lean v0.3.0-rc2 · 17 October 2026 · Dehao Lin**
 
-[中文说明](README.zh.md) · [Candidate manuscript](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) · [Proof guide](docs/PROOF_GUIDE.md) · [Mathematical changes](docs/UPGRADE_v0.3.0-rc1.md) · [Version identities](docs/VERSIONS.md)
+[中文说明](README.zh.md) · [Candidate manuscript](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) · [Proof guide](docs/PROOF_GUIDE.md) · [Mathematical changes](docs/AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md) · [Version identities](docs/VERSIONS.md)
 
 This branch contains an implemented next-version candidate for the zero-field, isotropic, infinite square-lattice **bulk** susceptibility continued from its low-temperature pure-phase exterior germ. It is prepared for mathematical review; no independent human expert validation or peer review is claimed.
 
 The new canonical normalized-series theorem has **no E3 premise**. Physical identification retains **E1 and E2**, the correlation representation and spontaneous magnetization. The actual lower even orders are bounded internally on their original offsite contours. The old published full-site comparison helpers remain available but are absent from canonical transitive proof dependencies. [Exact assumptions](CLAIMS.md) · [External sources](provenance/EXTERNAL_PREMISES.md).
 
+The verified rc5 / Lean v0.3.0-rc1 candidate remains at [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a). This revision adds the normalization result below and preserves its production Lean sources byte for byte. New manuscript, source correspondence and acceptance receipts have distinct identities.
+
 ## Changes
 
 - Internal non-Nickel gradient separation and fixed-radius integration by parts replace E3 in FIRST, finite lower-order noncancellation and both natural-boundary endpoints.
 - Proposition 6.1 states the stronger branch–compact bound `1+C/N` on the protected `c/N` disk. Baseline Lean already proves this stronger bound; downstream budgets are retained.
-- Appendix B evaluates the existing singular coefficient through factorials. Appendix F compares specified single-chart expressions with McCoy–Maillard (69), keeping power branches, phases and chart multiplicities explicit.
+- Proposition F.1 resolves the complete-amplitude comparison: on the selected physical exterior germ, `A_full=4R_N(-theta_*)=-4i R_N(theta_*)`. The printed scalar is one chart; the complete full-site coefficient has four equal signed contributions. Observable definitions, local variables, power branches and physical prefactors are derived. The formula is arXiv (69), journal (70).
 - Corollary 9.4 excludes real smooth extension through every nonempty boundary arc. A finite-prime criterion gives an elementary `O(ell^-2)` derivative ceiling. The coefficient `80*pi^2` is only an asymptotic leading constant, not a uniform finite covering bound.
-- Lean proves the actual selected-point real `C^k` obstruction. The factorial evaluation and quantitative finite-prime covering remain analytic manuscript results.
+- Lean proves the actual selected-point real `C^k` obstruction. The factorial evaluation, complete-amplitude conversion and quantitative finite-prime covering remain analytic manuscript results.
 
 For each fixed selected point, `N0=2p`, `k=N0^2/2-1` and `s_epsilon=(1+epsilon)s_*`, the load-bearing claims remain `T_N0^(k)=2 L_beta epsilon^(-1/2)+o(epsilon^(-1/2))` with nonzero `L_beta`, and the absolute sum of every higher even form-factor derivative is `o(epsilon^(-1/2))` for all `0<=j<=k`. Constants may depend on the fixed point and finite derivative order. All lattice separations and the entire even-particle expansion are included.
 
 ## Verification
 
-[Current status](release/CURRENT_STATUS.json), [executed receipts](release/next/VALIDATION.json), and the [mandatory consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md) control verification claims for this candidate. Earlier PASS verdicts and release receipts apply only to their own inputs.
+[Current status](release/CURRENT_STATUS.json), [executed receipts](release/next/VALIDATION.json), and the [mandatory consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md) control verification claims for this candidate. Earlier PASS verdicts and release receipts apply only to their own inputs.
 
 The Linux/WSL gate builds the complete root, audits axioms, checks exact endpoint types and origins, runs positive/negative controls, traverses compiled types **and proof bodies** for E3, and runs `leanchecker --fresh --verbose IsingBulk`. Cached dependency binary/source correspondence remains trusted; Mathlib is not rebuilt from source. Build and replay use the same kernel. [Lean reproduction](lean/README.md) · [Evidence limits](LIMITATIONS.md).
 
@@ -30,6 +32,7 @@ From the repository root:
 python -m pip install -r requirements.txt
 python scripts/reproduce.py
 python checks/next_version/run_checks.py --output .local/next-checks.json
+python checks/amplitude_identification/check_amplitude.py --output .local/amplitude-checks.json
 python scripts/build_candidate_paper.py
 python scripts/verify_candidate.py
 ```

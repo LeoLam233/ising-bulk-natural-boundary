@@ -8,6 +8,16 @@ A_{\rm full}=4A_{\rm chart}=4R_N(-\theta_*)=-4iR_N(\theta_*).
 
 Here `R_N` means the right-hand side evaluated with the principal numerator power and the positive geometric denominator. This resolves the mathematical comparison without assigning an unstated convention to the authors. A single-pinch interpretation of the printed scalar is consistent with this calculation; a complete amplitude requires the degeneracy sum. The original positive-period nonvanishing argument and every production Lean theorem source are retained.
 
+Explicitly, fix the manuscript's selected prime family `N=2p`, `alpha=2pi a/p`, `beta=2pi b/p`, with `0<alpha<beta<pi/2`. Set `a0=(N²-1)/2`, `nu=(N²-3)/2`, `P_N=product(m!/2^m,m=1,...,N-1)` and `H=sin²(alpha)cos(beta)+sin²(beta)cos(alpha)>0`. The scalar being compared is
+
+\[
+R_N(\vartheta)=\frac{(Ni\sin\vartheta)^\nu P_N}
+ {H^{a_0}\pi^{(N-3)/2}\sqrt N\,\Gamma(a_0)},\qquad
+ 2\cos\theta_*=\cos\alpha+\cos\beta.
+\]
+
+The function coefficient is extracted along the specified positive low-temperature deviation, modulo a finite radial Taylor polynomial. No new convergent full Puiseux series or uniform sectoral expansion is asserted. Any proposed complex-germ amplitude formula for this same physical branch must in particular have that radial coefficient, so the factor-four obstruction does not require either stronger expansion theorem.
+
 The implemented proof is [Proposition F.1](../paper/next/manuscript.tex) and the preceding normalization calculation. The preserved starting candidate is commit `dd977048c2380e775d83b97ae1fba354c04c349a`, manuscript v0.1-rc5 / Lean v0.3.0-rc1. [Baseline identities](../provenance/AMPLITUDE_BASELINE.json) bind its artifacts. The research branch is `research/amplitude-identification-20261017`; the existing review branch and PR #3 receive the verified result.
 
 ## Observable and source closure
@@ -18,7 +28,13 @@ The review points to [Orrick–Nickel–Guttmann–Perk (2001)](https://arxiv.or
 
 [Boukraa et al. (2008), (4)–(9)](https://arxiv.org/pdf/0808.0763v1) gives a second explicit representation with the same normalization. Its `w=s/[2(1+s^2)]` obeys `1/(2w)=S=s+s^-1`. Its `x_i` is our interior root `z_i`; its `y_i` includes the numerator `2w` and equals `1/sinh gamma_i`. It is not our double-contour coordinate named `y_i`.
 
+That paper's **tilded** `tilde chi^(N)` equals our `C_N^std`. Its untilded even `chi^(N)` already denotes a contribution to `k_B T chi`, and equals `M² C_N^std` in low temperature. The review instead names the normalized coefficient `chi^(N)`. Thus the same untilded symbol does not mean the same normalization in these two sources. Orrick et al.'s `hat chi^(N)`, Boukraa et al.'s `tilde chi^(N)` and the review's `chi^(N)` agree here; physical chi additionally carries inverse temperature.
+
+The full-site constraint and its measure can also be checked directly. Write the normalized fixed-site coefficient as `1/N!` times the full N-angle form-factor integral, with Fourier factor `exp(i a sum(phi_i))`, vertical factor `Z^|b|`, and the same one-body and squared-pair density. For real `s>1`, the fixed-site bound already proved in Appendix F makes the lattice sum absolutely convergent. Summing b gives `(1+Z)/(1-Z)`. Periodic Fourier summation in a imposes `sum(phi_i)=0 mod 2pi`; the integrand is smooth, so this is the usual periodic-delta evaluation, not an unjustified pointwise interchange of the Fourier series. Solving for phi_N has Jacobian one and removes exactly one normalized `d phi/(2pi)` measure. The result is precisely the N-1 angle integral displayed in Appendix F, with the original `1/N!`, and no extra factor two, four or `2pi`. The formulas first agree on the real low-temperature germ and hence on its specified analytic continuation.
+
 For `N=2p`, our angles correspond to the review's indices `j=2a`, `l=2b`. Both are nonzero and below N/4. Their sum is even and cannot equal `N/2=p`, so the review's even-order excluded index sum is not being used. The printed plus sign in its (64) conflicts with the explicit roots immediately after it and the cosine relation. The actual integral and Orrick et al. (3.24) give `S_*=cos(alpha)+cos(beta)`. The comparison uses this verified relation and records the source inconsistency rather than importing the sign.
+
+N is the full particle count: it equals `2n` in the review's even-order singularity formula. It is not n in the general printed amplitude formula.
 
 ## Branch, local coefficient, and completeness
 
@@ -51,6 +67,8 @@ a_0=k+1/2,\quad \nu=k-1/2.
 
 Substitution of (B.1) gives magnitude exactly `|R_N|` and phase `(-1)^k exp(i pi a0/2)=exp(-i pi nu/2)`, since k is odd. The principal positive-angle expression has phase `exp(i pi nu/2)`. This proves both conversions, including the factor `-i`.
 
+The absolute phase simplifies further on this particular prime family. Write the odd prime as `p=2h+1`; then `nu=2p²-3/2=8h(h+1)+1/2`. Hence both A_chart and A_full have phase `exp(-i pi/4)` on the positive radial deviation. The normalized physical amplitude has phase `exp(-i(pi/8+theta_*/2))`; physical chi additionally carries the chosen phase of beta_phys(s_*). These are consequences of the already specified branches, not freely adjustable phase conventions.
+
 A separate direct integration check divides `r^(2k)/(q+b r^2)` into a polynomial and a residual arctangent, continued from positive b to `b=-i d`. Its fractional term is `(pi/2)(-1)^k q^(k-1/2)b^(-k-1/2)`. Combining it with the constrained Gaussian Vandermonde integral gives the same magnitude and phase. This is a second local coefficient derivation; it does not replace the existing proof of the remainder bounds.
 
 All branches of the displayed half-integer powers have the same magnitude. Neither choosing the other angle sign nor changing a power branch can multiply that magnitude by four. Hence an unscaled complete-amplitude identification is excluded even though the review does not select an angle sign in its cosine equation.
@@ -58,6 +76,8 @@ All branches of the displayed half-integer powers have the same magnitude. Neith
 ## Conversion table and physical factors
 
 The review's low-temperature variable is `delta=1-s_*/s=epsilon/(1+epsilon)`. Its first derivative is one, so it changes the radial Taylor polynomial and preserves the first fractional coefficient. For a general local coordinate `x=lambda delta+O(delta^2)`, the coefficient acquires the continued factor `lambda^-nu`.
+
+For example `x=1-w/w_*`, with `w=1/(2S)`, has `lambda=2i sin(theta_*)/S_*`. This is a different local coordinate and requires that explicit conversion. The review defines its deviation using s or its inverse, so a w-coordinate Jacobian is not implicit in the displayed amplitude comparison.
 
 | Observable on the specified germ | Coefficient of delta^nu | kth complex s-derivative coefficient |
 |---|---|---|

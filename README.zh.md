@@ -1,21 +1,23 @@
 # Ising 体磁化率自然边界候选证明
 
-**开发候选版：论文 v0.1-rc5 / Lean v0.3.0-rc1 · 2026 年 10 月 17 日 · 林德昊（Dehao Lin）**
+**开发候选版：论文 v0.1-rc6 / Lean v0.3.0-rc2 · 2026 年 10 月 17 日 · 林德昊（Dehao Lin）**
 
-[English](README.md) · [候选论文](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) · [证明导读](docs/PROOF_GUIDE.md) · [数学修改](docs/UPGRADE_v0.3.0-rc1.md) · [版本身份](docs/VERSIONS.md)
+[English](README.md) · [候选论文](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) · [证明导读](docs/PROOF_GUIDE.md) · [数学修改](docs/AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md) · [版本身份](docs/VERSIONS.md)
 
 本分支研究零场、各向同性、无限正方晶格 Ising 模型的完整体磁化率，从低温纯相的外部解析芽延拓。研究对象包含全部格点间距和完整偶粒子级数。尚无独立人类专家验证或同行评审认证。
 
 当前规范化级数的典范自然边界定理不再以 E3 为前提。较低偶粒子阶在原始离原点双重轮廓上，使用非平稳梯度分离和固定半径分部积分给出内部证明。编译后实际定理类型及证明体的传递依赖检查了这条替代路径。物理对象识别仍保留 E1（关联函数表示）和 E2（自发磁化公式）。旧已发表固定阶比较接口仍保留，但不在新的典范证明依赖链中。
 
-命题 6.1 的分支–紧集配对估计提高为保护参数盘上的 `1+C/N`；这一强度已存在于基线 Lean 中，下游估计不变。附录 B 给出首奇异系数的阶乘闭式；附录 F 区分单图、完整固定阶、离原点与全格点系数，以及相位和二倍、四倍因子。只在明确约定下比较文献公式，不擅自指定原文未说明的幂分支。
+命题 6.1 的分支–紧集配对估计提高为保护参数盘上的 `1+C/N`；这一强度已存在于基线 Lean 中，下游估计不变。附录 B 给出首奇异系数的阶乘闭式；附录 F 区分单图、完整固定阶、离原点与全格点系数，以及相位和二倍、四倍因子。新命题 F.1 从实际全格点积分和物理延拓分支证明完整系数为 `4R_N(-theta_*)=-4i R_N(theta_*)`。文献右端标量对应单图，完整系数包含四个同相位贡献；同时区分 `T_N`、完整离原点系数 `2T_N`、全格点系数与两个物理前因子。该公式在 arXiv 版为 (69)，期刊版为 (70)。
 
-推论 9.4 排除任何非空单位圆弧上的实光滑延拓，给出有限素数覆盖条件及 `O(ell^-2)` 充分导数阶。`80*pi^2` 只作为渐近首项常数，不能作为所有有限弧长的统一覆盖常数。Lean 对实际规范化体函数证明了选定点处的实 `C^k` 障碍；阶乘公式和定量素数覆盖仍属于论文中的解析推导。
+推论 9.4 排除任何非空单位圆弧上的实光滑延拓，给出有限素数覆盖条件及 `O(ell^-2)` 充分导数阶。`80*pi^2` 只作为渐近首项常数，不能作为所有有限弧长的统一覆盖常数。Lean 对实际规范化体函数证明了选定点处的实 `C^k` 障碍；阶乘公式、完整振幅转换与定量素数覆盖仍属于论文中的解析推导，并非新的 Lean 导出定理。
 
-执行结果以 [状态文件](release/CURRENT_STATUS.json)、[验证回执](release/next/VALIDATION.json) 和 [全库一致性审计](docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md) 为准。旧 AI 审计结论不自动适用于新版本。编译、公理检查、同一 Lean 内核的新鲜重放、有限计算和人类评审的证据范围不同。依赖缓存的二进制与源码对应关系仍被信任，未重建整个 Mathlib。详见 [Lean 复现](lean/README.md) 和 [证据限制](LIMITATIONS.md)。
+执行结果以 [状态文件](release/CURRENT_STATUS.json)、[验证回执](release/next/VALIDATION.json) 和 [全库一致性审计](docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md) 为准。旧 AI 审计结论不自动适用于新版本。编译、公理检查、同一 Lean 内核的新鲜重放、有限计算和人类评审的证据范围不同。依赖缓存的二进制与源码对应关系仍被信任，未重建整个 Mathlib。详见 [Lean 复现](lean/README.md) 和 [证据限制](LIMITATIONS.md)。
 
 冻结论文 v0.1-rc4 原有 TeX、PDF 和标签索引仍在 `paper/`；新候选论文位于 `paper/next/`。rc4 标签 PDF 和后来 ORCID／参考文献编辑版 PDF 的字节不同，[版本表](docs/VERSIONS.md) 分别记录哈希。Lean v0.2.1 的不可变标签仍指向 `de23d9475744fb4625666142d5a03b3d688195e6`，历史定理仍包含 E1/E2/E3。旧记录原样保存在 [历史目录](lean/history/v0.2.1/README.md)；旧专家简报、审计、重构尝试、manifest 保留各自版本身份。本次升级不移动标签、不覆盖冻结资产、不发布正式版本、不合并默认分支。
 
 复现命令见 [英文首页](README.md)。当前完整性检查使用 `python scripts/verify_candidate.py`；旧 `scripts/verify_repository.py` 只检查 rc4 快照，在后续树上出现不匹配是预期现象。
 
 林德昊为署名人类作者与公开联系人，ORCID [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490)。生成式 AI 广泛参与研究、推导、写作、代码和内部核查。[作者声明](AUTHORSHIP.md)；代码 MIT，项目原创文字 CC BY 4.0，第三方作品保留其权利。
+
+已验证的 rc5 / Lean v0.3.0-rc1 候选版完整保留在 [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a)；原生产 Lean 源文件逐字节不变。本修订使用新的论文版本、源码对应身份与执行回执，只更新现有 PR #3，不新建 PR 或合并 main。

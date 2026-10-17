@@ -1,3 +1,15 @@
+# Development candidate v0.3.0-rc2 / manuscript v0.1-rc6
+
+17 October 2026. Proposition F.1 closes the complete-amplitude comparison with the inspected McCoy–Maillard formula (arXiv (69), journal (70)). On the selected physical exterior germ the full-site coefficient is 4R_N(-theta_*)=-4iR_N(theta_*). The observable, four signed charts, constrained measure, radial Taylor remainder and physical-prefactor branches are derived; an unscaled complete identification is rejected.
+
+This conversion is manuscript-only. All 1075 production Lean source files and their mathematical dependency chain are unchanged from verified rc5/Lean v0.3.0-rc1 commit dd977048. New source correspondence, version/configuration identities and fresh acceptance receipts belong to rc6/rc2. Original candidate assets and reports retain their immutable predecessor identity.
+
+[Mathematical derivation](docs/AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md) · [Validation](release/next/VALIDATION.json) · [Consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md) · [Versions](docs/VERSIONS.md). No new PR, release tag, publication or main merge is created.
+
+All entries below retain their original version scope and bytes. Their relative artifact links refer to their historical trees; the version ledger supplies the immutable predecessor.
+
+---
+
 # Development candidate v0.3.0-rc1 / manuscript v0.1-rc5
 
 17 October 2026. E3 is replaced internally in canonical FIRST and NB; E1/E2

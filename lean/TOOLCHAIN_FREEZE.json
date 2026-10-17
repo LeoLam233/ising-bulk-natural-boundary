@@ -1,6 +1,6 @@
 {
   "frozen_at": "2026-10-17",
-  "reason": "v0.3.0-rc1 candidate configuration; compiler and nine dependency revisions remain the frozen baseline pins. Execution status is recorded separately in release/next/VALIDATION.json.",
+  "reason": "v0.3.0-rc2 candidate configuration and rc6 source correspondence. Production Lean proofs, compiler and all nine dependency revisions are unchanged from dd977048. Fresh execution status is separate in release/next/VALIDATION.json.",
   "lean": "leanprover/lean4:v4.34.1",
   "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
   "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
@@ -11,7 +11,7 @@
     },
     {
       "path": "lakefile.toml",
-      "sha256": "278703b648e0cdadfcd0dfdee13cac73e4a7967276fc7941a47a5f6212489e91"
+      "sha256": "da1572c2080d6c23106bfacece1546626b664dd15f895e0a59b55676e2134b9a"
     },
     {
       "path": "lake-manifest.json",

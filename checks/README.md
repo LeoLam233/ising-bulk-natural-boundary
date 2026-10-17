@@ -18,7 +18,7 @@ The comparison uses relative and absolute tolerances of 1e-10 for numeric scalar
 Optional `--only ID ...` limits the selection. A nonzero subprocess exit, timeout, missing output or comparison difference produces a nonzero wrapper exit. Historical CR0 scripts supplied under `reproduction/` are supplementary and are not automatically executed by this command. Copy a historical run to scratch before executing its code because it may write beside itself.
 
 
-## v0.3.0-rc1 additions
+## v0.3.0-rc1 mathematical scripts (retained and rerun)
 
 Run `python checks/next_version/run_checks.py --output .local/next-checks.json`.
 The script checks exact Schur polynomial/rational identities, exact Gaussian
@@ -29,3 +29,11 @@ The symbolic identities and rational certificate have their stated exact scopes;
 quadratures and finite samples do not prove continuous-domain or infinite-tail claims.
 New executed results are in `release/next/VALIDATION.json` and its evidence files.
 The six original scientific script bytes and old fixtures remain unchanged.
+
+
+## v0.3.0-rc2 amplitude conversion
+
+Run `python checks/amplitude_identification/check_amplitude.py --output .local/amplitude-checks.json`.
+The script checks nine exact symbolic identities, an exact p=11 cyclotomic four-center enumeration, three 90-digit two-particle full-observable quadratures against the published elliptic representation, and specified phase/root samples. These corroborate the analytic derivation in Proposition F.1; they are not continuous asymptotic or all-N certificates. The [source index](amplitude_identification/SOURCES.json) records four inspected primary PDFs and the original Nickel access failures. No third-party PDF is redistributed.
+
+After assembling the candidate receipts and inventory, run `python checks/amplitude_identification/repository_controls.py --output .local/repository-controls.json`. It attacks retained snapshots/reports, production-source preservation, a false formal-amplitude label and a stale version header in an isolated clone. It requires five expected rejections and positive guard runs before and after, and checks that its input files remain unchanged. These are repository consistency controls, separate from the mathematical and Lean checks. Every output path must be fresh.

@@ -1,7 +1,7 @@
 {
   "context": {
-    "PROOF_CRITICAL_PAYLOAD_ID": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
-    "VERIFICATION_INPUT_ID": "94e5403dcacbb5254654e5a71bd18eceedd949c5fa04c2b37ff4fd9bd5ede179",
+    "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+    "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
     "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
   },
   "context_unchanged": true,
@@ -9,7 +9,7 @@
   "formal_audit": false,
   "all_controls_pass": true,
   "case_count": 7,
-  "results_directory": "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/lean-20261016T201244Z-d29576df",
+  "results_directory": "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/lean-20261017T044450Z-76efca54",
   "cases": [
     {
       "fixture": "PositiveArithmetic.lean",
@@ -26,7 +26,7 @@
       ],
       "fixture_sha256": "df5854e47fb25733bb290176732faf3cf2cc0e4dab8e41b4800d3946592bc153",
       "exit_code": 0,
-      "elapsed_seconds": 0.36949854100021184,
+      "elapsed_seconds": 1.3365990579986828,
       "expected_failure_pattern": null,
       "expected_diagnostic_lines": [],
       "parsed_errors": []
@@ -46,7 +46,7 @@
       ],
       "fixture_sha256": "e45c2c2298497d2d0cb9141404cf42c4a033e340832bd361ad09985924f8a0fd",
       "exit_code": 0,
-      "elapsed_seconds": 1.5107978019987058,
+      "elapsed_seconds": 3.6657146149955224,
       "expected_failure_pattern": null,
       "expected_diagnostic_lines": [],
       "parsed_errors": []
@@ -66,7 +66,7 @@
       ],
       "fixture_sha256": "3b66f226f33d55c80d6392a4d697b42723e3192550704b6fab49fb90e10d7298",
       "exit_code": 0,
-      "elapsed_seconds": 9.418323658999725,
+      "elapsed_seconds": 26.983719928997743,
       "expected_failure_pattern": null,
       "expected_diagnostic_lines": [],
       "parsed_errors": []
@@ -86,7 +86,7 @@
       ],
       "fixture_sha256": "f72a134057b57339800db19346c7574bc326cc46312dd73248067602da42d3bf",
       "exit_code": 0,
-      "elapsed_seconds": 1.5761394029996154,
+      "elapsed_seconds": 4.1828782579978,
       "expected_failure_pattern": null,
       "expected_diagnostic_lines": [],
       "parsed_errors": []
@@ -106,7 +106,7 @@
       ],
       "fixture_sha256": "6e7e31373965b10c858006048325d33893c1925e1030f17998b0c735f0c59fda",
       "exit_code": 1,
-      "elapsed_seconds": 0.33946266599923547,
+      "elapsed_seconds": 1.09781108199968,
       "expected_failure_pattern": "Tactic [`'\u2018]?rfl[`'\u2019]? failed",
       "expected_diagnostic_lines": [
         4
@@ -135,7 +135,7 @@
       ],
       "fixture_sha256": "1d007fc92c8c178275d8c9c4f9320661a2bdfd6f08060fe2b637617357fc7628",
       "exit_code": 1,
-      "elapsed_seconds": 0.3617590809990361,
+      "elapsed_seconds": 1.0870713379990775,
       "expected_failure_pattern": "Type mismatch",
       "expected_diagnostic_lines": [
         5
@@ -164,7 +164,7 @@
       ],
       "fixture_sha256": "a9d661265b77c6fe2f9cd0308d3d5b34f1b1917c042c501e49a1d8e76f5e43d8",
       "exit_code": 1,
-      "elapsed_seconds": 0.8673717739984568,
+      "elapsed_seconds": 2.4496982119962922,
       "expected_failure_pattern": "unsolved goals",
       "expected_diagnostic_lines": [
         6,

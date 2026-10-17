@@ -1,16 +1,16 @@
 {
   "repository": "LeoLam233/ising-bulk-natural-boundary",
-  "release": "v0.1-rc5",
-  "lean_candidate": "v0.3.0-rc1",
-  "repository_snapshot_commit": "a79c2f5701111b5234bbc0ff8481e75aec8c21d0",
-  "expected_tree_sha": "50c6823dc340191141c2d49b24ccbd98b9c6e6b3",
+  "release": "v0.1-rc6",
+  "lean_candidate": "v0.3.0-rc2",
+  "repository_snapshot_commit": "dce74bc7ce1106e96b0d754360ac9fbed5f2feea",
+  "expected_tree_sha": "a9087de53d7cea4b555104c5f3359421c785d41a",
   "manuscript_path": "paper/next/manuscript.tex",
-  "manuscript_raw_url": "https://raw.githubusercontent.com/LeoLam233/ising-bulk-natural-boundary/a79c2f5701111b5234bbc0ff8481e75aec8c21d0/paper/next/manuscript.tex",
-  "local_copy": "source_snapshot/manuscript-rc5.tex",
-  "expected_git_blob": "2142867e9b269c75375a90f55aa8ce0896853508",
-  "computed_git_blob": "2142867e9b269c75375a90f55aa8ce0896853508",
-  "sha256": "18c5a184b794ee9fa9cc3db1bf42a319c0d08f9fe2101dabc796943cfe706dbf",
-  "verification": "Byte-identical snapshot of the committed candidate manuscript; existing mathematical labels retain their numbering.",
+  "manuscript_raw_url": "https://raw.githubusercontent.com/LeoLam233/ising-bulk-natural-boundary/dce74bc7ce1106e96b0d754360ac9fbed5f2feea/paper/next/manuscript.tex",
+  "local_copy": "source_snapshot/manuscript-rc6.tex",
+  "expected_git_blob": "7d7beba3ab16f1def88dbdd0132661459f9dc404",
+  "computed_git_blob": "7d7beba3ab16f1def88dbdd0132661459f9dc404",
+  "sha256": "44dd21ea379b66f186d3fcc322bee7b0f5497e7c1dfc54d76dfa79bd0f2720c3",
+  "verification": "Byte-identical committed rc6 manuscript snapshot. All 67 rc5 label numbers remain; Proposition F.1 is added and is manuscript-only.",
   "external_physics_premises_used": {
     "normalized_series": [],
     "physical_identification": [
@@ -19,5 +19,8 @@
     ]
   },
   "historical_source": "source_snapshot/manuscript.tex remains the unchanged rc4-tag snapshot.",
-  "historical_metadata": "history/v0.2.1/SOURCE.json"
+  "historical_metadata": "history/v0.2.1/SOURCE.json",
+  "previous_verified_candidate": "dd977048c2380e775d83b97ae1fba354c04c349a",
+  "previous_manuscript_snapshot": "source_snapshot/manuscript-rc5.tex",
+  "production_Lean_sources": "Byte-identical to the verified previous candidate; no new factorial or literature-amplitude Lean export."
 }

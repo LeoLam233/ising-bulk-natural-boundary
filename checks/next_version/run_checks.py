@@ -1,6 +1,6 @@
 """Executed algebra, factorial/amplitude and finite-prime cross-checks.
 
-The analytic arguments are in manuscript v0.1-rc5. Finite samples do not
+These analytic arguments were introduced in v0.1-rc5 and are retained in v0.1-rc6. Finite samples do not
 certify its continuous-domain estimates or infinite particle sum.
 """
 import argparse

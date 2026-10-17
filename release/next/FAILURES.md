@@ -1,3 +1,23 @@
+# rc6 / Lean v0.3.0-rc2 run: failures and evidence limits
+
+The following records concern the amplitude research run. The original rc5 failure record is preserved verbatim below; its archive links and source-access statements describe the immutable `dd977048` tree, not the current archive. Current source access is documented in `checks/amplitude_identification/SOURCES.json`.
+
+| Attempt | Actual outcome | Resolution / evidence scope |
+|---|---|---|
+| `fetch-review-journal-curl`, `fetch-review-journal-http` | Both Windows curl attempts exited 60 (`SEC_E_UNTRUSTED_ROOT`). The HTTP endpoint redirects to HTTPS. | The ordinary WSL trust store retrieved the institutional journal PDF successfully. TLS verification was never disabled. All command streams and the clean successful access record are retained. |
+| `regression-historical` | Exit 2: `reproduce.py` does not accept `--output`. No diagnostic ran in this failed invocation. | Reran its supported command as `regression-historical-02`; all six diagnostics reproduced. The failure and success streams remain separate. |
+| Original Nickel 1999/2000 access | Web reader errors or HTTP 200 HTML challenge, including the normal browser. | No original paper text was available, and no challenge was solved. No original intended amplitude convention or original-paper error is attributed. The inspected review and cited integral suffice for the stated mathematical conversion. |
+| Intermediate source locator, document count, and semantic probe | A scratch source extractor pointed to arXiv page 8 instead of 7; a correspondence sentence said 31 rows after adding row 32; a semantic probe encountered the consistency report before it existed. | Corrected source locator and reran extraction. Fixed row count before freezing verification inputs and reran preflight. Created the audit record and reran semantic checks. Original command receipts, where present, are retained; interactive observations are explicitly identified as such. |
+| Prebuild control-count progress wording | A progress message called the prebuild production suite 13 cases. Its actual result is 12. | Corrected the message and current reproduction instructions. The complete postbuild `--shadow-tree` suite executes the 13th namespace-rejection case. Counts are read from the executed receipts. |
+| Candidate metadata whitespace | Generated JSON initially used CRLF. | Normalized current generated metadata to LF; manuscript PDF and original executed streams are unchanged. Historical preserved files keep their original bytes. |
+| First isolated repository-control launch | Wrapper exit 1 because its local Git clone subprocess exited 128 inside the Windows process sandbox. No consistency negative was executed in that failed invocation. | Reran with authorized native execution; all five expected rejections and positive controls passed. The failed launch receipt remains separate. |
+| Isolated-control unchanged-input scope | The first successful run hashed seven critical inputs; its historical `input_tree_unchanged` field must be read with that bounded scope. | Added complete tracked/unignored before/after file inventories, included the control script among persistent critical inputs, and reran all five controls with a fresh output path. The final full-tree receipt is the current authority; the earlier result is retained separately. |
+| Final staged whitespace check | Git exit 2: the generated rc2 audit report had an extra blank line at EOF. | Removed that blank line, corrected the report writer, and reran whitespace and final candidate checks. No mathematical or Lean input changed. |
+
+The current raw archive contains the failed command receipts and `source-reading/observed-operations.json`. It excludes publisher challenge parameters and third-party PDFs. Exact symbolic identities, finite cyclotomic enumeration, numerical quadratures and samples do not certify continuous remainders or an infinite sum; those claims rely on the stated manuscript arguments. Proposition F.1 and the radial Taylor reconstruction are manuscript-only. The formal gate uses the pinned official Lean kernel; no second kernel implementation, complete Mathlib source rebuild, independent human validation or exhaustive novelty clearance is claimed.
+
+---
+
 # Failed attempts and unavailable checks
 
 These records belong to the rc5 / v0.3.0-rc1 development run. Failed attempts are retained in the execution archive, alongside later successes. None is relabeled PASS. The archive contains raw streams and command/result JSON where the logger successfully started.

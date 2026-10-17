@@ -1,8 +1,8 @@
 {
   "all_controls_pass": true,
   "case_count": 13,
-  "expected_id": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
-  "source_payload_id": "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+  "expected_id": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+  "source_payload_id": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
   "cases": [
     {
       "case": "positive_untouched",
@@ -12,9 +12,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b"
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124"
       ]
     },
     {
@@ -25,9 +25,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b"
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124"
       ]
     },
     {
@@ -38,9 +38,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -52,9 +52,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -66,9 +66,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -80,9 +80,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -94,9 +94,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -108,9 +108,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -122,9 +122,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -136,9 +136,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -150,9 +150,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -164,9 +164,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     },
@@ -178,9 +178,9 @@
       "argv": [
         "/usr/bin/python3",
         "-B",
-        "/tmp/ising-next-final-20261017-a2/lean/control_packet/continuation/results/remediation-20261016T195811Z-4b18f872/payload/lean/ci/verify_payload.py",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
         "--expected-id",
-        "19b6a2014c7a62c3ee62178925806ad02f82a07237ea4bbb6d19745a2bed0f7b",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
         "--dependencies"
       ]
     }
