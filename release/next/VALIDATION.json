@@ -163,7 +163,17 @@
     "retained_rc5_snapshot_reports": 4,
     "immutable_predecessor_assets_checked": 13,
     "verification_command": "python scripts/verify_candidate.py",
-    "final_inventory": "release/next/MANIFEST.json"
+    "final_inventory": "release/next/MANIFEST.json",
+    "post_acceptance_documentation_correction": {
+      "created_utc": "2026-10-17T05:14:18.466710+00:00",
+      "finding": "The root command block put PDF regeneration before accepted-hash verification, although regeneration updates PDF/BUILD only.",
+      "resolution": "Separate accepted-checkout diagnostics/verification from regeneration in both README languages, paper guide and machine-readable recipes. Rebuilt PDFs need fresh visual QA/validation/inventory.",
+      "evidence": "Inspected builder writes and acceptance hash checks; no additional failed PDF build is claimed.",
+      "manuscript_and_pdf_unchanged": true,
+      "production_and_Lean_verification_inputs_unchanged": true,
+      "affected_checks": "Fresh all-file text scan, current semantic/manifest verifier and staged whitespace check; exact-head CI recorded separately.",
+      "scan_archive_path": "final-checks/rc2-documentation-refresh-scan.json"
+    }
   },
   "remaining_current_inconsistencies": [],
   "failed_attempts_and_unavailable_checks": "release/next/FAILURES.md",
@@ -178,7 +188,7 @@
   "remaining_mathematical_obligations_for_stated_amplitude_conversion": [],
   "source_attribution_limit": "Original Nickel 1999/2000 text could not be read. No original intended convention or original-paper error is attributed; the inspected review scalar/full-observable conversion is derived.",
   "reproduce": [
-    "python scripts/build_candidate_paper.py",
+    "python scripts/verify_candidate.py",
     "python scripts/reproduce.py",
     "python checks/next_version/run_checks.py --output NEW_RC5_DIAGNOSTIC_RESULT.json",
     "python checks/amplitude_identification/check_amplitude.py --output NEW_AMPLITUDE_RESULT.json",
@@ -209,5 +219,9 @@
     "positive_before_after": true,
     "input_tree_unchanged": true,
     "receipt": "evidence/repository-controls.json"
+  },
+  "paper_regeneration": {
+    "command": "python scripts/build_candidate_paper.py",
+    "scope": "Authoring/regeneration in a separate checkout. The rebuilt PDF needs its own visual QA, validation and inventory before acceptance. Source edits additionally require matching Lean source identities."
   }
 }

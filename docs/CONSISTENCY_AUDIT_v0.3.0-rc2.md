@@ -18,6 +18,7 @@ The verified predecessor is `dd977048c2380e775d83b97ae1fba354c04c349a`. Its manu
 | Current version/source/configuration/PDF identities still described rc5/rc1. | New rc6/rc2 identifiers, committed source snapshot, PDF/index/QA and configuration hashes are bound separately. All 67 rc5 label numbers remain; F.1 is added. |
 | Prior versioned reports contain valid “current” and open-comparison wording. | Four rc5 snapshot/report files remain byte-identical. The current index points readers to the immutable predecessor tree for their original artifact links and scope. Original release-note blocks remain exact suffixes. |
 | Generated JSON initially used Windows CRLF, producing diff whitespace warnings. | Candidate builder emits LF; generated metadata was normalized and its label-index digest recomputed. The compiled PDF bytes and executed TeX streams were unchanged. |
+| The root reproduction block rebuilt the PDF immediately before checking the accepted hashes. | Separate accepted-checkout verification from paper regeneration in both README languages and the paper guide. A new PDF requires its own visual QA, validation and manifest; the builder deliberately does not grant acceptance. This is a source-inspection finding, not a claimed failed rebuild execution. |
 
 ## Executed post-validation acceptance
 

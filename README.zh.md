@@ -18,6 +18,8 @@
 
 复现命令见 [英文首页](README.md)。当前完整性检查使用 `python scripts/verify_candidate.py`；旧 `scripts/verify_repository.py` 只检查 rc4 快照，在后续树上出现不匹配是预期现象。
 
+验证已接受的检出版本与重新编译 PDF 分为两个流程。重新编译请使用独立检出目录并遵循 [论文构建说明](paper/README.md)；新 PDF 的字节可能随引擎、字体和时间戳变化，需重新检查版面并更新 QA、验证记录与 manifest，才能作为已接受的新构建产物。
+
 林德昊为署名人类作者与公开联系人，ORCID [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490)。生成式 AI 广泛参与研究、推导、写作、代码和内部核查。[作者声明](AUTHORSHIP.md)；代码 MIT，项目原创文字 CC BY 4.0，第三方作品保留其权利。
 
 已验证的 rc5 / Lean v0.3.0-rc1 候选版完整保留在 [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a)；原生产 Lean 源文件逐字节不变。本修订使用新的论文版本、源码对应身份与执行回执，只更新现有 PR #3，不新建 PR 或合并 main。

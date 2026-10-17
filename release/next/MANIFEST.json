@@ -73,13 +73,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6171,
-      "sha256": "4aed1d2380b7e88cd91a4e0321d84f3ab4155a9995e4072a09c40f1a3484b1dd"
+      "bytes": 6433,
+      "sha256": "caadb63d6bd5bfed7d43361d92173d2498297c6e21d37c88225f4a3dcd56319d"
     },
     {
       "path": "README.zh.md",
-      "bytes": 4172,
-      "sha256": "248ebf739928074e379372636ab08c6f28b2a822faf6c12e6e6a9ab640e6016c"
+      "bytes": 4501,
+      "sha256": "1b28777ac5dfd8f87bc3fdbd24ee12ea6bc24b9d1fc85b2279ba8793326123ee"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -293,8 +293,8 @@
     },
     {
       "path": "docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md",
-      "bytes": 8935,
-      "sha256": "e18ab54196cd9c545821e65f39f1bd27d9ee346604cdc236619bbb61e20b7658"
+      "bytes": 9336,
+      "sha256": "fede3a21482b31cde7d673b9d1184772a905c8b991b1ce0e7b640029e77d2a40"
     },
     {
       "path": "docs/MATHEMATICAL_AUDIT_v0.3.0-rc1.md",
@@ -6068,8 +6068,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 1743,
-      "sha256": "5ebf4dac8ce6175549c5327c8e30ae95a1645067f6144900736f87a7028c337f"
+      "bytes": 2388,
+      "sha256": "1c3d75a3349f84baa74a59dc0bf018e826fc753f86f733595ce025b0b97372cf"
     },
     {
       "path": "paper/manuscript.pdf",
@@ -6373,8 +6373,8 @@
     },
     {
       "path": "release/next/CONSISTENCY_RESULT.json",
-      "bytes": 1749,
-      "sha256": "149de9da2b80b57902f21e5333e4d784d59787618444af817f33d11edd21b4c7"
+      "bytes": 2662,
+      "sha256": "948fe5e83a6e0c918c6480393f3bfac977182269e6a569375b0122f69b64fec8"
     },
     {
       "path": "release/next/FAILURES.md",
@@ -6388,13 +6388,13 @@
     },
     {
       "path": "release/next/VALIDATION.json",
-      "bytes": 9681,
-      "sha256": "0679579e49c8ffe83206fcd6069b0d797c0ca71343e29c10ba033d91b26fdaf0"
+      "bytes": 10912,
+      "sha256": "a80a308d534d55b37755e866ffe04d56d34d3ec52a69700087597587870dc31d"
     },
     {
       "path": "release/next/evidence/INDEX.json",
-      "bytes": 88548,
-      "sha256": "ff05dc97fe24873e690030f46521a484ef6a6e8e07914359427ead694b77d2df"
+      "bytes": 97947,
+      "sha256": "7da02923f115df79693bd0b70ee2296ae3e28eec5ebde7d3e5c1635d2ef7e31a"
     },
     {
       "path": "release/next/evidence/acceptance-summary.json",
@@ -6413,8 +6413,8 @@
     },
     {
       "path": "release/next/evidence/execution-records.tar.gz",
-      "bytes": 8015992,
-      "sha256": "90a8089265657c605909e1e554fe962e21ba65a45352b795972d0d04de52d317"
+      "bytes": 8153796,
+      "sha256": "366e6822425a4fdc2704ea02f4f3a47213125aa430816b800813481f54085999"
     },
     {
       "path": "release/next/evidence/historical-diagnostics.json",

@@ -33,11 +33,10 @@ python -m pip install -r requirements.txt
 python scripts/reproduce.py
 python checks/next_version/run_checks.py --output .local/next-checks.json
 python checks/amplitude_identification/check_amplitude.py --output .local/amplitude-checks.json
-python scripts/build_candidate_paper.py
 python scripts/verify_candidate.py
 ```
 
-The PDF builder requires an existing `pdflatex`; it updates only the candidate under `paper/next/` and scratch files under `.local/`.
+These commands verify the accepted checkout and rerun diagnostics into `.local/`. To recompile with `python scripts/build_candidate_paper.py`, use a separate checkout and follow the [paper build procedure](paper/README.md). The builder writes a new PDF and BUILD record; inspect that PDF and refresh its QA, validation and manifest before treating the rebuilt artifact as accepted. PDF bytes can vary with engine, fonts and timestamps.
 
 ## Frozen releases
 

@@ -34,5 +34,15 @@
   "repository_guard_input_files": 1416,
   "repository_guard_before_after_id": "de82d929ca7f217144e0968d119663ba65a379594e9e78c7cc694413363fa2b6",
   "final_text_scan_utc": "2026-10-17T05:01:56.003762+00:00",
-  "final_text_scan_inventory_files": 1417
+  "final_text_scan_inventory_files": 1417,
+  "post_acceptance_documentation_correction": {
+    "created_utc": "2026-10-17T05:14:18.466710+00:00",
+    "finding": "The root command block put PDF regeneration before accepted-hash verification, although regeneration updates PDF/BUILD only.",
+    "resolution": "Separate accepted-checkout diagnostics/verification from regeneration in both README languages, paper guide and machine-readable recipes. Rebuilt PDFs need fresh visual QA/validation/inventory.",
+    "evidence": "Inspected builder writes and acceptance hash checks; no additional failed PDF build is claimed.",
+    "manuscript_and_pdf_unchanged": true,
+    "production_and_Lean_verification_inputs_unchanged": true,
+    "affected_checks": "Fresh all-file text scan, current semantic/manifest verifier and staged whitespace check; exact-head CI recorded separately.",
+    "scan_archive_path": "final-checks/rc2-documentation-refresh-scan.json"
+  }
 }
