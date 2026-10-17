@@ -1,3 +1,29 @@
+# Development candidate v0.3.0-rc2 / manuscript v0.1-rc6
+
+17 October 2026. Proposition F.1 closes the complete-amplitude comparison with the inspected McCoy–Maillard formula (arXiv (69), journal (70)). On the selected physical exterior germ the full-site coefficient is 4R_N(-theta_*)=-4iR_N(theta_*). The observable, four signed charts, constrained measure, radial Taylor remainder and physical-prefactor branches are derived; an unscaled complete identification is rejected.
+
+This conversion is manuscript-only. All 1075 production Lean source files and their mathematical dependency chain are unchanged from verified rc5/Lean v0.3.0-rc1 commit dd977048. New source correspondence, version/configuration identities and fresh acceptance receipts belong to rc6/rc2. Original candidate assets and reports retain their immutable predecessor identity.
+
+[Mathematical derivation](docs/AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md) · [Validation](release/next/VALIDATION.json) · [Consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md) · [Versions](docs/VERSIONS.md). No new PR, release tag, publication or main merge is created.
+
+All entries below retain their original version scope and bytes. Their relative artifact links refer to their historical trees; the version ledger supplies the immutable predecessor.
+
+---
+
+# Development candidate v0.3.0-rc1 / manuscript v0.1-rc5
+
+17 October 2026. E3 is replaced internally in canonical FIRST and NB; E1/E2
+remain for physical identification. The manuscript states the already formal
+stronger pair bound, evaluates the amplitude and adds the arc smoothness
+obstruction with correctly scoped constants. A real selected-point Ck endpoint
+is formalized. [Changes](docs/UPGRADE_v0.3.0-rc1.md) · [Validation](release/next/VALIDATION.json)
+· [Consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc1.md).
+
+This is a branch candidate, not a published release or default-branch merge.
+All entries below retain their original historical version scope and wording.
+
+---
+
 # v0.1-rc4: W2 proof repairs and E1 source closure
 
 Prepared 1 October 2026 for public mathematical review. Public predecessor: `v0.1-rc3`, commit `c36735380a9746bba5e84f9b6adec2a494d1fd4c`. The mathematical baseline for this metadata-only release preparation is `59881ee24f43b8caab60f81ab3f87f758cfc03d5`.

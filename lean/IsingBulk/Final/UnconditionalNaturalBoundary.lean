@@ -3,8 +3,8 @@ import IsingBulk.Final.ConditionalNaturalBoundary
 import IsingBulk.Final.ConditionalPhysicalBoundary
 
 /-! Discharge the manuscript's absolute TAIL premise using the internal
-sector assembly. The published fixed-order input and the real physical
-identification inputs retain exactly their previous scope. -/
+sector assembly. Lower even orders are proved internally; only the real
+physical identification retains the explicit E1 and E2 inputs. -/
 namespace IsingBulk.Final
 noncomputable section
 open IsingBulk.First IsingBulk.Tail
@@ -33,26 +33,30 @@ theorem theorem_tail_with_summability {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
 
 /-- Natural boundary of the internally constructed exterior normalized bulk
 series, with the absolute-tail premise discharged. -/
-theorem theorem_nb
-    (hTW : ∀ p : ℕ, ∀ a b : ℤ, p.Prime → 11 ≤ p →
-      PrimeFamily.Admissible p a → PrimeFamily.Admissible p b → a ≠ b →
-      PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b)) :
+theorem theorem_nb :
     ∀ z : ℂ, ‖z‖ = 1 → ¬ HasExteriorExtension exteriorNormalizedBulk z := by
-  exact theorem_conditional hTW
+  exact theorem_conditional
     (fun _ _ _ hp hp11 ha hb hab => theorem_tail hp hp11 ha hb hab)
 
+/-- Real finite-order obstruction at each selected point, with the actual
+TAIL internally discharged. The finite-prime arc covering is manuscript-only. -/
+theorem theorem_selected_no_Ck_extension {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+    {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (hab : a ≠ b) :
+    ¬ HasExteriorCkExtension exteriorNormalizedBulk (PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) :=
+  selected_exterior_no_Ck_extension_of_tail hp hp11 ha hb hab
+    (theorem_tail hp hp11 ha hb hab)
+
 /-- The physical bulk susceptibility germ and every boundary point retain
-the original E1, E2 and fixed-order TW input boundaries. No TAIL input remains. -/
+only the original E1 and E2 physical input boundaries. Lower-order and
+TAIL bounds are internally proved. -/
 theorem theorem_nb_physical {J : ℝ} (hJ : 0 < J)
     {chi : ℂ → ℂ} {M : ℝ → ℂ}
-    (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M)
-    (hTW : ∀ p : ℕ, ∀ a b : ℤ, p.Prime → 11 ≤ p →
-      PrimeFamily.Admissible p a → PrimeFamily.Admissible p b → a ≠ b →
-      PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b)) :
+    (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M) :
     AnalyticOnNhd ℂ (rightPhysicalBulk J) {s : ℂ | 1 < ‖s‖ ∧ 0 < s.re} ∧
       (∀ x : ℝ, 16 < x → chi (x:ℂ) = rightPhysicalBulk J (x:ℂ)) ∧
       (∀ z : ℂ, ‖z‖ = 1 → ¬ HasPhysicalBoundaryExtension J exteriorNormalizedBulk z) := by
-  exact theorem_conditional_physical hJ hE1 hE2 hTW
+  exact theorem_conditional_physical hJ hE1 hE2
     (fun _ _ _ hp hp11 ha hb hab => theorem_tail hp hp11 ha hb hab)
 
 end

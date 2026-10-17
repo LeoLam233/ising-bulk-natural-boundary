@@ -3,9 +3,10 @@ import IsingBulk.First.OnsiteRadiusIndependence
 import IsingBulk.First.NormalizationDerivatives
 import IsingBulk.First.PublishedFixedOrder
 import IsingBulk.First.MeanSelectedData
+import IsingBulk.First.NonNickelRadialBounds
 
-/-! The only external input is the published full-site fixed-order bound.
-The exact onsite subtraction and both actual radius transfers are internal. -/
+/-! The published full-site transfer is retained as a historical comparison.
+The selected lower-order endpoint now uses the internal offsite radial proof. -/
 namespace IsingBulk.First
 noncomputable section
 open Set
@@ -70,24 +71,45 @@ theorem lowerOrder_radial_bound_of_published (N : ℕ) (hN : 0 < N)
   rw [← iteratedDeriv_eq_iterate]
   exact (upperFormFactor_iteratedDeriv_norm_bound N hN j hR hR1 hmarginR).trans (by linarith)
 
-/-- Frozen prime-family arithmetic supplies the lower-order non-Nickel facts;
-the published input is never applied directly to the offsite coefficient. -/
+/-- Prime-family arithmetic and the internal non-Nickel radial bound supply
+the lower-order endpoint, with fixed-radius locality transferred internally. -/
 theorem selected_lower_orders_radial_bounded {p : ℕ} {a b : ℤ}
     (hp : p.Prime) (hp11 : 11 ≤ p)
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b)) :
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) :
     ∀ N : ℕ, 0 < N → Even N → N < 2*p → ∀ j : ℕ,
       ∃ ε₀ C : ℝ, 0 < ε₀ ∧ 0 ≤ C ∧ ∀ ε : ℝ, 0 < ε → ε < ε₀ →
         ‖(deriv^[j] (upperFormFactor N))
           (IsingBulk.Branch.radialParameter (selectedOrderedChart ha hb).theta ε)‖ ≤ C := by
-  intro N hN he hlt
+  intro N hN he hlt j
   have hlevel := PrimeFamily.cosineAverage_bounds ha hb
-  apply lowerOrder_radial_bound_of_published N hN (2*PrimeFamily.cosineAverage p a b)
-    (by constructor <;> linarith) (selectedOrderedChart ha hb).theta
-    (selectedOrderedChart ha hb).sin_theta_pos
-  · simpa only [sourceS,PrimeFamily.selectedPoint,selectedOrderedChart,Complex.ofReal_mul,Complex.ofReal_ofNat] using
-      PrimeFamily.selectedPoint_relation ha hb
-  · exact selected_lower_fullSite_bounded hp hp11 ha hb hTW N hN he hlt
+  have hS : sourceS (Complex.exp (((selectedOrderedChart ha hb).theta:ℂ)*Complex.I)) =
+      ((2*PrimeFamily.cosineAverage p a b:ℝ):ℂ) := by
+    simpa only [sourceS,PrimeFamily.selectedPoint,selectedOrderedChart,
+      Complex.ofReal_mul,Complex.ofReal_ofNat] using PrimeFamily.selectedPoint_relation ha hb
+  have hn := (PrimeFamily.first_even_Nickel_order hp (by omega) ha hb).2 N hN he hlt
+  obtain ⟨e,he0,hbnd⟩ := nonNickel_fixed_radius_radial_bound hN
+    (2*PrimeFamily.cosineAverage p a b) (selectedOrderedChart ha hb).theta
+    (by constructor <;> linarith) (selectedOrderedChart ha hb).sin_theta_pos hS hn
+  obtain ⟨d,hd,_,hm⟩ := radial_disk_source_trace_margin (selectedOrderedChart ha hb).sin_theta_pos
+  obtain ⟨C,hC,hB⟩ := hbnd j
+  refine ⟨min e d,C,lt_min he0 hd,hC,?_⟩
+  intro ε hε hεsmall
+  have hεe := hεsmall.trans_le (min_le_left e d)
+  have hεd := hεsmall.trans_le (min_le_right e d)
+  have hmargin := (hm ε hε hεd (IsingBulk.Branch.radialParameter (selectedOrderedChart ha hb).theta ε)
+    (by simpa using mul_pos (show 0 < Real.sin (selectedOrderedChart ha hb).theta/16 by
+      positivity [(selectedOrderedChart ha hb).sin_theta_pos]) hε)).2
+  have hr : 0 < (sourceRadialPair (selectedOrderedChart ha hb).theta ε).1 := Real.exp_pos _
+  have hr1 : (sourceRadialPair (selectedOrderedChart ha hb).theta ε).1 < 1 := by
+    change Real.exp (-(Real.sin (selectedOrderedChart ha hb).theta/4)*ε) < 1
+    rw [Real.exp_lt_one_iff]
+    exact mul_neg_of_neg_of_pos (by linarith [(selectedOrderedChart ha hb).sin_theta_pos]) hε
+  rw [← iteratedDeriv_eq_iterate,
+    upperFormFactor_iteratedDeriv_fixed_radius N hN j hr hr1
+      (s := IsingBulk.Branch.radialParameter (selectedOrderedChart ha hb).theta ε) hmargin,
+    iteratedDeriv_eq_iterate]
+  exact hB ε hε hεe.le
+
 
 end
 end IsingBulk.First

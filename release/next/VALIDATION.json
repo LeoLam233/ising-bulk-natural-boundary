@@ -1,0 +1,227 @@
+{
+  "schema": "ising-next-validation-v1",
+  "status": "VERIFIED_CANDIDATE",
+  "created_utc": "2026-10-17T05:01:53.981422+00:00",
+  "manuscript": "v0.1-rc6",
+  "lean_candidate": "v0.3.0-rc2",
+  "development_branch": "research/next-internal-regularity-20261017",
+  "research_branch": "research/amplitude-identification-20261017",
+  "mathematical_source_commit": "dce74bc7ce1106e96b0d754360ac9fbed5f2feea",
+  "preserved_previous_verified_commit": "dd977048c2380e775d83b97ae1fba354c04c349a",
+  "identities": {
+    "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+    "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
+    "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+  },
+  "clean_acceptance_sequence": "release/next/evidence/clean-sequence.json",
+  "counts": {
+    "production_subtree_modules": 1074,
+    "production_with_public_root": 1075,
+    "safe_project_declarations": 9225,
+    "exact_endpoints": 18,
+    "root_build_jobs": 4838,
+    "manifest_controls": 13,
+    "production_controls_before_build": 12,
+    "production_controls_full_variant": 13,
+    "ordinary_lean_controls": 7,
+    "additional_unused_E3_control": 1
+  },
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_kernel_replay_exit": 0,
+  "canonical_dependencies": {
+    "normalized_external_premises": [],
+    "physical_external_premises": [
+      "E1",
+      "E2"
+    ],
+    "E3_transitively_absent": true,
+    "compiled_types_and_proof_bodies_traversed": true,
+    "production_Lean_sources_unchanged_from_verified_predecessor": true,
+    "endpoint_domains_and_conclusions_retained": true
+  },
+  "dependency_negative_control": {
+    "case": "unused_E3_parameter_rejected",
+    "passed": true,
+    "exit_code": 1,
+    "expected_diagnostic": "E3 is transitively reachable from IsingBulkControls.counterfeit_nb: IsingBulk.First.PublishedTWFixedOrderInput",
+    "argv": [
+      "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lake",
+      "-f",
+      "lakefile.toml",
+      "env",
+      "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-j1",
+      "-DwarningAsError=true",
+      "/tmp/ising-amplitude-rc2-20261017-a1/lean/.local/unused-e3-control-17xxlhnw/UnusedE3.lean"
+    ],
+    "context": {
+      "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+      "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
+      "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+    },
+    "context_unchanged": true,
+    "scope": "The same compiled type/body traversal must reject an unused E3 hypothesis on an otherwise valid NB wrapper."
+  },
+  "historical_diagnostics": {
+    "all_reproduced": true,
+    "checks": 6,
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "continuous_or_infinite_certificate": false,
+    "receipt": "evidence/historical-diagnostics.json"
+  },
+  "new_checks": {
+    "exit_code": 0,
+    "receipt": "evidence/new-mathematical-checks.json",
+    "scope": "Retained rc5 algebra, Mehta, amplitude and finite-prime diagnostics, rerun under pinned packages.",
+    "continuous_or_infinite_certificate": false
+  },
+  "amplitude_checks": {
+    "exit_code": 0,
+    "receipt": "evidence/amplitude-checks.json",
+    "script_sha256": "a0e61fc1988acf1fe2f8ab7a58980ef55a4ade2a611259661b2b2c818205c566",
+    "exact_symbolic_checks": 9,
+    "exact_cyclotomic_instance": {
+      "p": 11,
+      "N": 22,
+      "physical_angular_centers": 4
+    },
+    "quadrature_cases": 3,
+    "quadrature_dps": 90,
+    "continuous_asymptotic_certificate": false,
+    "supplementary_exact_phase_coordinate_checks": 3,
+    "supplementary_archive_path": "additional-math/phase-coordinate-results.json"
+  },
+  "paper": {
+    "manuscript": "v0.1-rc6",
+    "lean_candidate": "v0.3.0-rc2",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)",
+    "source_sha256": "44dd21ea379b66f186d3fcc322bee7b0f5497e7c1dfc54d76dfa79bd0f2720c3",
+    "pdf_sha256": "15abf6703a8d97668d64c3a82901f8accb271bba822f7eac2cbdcc7aaef3c5aa",
+    "label_index_sha256": "c07ec31d800591636d2ce5c138c9042649e2041b12a2c69ebb580f6ab1ef7085",
+    "label_count": 68,
+    "old_labels_retaining_numbers": 65,
+    "rc5_labels_retaining_numbers": 67,
+    "commands": [
+      {
+        "argv": [
+          "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "manuscript.tex"
+        ],
+        "pass": 1,
+        "exit_code": 0,
+        "stdout_sha256": "7a1796a115c5964f9ee1315135dfa51fc7965a42eeb7a56941f15a877ab75296",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "manuscript.tex"
+        ],
+        "pass": 2,
+        "exit_code": 0,
+        "stdout_sha256": "5e3fb23eb38e1011967718099a0fd2831e7b309ed037c12de54af5d796745811",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "I:\\texlive\\2026\\bin\\windows\\pdflatex.exe",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "manuscript.tex"
+        ],
+        "pass": 3,
+        "exit_code": 0,
+        "stdout_sha256": "106ef16dff375c7d567062bfc07a283f9ad384bca83dbd5d0918b74e87356705",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "log_directory": ".local/rc6-paper-7kmyqofc",
+    "final_tex_diagnostics": [],
+    "visual_qa": "release/next/PDF_QA.json",
+    "pages": 47,
+    "passes": 3,
+    "all_pages_rendered_and_inspected": true
+  },
+  "consistency_audit": {
+    "report": "docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md",
+    "mathematical_sequence_finished_utc": "2026-10-17T04:57:47.365528+00:00",
+    "fresh_scan_started_utc": "2026-10-17T04:58:48.646096+00:00",
+    "post_validation_inventory_files": 1416,
+    "text_files_scanned": 1392,
+    "protected_original_assets": 211,
+    "preserved_former_metadata_records": 17,
+    "retained_rc5_snapshot_reports": 4,
+    "immutable_predecessor_assets_checked": 13,
+    "verification_command": "python scripts/verify_candidate.py",
+    "final_inventory": "release/next/MANIFEST.json",
+    "post_acceptance_documentation_correction": {
+      "created_utc": "2026-10-17T05:14:18.466710+00:00",
+      "finding": "The root command block put PDF regeneration before accepted-hash verification, although regeneration updates PDF/BUILD only.",
+      "resolution": "Separate accepted-checkout diagnostics/verification from regeneration in both README languages, paper guide and machine-readable recipes. Rebuilt PDFs need fresh visual QA/validation/inventory.",
+      "evidence": "Inspected builder writes and acceptance hash checks; no additional failed PDF build is claimed.",
+      "manuscript_and_pdf_unchanged": true,
+      "production_and_Lean_verification_inputs_unchanged": true,
+      "affected_checks": "Fresh all-file text scan, current semantic/manifest verifier and staged whitespace check; exact-head CI recorded separately.",
+      "scan_archive_path": "final-checks/rc2-documentation-refresh-scan.json"
+    }
+  },
+  "remaining_current_inconsistencies": [],
+  "failed_attempts_and_unavailable_checks": "release/next/FAILURES.md",
+  "executed_record_archive": "release/next/evidence/execution-records.tar.gz",
+  "executed_record_index": "release/next/evidence/INDEX.json",
+  "manuscript_only": [
+    "factorial amplitude identity",
+    "complete literature-amplitude conversion",
+    "radial Taylor reconstruction",
+    "quantitative finite-prime covering"
+  ],
+  "remaining_mathematical_obligations_for_stated_amplitude_conversion": [],
+  "source_attribution_limit": "Original Nickel 1999/2000 text could not be read. No original intended convention or original-paper error is attributed; the inspected review scalar/full-observable conversion is derived.",
+  "reproduce": [
+    "python scripts/verify_candidate.py",
+    "python scripts/reproduce.py",
+    "python checks/next_version/run_checks.py --output NEW_RC5_DIAGNOSTIC_RESULT.json",
+    "python checks/amplitude_identification/check_amplitude.py --output NEW_AMPLITUDE_RESULT.json",
+    "cd lean; python3 tools/continuation/preflight.py --lean-bin OFFICIAL_LEAN_BIN --output NEW_PREFLIGHT.json",
+    "python3 ci/verify_payload.py --expected-id 90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124 --dependencies",
+    "python3 control_packet/continuation/run_manifest_controls.py",
+    "python3 control_packet/continuation/run_remediation_controls.py",
+    "python3 tools/continuation/final_gate.py --lean-bin OFFICIAL_LEAN_BIN --approved-preflight NEW_PREFLIGHT.json --logs NEW_LOG_DIRECTORY --threads 2 --execute",
+    "python3 control_packet/continuation/run_remediation_controls.py --shadow-tree .lake/build/lib/lean/IsingBulk",
+    "cd ..; python scripts/verify_candidate.py",
+    "python checks/amplitude_identification/repository_controls.py --output NEW_REPOSITORY_CONTROL_RESULT.json"
+  ],
+  "evidence_scope": [
+    "The completed gate says CHECK_SEQUENCE_PASSED_NOT_AUDIT_ROUND; its own audit flags are not relabeled. The scoped mathematical and repository audits are separate.",
+    "Fresh replay uses the exact official Lean implementation already pinned. Build and replay share that kernel. Cached dependency binary/source correspondence remains trusted; no complete Mathlib source rebuild or second kernel.",
+    "Finite exact identities and diagnostics are not a continuous asymptotic or infinite-tail certificate. The analytic arguments establish the general conversion.",
+    "Function coefficients are radial first fractional coefficients modulo finite Taylor polynomials. No new convergent full Puiseux or uniform sectoral expansion theorem.",
+    "This receipt records local acceptance. Later remote CI and final Git head identity are recorded separately, without self-referential receipt rewriting."
+  ],
+  "historical_releases_modified": false,
+  "published_release": false,
+  "default_branch_merged": false,
+  "independent_human_review": false,
+  "peer_reviewed": false,
+  "repository_guard_controls": {
+    "all_controls_pass": true,
+    "negative_cases": 5,
+    "positive_before_after": true,
+    "input_tree_unchanged": true,
+    "receipt": "evidence/repository-controls.json"
+  },
+  "paper_regeneration": {
+    "command": "python scripts/build_candidate_paper.py",
+    "scope": "Authoring/regeneration in a separate checkout. The rebuilt PDF needs its own visual QA, validation and inventory before acceptance. Source edits additionally require matching Lean source identities."
+  }
+}

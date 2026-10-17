@@ -1,0 +1,22 @@
+# Authoritative versions and artifact identities
+
+| Version / artifact | Authority | Assumptions / scope |
+|---|---|---|
+| Published manuscript v0.1-rc4 | Immutable tag at `1b4b506c9cb19d5fdbf9f59d89c7a179739d337d`; tagged PDF SHA-256 `624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693` | Historical E1/E2/E3 analytic candidate. |
+| rc4 editorial artifact at intake main | Unchanged `paper/manuscript.tex`, PDF and label index; PDF SHA-256 `107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4` | Same frozen mathematics, later ORCID/bibliography edit; distinct bytes/pages from tagged rc4. [Crosswalk](../provenance/RC4_IDENTITY_2026-10-16.md). |
+| Lean v0.2.1 | Immutable tag at `de23d9475744fb4625666142d5a03b3d688195e6` | Historical normalized endpoint takes E3; physical endpoint takes E1/E2/E3. |
+| Verified manuscript v0.1-rc5 / Lean v0.3.0-rc1 | Immutable predecessor [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a); manuscript source commit `a79c2f5701111b5234bbc0ff8481e75aec8c21d0` | Its source/PDF, local acceptance receipts and original open-comparison wording retain that identity. Later [full GitHub CI run 38962997911](https://github.com/LeoLam233/ising-bulk-natural-boundary/actions/runs/38962997911) accepted the same commit; those later remote logs are separate from the commit's local archive. [Preservation hashes](../provenance/AMPLITUDE_BASELINE.json). |
+| Manuscript v0.1-rc6 | `paper/next/manuscript.tex` and matching PDF/index/BUILD.json; source commit `dce74bc7ce1106e96b0d754360ac9fbed5f2feea` | Current analytic candidate. All 67 rc5 label numbers retained; Proposition F.1 proves complete-amplitude conversion. |
+| Lean v0.3.0-rc2 | Current sources, `lean/SOURCE.json`, `ci/accepted_identity.json` and `release/next/VALIDATION.json` | Current candidate; production Lean sources unchanged from dd977048. New source/configuration/verification identities and freshly executed receipts. Canonical E3 absent; physical E1/E2 retained. No release tag or main merge. |
+
+The source commit identifies the manuscript snapshot, not a self-referential final release commit. Later commits bind verification configuration, documentation and receipts. Proof and verification identities bind their exact inputs independently of commit-message prose. [Current status](../release/CURRENT_STATUS.json).
+
+The original rc4 `MANIFEST.json` is unchanged. The candidate `release/next/MANIFEST.json` inventories the final tracked tree except itself. `scripts/verify_candidate.py` checks that inventory, protected historical bytes, source/PDF/index identity, source snapshots and current semantic records. Hashes establish identity, not correctness.
+
+Former current-facing Lean metadata and chronological notes are copied byte for byte under `lean/history/v0.2.1/`; `INDEX.json` binds every copy. The rc4 snapshot remains `lean/source_snapshot/manuscript.tex`; the rc5 snapshot `manuscript-rc5.tex` is retained, and the current snapshot is `manuscript-rc6.tex`. Historical reports, frozen evidence parts, scripts and original verdicts are not rewritten.
+
+`audits/`, `reproduction/`, `research-history/`, older release records, `RELEASE_v0.2.0.md`, `REMEDIATION_v0.2.1.md`, the old expert brief and the history directory describe their own versions. Their “current”, “pending”, “PASS”, or stop language is local to those records. Current root documents and `release/next/` govern this candidate.
+
+The v0.2.0 publication workflow and asset preparer remain historical, not a publisher for this candidate. Active acceptance workflows target the existing PR #3 branch `research/next-internal-regularity-20261017`. The separate amplitude research branch is checked locally before being fast-forwarded into that branch. No old CI success is reassigned to new bytes.
+
+The versioned rc1 reports `UPGRADE_v0.3.0-rc1.md`, `MATHEMATICAL_AUDIT_v0.3.0-rc1.md` and `CONSISTENCY_AUDIT_v0.3.0-rc1.md` remain byte-identical. Their relative artifact links and words such as “current” describe the dd977048 tree; use the immutable predecessor link above to read them with their original assets. They do not describe rc6. The current [amplitude report](AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md), [mathematical audit](MATHEMATICAL_AUDIT_v0.3.0-rc2.md) and [consistency audit](CONSISTENCY_AUDIT_v0.3.0-rc2.md) distinguish the revisions. No materially different current PDF is presented as rc5.

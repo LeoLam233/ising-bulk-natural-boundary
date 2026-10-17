@@ -1,87 +1,49 @@
 # A candidate natural-boundary proof for the bulk Ising susceptibility
 
-**Manuscript v0.1-rc4 (frozen) · Lean/post-audit release v0.2.1 · Candidate for public mathematical review · Dehao Lin**
+**Development candidate: manuscript v0.1-rc6 / Lean v0.3.0-rc2 · 17 October 2026 · Dehao Lin**
 
-[中文说明](README.zh.md) · [Current rc4 manuscript PDF](paper/manuscript.pdf) · [Standalone TeX](paper/manuscript.tex) · [Two-page expert brief](docs/expert_brief.pdf) · [Proof guide](docs/PROOF_GUIDE.md)
+[中文说明](README.zh.md) · [Candidate manuscript](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) · [Proof guide](docs/PROOF_GUIDE.md) · [Mathematical changes](docs/AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md) · [Version identities](docs/VERSIONS.md)
 
-**Exact PDF identity for audits.** The published [`v0.1-rc4` tag](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.1-rc4) pins commit `1b4b506c9cb19d5fdbf9f59d89c7a179739d337d` and `paper/manuscript.pdf` SHA-256 `624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693`. The PDF on `main` has SHA-256 `107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4` after the [2026-10-04 ORCID/bibliography update](https://github.com/LeoLam233/ising-bulk-natural-boundary/commit/a322ee43f8593a2fc5f9331f56a7052eb7f1dfe0); theorem/proof text and equation/theorem numbering were preserved, but some page locations and bibliography numbers changed. Use the [main label index](paper/LABEL_INDEX.json) for the current PDF and the [tagged label index](https://github.com/LeoLam233/ising-bulk-natural-boundary/blob/v0.1-rc4/paper/LABEL_INDEX.json) for the published PDF. When citing an audit input, pin the exact PDF hash; see the [maintenance receipt](provenance/BIBLIOGRAPHY_ORCID_2026-10-04.json).
+This branch contains an implemented next-version candidate for the zero-field, isotropic, infinite square-lattice **bulk** susceptibility continued from its low-temperature pure-phase exterior germ. It is prepared for mathematical review; no independent human expert validation or peer review is claimed.
 
-## Research history and failed attempts
+The new canonical normalized-series theorem has **no E3 premise**. Physical identification retains **E1 and E2**, the correlation representation and spontaneous magnetization. The actual lower even orders are bounded internally on their original offsite contours. The old published full-site comparison helpers remain available but are absent from canonical transitive proof dependencies. [Exact assumptions](CLAIMS.md) · [External sources](provenance/EXTERNAL_PREMISES.md).
 
-The [research-history section](research-history/README.md) preserves a **first-session-only** retrospective of the original autonomous Codex exploration (nine route categories, 38 saved checkpoints and 27 classes of failures/limitations), and links it to **subsequent** adversarial audits, mathematical repairs and Lean verification. That first session yielded an initial proof prototype, **not** this repository's later manuscript or an independently certified result. Read its [scope and source identity](research-history/original-session/README.md) before interpreting the historical counts.
+The verified rc5 / Lean v0.3.0-rc1 candidate remains at [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a). This revision adds the normalization result below and preserves its production Lean sources byte for byte. New manuscript, source correspondence and acceptance receipts have distinct identities.
 
-## Object and claim
+## Changes
 
-This repository presents an AI-assisted candidate proof concerning the **zero-field, isotropic, infinite square-lattice bulk susceptibility**, continued from its low-temperature pure-phase exterior germ. It claims that the unit circle in $s=\sinh(2\beta_{\rm phys}J)$ is a natural boundary. The observable includes all lattice separations and the entire even-particle expansion. See [precise claims](CLAIMS.md). The [external premises](provenance/EXTERNAL_PREMISES.md) are the physical correlation representation (E1), spontaneous magnetization (E2), and fixed-even-order non-Nickel smoothness (E3); none supplies the bulk infinite-tail estimate.
+- Internal non-Nickel gradient separation and fixed-radius integration by parts replace E3 in FIRST, finite lower-order noncancellation and both natural-boundary endpoints.
+- Proposition 6.1 states the stronger branch–compact bound `1+C/N` on the protected `c/N` disk. Baseline Lean already proves this stronger bound; downstream budgets are retained.
+- Proposition F.1 resolves the complete-amplitude comparison: on the selected physical exterior germ, `A_full=4R_N(-theta_*)=-4i R_N(theta_*)`. The printed scalar is one chart; the complete full-site coefficient has four equal signed contributions. Observable definitions, local variables, power branches and physical prefactors are derived. The formula is arXiv (69), journal (70).
+- Corollary 9.4 excludes real smooth extension through every nonempty boundary arc. A finite-prime criterion gives an elementary `O(ell^-2)` derivative ceiling. The coefficient `80*pi^2` is only an asymptotic leading constant, not a uniform finite covering bound.
+- Lean proves the actual selected-point real `C^k` obstruction. The factorial evaluation, complete-amplitude conversion and quantitative finite-prime covering remain analytic manuscript results.
 
-## Historical gap
+For each fixed selected point, `N0=2p`, `k=N0^2/2-1` and `s_epsilon=(1+epsilon)s_*`, the load-bearing claims remain `T_N0^(k)=2 L_beta epsilon^(-1/2)+o(epsilon^(-1/2))` with nonzero `L_beta`, and the absolute sum of every higher even form-factor derivative is `o(epsilon^(-1/2))` for all `0<=j<=k`. Constants may depend on the fixed point and finite derivative order. All lattice separations and the entire even-particle expansion are included.
 
-Nickel identified fixed-form-factor singularities whose union is dense on the unit circle. Orrick, Nickel, Guttmann and Perk supplied further amplitude-based evidence against cancellation, explicitly short of a proof. Tracy–Widom proved fixed-even-order smoothness away from Nickel points and rigorous natural-boundary results for diagonal susceptibility and Toeplitz sums. The rigorous gap targeted here is control of the infinite higher-particle tail; fixed-order singularities alone do not exclude cancellation. Sources and their distinct roles are in [prior art](provenance/PRIOR_ART.md).
+## Verification
 
-## Two load-bearing estimates
+[Current status](release/CURRENT_STATUS.json), [executed receipts](release/next/VALIDATION.json), and the [mandatory consistency audit](docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md) control verification claims for this candidate. Earlier PASS verdicts and release receipts apply only to their own inputs.
 
-At each fixed selected point $s_{\ast}$ of manuscript §3, set $N_0=2p$, $k=N_0^2/2-1$ and $s_\epsilon=(1+\epsilon)s_{\ast}$. The manuscript claims
+The Linux/WSL gate builds the complete root, audits axioms, checks exact endpoint types and origins, runs positive/negative controls, traverses compiled types **and proof bodies** for E3, and runs `leanchecker --fresh --verbose IsingBulk`. Cached dependency binary/source correspondence remains trusted; Mathlib is not rebuilt from source. Build and replay use the same kernel. [Lean reproduction](lean/README.md) · [Evidence limits](LIMITATIONS.md).
 
-$$
-\partial_s^k T_{N_0}(s_\epsilon)=2L_\beta\epsilon^{-1/2}+o(\epsilon^{-1/2}),\qquad L_\beta\ne0,
-$$
-
-$$
-\sum_{N>N_0,\quad N\text{ even}}|\partial_s^j T_N(s_\epsilon)|=o(\epsilon^{-1/2}),\qquad 0\le j\le k.
-$$
-
-The first supplies a nonzero singular carrier; the second makes the entire higher-particle tail too small to cancel it. Constants may depend on the fixed point and finite $k$. These are the proof claims to scrutinize, not externally certified estimates.
-
-## Proof architecture
-
-The dense uniquely-first family leads to a nonzero **whole-form-factor** first singularity. In parallel, the exact weighted contour identity $T_N=F_N+K_N+S_N$ leads to differentiated control of all higher even orders. With the lower-order bounds and exterior normal convergence, the two branches give noncancellation on a dense boundary set and the claimed natural boundary. [Proof guide](docs/PROOF_GUIDE.md); manuscript §§3–9 and Appendices B–G.
-
-## How to scrutinize
-
-Choose one interface: first carrier and complement (§4, App. B); exact weighted contours and protected pair control (§§5–8); high-order differentiation, flux and coarea (Apps. D–E); or complete W1–W13 tail closure (§9, App. G). A concrete failing configuration, unjustified implication or uniformity step, or missed close precedent is especially useful. A limited reading of one interface is valuable; full refereeing is not presumed. [Feedback guidance](CONTRIBUTING.md).
-
-## Proposed contribution and prior precedents
-
-The divergent-first-term / controlled-tail strategy is established prior work in Tracy–Widom's diagonal-susceptibility analysis. Their Toeplitz work also provides close precedents for contour partitions, Vandermonde analysis, grouping and Hadamard/factorial estimates. This manuscript's proposed technical contribution is the **specific implementation for full bulk susceptibility**: the selected point family, compatible whole-integral first-amplitude calculation, coupled weighted contours, protected parameter disks and differentiated full-tail/coarea estimates. Correctness and priority for these details remain open to scrutiny. No exhaustive priority clearance is claimed.
-
-## Status and limitations
-
-This is an AI-assisted candidate proof prepared for public mathematical review. The manuscript remains frozen at v0.1-rc4; its W2 revision makes pair geometry, root continuation, disk slack and coupled differentiation explicit. The E1 state/source/normalization interface has been checked; see [E1 closure](provenance/E1_SOURCE_CLOSURE.md). [Historical manuscript status](release/STATUS.json). [Rc4 release-prep status](release/RC4_RELEASE_PREP_STATUS.json) and [validation](release/RC4_RELEASE_PREP_VALIDATION.json).
-
-| Evidence | Status and scope |
-|---|---|
-| Manuscript | Candidate complete argument with historical [W1 repairs](provenance/W1_REPAIR_AUDIT.md) and [W2 repairs](provenance/W2_REPAIR_AUDIT.md). |
-| AI adversarial audits | Earlier errors prompted repairs. Favorable verdicts apply only to their input versions and checked scope; they are not peer review or current certification. |
-| Historical problem-only CR0 | Three returned runs, all `PARTIAL`; complete natural-boundary reconstructions: **0/3**. |
-| Historical method-informed MR1 | One `CLAIMED_TAIL_PROOF`; I3 unresolved, I6 conditional. Receiver checks did **not** independently certify the entire tail proof. |
-| Finite computations | Reproducible algebra and numerical diagnostics; no continuous-domain or infinite-tail certification. |
-| Lean formal verification | v0.2.1 verifies the pinned formal statements, with E1/E2/E3 explicit; the independent adversarial audit targeted v0.2.0, followed by targeted v0.2.1 remediation and exact-commit validation. |
-| Human review | No independent human expert validation or peer review is claimed. |
-
-These counts are workflow records, not correctness probabilities. Runs may share model priors; technical isolation was not independently established. Different point families cannot be silently spliced. [Limitations](LIMITATIONS.md) · [historical release-prep status](release/RC3_RELEASE_PREP_STATUS.json).
-
-## Separate Lean formalization
-
-The [Lean formalization](lean/README.md) covers the pinned internal form-factor and absolute-tail chain. The current [v0.2.1 release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1) preserves the theorem content and passed exact-commit validation; see [release/CURRENT_STATUS.json](https://github.com/LeoLam233/ising-bulk-natural-boundary/blob/main/release/CURRENT_STATUS.json). The independent adversarial AI audit targeted [v0.2.0](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.0); v0.2.1 implements the [post-audit remediation](REMEDIATION_v0.2.1.md), and its successful validation does not extend that audit's scope. Evidence and trust assumptions are version-specific. E1/E2/E3 remain explicit external premises. This formal evidence does not constitute independent human or peer-review certification of the candidate manuscript. The manuscript remains frozen at v0.1-rc4; the expert brief includes the later verification-status update.
-
-Formal verification still trusts cached dependency binary/source correspondence. The build and fresh replay use the same Lean kernel implementation, and the expected-ID pin is inside the Git commit rather than cryptographically external.
-
-## Audit, reconstruction and provenance
-
-The [audit index](audits/README.md) explains the historical names and verdicts without rewriting them. The [version ledger](audits/VERSION_LEDGER.md), [CR0/MR1 records](reproduction/README.md), [source history](provenance/SOURCE_PROVENANCE.md), and [raw source inventory](provenance/V38_SOURCE_INVENTORY.json) preserve both favorable and negative findings. Historical access records are incomplete; no zero-exposure or exhaustive source-cleanliness certification is claimed.
-
-`scripts/verify_repository.py` checks the historical rc4 manifest and is expected to return a nonzero exit status on the current tree because of subsequent Lean additions and documentation changes. This snapshot mismatch does not itself indicate a mathematical proof failure. From the repository root:
+From the repository root:
 
 ```sh
-python scripts/verify_repository.py
 python -m pip install -r requirements.txt
 python scripts/reproduce.py
+python checks/next_version/run_checks.py --output .local/next-checks.json
+python checks/amplitude_identification/check_amplitude.py --output .local/amplitude-checks.json
+python scripts/verify_candidate.py
 ```
 
-Outputs go to `.local/`, leaving evidence unchanged. Hashes establish identity; finite diagnostics do not prove the theorem. [Check scope](checks/README.md) · [build instructions](paper/README.md) · [historical release-prep validation](release/RC3_RELEASE_PREP_VALIDATION.json) · [frozen candidate validation](release/W1_CANDIDATE_VALIDATION.json) · [historical rc2 validation](release/FINAL_PUBLIC_VALIDATION.md).
+These commands verify the accepted checkout and rerun diagnostics into `.local/`. To recompile with `python scripts/build_candidate_paper.py`, use a separate checkout and follow the [paper build procedure](paper/README.md). The builder writes a new PDF and BUILD record; inspect that PDF and refresh its QA, validation and manifest before treating the rebuilt artifact as accepted. PDF bytes can vary with engine, fonts and timestamps.
 
-## Citation, authorship and license
+## Frozen releases
 
-Dehao Lin is the named human author and public contact. ORCID: [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490). Generative AI was used extensively in exploration, derivations, writing, code and internal audits. [Authorship and declarations](AUTHORSHIP.md) · [versioned citation](CITATION.cff).
+The original **manuscript v0.1-rc4** assets remain at [paper/manuscript.pdf](paper/manuscript.pdf), [paper/manuscript.tex](paper/manuscript.tex) and [paper/LABEL_INDEX.json](paper/LABEL_INDEX.json). This is the later ORCID/bibliography editorial artifact, distinct from the immutable rc4-tag PDF. [The version ledger](docs/VERSIONS.md) records both hashes. The immutable **Lean v0.2.1** tag remains `de23d9475744fb4625666142d5a03b3d688195e6`, with E1/E2/E3 in its historical endpoints. This upgrade does not move tags, overwrite frozen assets, publish a release or merge into `main`.
 
-Code: [MIT](LICENSE). Manuscript and project-authored prose: [CC BY 4.0](LICENSE-DOCUMENTATION.md). Third-party cited works retain their own rights; full external papers are not bundled. [Third-party notices](THIRD_PARTY_NOTICES.md).
+Former current-facing Lean records are byte-preserved under [lean/history/v0.2.1](lean/history/v0.2.1/README.md). All old audits, reconstruction records, research history, release records and their original verdicts retain their historical scope. The [old expert brief](docs/expert_brief.pdf) describes rc4/v0.2.1. The root `MANIFEST.json` and `scripts/verify_repository.py` are the historical rc4 snapshot check, expected to report a mismatch on later trees. The candidate uses `release/next/MANIFEST.json` and `scripts/verify_candidate.py`.
+
+[Research history and failed attempts](research-history/README.md) · [Historical audits](audits/README.md) · [Source history](provenance/SOURCE_PROVENANCE.md) · [Prior art](provenance/PRIOR_ART.md).
+
+Dehao Lin is the named human author and public contact, ORCID [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490). Generative AI contributed extensively. [Authorship](AUTHORSHIP.md). Code: [MIT](LICENSE); project prose: [CC BY 4.0](LICENSE-DOCUMENTATION.md); [third-party notices](THIRD_PARTY_NOTICES.md).

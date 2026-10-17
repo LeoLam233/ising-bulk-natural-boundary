@@ -1,5 +1,5 @@
 name = "ising_bulk"
-version = "0.1.0"
+version = "0.3.0-rc2"
 defaultTargets = ["IsingBulk", "Audit"]
 moreLeanArgs = ["-j1", "-DwarningAsError=true"]
 

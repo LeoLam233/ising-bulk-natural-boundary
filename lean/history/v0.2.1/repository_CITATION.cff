@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this candidate manuscript by version and state its review status."
+type: article
+title: "A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility"
+authors:
+  - family-names: Lin
+    given-names: Dehao
+    orcid: "https://orcid.org/0009-0001-4551-8490"
+    affiliation: "School of Physics, Sun Yat-sen University"
+    email: "lindh9@mail2.sysu.edu.cn"
+version: "0.1-rc4"
+license: CC-BY-4.0
+abstract: "Frozen v0.1-rc4 AI-assisted candidate manuscript; Lean 4 formalization and kernel verification of the pinned formal statements are released separately as v0.2.1, with E1/E2/E3 retained as explicit external premises. No independent human expert validation or peer review is claimed."
+keywords:
+  - Ising model
+  - susceptibility
+  - natural boundary
+  - candidate proof
+  - reproducibility

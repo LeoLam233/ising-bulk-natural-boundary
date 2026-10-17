@@ -4,10 +4,10 @@
   "lean_toolchain": "leanprover/lean4:v4.34.1",
   "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
   "mathlib_rev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
-  "manuscript_git_blob": "1c6c0f47e3f1e4d13e59b49c52c18414e9dd3939",
+  "manuscript_git_blob": "7d7beba3ab16f1def88dbdd0132661459f9dc404",
   "frozen_config_sha256": {
     "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
-    "lakefile.toml": "510dd1105975953be41008df8d4dc6ab0f309ca9ead929dec8f5b20599765401",
+    "lakefile.toml": "da1572c2080d6c23106bfacece1546626b664dd15f895e0a59b55676e2134b9a",
     "lake-manifest.json": "58516f4af07d70237aa9ff8651004a0bd493e7a7f7e5b92eaea99865f01ee805"
   },
   "dependency_revisions": {
@@ -118,6 +118,34 @@
       "module": "IsingBulk.Final.UnconditionalNaturalBoundary",
       "source": "IsingBulk/Final/UnconditionalNaturalBoundary.lean",
       "source_label": "thm:tail",
+      "require_ledger_declaration": true
+    },
+    {
+      "declaration": "IsingBulk.First.selected_lower_orders_fixed_radius_bounded",
+      "module": "IsingBulk.First.LowerOrderFixedRadius",
+      "source": "IsingBulk/First/LowerOrderFixedRadius.lean",
+      "source_label": "thm:first",
+      "require_ledger_declaration": true
+    },
+    {
+      "declaration": "IsingBulk.First.nonNickel_fixed_radius_radial_bound",
+      "module": "IsingBulk.First.NonNickelRadialBounds",
+      "source": "IsingBulk/First/NonNickelRadialBounds.lean",
+      "source_label": "thm:first",
+      "require_ledger_declaration": true
+    },
+    {
+      "declaration": "IsingBulk.Tail.selected_actual_pair_bounds",
+      "module": "IsingBulk.Tail.SelectedFActualPairs",
+      "source": "IsingBulk/Tail/SelectedFActualPairs.lean",
+      "source_label": "prop:F",
+      "require_ledger_declaration": true
+    },
+    {
+      "declaration": "IsingBulk.Final.theorem_selected_no_Ck_extension",
+      "module": "IsingBulk.Final.UnconditionalNaturalBoundary",
+      "source": "IsingBulk/Final/UnconditionalNaturalBoundary.lean",
+      "source_label": "cor:smootharc",
       "require_ledger_declaration": true
     }
   ]

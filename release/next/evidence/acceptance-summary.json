@@ -1,0 +1,132 @@
+{
+  "all_executed_stages_passed": true,
+  "identities": {
+    "PROOF_CRITICAL_PAYLOAD_ID": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+    "VERIFICATION_INPUT_ID": "6ce45f85328d34344df9ec9dad6add13610f840a40a550db432af2cfe679877c",
+    "RUNTIME_ID": "6633dc8f4aec1108be34292fdac2f23c944ea00e1519e3e71d9f2b0c36e70780"
+  },
+  "stages": [
+    {
+      "stage": "preflight",
+      "argv": [
+        "python3",
+        "tools/continuation/preflight.py",
+        "--lean-bin",
+        "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin",
+        "--output",
+        "/mnt/i/Codex/_Projectless/2026-10-17/ising-bulk-natural-boundary-autonomous-research-2/work/amplitude_research/logs/acceptance-rc2-01/input-preflight.json"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:12:20.133534+00:00",
+      "finished_utc": "2026-10-17T04:12:22.438220+00:00",
+      "exit_code": 0,
+      "seconds": 2.305,
+      "stdout_sha256": "b8cf71a6c9793e1efda1bfe6893e68b5fe6e6415c620df6c2f30fcaff01e2a2b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "payload_before",
+      "argv": [
+        "python3",
+        "ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:12:22.455136+00:00",
+      "finished_utc": "2026-10-17T04:12:23.380034+00:00",
+      "exit_code": 0,
+      "seconds": 0.925,
+      "stdout_sha256": "b153ab63df5b4e2a506a1dbfbd1d7c6eeea8bfd8410074028bc86f8fa8e40465",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "manifest_controls",
+      "argv": [
+        "python3",
+        "control_packet/continuation/run_manifest_controls.py"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:12:23.394918+00:00",
+      "finished_utc": "2026-10-17T04:12:23.734369+00:00",
+      "exit_code": 0,
+      "seconds": 0.339,
+      "stdout_sha256": "4d97fb74bf9ef323df1f49cfc416900668a0952644249489e505deec10283870",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "production_controls",
+      "argv": [
+        "python3",
+        "control_packet/continuation/run_remediation_controls.py"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:12:23.746677+00:00",
+      "finished_utc": "2026-10-17T04:12:33.965176+00:00",
+      "exit_code": 0,
+      "seconds": 10.219,
+      "stdout_sha256": "e8d07c5860b08154cf6323d0c6d01c7aa974653565d01db1ed01b45a003bc7d6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "full_gate",
+      "argv": [
+        "python3",
+        "-u",
+        "tools/continuation/final_gate.py",
+        "--lean-bin",
+        "/home/ldh/.elan/toolchains/leanprover--lean4---v4.34.1/bin",
+        "--approved-preflight",
+        "/mnt/i/Codex/_Projectless/2026-10-17/ising-bulk-natural-boundary-autonomous-research-2/work/amplitude_research/logs/acceptance-rc2-01/input-preflight.json",
+        "--logs",
+        "/mnt/i/Codex/_Projectless/2026-10-17/ising-bulk-natural-boundary-autonomous-research-2/work/amplitude_research/logs/acceptance-rc2-01/full",
+        "--threads",
+        "2",
+        "--execute"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:12:33.980766+00:00",
+      "finished_utc": "2026-10-17T04:57:47.397443+00:00",
+      "exit_code": 0,
+      "seconds": 2713.417,
+      "stdout_sha256": "9ebb56a75c0a3b08f02349176384c0259198d1ef03e5988235512d4fad9ef430",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "payload_after",
+      "argv": [
+        "python3",
+        "ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:57:47.417602+00:00",
+      "finished_utc": "2026-10-17T04:57:48.207359+00:00",
+      "exit_code": 0,
+      "seconds": 0.79,
+      "stdout_sha256": "b153ab63df5b4e2a506a1dbfbd1d7c6eeea8bfd8410074028bc86f8fa8e40465",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "compiled_namespace_controls",
+      "argv": [
+        "python3",
+        "control_packet/continuation/run_remediation_controls.py",
+        "--shadow-tree",
+        ".lake/build/lib/lean/IsingBulk"
+      ],
+      "cwd": "/tmp/ising-amplitude-rc2-20261017-a1/lean",
+      "started_utc": "2026-10-17T04:57:48.219358+00:00",
+      "finished_utc": "2026-10-17T04:57:58.535097+00:00",
+      "exit_code": 0,
+      "seconds": 10.316,
+      "stdout_sha256": "e3ddb460bb5284701053cfa45714a6e9b6492ac098121ec49ae320dbb209f4cc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "finished_utc": "2026-10-17T04:57:58.549846+00:00",
+  "unprivileged_uid": 1000
+}

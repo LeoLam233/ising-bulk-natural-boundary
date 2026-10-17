@@ -55,6 +55,7 @@ def main():
     cases = [
         ('PositiveArithmetic.lean', None),
         ('PositiveInterfaces.lean', None),
+        ('InternalRegularity.lean', None),
         ('E3Guard.lean', None),
         ('InvalidArithmetic.lean', r"Tactic [`'‘]?rfl[`'’]? failed"),
         ('InvalidStrictWindow.lean', r'Type mismatch'),

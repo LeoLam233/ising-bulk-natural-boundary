@@ -69,20 +69,17 @@ theorem dampedSingularVector_continuousAt {N : ℕ} (x y : Fin N → ℂ)
 
 /-- The fixed separator survives on one common neighborhood of the base torus
 point and unit radius. All active factors share the same positive margin. -/
-theorem selected_active_uniform_separator {p : ℕ} {a b : ℤ}
-    {x y : Fin (2*p) → ℂ} (hp : p.Prime) (hp11 : 11 ≤ p)
-    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hx : ∀ i, ‖x i‖ = 1) (hy : ∀ i, ‖y i‖ = 1)
-    (hgood : ¬ selectedBadConfiguration a b x y) :
-    ∃ (e : DoubleAngularVector (2*p)) (δ : ℝ), 0 < δ ∧
-      ∀ᶠ q : ℝ × (Fin (2*p) → ℂ) × (Fin (2*p) → ℂ) in 𝓝 (1, x, y),
-        ∀ i, singularFactorActive x y (2 * PrimeFamily.cosineAverage p a b) i →
+theorem source_active_uniform_separator {N : ℕ} {x y : Fin N → ℂ} {S : ℝ}
+    (hsep : ActiveSourceSeparated x y S) :
+    ∃ (e : DoubleAngularVector N) (δ : ℝ), 0 < δ ∧
+      ∀ᶠ q : ℝ × (Fin N → ℂ) × (Fin N → ℂ) in 𝓝 (1, x, y),
+        ∀ i, singularFactorActive x y (S) i →
           δ < angularDot e (dampedSingularVector q.1 q.2.1 q.2.2 i) := by
-  obtain ⟨f, δ, hδ, hf⟩ := selected_active_separating_functional hp hp11 ha hb hx hy hgood
+  obtain ⟨f, δ, hδ, hf⟩ := hsep
   refine ⟨separatingDirection f, δ / 2, by linarith, ?_⟩
   rw [Filter.eventually_all]
   intro i
-  by_cases hi : singularFactorActive x y (2 * PrimeFamily.cosineAverage p a b) i
+  by_cases hi : singularFactorActive x y (S) i
   · have hc := f.continuous.continuousAt.comp (dampedSingularVector_continuousAt x y i)
     have hbase : δ / 2 < f (dampedSingularVector 1 x y i) := by
       rw [dampedSingularVector_one hi]
@@ -93,6 +90,19 @@ theorem selected_active_uniform_separator {p : ℕ} {a b : ℤ}
     rw [angularDot_separatingDirection]
     exact hq
   · exact Filter.Eventually.of_forall (fun _ hi' => False.elim (hi hi'))
+
+theorem selected_active_uniform_separator {p : ℕ} {a b : ℤ}
+    {x y : Fin (2*p) → ℂ} (hp : p.Prime) (hp11 : 11 ≤ p)
+    (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (hx : ∀ i, ‖x i‖ = 1) (hy : ∀ i, ‖y i‖ = 1)
+    (hgood : ¬ selectedBadConfiguration a b x y) :
+    ∃ (e : DoubleAngularVector (2*p)) (δ : ℝ), 0 < δ ∧
+      ∀ᶠ q : ℝ × (Fin (2*p) → ℂ) × (Fin (2*p) → ℂ) in 𝓝 (1, x, y),
+        ∀ i, singularFactorActive x y (2 * PrimeFamily.cosineAverage p a b) i →
+          δ < angularDot e (dampedSingularVector q.1 q.2.1 q.2.2 i) := by
+  exact source_active_uniform_separator
+    (selected_active_separating_functional hp hp11 ha hb hx hy hgood)
+
 
 end
 end IsingBulk.First

@@ -4,6 +4,7 @@ import IsingBulk.Final.LowerEvenSum
 import IsingBulk.Final.AbsoluteTail
 import IsingBulk.Final.LeibnizLimit
 import IsingBulk.Final.MagnetizationBoundary
+import IsingBulk.Final.SmoothExtension
 
 /-! Actual upper-trace series noncancellation. The sole unproved analytic
 hypothesis here is the literal absolute higher-tail assertion of thm:tail;
@@ -58,7 +59,7 @@ theorem actual_upper_complex_tail_small {p : ℕ} {theta : ℝ} (htheta : 0 < Re
 
 theorem selected_upper_top_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hab : a ≠ b) (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b))
+    (hab : a ≠ b)
     (hTail : AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta ((2*p)^2/2-1)) :
     let k := (2*p)^2/2-1
     let A := selectedOrderedChart ha hb
@@ -71,7 +72,7 @@ theorem selected_upper_top_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
   have hn : 2*p-1+1=2*p := by have := hp.pos; omega
   simp only [hn] at hL hTop
   refine ⟨hL,?_⟩
-  have hLow := lower_even_sum_isLittleO hp hp11 ha hb hTW ((2*p)^2/2-1)
+  have hLow := lower_even_sum_isLittleO hp hp11 ha hb ((2*p)^2/2-1)
   have hT := actual_upper_complex_tail_small (selectedOrderedChart ha hb).sin_theta_pos _ hTail
   apply ((hLow.add hTop).add hT).congr' _ (Eventually.of_forall (fun _ => rfl))
   filter_upwards [self_mem_nhdsWithin] with e he
@@ -80,7 +81,7 @@ theorem selected_upper_top_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
 
 theorem selected_upper_lower_negligible {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hab : a ≠ b) (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b))
+    (hab : a ≠ b)
     {j : ℕ} (hj : j < (2*p)^2/2-1)
     (hTail : AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
     Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
@@ -96,7 +97,7 @@ theorem selected_upper_lower_negligible {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ 
       (fun e => (Real.sqrt e:ℂ)⁻¹) := by
     apply IsingBulk.First.bounded_radial_term_isLittleO (show 0 < d/2 by positivity)
     exact fun e he hed => hbound e he (by linarith)
-  have hLow := lower_even_sum_isLittleO hp hp11 ha hb hTW j
+  have hLow := lower_even_sum_isLittleO hp hp11 ha hb j
   have hT := actual_upper_complex_tail_small (selectedOrderedChart ha hb).sin_theta_pos _ hTail
   apply ((hLow.add hF).add hT).congr' _ (Eventually.of_forall (fun _ => rfl))
   filter_upwards [self_mem_nhdsWithin] with e he
@@ -109,17 +110,21 @@ def normalizedUpperBulk (s : ℂ) : ℂ :=
 /-- Selected-point bulk noncancellation with exactly the source's all-j
 absolute-tail hypothesis. The conclusion forbids a genuine open-neighborhood
 extension; there is no assumed global holomorphic continuation. -/
-theorem selected_bulk_nonextension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+theorem selected_bulk_radial_limit_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
-    (hab : a ≠ b) (hTW : PublishedTWFixedOrderInput (PrimeFamily.selectedPoint p a b))
+    (hab : a ≠ b)
     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
-    ¬ HasExteriorExtension normalizedUpperBulk (PrimeFamily.selectedPoint p a b) := by
+    let k := (2*p)^2/2-1
+    let L := localLeadingCoefficient (selectedOrderedChart ha hb) (2*p-1) k
+    L ≠ 0 ∧ Tendsto (fun e : ℝ => Real.sqrt e •
+      iteratedDeriv k normalizedUpperBulk ((1+(e:ℂ))*PrimeFamily.selectedPoint p a b))
+      (𝓝[>] 0) (𝓝 (4*magnetizationSquared (PrimeFamily.selectedPoint p a b)*L)) := by
   let k := (2*p)^2/2-1
   let A := selectedOrderedChart ha hb
   let L := localLeadingCoefficient A (2*p-1) k
   let z := PrimeFamily.selectedPoint p a b
-  obtain ⟨hL,hTop⟩ := selected_upper_top_asymptotic hp hp11 ha hb hab hTW (hTail k le_rfl)
+  obtain ⟨hL,hTop⟩ := selected_upper_top_asymptotic hp hp11 ha hb hab (hTail k le_rfl)
   change L ≠ 0 at hL
   change Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
     (fun e => iteratedDeriv k upperEvenSeries (radialParameter A.theta e) -
@@ -136,7 +141,7 @@ theorem selected_bulk_nonextension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp
       rw [ite_eq_left rfl]
       simpa only [hpath] using sqrt_limit_of_isLittleO hTop
     · rw [ite_eq_right hik]
-      have hlow := selected_upper_lower_negligible hp hp11 ha hb hab hTW
+      have hlow := selected_upper_lower_negligible hp hp11 ha hb hab
         (lt_of_le_of_ne hi hik) (hTail i hi)
       have hl : Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
           (fun e => iteratedDeriv i upperEvenSeries (radialParameter A.theta e) -
@@ -149,9 +154,40 @@ theorem selected_bulk_nonextension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp
     rw [← hpath]
     exact upperEvenSeries_analyticAt (sourceRadialTrace_pos A.sin_theta_pos he)
   have hbulk := sqrt_radial_bulk_limit k hm.1 hU hlimits
-  apply no_extension_of_nonzero_radial_limit (show ‖z‖=1 from Complex.norm_exp_ofReal_mul_I _)
-    (show 4*magnetizationSquared z*L ≠ 0 from mul_ne_zero (mul_ne_zero (by norm_num) hm.2) hL) k
-  exact hbulk
+  exact ⟨hL,hbulk⟩
+
+theorem selected_bulk_nonextension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+    {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (hab : a ≠ b)
+    (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+      AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+    ¬ HasExteriorExtension normalizedUpperBulk (PrimeFamily.selectedPoint p a b) := by
+  obtain ⟨hL,hlim⟩ := selected_bulk_radial_limit_of_absolute_tail hp hp11 ha hb hab hTail
+  have hm := selectedPoint_magnetization_regular ha hb
+  exact no_extension_of_nonzero_radial_limit (Complex.norm_exp_ofReal_mul_I _)
+    (mul_ne_zero (mul_ne_zero (by norm_num) hm.2) hL) _ hlim
+
+/-- Genuine real C^k obstruction for the same bulk observable. -/
+theorem selected_bulk_no_Ck_extension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+    {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+    (hab : a ≠ b)
+    (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+      AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+    ¬ HasExteriorCkExtension normalizedUpperBulk (PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) := by
+  obtain ⟨hL,hlim⟩ := selected_bulk_radial_limit_of_absolute_tail hp hp11 ha hb hab hTail
+  have hm := selectedPoint_magnetization_regular ha hb
+  apply no_Ck_extension_of_nonzero_radial_limit (Complex.norm_exp_ofReal_mul_I _)
+    (mul_ne_zero (mul_ne_zero (by norm_num) hm.2) hL) _ _ hlim
+  filter_upwards [self_mem_nhdsWithin,
+    (radialPath_tendsto (PrimeFamily.selectedPoint p a b)).eventually hm.1.eventually_analyticAt]
+    with e he hme
+  have ht : 0 < (sourceS ((1+(e:ℂ))*PrimeFamily.selectedPoint p a b)).im := by
+    simpa only [IsingBulk.Branch.radialParameter,selectedOrderedChart,PrimeFamily.selectedPoint,
+      Complex.ofReal_add,Complex.ofReal_one] using
+      sourceRadialTrace_pos (selectedOrderedChart ha hb).sin_theta_pos he
+  exact (analyticAt_const.sub hme).add
+    ((analyticAt_const.mul hme).mul (upperEvenSeries_analyticAt ht))
+
 
 end
 end IsingBulk.Final

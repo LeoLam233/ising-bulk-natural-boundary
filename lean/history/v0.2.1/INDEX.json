@@ -1,0 +1,92 @@
+{
+  "version": "v0.2.1",
+  "copied_from_intake_commit": "84e528bde0da0990f203e36c1b5d92430bda1637",
+  "scope": "Byte-preserved former current-facing records; source tags and original audit reports are unchanged.",
+  "files": [
+    {
+      "original_path": "lean/SOURCE.json",
+      "historical_copy": "lean/history/v0.2.1/SOURCE.json",
+      "sha256": "a3b3b9c435ba44b97409bae139f582280d411bc5fe101d07379d576fcd77d240"
+    },
+    {
+      "original_path": "lean/TOOLCHAIN_FREEZE.json",
+      "historical_copy": "lean/history/v0.2.1/TOOLCHAIN_FREEZE.json",
+      "sha256": "de84e939db3eec74a165c7cfdeacda289b3d93b3ea9a61a5ebb1a57362c8b5b3"
+    },
+    {
+      "original_path": "lean/CLAIM_LEDGER.tsv",
+      "historical_copy": "lean/history/v0.2.1/CLAIM_LEDGER.tsv",
+      "sha256": "2c9bf619f0fc75171b68835e131349685c406ea2b774c22562ac4e2a3940f093"
+    },
+    {
+      "original_path": "lean/COVERAGE.md",
+      "historical_copy": "lean/history/v0.2.1/COVERAGE.md",
+      "sha256": "5d6e816d4693f7abf03198c87bdd4a6cbc215435af5ab62b0d9863f4ae211c38"
+    },
+    {
+      "original_path": "lean/CORRESPONDENCE.md",
+      "historical_copy": "lean/history/v0.2.1/CORRESPONDENCE.md",
+      "sha256": "06bd7106751a0d9f57455f93ddd5907ddf8673a6d26e058b697ac3284f8176df"
+    },
+    {
+      "original_path": "lean/GAP_MANIFEST.md",
+      "historical_copy": "lean/history/v0.2.1/GAP_MANIFEST.md",
+      "sha256": "44e8da8cb38502d196fd47a3fb8feac200af12ec9cb4cd6ae51eaafeded6e276"
+    },
+    {
+      "original_path": "lean/CONTINUATION_SOURCE_CORRESPONDENCE.md",
+      "historical_copy": "lean/history/v0.2.1/CONTINUATION_SOURCE_CORRESPONDENCE.md",
+      "sha256": "fafc7a639ddb984d6d23d726b34e0fb07b7833005d52ee2f9035f1cdca0776f8"
+    },
+    {
+      "original_path": "lean/CONTINUATION_AUXILIARY_SCOPE.md",
+      "historical_copy": "lean/history/v0.2.1/CONTINUATION_AUXILIARY_SCOPE.md",
+      "sha256": "de6a052e71955c1ba4e5c6dbc9acc5e7ffe718864bf1738ab54827918ae27519"
+    },
+    {
+      "original_path": "lean/ci/payload.json",
+      "historical_copy": "lean/history/v0.2.1/ci/payload.json",
+      "sha256": "246194035b6685128e3607d39f326abcae9b4fd14101af7e1e9a6ea8d909ab29"
+    },
+    {
+      "original_path": "lean/ci/accepted_identity.json",
+      "historical_copy": "lean/history/v0.2.1/ci/accepted_identity.json",
+      "sha256": "7d80a9b04b453656ef06091924bb4b7ac276b3f6f51ddd78b27aebced0c97ec6"
+    },
+    {
+      "original_path": "lean/tools/continuation/endpoint_contract.json",
+      "historical_copy": "lean/history/v0.2.1/tools/continuation/endpoint_contract.json",
+      "sha256": "410f9c7bf9949e7e5fb3b027d90c9713cfe58257410c9dfcf2f6f4c6699ad2aa"
+    },
+    {
+      "original_path": "lean/tools/continuation/source_references.json",
+      "historical_copy": "lean/history/v0.2.1/tools/continuation/source_references.json",
+      "sha256": "bc2bcc78147433d18274fabe0d4287724b17d649616f93e3a0642fd2fab9d9a0"
+    },
+    {
+      "original_path": "release/CURRENT_STATUS.json",
+      "historical_copy": "lean/history/v0.2.1/repository_CURRENT_STATUS.json",
+      "sha256": "1931b32ae6b33adbdbfab2945552a75b848a401c7fa6cc3bf3ec227b1c47a5a5"
+    },
+    {
+      "original_path": "CITATION.cff",
+      "historical_copy": "lean/history/v0.2.1/repository_CITATION.cff",
+      "sha256": "05f5275a2a6236d139afcd0adb3089d2ecde5866fec964bf95391cea97ae7609"
+    },
+    {
+      "original_path": "lean/tools/continuation/README.md",
+      "historical_copy": "lean/history/v0.2.1/tools/continuation/README.md",
+      "sha256": "52a6ccfdf22171a73e0ea5fc34f14d44471b1317519d564d903ddca7041bd80a"
+    },
+    {
+      "original_path": "lean/control_packet/continuation/README.md",
+      "historical_copy": "lean/history/v0.2.1/control_packet/continuation/README.md",
+      "sha256": "272d73ece466afae27fda8f672cd8630683c2a9eb194e23ee62d9ed1288a1822"
+    },
+    {
+      "original_path": "AUTHORSHIP.md",
+      "historical_copy": "lean/history/v0.2.1/repository_AUTHORSHIP.md",
+      "sha256": "041a767a0fda5ca0da97c3780f6b3915ca7b69d058de0c87d3ba24e31b3547ed"
+    }
+  ]
+}

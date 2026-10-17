@@ -1,0 +1,21 @@
+{
+  "frozen_at": "2026-10-02T12:22:20.6810418+08:00",
+  "reason": "IsingBulk.cyclotomic_intersection compiled in ordinary lake build; see run_logs/build_004.log. Whole build audit API repair still pending.",
+  "lean": "leanprover/lean4:v4.34.1",
+  "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "files": [
+    {
+      "path": "lean-toolchain",
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "510dd1105975953be41008df8d4dc6ab0f309ca9ead929dec8f5b20599765401"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "58516f4af07d70237aa9ff8651004a0bd493e7a7f7e5b92eaea99865f01ee805"
+    }
+  ]
+}

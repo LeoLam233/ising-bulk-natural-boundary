@@ -1668,6 +1668,24 @@
       "ledger_token": "IsingBulk.Final.theorem_tail_with_summability",
       "kind": "declaration",
       "target": "IsingBulk.Final.theorem_tail_with_summability"
+    },
+    {
+      "source_label": "thm:first",
+      "ledger_token": "IsingBulk.First.nonNickel_fixed_radius_radial_bound",
+      "kind": "declaration",
+      "target": "IsingBulk.First.nonNickel_fixed_radius_radial_bound"
+    },
+    {
+      "source_label": "prop:F",
+      "ledger_token": "IsingBulk.Tail.selected_actual_pair_bounds",
+      "kind": "declaration",
+      "target": "IsingBulk.Tail.selected_actual_pair_bounds"
+    },
+    {
+      "source_label": "cor:smootharc",
+      "ledger_token": "IsingBulk.Final.theorem_selected_no_Ck_extension",
+      "kind": "declaration",
+      "target": "IsingBulk.Final.theorem_selected_no_Ck_extension"
     }
   ]
 }

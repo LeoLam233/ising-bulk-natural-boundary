@@ -1,0 +1,189 @@
+{
+  "all_controls_pass": true,
+  "case_count": 13,
+  "expected_id": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+  "source_payload_id": "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+  "cases": [
+    {
+      "case": "positive_untouched",
+      "passed": true,
+      "exit_code": 0,
+      "expected_diagnostic": null,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124"
+      ]
+    },
+    {
+      "case": "coherent_source_and_manifest_tamper",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Identity mismatch against caller-supplied expected ID",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124"
+      ]
+    },
+    {
+      "case": "positive_dependencies",
+      "passed": true,
+      "exit_code": 0,
+      "expected_diagnostic": null,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "wrong_dependency_HEAD",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Dependency pin/source mismatch: Cli",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "dirty_tracked_dependency",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Dependency pin/source mismatch: Cli",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "untracked_Lake_override",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Unbound dependency configuration: Cli/lakefile.lean",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "shadow_IsingBulk",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Foreign project namespace in dependency build:",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "shadow_IsingBulk_olean",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Foreign project namespace in dependency build:",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "shadow_Audit",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Foreign project namespace in dependency build:",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "shadow_Audit_olean",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Foreign project namespace in dependency build:",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "audited_complete_mutant_tree",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Foreign project namespace in dependency build:",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "unlistable_dependency_build",
+      "passed": true,
+      "exit_code": 1,
+      "expected_diagnostic": "Cannot inspect dependency build:",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    },
+    {
+      "case": "positive_restored_dependencies",
+      "passed": true,
+      "exit_code": 0,
+      "expected_diagnostic": null,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/ising-amplitude-rc2-20261017-a1/lean/control_packet/continuation/results/remediation-20261017T045748Z-4a358b8b/payload/lean/ci/verify_payload.py",
+        "--expected-id",
+        "90ec278d89e753223f40643715a57dfab9f0c0cb0da9fece1cecd7fd2937c124",
+        "--dependencies"
+      ]
+    }
+  ],
+  "scope": "Targeted production verifier regressions; no build or kernel replay"
+}

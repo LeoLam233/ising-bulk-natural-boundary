@@ -1,17 +1,19 @@
-# Standalone manuscript and build
+# Manuscript versions and builds
 
-**Exact rc4 artifact identity (16 October 2026).** The original `v0.1-rc4` tag PDF and the current bibliography/ORCID editorial PDF have different bytes and some different pages. Future audits should pin the current PDF SHA-256 `107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4`, matching TeX and label index, rather than the rc4 title alone. See the [identity check and page/reference crosswalk](../provenance/RC4_IDENTITY_2026-10-16.md). The frozen mathematics and historical tag are unchanged.
+The current development manuscript is **v0.1-rc6** under [next/](next/manuscript.pdf), with [TeX](next/manuscript.tex), [labels/pages](next/LABEL_INDEX.json) and [build identity](next/BUILD.json). It pairs with Lean v0.3.0-rc2. All 67 verified rc5 label numbers remain; Proposition F.1 is added. It proves the complete-amplitude conversion, with arXiv/journal equation numbering distinguished.
 
-`manuscript.tex` embeds all sections, appendices and thirteen bibliography entries. It has no external chapter or bibliography dependency. `manuscript.pdf` is the compiled v0.1-rc4 candidate artifact; its SHA-256 is in the repository manifest. `LABEL_INDEX.json` maps all 65 labels to this PDF's numbering/pages.
-
-Build with an existing Tectonic installation:
+With an existing pdflatex, from the repository root:
 
 ```sh
-python scripts/build_paper.py --tectonic tectonic
+python scripts/build_candidate_paper.py
 ```
 
-The script also builds the two-page expert brief and writes only under `.local/`. It defaults to cached TeX resources; `--allow-resource-download` explicitly permits an existing Tectonic runtime to fetch missing resources. It does not install a runtime. Standard LaTeX packages used are visible in the source preambles. A normal pdflatex installation can also build the standalone source with repeated runs as needed for the table of contents.
+The builder uses a new .local directory, resolves final references and layout diagnostics, checks label numbers, and updates only candidate generated files. PDF bytes can vary with engines/fonts/timestamps. [Visual QA](../release/next/PDF_QA.json) is separate from compilation.
 
-During historical rc2 release preparation, the desktop native compiler could not find platform directories. The sources were preserved/opened in the editor and successfully exported using the already available cached Tectonic runtime with `--untrusted --only-cached`. No TeX installation or network download was performed for that build. The paper was rendered page by page and inspected; [rc2 layout/build records](../release/RC2_BUILD_QA.json) describe the result.
+For the accepted artifact, run `python scripts/verify_candidate.py` before rebuilding. Recompile in a separate checkout: the builder updates the PDF and BUILD record, while the accepted QA, validation and manifest still identify the checked-in PDF. Render and inspect the rebuilt PDF, record its new identity in QA and validation, then refresh the candidate inventory and rerun the consistency verifier. Updating hashes alone does not establish visual or mathematical acceptance. Source edits additionally require the matching Lean snapshot and source/verification identities to be updated through the [validation workflow](../lean/README.md).
 
-PDF bytes may vary with TeX version, font resources and creation timestamps. The frozen PDF hash identifies this artifact; rebuilding is expected to preserve content, not necessarily bytes. The rc2 manuscript preserved the mathematics of revision 8, as documented by the historical [rc1-to-rc2 source delta](../provenance/RC1_RC2_MANUSCRIPT_DELTA.json). The frozen mathematical candidate made the [W1 proof repairs](../provenance/W1_REPAIR_AUDIT.md); old delta and validation records remain historical. Its historical build and inspection results remain in [W1_CANDIDATE_VALIDATION.json](../release/W1_CANDIDATE_VALIDATION.json). Historical metadata-only release-prep build and mathematical-freeze results are in [RC3_RELEASE_PREP_VALIDATION.json](../release/RC3_RELEASE_PREP_VALIDATION.json). Its build uses portable Tectonic 0.17.0 with resources cached in the external work directory; the initial resource download is recorded separately from the final cached build.
+The original manuscript TeX, PDF and index in this directory remain the frozen **rc4 editorial artifact**. Its PDF SHA-256 `107f09155e1ce46d65b5f8070ce33d3d9eddb177120413883d91b4f9c12202e4` differs from tagged rc4 `624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693`. [Versions](../docs/VERSIONS.md) · [original crosswalk](../provenance/RC4_IDENTITY_2026-10-16.md).
+
+The old Tectonic `scripts/build_paper.py` builds frozen sources and the old rc4/v0.2.1 brief. It is not the candidate builder. Historical build receipts and manifest are unchanged.
+
+The verified rc5 manuscript and matching Lean v0.3.0-rc1 records remain at [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a). Their PDF and source identities are preserved in [the amplitude baseline](../provenance/AMPLITUDE_BASELINE.json). The old versioned reports are read in that immutable tree.

@@ -1,0 +1,149 @@
+{
+  "schema": "ising-amplitude-source-record-v1",
+  "sources": [
+    {
+      "file": "review-arxiv-v1.pdf",
+      "sha256": "72b77a9f3e439e85549a8ecec170a278d4e1beb2ca12326bea4e39e48fa43e5a",
+      "pages": 33,
+      "inspected_page_locators": [
+        [
+          7,
+          "(44)-(45), printed 8"
+        ],
+        [
+          10,
+          "(64), printed 11"
+        ],
+        [
+          11,
+          "(67)-(70), printed 12"
+        ]
+      ],
+      "url": "https://arxiv.org/pdf/1203.1456v1",
+      "pdf_redistributed": false
+    },
+    {
+      "file": "review-journal-wsl.pdf",
+      "sha256": "f7ee4da7456c5698ce3889eb0243fc9be2b45024a44bde934db3c8c0d8101350",
+      "pages": 27,
+      "inspected_page_locators": [
+        [
+          7,
+          "(44)-(45), printed 798"
+        ],
+        [
+          9,
+          "(64)-(66), printed 800"
+        ],
+        [
+          10,
+          "(67)-(71), printed 801"
+        ]
+      ],
+      "url": "https://www.lptmc.jussieu.fr/files/maillard/PUB2/The_Importance_Ising.pdf",
+      "pdf_redistributed": false
+    },
+    {
+      "file": "boukraa-arxiv-v1.pdf",
+      "sha256": "a67a545cc7776dd3153a65aa5e255e4013c16448aedfda65e900aa956b96edb3",
+      "pages": 54,
+      "inspected_page_locators": [
+        [
+          1,
+          "(2)-(7), printed 2"
+        ],
+        [
+          2,
+          "(8)-(9), printed 3"
+        ]
+      ],
+      "url": "https://arxiv.org/pdf/0808.0763v1",
+      "pdf_redistributed": false
+    },
+    {
+      "file": "orrick-2001-v1.pdf",
+      "sha256": "d6069c921d506540e13aec00fa9327aa318cd1096ce16d9eeb44152db013811f",
+      "pages": 49,
+      "inspected_page_locators": [
+        [
+          2,
+          "(1.8), printed 3"
+        ],
+        [
+          3,
+          "(1.9)-(1.13), printed 4"
+        ],
+        [
+          11,
+          "(3.12)-(3.13), printed 12"
+        ],
+        [
+          12,
+          "(3.17)-(3.20), printed 13"
+        ],
+        [
+          13,
+          "(3.23)-(3.25), printed 14"
+        ],
+        [
+          14,
+          "(3.26)-(3.27), printed 15"
+        ]
+      ],
+      "url": "https://arxiv.org/pdf/cond-mat/0103074v1",
+      "pdf_redistributed": false
+    }
+  ],
+  "review_equation_crosswalk": {
+    "amplitude": {
+      "arxiv_v1": 69,
+      "journal": 70
+    },
+    "angle": {
+      "arxiv_v1": 70,
+      "journal": 71
+    }
+  },
+  "source_typography": "Review (64) prints a plus sign inconsistent with its following explicit roots and angle relation; the actual integral and Orrick et al. (3.24) fix the relation used.",
+  "access_attempts": [
+    {
+      "source": "Nickel 1999 DOI 10.1088/0305-4470/32/21/303",
+      "routes": [
+        "web reader",
+        "Windows HTTPS",
+        "WSL HTTPS"
+      ],
+      "result": "No paper content. HTTP 200 responses were HTML from validate.perfdrive.com, not PDFs."
+    },
+    {
+      "source": "Nickel 2000 DOI 10.1088/0305-4470/33/8/313",
+      "routes": [
+        "web reader",
+        "Windows HTTPS",
+        "WSL HTTPS",
+        "normal in-app browser"
+      ],
+      "result": "No paper content. Browser visibly displayed a CAPTCHA. No challenge was solved."
+    },
+    {
+      "source": "Maillard institutional journal PDF",
+      "routes": [
+        "Windows urllib",
+        "Windows curl",
+        "WSL curl",
+        "WSL urllib"
+      ],
+      "result": "Windows TLS trust failed. WSL normal TLS verification succeeded, with the PDF hash recorded above. No TLS-validation bypass."
+    },
+    {
+      "source": "Original Nickel paper discovery",
+      "routes": [
+        "DOI metadata",
+        "OpenAlex metadata",
+        "focused author and institutional web searches"
+      ],
+      "result": "Metadata located, but no accessible original text. No statement about Nickel original intended amplitude convention is attributed."
+    }
+  ],
+  "scope": "The conversion concerns the inspected printed scalar and its cited full-site observable. Access failures limit historical attribution, not the derived selected-family conversion."
+}
