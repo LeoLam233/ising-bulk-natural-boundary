@@ -187,6 +187,7 @@ Lean code is **MIT**. The author-created manuscript and documentation are **CC B
     target=tag['sha']
     if tag['type']=='tag':target=api('GET','/git/tags/'+target)['object']['sha']
     assert target==M['merge_sha'],'Published tag points to a different commit'
+    uploaded=api('GET',f'/releases/{release["id"]}/assets?per_page=100')
     print('PUBLISHED_VERIFIED',release['html_url'],target,flush=True)
 
 report=dict(phase=M['phase'],release_id=release['id'],release_url=release['html_url'],draft=release['draft'],

@@ -2,10 +2,10 @@
   "repository": "LeoLam233/ising-bulk-natural-boundary",
   "tag": "high-temperature-v1.0.0-lean1747",
   "title": "High-temperature phase v1.0.0: complete bulk Ising susceptibility / Lean 1747",
-  "phase": "stage",
+  "phase": "publish",
   "head_sha": "34a1df515fa97c5a260d379ef54e291f8854286d",
   "source_tree": "667ab54364c25d24e34ce34a0182c51ae4950d47",
-  "merge_sha": null,
+  "merge_sha": "76c3ad5457e883cc15032fdf4205da23ceba58fe",
   "required_runs": [
     39629824601,
     39629824788
@@ -341,6 +341,48 @@
           "sha": "37c8f287d01117eb85ae670e02b32fbb365b4e95",
           "bytes": 28753,
           "sha256": "7798e9019e3f747a869902d3e6dd013a528b8481bc62c8d78dcdbc3ae273608f"
+        }
+      ]
+    },
+    {
+      "name": "HT_1747_LOCAL_EXECUTION_RECORDS.zip",
+      "bytes": 6838641,
+      "sha256": "4499df760b80312ea31f2217281aa3253936adc4977902ee6301e5964fdbfeab",
+      "chunks": [
+        {
+          "sha": "83e145696a493370ad75bfbcb4180011b9954175",
+          "bytes": 1048576,
+          "sha256": "85ade2c1f33aca32dcdac277211f7eadd5f182c4de45ad34790faeabf6b97125"
+        },
+        {
+          "sha": "d403a7898d410e6aac1de6fcc92189188d1a4b31",
+          "bytes": 1048576,
+          "sha256": "2bcf94fb1dcb7f244b8883a05d22b670c94177eda7f4574c1bd5f0566fa41c32"
+        },
+        {
+          "sha": "3ab21615f40019beaea86da17773bfff365a21e4",
+          "bytes": 1048576,
+          "sha256": "f175152bb739d203de37ac5d2d9132a364029c09a8777ea55e2e58750d324171"
+        },
+        {
+          "sha": "3ef761b7e01b83d131c153e2ae8877be9787abbd",
+          "bytes": 1048576,
+          "sha256": "be99c614c4acf486999101b48a31319e3a1b7215cdd391d24c337757061a0c94"
+        },
+        {
+          "sha": "b65b9972575a670ee0c57f89f22aa6528d9d6208",
+          "bytes": 1048576,
+          "sha256": "60e22a174bf3823e0961b78158f428040f337ba47749c3969e0d5c49942e69c1"
+        },
+        {
+          "sha": "d1ff70d82eab8841ced973d6013d24df3439f5eb",
+          "bytes": 1048576,
+          "sha256": "6c9cc09cfba17f93e1cea66419082ff81ec74d321eab76aa411e45e033c428b5"
+        },
+        {
+          "sha": "fdfbf2abc0473ced20d3fea1fdc69673122703e8",
+          "bytes": 547185,
+          "sha256": "5a0dcbe6eeb10ab967d0595b6ca1985f0b1b33a45658d86155cfdfa85692eb50"
         }
       ]
     }
