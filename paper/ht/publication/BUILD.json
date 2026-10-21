@@ -1,0 +1,13 @@
+{
+  "source_sha256": "3231b7b38dd761bf448f87bc5155e709c9ca2bafd9696edf18a32f36a040a240",
+  "pdf_sha256": "90aa65c1cda5081ba50a1c01ded3321ade5e3e97ead4025a7b18bce585f37482",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)",
+  "compile_passes": 3,
+  "rendered_pages": 34,
+  "rendering": "Poppler pdftoppm, 65 dpi all pages; title page additionally 115 dpi",
+  "mathematical_body_byte_identical": true,
+  "latex_errors": 0,
+  "unresolved_references": 0,
+  "overfull_boxes": 0,
+  "underfull_boxes": 0
+}

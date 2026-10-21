@@ -26,3 +26,17 @@ The version `HT-1.0 / Lean 1747` has passed source-identical clean builds and of
 The [low-temperature proof](../low-temperature/README.md) studies **the connected susceptibility in an ordered pure phase** and uses the complete **even-particle** expansion instead. The high-temperature theorem is not inferred from low-temperature duality and does not use the low-temperature final natural-boundary theorem; both developments reuse the same underlying mathematical library.
 
 [中文说明](README.zh.md) · [Repository home](../README.md)
+
+## Publication and citation
+
+The author-identified [publication manuscript PDF](../paper/ht/publication/manuscript.pdf)
+and [TeX](../paper/ht/publication/manuscript.tex) are a separately identified editorial
+edition. The [frozen audited manuscript](../paper/ht/frozen/manuscript.pdf) remains
+unchanged; [the editorial record](../paper/ht/publication/README.md) identifies every change.
+Cite the [high-temperature result](CITATION.cff) separately from the
+[low-temperature result](../low-temperature/CITATION.cff).
+
+Lean code: [MIT](../LICENSE). Author-created manuscript and documentation:
+[CC BY 4.0](../LICENSE-DOCUMENTATION.md).
+
+[Publication identities, exact verification and independent audit attachments](PUBLICATION.md).

@@ -26,3 +26,15 @@
 [低温相证明](../low-temperature/README.zh.md)研究的是**有序纯相的连通体磁化率**，对应**完整无限偶粒子级数**。高温相证明不由低温相结论通过对偶性直接得到；两项成果共享底层数学引理，但拥有不同的最终定理和构建入口。
 
 [English](README.md) · [仓库首页](../README.zh.md)
+
+## 署名出版版与引用
+
+本结果的[署名出版版 PDF](../paper/ht/publication/manuscript.pdf)和
+[TeX](../paper/ht/publication/manuscript.tex)仅编辑作者、联系信息及版本日期。
+[审计冻结版](../paper/ht/frozen/manuscript.pdf)保持不变；数学正文逐字节相同，
+详见[编辑身份记录](../paper/ht/publication/README.md)。
+请分别引用[高温相结果](CITATION.cff)与[低温相结果](../low-temperature/CITATION.cff)。
+新增 Lean 代码采用 [MIT](../LICENSE)，作者创作的稿件与文档采用
+[CC BY 4.0](../LICENSE-DOCUMENTATION.md)。
+
+[Publication identities, exact verification and independent audit attachments](PUBLICATION.md).

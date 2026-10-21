@@ -1,0 +1,16 @@
+--- frozen/manuscript.tex
++++ publication/manuscript.tex
+@@ -33,10 +33,10 @@
+ \newcommand{\se}{t_\varepsilon}
+ \newcommand{\cO}{\mathcal O}
+ \newcommand{\Hpair}{\mathcal H_{\alpha\beta}}
+-\hypersetup{pdftitle={High-temperature bulk Ising susceptibility: a natural-boundary proof},pdfauthor={Research campaign for Dehao Lin}}
++\hypersetup{pdftitle={High-temperature bulk Ising susceptibility: a natural-boundary proof},pdfauthor={Dehao Lin}}
+ \title{High-temperature bulk Ising susceptibility:\\a natural-boundary proof}
+-\author{Research reconstruction and extension of the supplied Ising snapshot}
+-\date{17 October 2026\\Version HT-1.0}
++\author{Dehao Lin\thanks{\raggedright School of Physics, Sun Yat-sen University.\\ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}. Contact: \href{mailto:lindh9@mail2.sysu.edu.cn}{\texttt{lindh9@mail2.sysu.edu.cn}}.}}
++\date{17 October 2026\\Version HT-1.0\\Publication edition: 21 October 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}

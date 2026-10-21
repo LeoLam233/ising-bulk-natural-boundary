@@ -18,3 +18,9 @@ Desktop.ini
 .env
 .env.*
 !.env.example
+
+# Local Lean build/dependency artifacts are never publication source.
+lean/.lake/
+*.olean
+*.olean.*
+*.ilean

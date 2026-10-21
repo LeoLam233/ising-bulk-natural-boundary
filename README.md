@@ -13,7 +13,7 @@ This repository contains two separately developed natural-boundary proofs for th
 | **All odd-particle form factors**, summed to infinity | **All even-particle form factors**, summed to infinity; subtract spontaneous magnetization squared |
 | Natural boundary: every point of `|s| = 1`, approached from `|s| < 1` | Natural boundary: every point of `|s| = 1`, approached from `|s| > 1` |
 | [**Explore the high-temperature proof →**](high-temperature/README.md) | [**Explore the low-temperature proof →**](low-temperature/README.md) |
-| [Mathematical manuscript](paper/ht/frozen/manuscript.pdf) · [Lean theorem](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [Mathematical manuscript](paper/next/manuscript.pdf) · [Lean proof entry](lean/IsingBulk.lean) |
+| [Mathematical manuscript](paper/ht/publication/manuscript.pdf) · [Lean theorem](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [Mathematical manuscript](paper/next/manuscript.pdf) · [Lean proof entry](lean/IsingBulk.lean) |
 
 Here `s = sinh(2βJ)`, `J > 0`. **Neither result is presented as a corollary of the other.** Each proof addresses its own complete physical observable and establishes noncancellation of its full particle expansion.
 
@@ -37,3 +37,5 @@ The public-facing phase folders are **navigation**, while the proof files retain
 For reproducibility, begin at the relevant phase page rather than running both build targets together. Existing LT historical releases and their paths have not been renamed to accommodate the new HT proof.
 
 [**中文首页**](README.zh.md) · [Authorship and provenance](AUTHORSHIP.md) · [Code license (MIT)](LICENSE) · [Document license (CC BY 4.0)](LICENSE-DOCUMENTATION.md)
+
+Cite the results separately: [high-temperature citation](high-temperature/CITATION.cff) · [low-temperature citation](low-temperature/CITATION.cff). The [frozen HT manuscript](paper/ht/frozen/manuscript.pdf) and [editorial comparison](paper/ht/publication/README.md) remain available.

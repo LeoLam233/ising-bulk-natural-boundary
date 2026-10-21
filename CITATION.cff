@@ -1,19 +1,14 @@
 cff-version: 1.2.0
-message: "Please cite this candidate manuscript by version and state its review status."
-type: article
-title: "A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility"
+message: "Choose high-temperature/CITATION.cff or low-temperature/CITATION.cff for the result used; the two results have distinct scientific and version identities."
+type: software
+title: "Natural boundaries of the square-lattice Ising susceptibility: high-temperature and low-temperature proofs"
 authors:
   - family-names: Lin
     given-names: Dehao
     orcid: "https://orcid.org/0009-0001-4551-8490"
     affiliation: "School of Physics, Sun Yat-sen University"
     email: "lindh9@mail2.sysu.edu.cn"
-version: "0.1-rc6"
-license: CC-BY-4.0
-abstract: "Development candidate manuscript v0.1-rc6 with Lean v0.3.0-rc2. Canonical lower-order and natural-boundary proofs no longer require E3; physical identification retains E1/E2. Proposition F.1 derives the complete-amplitude conversion on the physical exterior germ; this literature identity is manuscript-only. Exact validation is recorded separately. No independent human expert validation or peer review is claimed."
-keywords:
-  - Ising model
-  - susceptibility
-  - natural boundary
-  - candidate proof
-  - reproducibility
+version: "unified-publication-20261021"
+license: MIT
+repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
+abstract: "Shared formal mathematics with separate high-temperature and low-temperature manuscripts, theorem endpoints and verification procedures. High-temperature: complete disordered-phase susceptibility, all odd orders, HT-1.0 / Lean 1747. Low-temperature: connected ordered pure-phase susceptibility, all even orders, manuscript v0.1-rc6 / Lean v0.3.0-rc2. Manuscripts and authored documentation use CC BY 4.0. Historical low-temperature citations and releases retain their original scope."

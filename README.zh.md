@@ -13,7 +13,7 @@
 | **完整无限奇粒子 form-factor 和** | **完整无限偶粒子 form-factor 和**，扣除自发磁化平方 |
 | 从 `|s| < 1` 侧，证明单位圆每一点不可解析延拓 | 从 `|s| > 1` 侧，证明单位圆每一点不可解析延拓 |
 | [**进入高温相证明 →**](high-temperature/README.zh.md) | [**进入低温相证明 →**](low-temperature/README.zh.md) |
-| [数学论文](paper/ht/frozen/manuscript.pdf) · [Lean 最终定理](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [数学论文](paper/next/manuscript.pdf) · [Lean 证明入口](lean/IsingBulk.lean) |
+| [数学论文](paper/ht/publication/manuscript.pdf) · [Lean 最终定理](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [数学论文](paper/next/manuscript.pdf) · [Lean 证明入口](lean/IsingBulk.lean) |
 
 其中 `s = sinh(2βJ)`、`J > 0`。**两项证明不是由对方的结论直接推出的。** 它们分别证明对应物理解析芽的完整无限粒子和存在不可相消的自然边界。
 
@@ -37,3 +37,5 @@
 建议从各自的相别入口开始阅读和复现，不必一次构建两项研究。原有 LT 历史标签、发行附件和源码路径不会因整合而改写。
 
 [**English**](README.md) · [作者及来源](AUTHORSHIP.md) · [代码许可 MIT](LICENSE) · [文档许可 CC BY 4.0](LICENSE-DOCUMENTATION.md)
+
+两项结果请分别引用：[高温相](high-temperature/CITATION.cff) · [低温相](low-temperature/CITATION.cff)。[高温冻结稿件](paper/ht/frozen/manuscript.pdf)与[出版版编辑记录](paper/ht/publication/README.md)分别保留。

@@ -32,3 +32,5 @@ The low-temperature mathematical development has its own source identity, versio
 The [high-temperature proof](../high-temperature/README.md) studies the **disordered-phase complete susceptibility**, with the full **odd-particle** expansion and an analytic germ on **(|s|<1)**. The two proofs share foundational Lean modules without merging their physical observables or final natural-boundary theorems.
 
 [中文说明](README.zh.md) · [Repository home](../README.md)
+
+The [low-temperature citation](CITATION.cff) preserves the original manuscript citation, separately from the high-temperature result.
