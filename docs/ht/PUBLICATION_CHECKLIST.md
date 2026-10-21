@@ -21,8 +21,8 @@ This staging branch is based on the existing LT `main` commit `2cf997226db314ad5
 
 ## Publication metadata and release
 
-- [ ] Confirm an explicit license grant for newly introduced HT source files (the LT MIT license alone does not automatically provide that authorization).
-- [ ] Prepare a separately versioned, author-approved HT manuscript edition. Keep the audited frozen mathematical PDF/TeX byte-identical.
+- [x] User authorized MIT licensing for newly introduced HT Lean source files and CC BY 4.0 for author-created manuscript/documentation.
+- [ ] Prepare the separate HT publication edition and confirm final author metadata; retain the audited frozen PDF/TeX bytes. User approved the LT-consistent attribution and licensing policy.
 - [ ] Review version-specific citation and authorship metadata.
 - [ ] Merge only after the final combined-checkout acceptance, then publish a distinct HT-scoped tag and attach the original independent audit receipts as versioned GitHub Release assets. Do not check large audit ZIPs or compiled .olean files into the production tree.
 
