@@ -1,25 +1,41 @@
-# Ising 体磁化率自然边界候选证明
+# 二维正方晶格 Ising 体磁化率的自然边界
 
-**开发候选版：论文 v0.1-rc6 / Lean v0.3.0-rc2 · 2026 年 10 月 17 日 · 林德昊（Dehao Lin）**
+**两项独立证明 · 高温相与低温相 · 一套共享 Lean 数学基础**
 
-[English](README.md) · [候选论文](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) · [证明导读](docs/PROOF_GUIDE.md) · [数学修改](docs/AMPLITUDE_IDENTIFICATION_v0.3.0-rc2.md) · [版本身份](docs/VERSIONS.md)
+本仓库收录针对**零外场、各向同性、无限二维正方晶格 Ising 模型完整体磁化率**的两项独立证明。它们分别从高温无序态与低温有序纯相出发，处理不同的完整 form-factor 级数，并各有独立的 Lean 定理和验证入口。
 
-本分支研究零场、各向同性、无限正方晶格 Ising 模型的完整体磁化率，从低温纯相的外部解析芽延拓。研究对象包含全部格点间距和完整偶粒子级数。尚无独立人类专家验证或同行评审认证。
+## 选择要阅读的证明
 
-当前规范化级数的典范自然边界定理不再以 E3 为前提。较低偶粒子阶在原始离原点双重轮廓上，使用非平稳梯度分离和固定半径分部积分给出内部证明。编译后实际定理类型及证明体的传递依赖检查了这条替代路径。物理对象识别仍保留 E1（关联函数表示）和 E2（自发磁化公式）。旧已发表固定阶比较接口仍保留，但不在新的典范证明依赖链中。
+| **高温相：无序态磁化率** | **低温相：有序纯相连通磁化率** |
+|---|---|
+| **高温唯一 Gibbs 态的完整体磁化率** | **低温纯相的完整连通体磁化率** |
+| 物理温度区间：`0 < s < 1` | 物理温度区间：`s > 1` |
+| **完整无限奇粒子 form-factor 和** | **完整无限偶粒子 form-factor 和**，扣除自发磁化平方 |
+| 从 `|s| < 1` 侧，证明单位圆每一点不可解析延拓 | 从 `|s| > 1` 侧，证明单位圆每一点不可解析延拓 |
+| [**进入高温相证明 →**](high-temperature/README.zh.md) | [**进入低温相证明 →**](low-temperature/README.zh.md) |
+| [数学论文](paper/ht/publication/manuscript.pdf) · [Lean 最终定理](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [数学论文](paper/next/manuscript.pdf) · [Lean 证明入口](lean/IsingBulk.lean) |
 
-命题 6.1 的分支–紧集配对估计提高为保护参数盘上的 `1+C/N`；这一强度已存在于基线 Lean 中，下游估计不变。附录 B 给出首奇异系数的阶乘闭式；附录 F 区分单图、完整固定阶、离原点与全格点系数，以及相位和二倍、四倍因子。新命题 F.1 从实际全格点积分和物理延拓分支证明完整系数为 `4R_N(-theta_*)=-4i R_N(theta_*)`。文献右端标量对应单图，完整系数包含四个同相位贡献；同时区分 `T_N`、完整离原点系数 `2T_N`、全格点系数与两个物理前因子。该公式在 arXiv 版为 (69)，期刊版为 (70)。
+其中 `s = sinh(2βJ)`、`J > 0`。**两项证明不是由对方的结论直接推出的。** 它们分别证明对应物理解析芽的完整无限粒子和存在不可相消的自然边界。
 
-推论 9.4 排除任何非空单位圆弧上的实光滑延拓，给出有限素数覆盖条件及 `O(ell^-2)` 充分导数阶。`80*pi^2` 只作为渐近首项常数，不能作为所有有限弧长的统一覆盖常数。Lean 对实际规范化体函数证明了选定点处的实 `C^k` 障碍；阶乘公式、完整振幅转换与定量素数覆盖仍属于论文中的解析推导，并非新的 Lean 导出定理。
+## 仓库结构
 
-执行结果以 [状态文件](release/CURRENT_STATUS.json)、[验证回执](release/next/VALIDATION.json) 和 [全库一致性审计](docs/CONSISTENCY_AUDIT_v0.3.0-rc2.md) 为准。旧 AI 审计结论不自动适用于新版本。编译、公理检查、同一 Lean 内核的新鲜重放、有限计算和人类评审的证据范围不同。依赖缓存的二进制与源码对应关系仍被信任，未重建整个 Mathlib。详见 [Lean 复现](lean/README.md) 和 [证据限制](LIMITATIONS.md)。
+| 阅读入口 | 内容 |
+|---|---|
+| [**高温相证明**](high-temperature/README.zh.md) | 完整定理、数学手稿、Lean 源码、复现与独立审计 |
+| [**低温相证明**](low-temperature/README.zh.md) | 完整定理、数学手稿、Lean 源码、复现与历史版本 |
+| [**共享 Lean 数学模块**](lean/IsingBulk/) | 两项工作复用的分析、代数、轮廓积分与求和引理，不复制第二套 LT 数学库 |
+| [**源码及证明分区说明**](REPOSITORY_MAP.md) | 模块归属、冻结源码身份与分开的构建入口 |
 
-冻结论文 v0.1-rc4 原有 TeX、PDF 和标签索引仍在 `paper/`；新候选论文位于 `paper/next/`。rc4 标签 PDF 和后来 ORCID／参考文献编辑版 PDF 的字节不同，[版本表](docs/VERSIONS.md) 分别记录哈希。Lean v0.2.1 的不可变标签仍指向 `de23d9475744fb4625666142d5a03b3d688195e6`，历史定理仍包含 E1/E2/E3。旧记录原样保存在 [历史目录](lean/history/v0.2.1/README.md)；旧专家简报、审计、重构尝试、manifest 保留各自版本身份。本次升级不移动标签、不覆盖冻结资产、不发布正式版本、不合并默认分支。
+顶层的“高温相／低温相”目录主要负责清晰导航，原 Lean 模块路径保留冻结审计版本。低温相的独立构建入口为 `lean/IsingBulk.lean`、`lean/lakefile.toml`；高温相为 `lean/IsingBulkHT.lean`、`lean/lakefile.ht.toml`。高温证明复用底层数学引理，但不调用低温的最终自然边界定理。
 
-复现命令见 [英文首页](README.md)。当前完整性检查使用 `python scripts/verify_candidate.py`；旧 `scripts/verify_repository.py` 只检查 rc4 快照，在后续树上出现不匹配是预期现象。
+### 形式化及审计状态
 
-验证已接受的检出版本与重新编译 PDF 分为两个流程。重新编译请使用独立检出目录并遵循 [论文构建说明](paper/README.md)；新 PDF 的字节可能随引擎、字体和时间戳变化，需重新检查版面并更新 QA、验证记录与 manifest，才能作为已接受的新构建产物。
+- **低温相：**数学稿 `v0.1-rc6`，Lean `v0.3.0-rc2`；对应历史版本、验证记录及发布信息保留。
+- **高温相：**数学稿 `HT-1.0`，Lean 冻结版 `1747`；已通过干净构建、官方 fresh 内核重放，以及独立 Pro/Codex 敌对性审计（均为 `EXHAUSTED`）。物理解析芽定理显式使用已发表的实温度完整体磁化率 form-factor 公式。
+- 目前没有独立人类同行评审结果；每项研究的数学范围、物理输入、审计与来源记录分别保存。
 
-林德昊为署名人类作者与公开联系人，ORCID [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490)。生成式 AI 广泛参与研究、推导、写作、代码和内部核查。[作者声明](AUTHORSHIP.md)；代码 MIT，项目原创文字 CC BY 4.0，第三方作品保留其权利。
+建议从各自的相别入口开始阅读和复现，不必一次构建两项研究。原有 LT 历史标签、发行附件和源码路径不会因整合而改写。
 
-已验证的 rc5 / Lean v0.3.0-rc1 候选版完整保留在 [`dd977048`](https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/dd977048c2380e775d83b97ae1fba354c04c349a)；原生产 Lean 源文件逐字节不变。本修订使用新的论文版本、源码对应身份与执行回执，只更新现有 PR #3，不新建 PR 或合并 main。
+[**English**](README.md) · [作者及来源](AUTHORSHIP.md) · [代码许可 MIT](LICENSE) · [文档许可 CC BY 4.0](LICENSE-DOCUMENTATION.md)
+
+两项结果请分别引用：[高温相](high-temperature/CITATION.cff) · [低温相](low-temperature/CITATION.cff)。[高温冻结稿件](paper/ht/frozen/manuscript.pdf)与[出版版编辑记录](paper/ht/publication/README.md)分别保留。

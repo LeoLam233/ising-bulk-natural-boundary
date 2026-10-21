@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Cite this high-temperature result separately from the low-temperature result."
+type: article
+title: "High-temperature bulk Ising susceptibility: a natural-boundary proof"
+authors:
+  - family-names: Lin
+    given-names: Dehao
+    orcid: "https://orcid.org/0009-0001-4551-8490"
+    affiliation: "School of Physics, Sun Yat-sen University"
+    email: "lindh9@mail2.sysu.edu.cn"
+version: "HT-1.0-publication-20261021 / Lean 1747"
+date-released: 2026-10-21
+license: CC-BY-4.0
+url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/high-temperature-v1.0.0-lean1747"
+abstract: "Complete zero-field bulk magnetic susceptibility in the disordered high-temperature phase, with every positive odd-particle form-factor order. The Lean physical-germ theorem explicitly assumes the published real-temperature angular representation. Mathematical manuscript HT-1.0, editorial publication edition 21 October 2026, Lean source freeze HT_STANDALONE_20261020T1747Z. AI audits are not independent human peer review."
+keywords:
+  - Ising model
+  - high-temperature phase
+  - complete bulk susceptibility
+  - natural boundary
+  - Lean

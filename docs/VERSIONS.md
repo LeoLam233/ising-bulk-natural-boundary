@@ -1,5 +1,24 @@
 # Authoritative versions and artifact identities
 
+## Unified publication: two result identities
+
+| Result | Mathematical manuscript | Lean identity | Citation |
+|---|---|---|---|
+| High-temperature phase, complete disordered susceptibility, all odd orders | HT-1.0; [publication edition](../paper/ht/publication/README.md), 21 October 2026; [frozen audited edition](../paper/ht/frozen/manuscript.pdf) unchanged | `HT_STANDALONE_20261020T1747Z`; release `high-temperature-v1.0.0-lean1747` | [High-temperature](../high-temperature/CITATION.cff) |
+| Low-temperature phase, connected ordered pure-phase susceptibility, all even orders | v0.1-rc6 | v0.3.0-rc2; original sources unchanged | [Low-temperature](../low-temperature/CITATION.cff) |
+
+The new high-temperature tag identifies a separate result. It does not rename or
+reassign the low-temperature releases. The baseline `lean/IsingBulk` Git tree at
+integration is `ca47fde26285028603c7e87a9893aad31933b526`. All 1,079 baseline files
+and 447 overlay files are bound by the [overlay manifest](../HT_1747_OVERLAY_MANIFEST.json).
+The complete original standalone project has 1,521 matching production files.
+
+The historical low-temperature version ledger follows verbatim. Statements such
+as "No release tag or main merge" describe the candidate at the time of that record.
+The phase-specific publication records govern the later unified publication.
+
+## Historical low-temperature ledger
+
 | Version / artifact | Authority | Assumptions / scope |
 |---|---|---|
 | Published manuscript v0.1-rc4 | Immutable tag at `1b4b506c9cb19d5fdbf9f59d89c7a179739d337d`; tagged PDF SHA-256 `624429bb0f2c211fec26cbc9e7608add65eb26a133a6af57259830b5fabd7693` | Historical E1/E2/E3 analytic candidate. |

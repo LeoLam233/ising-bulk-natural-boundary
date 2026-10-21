@@ -1,0 +1,10 @@
+{
+  "frozen_source_sha256": "128739407e585457b38d150bd5a74514d8567b5a936c8b4bc2a5c613b1962c65",
+  "publication_source_sha256": "3231b7b38dd761bf448f87bc5155e709c9ca2bafd9696edf18a32f36a040a240",
+  "mathematical_document_body_byte_identical": true,
+  "changes": [
+    "PDF author metadata",
+    "human author, affiliation, ORCID and contact",
+    "publication edition date"
+  ]
+}
