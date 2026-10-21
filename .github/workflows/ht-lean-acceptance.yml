@@ -1,0 +1,70 @@
+name: HT Ising Lean formalization acceptance
+on:
+  pull_request:
+    paths:
+      - 'lean/IsingBulk/HT/**'
+      - 'lean/IsingBulk/HT.lean'
+      - 'lean/IsingBulk/First/Regular*.lean'
+      - 'lean/IsingBulk/Analysis/BranchUpper.lean'
+      - 'lean/IsingBulkHT.lean'
+      - 'lean/AuditHT.lean'
+      - 'lean/lakefile.ht.toml'
+      - 'lean/lake-manifest.json'
+      - 'lean/lean-toolchain'
+      - '.github/workflows/ht-lean-acceptance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ht-build-audit-fresh-kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    defaults:
+      run:
+        working-directory: lean
+        shell: bash
+    env:
+      LEAN_NUM_THREADS: '2'
+      LAKE_NO_CACHE: 'true'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install pinned official Lean 4.34.1
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Fetch pinned Mathlib dependency artifacts
+        run: |
+          lean --version
+          lake -f lakefile.ht.toml exe cache get
+      - name: Verify the combined source tree
+        run: python3 ../scripts/verify_ht_source_overlay.py
+      - name: Build HT and audit the full root
+        run: |
+          set -o pipefail
+          lake -f lakefile.ht.toml -R -H build IsingBulkHT AuditHT 2>&1 | tee "$RUNNER_TEMP/ht-build.log"
+      - name: Strict HT audit
+        run: |
+          set -o pipefail
+          lake -f lakefile.ht.toml env lean -j1 -DwarningAsError=true AuditHT.lean 2>&1 | tee "$RUNNER_TEMP/ht-audit.log"
+      - name: Official fresh kernel replay
+        run: |
+          set -o pipefail
+          lake -f lakefile.ht.toml env leanchecker --fresh --verbose IsingBulkHT 2>&1 | tee "$RUNNER_TEMP/ht-replay.log"
+      - name: LT root regression
+        run: |
+          set -o pipefail
+          lake -f lakefile.toml build IsingBulk Audit 2>&1 | tee "$RUNNER_TEMP/lt-regression.log"
+      - name: Preserve execution logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ht-1747-acceptance-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/ht-build.log
+            ${{ runner.temp }}/ht-audit.log
+            ${{ runner.temp }}/ht-replay.log
+            ${{ runner.temp }}/lt-regression.log
+          if-no-files-found: ignore
+          retention-days: 90

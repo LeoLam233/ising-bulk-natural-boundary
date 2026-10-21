@@ -1,0 +1,30 @@
+import IsingBulk.HT.Tail.FullOddTailAssembly
+
+-- Run only after the pinned dependency closure has compiled successfully.
+-- These commands are verification requests, not verification receipts.
+#check IsingBulk.HT.Tail.negative_algebraic_microcore_gap
+#check IsingBulk.HT.Tail.negative_microcore_source_window_capped
+#check IsingBulk.HT.Tail.negative_selected_angleBox_microcore_window_littleO
+#check IsingBulk.HT.Tail.negative_ht_common_source_odd_tail_small
+#check IsingBulk.HT.Tail.selected_negative_absolute_upper_odd_tail_small
+#check IsingBulk.HT.Tail.selected_negative_upper_odd_tail_summable
+#check IsingBulk.HT.Tail.selected_negative_complex_upper_odd_tail_small
+#check IsingBulk.HT.Tail.selected_negative_upper_odd_tail_epsilon_zero
+#print axioms IsingBulk.HT.Tail.negative_algebraic_microcore_gap
+#print axioms IsingBulk.HT.Tail.negative_microcore_source_window_capped
+#print axioms IsingBulk.HT.Tail.selected_negative_absolute_upper_odd_tail_small
+#print axioms IsingBulk.HT.Tail.selected_negative_upper_odd_tail_epsilon_zero
+
+-- Original negative integer-angle family; this is the FIRST-compatible endpoint.
+#check IsingBulk.HT.Tail.negative_original_family_absolute_upper_odd_tail_small
+#check IsingBulk.HT.Tail.negative_original_family_upper_odd_tail_summable
+#check IsingBulk.HT.Tail.negative_original_family_complex_upper_odd_tail_small
+#check IsingBulk.HT.Tail.negative_original_family_upper_odd_tail_epsilon_zero
+#print axioms IsingBulk.HT.Tail.negative_original_family_absolute_upper_odd_tail_small
+#print axioms IsingBulk.HT.Tail.negative_original_family_upper_odd_tail_epsilon_zero
+
+#check IsingBulk.HT.Tail.selected_positive_absolute_upper_full_odd_tail_small
+#check IsingBulk.HT.Tail.negative_original_family_absolute_upper_full_odd_tail_small
+#check IsingBulk.HT.Tail.negative_original_family_onsite_derivative_subpower
+#print axioms IsingBulk.HT.Tail.selected_positive_upper_full_odd_tail_epsilon_zero
+#print axioms IsingBulk.HT.Tail.negative_original_family_upper_full_odd_tail_epsilon_zero
