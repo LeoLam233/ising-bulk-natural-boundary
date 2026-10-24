@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Verify frozen baseline, overlay and editorial source
-        run: python3 scripts/verify_unified_publication.py
+        run: python3 scripts/verify_three_proof_publication.py
       - name: Install pinned official Lean 4.34.1
         run: |
           curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
@@ -41,7 +41,7 @@ jobs:
           set -o pipefail
           lake -f lakefile.toml env leanchecker --fresh --verbose IsingBulk 2>&1 | tee "$RUNNER_TEMP/low-temperature-replay.log"
       - name: Recheck source identity
-        run: python3 scripts/verify_unified_publication.py
+        run: python3 scripts/verify_three_proof_publication.py
       - name: Preserve low-temperature execution logs
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -74,7 +74,9 @@ jobs:
         working-directory: lean
         run: lake -f lakefile.ht.toml exe cache get
       - name: Execute the complete source-only high-temperature gate with receipts
-        run: python3 -u scripts/run_high_temperature_verification.py --output "$RUNNER_TEMP/high-temperature-verification"
+        run: |
+          python3 scripts/prepare_three_proof_checkout.py --output "$RUNNER_TEMP/high-temperature-source"
+          python3 -u "$RUNNER_TEMP/high-temperature-source/scripts/run_three_proof_verification.py" --only ht --output "$RUNNER_TEMP/high-temperature-verification"
       - name: Preserve exact commands, stdout, stderr and receipts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

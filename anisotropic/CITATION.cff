@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Cite this fixed-ratio anisotropic result separately from the isotropic LT and HT results."
+type: article
+title: "Natural boundaries of the full bulk susceptibility for the fixed-ratio anisotropic square-lattice Ising model"
+authors:
+  - family-names: Lin
+    given-names: Dehao
+    orcid: "https://orcid.org/0009-0001-4551-8490"
+    affiliation: "School of Physics, Sun Yat-sen University"
+    email: "lindh9@mail2.sysu.edu.cn"
+version: "ANISO C001 publication-20261024"
+date-released: 2026-10-24
+license: CC-BY-4.0
+url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/main/anisotropic"
+repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
+abstract: "Full infinite odd/even particle expansions of the anisotropic square-lattice bulk susceptibility at each fixed finite positive coupling ratio, all lattice separations, and every finite frontier point of the correct HT/LT complex domains. The terminal Lean uniform-field theorem explicitly takes PublishedRealSpinFormFactors and PublishedRealGibbsFields. Frozen C001 mathematics; author/metadata-only publication edition dated 24 October 2026."
+keywords:
+  - Ising model
+  - anisotropic
+  - full bulk susceptibility
+  - natural boundary
+  - Lean

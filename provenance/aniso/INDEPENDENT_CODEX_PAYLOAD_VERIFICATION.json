@@ -1,0 +1,24 @@
+{
+  "utc_start": "2026-10-24T04:43:46.974067+00:00",
+  "archive": "C:\\Users\\26023\\Documents\\Codex\\2026-10-24\\aniso-c001-integrate-and-publish-the\\outputs\\release-assets\\ANISO_C001_EVIDENCE.zip",
+  "state": "PASS",
+  "utc_end": "2026-10-24T04:44:06.698270+00:00",
+  "archive_bytes": 428305070,
+  "archive_sha256": "5c1ef7f28e70228cc33376d5fe62e2310e93e38acce438515635561a2f506c6e",
+  "payload_files": 3421,
+  "payload_bytes": 5543038266,
+  "all_members_read_with_CRC": true,
+  "all_payload_SHA256_checked": true,
+  "frozen_input_files": 2292,
+  "frozen_lean_and_config_files": 2279,
+  "original_zip_exact_frozen_bytes": true,
+  "initial_seals": {
+    "MAIN": "3bde8a107de2bb4cb4ca970420360b458c9f3ba69982feab8a9956a21474613e",
+    "A": "1a97b93804f10bd93d16bfd282a55667ee5dfc91c4ca5f53a5099fd00f191df1",
+    "B": "f7ece6e816715231f0588f76509309cbfef2cac2ba415dd60dff4efe292d1265",
+    "C": "bc079f51f3450d5d82ac39a18c1a94d23f7189c1eb775dfb1eb7063b99993b83"
+  },
+  "required_actual_commands": 36,
+  "terminal_verdict": "EXHAUSTED",
+  "manifest_self_hash_policy": "MANIFEST.json is excluded from its own payload list; archive SHA binds its exact bytes."
+}

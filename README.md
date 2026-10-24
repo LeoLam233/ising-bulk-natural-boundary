@@ -1,41 +1,33 @@
 # Natural boundaries of the square-lattice Ising susceptibility
 
-**Two distinct proofs · Two temperature phases · One shared formal mathematics library**
+**Three research results · distinct physical observables and theorem endpoints · one shared Lean library**
 
-This repository contains two separately developed natural-boundary proofs for the **complete zero-field bulk magnetic susceptibility** of the infinite isotropic square-lattice Ising model. Both concern the full lattice and infinite form-factor expansions. The proofs have different physical starting states, different particle-number sectors, and separate Lean verification entry points.
+This repository presents the complete bulk susceptibility on the infinite square lattice: separate isotropic low-temperature and high-temperature proofs, and a fixed-ratio anisotropic result covering both phases. Every result retains its own manuscript, physical inputs, citation and reproducible Lean endpoint.
 
-## Choose a proof
+- **ANISO C001:** [manuscript](paper/aniso/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [build](docs/aniso/BUILD_AND_VERIFY.md) · [citation](anisotropic/CITATION.cff).
+- **Isotropic HT:** [manuscript](paper/ht/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [build](docs/ht/BUILD_AND_VERIFY.md) · [citation](high-temperature/CITATION.cff).
+- **Isotropic LT:** [manuscript](paper/next/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [build](lean/README.md) · [citation](low-temperature/CITATION.cff).
 
-| **HIGH-TEMPERATURE PHASE** · Disordered state | **LOW-TEMPERATURE PHASE** · Ordered pure state |
-|---|---|
-| **Complete bulk susceptibility in the high-temperature Gibbs state** | **Connected bulk susceptibility in a low-temperature pure phase** |
-| Physical interval: `0 < s < 1` | Physical interval: `s > 1` |
-| **All odd-particle form factors**, summed to infinity | **All even-particle form factors**, summed to infinity; subtract spontaneous magnetization squared |
-| Natural boundary: every point of `|s| = 1`, approached from `|s| < 1` | Natural boundary: every point of `|s| = 1`, approached from `|s| > 1` |
-| [**Explore the high-temperature proof →**](high-temperature/README.md) | [**Explore the low-temperature proof →**](low-temperature/README.md) |
-| [Mathematical manuscript](paper/ht/publication/manuscript.pdf) · [Lean theorem](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [Mathematical manuscript](paper/next/manuscript.pdf) · [Lean proof entry](lean/IsingBulk.lean) |
+## Fixed-ratio anisotropic result — ANISO C001
 
-Here `s = sinh(2βJ)`, `J > 0`. **Neither result is presented as a corollary of the other.** Each proof addresses its own complete physical observable and establishes noncancellation of its full particle expansion.
+Every finite `J > 0`, `lam > 0`; all lattice sites and infinite odd/even particle orders. Natural boundaries at every finite point of the correct HT lens/LT epigraph frontiers, plus HT bilateral and LT plus-state right-sided uniform-field responses. The explicit real-spin and Gibbs-field inputs are [specified here](docs/aniso/PHYSICAL_INPUTS.md).
 
-## How the repository is organized
+[Explore ANISO](anisotropic/README.md) · [Manuscript](paper/aniso/publication/manuscript.pdf) · [Lean: `IsingBulk.Anisotropic.full_uniform_field_conclusion`](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [Build](docs/aniso/BUILD_AND_VERIFY.md) · [Citation](anisotropic/CITATION.cff)
 
-| Area | What it contains |
-|---|---|
-| [**High-temperature proof**](high-temperature/README.md) | High-temperature theorem, complete manuscript, Lean proof, reproducibility and independent audits |
-| [**Low-temperature proof**](low-temperature/README.md) | Low-temperature theorem, complete manuscript, Lean proof, reproducibility and historical releases |
-| [**Shared Lean mathematics**](lean/IsingBulk/) | Reusable analytic, algebraic, contour and summability lemmas; no duplicate copy of the LT library |
-| [**Proof and version map**](REPOSITORY_MAP.md) | Exact module ownership, frozen source boundaries and independent build targets |
+## Isotropic high-temperature result — HT-1.0 / Lean 1747
 
-The public-facing phase folders are **navigation**, while the proof files retain their audited Lean module paths and names. The low-temperature build remains `lean/IsingBulk.lean` with `lean/lakefile.toml`; the high-temperature build is `lean/IsingBulkHT.lean` with `lean/lakefile.ht.toml`. The latter reuses foundational LT mathematics without invoking the LT final natural-boundary theorem.
+Complete disordered-phase susceptibility for `0 < s < 1`, with every odd-particle order and the unit circle approached from inside. The physical-germ theorem explicitly takes the published real-temperature full-bulk angular representation.
 
-### Verification status
+[Explore HT](high-temperature/README.md) · [Manuscript](paper/ht/publication/manuscript.pdf) · [Lean: `IsingBulk.HT.Final.publishedPhysicalSusceptibility_germ_natural_boundary`](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [Build](docs/ht/BUILD_AND_VERIFY.md) · [Citation](high-temperature/CITATION.cff)
 
-- **Low-temperature:** mathematical manuscript `v0.1-rc6`; Lean `v0.3.0-rc2`, with its own published Git history and verification records.
-- **High-temperature:** frozen mathematical manuscript `HT-1.0`; Lean `1747`, with source-identical clean builds, fresh kernel replay and independent Pro/Codex adversarial audits reporting `EXHAUSTED`. The physical-germ theorem explicitly assumes the published real-temperature full-bulk form-factor identity.
-- The two proof developments have not received independent human peer review; mathematical scope, external physical inputs, version identities and audit evidence are documented separately.
+## Isotropic low-temperature result — manuscript v0.1-rc6 / Lean v0.3.0-rc2
 
-For reproducibility, begin at the relevant phase page rather than running both build targets together. Existing LT historical releases and their paths have not been renamed to accommodate the new HT proof.
+Connected ordered pure-phase susceptibility for `s > 1`, with every positive even-particle order, spontaneous magnetization squared subtracted, and the unit circle approached from outside. Physical identification retains the documented E1/E2 interface.
 
-[**中文首页**](README.zh.md) · [Authorship and provenance](AUTHORSHIP.md) · [Code license (MIT)](LICENSE) · [Document license (CC BY 4.0)](LICENSE-DOCUMENTATION.md)
+[Explore LT](low-temperature/README.md) · [Manuscript](paper/next/manuscript.pdf) · [Lean: `IsingBulk.Final.theorem_nb_physical`](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [Build](lean/README.md) · [Citation](low-temperature/CITATION.cff)
 
-Cite the results separately: [high-temperature citation](high-temperature/CITATION.cff) · [low-temperature citation](low-temperature/CITATION.cff). The [frozen HT manuscript](paper/ht/frozen/manuscript.pdf) and [editorial comparison](paper/ht/publication/README.md) remain available.
+Here `s = sinh(2βJ)` in the isotropic results; ANISO fixes the coupling ratio before continuing `z = 2βJ` into the complex plane. The [repository map](REPOSITORY_MAP.md) and [version index](docs/VERSIONS.md) distinguish the shared mathematics, frozen sources and publication editions. Existing LT/HT paths, releases and historical records are retained.
+
+The ANISO [frozen 38-page audit edition](paper/aniso/frozen/manuscript.pdf) and [separate 39-page research-original](paper/aniso/research-original/manuscript.pdf) remain available. Its initial publication edition changes only preamble metadata; [later editorial work](docs/aniso/EDITORIAL_FOLLOWUP_SCOPE.md) has a separate scope. [Audit provenance](docs/aniso/AUDIT_EVIDENCE.md) and current execution receipts distinguish reported investigations from actual publication gates.
+
+[中文首页](README.zh.md) · [Authorship and provenance](AUTHORSHIP.md) · [MIT source license](LICENSE) · [CC BY 4.0 author-document license](LICENSE-DOCUMENTATION.md)

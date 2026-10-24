@@ -1,0 +1,51 @@
+{
+  "scope": "Recorded rerun on unmodified extracted inputs; initial verification also preceded repository integration.",
+  "executions": [
+    {
+      "argv": [
+        "C:\\Users\\26023\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "VERIFY_HANDOFF.py"
+      ],
+      "cwd": "C:\\Users\\26023\\Documents\\Codex\\2026-10-24\\aniso-c001-integrate-and-publish-the\\work\\handoff",
+      "started_utc": "2026-10-24T04:18:51.132350+00:00",
+      "wall_seconds": 0.1880000000819564,
+      "exit_code": 0,
+      "logs": {
+        "stdout": {
+          "text": "PASS: 8 exact handoff payloads and nested C001 identity; ready for source-publication work\r\n",
+          "sha256": "02331d2bef29e47043ca84abed14534c04d4f37a4669cc20969ccb6527ae6f26"
+        },
+        "stderr": {
+          "text": "",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "verifier_sha256": "fa3b8aee373bd62dc4197703a0323d5d072bdc0b6d055be7a477deaa76125b32"
+    },
+    {
+      "argv": [
+        "C:\\Users\\26023\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "VERIFY_INPUT.py"
+      ],
+      "cwd": "C:\\Users\\26023\\Documents\\Codex\\2026-10-24\\aniso-c001-integrate-and-publish-the\\work\\frozen",
+      "started_utc": "2026-10-24T04:18:51.321558+00:00",
+      "wall_seconds": 1.9059999999590218,
+      "exit_code": 0,
+      "logs": {
+        "stdout": {
+          "text": "PASS: 2290 unchanged files, exact paths and SHA-256; verified source, not mathematical truth.\r\n",
+          "sha256": "4239e53c5c40649cf5b3e85da9372586393a5d914000f589e6165cd7ab72d9eb"
+        },
+        "stderr": {
+          "text": "",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "verifier_sha256": "64f526f7225913870e877688e062dc06f55f72c92d6dfee24596cf2677d42457"
+    }
+  ],
+  "outer_archive": {
+    "bytes": 5999128,
+    "sha256": "103d3f75e3822409b2bd018728fb022ff811b8b5e5d2db7c65adc2fa47d4748e"
+  }
+}

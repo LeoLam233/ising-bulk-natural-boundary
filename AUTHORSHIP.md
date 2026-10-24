@@ -13,9 +13,9 @@ Historical audit and reconstruction records retain their original session descri
 
 Project code: [MIT](LICENSE). Manuscript and project-authored prose: [CC BY 4.0](LICENSE-DOCUMENTATION.md), to the extent of the author's rights; third-party content retains its own rights. No additional funding or competing interests are declared. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
-## Two separately identified results
+## Three separately identified results
 
-The same human author and contact apply to the high-temperature and low-temperature
+The same human author and contact apply to the fixed-ratio anisotropic, high-temperature and low-temperature
 results. The high-temperature manuscript HT-1.0 has a frozen audited edition and a
 separate [21 October 2026 publication edition](paper/ht/publication/README.md),
 with Lean freeze `HT_STANDALONE_20261020T1747Z`. Its sole external physical input
@@ -23,3 +23,13 @@ is the published real-temperature full-bulk odd-particle angular representation.
 The low-temperature manuscript v0.1-rc6 and Lean v0.3.0-rc2 retain their own
 physical E1/E2 interfaces and historical identities. The earlier version references
 above describe the low-temperature development.
+
+The [ANISO C001 publication](anisotropic/README.md), dated 24 October 2026,
+preserves its frozen 38-page mathematical audit edition and a separate 39-page
+research-original. Its author-identified edition changes only preamble metadata.
+The two explicit physical-entry structures and their Gibbs interpretation are
+[specified together](docs/aniso/PHYSICAL_INPUTS.md). Its historical C001 label
+is a source label, not a reconstructed Git commit. [Audit provenance and archive
+availability](docs/aniso/AUDIT_EVIDENCE.md) distinguish internal, independent
+Codex, independent Pro and current publication executions. The same MIT/CC BY
+4.0 split and authorship declarations above apply.
