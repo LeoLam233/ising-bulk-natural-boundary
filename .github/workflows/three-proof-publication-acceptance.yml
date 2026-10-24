@@ -57,7 +57,9 @@ jobs:
         working-directory: lean
         run: lake -f lakefile.anisotropic.toml exe cache get
       - name: Execute clean phase build, strict audit and distinct fresh replay
-        run: python3 -u scripts/run_three_proof_verification.py --only ${{ matrix.phase }} --output "$RUNNER_TEMP/${{ matrix.phase }}-verification"
+        run: |
+          python3 scripts/prepare_three_proof_checkout.py --output "$RUNNER_TEMP/${{ matrix.phase }}-source"
+          python3 -u "$RUNNER_TEMP/${{ matrix.phase }}-source/scripts/run_three_proof_verification.py" --only ${{ matrix.phase }} --output "$RUNNER_TEMP/${{ matrix.phase }}-verification"
       - name: Preserve exact commands and execution evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -71,5 +73,6 @@ jobs:
             ${{ runner.temp }}/${{ matrix.phase }}-verification/runtime-and-source-identity.json
             ${{ runner.temp }}/${{ matrix.phase }}-verification/project-proof-object-sha256.json
             ${{ runner.temp }}/${{ matrix.phase }}-verification/SUMMARY.json
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/CLEAN_SOURCE_PREFLIGHT.json
           if-no-files-found: error
           retention-days: 90

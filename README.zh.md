@@ -4,6 +4,10 @@
 
 本仓库分别展示各向同性低温、各向同性高温，以及固定耦合比各向异性模型的完整体磁化率结果。每个结果保留独立论文、物理前提、引用信息与构建入口。
 
+- **ANISO C001：**[论文](paper/aniso/publication/manuscript.pdf) · [Lean 终点](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [构建](docs/aniso/BUILD_AND_VERIFY.md) · [引用](anisotropic/CITATION.cff)。
+- **各向同性 HT：**[论文](paper/ht/publication/manuscript.pdf) · [Lean 终点](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [构建](docs/ht/BUILD_AND_VERIFY.md) · [引用](high-temperature/CITATION.cff)。
+- **各向同性 LT：**[论文](paper/next/manuscript.pdf) · [Lean 终点](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [构建](lean/README.md) · [引用](low-temperature/CITATION.cff)。
+
 ## 固定耦合比各向异性结果 — ANISO C001
 
 覆盖任意有限 `J > 0`、`lam > 0`、所有晶格位点和全部无限奇/偶粒子阶。自然边界覆盖高温透镜域和低温右侧上图域边界的每个有限点，同时给出高温双侧及低温正相右侧零场响应。显式的实温自旋与 Gibbs 场前提见[物理接口](docs/aniso/PHYSICAL_INPUTS.md)。

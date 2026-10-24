@@ -12,7 +12,7 @@ The planned release identity is `anisotropic-v1.0.0-leanc001`. A release is issu
 - Unchanged C001 proofs, [actual final theorem](../lean/IsingBulk/Anisotropic/Final/FullTheorem.lean), separate [partial/unsafe closure audit](../lean/AuditAnisotropicClosure.lean), and [reproduction instructions](../docs/aniso/BUILD_AND_VERIFY.md).
 - Release manuscripts, source-only reproducer, independently checkable SHA-256 manifest, and compact execution/source receipts. Large raw logs and compiled artifacts remain outside Git.
 
-The independent Codex archive is expected to be exactly 428,305,070 bytes with SHA-256 `5c1ef7f28e70228cc33376d5fe62e2310e93e38acce438515635561a2f506c6e`. It is attached only if those actual bytes are recovered and verified. [Evidence availability](../docs/aniso/AUDIT_EVIDENCE.md) distinguishes that archive from the missing distinct Pro archive and from newly executed publication gates.
+The independent Codex archive was recovered from ChatGPT Library and verified to be exactly 428,305,070 bytes with SHA-256 `5c1ef7f28e70228cc33376d5fe62e2310e93e38acce438515635561a2f506c6e`. All 3,421 manifest payloads pass CRC/SHA-256 checks, and all 2,279 frozen source hashes match. It is prepared outside Git as a release asset. [Evidence availability](../docs/aniso/AUDIT_EVIDENCE.md) distinguishes that archive from the missing distinct Pro archive and from newly executed publication gates.
 
 ## Editorial boundary
 

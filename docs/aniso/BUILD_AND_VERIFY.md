@@ -21,10 +21,11 @@ Begin in a new source checkout with **zero candidate-project `.olean` files**. P
 cd lean
 lake -f lakefile.anisotropic.toml exe cache get
 cd ..
-python3 -u scripts/run_three_proof_verification.py --output /absolute/new/receipt-directory
+python3 scripts/prepare_three_proof_checkout.py --output /absolute/new/source-checkout
+python3 -u /absolute/new/source-checkout/scripts/run_three_proof_verification.py --output /absolute/new/receipt-directory
 ```
 
-The gate rejects pre-existing project objects, verifies dependency Git revisions and tracked cleanliness, rejects project namespaces injected into upstream caches, and records official binary hashes, compiler versions, checkout identity, source SHA-256, environment, full argv/cwd, raw stdout/stderr/combined logs, exit codes and wall-clock timings. It stops on a failed command. Re-run it from a fresh source checkout for the merged commit.
+The preparation helper creates a fresh Git worktree and shares only `.lake/packages`. Configuration objects generated during upstream-cache preparation are left in the preparation checkout. The gate rejects every pre-existing project object, verifies dependency Git revisions and tracked cleanliness, rejects project namespaces injected into upstream caches, and records official binary hashes, compiler versions, checkout identity, source SHA-256, environment, full argv/cwd, raw stdout/stderr/combined logs, exit codes and wall-clock timings. It stops on a failed command. Re-run it from a fresh source checkout for the merged commit.
 
 Compilation is bounded to two official Lean compiler processes through the pinned Lake release's `LEAN_SYSROOT` override and a separate `flock` execution shim; each real compiler argv is logged. Official libraries and compiler bytes are unchanged. Each compiler uses `-j1`, and the environment uses `LEAN_NUM_THREADS=2`. Candidate project outputs are never restored from a cache. `--only aniso`, `--only lt` and `--only ht` allow distinct fresh-checkout CI jobs, each with its own fresh replay; the default executes all three in sequence.
 

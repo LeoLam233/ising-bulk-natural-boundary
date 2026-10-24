@@ -1,0 +1,15 @@
+{
+  "recovered_from": "ChatGPT Library file ANISO_C001_EVIDENCE.zip, browser download",
+  "verified_utc": "2026-10-24T04:43:46.813565+00:00",
+  "archive_name": "ANISO_C001_EVIDENCE.zip",
+  "archive_bytes": 428305070,
+  "archive_sha256": "5c1ef7f28e70228cc33376d5fe62e2310e93e38acce438515635561a2f506c6e",
+  "zip_entries": 3422,
+  "manifest_payload_files": 3421,
+  "frozen_lean_and_configuration_files": 2279,
+  "all_2279_source_hashes_match_handoff": true,
+  "actual_successful_commands": 36,
+  "execution_matrix_sha256": "e906deae76aa5c71247d78fae0ce1ac627e13e1895ee9265e6eac1eef7b75f14",
+  "verifier_sha256": "fa038f4589ef91631d815628fb1219ef0dc60372a3668757a6b672c90135a999",
+  "distinct_pro_archive": "Unavailable: distinct 684.4 MB archive lost before durable storage"
+}

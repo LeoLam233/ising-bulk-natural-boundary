@@ -36,7 +36,9 @@ jobs:
         working-directory: lean
         run: lake -f lakefile.anisotropic.toml exe cache get
       - name: Execute clean ANISO build, strict audits, controls and fresh replay
-        run: python3 -u scripts/run_three_proof_verification.py --only aniso --output "$RUNNER_TEMP/aniso-c001-verification"
+        run: |
+          python3 scripts/prepare_three_proof_checkout.py --output "$RUNNER_TEMP/aniso-c001-source"
+          python3 -u "$RUNNER_TEMP/aniso-c001-source/scripts/run_three_proof_verification.py" --only aniso --output "$RUNNER_TEMP/aniso-c001-verification"
       - name: Preserve exact argv, source/runtime identity and raw execution receipts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -50,5 +52,6 @@ jobs:
             ${{ runner.temp }}/aniso-c001-verification/runtime-and-source-identity.json
             ${{ runner.temp }}/aniso-c001-verification/project-proof-object-sha256.json
             ${{ runner.temp }}/aniso-c001-verification/SUMMARY.json
+            ${{ runner.temp }}/aniso-c001-verification/CLEAN_SOURCE_PREFLIGHT.json
           if-no-files-found: error
           retention-days: 90

@@ -4,6 +4,10 @@
 
 This repository presents the complete bulk susceptibility on the infinite square lattice: separate isotropic low-temperature and high-temperature proofs, and a fixed-ratio anisotropic result covering both phases. Every result retains its own manuscript, physical inputs, citation and reproducible Lean endpoint.
 
+- **ANISO C001:** [manuscript](paper/aniso/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [build](docs/aniso/BUILD_AND_VERIFY.md) · [citation](anisotropic/CITATION.cff).
+- **Isotropic HT:** [manuscript](paper/ht/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [build](docs/ht/BUILD_AND_VERIFY.md) · [citation](high-temperature/CITATION.cff).
+- **Isotropic LT:** [manuscript](paper/next/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [build](lean/README.md) · [citation](low-temperature/CITATION.cff).
+
 ## Fixed-ratio anisotropic result — ANISO C001
 
 Every finite `J > 0`, `lam > 0`; all lattice sites and infinite odd/even particle orders. Natural boundaries at every finite point of the correct HT lens/LT epigraph frontiers, plus HT bilateral and LT plus-state right-sided uniform-field responses. The explicit real-spin and Gibbs-field inputs are [specified here](docs/aniso/PHYSICAL_INPUTS.md).

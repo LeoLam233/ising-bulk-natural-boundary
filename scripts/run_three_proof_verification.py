@@ -47,6 +47,9 @@ def main():
         assert not os.environ.get(key),f'Unexpected external {key}'
     existing=[p for p in PROJECT.rglob('*.olean') if '.lake/packages' not in p.relative_to(PROJECT).as_posix()]
     existing+=list((PROJECT/'.lake/build').rglob('*.olean'))
+    existing=sorted(set(existing),key=str)
+    preflight=dict(project_olean_count_before=len(existing),preexisting_project_oleans=[str(p) for p in existing])
+    (output/'CLEAN_SOURCE_PREFLIGHT.json').write_text(json.dumps(preflight,indent=2)+'\n')
     assert not existing,f'Clean run requires zero candidate .olean files: {existing[:3]}'
     execute('pre-source-identity',[sys.executable,'scripts/verify_aniso_source_overlay.py'],ROOT,output)
     sources={p.relative_to(ROOT).as_posix():sha(p) for p in PROJECT.rglob('*')
@@ -64,13 +67,15 @@ def main():
     binary=Path(shutil.which('lean')).resolve()
     toolchain=binary.parent.parent
     assert '4.34.1' in subprocess.check_output([str(binary),'--version'],text=True)
+    lean_commit=subprocess.check_output([str(binary),'--githash'],text=True).strip()
+    assert lean_commit=='5045d0056413266e57c625dcd7c365b10e377c52','Unexpected Lean compiler commit'
     identity=dict(started_utc=now(),platform=platform.platform(),python=sys.version,
-        lean_version=subprocess.check_output([str(binary),'--version'],text=True).strip(),
+        lean_version=subprocess.check_output([str(binary),'--version'],text=True).strip(),lean_git_commit=lean_commit,
         lake_version=subprocess.check_output(['lake','--version'],text=True).strip(),
         binaries={name:dict(path=str(toolchain/'bin'/name),sha256=sha(toolchain/'bin'/name)) for name in ['lean','lake','leanchecker']},
         checkout_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         checkout_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),
-        verification_scripts_sha256={p.name:sha(p) for p in (ROOT/'scripts').glob('*.py') if p.name in ['run_three_proof_verification.py','limit_lean_compilation.py','verify_three_proof_publication.py','verify_aniso_source_overlay.py']},
+        verification_scripts_sha256={p.name:sha(p) for p in (ROOT/'scripts').glob('*.py') if p.name in ['run_three_proof_verification.py','limit_lean_compilation.py','prepare_three_proof_checkout.py','verify_three_proof_publication.py','verify_aniso_source_overlay.py']},
         overlay_manifest_sha256=sha(ROOT/'ANISO_C001_OVERLAY_MANIFEST.json'),
         git_status=subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True),
         github_sha=os.environ.get('GITHUB_SHA'),pr_head_sha=os.environ.get('PR_HEAD_SHA'),
