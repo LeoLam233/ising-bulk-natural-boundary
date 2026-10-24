@@ -70,6 +70,8 @@ def main():
         binaries={name:dict(path=str(toolchain/'bin'/name),sha256=sha(toolchain/'bin'/name)) for name in ['lean','lake','leanchecker']},
         checkout_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         checkout_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),
+        verification_scripts_sha256={p.name:sha(p) for p in (ROOT/'scripts').glob('*.py') if p.name in ['run_three_proof_verification.py','limit_lean_compilation.py','verify_three_proof_publication.py','verify_aniso_source_overlay.py']},
+        overlay_manifest_sha256=sha(ROOT/'ANISO_C001_OVERLAY_MANIFEST.json'),
         git_status=subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True),
         github_sha=os.environ.get('GITHUB_SHA'),pr_head_sha=os.environ.get('PR_HEAD_SHA'),
         project_olean_count_before=0,source_sha256=sources,packages=packages)
@@ -105,6 +107,9 @@ def main():
         for label,argv in commands:receipts.append(execute(label,argv,PROJECT,output))
         assert all(sha(ROOT/p)==h for p,h in sources.items()),'Project source changed during run'
         execute('post-publication-identity',[sys.executable,'scripts/verify_three_proof_publication.py'],ROOT,output)
+        objects={p.relative_to(PROJECT/'.lake/build').as_posix():sha(p)
+                 for p in (PROJECT/'.lake/build').rglob('*.olean*') if p.is_file()}
+        (output/'project-proof-object-sha256.json').write_text(json.dumps(objects,indent=2)+'\n')
     finally:
         (output/'SUMMARY.json').write_text(json.dumps(dict(completed_commands=len(receipts),required_commands=len(commands),receipts=receipts,finished_utc=now()),indent=2)+'\n')
     print('PASS: all selected gates executed on the captured source',flush=True)

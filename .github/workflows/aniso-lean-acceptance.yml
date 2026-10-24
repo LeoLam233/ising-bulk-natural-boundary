@@ -48,6 +48,7 @@ jobs:
             ${{ runner.temp }}/aniso-c001-verification/*/*.log
             ${{ runner.temp }}/aniso-c001-verification/compiler-slots/*.jsonl
             ${{ runner.temp }}/aniso-c001-verification/runtime-and-source-identity.json
+            ${{ runner.temp }}/aniso-c001-verification/project-proof-object-sha256.json
             ${{ runner.temp }}/aniso-c001-verification/SUMMARY.json
           if-no-files-found: error
           retention-days: 90

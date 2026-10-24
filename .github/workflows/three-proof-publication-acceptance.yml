@@ -69,6 +69,7 @@ jobs:
             ${{ runner.temp }}/${{ matrix.phase }}-verification/*/*.log
             ${{ runner.temp }}/${{ matrix.phase }}-verification/compiler-slots/*.jsonl
             ${{ runner.temp }}/${{ matrix.phase }}-verification/runtime-and-source-identity.json
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/project-proof-object-sha256.json
             ${{ runner.temp }}/${{ matrix.phase }}-verification/SUMMARY.json
           if-no-files-found: error
           retention-days: 90
