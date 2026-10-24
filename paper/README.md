@@ -1,3 +1,13 @@
+# Manuscripts: three results
+
+- **ANISO C001:** [publication PDF](aniso/publication/manuscript.pdf), [frozen 38-page audit](aniso/frozen/manuscript.pdf), [separate 39-page research-original](aniso/research-original/manuscript.pdf), [edition identities](aniso/README.md), [citation](../anisotropic/CITATION.cff).
+- **HT-1.0 / Lean 1747:** [publication PDF](ht/publication/manuscript.pdf), [frozen audit PDF](ht/frozen/manuscript.pdf), [edition explanation](ht/publication/README.md), [citation](../high-temperature/CITATION.cff).
+- **LT v0.1-rc6 / Lean v0.3.0-rc2:** [paper/next PDF](next/manuscript.pdf), [LT index](lt/README.md), [citation](../low-temperature/CITATION.cff).
+
+[Separate three-reader-edition follow-up](../docs/aniso/EDITORIAL_FOLLOWUP_SCOPE.md). Existing papers and version records remain in place. The LT build/history record follows.
+
+---
+
 # Manuscript versions and builds
 
 The current development manuscript is **v0.1-rc6** under [next/](next/manuscript.pdf), with [TeX](next/manuscript.tex), [labels/pages](next/LABEL_INDEX.json) and [build identity](next/BUILD.json). It pairs with Lean v0.3.0-rc2. All 67 verified rc5 label numbers remain; Proposition F.1 is added. It proves the complete-amplitude conversion, with arXiv/journal equation numbering distinguished.

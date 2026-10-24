@@ -1,3 +1,11 @@
+# Audit navigation across three results
+
+[ANISO C001 audit provenance and archive availability](../docs/aniso/AUDIT_EVIDENCE.md) · [HT audit guide](../docs/ht/README.md) · [ANISO publication gates](../docs/aniso/BUILD_AND_VERIFY.md)
+
+The historical LT audit index below retains its original scope. ANISO's reported independent Codex 36-gate record, independent Pro 18-gate record with a lost archive, internal Dot audits, and current publication executions are identified separately.
+
+---
+
 # Reading the historical audit records
 
 **Rc4 input identity (16 October 2026).** Two editorial rc4 PDF artifacts share the same title/date. Use the [exact identity and navigation record](../provenance/RC4_IDENTITY_2026-10-16.md) when supplying a new audit input. Historical reports below retain their original version scope and pages; this crosswalk does not extend their audit coverage.

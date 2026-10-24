@@ -1,0 +1,23 @@
+{
+  "changed_prior_files": [
+    ".github/workflows/unified-publication-acceptance.yml",
+    "AUTHORSHIP.md",
+    "CITATION.cff",
+    "README.md",
+    "README.zh.md",
+    "REPOSITORY_MAP.md",
+    "audits/README.md",
+    "docs/VERSIONS.md",
+    "lean/README.md",
+    "paper/README.md"
+  ],
+  "unchanged_protected_prior_files": 1872,
+  "protected_math_config_paper_modifications": 0,
+  "deletions": 0,
+  "frozen_additions": 765,
+  "historical_lt_ledger_byte_identical": true,
+  "reviewed_markdown": 23,
+  "broken_local_links": [],
+  "publication_workflow_routing_exception": "Existing combined two-result workflow routes to version-aware identity and bounded HT execution; its original bytes are archived.",
+  "overlay_manifest_sha256": "9454960eb51b76c3c11d662c2d600c5d93a4a1a5239ea3f34692fcedf9358ee6"
+}

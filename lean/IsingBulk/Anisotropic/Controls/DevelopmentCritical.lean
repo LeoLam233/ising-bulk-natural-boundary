@@ -1,0 +1,15 @@
+import IsingBulk.Anisotropic.NegativeNormalForm.ActualDensityBetaUniform
+import IsingBulk.Anisotropic.NegativeCycles.ActualWitnessRemainder
+import IsingBulk.Anisotropic.NegativeCycles.FullWindingReflection
+import IsingBulk.Anisotropic.NegativeDominance.NegativePaperObstruction
+import IsingBulk.Anisotropic.Controls.Nonvacuity
+
+-- Development-only selected declaration inspection. Not a final candidate audit.
+#print axioms IsingBulk.Anisotropic.NegativeNormalForm.exists_actual_density_beta_uniform
+#print axioms IsingBulk.Anisotropic.NegativeCycles.exists_actual_witness_remainder
+#print axioms IsingBulk.Anisotropic.NegativeCycles.opposite_winding_kernel_integral
+#print axioms IsingBulk.Anisotropic.NegativeDominance.negative_paper_chart_no_extension
+#print axioms IsingBulk.Anisotropic.Controls.constant_not_low_natural_boundary
+#check IsingBulk.Anisotropic.NegativeNormalForm.exists_actual_density_beta_uniform
+#check IsingBulk.Anisotropic.NegativeCycles.exists_actual_witness_remainder
+#check IsingBulk.Anisotropic.NegativeDominance.negativePaperCoefficient_eq_tsum

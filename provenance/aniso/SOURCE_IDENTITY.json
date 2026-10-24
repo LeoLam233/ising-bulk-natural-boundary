@@ -1,0 +1,28 @@
+{
+  "release_target_repository": "LeoLam233/ising-bulk-natural-boundary",
+  "verified_main_before_handoff": "76c3ad5457e883cc15032fdf4205da23ceba58fe",
+  "C001_source_label": "d825684173015b4d8c77faa217bdb5aef2b6a5fb",
+  "C001_label_note": "Original candidate archive did not include the Git object database; exact file hashes govern source identity.",
+  "C001_nested_archive": "ANISO_C001_INDEPENDENT_LEAN_AUDIT_INPUT_20261023.zip",
+  "C001_nested_archive_sha256": "0fd8e6d5e47df58c662f78a6855402aebe2e5fdd89343d63cb81cbe960317d6c",
+  "C001_Lean_source_count": 2274,
+  "C001_Anisotropic_namespace_Lean_files": 762,
+  "C001_configuration_files": 5,
+  "C001_Lean_and_configs_total": 2279,
+  "lean_toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "audited_mathematics_sha256": {
+    "manuscripts/ANISO_THEOREM_1_1.pdf": "bda31a0f9e84a5b500ddf34f06d11ddf9fece41dfa24c5be50c0f562c98b3f75",
+    "manuscripts/ANISO_THEOREM_1_1.tex": "75b94ec77e167fc4cd4b96ac44df90f6245cc20ab396ca6a4fc619d88d9c60f5",
+    "manuscripts/LT_COMPLETE.pdf": "8c74b14f8f59fc95fdf64e8769a9dd2aa232a8eee2ff2a734793b971d3354c0e",
+    "manuscripts/HT_COMPLETE.pdf": "f4c5f20910bfb38368113ee31437724231044bd7023ceca888738966dc7da707"
+  },
+  "original_39pp_research_files_sha256": {
+    "manuscript.pdf": "9252c8d43fc489396fa9fe822d26aa6257e3ed82c95cdcf55f1158246320de85",
+    "manuscript.tex": "2596c367f17132d7b5e6fb0619f4bb965031d16c3bfddcc66b02c44aaa526c2c"
+  },
+  "independent_Codex_audit_evidence_archive": "ANISO_C001_EVIDENCE.zip",
+  "independent_Codex_audit_evidence_sha256": "5c1ef7f28e70228cc33376d5fe62e2310e93e38acce438515635561a2f506c6e",
+  "independent_Codex_audit_evidence_bytes": 428305070,
+  "note": "This handoff includes source and manuscripts; it does not include the large audit archive."
+}

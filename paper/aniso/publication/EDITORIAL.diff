@@ -1,0 +1,21 @@
+--- frozen/manuscript.tex
++++ publication/manuscript.tex
+@@ -3,6 +3,7 @@
+ \usepackage[utf8]{inputenc}
+ \usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,mathrsfs,geometry,microtype,graphicx,booktabs,longtable,array}
+ \usepackage[hidelinks]{hyperref}
++\hypersetup{pdftitle={Natural boundaries of the full bulk susceptibility for the fixed-ratio anisotropic square-lattice Ising model},pdfauthor={Dehao Lin},pdfsubject={ANISO C001 publication edition, 24 October 2026},pdfkeywords={Ising model, anisotropic, full bulk susceptibility, natural boundary, Lean C001}}
+ \geometry{margin=27mm}
+ \setlength{\emergencystretch}{2em}
+ \raggedbottom
+@@ -33,8 +34,8 @@
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \title{Natural boundaries of the full bulk susceptibility\newline
+ for the fixed-ratio anisotropic square-lattice Ising model}
+-\author{}
+-\date{}
++\author{Dehao Lin\\{\small School of Physics, Sun Yat-sen University}\\{\small ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}}\\{\small\texttt{lindh9@mail2.sysu.edu.cn}}}
++\date{24 October 2026\\{\small ANISO C001 publication edition}}
+ \begin{document}
+ \maketitle
+ \begin{abstract}

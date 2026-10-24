@@ -1,3 +1,11 @@
+# Lean: three research endpoints
+
+[ANISO C001 build, strict audit and fresh replay](../docs/aniso/BUILD_AND_VERIFY.md) · [HT build guide](../docs/ht/BUILD_AND_VERIFY.md) · [Repository proof map](../REPOSITORY_MAP.md)
+
+The roots are `IsingBulkAnisotropic`, `IsingBulkHT` and `IsingBulk`, with separate Lake configurations and audits. The shared toolchain and Mathlib lock are unchanged. [ANISO's terminal type and physical inputs](../docs/aniso/PROOF_MAP.md) are distinct from the LT version-specific record preserved below.
+
+---
+
 # Lean candidate v0.3.0-rc2
 
 The internal form-factor and absolute-tail chain now has an internally proved lower-order replacement for E3. The manuscript snapshot is **v0.1-rc6**, `source_snapshot/manuscript-rc6.tex`, byte-identical to `paper/next/manuscript.tex` at the commit in `SOURCE.json`. The rc4 snapshot and historical v0.2.1 records remain separate. [Versions](../docs/VERSIONS.md).

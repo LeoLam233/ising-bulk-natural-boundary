@@ -1,36 +1,30 @@
-# Repository organization and proof boundaries
+# Three results and shared proof boundaries
 
-## Mathematical proofs
+| Result | Reader entrance | Mathematical manuscript | Exact Lean endpoint | Build / citation |
+|---|---|---|---|---|
+| Fixed-ratio anisotropic, both phases | [ANISO](anisotropic/README.md) | [Publication](paper/aniso/publication/manuscript.pdf), [frozen](paper/aniso/frozen/manuscript.pdf) | `IsingBulk.Anisotropic.full_uniform_field_conclusion` in [FullTheorem.lean](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) | [Build](docs/aniso/BUILD_AND_VERIFY.md), [citation](anisotropic/CITATION.cff) |
+| Isotropic high temperature | [HT](high-temperature/README.md) | [HT-1.0 publication](paper/ht/publication/manuscript.pdf) | `IsingBulk.HT.Final.publishedPhysicalSusceptibility_germ_natural_boundary` in [PublishedPhysicalTheorem.lean](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) | [Build](docs/ht/BUILD_AND_VERIFY.md), [citation](high-temperature/CITATION.cff) |
+| Isotropic low temperature | [LT](low-temperature/README.md) | [v0.1-rc6](paper/next/manuscript.pdf) | `IsingBulk.Final.theorem_nb_physical` in [UnconditionalNaturalBoundary.lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) | [Build](lean/README.md), [citation](low-temperature/CITATION.cff) |
 
-| Purpose | Path | Owning proof |
-|---|---|---|
-| LT root and audit | `lean/IsingBulk.lean`, `lean/Audit.lean` | LT |
-| LT proof development and reusable libraries | `lean/IsingBulk/{Algebra,Analysis,First,Tail,Final}/` | LT/shared |
-| HT formal proof | `lean/IsingBulk/HT/` and `lean/IsingBulk/HT.lean` | HT |
-| HT root and audit | `lean/IsingBulkHT.lean`, `lean/AuditHT.lean` | HT |
-| HT-required reusable modules (35) | `lean/IsingBulk/First/Regular*.lean`, `lean/IsingBulk/Analysis/BranchUpper.lean` | Shared, first introduced by HT |
-| LT Lake configuration | `lean/lakefile.toml` | LT; unchanged |
-| HT additive Lake configuration | `lean/lakefile.ht.toml` | HT |
+## Source ownership
 
-No copied LT source tree and no second mathlib pin. The verified frozen HT project is the existing LT tree **plus** 432 additional proof modules, two HT root/audit files and an additive Lake configuration. Moving common modules into a new namespace would change their certified source bytes; it is not part of this publication.
-
-## Manuscripts, evidence and history
-
-| Content | Path |
+| Source | Role |
 |---|---|
-| LT active development manuscript | `paper/next/` (historical layout preserved) |
-| LT original rc4 artifacts | `paper/` |
-| LT index | `paper/lt/README.md`, `docs/lt/README.md` |
-| HT frozen manuscript | `paper/ht/frozen/` |
-| HT proof/citation/verification notes | `docs/ht/` |
-| LT historical audit/reconstruction records | `audits/`, `research-history/`, `reproduction/`, `release/next/` |
-| HT archived independent audit evidence | HT-specific GitHub Release assets (not copied into Lean modules) |
+| `lean/IsingBulk/{Algebra,Analysis,First,Tail,Final}/` | Original LT development and shared foundations; existing bytes preserved |
+| `lean/IsingBulk/HT/`, `lean/IsingBulk/HT.lean` | Existing HT development; existing bytes preserved |
+| `lean/IsingBulk/Anisotropic/` | 762 additive frozen C001 modules |
+| `lean/IsingBulk.lean`, `lean/Audit.lean`, `lean/lakefile.toml` | Existing LT root/audit/config |
+| `lean/IsingBulkHT.lean`, `lean/AuditHT.lean`, `lean/lakefile.ht.toml` | Existing HT root/audit/config |
+| `lean/IsingBulkAnisotropic.lean`, `lean/AuditAnisotropic.lean`, `lean/lakefile.anisotropic.toml` | Byte-identical additive C001 root/audit/config |
+| `lean/AuditAnisotropicClosure.lean` | New separate publication closure audit; includes partiality checks |
+| `lean/lean-toolchain`, `lean/lake-manifest.json` | One unchanged toolchain and dependency lock for all results |
 
-Root-level LT metadata files, including `CITATION.cff`, `CLAIMS.md` and historical manifests, still describe their established **LT version** until a separate repository-wide citation revision is prepared. Historical artifact manifests are not silently rewritten when HT is added.
+No duplicate LT/HT mathematical library is created. ANISO reuses the existing normalized isotropic seeds at their actual full-sum scope. The [C001 overlay manifest](ANISO_C001_OVERLAY_MANIFEST.json) identifies 2,279 frozen files: 1,514 shared identical paths and 765 additive paths. It also binds 1,872 protected prior files. The earlier [HT overlay manifest](HT_1747_OVERLAY_MANIFEST.json) and all historical verifiers retain their identities.
 
-## Publication gates
+## Papers, history and evidence
 
-1. Freeze source identity and confirm the pre-existing LT Git tree is unchanged.
-2. Complete author/citation/license metadata for newly published HT material.
-3. Integrate the source-only HT overlay in a dedicated branch; run LT regression and HT clean build, AuditHT and fresh kernel replay on the combined checkout.
-4. Merge by PR after checks, then create a clearly scoped HT release tag/assets; preserve LT tags and release identities.
+LT `paper/next/` and earlier `paper/` artifacts, HT `paper/ht/frozen/` and metadata-only `paper/ht/publication/` are retained. ANISO uses `paper/aniso/frozen/` (38-page audit), `paper/aniso/publication/` (author metadata only), and `paper/aniso/research-original/` (separate historical 39-page original). [Paper index](paper/README.md) · [Version index](docs/VERSIONS.md).
+
+Historical `MANIFEST.json`, `CLAIMS.md`, `LIMITATIONS.md`, `release/next/`, earlier source snapshots and old release assets keep their version-specific scope. The root citation is a current three-result router; phase-specific citations retain independent identities. Large audit archives and fresh execution logs belong in release assets/Actions artifacts, outside Git. [ANISO provenance](docs/aniso/AUDIT_EVIDENCE.md).
+
+The [ANISO workflow](.github/workflows/aniso-lean-acceptance.yml) and [three-result workflow](.github/workflows/three-proof-publication-acceptance.yml) are additive. Existing phase-specific LT/HT workflows are unchanged. The prior combined publication workflow retains its LT/HT jobs with current version-aware identity routing; its original bytes are archived under `provenance/aniso/history/`. The [separate editorial scope](docs/aniso/EDITORIAL_FOLLOWUP_SCOPE.md) does not edit any frozen proof text in this publication.

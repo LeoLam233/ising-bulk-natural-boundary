@@ -1,0 +1,15 @@
+{
+  "edition": "ANISO C001 publication, 24 October 2026",
+  "frozen_source_sha256": "75b94ec77e167fc4cd4b96ac44df90f6245cc20ab396ca6a4fc619d88d9c60f5",
+  "publication_source_sha256": "d5c38eb5666291b8af02ff4e30fc4f7d50e932034bcbb29ad734990623a5fc24",
+  "document_body_from_begin_document_sha256": "d46a55cd75bed2fa3d455624fbaa53b858d22cd1730255a64d95b16d47626224",
+  "document_body_byte_identical": true,
+  "allowed_changes": [
+    "hyperref PDF metadata",
+    "author identification",
+    "publication date"
+  ],
+  "mathematical_text_edits": 0,
+  "frozen_pdf_sha256": "bda31a0f9e84a5b500ddf34f06d11ddf9fece41dfa24c5be50c0f562c98b3f75",
+  "publication_pdf_sha256": "86f0d81715b76cf78be011eb4b302ce920ad5251611513094f11521c42c27c6f"
+}

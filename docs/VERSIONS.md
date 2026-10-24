@@ -1,13 +1,16 @@
 # Authoritative versions and artifact identities
 
-## Unified publication: two result identities
+## Current publication: three result identities
 
 | Result | Mathematical manuscript | Lean identity | Citation |
 |---|---|---|---|
+| Fixed-ratio anisotropic, HT and connected plus-phase LT, all lattice sites and infinite odd/even orders | [Frozen 38-page audit](../paper/aniso/frozen/manuscript.pdf), [author-metadata publication](../paper/aniso/publication/README.md), 24 October 2026; [separate 39-page research-original](../paper/aniso/research-original/manuscript.pdf) | C001 file-hash identity; historical label `d825684173015b4d8c77faa217bdb5aef2b6a5fb` is not a reconstructed Git commit | [ANISO](../anisotropic/CITATION.cff) |
 | High-temperature phase, complete disordered susceptibility, all odd orders | HT-1.0; [publication edition](../paper/ht/publication/README.md), 21 October 2026; [frozen audited edition](../paper/ht/frozen/manuscript.pdf) unchanged | `HT_STANDALONE_20261020T1747Z`; release `high-temperature-v1.0.0-lean1747` | [High-temperature](../high-temperature/CITATION.cff) |
 | Low-temperature phase, connected ordered pure-phase susceptibility, all even orders | v0.1-rc6 | v0.3.0-rc2; original sources unchanged | [Low-temperature](../low-temperature/CITATION.cff) |
 
-The new high-temperature tag identifies a separate result. It does not rename or
+ANISO adds 765 frozen paths alongside the unmodified LT/HT sources. Its [version identity](aniso/VERSION_IDENTITY.md) binds all 2,279 frozen Lean/configuration files and both original manuscript editions. New execution receipts govern the integrated and merged commits.
+
+The high-temperature integration record follows. The high-temperature tag identifies a separate result. It does not rename or
 reassign the low-temperature releases. The baseline `lean/IsingBulk` Git tree at
 integration is `ca47fde26285028603c7e87a9893aad31933b526`. All 1,079 baseline files
 and 447 overlay files are bound by the [overlay manifest](../HT_1747_OVERLAY_MANIFEST.json).

@@ -1,0 +1,74 @@
+name: Three-result publication acceptance
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: three-result-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  source-and-manuscript-identity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Verify all three source identities and metadata-only ANISO edition
+        run: python3 scripts/verify_three_proof_publication.py
+  anisotropic:
+    needs: source-and-manuscript-identity
+    uses: ./.github/workflows/aniso-lean-acceptance.yml
+  isotropic-regressions:
+    needs: source-and-manuscript-identity
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        phase: [lt, ht]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: '2'
+      RAYON_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Install exact official Lean 4.34.1
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Restore only pinned upstream dependencies
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+        with:
+          path: lean/.lake/packages
+          key: mathlib-linux-v4.34.1-${{ hashFiles('lean/lake-manifest.json') }}
+      - name: Fetch official artifacts for the unchanged lockfile
+        working-directory: lean
+        run: lake -f lakefile.anisotropic.toml exe cache get
+      - name: Execute clean phase build, strict audit and distinct fresh replay
+        run: python3 -u scripts/run_three_proof_verification.py --only ${{ matrix.phase }} --output "$RUNNER_TEMP/${{ matrix.phase }}-verification"
+      - name: Preserve exact commands and execution evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ${{ matrix.phase }}-regression-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/*/command.json
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/*/receipt.json
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/*/*.log
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/compiler-slots/*.jsonl
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/runtime-and-source-identity.json
+            ${{ runner.temp }}/${{ matrix.phase }}-verification/SUMMARY.json
+          if-no-files-found: error
+          retention-days: 90

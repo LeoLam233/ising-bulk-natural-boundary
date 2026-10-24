@@ -1,0 +1,136 @@
+{
+  "pdf_sha256": "86f0d81715b76cf78be011eb4b302ce920ad5251611513094f11521c42c27c6f",
+  "pages": 38,
+  "metadata": {
+    "/Producer": "pdfTeX-1.40.25",
+    "/Author": "Dehao Lin",
+    "/Title": "Natural boundaries of the full bulk susceptibility for the fixed-ratio anisotropic square-lattice Ising model",
+    "/Subject": "ANISO C001 publication edition, 24 October 2026",
+    "/Creator": "LaTeX with hyperref",
+    "/Keywords": "Ising model, anisotropic, full bulk susceptibility, natural boundary, Lean C001",
+    "/CreationDate": "D:20261023160000Z",
+    "/ModDate": "D:20261023160000Z",
+    "/Trapped": "/False",
+    "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) kpathsea version 6.3.5"
+  },
+  "compile_exit_code": 0,
+  "compilation": {
+    "engine": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+    "passes": [
+      {
+        "argv": [
+          "pdflatex",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-file-line-error",
+          "-output-directory=/mnt/c/Users/26023/Documents/Codex/2026-10-24/aniso-c001-integrate-and-publish-the/work/tex-build",
+          "/mnt/c/Users/26023/Documents/Codex/2026-10-24/aniso-c001-integrate-and-publish-the/work/repository/paper/aniso/publication/manuscript.tex"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 2.870178408000001
+      },
+      {
+        "argv": [
+          "pdflatex",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-file-line-error",
+          "-output-directory=/mnt/c/Users/26023/Documents/Codex/2026-10-24/aniso-c001-integrate-and-publish-the/work/tex-build",
+          "/mnt/c/Users/26023/Documents/Codex/2026-10-24/aniso-c001-integrate-and-publish-the/work/repository/paper/aniso/publication/manuscript.tex"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 3.242004470999998
+      },
+      {
+        "argv": [
+          "pdflatex",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-file-line-error",
+          "-output-directory=/mnt/c/Users/26023/Documents/Codex/2026-10-24/aniso-c001-integrate-and-publish-the/work/tex-build",
+          "/mnt/c/Users/26023/Documents/Codex/2026-10-24/aniso-c001-integrate-and-publish-the/work/repository/paper/aniso/publication/manuscript.tex"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 3.907971266000004
+      }
+    ],
+    "environment": {
+      "SOURCE_DATE_EPOCH": "1792771200",
+      "FORCE_SOURCE_DATE": "1",
+      "TZ": "Asia/Hong_Kong"
+    }
+  },
+  "compile_log_sha256": "2e5c9444c11bc7e62cd1f1fa9ef1893be9d7859d21b5068ac362a5e023a0f560",
+  "pass_log_sha256": {
+    "pass-1.log": "aa410a769619fa4ac9d391b44140379a10b3000c3cca139366a0336d87254596",
+    "pass-2.log": "486cace4d172e4d11e277624b67290352ea729b47892d6ebc2db92831fc69fac",
+    "pass-3.log": "abf82cc9ac0b89108cbfa04b9cd821ad88d7962fe4de51a4ab1ea0473765506e"
+  },
+  "unresolved_references": 0,
+  "source_label_count": 173,
+  "referenced_labels": 102,
+  "citation_keys": 8,
+  "overfull_boxes": 0,
+  "underfull_boxes": 2,
+  "inherited_layout_note": "Two underfull bibliography paragraphs in the unchanged body; no overfull boxes.",
+  "visual_review_complete": true,
+  "visual_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ],
+  "visual_review_method": "All 38 rendered pages inspected in seven contact sheets; first page inspected separately at full rendered size.",
+  "visual_findings": "Legible equations and references; consistent margins, numbering and section transitions; no clipping, overlap or missing glyphs.",
+  "render_argv": [
+    "pdftoppm",
+    "-r",
+    "85",
+    "-png",
+    "paper/aniso/publication/manuscript.pdf",
+    "page"
+  ],
+  "contact_sheet_sha256": {
+    "sheet-1.png": "1651355158328debb527e2212c561d66f4c390111c23aa4700796f24383444b3",
+    "sheet-2.png": "e48c70295a00dd38865b69af6787b9c92b22a73e75f594b7869954867575bab1",
+    "sheet-3.png": "97c2a9dfb041fb585f359db8c4083a6898affa7f55f0a8176718c8def618ce33",
+    "sheet-4.png": "e4d2e0f245fd341689dd34c38270a45cc06b2eda6e400d13e904bf9acf8fb97a",
+    "sheet-5.png": "c45a2995e7bce8d7ae483dd9d495d0022b323ac7c07a33d4c3523e397fbb939c",
+    "sheet-6.png": "3b3ee8e2bd9139264f63c0a56f0e06f4ae6e2d9bb92d2fb32273fca618cb12c7",
+    "sheet-7.png": "9ee76b2fdc989f81ac8ce66067d57b22d419e5bb078d24b9ca91d0117645747e"
+  }
+}
