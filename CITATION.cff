@@ -1,14 +1,14 @@
 cff-version: 1.2.0
-message: "Choose anisotropic/CITATION.cff, high-temperature/CITATION.cff or low-temperature/CITATION.cff for the result used; the three results have distinct scientific and version identities."
+message: "Choose joint/CITATION.cff, anisotropic/CITATION.cff, high-temperature/CITATION.cff or low-temperature/CITATION.cff for the result used; the four results have distinct scientific and version identities."
 type: software
-title: "Natural boundaries of the square-lattice Ising susceptibility: anisotropic, high-temperature and low-temperature results"
+title: "Natural boundaries of the square-lattice Ising susceptibility: joint independent-complex-coupling, anisotropic, high-temperature and low-temperature results"
 authors:
   - family-names: Lin
     given-names: Dehao
     orcid: "https://orcid.org/0009-0001-4551-8490"
     affiliation: "School of Physics, Sun Yat-sen University"
     email: "lindh9@mail2.sysu.edu.cn"
-version: "three-result-publication-20261024"
+version: "four-result-publication-20261025"
 license: MIT
 repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
-abstract: "Shared formal mathematics with separate fixed-ratio anisotropic, isotropic high-temperature and isotropic low-temperature manuscripts, theorem endpoints and verification procedures. ANISO: full odd/even expansions, every lattice site, all finite positive coupling ratios, explicit real-spin and Gibbs-field inputs, Lean C001. High-temperature: complete disordered-phase susceptibility, all odd orders, HT-1.0 / Lean 1747. Low-temperature: connected ordered pure-phase susceptibility, all even orders, manuscript v0.1-rc6 / Lean v0.3.0-rc2. Manuscripts and authored documentation use CC BY 4.0. Historical low-temperature citations and releases retain their original scope."
+abstract: "JOINT C002: two independent complex couplings, full J/R/I and explicit common real spin/Gibbs families. Shared formal mathematics with separate fixed-ratio anisotropic, isotropic high-temperature and isotropic low-temperature manuscripts, theorem endpoints and verification procedures. ANISO: full odd/even expansions, every lattice site, all finite positive coupling ratios, explicit real-spin and Gibbs-field inputs, Lean C001. High-temperature: complete disordered-phase susceptibility, all odd orders, HT-1.0 / Lean 1747. Low-temperature: connected ordered pure-phase susceptibility, all even orders, manuscript v0.1-rc6 / Lean v0.3.0-rc2. Manuscripts and authored documentation use CC BY 4.0. Historical low-temperature citations and releases retain their original scope."

@@ -1,0 +1,11 @@
+# One common real physical interface
+
+The independent complex coordinates stored by Lean are `(z,w)=(2βJx,2βJy)`. The physical ratio slice is `(z,w)=(ζ,λζ)`, corresponding to `(Kx,Ky)=(ζ/2,λζ/2)` in the paper. The spectral condition is the unsquared equation `cosh(z)cosh(w)=sinh(z)a+sinh(w)b` for real `a,b ∈ [-1,1]`.
+
+[`PublishedRealSpinFamily`](../../lean/IsingBulk/Joint/PhysicalField/RealFamily.lean) requires the exact baseline `PublishedRealSpinFormFactors` for every finite λ > 0, evaluated on **one common** pair of real correlation functions `corrH,corrL : (ℝ × ℝ) → ℤ² → ℝ`. The same functions occur on every ray. The real interface specifies the physical onsite values, sitewise form-factor identities, parity and LT connected subtraction. The full LT covariance subtracts M² at every site, including the onsite contribution 1−M². It assumes no complex regularity or boundary theorem.
+
+`PublishedRealGibbsFamily` applies, for every J > 0 and λ > 0, to those same correlations and one common pair of magnetization functions `mH,mL : ℝ → ℝ → ℝ → ℝ → ℝ`, indexed by energy couplings Jx,Jy, inverse temperature and energy field h. The inherited Gibbs structure lists finite spin marginals, local field tilts, nonnegative covariances, monotonicity, pinned-volume comparisons, GHS concavity and thermodynamic limits. It contains no susceptibility summability, final field derivative, complex continuation or natural-boundary conclusion.
+
+The proved normalization is **χ = β X**, with β = x/(2J). The finite tilt is βh. Internally proved full-lattice covariance summability and the finite-sum/concavity squeeze give the ordinary two-sided HT field derivative and the right plus-phase LT derivative. The LT reduced susceptibility descends through the integer deck group; the energy-field factor β remains on the inverse-temperature cover.
+
+These are explicit classical real physical premises, shared with the ANISO construction. The formal theorem does not construct the unconditional infinite-volume DLR state. The exact source and the [frozen reviewed physics ledger](frozen/REAL_PHYSICS_INTERFACE_LEDGER.md) describe the finite-cylinder form-factor limits, state identification and Gibbs hypotheses. They are distinct from the complex J/R/I conclusions proved internally.

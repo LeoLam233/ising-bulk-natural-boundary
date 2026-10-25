@@ -1,12 +1,19 @@
 # Natural boundaries of the square-lattice Ising susceptibility
 
-**Three research results · distinct physical observables and theorem endpoints · one shared Lean library**
+**Four research results · distinct physical observables and theorem endpoints · one shared Lean library**
 
-This repository presents the complete bulk susceptibility on the infinite square lattice: separate isotropic low-temperature and high-temperature proofs, and a fixed-ratio anisotropic result covering both phases. Every result retains its own manuscript, physical inputs, citation and reproducible Lean endpoint.
+This repository presents the complete bulk susceptibility on the infinite square lattice: separate isotropic low-temperature and high-temperature proofs, a fixed-ratio anisotropic result covering both phases, and the jointly holomorphic parent in two independent complex couplings. Every result retains its own manuscript, physical inputs, citation and reproducible Lean endpoint.
 
+- **JOINT C002:** [manuscript](paper/joint/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Joint/Final/FullConclusion.lean) · [build](docs/joint/BUILD_AND_VERIFY.md) · [citation](joint/CITATION.cff).
 - **ANISO C001:** [manuscript](paper/aniso/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [build](docs/aniso/BUILD_AND_VERIFY.md) · [citation](anisotropic/CITATION.cff).
 - **Isotropic HT:** [manuscript](paper/ht/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [build](docs/ht/BUILD_AND_VERIFY.md) · [citation](high-temperature/CITATION.cff).
 - **Isotropic LT:** [manuscript](paper/next/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [build](lean/README.md) · [citation](low-temperature/CITATION.cff).
+
+## Joint independent complex couplings — JOINT C002
+
+Theorem 1.1 ∧ Theorem 1.2 ∧ Corollary 1.3: complete joint HT/LT susceptibilities, every finite positive ratio, full isotropic descendants, all lattice sites and particle orders, every finite physical frontier point, and quantitative transverse/compact-family clauses. The two common real spin/Gibbs premises and χ = β X are [explicit](docs/joint/PHYSICAL_INPUTS.md).
+
+[Explore JOINT](joint/README.md) · [Manuscript](paper/joint/publication/manuscript.pdf) · [Lean: `IsingBulk.Joint.full_joint_conclusion`](lean/IsingBulk/Joint/Final/FullConclusion.lean) · [Build](docs/joint/BUILD_AND_VERIFY.md) · [Citation](joint/CITATION.cff)
 
 ## Fixed-ratio anisotropic result — ANISO C001
 

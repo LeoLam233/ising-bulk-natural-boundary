@@ -1,0 +1,68 @@
+name: JOINT C002 Lean acceptance
+on:
+  workflow_call:
+    inputs:
+      phase:
+        type: string
+        default: joint
+        required: false
+  workflow_dispatch:
+    inputs:
+      phase:
+        type: choice
+        options: [joint, lt, ht, aniso]
+        default: joint
+permissions:
+  contents: read
+jobs:
+  source-clean-strict-controls-fresh:
+    name: ${{ inputs.phase }} source-clean strict controls fresh
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: '2'
+      RAYON_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Verify four-result frozen sources and manuscript editions
+        run: python3 scripts/verify_four_result_publication.py
+      - name: Install the exact official Lean 4.34.1 runtime
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Restore only pinned upstream dependencies
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+        with:
+          path: lean/.lake/packages
+          key: mathlib-linux-v4.34.1-${{ hashFiles('lean/lake-manifest.json') }}
+      - name: Fetch upstream artifacts for the unchanged lockfile
+        working-directory: lean
+        run: lake -f lakefile.joint.toml exe cache get
+      - name: Execute a distinct clean build, strict closure, controls and fresh replay
+        run: |
+          python3 scripts/prepare_three_proof_checkout.py --output "$RUNNER_TEMP/${{ inputs.phase }}-c002-source"
+          python3 -u "$RUNNER_TEMP/${{ inputs.phase }}-c002-source/scripts/run_four_result_verification.py" --only ${{ inputs.phase }} --max-compilers 2 --output "$RUNNER_TEMP/${{ inputs.phase }}-c002-verification"
+          python3 scripts/verify_joint_execution_receipts.py "$RUNNER_TEMP/${{ inputs.phase }}-c002-verification"
+      - name: Preserve exact commands, raw streams, identities and compiler provenance
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: four-result-${{ inputs.phase }}-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/*.json
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/*.lean
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/*/command.json
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/*/receipt.json
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/*/*.log
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/compiler-slots/*.jsonl
+            ${{ runner.temp }}/${{ inputs.phase }}-c002-verification/joint-control-evidence/*
+          if-no-files-found: error
+          retention-days: 90

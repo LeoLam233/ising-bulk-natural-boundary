@@ -1,0 +1,16 @@
+{
+  "schema": "metadata-only-TeX-edition/v1",
+  "frozen_source_sha256": "4d4567b2620799e187a9441d321b66079d8635600cb76f503d72fd31cf01e76e",
+  "publication_source_sha256": "e053da3f2c59c7d2ddd9503aa65b81403c6e6dea1d4b81b8089131ffbe2110c6",
+  "document_body_from_begin_document_sha256": "62b06950e33329211f8b83dee4149223894e0db5a918bcb19af7bd36db730b70",
+  "document_body_byte_identical": true,
+  "mathematical_text_edits": 0,
+  "permitted_preamble_directives": [
+    "author",
+    "date",
+    "hypersetup"
+  ],
+  "frozen_pdf_sha256": "868c0eda262821292f860fa75662afd8f3bc13b215a9e8aadee735ba7dfc4eb7",
+  "publication_pdf_sha256": "4fc166f9fd1d15082a7bf219b0ac9cd79f40c004b045bb5020e7c08b37ed59dc",
+  "publication_pages": 59
+}

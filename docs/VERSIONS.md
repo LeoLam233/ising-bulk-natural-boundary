@@ -1,6 +1,10 @@
 # Authoritative versions and artifact identities
 
-## Current publication: three result identities
+## Current publication: four result identities
+
+JOINT C002 adds the independent two-complex-coupling parent, all finite positive-ratio descendants and complete isotropic descendants. [Frozen 59-page authority](../paper/joint/frozen/manuscript.pdf) · [metadata-only publication](../paper/joint/publication/manuscript.pdf) · [source identity](joint/VERSION_IDENTITY.md) · [citation](../joint/CITATION.cff). Release tag: `joint-v1.0.0-leanc002`; actual merge and execution identities are bound by the release receipts.
+
+The earlier three-result identities and the historical LT ledger are retained below.
 
 | Result | Mathematical manuscript | Lean identity | Citation |
 |---|---|---|---|

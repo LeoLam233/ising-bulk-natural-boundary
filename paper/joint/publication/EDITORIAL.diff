@@ -1,0 +1,18 @@
+--- frozen/manuscript.tex
++++ publication/manuscript.tex
+@@ -34,12 +34,12 @@
+ \DeclareMathOperator{\Pf}{Pf}
+ \DeclareMathOperator{\Res}{Res}
+ \DeclareMathOperator{\dist}{dist}
+-\hypersetup{pdftitle={Joint natural boundaries of the full square-lattice Ising susceptibility},pdfauthor={Research campaign, 21 October 2026}}
++\hypersetup{pdftitle={Joint natural boundaries of the full square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={JOINT C002; author-metadata publication edition, 25 October 2026}}
+ \title{Joint natural boundaries of the full square-lattice\newline
+ Ising susceptibility\newline
+ \large Independent complex couplings and exact physical-slice descendants}
+-\author{}
+-\date{21 October 2026}
++\author{Dehao Lin\\School of Physics, Sun Yat-sen University\\\small ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}\\\small\texttt{lindh9@mail2.sysu.edu.cn}}
++\date{21 October 2026\\\small Publication edition: 25 October 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
