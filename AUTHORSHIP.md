@@ -13,7 +13,9 @@ Historical audit and reconstruction records retain their original session descri
 
 Project code: [MIT](LICENSE). Manuscript and project-authored prose: [CC BY 4.0](LICENSE-DOCUMENTATION.md), to the extent of the author's rights; third-party content retains its own rights. No additional funding or competing interests are declared. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
-## Three separately identified results
+## Four separately identified results
+
+[JOINT C002](joint/README.md), publication metadata dated 25 October 2026, adds the jointly holomorphic parent in two independent complex couplings and its exact ratio/isotropic descendants. Its 59-page mathematical authority is unchanged; the publication edition changes only preamble metadata. The same human author, affiliation, ORCID, contact, AI-assistance declaration and MIT/CC BY 4.0 license split apply. [Physical premises](docs/joint/PHYSICAL_INPUTS.md), [source identity](docs/joint/VERSION_IDENTITY.md) and [distinct audit provenance](docs/joint/AUDIT_EVIDENCE.md) are explicit.
 
 The same human author and contact apply to the fixed-ratio anisotropic, high-temperature and low-temperature
 results. The high-temperature manuscript HT-1.0 has a frozen audited edition and a

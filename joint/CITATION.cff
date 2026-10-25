@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite this file for the JOINT C002 independent-complex-coupling result."
+type: article
+title: "Joint natural boundaries of the full square-lattice Ising susceptibility: Independent complex couplings and exact physical-slice descendants"
+authors:
+  - family-names: Lin
+    given-names: Dehao
+    orcid: "https://orcid.org/0009-0001-4551-8490"
+    affiliation: "School of Physics, Sun Yat-sen University"
+    email: "lindh9@mail2.sysu.edu.cn"
+version: "JOINT C002"
+date-released: 2026-10-25
+license: CC-BY-4.0
+url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/joint-v1.0.0-leanc002/joint"
+repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
+abstract: "Joint full-bulk susceptibility in two independent complex couplings, exact positive-ratio restrictions, and complete isotropic descendants; explicit common real spin and Gibbs families."

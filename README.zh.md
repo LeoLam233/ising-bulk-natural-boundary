@@ -1,8 +1,10 @@
 # 正方晶格 Ising 体磁化率的自然边界
 
-**三个研究结果 · 各自的物理对象与 Lean 终点 · 共享形式数学库**
 
-本仓库分别展示各向同性低温、各向同性高温，以及固定耦合比各向异性模型的完整体磁化率结果。每个结果保留独立论文、物理前提、引用信息与构建入口。
+**JOINT C002：两个独立复耦合的完整体磁化率。** [论文](paper/joint/publication/manuscript.pdf) · [Lean 定理](lean/IsingBulk/Joint/Final/FullConclusion.lean) · [构建](docs/joint/BUILD_AND_VERIFY.md) · [引用](joint/CITATION.cff) · [中文导读](joint/README.zh.md)。完整 J/R/I 结论保留共同实自旋与 Gibbs 场前提、所有格点和粒子阶、同点减除与 χ=βX；既有 LT/HT/ANISO 数学源、论文及版本历史保持原样。
+**四个研究结果 · 各自的物理对象与 Lean 终点 · 共享形式数学库**
+
+本仓库分别展示各向同性低温、各向同性高温，固定耦合比各向异性，以及两个独立复耦合的完整体磁化率结果。每个结果保留独立论文、物理前提、引用信息与构建入口。
 
 - **ANISO C001：**[论文](paper/aniso/publication/manuscript.pdf) · [Lean 终点](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [构建](docs/aniso/BUILD_AND_VERIFY.md) · [引用](anisotropic/CITATION.cff)。
 - **各向同性 HT：**[论文](paper/ht/publication/manuscript.pdf) · [Lean 终点](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [构建](docs/ht/BUILD_AND_VERIFY.md) · [引用](high-temperature/CITATION.cff)。

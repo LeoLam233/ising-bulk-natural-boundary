@@ -1,0 +1,53 @@
+import IsingBulkJoint
+import Lean.Util.CollectAxioms
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+set_option pp.all true in
+#check @IsingBulk.Joint.full_joint_conclusion
+
+
+
+open Lean in
+run_cmd do
+  let env ← getEnv
+  let endpoint := `IsingBulk.Joint.full_joint_conclusion
+  let some terminal := env.checked.get.find? endpoint
+    | throwError "PUBLICATION missing endpoint"
+  unless terminal.isTheorem do throwError "PUBLICATION endpoint is not a theorem"
+  logInfo m!"PUBLICATION_ACTUAL_TERMINAL_TYPE: {terminal.type}"
+  let mut todo : List Name := [endpoint]
+  let mut seen : NameSet := {}
+  let mut axioms : NameSet := {}
+  let mut opaqueCount : Nat := 0
+  while !todo.isEmpty do
+    let name := todo.head!
+    todo := todo.tail!
+    if seen.contains name then continue
+    seen := seen.insert name
+    let some info := env.checked.get.find? name
+      | throwError "PUBLICATION missing checked dependency: {name}"
+    if info.isPartial then throwError "PUBLICATION reachable partial: {name}"
+    if info.isUnsafe then throwError "PUBLICATION reachable unsafe: {name}"
+    if name == `sorryAx then throwError "PUBLICATION reachable sorryAx"
+    if info.isAxiom then
+      unless name == `propext || name == `Classical.choice || name == `Quot.sound do
+        throwError "PUBLICATION unexpected axiom: {name}"
+      axioms := axioms.insert name
+    todo := info.type.getUsedConstants.toList ++ todo
+    if let some value := info.value? true then todo := value.getUsedConstants.toList ++ todo
+    if let .inductInfo value := info then todo := value.ctors ++ todo
+    if let .opaqueInfo _ := info then opaqueCount := opaqueCount + 1
+  for required in #[`IsingBulk.Joint.PhysicalField.PublishedRealSpinFamily, `IsingBulk.Joint.PhysicalField.PublishedRealGibbsFamily] do
+    unless seen.contains required do throwError "PUBLICATION required dependency absent: {required}"
+  let mut partials : Array Name := #[]
+  for (name, info) in env.constants.toList do
+    let project := match env.getModuleIdxFor? name with
+      | some idx => (`IsingBulk).isPrefixOf env.header.moduleNames[idx.toNat]!
+      | none => false
+    if project && info.isPartial then
+      unless !seen.contains name do throwError "PUBLICATION partial inventory overlap"
+      partials := partials.push name
+  logInfo m!"PUBLICATION_PARTIAL_RUNTIME_HELPERS_OUTSIDE_CLOSURE: {partials.qsort Name.lt}"
+  logInfo m!"PUBLICATION_CLOSURE_AXIOMS: {axioms.toArray.qsort Name.lt}"
+  logInfo m!"PUBLICATION_CLOSURE_PASS: {seen.toArray.size}; opaque values {opaqueCount}; zero reachable unsafe/partial/sorry"

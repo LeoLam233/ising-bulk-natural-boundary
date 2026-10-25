@@ -1,0 +1,33 @@
+name: Four-result publication acceptance
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: four-result-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  source-and-manuscript-identity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - run: python3 scripts/verify_four_result_publication.py
+  joint:
+    needs: source-and-manuscript-identity
+    uses: ./.github/workflows/joint-lean-acceptance.yml
+  prior-result-regressions:
+    needs: source-and-manuscript-identity
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        phase: [lt, ht, aniso]
+    uses: ./.github/workflows/joint-lean-acceptance.yml
+    with:
+      phase: ${{ matrix.phase }}

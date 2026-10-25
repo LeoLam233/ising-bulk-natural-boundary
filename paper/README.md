@@ -1,5 +1,6 @@
-# Manuscripts: three results
+# Manuscripts: four results
 
+- **JOINT C002:** [publication PDF](joint/publication/manuscript.pdf), [exact frozen 59-page authority](joint/frozen/manuscript.pdf), [edition identities](joint/README.md), [Lean endpoint](../lean/IsingBulk/Joint/Final/FullConclusion.lean), [build](../docs/joint/BUILD_AND_VERIFY.md), [citation](../joint/CITATION.cff).
 - **ANISO C001:** [publication PDF](aniso/publication/manuscript.pdf), [frozen 38-page audit](aniso/frozen/manuscript.pdf), [separate 39-page research-original](aniso/research-original/manuscript.pdf), [edition identities](aniso/README.md), [citation](../anisotropic/CITATION.cff).
 - **HT-1.0 / Lean 1747:** [publication PDF](ht/publication/manuscript.pdf), [frozen audit PDF](ht/frozen/manuscript.pdf), [edition explanation](ht/publication/README.md), [citation](../high-temperature/CITATION.cff).
 - **LT v0.1-rc6 / Lean v0.3.0-rc2:** [paper/next PDF](next/manuscript.pdf), [LT index](lt/README.md), [citation](../low-temperature/CITATION.cff).

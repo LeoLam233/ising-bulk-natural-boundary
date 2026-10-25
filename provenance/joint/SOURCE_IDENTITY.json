@@ -1,0 +1,48 @@
+{
+  "additive_joint_mathematical_modules": 435,
+  "additive_roots_audit_config": 4,
+  "additive_total": 439,
+  "artifact_manifest_sha256": "81e3e5da224254ebbe3a899cb8ead5f1d73162c44fb9f087c19ee5327380c256",
+  "baseline_manifest_sha256": "c63feaafa004a2701f3b600f043b935b33c3dc755401fbb3a3e99674f3365a36",
+  "current_main": "MUST_FETCH_LIVE_AT_EXECUTION",
+  "exact_source_zip": {
+    "filename": "SOURCE/JOINT_LEAN_C002.zip",
+    "sha256": "10f1ee8155740becee67717ba5ff8fa59bd94898b6903ec022c70ad527707f38",
+    "size_bytes": 7653756
+  },
+  "external_codex": {
+    "archive_sha256": "98c01c3e8f51d1a28cd9d9711cb624ef4cdb07e3e69aebb7893a4bd40266d09f",
+    "archive_size_bytes": 966506909,
+    "local_codex_path": "I:/Codex/_Projectless/2026-10-25/execute-the-full-independent-external-codex/outputs/JOINT_C002_EXTERNAL_AUDIT_20261025.zip",
+    "verdict": "EXHAUSTED"
+  },
+  "external_pro": {
+    "archive_sha256": "abe08880d990f7112c43d09cd5a6a509097ae81bac41963ad4758043ee816eeb",
+    "archive_size_bytes": 395114249,
+    "verdict": "EXHAUSTED"
+  },
+  "formal_endpoint": "IsingBulk.Joint.full_joint_conclusion",
+  "frozen_formal_endpoint_source": "JOINT_LEAN_C002/lean/IsingBulk/Joint/Final/FullConclusion.lean",
+  "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "lean_version": "4.34.1",
+  "mathematical_authority": {
+    "pages": 59,
+    "pdf": "MATHEMATICS/JOINT_FROZEN_59P.pdf",
+    "pdf_sha256": "868c0eda262821292f860fa75662afd8f3bc13b215a9e8aadee735ba7dfc4eb7",
+    "tex": "MATHEMATICS/JOINT_FROZEN_59P.tex",
+    "tex_sha256": "4d4567b2620799e187a9441d321b66079d8635600cb76f503d72fd31cf01e76e"
+  },
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "physical_premises": [
+    "IsingBulk.Joint.PhysicalField.PublishedRealSpinFamily",
+    "IsingBulk.Joint.PhysicalField.PublishedRealGibbsFamily"
+  ],
+  "protected_paths": 2279,
+  "release_tag_proposed": "joint-v1.0.0-leanc002",
+  "repository": "https://github.com/LeoLam233/ising-bulk-natural-boundary",
+  "schema": "JOINT-C002-publishing-input/v1",
+  "source_configuration_entries": 2718,
+  "source_manifest_sha256": "7acb3a1472c4e9303b12357f30bfad2df0a916c3d26584c1a172a578446a869b",
+  "total_artifact_entries": 2765,
+  "verified_prior_ANISO_merge": "43a9ce897ba12de0c96d6e1a636790cd93fae8ff"
+}
