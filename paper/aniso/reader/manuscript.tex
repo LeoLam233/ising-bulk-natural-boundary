@@ -1,0 +1,2888 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,mathrsfs,geometry,microtype,graphicx,booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Natural boundaries of the full bulk susceptibility for the fixed-ratio anisotropic square-lattice Ising model},pdfauthor={Dehao Lin},pdfsubject={ANISO C001 reader edition},pdfkeywords={Ising model, anisotropic, full bulk susceptibility, natural boundary}}
+\geometry{margin=27mm}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cA}{\mathscr A}
+\newcommand{\OH}{\Omega_H}
+\newcommand{\OL}{\Omega_L}
+\newcommand{\XH}{\mathcal X_H}
+\newcommand{\XL}{\mathcal X_L}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\title{Natural boundaries of the full bulk susceptibility\newline
+for the fixed-ratio anisotropic square-lattice Ising model}
+\author{Dehao Lin\\{\small School of Physics, Sun Yat-sen University}\\{\small ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}}\\{\small\texttt{lindh9@mail2.sysu.edu.cn}}}
+\date{26 October 2026\\{\small Reader edition of the frozen ANISO C001 manuscript}}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every fixed finite positive coupling ratio, we establish natural
+boundaries for the complete bulk magnetic susceptibility on both
+physical temperature sides. The high-temperature domain is a bounded
+lens; the low-temperature domain is a simply connected epigraph.
+We first determine these domains from an independently defined spectral
+set and then prove that their full boundaries obstruct continuation.
+At regular positive edges, and at either sign of a low-temperature edge,
+a nonzero first singular amplitude dominates the entire differentiated
+particle tail. Negative high-temperature edges require a different
+mechanism: the odd-particle constraint excludes an exact endpoint
+resonance, so we use an exact symmetric pole normal form, a
+dimension-uniform beta-period estimate, and dominance of one particle
+index in selected high Taylor coefficients. The isotropic case follows
+from an exact coefficient match to the normalized isotropic results.
+The proof retains every lattice site, all particle orders, the physical
+field normalization, and the pure-phase low-temperature magnetization
+subtraction. Its inputs are the cited real-temperature spin form factors
+and the explicitly identified isotropic analytic theorems.
+\end{abstract}
+\tableofcontents
+
+\medskip
+\noindent\textbf{Guide to the proof.}
+Section~\ref{sec:physical} constructs the complete observable and fixes
+the real-physics input. Section~\ref{sec:geometry} identifies its two
+spectral domains and the dense regular arcs of their boundaries.
+Section~\ref{sec:regular} treats the resonant edges by separating the
+first singular term from a uniformly controlled infinite tail.
+For negative high-temperature edges, Section~\ref{sec:morse} computes
+the local pole contribution and Section~\ref{sec:jets} compares all
+particle indices and windings. Section~\ref{sec:closure} then includes
+the exceptional points and the isotropic ratio.
+
+The main geometric picture consists of two components of the spectral
+complement: a lens around the origin and an epigraph to its right.
+The local estimates establish obstructions on dense regular boundary
+arcs; the closure argument carries them to every boundary point.
+
+\section{Fixed-temperature slice and the physical observable}\label{sec:physical}
+
+Fix $J_x>0$ and $\lambda=J_y/J_x\in(0,\infty)$. Throughout,
+\begin{equation}\label{eq:variables}
+ z=2\beta J_x,\qquad S=\sinh z,\quad T=\sinh(\lambda z),\quad
+ A=\cosh z\cosh(\lambda z),\quad p=ST.
+\end{equation}
+The ratio $\lambda$ is fixed before any complex continuation; in particular,
+the generally varying ratio $T/S$ is not the fixed coupling ratio.
+There is a unique $z_c>0$ with $\sinh z_c\sinh(\lambda z_c)=1$.
+Define strictly increasing functions on $[0,\infty)$ by
+\begin{equation}\label{eq:physicalPQ}
+ P_\lambda(x)=\cosh x\tanh(\lambda x),\qquad
+ Q_\lambda(x)=\cosh(\lambda x)\tanh x.
+\end{equation}
+Their values at $z_c$ are both one. Set
+\begin{align}
+ Y_\lambda&=\frac{\pi}{2\max(1,\lambda)},\nonumber\\
+ H_\lambda(y)&=\min\{P_\lambda^{-1}(\cos y),
+                      Q_\lambda^{-1}(\cos(\lambda y))\},
+                      &&|y|<Y_\lambda,\label{eq:Hdef}\\
+ L_\lambda(y)&=\max\{P_\lambda^{-1}(|\cos y|),
+                      Q_\lambda^{-1}(|\cos(\lambda y)|)\},
+                      &&y\in\R.\label{eq:Ldef}
+\end{align}
+The domains of interest are specified independently of susceptibility:
+\begin{equation}\label{eq:domains}
+ \OH=\{x+\ii y:|y|<Y_\lambda,\ |x|<H_\lambda(y)\},\qquad
+ \OL=\{x+\ii y:x>L_\lambda(y)\}.
+\end{equation}
+The value of $H_\lambda$ at each endpoint is its continuous limit zero.
+
+\begin{theorem}[Full bulk susceptibility at every positive ratio]\label{thm:aniso}
+Let $0<\lambda<\infty$. The high-temperature physical
+bulk susceptibility germ extends holomorphically to $\OH$, and
+$\partial\OH$ is its natural boundary. The low-temperature physical
+pure-phase connected bulk susceptibility germ extends holomorphically to
+$\OL$, and the entire graph $\partial\OL=\{L_\lambda(y)+\ii y:y\in\R\}$
+is its natural boundary. Here natural boundary means that no boundary
+point has a neighborhood carrying a holomorphic function agreeing with
+the indicated continuation on its domain side. Both statements concern
+the entire lattice and all particle indices. They apply separately to
+$\mathcal X=\beta^{-1}\chi$ and to $\chi$ with the field convention below.
+\end{theorem}
+
+For unequal couplings, the proof proceeds from spectral geometry to
+local boundary obstructions and then to their closure.
+Section~\ref{sec:closure} treats the isotropic slice through an exact
+coefficient identity; the unequal-coupling constants can degenerate as
+$\lambda\to1$. Uniformity in $\lambda$ is therefore not part of the
+argument: local constants may depend on the fixed ratio and the selected
+boundary point. Both rational and irrational ratios are included.
+
+\subsection{Field normalization and state}
+
+We first fix the response convention and the thermodynamic state.
+These choices determine both the prefactor relating response to the
+covariance sum and the subtraction in the ordered phase.
+Let the magnetic field have energy units, so the finite-volume Hamiltonian
+contains $-h\sum_v\sigma_v$, with $\sigma_v\in\{-1,1\}$ and magnetic
+moment set to one. Direct differentiation of the finite partition
+function gives
+\[
+ \left.\frac{\partial\langle\sigma_0\rangle}{\partial h}\right|_{h=0}
+ =\beta\sum_v\bigl(\langle\sigma_0\sigma_v\rangle
+                         -\langle\sigma_0\rangle\langle\sigma_v\rangle\bigr).
+\]
+Thus the normalized response is the covariance sum $\mathcal X$, and
+$\chi=\beta\mathcal X$. A dimensionless field $\eta=\beta h$ instead
+has response $\mathcal X$. A specified nonunit magnetic moment multiplies
+both by its square.
+
+On $0<z<z_c$ the Gibbs state is unique and its magnetization is zero:
+\[
+ \XH(z)=\sum_{(m,l)\in\Z^2}\langle\sigma_{00}\sigma_{ml}\rangle.
+\]
+On $z>z_c$ take the thermodynamic plus state, or equivalently the minus
+state for this connected observable:
+\[
+ \XL(z)=\sum_{(m,l)\in\Z^2}
+       \bigl(\langle\sigma_{00}\sigma_{ml}\rangle_+-M^2\bigr),
+ \qquad M^2=(1-p^{-2})^{1/4}.
+\]
+The fourth root is positive on the displayed real interval.
+For the energy-field response in this phase, the derivative is the
+zero-field pure-phase linear response, equivalently the limit from
+$h>0$ in the plus phase (or from $h<0$ in the minus phase).
+The covariance formula is obtained with that phase fixed before taking
+the zero-field limit. A symmetric
+mixture has the same two-spin expectation but zero one-spin mean; using
+its zero mean as the subtraction would leave the nondecaying term $M^2$
+and would define a different, divergent sum. This distinction is retained
+through the thermodynamic form-factor limit below.
+
+Once the absolute summability proved below is available, two inequalities
+identify the covariance sum with the thermodynamic uniform-field derivative.
+Finite-volume concavity gives the upper bound; a field supported on a
+finite set gives the lower bound. The GHS inequality for arbitrary
+nonnegative couplings and site fields \cite[Theorem 1.5]{CGN} says that
+truncated two-spin correlations decrease as any nonnegative site field
+increases. Pinning the spins removed from a larger plus box by fields
+tending to $+\infty$ consequently shows that the plus-box covariances
+increase with the box. Their sums converge monotonically to $\mathcal X$.
+If $m_V(h)=\langle\sigma_0\rangle_{V,+,h}$, GHS also makes $m_V$
+concave for $h\ge0$. Thus
+\[
+ m_V(h)-m_V(0)\le h m'_V(0)
+ =\beta h\sum_{v\in V}\operatorname{Cov}_{V,+,0}(\sigma_0,\sigma_v)
+ \le\beta h\mathcal X.
+\]
+Passing to the plus-state limit gives the upper right-derivative bound
+$m'(0+)\le\beta\mathcal X$. Conversely, turn on $h$ only in a finite
+set $E$ in the infinite plus state. This is a bounded local change of
+measure, so its derivative at zero is exactly
+$\beta\sum_{v\in E}\operatorname{Cov}_{+,0}(\sigma_0,\sigma_v)$.
+Ferromagnetic field monotonicity makes the uniform-field magnetization
+at least this local-field magnetization, with equality at $h=0$.
+Letting $E$ increase to the lattice gives the reverse derivative bound.
+Hence $m'(0+)=\beta\mathcal X$. In HT, spin-flip symmetry gives the
+same derivative from the other side; in LT the stated one-sided
+pure-phase convention applies. The two bounds determine the derivative after the thermodynamic limit;
+absolute summability controls the passage from finite covariance sums
+to the whole-lattice sum.
+
+\subsection{Published real-temperature form-factor interface}
+Away from criticality on either positive real interval set
+\[
+ B=T/S>0,\qquad C=A/S,\qquad
+ \cosh\gamma(q)=W(q)=C-B\cos q,\qquad \gamma(q)>0.
+\]
+Let $f_N(m,l)$ be
+\begin{equation}\label{eq:corrFF}
+ \frac{B^{N^2/2}}{N!}\int_{\T^N}
+ \prod_{i=1}^N\frac{e^{-|m|\gamma(q_i)+\ii lq_i}}{\sinh\gamma(q_i)}
+ \prod_{i<j}\left[
+ \frac{\sin((q_i-q_j)/2)}{\sinh((\gamma(q_i)+\gamma(q_j))/2)}
+ \right]^2\prod_{i=1}^N\frac{\dd q_i}{2\pi}.
+\end{equation}
+The exact infinite-plane correlation interface used here is
+\begin{align}
+ \langle\sigma_{00}\sigma_{ml}\rangle
+   &=\xi_H\sum_{N\ge1,\ N\text{ odd}}f_N(m,l),
+   &\xi_H&=\frac{(1-p^2)^{1/4}}{\sqrt p},\label{eq:HTcorr}\\
+ \langle\sigma_{00}\sigma_{ml}\rangle_+
+   &=\xi_L\left(1+\sum_{N\ge2,\ N\text{ even}}f_N(m,l)\right),
+   &\xi_L&=(1-p^{-2})^{1/4}=M^2.\label{eq:LTcorr}
+\end{align}
+All powers are fixed by their positive real values. These are the
+anisotropic vacuum-to-state spin form factors of
+\cite{BL,IL}, in the bulk normalization of \cite{ONGP}. In particular,
+$B^{N^2/2}$ is part of the $N$th term. Replacing it by a fixed prefactor
+would change both the observable and the infinite-index problem.
+
+To pass from the published finite-volume formulas to the plane, begin
+with the finite cylinder formulas in \cite[(35)--(39)]{BL}, which concern arbitrary separations,
+not just a single lattice row. Vacuum-to-state matrix elements are also
+covered by \cite[Theorem 6.1]{IL} in the LT phase and by its
+Remark 6.2, equations (6.8)--(6.10), with the HT vacuum change.
+On a fixed real noncritical compact set, the one-body dispersion is
+analytic in a common angular strip and has a positive real gap. The
+finite-circumference correction functions $\eta$, $\Lambda^{-1}$ and
+$\log\xi_T$ tend uniformly to zero: their sum-minus-integral expressions
+are controlled by the exponentially convergent trapezoidal rule for
+periodic analytic functions. They are uniformly bounded before the limit.
+
+The same limit must also commute with the particle sum. The required
+uniformity follows from the Schur contraction. For real roots
+$0<\rho(q)=e^{-\gamma(q)}\le r<1$, the Schur factor
+$|(\rho_i-\rho_j)/(1-\rho_i\rho_j)|$ is at most a constant strictly below
+one. The matched-Pfaffian argument proved in
+Section~\ref{sec:regular} applies to the discrete angular grids as an
+algebraic identity, with their normalized counting measures. Its
+single-body finite-size corrections cost only $C^N$. Consequently the
+finite-circumference coefficients, at each fixed separation, have a
+common bound $\exp(-cN^2+O(N\log(N+1)))$, including their factorial
+normalization. This is summable independently of circumference, so the
+particle sum passes through the cylinder limit; taking each fixed-$N$
+Riemann-sum limit gives \eqref{eq:corrFF}.
+
+Every local cylinder limit is a translation-invariant, spin-flip invariant
+Gibbs state for these finite-range positive couplings. Apply
+\cite[Theorem 1]{Raoufi} with the vertex-transitive subgroup consisting
+of translations: unequal horizontal and vertical couplings satisfy all
+four stated hypotheses. Such a state is the equal mixture of the plus
+and minus states. Its even spin correlations are those of the plus
+state. This identifies the two-point function in \eqref{eq:LTcorr};
+the connected pure-phase observable is obtained only after removing
+the zero-particle term $\xi_L$.
+
+\subsection{Symmetric double contours and every lattice site}
+
+The symmetric contour form will serve two purposes: it keeps both
+lattice directions visible, and it makes the full-site summation an
+explicit rational multiplier. We first verify that it has exactly the
+normalization of the angular correlation coefficient.
+For separate contour variables $x,y$ put
+\begin{equation}\label{eq:Dpoly}
+ D(x,y;z)=A-\frac S2(x+x^{-1})-\frac T2(y+y^{-1}),\qquad
+ \cA(v,w)=\frac{v-w}{1-vw}.
+\end{equation}
+With $X=\prod_i x_i$ and $Y=\prod_i y_i$, the same correlation
+coefficient is
+\begin{equation}\label{eq:doublecorr}
+ \frac{p^{N/2}}{N!}\oint\cdots\oint
+ X^{|m|-1}Y^{|l|-1}
+ \prod_{i<j}\cA(x_i,x_j)\cA(y_i,y_j)
+ \prod_i\frac{\dd x_i\,\dd y_i}{(2\pi\ii)^2D(x_i,y_i;z)}.
+\end{equation}
+The circles are positively oriented and sufficiently close to, but inside,
+the unit circle. To check the normalization, fix $y=e^{\ii q}$ and
+take the $x$ residue at the interior root $\rho=e^{-\gamma}$.
+Since
+\[
+ D_x(\rho,y)=\frac{S(1-\rho^2)}{2\rho^2},\qquad
+ \frac{\sqrt p}{D_x(\rho,y)}=\sqrt B\frac{\rho}{\sinh\gamma},
+\]
+and subtraction of two dispersion equations gives
+\begin{equation}\label{eq:cancelpair}
+ \cA(\rho_i,\rho_j)\cA(y_i,y_j)
+ =-B\frac{(y_i-y_j)^2\rho_i\rho_j}
+           {y_iy_j(1-\rho_i\rho_j)^2}
+ =B\left[\frac{\sin((q_i-q_j)/2)}
+               {\sinh((\gamma_i+\gamma_j)/2)}\right]^2=:P_{ij},
+\end{equation}
+the residue factors supply $B^{N/2}$ and the pair factors supply
+$B^{N(N-1)/2}$. This recovers precisely $B^{N^2/2}$.
+The remaining factors in \eqref{eq:doublecorr} give the stated Fourier
+and spatial decay factors. Reflection in each coordinate is legitimate;
+equality under interchange of the two separations at fixed unequal
+couplings is not assumed.
+
+The exact full-site multiplier in the double contour is
+\begin{equation}\label{eq:allsites}
+ \frac{(1+X)(1+Y)}{XY(1-X)(1-Y)}
+ =\frac1{XY}+\frac{2(X^{-1}+Y^{-1})}{(1-X)(1-Y)}.
+\end{equation}
+It is the product of the two sums $\sum_{m\in\Z}X^{|m|-1}$ and
+$\sum_{l\in\Z}Y^{|l|-1}$. It counts the origin once, each reflected
+axis correctly, and all four open quadrants. If $C_N$ is the full-site
+coefficient and $T_N$ the contour with the second numerator but without
+its factor two, then $C_N=f_N(0,0)+2T_N$. The onsite sums are one in
+the HT phase and $1-M^2$ after the LT subtraction. This decomposition retains the axes, the origin, and the open quadrants
+within the same coefficient.
+
+Summing the Fourier variable and the geometric spatial series also gives
+the complete angular representation
+\begin{equation}\label{eq:fullangular}
+ C_N=\frac1{N!}\int_{\sum q_i=0\bmod2\pi}
+ G_N(q)\frac{1+Z}{1-Z}\prod_{i=1}^{N-1}\frac{\dd q_i}{2\pi},\quad
+ G_N=B^{N/2}\prod_i\frac1{\sinh\gamma_i}\prod_{i<j}P_{ij},\quad
+ Z=\prod_i e^{-\gamma_i}.
+\end{equation}
+There are exactly $N-1$ independent normalized angular measures, with
+$q_N=-\sum_{i<N}q_i$ modulo $2\pi$.
+
+\subsection{A holomorphic full sum on an independent spectral domain}
+Define
+\begin{equation}\label{eq:physicalspectralset}
+ \cS_\lambda=\{z:\exists u,v\in[-1,1],\ A(z)=S(z)u+T(z)v\}.
+\end{equation}
+It is exactly the set where \eqref{eq:Dpoly} has a zero on the product
+of two unit circles. Section~\ref{sec:geometry} proves that the components
+of $\C\setminus\cS_\lambda$ containing $(0,z_c)$ and $(z_c,\infty)$
+are exactly \eqref{eq:domains}, and that both are simply connected.
+
+We first establish local normal convergence of the particle series on the
+spectral complement. The physical prefactors are attached on the two
+specified components below. The later boundary estimates will determine
+whether those physical sums can extend further. On a compact subset of the spectral
+complement the torus polynomial has a nonzero minimum modulus. Move
+both radii a small common amount inside one, within a product annulus
+where this gap persists. The resulting contours can be held fixed on
+a parameter neighborhood. Their Schur entries are bounded. The Schur
+Pfaffian identity, followed by Hadamard's determinant inequality, bounds
+the product of the two Pfaffians by
+$C^N N^{(N+1)/2}$, with the harmless extra odd dimension obtained by
+adjoining a constant ghost entry. After the $1/N!$ normalization and
+the bounded one-body and full-site factors this is summable in $N$.
+It is locally normally summable together with every fixed parameter
+derivative by Cauchy's inequality on a slightly larger neighborhood.
+
+On a physical real compact set the same contours in
+\eqref{eq:doublecorr} additionally give
+$r_x^{N|m|}r_y^{N|l|}$ with $r_x,r_y<1$. This proves absolute summability
+in the lattice sites and particles and justifies their interchange.
+Thus \eqref{eq:fullangular} and the double contour define the same
+physical germs. Absolute summability supplies the full-site identification
+and the interchange used to obtain it.
+
+Write $F_N=p^{-N/2}C_N$ for the unscaled double contour, whose integrand
+uses \eqref{eq:Dpoly} and \eqref{eq:allsites}. The complete sums are
+\begin{align}
+ \XH&=(1-p^2)^{1/4}\sum_{N\ge1,\ N\text{ odd}}p^{(N-1)/2}F_N,
+                                                        \label{eq:globalHT}\\
+ \XL&=(1-p^{-2})^{1/4}\sum_{N\ge2,\ N\text{ even}}p^{N/2}F_N.
+                                                        \label{eq:globalLT}
+\end{align}
+The powers inside both sums are integers. The identity
+$A^2=(1+S^2)(1+T^2)$ implies that every $p^2=1$ point lies in
+$\cS_\lambda$. Also, $p$ never vanishes in $\OL\subset\{\Re z>0\}$;
+in $\OH$ its only zero is the double zero at the origin. Hence the
+prefactors in these formulas have unique holomorphic branches on the
+specified simply connected domains, fixed by the real physical values.
+Formula \eqref{eq:globalHT} removes the apparent HT $1/\sqrt p$
+singularity at zero; $\XH(0)=1$. In particular, the one-particle term is
+\[
+ \XH^{(1)}=\frac{(1-p^2)^{1/4}}{A-S-T},
+\]
+which gives $1+2\beta(J_x+J_y)+O(\beta^2)$ at the origin.
+
+For the angular formulas the spectral root is globally specified by
+\[
+ \rho=W-\sqrt{W^2-1},\qquad |\rho|<1,
+ \qquad W=(A-T\cos q)/S.
+\]
+The square root has asymptotic $W$ at infinity. For $z$ in the spectral
+complement, $W$ avoids $[-1,1]$ for every real $q$, so the inside root
+is unique. At $S=0$ its root equation
+$S\rho^2-2(A-T\cos q)\rho+S=0$ gives its removable value zero.
+A local logarithm $\gamma=-\log\rho$ is used wherever the root is
+nonzero and the local calculation requires it. The canonical root itself
+provides the global spectral sheet; periodic complex coupling shifts do
+not change the prescribed transfer vacuum.
+
+
+
+\section{Exact geometry on every fixed positive coupling slice}\label{sec:geometry}
+
+This section determines where the contour denominator can meet the
+integration torus. The sign factorization gives the exact spectral set;
+two components of its complement give the lens and epigraph. For unequal
+couplings, the final steps isolate the regular arcs on which the analytic
+estimates will be performed and show that the omitted points are locally
+discrete.
+
+Fix \(\lambda>0\), and use the one-complex-variable coordinate
+\begin{gather*}
+ z=2\beta J_x=x+\ii y,\qquad
+ a(z)=\sinh z,\quad b(z)=\sinh(\lambda z),\\
+ A(z)=\cosh z\cosh(\lambda z),\qquad p(z)=a(z)b(z).
+\end{gather*}
+The constraint \(K_y=\lambda K_x\) is imposed throughout. In particular,
+the ratio \(b/a\) is generally a nonconstant meromorphic function of
+\(z\); it must not be identified with the fixed coupling ratio
+\(\lambda\).
+
+\subsection{An independently specified spectral set}
+
+\begin{definition}\label{def:spectralset}
+For \((u,v)\in[-1,1]^2\), let
+\[
+ f_\lambda(z;u,v)=A(z)-a(z)u-b(z)v.
+\]
+The spectral set is
+\begin{equation}\label{eq:spectralset}
+ \cS_\lambda
+ =\{z\in\C:\ f_\lambda(z;u,v)=0
+                    \text{ for some }(u,v)\in[-1,1]^2\}.
+\end{equation}
+Equivalently, it is the set where the elementary spectral polynomial
+\[
+ A(z)-\frac{a(z)}2(X+X^{-1})
+       -\frac{b(z)}2(Y+Y^{-1})
+\]
+has a zero with \(|X|=|Y|=1\).
+\end{definition}
+
+The definition is entirely spectral and is independent of the susceptibility
+construction. The anisotropic Nickel candidate equation
+in \cite[eq.~(54)]{BHM} is the restriction of
+\eqref{eq:spectralset} to cosine grids. The result here is geometric grid closure. A genuine obstruction for the
+infinite physical sum will require the amplitude and tail estimates in
+Sections~\ref{sec:regular}--\ref{sec:jets}; it does not follow solely
+from the candidate equation or a differential system singular locus.
+
+Put
+\begin{equation}\label{eq:cramerUV}
+ D(z)=\Im(\overline{a(z)}b(z)),\qquad
+ U(z)=\frac{\Im(\overline{A(z)}b(z))}{D(z)},\qquad
+ V(z)=\frac{\Im(\overline{a(z)}A(z))}{D(z)}.
+\end{equation}
+When \(D\ne0\), the last two quantities are the unique real solution
+of \(A=aU+bV\). Thus membership means \(|U|,|V|\le1\), and strict
+inequalities give an interior point of \(\cS_\lambda\). At \(D=0\)
+and \(a\ne0\), membership instead means
+\[
+ b/a\in\R,\qquad A/a\in\R,\qquad |A/a|\le1+|b/a|.
+\]
+If \(a=0\), the analogous condition with \(b\) applies. Simultaneous
+zeros of \(a,b\) never belong to \(\cS_\lambda\), since then
+\(A=\pm1\). These conditions retain the unsquared equation and its
+sign information.
+
+\begin{lemma}[Closure of both parity grid families]\label{lem:gridclosure}
+For each parity separately, the closure of the union of zeros
+\[
+ f_\lambda\bigl(z;\cos(2\pi j/n),\cos(2\pi k/n)\bigr)=0
+\]
+is exactly \(\cS_\lambda\). Odd prime orders \(n=q\), and even orders
+\(n=2q\) with \(q\) an odd prime, already suffice. The assertion remains
+true after deleting grid pairs in any convention that leaves the grids
+dense in \([-1,1]^2\), including deletion of the isotropic exceptional
+pairs \(j=k=0\), and \(j+k=n/2\) when \(n\) is even.
+\end{lemma}
+\begin{proof}
+The set \(\cS_\lambda\) is closed: for a convergent sequence of its
+points, extract a convergent subsequence of representing pairs from the
+compact square and pass to the limit in \(f_\lambda\).
+This proves one inclusion.
+
+For the reverse inclusion, fix \(z_0\in\cS_\lambda\) with representing
+pair \((u,v)\), and choose allowed grid pairs \((u_m,v_m)\to(u,v)\).
+The functions \(f_\lambda(\cdot;u_m,v_m)\) converge uniformly on compact
+sets to \(f_\lambda(\cdot;u,v)\). The latter is not identically zero,
+since its value at \(z=0\) is one. On a sufficiently small circle around
+\(z_0\) it has no zeros, and Rouche's theorem supplies a zero of every
+sufficiently close approximating function inside that circle. A sequence
+of shrinking circles gives zeros converging to \(z_0\). This argument
+also covers multiple roots, endpoints, \(D=0\), and zeros of either
+hyperbolic sine.
+
+The indicated prime grids are dense because their angular mesh tends
+to zero. Removing the displayed exceptional pairs does not affect
+density: when a nearest pair is deleted, changing one index by one
+step, or a bounded number of steps, avoids the exceptional equalities
+while the mesh error still tends to zero.
+\end{proof}
+
+The exclusions just mentioned are the convention displayed with the
+isotropic equation in \cite[eq.~(52)]{BHM}. Lemma~\ref{lem:gridclosure}
+does not assert that this list is an exhaustive anisotropic singularity
+classification. The physical odd/even order restrictions are supplied
+by the corresponding exact correlation representations, and the true
+singularity and infinite-sum arguments are separate.
+
+\begin{lemma}\label{lem:noisolatedS}
+The set \(\cS_\lambda\) has no isolated points.
+\end{lemma}
+\begin{proof}
+At a point \(z_0\in\cS_\lambda\), the coefficients \(a(z_0),b(z_0)\)
+do not both vanish. Perturb a representing pair into the open square
+so that \(f_\lambda(z_0;u_m,v_m)\ne0\), which is possible because that
+affine function of the pair is not constant. The preceding Rouche
+argument produces distinct nearby roots tending to \(z_0\).
+\end{proof}
+
+\subsection{A closed real-analytic inequality, including every degeneracy}
+
+The two real functions below encode the spectral membership test
+without dividing by the real-linear determinant. The proof first handles
+opposite and equal signs, then treats endpoint and collinear cases.
+
+Define
+\begin{align}
+ F_1(x,y)&=\cosh^2(\lambda x)\cos^2y
+                -\cosh^2x\sinh^2(\lambda x),\label{eq:F1}\\
+ F_2(x,y)&=\cosh^2x\cos^2(\lambda y)
+                -\sinh^2x\cosh^2(\lambda x).\label{eq:F2}
+\end{align}
+
+\begin{theorem}[Exact fixed-slice geometry]\label{thm:F1F2}
+For every \(\lambda>0\),
+\begin{equation}\label{eq:F1F2set}
+ \boxed{\cS_\lambda=\{x+\ii y:\ F_1(x,y)F_2(x,y)\le0\}.}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Reflection in the imaginary axis preserves the set and the two real
+functions, so it is enough to consider \(x\ge0\). At \(x=0\),
+\(a,b\) are purely imaginary and \(A\) is real. Membership is exactly
+\[
+ A=\cos y\cos(\lambda y)=0,
+\]
+which is precisely \(F_1F_2=0\) there.
+
+Suppose now \(x>0\), and abbreviate
+\begin{gather*}
+ h=\sinh x,\quad c=\cosh x,\quad H=\sinh(\lambda x),\quad C=\cosh(\lambda x),\\
+ t=\cos y,\quad q=\sin y,\quad T=\cos(\lambda y),\quad Q=\sin(\lambda y).
+\end{gather*}
+Write \(N_U=\Im(\overline A b)\), \(N_V=\Im(\overline a A)\).
+Expansion gives the real identities
+\[
+ D=hCtQ-cHqT,\qquad
+ N_U=ctTQ-hHCq,\qquad N_V=hcHQ-CtqT,
+\]
+and the exact factorizations
+\begin{align}
+ N_U^2-D^2&=(c^2T^2-h^2C^2)(t^2Q^2-H^2q^2),\label{eq:NUfactor}\\
+ N_V^2-D^2&=(c^2H^2-C^2t^2)(h^2Q^2-q^2T^2).\label{eq:NVfactor}
+\end{align}
+For clarity set
+\[
+ a_0=h^2,\ b_0=H^2,\ A_0=1+a_0,\ B_0=1+b_0,
+\quad X=t^2,\ Y=T^2,\quad
+ X_0=\frac{A_0b_0}{B_0},\quad Y_0=\frac{a_0B_0}{A_0}.
+\]
+Then \(F_1=B_0(X-X_0)\), \(F_2=A_0(Y-Y_0)\), and
+\begin{align}
+ N_U^2-D^2&=F_2 K,& K&=(B_0-Y)X-b_0,\label{eq:KF}\\
+ N_V^2-D^2&=-F_1 L,& L&=a_0-(A_0-X)Y.\label{eq:LF}
+\end{align}
+Both \(K,L\) vanish at \((X_0,Y_0)\), increase with \(X\), and
+decrease with \(Y\). Thus \(F_1>0,F_2<0\) implies \(K,L>0\),
+whereas \(F_1<0,F_2>0\) implies \(K,L<0\). In either case the
+right-hand sides in \eqref{eq:KF}--\eqref{eq:LF} are negative.
+In particular \(D\ne0\), since otherwise a real square would be
+negative, and \(|U|,|V|<1\). This proves membership for strict
+opposite signs directly, including the needed nonvanishing of \(D\).
+
+If \(D\ne0\), \(0<Y<1\), and both \(F\)'s are positive, the
+two membership inequalities would require
+\[
+ X\le\frac{b_0}{B_0-Y},\qquad X\ge A_0-\frac{a_0}{Y}.
+\]
+They are inconsistent because \(Y>Y_0\) and
+\begin{equation}\label{eq:rationaldifference}
+ \frac{b_0}{B_0-Y}-\left(A_0-\frac{a_0}{Y}\right)
+ =\frac{A_0(Y-1)(Y-Y_0)}{Y(B_0-Y)}<0.
+\end{equation}
+If both \(F\)'s are negative, the required inequalities reverse;
+now \(Y<Y_0\) makes \eqref{eq:rationaldifference} positive, again
+inconsistent. At \(Y=0\), the factors directly give membership
+exactly when \(X\ge X_0\). At \(Y=1\), they give membership exactly
+when \(Y_0\le1\) and \(X\le X_0\). These conditions agree with
+\(F_1F_2\le0\); if \(Y_0>1\), then also \(X_0>1\), so the opposite
+sign possibility at \(Y=1\) cannot occur.
+
+It remains to handle zeros and collinearity. Every point with \(F_1=0\)
+belongs to the spectral set, including those with \(D=0\). Indeed, the
+two endpoint dispersion root pairs are
+\begin{align}
+ r_+(z)&=e^{\lambda z}\tanh(z/2),&
+ \frac{r_++r_+^{-1}}2&=\frac{A-b}{a},\label{eq:endpointplus}\\
+ r_-(z)&=e^{-\lambda z}\tanh(z/2),&
+ \frac{r_-+r_-^{-1}}2&=\frac{A+b}{a}.\label{eq:endpointminus}
+\end{align}
+Here \(a\ne0\), and \(\tanh(z/2)\) has neither zero nor pole because
+\(x>0\). The exact modulus identity
+\[
+ |\tanh(z/2)|^2=\frac{\cosh x-\cos y}{\cosh x+\cos y}
+\]
+shows that \(|r_+|=1\) exactly when
+\(\cos y=\cosh x\tanh(\lambda x)\), and \(|r_-|=1\) exactly when
+the right side has a minus sign. These are the two possibilities in
+\(F_1=0\). A unit-modulus root has \((r+r^{-1})/2\in[-1,1]\),
+giving respectively the representing endpoint \(V=1\) or \(V=-1\).
+Exchanging the two axes proves the same assertion for \(F_2=0\).
+
+Conversely suppose \(D=0\) at a candidate point. Then \(N_U=N_V=0\).
+If both \(F\)'s were nonzero, \eqref{eq:KF}--\eqref{eq:LF} would give
+\(K=L=0\). These force \(Y>0\), and
+\eqref{eq:rationaldifference} forces \(Y=Y_0\) or \(Y=1\).
+The first contradicts \(F_2\ne0\). In the second case \(X=1\) too.
+The coefficients are then real up to their signs, and candidate
+membership requires
+\[
+ \cosh x\cosh(\lambda x)\le\sinh x+\sinh(\lambda x).
+\]
+The square of the left side minus the square of the right side is
+\((\sinh x\sinh(\lambda x)-1)^2\). Equality is therefore forced,
+and \(F_1=F_2=0\), again a contradiction. Finally, at \(F_1=0\)
+identity \eqref{eq:KF} becomes
+\(N_U^2-D^2=-(b_0/B_0)F_2^2\); at \(F_2=0\),
+\eqref{eq:LF} becomes \(N_V^2-D^2=-(a_0/A_0)F_1^2\).
+Thus a collinear candidate with one zero has both zeros. The sign, endpoint, and collinearity cases together prove
+\eqref{eq:F1F2set}.
+\end{proof}
+
+\subsection{The two exact physical spectral components}
+
+The sign criterion now identifies the components selected by the two
+positive real temperature intervals. The inverse profiles translate
+the two sign inequalities into explicit boundary curves.
+
+Let \(z_c>0\) be the unique solution
+\begin{equation}\label{eq:zc}
+ \sinh z_c\sinh(\lambda z_c)=1.
+\end{equation}
+Define strictly increasing functions on \([0,\infty)\) by
+\begin{equation}\label{eq:PQ}
+ P_\lambda(t)=\cosh t\tanh(\lambda t),\qquad
+ Q_\lambda(t)=\cosh(\lambda t)\tanh t.
+\end{equation}
+Both start at zero, tend to infinity, and satisfy
+\(P_\lambda(z_c)=Q_\lambda(z_c)=1\). Their real inverse functions are
+unambiguous. Put
+\begin{align}
+ Y_\lambda&=\frac{\pi}{2\max(1,\lambda)},\label{eq:Ylambda}\\
+ H_\lambda(y)&=\min\{P_\lambda^{-1}(\cos y),
+                       Q_\lambda^{-1}(\cos(\lambda y))\},
+                       &&|y|<Y_\lambda,\label{eq:Hlambda}\\
+ L_\lambda(y)&=\max\{P_\lambda^{-1}(|\cos y|),
+                       Q_\lambda^{-1}(|\cos(\lambda y)|)\},
+                       &&y\in\R.\label{eq:Llambda}
+\end{align}
+
+\begin{theorem}[Physical spectral components]\label{thm:components}
+The component of \(\C\setminus\cS_\lambda\) containing the real
+high-temperature interval \((0,z_c)\), and the component containing
+the real low-temperature interval \((z_c,\infty)\), are respectively
+\begin{align}
+ \OH&=\{x+\ii y:\ |y|<Y_\lambda,
+                         \ |x|<H_\lambda(y)\},\label{eq:OH}\\
+ \OL&=\{x+\ii y:\ x>L_\lambda(y)\}.\label{eq:OL}
+\end{align}
+Both are simply connected. Their boundaries are the complete lens
+boundary and the complete graph \(x=L_\lambda(y)\), respectively.
+Moreover \(0\le L_\lambda(y)\le z_c\), and
+\(\cS_\lambda\subset\{|\Re z|\le z_c\}\).
+\end{theorem}
+\begin{proof}
+At the origin \(F_1,F_2\) are both positive. Their signs cannot change
+in its complement component. Since neither cosine can then vanish,
+both retain their positive signs, giving
+\(|y|<Y_\lambda\). The two positive inequalities are exactly
+\(|x|<H_\lambda(y)\). Conversely this entire lens is connected:
+decrease \(|x|\) to zero at fixed \(y\), then decrease \(|y|\) to zero.
+Both operations preserve the inequalities. In fact the lens is star
+shaped about zero and hence simply connected.
+
+At real \(z>z_c\), both \(F\)'s are negative. For \(x>0\), their
+simultaneous negativity is exactly \(x>L_\lambda(y)\). This epigraph
+is connected because \(L_\lambda\le z_c\), and a component with both
+signs negative cannot cross \(x=0\), where both are nonnegative.
+Thus it is precisely the LT component. Its continuous boundary graph
+is mapped to a straight line by the homeomorphism
+\((x,y)\mapsto(x-L_\lambda(y),y)\), proving simple connectivity.
+Finally if \(|x|>z_c\), both \(P_\lambda(|x|),Q_\lambda(|x|)\)
+exceed one, so both \(F\)'s are negative and the point is outside
+\(\cS_\lambda\).
+\end{proof}
+
+The boundary functions are explicitly defined before any analyticity
+or singularity assertion for a particle sum. In particular the set
+\(\cS_\lambda\) itself generally has interior, whereas the boundaries
+in Theorem~\ref{thm:components} are one-dimensional barriers.
+
+\begin{proposition}[Strict anisotropic opening]\label{prop:anisotropicarea}
+For every \(\lambda\ne1\), \(\cS_\lambda\) has nonempty interior
+arbitrarily close to \(z_c\). The horizontal width between the two
+local endpoint curves near \(z_c+\ii y\) is
+\begin{equation}\label{eq:cuspwidth}
+ \frac12\bigl|\lambda\coth(\lambda z_c)-\coth z_c\bigr|y^2
+       +O(y^4).
+\end{equation}
+\end{proposition}
+\begin{proof}
+For small \(y\), the two zero curves are
+\[
+ x_1(y)=P_\lambda^{-1}(\cos y)
+      =z_c-\frac{y^2}{2P_\lambda'(z_c)}+O(y^4),
+\]
+\[
+ x_2(y)=Q_\lambda^{-1}(\cos(\lambda y))
+      =z_c-\frac{\lambda^2y^2}{2Q_\lambda'(z_c)}+O(y^4).
+\]
+Using \(\sinh z_c\sinh(\lambda z_c)=1\), subtraction of the two
+displayed coefficients gives \eqref{eq:cuspwidth}. The coefficient
+is nonzero for \(\lambda\ne1\): the function
+\(t\mapsto t\coth t\) is strictly increasing for \(t>0\), since
+\(\sinh t\cosh t-t>0\). Strictly between the two distinct curves
+the \(F\)'s have opposite signs, so Theorem~\ref{thm:F1F2} gives
+an open part of the spectral set.
+\end{proof}
+
+For a concrete exact check, at \(\lambda=2\) take
+\[
+ a_0=\frac{1+\ii\sqrt7}{4},\qquad c_0=\sqrt{1+a_0^2},\quad
+ \Re c_0>0,\qquad z_0=\operatorname{arsinh}a_0
+\]
+on the corresponding local branch. Then \(b=2a_0c_0\),
+\(A=c_0(1+2a_0^2)=b/2\), so \(U=0,V=1/2\).
+Also \(D=\Im c_0\ne0\) and \(|ab|=2^{-1/4}\ne1\).
+Thus the full spectral set differs from \(|ab|=1\). This explicit
+interior point illustrates why the natural-boundary statement concerns
+the boundaries of the physical complementary components.
+
+\subsection{Zeros, collinearity and every exceptional boundary point}
+
+To use regular edge coordinates densely, we must account for their
+exceptional points. We treat elementary zeros first, then collinearity,
+and finally the regular-arc density argument.
+
+The imaginary-axis intersection has the exact simple description
+\begin{equation}\label{eq:imagaxisS}
+ \cS_\lambda\cap\ii\R
+ =\{\ii y:\cos y\cos(\lambda y)=0\}.
+\end{equation}
+It is locally finite. Both cosines vanish simultaneously if and only
+if \(\lambda\) is a ratio of two positive odd integers. In reduced
+form \(\lambda=r/s\) with both \(r,s\) odd, these simultaneous
+points have \(y=(2m+1)\pi s/2\).
+
+For completeness, a zero of \(a\) has \(z=\ii\pi m\) and belongs
+to \(\cS_\lambda\) exactly when \(\cos(\lambda\pi m)=0\);
+then \(b=\pm\ii\), \(A=0\), and its representing pairs have
+\(V=0\). The corresponding statement for \(b=0\) follows by
+axis exchange. Simultaneous sine zeros are outside the spectral set.
+Inside \(\OH\), the only sine zero is the common zero at \(z=0\);
+inside \(\OL\) neither sine vanishes. In addition,
+\begin{equation}\label{eq:cornerp}
+ \bigcup_{\eps_1,\eps_2\in\{1,-1\}}
+ \{A=\eps_1 a+\eps_2b\}=\{p^2=1\}\subset\cS_\lambda,
+\end{equation}
+because
+\[
+ A^2-(\eps_1 a+\eps_2 b)^2=(p-\eps_1\eps_2)^2.
+\]
+Every such set is discrete on the fixed nonconstant slice. Hence
+the phase prefactors have no zero or branch point in either physical
+component, except for the removable HT normalization issue at the
+origin treated by its integer-power formula. On \(\OL\), even that
+issue is absent. The boundary of \(\OL\) reaches the imaginary axis
+only at simultaneous cosine zeros.
+
+\begin{lemma}[Collinear candidates]\label{lem:collinear}
+For \(\Re z\ne0\),
+\[
+ \{z\in\cS_\lambda:D(z)=0\}
+ =\{z:D(z)=0,\ |a(z)b(z)|=1\}.
+\]
+For each \(\lambda>0\), \(\lambda\ne1\), this set, together with
+the collinear candidates on the imaginary axis, is locally discrete.
+\end{lemma}
+\begin{proof}
+Off the imaginary axis, \(a,b\ne0\). Write \(b=r a\), \(r\in\R\setminus
+\{0\}\). A candidate also has \(A=t a\), \(t\in\R\), and
+\[
+ t^2=1+r^2+r^2a^2+a^{-2}.
+\]
+If \(a=R e^{\ii\theta}\), reality of this expression implies
+\((r^2R^2-R^{-2})\sin(2\theta)=0\). Unless \(a\) is real or purely
+imaginary, this gives \(|ab|=1\). If \(a,b\) are real, the inequality
+\(|A|\le|a|+|b|\), together with
+\[
+ |A|^2-(|a|+|b|)^2=(|ab|-1)^2,
+\]
+gives the same conclusion. If both are purely imaginary off the
+imaginary axis, then both cosines vanish, \(|a|,|b|>1\), and \(A\)
+is nonzero real; it cannot be a real multiple of imaginary \(a\).
+Conversely, if \(D=0\) and \(|ab|=1\), then
+\[
+ (A/a)^2=1+r^2+2|r|\cos(2\theta)
+                   \in[(1-|r|)^2,(1+|r|)^2].
+\]
+Thus \(A/a\) is real with the required segment bound, proving the
+set equality.
+
+By symmetry it is enough to prove local discreteness for \(x>0\).
+For each \(y\) with \(|\sin y\sin(\lambda y)|<1\), the equation
+\begin{equation}\label{eq:modulusgraph}
+ (\sinh^2x+\sin^2y)(\sinh^2(\lambda x)+\sin^2(\lambda y))=1
+\end{equation}
+has a unique solution \(x=X(y)>0\). The left side strictly increases
+with \(x\), starts below one, and tends to infinity. Its positive
+\(x\) derivative proves that \(X\) is real analytic. At a simultaneous
+cosine zero it tends continuously to zero.
+
+If there are no simultaneous cosine zeros, \(X\) is analytic on all
+of \(\R\). The analytic function \(D(X(y)+\ii y)\) is not identically
+zero, because its derivative at \(y=0\) is
+\[
+ a(z_c)b'(z_c)-a'(z_c)b(z_c)
+       =\lambda\coth(\lambda z_c)-\coth z_c\ne0.
+\]
+Its zeros are therefore locally discrete. If simultaneous cosine
+zeros occur, write \(\lambda=r/s\) in reduced odd/odd form. The
+intervals between \((2m+1)\pi s/2\) are translates by \(\pi s\) of
+one another, and each contains a translate of \(y=0\). Both \(X\)
+and the displayed restriction of \(D\) have that period, so the
+restriction is not identically zero on any interval.
+
+There is no accumulation of these zeros at the interval endpoints.
+At a simultaneous zero, write \(z=z_0+\zeta\), \(\zeta=x+\ii\delta\).
+For signs \(\sigma,\tau\in\{1,-1\}\),
+\[
+ a=\ii\sigma\cosh\zeta,\qquad
+ b=\ii\tau\cosh(\lambda\zeta),\qquad
+ D=\sigma\tau(\lambda^2-1)x\delta+O(|\zeta|^4).
+\]
+Equation \eqref{eq:modulusgraph} gives
+\(X(y)=|\delta|+O(|\delta|^3)\), so \(D\ne0\) for all sufficiently
+small nonzero \(\delta\). At any other imaginary-axis candidate,
+\(|ab|<1\), and continuity excludes approach by off-axis collinear
+candidates with \(|ab|=1\). This proves local discreteness everywhere.
+\end{proof}
+
+\begin{definition}\label{def:regularedge}
+A regular edge point has \(D\ne0\), exactly one of \(U,V\) equal to
+\(1\) or \(-1\), the other strictly in \((-1,1)\), and nonzero
+derivative of the corresponding meromorphic edge map
+\[
+ h_\eps(z)=\frac{A(z)-\eps a(z)}{b(z)}
+ \quad(U=\eps),\qquad
+ g_\eps(z)=\frac{A(z)-\eps b(z)}{a(z)}
+ \quad(V=\eps).
+\]
+\end{definition}
+
+\begin{proposition}[Dense regular boundary arcs]\label{prop:regular_dense}
+For every fixed \(\lambda>0\), \(\lambda\ne1\), regular edge points
+are dense in the boundary of every component of
+\(\C\setminus\cS_\lambda\), in particular in both boundaries in
+Theorem~\ref{thm:components}. The excluded set is locally discrete.
+\end{proposition}
+\begin{proof}
+The four edge maps are nonconstant meromorphic functions: each has a
+pole at \(z=0\). Their critical points and poles are locally discrete.
+Corner points are the discrete zeros in \eqref{eq:cornerp}; collinear
+candidates are locally discrete by Lemma~\ref{lem:collinear}. Let
+\(E\) be their union, restricted to \(\cS_\lambda\).
+
+At a boundary point outside \(E\), strict inequalities cannot hold
+for both coordinates, since they would give an interior point.
+Exactly one is an endpoint, and the corresponding holomorphic edge
+map has nonzero derivative. Its imaginary part is a nondegenerate
+local defining function for that edge. The unique real-coordinate
+solution in \eqref{eq:cramerUV} then shows that \(\cS_\lambda\) is
+locally one closed side of an analytic arc and its complement is
+the other side.
+
+If \(\Omega\) is any complement component, then
+\(\partial\Omega\subset\partial\cS_\lambda\). It has no isolated
+point: if \(z_0\) were isolated in \(\partial\Omega\), a sufficiently
+small punctured disk, being connected and containing points of
+\(\Omega\), would lie wholly in \(\Omega\). Then \(z_0\) would be
+an isolated point of \(\cS_\lambda\), contrary to
+Lemma~\ref{lem:noisolatedS}. Removing the locally discrete set \(E\)
+from a boundary without isolated points leaves a dense subset.
+\end{proof}
+
+At the right side of the physical HT lens, both cosines in
+\eqref{eq:Hlambda} are positive. Equations
+\eqref{eq:endpointplus}--\eqref{eq:endpointminus}, or their axis-swapped
+versions, show that every regular edge there is a positive endpoint.
+Reflection \(z\mapsto-\overline z\) preserves the lens and sends the
+representing pair \((U,V)\) to \((-U,-V)\), so every regular left edge
+is a negative endpoint. Thus negative endpoints belong to the physical HT boundary for every
+\(\lambda\ne1\). They require the separate odd-sum argument of
+Sections~\ref{sec:morse}--\ref{sec:jets}.
+On the LT boundary, an \(F_1=0\) regular edge has
+\(V=\operatorname{sign}(\cos y)\), and an \(F_2=0\) regular edge has
+\(U=\operatorname{sign}(\cos(\lambda y))\). These alternatives cover
+all its regular pieces.
+
+\subsection{The canonical root and the precise resonance arithmetic}
+
+\begin{lemma}[Canonical spectral sheet]\label{lem:canonicalroot}
+For \(z\notin\cS_\lambda\) and real \(q\), the equation
+\[
+ a\rho^2-2(A-b\cos q)\rho+a=0
+\]
+has a unique root with \(|\rho|<1\), interpreted as \(\rho=0\) if
+\(a=0\). It is holomorphic in \(z\), locally jointly holomorphic
+with the complex angle, and has a common modulus gap below one on
+every compact subset of \(\C\setminus\cS_\lambda\) and the real
+angle circle. On the positive real HT and LT intervals it is the
+positive physical decaying root.
+\end{lemma}
+\begin{proof}
+When \(a\ne0\), put \(W=(A-b\cos q)/a\). Outside the spectral set,
+\(W\notin[-1,1]\). The root
+\[
+ \rho(W)=W-\sqrt{W^2-1},\qquad \sqrt{W^2-1}\sim W\quad(W\to\infty),
+\]
+is the unique interior root on \(\C\setminus[-1,1]\); the other root
+is its reciprocal. At \(a=0\), the coefficient \(A-b\cos q\ne0\)
+by the spectral-set definition, so the implicit-function theorem
+extends the root through \(\rho=0\). Compactness supplies the uniform
+gap and a thin complex angle neighborhood. For positive real
+\(z\ne z_c\), \(A-a-b>0\), since
+\[
+ (A-a-b)(A+a+b)=(ab-1)^2,
+\]
+and hence \(W(q)>1\) for all real \(q\), proving the physical match.
+\end{proof}
+
+The root statement does not identify the two particle parities or
+their phase prefactors. It also does not assert a logarithm at a root
+zero. On the physical LT component all these zeros are absent and
+simple connectivity fixes the nonvanishing algebraic prefactors by
+their real physical values. On the HT component the only root-zero
+normalization issue is at the origin, handled in the physical section.
+
+At a regular edge with one cosine equal to \(+1\) and the other
+equal to \(\cos(2\pi k/q)\), where \(q\) is an odd prime and
+\(1\le k\le(q-1)/2\), uniqueness in \eqref{eq:cramerUV} implies that
+the least grid order is \(q\) and the least even order is \(2q\).
+These values are dense on every regular edge arc because its
+nonramified edge coordinate maps the arc to a real interval. At a
+\(-1\) endpoint, an exact grid representation requires an even
+order, and the least even order is again \(2q\). There is no exact
+odd endpoint resonance on such an edge. These arithmetic facts select the first possible resonances. The integral
+arguments below will prove lower-order regularity and noncancellation
+of the complete sum.
+
+One useful exact accumulation from the forbidden side is the following.
+At a regular \(U=-1\) point with
+\(V=\cos(2\pi k/q)\), take odd \(n=q(2m+1)\) and set
+\[
+ u_n=-\cos(\pi/n),\qquad v_n=V.
+\]
+The simple root of the candidate equation has
+\[
+ z_n=z_0+\frac{a(z_0)}{\partial_z f_\lambda(z_0;-1,V)}
+                  \frac{\pi^2}{2n^2}+O(n^{-4}).
+\]
+It lies in the interior of \(\cS_\lambda\) for large \(n\), and its
+least grid order is \(n\), since \((n-1)/2\) is coprime to \(n\).
+The derivative in the denominator is nonzero because the regular
+edge map is nonramified. This is candidate accumulation only; no
+continuation of the infinite sum into that interior is assumed.
+
+\subsection{Isotropic covering and ratio symmetries}
+
+At \(\lambda=1\), \(a=b=s=\sinh z\) and \(A=1+s^2\), so
+\[
+ A/a=s+s^{-1}=u+v\in[-2,2].
+\]
+The preimage of \([-2,2]\) under the Joukowski map \(s+s^{-1}\)
+is exactly \(|s|=1\). Thus
+\begin{equation}\label{eq:isotropicgeometry}
+ \cS_1=\{z:|\sinh z|=1\}.
+\end{equation}
+Equivalently, \(F_1=F_2\), and their common zero is
+\(\cos^2 y=\sinh^2x\). Since \(P_1=Q_1=\sinh\), the two physical
+components become
+\[
+ \OH(1)=\{|y|<\pi/2,\ |x|<\operatorname{arsinh}(\cos y)\},
+ \qquad
+ \OL(1)=\{x>\operatorname{arsinh}(|\cos y|)\}.
+\]
+The map \(s=\sinh z\) maps the first biholomorphically onto the unit
+disk, with the inverse-sinh branch real at the origin. It maps the
+second as the universal cover of \(|s|>1\), with deck translations
+\(z\mapsto z+2\pi\ii\). To see the latter directly, put \(w=e^z\).
+For \(|s|>1\), the equation \(w-w^{-1}=2s\) has exactly one root
+with \(|w|>1\), depending holomorphically on \(s\). A unit-modulus
+root would instead give \(s\in\ii[-1,1]\). The exterior \(w\) domain
+is a continuous radial epigraph; exponentiation from \(\OL(1)\)
+is its universal cover. This proves the covering assertion.
+
+At the boundary points with \(\cosh z=0\), the inverse-sinh coordinate
+is branched. Elsewhere on the boundary it is locally biholomorphic.
+Accordingly the inherited dense isotropic singular family can be
+transferred at nonramified points and then closed by density; there
+is no need to assume an inverse-sinh branch through a branch point.
+This is the interpretation of \(|\sinh(2\beta J)|=1\) used here.
+
+Finally \(\cS_\lambda\) is invariant under conjugation and negation,
+and axis exchange gives
+\[
+ \cS_{1/\lambda}=\lambda\cS_\lambda.
+\]
+If \(\lambda=r/s\) is rational in lowest positive terms,
+\(\ii\pi s\) is an imaginary period of the spectral set: the two
+representing cosines only change signs. This statement does not
+automatically give a period of the physical odd susceptibility.
+For irrational \(\lambda\), there is no nonzero imaginary period.
+Indeed \eqref{eq:imagaxisS} is the union of two arithmetic progressions
+with spacings \(\pi\) and \(\pi/\lambda\). A translate of the first
+progression can intersect the second in at most one point unless
+their spacing ratio is rational. A period of the union must therefore
+be a period of each progression, forcing it to belong to both
+\(\pi\Z\) and \((\pi/\lambda)\Z\), hence to be zero.
+
+The geometric classification includes the exceptional ratio \(\lambda=1\),
+odd/odd rational simultaneous cosine zeros, all remaining elementary
+zeros, corners, and meromorphic critical points.
+For \(\lambda\ne1\), none removes a boundary interval from the dense
+regular-arc conclusion. Which complete physical sums have genuine
+singularities on those arcs is the task of the following sections.
+
+
+
+\section{Regular spectral edges: whole amplitudes and the entire tail}
+\label{sec:regular}
+
+The task on these arcs is to keep a singularity visible after summing
+all particle orders. We first obtain Gaussian decay of the numerator,
+then control the differentiated tail, and finally compute the leading
+coefficient of the first resonant term. The comparison is made on the
+physical side of the same local edge coordinate.
+
+At a regular boundary point exactly one of the two real spectral
+coordinates is $+1$ or $-1$, the other lies strictly between them, and
+the corresponding edge map is a nonramified holomorphic local
+coordinate. Interchange the transfer axes when necessary. First take
+the endpoint $q_0=0$ and write
+\begin{equation}\label{eq:positiveedge}
+ W(q;u)=b+u+B(u)(1-\cos q),\qquad
+ b=\cos\phi,\quad 0<\phi<\pi,\quad \Im B(0)>0.
+\end{equation}
+Here $u=W(0)-b$ vanishes at the selected point. The opposite sign of
+$\Im B$ is obtained by complex conjugation. On the edge, $W(q)$ is
+in the upper half-plane except at $q=0$. Its canonical root
+$\rho(q)=e^{-\gamma(q)}$ lies in the lower half-disk, with
+$\rho(0)=e^{-\ii\phi}$. Compactness gives
+\begin{equation}\label{eq:halfdisc}
+ \Im\rho(q)\le-\delta<0,\qquad |\rho(q)|\le1
+ \quad(q\in\R).
+\end{equation}
+There is no real-angle point with $W=\pm1$. The root, a local
+$\gamma$, and all one-body and canceled-pair denominators are therefore
+holomorphic on a common fixed complex parameter and angular
+neighborhood. On the physical-domain approach $u=\ii\eps$, $\eps>0$,
+\begin{equation}\label{eq:attenuation}
+ \Re\gamma(q;\ii\eps)\ge c\bigl(\eps+\dist(q,0)^2\bigr).
+\end{equation}
+Indeed $\Im W=\eps+\Im B(\ii\eps)(1-\cos q)$ is bounded below by
+that expression, while
+$\Im W=\sinh(\Re\gamma)\sin(\Im\gamma)$ on the compact chosen branch.
+The same local side belongs to the physical component bordering the
+regular edge, by the geometry of Section~\ref{sec:geometry}.
+
+\subsection{A strict Schur bound, with the anisotropy retained}
+
+The useful contraction is a property of the uncanceled spectral Schur
+factors. The canceled pair factors remain bounded, and the Pfaffian
+matching identity combines these two different estimates.
+The elementary identity
+\begin{equation}\label{eq:schurdifference}
+ |1-vw|^2-|v-w|^2
+ =(1-|v|^2)(1-|w|^2)+4\Im v\Im w
+\end{equation}
+and \eqref{eq:halfdisc} give a constant $\rho_0<1$ such that
+$|\cA(\rho_i,\rho_j)|\le\rho_0$ for every pair of real angles.
+By continuity a slightly larger constant still below one works on a
+fixed complex parameter neighborhood. This assertion continues to hold
+there even where a separate inequality $|\rho_i|\le1$ no longer does.
+Every complete canceled pair $P_{ij}$ is analytic and bounded on the
+same neighborhood.
+
+The canceled pair factors need not satisfy $|P_{ij}|\le1$. For example, on
+\eqref{eq:positiveedge},
+\[
+ P(q,-q)=\frac{B\sin^2q}
+               {[b+B(1-\cos q)]^2-1}.
+\]
+When $\Im B$ is small and the real part of the bracket is close to one,
+this can be arbitrarily large. The proof below retains the strict bound
+only for the uncanceled $\rho$-Schur factors.
+
+\begin{lemma}[Matched-Pfaffian numerator estimate]\label{lem:matching}
+For every fixed integer $r\ge0$, on a common parameter disk,
+\[
+ |\partial_u^rG_N(q;u)|
+ \le C_r\exp\{-\kappa N^2+C N\log(N+1)\}
+\]
+uniformly in the real angles and all positive $N$. The constants may
+depend on the edge but not on $N$.
+\end{lemma}
+\begin{proof}
+For even $N$, expand only the Schur Pfaffian in the $y_i=e^{\ii q_i}$
+variables. Each of its $(N-1)!!$ matchings contains $N/2$ edges. Combine
+each matched $y$ factor with its corresponding $\rho$ factor using
+\eqref{eq:cancelpair}; bound that complete pair by a constant $C$.
+The other $N(N-2)/2$ factors are bounded by $\rho_0$. Thus
+\[
+ \left|\prod_{i<j}P_{ij}\right|
+ \le (N-1)!!\,C^{N/2}\rho_0^{N(N-2)/2}.
+\]
+For odd $N$, adjoin a ghost variable $-1$ to the $y$ Pfaffian.
+Its Schur entry with every real variable is the removable constant one.
+There are $N!!$ matchings, with $(N-1)/2$ real matched edges and one
+ghost edge, leaving $(N-1)^2/2$ uncanceled $\rho$ factors. This gives
+\[
+ \left|\prod_{i<j}P_{ij}\right|
+ \le N!!\,C^{(N-1)/2}\rho_0^{(N-1)^2/2}.
+\]
+The identities initially hold away from reciprocal $y$ pairs and extend
+by the analytic canceled formula. No division by a vanishing $\rho$
+factor occurs. One-body factors, including $B^{N/2}$, cost $C^N$.
+The unmatched Schur factors give Gaussian decay in $N$, while the
+matching count and one-body terms cost $\exp(O(N\log(N+1)))$.
+Cauchy's inequality on the common disk proves the numerator-jet
+statement. It is applied only to $G_N$, not across a pole of
+$(1+Z)/(1-Z)$.
+\end{proof}
+
+\subsection{All indices in the differentiated tail}
+
+The tail estimate has two ranges. Large particle orders have enough
+independent angles to integrate the denominator bound directly. The
+remaining finite range uses the Vandermonde zero at the collision.
+Put $Q_0(q)=\sum_i\dist(q_i,0)^2$. Equation
+\eqref{eq:attenuation} implies
+\[
+ |1-Z|\ge1-|Z|\ge c\min\{1,N\eps+Q_0(q)\}.
+\]
+All fixed parameter derivatives of $\gamma$ are bounded. Differentiating
+the exponential and rational factor consequently gives, for every fixed
+$j$ and $0\le r\le j$,
+\begin{equation}\label{eq:globaljet}
+ \left|\partial_u^r\frac{1+Z}{1-Z}\right|
+ \le C_j N^j\bigl(1+Q_0(q)^{-j-1}\bigr).
+\end{equation}
+For $N-1\ge2j+3$, retain just the first $2j+3$ independent angle
+squares in $Q_0$. Their inverse $(j+1)$st power is integrable in
+$2j+3$ real dimensions, with a constant independent of $N$; all the
+unused normalized angular measures have mass one. Lemma~\ref{lem:matching}
+therefore implies
+\begin{equation}\label{eq:hightail}
+ |\partial_u^j C_N(\ii\eps)|
+ \le \frac{C_jN^j}{N!}
+       \exp\{-\kappa N^2+C N\log(N+1)\},\qquad N\ge2j+4.
+\end{equation}
+This sums uniformly in $\eps$.
+
+For any remaining fixed $N$, the only real configuration at which
+$|Z|=1$ is $q_1=\cdots=q_N=0$. Near it, set
+$q_N=-\sum_{i<N}q_i$, $Q=\sum_iq_i^2$ and
+$\Delta(q)=\prod_{i<j}(q_i-q_j)$. The numerator and every fixed
+parameter jet have the factor $\Delta^2$. In radial coordinates the
+worst $j$th derivative is bounded by an integrand proportional to
+\[
+ r^{N(N-1)}r^{N-2}(\eps+r^2)^{-j-1}\dd r.
+\]
+Its limiting exponent is $N^2-2j-4$. If $n$ is the first resonant
+index of the chosen parity, take $k=(n^2-1)/2$ for odd $n$ or
+$k=n^2/2-1$ for even $n$. For every larger same-parity $N$ and
+$j\le k$ this exponent is greater than $-1$. Combining the finitely
+many such indices below $2j+4$ with \eqref{eq:hightail} proves
+\begin{equation}\label{eq:alltail}
+ \sum_{\substack{N>n\\N\text{ of the selected parity}}}
+ |\partial_u^j C_N(\ii\eps)|=O_j(1),\qquad0\le j\le k.
+\end{equation}
+The finite collision estimates and the large-index majorant together
+control the complete differentiated tail.
+
+\subsection{The first amplitude of the complete form factor}
+
+With the tail controlled, it remains to compute a nonzero contribution
+at the first resonant index. The independent-angle measure is kept
+throughout the Gaussian period calculation, so its normalization feeds
+directly into the singular coefficient.
+Choose $\phi=2\pi a/p_0$ with $p_0$ an odd prime and
+$1\le a\le(p_0-1)/2$. Then the first odd resonance is $n=p_0$ and
+the first even resonance is $n=2p_0$. For all lower indices of the
+selected parity, the only possible unit-modulus product configuration
+has $Z=e^{-\ii N\phi}\ne1$, so those entire form factors are
+holomorphic on a neighborhood of the selected point.
+
+The Gaussian Vandermonde period in the actual independent-angle measure
+is
+\begin{equation}\label{eq:mehta}
+ G_n^{\rm Gauss}:=
+ \int_{q_n=-\sum_{i<n}q_i}e^{-Q(q)}\Delta(q)^2
+                         \dd q_1\cdots\dd q_{n-1}
+ =\frac{n!\,\pi^{(n-1)/2}P_n}{\sqrt n},\qquad
+ P_n=\prod_{r=1}^{n-1}\frac{r!}{2^r}.
+\end{equation}
+For completeness, the ordinary $n$-variable Gaussian Vandermonde
+integral is $n!\pi^{n/2}P_n$, by the determinant formula and the
+Gaussian norms of monic Hermite polynomials. Put $x_i=q_i+m$ with
+$\sum q_i=0$. The coordinate Jacobian is $n$, while integration in
+$m$ gives $\sqrt{\pi/n}$. Dividing by their product proves
+\eqref{eq:mehta}. In particular, replacing the actual independent
+coordinate measure by hyperplane surface measure would introduce an
+incorrect factor $\sqrt n$.
+
+Write $s_\phi=\sin\phi$ and $\alpha=(n^2-1)/2$. The singular part
+of the complete first form factor, on its unique collision chart, has
+leading expression
+\begin{equation}\label{eq:leadingintegral}
+ \frac{2\ii^{1-n^2}B(0)^{n^2/2}}
+ {n!(2\pi)^{n-1}2^{n(n-1)}s_\phi^{n^2-1}}
+ \int\frac{\Delta(q)^2}{nu+(B(0)/2)Q(q)}
+                                   \dd q_1\cdots\dd q_{n-1}.
+\end{equation}
+This follows directly from
+\[
+ \gamma(q;u)=\ii\phi-\frac{\ii}{s_\phi}
+                  \left(u+\frac{B(0)}2q^2\right)
+                  +O(u^2+u q^2+q^4)
+\]
+and the sine divided differences in the numerator. The complement of this unique collision chart in the fixed-$n$ torus
+integral is analytic. The displayed local period therefore gives the
+leading coefficient of the complete form factor.
+
+Differentiate \eqref{eq:leadingintegral} to the specified order and
+scale $q=\sqrt\eps\,v$ on $u=\ii\eps$. The coefficient of $Q$ in
+$\gamma$ has positive real part, so the Gaussian/Laplace period is
+well-defined with its prescribed branch. The radial tails after the
+top derivative have radial integrands $O(R^{-3})$ for odd $n$ and
+$O(R^{-2})$ for even $n$; their integrated tails are respectively
+$O(R^{-2})$ and $O(R^{-1})$. This gives dominated convergence.
+Terms with a higher numerator
+degree or an extra $u$ or $Q$ factor in the denominator expansion are
+smaller after multiplication by the indicated singularity scale;
+splitting at a fixed small chart radius and then at a fixed scaled
+radius proves this without an unbounded formal expansion.
+Using \eqref{eq:mehta} and the Laplace integral yields
+\begin{align}
+ \lim_{u\to0,\ u=\ii\eps}u\,\partial_u^kC_n(u)
+ &=\frac{2^{1-k}\sqrt{B(0)}P_n n^{k-3/2}}
+        {\pi^{(n-1)/2}\sin^{2k}\phi}\ne0,
+ &k&=\frac{n^2-1}{2},\quad n\text{ odd},\label{eq:oddfirst}\\
+ \lim_{u\to0,\ u=\ii\eps}u^{1/2}\partial_u^kC_n(u)
+ &=-\ii\frac{2^{1-\alpha}\sqrt{B(0)}P_n n^{k-1}}
+        {\pi^{(n-2)/2}\sin^{n^2-1}\phi}\ne0,
+ &k&=\frac{n^2}{2}-1,\quad n\text{ even}.\label{eq:evenfirst}
+\end{align}
+Here $u^{1/2}=e^{\ii\pi/4}\sqrt\eps$, and $\sqrt{B(0)}$ is fixed
+by the beta-period continuation from
+$\Re(-\ii B(0)/(2s_\phi))>0$. For even $n$ this sign is determined
+by the period; it is not an arbitrary extra square-root branch in the
+original integer power of $B$.
+
+For the odd physical HT coefficients the square-root convention is
+particularly explicit. On $\OH$, both $\cos y$ and $\cos(\lambda y)$
+are positive, and $\sin y$ and $\sin(\lambda y)$ have the same sign.
+Consequently
+\[
+ \Re(T\overline S)=\sinh x\sinh(\lambda x)\cos y\cos(\lambda y)
+ +\cosh x\cosh(\lambda x)\sin y\sin(\lambda y)>0
+\]
+away from the origin, where $B$ has its positive removable value
+$\lambda$. Thus $\Re B>0$ throughout the HT lens; its physical square
+root is the principal branch. The same is true after axis exchange,
+since $\Re(1/B)>0$. This fixes the odd amplitudes on both transfer-axis
+charts without an additional sign assumption.
+
+The lower derivatives of the even first term are bounded. For the odd
+first term, the $(k-1)$st derivative can be logarithmic, and all lower
+derivatives are still $o(u^{-1})$. Together with
+\eqref{eq:alltail}, these lower-derivative bounds show that the nonzero
+leading singularity persists in the complete sum. Multiplication by the analytic
+physical prefactor and by $\beta=z/(2J_x)$ preserves it: both are
+nonzero at a regular selected point, and the product-rule contributions
+from lower derivatives are smaller. A nonramified local change from
+$u$ to $z$ also preserves the nonzero top coefficient.
+
+\subsection{All low-temperature signs; the high-temperature distinction}
+At a negative endpoint put $q=\pi+q'$. Then
+$W=b+u+(-B)(1-\cos q')$. For even $N$, the constraint
+$\sum q_i=0\pmod{2\pi}$ remains exactly the same constraint for
+$q'_i$, and $B^{N^2/2}=(-B)^{N^2/2}$ because $N^2/2$ is even.
+Thus the whole even argument, including its tail and amplitude, applies
+to both endpoint signs. The other pair of edges is handled by exchanging
+the axes in the symmetric double contour. Rational phase values of the
+form above are dense on every regular arc. Section~\ref{sec:geometry}
+then supplies the density needed on all of $\partial\OL$.
+
+For odd $N$, the negative endpoint has a different constraint:
+$\sum_i(q_i-\pi)$ is an odd multiple of $\pi$. In particular, with
+representatives $\delta_i=q_i-\pi\in[-\pi,\pi]$,
+\begin{equation}\label{eq:momentummismatch}
+ \sum_i\delta_i^2\ge\frac{\pi^2}{N}.
+\end{equation}
+There is no exact odd all-endpoint collision there. The same Gaussian
+numerator bound and \eqref{eq:momentummismatch} imply that the sum of
+every fixed parameter derivative is bounded as the negative edge is
+approached. This proves existence of all boundary jets, but gives no
+positive radius for their Taylor series. Sections~\ref{sec:morse}--\ref{sec:jets} determine the growth of those
+jets and prove zero Taylor radius on a dense rational-phase family.
+
+
+
+\section{An exact pole normal form at a negative HT edge}
+\label{sec:morse}
+
+At a negative spectral edge, the odd-particle momentum constraint
+forces the nearest collisions into two nonzero winding sectors.
+We locate their exact parameter poles and transform each pole into
+a quadratic normal form while preserving the coincidence divisors.
+The transformed density then yields a beta integral with estimates
+uniform in particle number. Keeping the full Vandermonde degree is
+essential for the high Taylor coefficients used in Section~\ref{sec:jets}.
+
+\subsection{Coordinates, the pole equation, and the first quadratic form}
+
+The pole is centered at the nearest momentum-compatible collision.
+The constrained coordinates separate that center from fluctuations with
+zero total momentum.
+
+Fix a regular negative endpoint and, if necessary, exchange the two lattice
+axes.  In the notation of the angular representation, set
+\begin{equation}
+ t=\frac{C+B-b}{B},\qquad C=A/S,\qquad
+ W(\pi+\delta;t)=b+B(t)\bigl(t-1+\cos\delta\bigr),
+ \qquad b=\cos\phi.
+ \label{eq:morse-coordinate}
+\end{equation}
+Here $t=0$ is the boundary point, the pullback is nonramified, and $B(t)$
+is holomorphic and nonzero on a fixed disk.  We first take the conjugation
+choice
+\begin{equation}
+ 0<\phi<\pi,\qquad \Im B(0)<0,\qquad
+ \frac{\phi}{2\pi}=\frac rp,\quad (r,p)=1,\quad p\text{ odd}.
+ \label{eq:morse-rational-phase}
+\end{equation}
+The opposite sign is obtained by conjugation.  Write $s=\sin\phi$ and choose
+the analytic branch
+\begin{equation}
+ g(t,\delta)=\operatorname{arcosh}W(\pi+\delta;t),
+ \qquad g(0,0)=\ii\phi.
+ \label{eq:morse-g}
+\end{equation}
+Because $b\in(-1,1)$, this branch is holomorphic on a fixed bidisk in
+$(t,\delta)$.  It is even in $\delta$, and $g_t$ is bounded away from zero
+after shrinking the bidisk.
+
+Let $n$ tend to infinity through odd multiples of $p$.  In the winding
+$+1$ chart of the momentum constraint, introduce
+\begin{equation}
+ d_n=\frac\pi n,\qquad \tau_n=1-\cos d_n,\qquad
+ B_n=B(\tau_n),\qquad
+ \delta_i=d_n+v_i,\qquad
+ V_n=\left\{v\in\C^n:\sum_i v_i=0\right\}.
+ \label{eq:morse-centre}
+\end{equation}
+The integration measure on the real part of $V_n$ is
+$\dd v_1\cdots\dd v_{n-1}$, with $v_n=-\sum_{i<n}v_i$.
+Use two distinct quadratic quantities:
+\begin{equation}
+ Q(v)=\sum_i v_i^2,\qquad q(v)=\sum_i|v_i|^2.
+ \label{eq:morse-two-quadratics}
+\end{equation}
+The first is holomorphic; the second is used only in bounds.
+Put
+\begin{equation}
+ c_n=\frac{\ii B_n}{2s},\qquad
+ h_n=\cos d_n-\frac{B_n b}{s^2}\sin^2d_n=1+O(n^{-2}).
+ \label{eq:morse-h}
+\end{equation}
+Direct differentiation at the centre gives
+\begin{equation}
+ g(\tau_n,d_n)=\ii\phi,\qquad
+ g_t(\tau_n,d_n)=-2c_n,\qquad
+ \frac12g_{\delta\delta}(\tau_n,d_n)=c_nh_n.
+ \label{eq:morse-centre-derivatives}
+\end{equation}
+Since $n\phi$ is a multiple of $2\pi$, the relevant pole equation is
+\begin{equation}
+ \Gamma_n(t,v):=\sum_i\bigl(g(t,d_n+v_i)-\ii\phi\bigr)=0.
+ \label{eq:morse-pole-equation}
+\end{equation}
+
+\begin{lemma}[Uniform implicit pole]
+\label{lem:morse-implicit}
+There are $r_0>0$, $n_0$, and constants independent of $n$ such that, for
+$n\ge n_0$, equation~\eqref{eq:morse-pole-equation} has a unique
+permutation-invariant holomorphic solution $t=T_n(v)$ on
+$v\in V_n$, $\norm{v}_2<r_0$, with
+\begin{align}
+ T_n(0)&=\tau_n,&
+ |T_n(v)-\tau_n|&\le Cq(v)/n,\label{eq:morse-T-bound}\\
+ \norm{\nabla_{V_n}T_n(v)}_2&\le C\sqrt{q(v)}/n,&
+ \norm{D^2T_n(v)}&\le C/n.\label{eq:morse-T-derivatives}
+\end{align}
+All gradients and transposes in holomorphic identities use the complex
+bilinear extension of the Euclidean structure on the real zero-sum plane.
+\end{lemma}
+
+\begin{proof}
+Subtract the constant and linear terms of $g(t,d_n+v_i)$ in $v_i$.
+The linear terms sum to zero, the remaining sum is bounded by $Cq(v)$,
+and $\Gamma_{n,t}$ has modulus at least $cn$ on a sufficiently small
+common neighborhood.  The quantitative implicit-function theorem gives
+the first estimate and a single holomorphic solution on a ball whose
+radius is independent of $n$.  Uniqueness gives permutation invariance.
+Differentiation along $V_n$ gives
+\[
+ \nabla_{V_n}T_n
+ =-\frac{P\bigl(g_\delta(T_n,d_n+v_i)\bigr)_{i=1}^n}
+ {\sum_i g_t(T_n,d_n+v_i)},
+ \qquad P=I-\frac1n\mathbf1\mathbf1^T.
+\]
+The numerator has norm at most $C\norm v_2$ and the denominator has
+modulus at least $cn$.  A second differentiation gives the stated
+Hessian bound.  The original fixed bidisk supplies every analytic derivative bound,
+so the resulting neighborhood is uniform in dimension.
+\end{proof}
+
+\subsection{An exact separable energy identity}
+
+A second-order divided difference isolates the fluctuation energy.
+Summing it on the zero-mean plane removes the linear part and yields
+the exact pole identity used by the coordinate changes.
+
+Define the following removable divided differences:
+\begin{align}
+ a_n(t)&=\frac{g(t,d_n)-\ii\phi}{t-\tau_n},\label{eq:morse-a}\\
+ E_n(t,v)&=g(t,d_n+v)-g(t,d_n)-g_\delta(t,d_n)v,\label{eq:morse-E}\\
+ H_n(t,v)&=-\frac{2E_n(t,v)}{h_na_n(t)v^2}.
+ \label{eq:morse-H}
+\end{align}
+The function $a_n$ is uniformly bounded away from zero.  Evenness of $g$
+in its second argument implies
+\begin{align}
+ H_n(\tau_n,0)&=1,\label{eq:morse-H-centre}\\
+ |H_n(t,v)-1|&\le C\bigl(|t-\tau_n|+|d_n||v|+|v|^2\bigr),
+ \label{eq:morse-H-bound}\\
+ |\partial_vH_n(t,v)|&\le C(|d_n|+|v|),&
+ |\partial_v^2H_n|+|\partial_tH_n|&\le C.
+ \label{eq:morse-H-jets}
+\end{align}
+At the pole, summing~\eqref{eq:morse-E} and using $\sum_i v_i=0$ gives
+the exact identity
+\begin{equation}
+ \boxed{\displaystyle
+ T_n(v)-\tau_n=\frac{h_n}{2n}
+ \sum_i v_i^2H_n(T_n(v),v_i).}
+ \label{eq:morse-energy}
+\end{equation}
+We next turn its right-hand side into a quadratic form.  Every change of
+variable below is holomorphic and permutation equivariant.  In particular,
+the construction never divides by $Q(v)$, which has a nontrivial complex
+null cone.
+
+\subsection{The projected map and the Vandermonde divisors}
+
+The first map absorbs the scalar divided difference into each
+coordinate and then projects back to the zero-mean plane. Its pairwise
+divided differences track the Vandermonde factor through the change
+of variables.
+
+Take the square root of $H_n$ near one and set
+\begin{equation}
+ U_i(v)=v_i\sqrt{H_n(T_n(v),v_i)},\qquad
+ w=G_n(v):=PU(v).
+ \label{eq:morse-first-map}
+\end{equation}
+On a sufficiently small fixed ball in $V_n$,
+\begin{equation}
+ \norm{DG_n-I}
+ \le C\bigl(|d_n|\norm v_\infty+\norm v_\infty^2+q(v)/n\bigr)
+ <\frac14.
+ \label{eq:morse-first-inverse}
+\end{equation}
+Thus $G_n$ is uniformly biholomorphic on a smaller fixed ball, and its
+inverse has bounded derivative there.  This follows directly by the
+uniform inverse-function estimate, or by contraction applied to
+$v=w-(G_n(v)-v)$.  Both maps commute with coordinate permutations.
+
+Let $\Delta(v)=\prod_{i<j}(v_i-v_j)$.  Because the same $T_n(v)$
+appears in every component, each pair satisfies
+\begin{equation}
+ \frac{U_i-U_j}{v_i-v_j}=1+R_{ij}(v),
+ \label{eq:morse-first-divided}
+\end{equation}
+where the quotient extends holomorphically across $v_i=v_j$ and
+\begin{equation}
+ |R_{ij}|
+ \le C\bigl(|T_n-\tau_n|+|d_n|(|v_i|+|v_j|)
+                    +|v_i|^2+|v_j|^2\bigr).
+ \label{eq:morse-first-pair-bound}
+\end{equation}
+Indeed, hold $T_n(v)$ fixed and take the one-variable divided difference
+of $z\sqrt{H_n(T_n(v),z)}$.  Projection subtracts a common mean and does
+not change component differences.  Sum logarithms of the near-one
+factors before applying a norm estimate.  Equations
+\eqref{eq:morse-T-bound} and~\eqref{eq:morse-first-pair-bound} give
+\begin{align}
+ \left|\log\frac{\Delta(w)}{\Delta(v)}\right|
+ &\le C\left(n^2|T_n-\tau_n|
+         +n|d_n|\sum_i|v_i|+nq(v)\right)\notag\\
+ &\le C\bigl(\sqrt{nq(v)}+nq(v)\bigr).
+ \label{eq:morse-first-vandermonde}
+\end{align}
+The quotient here means its holomorphic extension through the coincidence
+divisors.
+
+For the Jacobian, the compressed diagonal and rank-one structure gives
+a trace-norm estimate sharper than a dimension times operator-norm bound.  The derivative of
+$G_n$ is a compressed diagonal matrix plus one rank-one matrix.  The
+diagonal perturbation has trace norm at most
+\[
+ C\left(|d_n|\sum_i|v_i|+q(v)+n|T_n-\tau_n|\right).
+\]
+The rank-one trace norm is at most $Cq(v)/n$, by
+\eqref{eq:morse-T-derivatives}.  Since its operator norm is below $1/4$,
+the convergent matrix logarithm yields
+\begin{equation}
+ |\log\det_{V_n}DG_n|
+ \le C\bigl(|d_n|\sqrt{nq(v)}+q(v)\bigr).
+ \label{eq:morse-first-jacobian}
+\end{equation}
+The determinant on $V_n$ is also the change-of-variable determinant in
+the constrained coordinates $v_1,\ldots,v_{n-1}$.
+
+\subsection{The mean correction without division by a quadratic form}
+
+Projection leaves a scalar mean correction in the energy identity.
+The Hadamard representation expresses that correction as a bilinear
+form, and a rank-one square root incorporates it into the quadratic
+energy. This construction also works on the complex null cone.
+
+Express $v$ as a function of $w$ and put
+\begin{equation}
+ \mu_n(w)=\frac1n\sum_iU_i(v(w)).
+ \label{eq:morse-mean}
+\end{equation}
+The common linear coefficient of $U_i$ drops out of this sum.  More
+explicitly, at fixed $t$ the expansion has the form
+\[
+ U_i=a_0(t)v_i+a_1(t)v_i^2+a_2(t,v_i)v_i^3,
+ \qquad a_1(t)=O(d_n),
+\]
+with uniformly bounded analytic coefficients.  Consequently, with
+$q=q(w)$,
+\begin{align}
+ |\mu_n(w)|&\le\frac Cn(|d_n|+\sqrt q)q,\label{eq:morse-mean-bound}\\
+ \norm{\nabla\mu_n(w)}_2&\le\frac Cn(|d_n|+\sqrt q)\sqrt q,\label{eq:morse-mean-gradient}\\
+ \norm{D^2\mu_n(w)}&\le\frac Cn(|d_n|+\sqrt q).
+ \label{eq:morse-mean-hessian}
+\end{align}
+To obtain these bounds, differentiate the displayed expansion and use
+$\sum v_i=0$, the estimates for $T_n$, and the bounded inverse of $G_n$.
+Terms from differentiating $T_n$ have an additional factor $1/n$.
+The second derivative of $G_n^{-1}$ is bounded by
+$C(|d_n|+\norm w_2)$, so composition preserves
+\eqref{eq:morse-mean-hessian}.
+
+The holomorphic Hadamard formula on $V_n$ gives
+\begin{equation}
+ \mu_n(w)=w^T\ell_n(w),\qquad
+ \ell_n(w)=\int_0^1\nabla\mu_n(\theta w)\dd\theta\in V_n.
+ \label{eq:morse-hadamard}
+\end{equation}
+The field $\ell_n$ is permutation equivariant and satisfies
+\begin{equation}
+ \norm{\ell_n}_2\le\frac Cn(|d_n|+\sqrt q)\sqrt q,
+ \qquad
+ \norm{D\ell_n}\le\frac Cn(|d_n|+\sqrt q).
+ \label{eq:morse-ell-bounds}
+\end{equation}
+In particular,
+\begin{equation}
+ \ell_{n,i}-\ell_{n,j}=(w_i-w_j)L_{ij}(w),
+ \qquad |L_{ij}|\le\frac Cn(|d_n|+\sqrt q).
+ \label{eq:morse-ell-divided}
+\end{equation}
+For the quantitative assertion, compare $w$ to the vector obtained by
+exchanging its $i,j$ entries.  Equivariance identifies the corresponding
+output difference, and the derivative bound along the straight segment
+gives the displayed inequality.  Holomorphic divisibility follows by the
+one-variable divided-difference formula, including on the hyperplane of
+coincident entries.
+
+Now define
+\begin{align}
+ R_n(w)&=\left(I+n\ell_n(w)\ell_n(w)^T\right)^{1/2}w
+        =w+a_n^\sharp(w)\mu_n(w)\ell_n(w),\label{eq:morse-rank-map}\\
+ a_n^\sharp(w)&=\frac n{1+\sqrt{1+n\ell_n(w)^T\ell_n(w)}}.
+ \label{eq:morse-rank-coefficient}
+\end{align}
+These are analytic matrix square roots near the identity.  Transposes in
+these identities are bilinear transposes, not Hermitian adjoints.  The
+matrix perturbation has operator norm at most
+$C(|d_n|+\sqrt q)^2q/n$, so $R_n$ is uniformly biholomorphic on a
+smaller fixed ball.  Exact multiplication gives
+\begin{equation}
+ Q(R_n(w))=Q(w)+n\mu_n(w)^2=\sum_iU_i(v)^2.
+ \label{eq:morse-rank-energy}
+\end{equation}
+The identity holds on the complex null cone because the construction
+uses an analytic matrix square root near the identity.
+
+By~\eqref{eq:morse-ell-divided}, the relative correction to each
+difference $w_i-w_j$ under $R_n$ is at most
+$C(|d_n|+\sqrt q)^2q/n$.  Its summed logarithmic cost over all pairs
+is therefore at most $Cnq$ on the fixed ball.  Differentiating
+\eqref{eq:morse-rank-map} gives a trace-norm bound
+$C(|d_n|+\sqrt q)^2q$ for $DR_n-I$, and hence the same bound for its
+logarithmic Jacobian.  The pairwise and trace-norm estimates thus avoid an additional
+$n^2\norm v_\infty^2$ cost in the density estimate.
+
+\begin{lemma}[Exact symmetric normal form]
+\label{lem:negative-morse}
+On a common fixed ball in $V_n$, for all sufficiently large admissible
+$n$, the permutation-equivariant biholomorphism
+\begin{equation}
+ \Psi_n(v)=\sqrt{h_n}\,R_n(G_n(v)),
+ \qquad D\Psi_n(0)=\sqrt{h_n}I,
+ \label{eq:morse-final-map}
+\end{equation}
+with the square root near one, satisfies
+\begin{equation}
+ \boxed{T_n(v)=\tau_n+\frac{Q(\Psi_n(v))}{2n}.}
+ \label{eq:morse-exact-normal-form}
+\end{equation}
+It preserves every coincidence divisor.  After extracting the constant
+factor $h_n^{-\alpha_n}$, where $\alpha_n=(n^2-1)/2$, the
+Jacobian--Vandermonde ratio has a holomorphic logarithm bounded by
+\begin{equation}
+ C\bigl(\sqrt{nq}+nq\bigr).
+ \label{eq:morse-geometric-density}
+\end{equation}
+The constants are independent of $n$.
+\end{lemma}
+
+\begin{proof}
+Combine~\eqref{eq:morse-energy} with~\eqref{eq:morse-rank-energy}.
+The divided-difference and Jacobian bounds above give
+\eqref{eq:morse-geometric-density}, also for the inverse map after
+reducing the common ball.  The degree of $\Delta^2$ is $n(n-1)$ and
+the dimension is $n-1$.  Scaling by $\sqrt{h_n}$ therefore extracts
+$h_n^{-[n(n-1)+(n-1)]/2}=h_n^{-\alpha_n}$.
+\end{proof}
+
+\subsection{The complete form-factor density at the pole}
+
+The coordinate identity alone is insufficient for a uniform coefficient
+estimate: the full residue density must be compared with its value at
+the collision center. We include the angular measure, factorial, and
+physical square-root convention before making that comparison.
+
+In this chart include the constrained measure normalization in the
+numerator:
+\begin{equation}
+ F_n(t,v)=\frac{B(t)^{n^2/2}}{n!(2\pi)^{n-1}}
+ \prod_i\frac1{\sinh g(t,d_n+v_i)}
+ \prod_{i<j}\left[
+ \frac{\sin((v_i-v_j)/2)}
+ {\sinh((g(t,d_n+v_i)+g(t,d_n+v_j))/2)}\right]^2.
+ \label{eq:morse-complete-numerator}
+\end{equation}
+The square-root sign in the odd power of $B$ is the physical one.
+The global kernel is $\coth(\Gamma_n/2)$ on this resonant chart.
+Its pole contributes the Taylor coefficient density
+\begin{equation}
+ \frac{\rho_n(v)}{T_n(v)^{j+1}},\qquad
+ \rho_n(v)=-\frac{2F_n(T_n(v),v)}
+ {\Gamma_{n,t}(T_n(v),v)}.
+ \label{eq:morse-residue-density}
+\end{equation}
+The minus sign comes from expanding $(t-T_n)^{-1}$ at $t=0$.
+The quotient of $\rho_n(v)$ by $\Delta(v)^2$ is holomorphic and
+nonzero.  At the centre its value is
+\begin{equation}
+ \rho_{n,0}=-\frac{2B_n^{\alpha_n-1/2}}
+ {n\,n!(2\pi)^{n-1}2^{n(n-1)}s^{2\alpha_n}}.
+ \label{eq:morse-centre-density}
+\end{equation}
+
+\begin{lemma}[Uniform full-density estimate]
+\label{lem:morse-density}
+In the coordinates $w=\Psi_n(v)$, the form
+$\rho_n(v)\dd v_1\cdots\dd v_{n-1}$ is
+\begin{equation}
+ \rho_{n,0}h_n^{-\alpha_n}\Delta(w)^2
+ \bigl(1+\mathcal E_n(w)\bigr)
+ \dd w_1\cdots\dd w_{n-1},
+ \label{eq:morse-transformed-density}
+\end{equation}
+where, uniformly in $n$ on a common fixed ball,
+\begin{equation}
+ |\mathcal E_n(w)|\le
+ \exp\!\left\{C\bigl(\sqrt{nq(w)}+nq(w)\bigr)\right\}-1.
+ \label{eq:morse-density-error}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Divide the entire density by its centre value and by $\Delta^2$ before
+estimating it.  Every remaining analytic factor is nonzero on a common
+small ball, so its logarithm is available there.  The power $n^2/2$
+of $B(T_n)$ costs $Cn^2|T_n-\tau_n|$.  For the one-body phases,
+\[
+ \sum_i|g(T_n,d_n+v_i)-\ii\phi|
+ \le C\left(|d_n|\sum_i|v_i|+q(v)+n|T_n-\tau_n|\right).
+\]
+The sum over all pair-denominator logarithms costs at most $Cn$ times
+this last quantity.  The sine divided differences cost
+$C\sum_{i<j}|v_i-v_j|^2\le Cnq(v)$.  One-body denominators have the
+smaller single-index bound.  Finally, cancellation of the linear term
+under $\sum v_i=0$ gives
+\[
+ \frac{\Gamma_{n,t}(T_n(v),v)}{n g_t(\tau_n,d_n)}
+ =1+O(q(v)/n).
+\]
+Thus the logarithmic cost of the complete residue density is at most
+\[
+ C\left(n^2|T_n-\tau_n|+n|d_n|\sum_i|v_i|+nq(v)\right)
+ \le C\bigl(\sqrt{nq(v)}+nq(v)\bigr).
+\]
+Combine this estimate with Lemma~\ref{lem:negative-morse}.  The comparison is relative to the center value, so its cost is the
+displayed logarithmic error rather than a fixed constant raised to $n^2$.
+\end{proof}
+
+\subsection{The real cycle, its deformation, and the boundary remainder}
+
+We next connect the normal form to the actual integral. A deformation
+of the real cycle produces a standard real ball and a boundary tube.
+The tube and the pole-subtracted term must both have the smaller
+analytic-remainder scale.
+
+\begin{lemma}[Cycle and analytic remainder]
+\label{lem:morse-cycle-remainder}
+Localize to the winding $+1$ real chart
+$\sum_i\delta_i^2<\sigma$, with fixed sufficiently small $\sigma>0$.
+Its domain in $V_n\cap\R^n$ is the actual ball
+$Q(v)<\sigma-\pi^2/n$.  One may deform its pole integral to a real
+ball in the exact coordinates of Lemma~\ref{lem:negative-morse}.
+The boundary contribution and the pole-subtracted analytic remainder
+have Taylor coefficients bounded by
+\begin{equation}
+ (C n)^j\exp\{-\kappa n^2+C n\log(n+1)\},
+ \qquad j\ge0,\quad n\ge n_0,
+ \label{eq:morse-boundary-remainder}
+\end{equation}
+where $C,\kappa>0$ are independent of $n,j$.  The same holds for
+the winding $-1$ chart.
+\end{lemma}
+
+\begin{proof}
+First choose a fixed ball on which $\Psi_n$ and its inverse estimates
+hold.  Uniform near-identity bounds show that its image contains a
+fixed smaller ball.  Next choose the real integration ball sufficiently
+small that its image and the straight homotopy between it and the
+original ball lie in this common inverse-map domain.  This order of
+choices ensures that the transformed form is defined on the actual
+deformation chain.  A fixed smaller ball can be used instead of the
+full ball $Q<\sigma-\pi^2/n$; the intervening shell obeys the same
+estimate below.
+
+For small enough radius and large enough $n$,
+\[
+ \norm{\Psi_n(v)-v}_2\le\eta\norm v_2,\qquad \eta<1/4.
+\]
+If $v$ is real and $0\le u\le1$, then
+\begin{equation}
+ \Re Q\bigl((1-u)v+u\Psi_n(v)\bigr)
+ \ge(1-2\eta-\eta^2)Q(v)>0.
+ \label{eq:morse-homotopy-positive}
+\end{equation}
+Consequently the denominator $\tau_n+Q(w)/(2n)$ cannot vanish on
+this homotopy.  Stokes' theorem for the holomorphic top-degree form
+changes the integral only by its boundary tube.  On that tube
+$\Re Q(w)\ge c\sigma$, and hence
+\[
+ \left|\tau_n+\frac{Q(w)}{2n}\right|\ge\frac{c_\sigma}{n}.
+\]
+
+The particle bound on this genuinely complex chain follows from the
+exact matched-Pfaffian identity.  All angles remain in a fixed small
+complex neighborhood of $\pi$, and all spectral roots remain close
+to $\exp(-\ii\phi)$.  Every $z$-Schur factor therefore has a common
+bound $\rho_0<1$, while every canceled complete pair is bounded.
+Expanding the odd augmented Pfaffian gives
+$\exp\{-\kappa n^2+O(n\log(n+1))\}$ after the one-body and factorial
+factors are included.  No assertion that the roots have modulus at
+most one on the complex deformation is required.  The factor
+$\Gamma_{n,t}^{-1}$ costs at most $C/n$.  The maps, inverse maps,
+sphere volumes, and boundary parameterization cost at most
+$\exp(O(n\log(n+1)))$.  This proves
+\eqref{eq:morse-boundary-remainder} for the boundary tube and shell.
+
+It remains to put the pole-subtracted analytic term on the same scale.  Let $C_T$
+bound $n|T_n(v)|/\sigma$ on the local ball. After shrinking $\sigma$,
+choose a fixed $c_{\rm pole}>2C_T\sigma$ with
+$C_\Gamma(c_{\rm pole}+\sigma)<\pi$, where $C_\Gamma$ is a uniform
+bound for the phase increment. Thus $T_n(v)$ lies inside
+$|t|<c_{\rm pole}/(2n)$. On $|t|<c_{\rm pole}/n$,
+$\Gamma_n$ has only the displayed zero,
+$\Gamma_n/(t-T_n)$ has modulus at least $c_1n$, and
+$|\Gamma_n|<\pi$.  Thus
+$\coth(\Gamma_n/2)-2/\Gamma_n$ is analytic there.  Divide
+$2F_n$ by $\Gamma_n/(t-T_n)$, subtract its value at $T_n$, and
+divide the remaining analytic difference by $t-T_n$.
+The resulting analytic remainder has the same matched-Pfaffian
+bound, with polynomial factors in $n$ absorbed into
+$\exp(O(n\log(n+1)))$.  Cauchy's estimate on a disk of radius
+$c_{\rm pole}/(4n)$ gives~\eqref{eq:morse-boundary-remainder}. This
+local subtraction disk is chosen independently of the smaller exterior
+disk in Section~\ref{sec:jets}. Reflection
+$\delta\mapsto-\delta$ treats the other winding.
+\end{proof}
+
+\subsection{The exact beta period and the uniform two-winding formula}
+
+The constrained Gaussian period fixes the normalization of the radial
+beta integral. Its exact gamma ratio will be used both for a relative
+error bound and for the later comparison of neighboring particle indices.
+
+Write
+\begin{equation}
+ \alpha_n=\frac{n^2-1}{2},\qquad
+ P_n=\prod_{r=1}^{n-1}\frac{r!}{2^r}.
+ \label{eq:morse-alpha-P}
+\end{equation}
+The constrained Gaussian period is
+\begin{equation}
+ \mathcal G_n:=\int_{V_n\cap\R^n}e^{-Q(v)}\Delta(v)^2
+                   \dd v_1\cdots\dd v_{n-1}
+ =\frac{n!\pi^{(n-1)/2}P_n}{\sqrt n}.
+ \label{eq:morse-gaussian}
+\end{equation}
+Expand the Vandermonde determinant in monic
+Hermite polynomials, whose squared norms are
+$\sqrt\pi\,2^{-r}r!$.  The resulting unconstrained integral is
+$n!\pi^{n/2}P_n$.  Separating the mean coordinate has Jacobian $n$
+in the displayed constrained coordinates and contributes
+$\sqrt{\pi n}$, giving~\eqref{eq:morse-gaussian}.
+Homogeneity and the beta integral now give, when $j+1>\alpha_n$,
+\begin{align}
+ &\int_{V_n\cap\R^n}
+ \frac{\Delta(w)^2\dd w_1\cdots\dd w_{n-1}}
+ {(\tau_n+Q(w)/(2n))^{j+1}}\notag\\
+ &\hspace{8mm}=
+ \mathcal G_n(2n)^{\alpha_n}\tau_n^{\alpha_n-j-1}
+ \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)}.
+ \label{eq:morse-beta-period}
+\end{align}
+The gamma ratio is retained exactly.  Replacing it by
+$j^{-\alpha_n}$ at fixed $n$ would have an error with logarithm of
+order $\alpha_n^2/j$, which is not small in the regime used below.
+
+\begin{lemma}[Uniform beta-density error]
+\label{lem:negative-beta-uniform}
+The relative effect of the density in
+Lemma~\ref{lem:morse-density}, after the cycle deformation, is
+\begin{equation}
+ O\left(\frac n{\sqrt j}+\frac{n^2}{j}\right)
+ \label{eq:morse-beta-relative-error}
+\end{equation}
+uniformly as $n\to\infty$ and $n^2/j\to0$.  Extension of the
+unperturbed radial integral from the local ball to the whole plane
+has an exponentially small relative error in this regime.
+\end{lemma}
+
+\begin{proof}
+Under the normalized radial beta measure set
+$x=Q/(2n\tau_n)$.  Its density is proportional to
+$x^{\alpha_n-1}(1+x)^{-j-1}$, and
+\[
+ nQ\asymp x,\qquad
+ \mathbb E x=\frac{\alpha_n}{j-\alpha_n}.
+\]
+The comparison constants are uniform because $2n^2\tau_n$ stays
+between positive constants.  On $0\le x\le\delta$ with fixed
+$\delta>0$, the right side of~\eqref{eq:morse-density-error} has
+expectation at most
+$C\sqrt{\alpha_n/j}+C\alpha_n/j$, using
+$\mathbb E\sqrt x\le\sqrt{\mathbb E x}$.
+
+To control the exponential density error outside the small radial region,
+use the following beta-tail comparison.  The truncated ball has $x\le Ln$.  For
+$\delta\le x\le Ln$ and $j\gg n^2$,
+\[
+ C\sqrt x+Cx\le\tfrac14j\log(1+x).
+\]
+If
+\[
+ Z(\alpha,J)=\int_0^\infty x^{\alpha-1}(1+x)^{-J-1}\dd x,
+\]
+the normalized remaining integral is at most
+\begin{equation}
+ (1+\delta)^{-j/4}\frac{Z(\alpha_n,j/2)}{Z(\alpha_n,j)}
+ \le (1+\delta)^{-j/4}4^{\alpha_n},
+ \label{eq:morse-beta-exp-tail}
+\end{equation}
+provided $\alpha_n\le j/4$.  In the present problem $\alpha_n$ is
+an integer, and the last ratio is exactly
+\[
+ \prod_{r=0}^{\alpha_n-1}\frac{j-r}{j/2-r}\le4^{\alpha_n}.
+\]
+Thus~\eqref{eq:morse-beta-exp-tail} decreases exponentially in $j$
+uniformly when $\alpha_n/j\to0$.  The same estimate without the
+exponential density factor bounds the omitted tail of the unperturbed
+beta integral.  This proves~\eqref{eq:morse-beta-relative-error}.
+\end{proof}
+
+\begin{proposition}[Uniform local Taylor coefficients at a negative edge]
+\label{prop:negative-local-jets}
+Let $a^{\mathrm{loc}}_{n,j}$ denote the Taylor coefficient of $C_n$
+from the two local windings $+1$ and $-1$ described above.  Uniformly
+for odd multiples $n$ of the fixed odd $p$, as $n\to\infty$ and
+$n^2/j\to0$,
+\begin{equation}
+ a^{\mathrm{loc}}_{n,j}
+ =M(n,j)\left[1+O\left(\frac n{\sqrt j}+\frac{n^2}{j}\right)\right]
+ +R_{n,j},
+ \label{eq:morse-final-relative}
+\end{equation}
+where
+\begin{equation}
+ \boxed{\displaystyle
+ M(n,j)=
+ -\frac{2^{2-\alpha_n}B_n^{\alpha_n-1/2}P_n n^{\alpha_n-3/2}}
+ {\pi^{(n-1)/2}s^{2\alpha_n}}
+ h_n^{-\alpha_n}\tau_n^{\alpha_n-j-1}
+ \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)},}
+ \label{eq:morse-model}
+\end{equation}
+and
+\begin{equation}
+ |R_{n,j}|\le (Cn)^j
+ \exp\{-\kappa n^2+C n\log(n+1)\}.
+ \label{eq:morse-final-remainder}
+\end{equation}
+All constants are independent of $n,j$ in this regime.
+\end{proposition}
+
+\begin{proof}
+Multiply the centre density~\eqref{eq:morse-centre-density}, the
+factor $h_n^{-\alpha_n}$, and the exact period
+\eqref{eq:morse-beta-period}.  Reflection $\delta\mapsto-\delta$
+maps the two winding charts to one another; their coefficients are
+equal and add, giving the factor two in~\eqref{eq:morse-model}.
+Lemma~\ref{lem:negative-beta-uniform} gives the relative error, and
+Lemma~\ref{lem:morse-cycle-remainder} gives
+\eqref{eq:morse-final-remainder}.
+\end{proof}
+
+\begin{remark}
+The phase of $B_n^{\alpha_n-1/2}$ varies quadratically with $n$.
+Formula~\eqref{eq:morse-model} does not assert positivity or a common
+phase for different particle indices.  The comparison of indices in
+the next section is needed for noncancellation of the complete odd
+sum.  The uniform regime here includes, in particular,
+$\log j\le n\le\sqrt j/(\log j)^{1/4}$; the constants in
+\eqref{eq:morse-final-relative} do not change across that interval.
+\end{remark}
+
+
+
+\section{Negative high-temperature edges: boundary jets and the complete odd sum}
+\label{sec:jets}
+
+We now use the local coefficient formula to prove nonanalyticity of the
+complete odd sum. First we identify its boundary jets by absolute
+summation. We then separate analytic remainders, higher windings, and
+the small and large particle ranges. A discrete concavity estimate
+selects Taylor orders at which one intermediate particle index dominates.
+The resulting growth contradicts any positive Taylor radius.
+
+\subsection{Setting and the existence of the boundary jets}
+
+Fix a regular negative endpoint. After complex conjugation if necessary,
+the local analytic data can be written
+\begin{equation}\label{eq:jets_setting}
+ W(t,\pi+\delta)=b+B(t)\bigl[t-(1-\cos\delta)\bigr],\qquad
+ b=\cos\phi,\quad \phi=\frac{2\pi r}{p}\in(0,\pi),
+\end{equation}
+where $p\ge3$ is odd, $(r,p)=1$, $B$ is holomorphic and nonzero,
+$\Im B(0)<0$, and $t$ is a nonramified local temperature coordinate.
+The physical inward direction is $t=-\eps$, $\eps>0$. The branch
+$\cosh\gamma(q;t)=W(t,q)$ has
+$\gamma(\pi;0)=\ii\phi$. All assertions below concern this branch.
+At a regular negative edge, the earlier root construction gives a common
+branchfree parameter neighborhood for the entire real angular circle.
+
+To keep its normalization visible, write the complete coefficient as
+\begin{equation}\label{eq:jets_full_coefficient}
+ C_n(t)=\int_{\mathcal T_n}H_n(t,q)
+        \coth\!\left(\frac{\Gamma_n(t,q)}2\right)\dd q,
+ \qquad \Gamma_n=\sum_{i=1}^n\gamma(q_i;t),
+\end{equation}
+where $\mathcal T_n$ is the zero-total-momentum torus,
+$q_n=-\sum_{i<n}q_i$ modulo $2\pi$, the measure $\dd q$ is the
+ordinary measure in the $n-1$ independent angles, and
+\begin{equation}\label{eq:jets_numerator}
+ H_n(t,q)=\frac{B(t)^{n^2/2}}{n!(2\pi)^{n-1}}
+ \prod_{i=1}^n\frac1{\sinh\gamma(q_i;t)}
+ \prod_{i<k}\left[
+  \frac{\sin((q_i-q_k)/2)}
+       {\sinh((\gamma(q_i;t)+\gamma(q_k;t))/2)}
+ \right]^2.
+\end{equation}
+The branch of $B^{1/2}$ is the one in the physical representation. The
+normalization in \eqref{eq:jets_numerator} is retained throughout this
+section. The physical susceptibility differs from the complete odd sum
+by the analytic prefactor already identified in the physical
+representation; that prefactor is nonzero at a regular endpoint.
+
+Set
+\[
+ S(q)=\sum_{i=1}^n\dist(q_i,\pi)^2.
+\]
+The spectral geometry and the matched Schur--Pfaffian estimate imply,
+with constants independent of $n$,
+\begin{align}
+ \Re\gamma(q;0)&\ge c_0\dist(q,\pi)^2,
+ &|\gamma(q;0)-\ii\phi|&\le C\dist(q,\pi)^2,\label{eq:jets_attenuation0}\\
+ \sup_{|t|<r_0,\ q\in\mathcal T_n}|H_n(t,q)|
+ &\le E_n,
+ &E_n&=\exp\{-\kappa n^2+C n\log(n+1)+C\}.
+ \label{eq:jets_gaussian_num}
+\end{align}
+Shrinking $r_0$ is allowed. In particular, the strict Schur contraction
+used in \eqref{eq:jets_gaussian_num} persists on this fixed complex
+parameter disk; it does not require $|e^{-\gamma}|\le1$ at every
+complex parameter in the disk.
+
+For odd $n$, choose the shortest lifts $q_i=\pi+\delta_i$ modulo
+$2\pi$. Momentum conservation gives
+$\sum_i\delta_i=w\pi$ with $w$ odd. Therefore
+\begin{equation}\label{eq:jets_momentum_minimum}
+ S(q)\ge\frac{\pi^2}{n}.
+\end{equation}
+This momentum gap gives an $n^{-2}$ analytic scale for each coefficient;
+the scale shrinks with particle number.
+
+\begin{lemma}[Coefficientwise disks and boundary derivatives]
+\label{lem:jets_boundary_derivatives}
+There is $c>0$ such that each odd coefficient is holomorphic on
+$|t|<c/n^2$, agrees there with \eqref{eq:jets_full_coefficient}, and
+obeys
+\begin{equation}\label{eq:jets_small_disk}
+ \sup_{|t|<c/n^2}|C_n(t)|\le CnE_n,
+ \qquad |[t^j]C_n(t)|\le (Cn^2)^j CnE_n.
+\end{equation}
+The complete odd sum on $t<0$ has derivatives of every fixed order at
+$t=0$ from that side, and its normalized boundary jets are
+\begin{equation}\label{eq:jets_boundary_coefficients}
+ a_j=\lim_{\eps\downarrow0}\frac1{j!}
+       \partial_t^j\sum_{n\ \mathrm{odd}}C_n(-\eps)
+     =\sum_{n\ \mathrm{odd}}[t^j]C_n(t).
+\end{equation}
+The sum on the right converges absolutely for each fixed $j$.
+\end{lemma}
+
+\begin{proof}
+The parameter derivative of each one-particle phase is bounded on a
+fixed disk. Thus, using \eqref{eq:jets_attenuation0} and
+\eqref{eq:jets_momentum_minimum}, a sufficiently small perturbation
+$|t|<c/n^2$ preserves $\Re\Gamma_n\ge c'/n$. The modulus of the
+hyperbolic cotangent is then at most $Cn$. This proves the first bound;
+Cauchy's estimate proves the second.
+
+For the inward real approach, \eqref{eq:jets_setting} gives
+\[
+ \Re\gamma(q;-\eps)\ge
+ c\bigl(\eps+\dist(q,\pi)^2\bigr).
+\]
+Indeed $\Im W=(-\Im B(-\eps))(\eps+1-\cos\delta)$ is positive,
+and writing $\gamma=v+\ii\psi$ expresses it as
+$\sinh v\sin\psi$, with $\psi$ in a compact subinterval of
+$(0,\pi)$. A disk centered at $-\eps$ of radius
+$c(\eps+n^{-2})$ consequently preserves the same denominator gap,
+up to a fixed factor. Cauchy's estimate there bounds the $j$th
+derivative by $j!(Cn^2)^j CnE_n$, uniformly for small $\eps$.
+This is summable for every fixed $j$. Differentiation, the boundary
+limit, and the particle sum therefore commute by dominated
+convergence. Thus every fixed boundary jet exists by absolute summation. The radius
+of the resulting Taylor series is the separate question addressed below.
+\end{proof}
+
+\subsection{Removing all analytic remainders}
+
+The local model should be compared only after all terms analytic on
+the larger particle-dependent disks have been collected. Their total
+Taylor-coefficient growth will be smaller than that of the selected
+resonant contribution.
+
+Choose $\sigma>0$ sufficiently small, and then a fixed
+$c_{\rm out}>0$ such that
+$C_\Gamma c_{\rm out}<c_0\sigma/2$ and
+$C_\Gamma(\sigma+c_{\rm out})<\pi/p$.
+Here $C_\Gamma$ bounds the phase increments below. On
+$|t|<c_{\rm out}/n$,
+\begin{equation}\label{eq:jets_c_over_n_estimate}
+ \Re\Gamma_n\ge c_0S-C_\Gamma c_{\rm out},\qquad
+ |\Gamma_n-n\ii\phi|\le C_\Gamma(S+c_{\rm out}).
+\end{equation}
+If $S\ge\sigma$, the first estimate supplies a fixed positive real
+part by this choice of $c_{\rm out}$. If $S<\sigma$ and $p\nmid n$, the
+second estimate supplies a fixed phase gap: the distance from
+$n\phi$ to $2\pi\Z$ is at least $2\pi/p$. Thus the whole
+coefficient for $p\nmid n$, and the part with $S\ge\sigma$ for any
+$n$, are holomorphic on this $c_{\rm out}/n$ disk with norm at most $CE_n$.
+The angular cutoff is fixed and independent of $t$.
+
+For $p\mid n$, put $D_n=\Gamma_n-n\ii\phi$. On the inner region
+$S<\sigma$, $|D_n|<\pi$ on the same disk if the constants are
+sufficiently small. The identity
+\begin{equation}\label{eq:jets_coth_subtraction}
+ \coth(D_n/2)=\frac2{D_n}+R(D_n),
+ \qquad R \text{ holomorphic on } |D_n|<2\pi,
+\end{equation}
+places the $R$ part in the same analytic remainder class.
+
+For the remaining resonant region, subtract the exact simple parameter
+pole before applying the quadratic normal form. In the inner region use the unique small
+lifts $q_i=\pi+\delta_i$ and put $v_i=1-\cos\delta_i$. Let
+\[
+ d_n(t,q)=\frac1nD_n(t,q),\qquad
+ a_0=\frac{B(0)}{\sinh(\ii\phi)}\ne0.
+\]
+On a sufficiently small fixed parameter disk,
+\[
+ \partial_t d_n(t,q)=a_0+O(|t|+\sigma),
+\]
+uniformly in $n$ and in $S<\sigma$. Reducing the disk and $\sigma$
+makes this derivative lie within $|a_0|/4$ of $a_0$. The quantitative
+inverse-function estimate gives a unique zero
+$t=T_n(q)=O(S/n)$ and the factorization
+\begin{equation}\label{eq:jets_exact_pole_factor}
+ D_n(t,q)=n(t-T_n(q))A_n(t,q),\qquad
+ A_n(t,q)=\int_0^1\partial_t d_n
+       (T_n(q)+u(t-T_n(q)),q)\dd u.
+\end{equation}
+The factor $A_n$ is analytic and uniformly bounded away from zero on
+a smaller fixed disk containing every such $T_n(q)$. The proof can
+also be obtained directly by Rouch\'e's theorem on a circle of radius
+$CS/n$: $|d_n(0,q)|\le CS/n$, while the derivative differs uniformly
+from the nonzero constant $a_0$.
+
+Set $F_n=H_n/A_n$. The exact identity
+\begin{equation}\label{eq:jets_divided_difference}
+ \frac{2H_n(t,q)}{D_n(t,q)}=
+ \frac{2F_n(T_n(q),q)}{n(t-T_n(q))}
+ +\frac2n\frac{F_n(t,q)-F_n(T_n(q),q)}{t-T_n(q)}
+\end{equation}
+has a holomorphic second term, including at $t=T_n(q)$. A
+fixed-disk Cauchy bound on $\partial_tF_n$ bounds this divided
+difference by $CE_n$. The removable divided difference supplies this bound even when the
+parameter approaches the pole.
+
+\begin{lemma}[Exact reduction to the inner pole integrals]
+\label{lem:jets_remainder}
+For every $j\ge0$ the boundary coefficient in
+\eqref{eq:jets_boundary_coefficients} is the sum of the exact inner
+pole coefficients for odd $n$ divisible by $p$, together with a
+remainder $r_j$ satisfying
+\begin{equation}\label{eq:jets_remainder_bound}
+ |r_j|\le \exp\left\{\frac12j\log(j+1)+Cj+C\right\}.
+\end{equation}
+For a resonant $n$, the inner pole coefficient is exactly
+\begin{equation}\label{eq:jets_exact_residue_coefficient}
+ a_{j,n}^{\mathrm{pole}}=
+ -\int_{S<\sigma}
+  \frac{2H_n(T_n(q),q)}{\partial_t\Gamma_n(T_n(q),q)}
+  T_n(q)^{-j-1}\dd q.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+All removed terms are bounded on a disk $c_{\rm rem}/n$, where
+$c_{\rm rem}$ is a fixed sufficiently small fraction of
+$\min(c_{\rm pole},c_{\rm out})$. The exact pole subtraction is
+constructed on its own larger disk before restriction; the pole need
+not lie in the exterior disk. The preceding decompositions are identities on the $c/n^2$ disk
+where the original integral is holomorphic. Taking its Taylor
+coefficients gives \eqref{eq:jets_exact_residue_coefficient}; the
+minus sign is the coefficient of $(t-T)^{-1}$ at $t=0$. Every
+removed term is analytic on $|t|<c_{\rm rem}/n$ with norm bounded by $CE_n$.
+Their total coefficient bound is
+\[
+ \sum_{n\ge1}(Cn)^j E_n.
+\]
+Absorb $Cn\log(n+1)$ into $(\kappa/2)n^2+C'$, and optimize
+$j\log n-(\kappa/2)n^2$. This gives
+\eqref{eq:jets_remainder_bound}, including summability of the tail.
+\end{proof}
+
+\subsection{Uniform bounds for the winding sectors}
+
+Two bounds are needed. The beta integral distinguishes the first
+windings from the higher ones when its convergence condition holds.
+A separate ball-mass bound controls arbitrarily large particle orders.
+
+The exact pole is quantitatively close to the average
+$\bar v=n^{-1}\sum_i v_i$. At $t=\bar v$, the linear terms in the
+analytic expansion of
+$\operatorname{arcosh}(b+B(\bar v)(\bar v-v_i))$ sum to zero.
+The same uniform inverse-function estimate as above consequently gives
+\begin{equation}\label{eq:jets_pole_lower}
+ T_n(q)=\bar v+O\bigl(\operatorname{Var}(v)\bigr),\qquad
+ |T_n(q)|\ge (1-C\sigma)\frac{S(q)}{2n}.
+\end{equation}
+Here $\operatorname{Var}(v)=n^{-1}\sum_i(v_i-\bar v)^2\le
+C\sigma\bar v$, and
+$\bar v\ge (1-C\sigma)S/(2n)$. The second estimate concerns the
+modulus of a generally complex pole; it does not assert that the
+pole is real.
+
+Write $s=\sin\phi>0$, $\alpha_n=(n^2-1)/2$, and
+\begin{equation}\label{eq:jets_H0}
+ H_{0,n}=\frac{|B(0)|^{n^2/2}}
+ {n!(2\pi)^{n-1}2^{n(n-1)}s^{n^2}}.
+\end{equation}
+The complete numerator, evaluated at the pole, satisfies
+\begin{equation}\label{eq:jets_numerator_vandermonde}
+ |H_n(T_n(q),q)|\le H_{0,n}\Delta(\delta)^2 e^{CnS},
+ \qquad \Delta(\delta)=\prod_{i<k}(\delta_i-\delta_k).
+\end{equation}
+To check the constant and the dependence on $n$, divide every sine
+numerator by $(\delta_i-\delta_k)/2$ and every hyperbolic
+denominator by $\sinh(\ii\phi)$. Analytic logarithms of the
+resulting near-one ratios are bounded by
+$C(\delta_i-\delta_k)^2$ and
+$C(|T_n|+\delta_i^2+\delta_k^2)$, respectively. Their sums are
+$O(nS+n^2|T_n|)=O(nS)$. The one-body factors cost $O(S)$.
+Finally the logarithm of
+$B(T_n)^{n^2/2}/B(0)^{n^2/2}$ costs $O(n^2|T_n|)$.
+This proves \eqref{eq:jets_numerator_vandermonde} relative to the exact
+scale \eqref{eq:jets_H0}; an unspecified factor raised to $n^2$ would
+be too costly for the later comparison.
+
+In winding sector $w$, where $w$ is odd, put
+\[
+ \delta_i=\frac{w\pi}{n}+\eta_i,\quad
+ \sum_i\eta_i=0,\quad Q=\sum_i\eta_i^2,\quad
+ m_{n,w}=\frac{\pi^2w^2}{n}.
+\]
+Then $S=Q+m_{n,w}$ and $\Delta(\delta)=\Delta(\eta)$.
+There are at most $C\sqrt n$ sectors with nonempty $S<\sigma$.
+The constrained Gaussian integral, with the same independent-angle
+measure as above, is
+\begin{equation}\label{eq:jets_Mehta}
+ I_n=\int_{\R^{n-1}}e^{-Q}\Delta(\eta)^2\dd\eta
+ =\frac{\pi^{(n-1)/2}2^{-n(n-1)/2}}{\sqrt n}
+   \prod_{r=1}^n r!.
+\end{equation}
+For example, separating the center of mass in the ordinary Gaussian
+Vandermonde integral gives a Jacobian $n$ and a center Gaussian
+$\sqrt{\pi/n}$, whose product explains the constrained
+$1/\sqrt n$ factor. Homogeneity therefore gives, whenever
+$j+1>\alpha_n$,
+\begin{equation}\label{eq:jets_beta_integral}
+ \int_{\R^{n-1}}\frac{\Delta(\eta)^2}{(Q+m)^{j+1}}\dd\eta
+ =I_n m^{\alpha_n-j-1}
+       \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)}.
+\end{equation}
+
+\begin{lemma}[Higher windings and large particle numbers]
+\label{lem:jets_windings_large_n}
+For $j+1>\alpha_n$, the exact pole coefficient in winding $w$
+satisfies
+\begin{align}
+ |a_{j,n,w}^{\mathrm{pole}}|
+ &\le \frac{C H_{0,n}}n e^{Cn\sigma}
+ \left(\frac{2n}{1-C\sigma}\right)^{j+1}
+ I_n m_{n,w}^{\alpha_n-j-1}
+ \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)}.
+ \label{eq:jets_winding_bound}
+\end{align}
+For every resonant odd $n$ and every $j\ge0$, without a restriction
+involving $\alpha_n$,
+\begin{equation}\label{eq:jets_large_n_bound}
+ \log\sum_w|a_{j,n,w}^{\mathrm{pole}}|
+ \le 2j\log n-\frac12n^2\log n+Cn^2+Cj+C.
+\end{equation}
+Empty sectors are understood to contribute zero.
+\end{lemma}
+
+\begin{proof}
+The residue denominator has modulus at least $cn$. Combine this
+with \eqref{eq:jets_pole_lower} and
+\eqref{eq:jets_numerator_vandermonde}, replace $S$ in its exponential
+by $\sigma$, and extend the positive radial majorant to the whole
+real zero-sum plane. Equation \eqref{eq:jets_beta_integral} proves
+\eqref{eq:jets_winding_bound}. Its exact dependence on $w$ relative
+to the same expression with $w=1$ is
+$|w|^{-2(j+1-\alpha_n)}$.
+
+For the second estimate, use the simpler bound $|T_n|\ge c/n^2$
+and the exact ball mass
+\[
+ \int_{Q<\sigma}\Delta(\eta)^2\dd\eta
+ =I_n\frac{\sigma^{\alpha_n}}{\Gamma(\alpha_n+1)}.
+\]
+The logarithm of this ball mass is
+$-\tfrac12n^2\log n+O(n^2)$; this follows by applying Stirling's
+inequalities to \eqref{eq:jets_Mehta} and to
+$\Gamma(\alpha_n+1)$. Multiplication by $H_{0,n}$ costs $O(n^2)$.
+The number of windings and the remaining polynomial factors are
+absorbed into the displayed error. This proves
+\eqref{eq:jets_large_n_bound} for arbitrarily large $n$.
+\end{proof}
+
+\subsection{The exact first-winding model}
+
+We now collect the center density, exact beta period, and the two equal
+first-winding contributions into a single model. Its complex phase is
+retained because different particle indices need not have aligned phases.
+
+Let
+\begin{equation}\label{eq:jets_model_parameters}
+ \tau_n=1-\cos(\pi/n),\quad B_n=B(\tau_n),\quad
+ h_n=\cos(\pi/n)-\frac{B_n b}{s^2}\sin^2(\pi/n),\quad
+ P_n=\prod_{r=1}^{n-1}r!\,2^{-r}.
+\end{equation}
+In particular $h_n=1+O(n^{-2})$. The exact symmetric pole normal
+form and cycle estimate of Proposition~\ref{prop:negative-local-jets}
+in Section~\ref{sec:morse} give, uniformly
+as $n\to\infty$ through odd multiples of $p$ and $n^2/j\to0$,
+\begin{equation}\label{eq:jets_uniform_model}
+ a_{j,n,1}^{\mathrm{pole}}+a_{j,n,-1}^{\mathrm{pole}}
+ =M(n,j)(1+e_{n,j})+b_{n,j},
+\end{equation}
+where
+\begin{equation}\label{eq:jets_model}
+ M(n,j)=-\frac{2^{2-\alpha_n}B_n^{\alpha_n-1/2}P_n
+                     n^{\alpha_n-3/2}}
+                   {\pi^{(n-1)/2}s^{2\alpha_n}}
+ h_n^{-\alpha_n}\tau_n^{\alpha_n-j-1}
+ \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)},
+\end{equation}
+and
+\begin{equation}\label{eq:jets_model_errors}
+ |e_{n,j}|\le C\left(\frac n{\sqrt j}+\frac{n^2}j\right),\qquad
+ |b_{n,j}|\le(Cn)^j
+       \exp\{-\kappa' n^2+C'n\log(n+1)+C'\}.
+\end{equation}
+The same estimate applies to the actual inner ball of radius squared
+$\sigma-\pi^2/n$, since these radii stay between fixed positive
+constants for large $n$. Alternatively its outer shell belongs to a
+$c/n$ analytic remainder by the preceding argument.
+
+The constants in \eqref{eq:jets_model} follow directly from the central
+numerator, pole derivative, and constrained beta period.
+At the collision $\gamma_i=\ii\phi$, the numerator divided by
+$\Delta^2$ is
+\[
+ -\frac{\ii B_n^{n^2/2}}
+       {n!(2\pi)^{n-1}2^{n(n-1)}s^{n^2}},
+ \qquad \Gamma_t=-\frac{\ii nB_n}s.
+\]
+Multiplication by $-2/\Gamma_t$, followed by the beta integral in
+the exact normal form, gives half of \eqref{eq:jets_model}.
+Reflection $\delta\mapsto-\delta$ preserves the full integrand and
+exchanges the first two winding sectors, giving the displayed
+factor of two. The factor $B_n^{\alpha_n-1/2}$ retains its quadratic
+particle-dependent phase. No positivity across particle indices is
+being assumed.
+
+\subsection{A discrete concavity estimate with controlled errors}
+
+Dominance requires a comparison between adjacent allowed particle
+indices. We compute the second difference from the exact factorial,
+gamma, and pole-location factors, keeping the error uniform over the
+whole intermediate window.
+
+Write $L(n,j)=\log|M(n,j)|$ and set $d=2p$, the step between
+successive allowed odd multiples of $p$. Define
+\begin{equation}\label{eq:jets_c0}
+ c_*=-\frac34-\frac32\log2+\log\pi
+       +\frac12\log|B(0)|-\log s.
+\end{equation}
+Elementary Stirling estimates in the exact formula give
+\begin{equation}\label{eq:jets_L_expansion}
+ L(n,j)=2j\log n-\frac{n^2}2\log j+c_*n^2
+       -j\log(\pi^2/2)
+       +O(n\log n+n^4/j+j/n^2),
+\end{equation}
+when $n\to\infty$ and $n^2/j\to0$.
+The expansion locates the relevant scale. For the concavity estimate,
+we return to the exact factors so that the error remains controlled
+under discrete differences.
+
+\begin{lemma}[Exact-factor second differences]
+\label{lem:jets_discrete_concavity}
+Uniformly when $n\to\infty$ and $n^2/j\to0$,
+\begin{equation}\label{eq:jets_second_difference}
+ L(n+d,j)-2L(n,j)+L(n-d,j)
+ =d^2\left(-\frac{2j}{n^2}-\log j+2c_*\right)
+  +O_d(n^2/j+j/n^4+n^{-2}).
+\end{equation}
+In particular this difference is at most $-c d^2\log j$ throughout
+the interval
+\begin{equation}\label{eq:jets_middle_window}
+ \log j<n<\frac{\sqrt j}{(\log j)^{1/4}},
+\end{equation}
+for all sufficiently large $j$, whenever the adjacent indices are
+also in that interval.
+\end{lemma}
+
+\begin{proof}
+The exact quotient of the factorial products gives
+\begin{align*}
+ \Delta_d^2\log P_n
+ &=\sum_{k=0}^{d-1}\sum_{\ell=1}^d
+       \log(n-d+k+\ell)-d^2\log2\\
+ &=d^2(\log n-\log2)+O_d(n^{-2}).
+\end{align*}
+The offsets in the double sum add to zero, so their first-order
+$1/n$ terms cancel.
+
+For integer $j>\alpha_{n+d}$, the gamma quotient can be written
+\[
+ \log\frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)}
+ =-\alpha_n\log j+
+   \sum_{m=0}^{\alpha_n-1}-\log(1-m/j).
+\]
+The two adjacent increments of $\alpha_n$ have lengths
+$dn+d^2/2$ and $dn-d^2/2$. Their $d^2$ excess summands cost
+$O_d(n^2/j)$. Pairing the remaining summands costs the same amount,
+because the function $-\log(1-x/j)$ has derivative at most
+$1/(j-\alpha_{n+d})$ on the required interval. Thus this factor has
+second difference $-d^2\log j+O_d(n^2/j)$.
+
+Finally
+\[
+ \log\tau_n=\log(\pi^2/2)-2\log n
+             -\frac{\pi^2}{12n^2}+O(n^{-4}),
+\]
+while $B(\tau_n)=B(0)(1+O(n^{-2}))$ and $h_n=1+O(n^{-2})$
+have convergent expansions in $1/n$ near zero. Computing the
+second differences of these explicit terms in
+\eqref{eq:jets_model} gives
+\eqref{eq:jets_second_difference}, including the error $j/n^4$
+from the exact value of $\tau_n$.
+
+In \eqref{eq:jets_middle_window}, the error $j/n^4$ is smaller than
+$j/n^2$ by a factor at most $(\log j)^{-2}$, and $n^2/j$ tends
+uniformly to zero. The claimed negative bound follows. This proves
+concavity across the whole intermediate range, not just a fixed
+relative neighborhood of its maximum.
+\end{proof}
+
+\subsection{Selecting an integer order with one dominating index}
+
+Choose the Taylor order by balancing the two neighbors of a prescribed
+allowed index. Strict concavity then places that index above both
+neighbors and controls the entire intermediate range.
+
+Fix a large allowed index $n$ and let
+$F_n(j)=L(n+d,j)-L(n-d,j)$, initially with real
+$j\asymp n^2\log n$. The two gamma arguments differ by the
+integer $2dn$, so differentiation of their exact quotient gives
+\begin{align}
+ F_n'(j)
+ &=\log\frac{\tau_{n-d}}{\tau_{n+d}}
+    -\sum_{m=1}^{2dn}\frac1{j+1-\alpha_{n-d}-m}\notag\\
+ &=\frac{4d}{n}-\frac{2dn}{j}
+    +O_d(n^{-3}+n^3/j^2)>0.
+ \label{eq:jets_crossing_derivative}
+\end{align}
+The exact first difference, with the ordinary Stirling bounds for
+the finitely many factorials in each quotient, also gives
+\begin{equation}\label{eq:jets_crossing_expansion}
+ \frac{F_n(j)}{2d}=\frac{2j}{n}-n\log j+2c_*n
+       +O_d(\log n+n^3/j+j/n^3).
+\end{equation}
+At
+\[
+ j=n^2\bigl(\log n+\tfrac12\log\log n-c_*\pm\eps\bigr)
+\]
+this expression has opposite signs for every fixed $\eps>0$ and
+all sufficiently large $n$. Consequently there is a unique
+crossing in this range. Round it to the nearest integer and denote
+the result by $j_n$. Then
+\begin{equation}\label{eq:jets_selected_j}
+ j_n=n^2\bigl(\log n+\tfrac12\log\log n-c_*+o(1)\bigr),
+ \qquad F_n(j_n)=O_d(1/n).
+\end{equation}
+The selected $n$ lies strictly inside
+\eqref{eq:jets_middle_window} for these $j_n$.
+
+Let $\ell_k=L(n+kd,j_n)$ for the allowed indices in that window.
+Lemma~\ref{lem:jets_discrete_concavity} says that successive
+differences of $\ell_k$ decrease by at least $c d^2\log j_n$.
+Equation \eqref{eq:jets_selected_j} makes the two adjacent values
+equal up to $O_d(1/n)$. It follows first that
+$\ell_0-\ell_{\pm1}\ge c'd^2\log j_n$, and then, by summing
+the decreasing first differences, that
+\[
+ \ell_k-\ell_0\le -c''d^2 k^2\log j_n+O_d(|k|/n)
+ \qquad(k\ne0).
+\]
+In particular
+\begin{equation}\label{eq:jets_single_index}
+ \sum_{\substack{m\ne n,\ p\mid m,\ m\ \mathrm{odd}\\
+                  m\text{ in }\eqref{eq:jets_middle_window}}}
+ |M(m,j_n)|
+ \le |M(n,j_n)|\,O(j_n^{-c'''d^2}).
+\end{equation}
+The modulus gap makes the comparison independent of the varying complex
+phases. An $o(1)$ relative error in the local model is
+sufficient: the error of the largest index is relative to its own
+modulus, while the errors at other indices multiply already
+smaller moduli.
+
+\subsection{Completing the all-index comparison}
+
+We can now compare every contribution with the selected model term.
+The low range uses coefficientwise Cauchy estimates; the high range uses
+the ball-mass bound. In the intermediate range, concavity controls the
+other indices, the winding estimate controls the remaining sectors,
+and the normal-form estimate controls the relative error.
+
+For $j\to\infty$, split the odd particle indices at
+\[
+ n_{\mathrm{lo}}=\log j,\qquad
+ n_{\mathrm{hi}}=\frac{\sqrt j}{(\log j)^{1/4}}.
+\]
+The low range, including every nonasymptotic index, is bounded by
+Lemma~\ref{lem:jets_boundary_derivatives}:
+\begin{equation}\label{eq:jets_low_range}
+ \sum_{n\le n_{\mathrm{lo}}}|[t^j]C_n|
+ \le\exp\{2j\log\log j+O(j)\}.
+\end{equation}
+All $c/n$ analytic remainders and the normal-form boundary errors
+have the smaller scale
+$\exp\{\tfrac12j\log j+O(j)\}$ by
+\eqref{eq:jets_remainder_bound} and
+\eqref{eq:jets_model_errors}.
+
+For $n\ge n_{\mathrm{hi}}$, use the ball-mass bound
+\eqref{eq:jets_large_n_bound}. In the variable $x=n^2$ its
+controlling exponent is
+\[
+ j\log x-\tfrac14x\log x+Cx+Cj,
+\]
+which is decreasing for every $x\ge j/\sqrt{\log j}$ when $j$
+is sufficiently large. At the threshold it equals at most
+\begin{equation}\label{eq:jets_high_range}
+ j\log j-\tfrac12j\log\log j-\tfrac14j\sqrt{\log j}
+       +o(j\sqrt{\log j}).
+\end{equation}
+Its subsequent decrease makes the full infinite tail summable,
+with the same leading bound. This estimate handles all windings in
+the high range and requires no beta integral outside its
+convergence range.
+
+In the intermediate range, the error in
+\eqref{eq:jets_uniform_model} is uniformly
+$O((\log j)^{-1/4})=o(1)$. It remains to compare the higher odd
+windings to that model. Let $M_0(n,j)$ be the modulus of
+\eqref{eq:jets_model} with $B_n$ replaced by $B(0)$, $h_n$ by
+$1$, and $\tau_n$ by $\pi^2/(2n^2)$. The exact formulas give
+\begin{equation}\label{eq:jets_baseline_ratio}
+ \left|\log\frac{M_0(n,j)}{|M(n,j)|}\right|
+ \le C(j/n^2+1)=o(j)
+\end{equation}
+uniformly in this entire range. Equation
+\eqref{eq:jets_winding_bound} is bounded by $CM_0(n,j)$ times
+\[
+ e^{Cn\sigma}(1-C\sigma)^{-j-1}
+ |w|^{-2(j+1-\alpha_n)}.
+\]
+Here $n=o(j)$ and $\alpha_n/j=o(1)$ uniformly. Choose the fixed
+$\sigma$ so small that $-\log(1-C\sigma)<\tfrac12\log3$.
+Summing over all odd $|w|\ge3$ then gives
+\begin{equation}\label{eq:jets_higher_windings_negligible}
+ \sum_{|w|\ge3}|a_{j,n,w}^{\mathrm{pole}}|
+ \le |M(n,j)|e^{-c j}
+\end{equation}
+for some $c>0$ and all sufficiently large $j$, uniformly over the
+intermediate range. Together, the low, intermediate, and high ranges now include every
+particle index and every winding sector.
+
+At the selected sequence \eqref{eq:jets_selected_j}, the exact
+model and \eqref{eq:jets_L_expansion} yield
+\begin{align}
+ \log|M(n,j_n)|
+ &=j_n\log j_n-j_n\log\log j_n
+   +j_n\bigl(\log(4/\pi^2)-1\bigr)+o(j_n),
+ \label{eq:jets_main_growth}\\
+ |M(n,j_n)|^{1/j_n}
+ &\sim\frac{4j_n}{e\pi^2\log j_n}.
+ \notag
+\end{align}
+For this calculation, the exact gamma ratio differs from
+$-\alpha_n\log j_n$ in its logarithm by $O(\alpha_n^2/j_n)$,
+which is $o(j_n)$ at the selected scale. It was retained exactly
+in the finite differences and the relative local estimate, where
+discarding it would not have been legitimate.
+
+The bounds \eqref{eq:jets_low_range} and
+\eqref{eq:jets_high_range}, and all analytic remainders, are
+$o(|M(n,j_n)|)$ by \eqref{eq:jets_main_growth}. The intermediate
+higher windings have the same property by
+\eqref{eq:jets_higher_windings_negligible} and
+\eqref{eq:jets_single_index}. Finally the uniform relative error
+in \eqref{eq:jets_uniform_model}, summed over that range, is at
+most $o(1)\sum_m|M(m,j_n)|=o(|M(n,j_n)|)$. Therefore the
+complete boundary coefficient satisfies
+\begin{equation}\label{eq:jets_complete_noncancellation}
+ a_{j_n}=M(n,j_n)(1+o(1)).
+\end{equation}
+The complete odd-particle coefficient is therefore asymptotic to the
+single selected model term, despite its phase dependence on $n$.
+
+\begin{theorem}[A regular rational negative edge is singular for the full odd sum]
+\label{thm:jets_negative_edge}
+Under the physical-branch and nonramified-coordinate hypotheses
+of \eqref{eq:jets_setting}, the complete odd sum has all inward
+boundary derivatives at $t=0$, but the Taylor series of those
+boundary derivatives has radius of convergence zero. More
+precisely, along the integer sequence \eqref{eq:jets_selected_j},
+\[
+ |a_{j_n}|^{1/j_n}\sim\frac{4j_n}{e\pi^2\log j_n}\longrightarrow\infty.
+\]
+Consequently the complete high-temperature physical germ has no
+holomorphic continuation across this regular negative edge
+point. Multiplication by its nonzero analytic physical
+normalization preserves this conclusion.
+\end{theorem}
+
+\begin{proof}
+The jets exist and equal the absolutely convergent coefficient
+sums by Lemma~\ref{lem:jets_boundary_derivatives}. Equations
+\eqref{eq:jets_main_growth} and
+\eqref{eq:jets_complete_noncancellation} give their stated
+growth and zero Taylor radius. If there were a holomorphic
+continuation across the point, its Taylor coefficients would be
+these same boundary jets and would satisfy a positive-radius
+Cauchy bound, a contradiction. The physical normalization can
+be divided out in a neighborhood because it is analytic and
+nonzero there. The use of the nonramified coordinate $t$ makes
+this a statement about the fixed-ratio one-variable physical
+germ itself.
+\end{proof}
+
+
+
+
+\section{Closure, exceptional points, and the isotropic interface}\label{sec:closure}
+
+The remaining step is global assembly. For unequal couplings, the
+regular-edge obstructions and geometric density exclude extension at
+every boundary point. At the isotropic ratio, exact coefficient
+identities transfer the two normalized isotropic theorems.
+
+\subsection{Completing the unequal-coupling theorem}
+We now trace the two physical germs to their full boundaries. The
+representation in Section~\ref{sec:physical} gives holomorphic functions
+on the explicit, independently determined domains $\OH$ and $\OL$.
+Their equality with the two physical susceptibilities holds on the
+appropriate positive real intervals. The identity theorem fixes the
+continued physical germs on the entire corresponding connected domains.
+
+For each fixed $\lambda\ne1$, the exceptional set in
+Section~\ref{sec:geometry} is locally discrete. Every other boundary
+point has a real analytic edge arc with exactly one endpoint cosine,
+a strictly interior second cosine, a nonzero real-linear determinant,
+and a nonramified holomorphic edge coordinate. Restricting that
+coordinate to the arc gives an open real interval. Cosines of primitive
+odd-prime rational angles are dense in every such interval.
+
+On every regular LT arc, Section~\ref{sec:regular} proves a genuine
+singularity of the entire even-particle sum at each point of this dense
+family, including both endpoint signs and both transfer-axis choices.
+The first singular derivative has a nonzero coefficient and every
+higher even index is included in the absolute bounded tail. On every
+regular positive HT arc, the odd counterpart proves the analogous
+whole-sum singularity. On every regular negative HT arc,
+Sections~\ref{sec:morse}--\ref{sec:jets} show that all fixed boundary
+jets exist, but a sequence of their Taylor coefficients satisfies
+\begin{equation}\label{eq:boundarygrowthclosure}
+ |a_{j_n}|^{1/j_n}\sim\frac{4j_n}{e\pi^2\log j_n}\longrightarrow\infty.
+\end{equation}
+These coefficients are those of the complete odd sum. The Gaussian
+bound permits taking the boundary limit through the sum for each fixed
+derivative. If a holomorphic extension existed, its derivatives would
+have these limits and its Taylor series would have positive radius,
+contradicting \eqref{eq:boundarygrowthclosure}. Division by the local
+analytic nonzero physical prefactor proves the same assertion for
+$\XH$, and multiplication by the nonzero $\beta$ gives $\chi_H$.
+
+Finally suppose a holomorphic extension existed through any boundary
+point, including an exceptional point. A small disk of extension contains
+regular arcs of the same physical boundary, and hence contains a nearby
+point of the appropriate dense true-singularity family. Restricting the
+extension to that point contradicts its already proved nonremovability.
+The complete graph $\partial\OL$ and the complete closed curve
+$\partial\OH$ therefore are natural boundaries. This proves
+the unequal-coupling part of Theorem~\ref{thm:aniso}.
+
+The conclusion concerns the boundaries of the physical complementary
+components of $\cS_\lambda$. For unequal couplings $\cS_\lambda$ has
+interior, while the two barriers are the explicit one-dimensional
+boundaries. Their obstruction follows from the complete-sum estimates
+and the closure argument above.
+
+\subsection{Coverage of ratios and exceptional points}
+The only ratio excluded from the strict anisotropic-edge mechanism is
+$\lambda=1$, where the real-linear determinant degenerates along the
+whole isotropic spectral curve. No rationality, algebraicity,
+Diophantine bound, or proximity to one is imposed on the other ratios.
+For $\lambda\ne1$, the exceptional boundary points consist of the
+locally discrete collinear points, corners, elementary zeros or poles
+in a chosen chart, and critical points of the edge coordinate. They
+are included in the final barrier by density, not declared removable.
+Simultaneous imaginary-axis cosine zeros occur exactly for positive
+odd-over-odd rational ratios; their local geometry is analyzed in
+Section~\ref{sec:geometry} and is likewise included. The near-real-critical
+opening of the two spectral edges is nonzero for every unequal positive
+ratio, so there is no omitted interval of weak anisotropy.
+
+The negative HT proof uses $B(t)$ only as a fixed holomorphic function
+near a regular point. Its exact resonant parameters
+$1-\cos(\pi/n)$ and strict single-index estimates do not require
+arithmetic control of the temperature coordinate or of $\lambda$.
+This is why highly approximable irrational ratios are covered without
+an implicit generic-ratio qualification.
+
+\subsection{Exact reuse on the isotropic slice}
+The isotropic transfer is an identity of the full coefficient formulas. Set
+$\lambda=1$ and $s=\sinh z$. Then $S=T=s$, $p=s^2$, $B=1$, and
+\[
+ D(x,y;z)=s\left[s+s^{-1}
+                  -\tfrac12(x+x^{-1})-\tfrac12(y+y^{-1})\right].
+\]
+On the positive LT interval $\sqrt p=s$, so every factor
+$\sqrt p/D$ in \eqref{eq:doublecorr} is exactly the normalized
+isotropic factor in \cite{LTsource}. The even coefficients and the
+full-site identity consequently agree term by term, with
+$\xi_L=(1-s^{-4})^{1/4}$. In the HT interval the full angular coefficient
+in \eqref{eq:fullangular} has $W=s+s^{-1}-\cos q$, and its prefactor
+is exactly $(1-s^4)^{1/4}/s$. This is the literal normalized odd sum
+in \cite{HTsource}, not a diagonal susceptibility or a dual
+low-temperature observable.
+In the notation of that HT manuscript its auxiliary exterior variable
+is $\widehat t=1/s$; hence our $C_N$ at $s$ is exactly its
+$C_N(\widehat t)$, and the reported real condition $\widehat t>1$
+is exactly the present physical interval $0<s<1$.
+
+We invoke the following normalized isotropic results:
+\begin{enumerate}
+\item the exterior connected full-bulk result in
+\cite{LTsource}, Corollary labeled \texttt{thm:nb}, derived there from
+its whole-form-factor theorem \texttt{thm:first} and all-index theorem
+\texttt{thm:tail};
+\item the normalized HT analytic germ and unit-circle obstruction of
+\cite{HTsource}, Theorem 1.1. Its physical identification requires the
+real full-bulk form-factor equality, absolute onsite summability and
+onsite normalization, addressed in Section~\ref{sec:physical} at $B=1$.
+\end{enumerate}
+The two normalized isotropic theorems are the mathematical inputs for
+this slice, with the full-bulk observables and hypotheses specified
+above. Their roles can be seen directly in the leading-term and tail
+estimates. In the low-temperature notation, at its dense prime family,
+$N_0=2p$ and $k=N_0^2/2-1$, it proves
+\[
+ T_{N_0}^{(k)}((1+\eps)s_*)
+ =2L_*\eps^{-1/2}+o(\eps^{-1/2}),\qquad L_*\ne0,
+\]
+and, for every fixed $0\le j\le k$,
+\[
+ \sum_{\substack{N>N_0\\N\ {\rm even}}}
+ |T_N^{(j)}((1+\eps)s_*)|=o(\eps^{-1/2}).
+\]
+The cited low-temperature argument includes the full first-coefficient
+torus complement, its two local charts, the weighted Stokes current,
+the Vandermonde/Lie estimates, and every particle window.
+Its normalized function is
+$1-M^2+2M^2\sum_{N\ {\rm even},N\ge2}T_N$, which is exactly
+\eqref{eq:globalLT} on the isotropic slice by \eqref{eq:allsites}.
+The HT source supplies a nonzero first odd coefficient and a bound
+for the complete differentiated odd tail on both signs of the boundary
+real part; its normalized function is \eqref{eq:globalHT}.
+Section~\ref{sec:physical} supplies the real Gibbs-state and uniform-field
+identifications from the stated physical premises. These remain separate
+from the normalized isotropic analytic inputs.
+
+The geometry on this slice is exact:
+\[
+ \cS_1=\{z:|\sinh z|=1\},\qquad
+ H_1(y)=\operatorname{arsinh}(\cos y),\quad |y|<\pi/2,
+ \qquad L_1(y)=\operatorname{arsinh}(|\cos y|).
+\]
+The map $z\mapsto\sinh z$ maps the central HT cell biholomorphically
+onto $|s|<1$. It maps $\OL$ as the universal cover of $|s|>1$;
+its $2\pi\ii$ period is therefore a covering statement, not a claim
+that the energy-field response $\chi=\beta\mathcal X$ is globally
+single-valued as a function of $s$. At all nonaxis boundary points the
+map is locally biholomorphic. The boundary critical points with
+$\cosh z=0$ are limits of such points. Dense isotropic obstructions
+therefore pull back to every point of the two boundaries, including
+those critical points. The factor $\beta=z/(2J_x)$ is nonzero on the
+selected boundary family.
+
+\begin{proof}[Completion of the proof of Theorem~\ref{thm:aniso}]
+The unequal-ratio part was proved at the start of this section. At the equal ratio,
+apply the two reused normalized results through the exact identities
+and covering maps above. No limit in $\lambda$ and no phase duality
+is used. This proves the theorem for every finite positive ratio on
+both physical temperature sides.
+\end{proof}
+
+\begin{corollary}[Inverse-temperature barriers]\label{cor:alllambda}
+For each fixed $J_x>0$, the barriers in the $\beta$ plane are exactly
+$\partial\OH/(2J_x)$ and $\partial\OL/(2J_x)$ for their respective
+physical germs. At $\lambda=1$ they are the correctly interpreted
+pullbacks of $|\sinh(2\beta J)|=1$, with the low-temperature covering
+specified above.
+\end{corollary}
+
+\begin{thebibliography}{99}
+\bibitem{BL} A. I. Bugrij and O. Lisovyy, Correlation function of the two-dimensional
+Ising model on a finite lattice. II, arXiv:0708.3643 (2007), especially
+equations (21)--(25), (30)--(39).
+\bibitem{IL} N. Iorgov and O. Lisovyy, Ising correlations and elliptic determinants,
+arXiv:1012.2856 (2010), especially Theorem 6.1, Remark 6.2,
+and the vacuum specializations.
+\bibitem{ONGP} W. P. Orrick, B. G. Nickel, A. J. Guttmann and J. H. H. Perk,
+The susceptibility of the square lattice Ising model: New developments,
+arXiv:cond-mat/0103074 (2001), especially equations (1.9)--(1.11),
+(3.13), (3.19), (3.24), and Section 3.2.
+\bibitem{BHM} S. Boukraa, S. Hassani and J.-M. Maillard,
+Holonomic functions of several complex variables and singularities of
+anisotropic Ising n-fold integrals, arXiv:1207.1784v2 (2012),
+especially the unsquared anisotropic Nickel equation.
+\bibitem{Raoufi} A. Raoufi, Translation-invariant Gibbs states of Ising model:
+General setting, arXiv:1710.07608 (2017), Theorem 1.
+\bibitem{CGN} F. Camia, C. Garban and C. M. Newman, The Ising magnetization
+exponent on $\mathbb Z^2$ is $1/15$, arXiv:1205.6612v4 (2013),
+Theorem 1.5 (the GHS inequality for arbitrary nonnegative interactions
+and site fields) and Corollary 1.6 (pinned plus spins).
+\bibitem{LTsource} D. Lin, Isotropic low-temperature full-bulk natural-boundary manuscript,
+v0.1-rc6, canonical source \texttt{paper/next/manuscript.tex},
+\href{https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/a234328e887416ac4f242e3a24f99bc2d123be38/paper/next}{pinned source edition}.
+The normalized result is used at the scope specified in
+Section~\ref{sec:closure}.
+\bibitem{HTsource} D. Lin, Isotropic high-temperature full-bulk natural-boundary manuscript,
+HT-1.0, canonical source \texttt{paper/ht/frozen/manuscript.tex},
+\href{https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/a234328e887416ac4f242e3a24f99bc2d123be38/paper/ht/frozen}{pinned source edition}.
+The normalized result is used at the scope specified in
+Section~\ref{sec:closure}.
+\end{thebibliography}
+\end{document}

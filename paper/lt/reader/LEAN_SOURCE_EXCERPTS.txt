@@ -1,0 +1,1547 @@
+===== IsingBulk/Final/UnconditionalNaturalBoundary.lean SHA256 0cc4a58d5346350379eab66f8c0841ea1474510960d20ac5a6e1b351ecb206dc =====
+1: import IsingBulk.Tail.AbsoluteTailAssembly
+2: import IsingBulk.Final.ConditionalNaturalBoundary
+3: import IsingBulk.Final.ConditionalPhysicalBoundary
+4: 
+5: /-! Discharge the manuscript's absolute TAIL premise using the internal
+6: sector assembly. Lower even orders are proved internally; only the real
+7: physical identification retains the explicit E1 and E2 inputs. -/
+8: namespace IsingBulk.Final
+9: noncomputable section
+10: open IsingBulk.First IsingBulk.Tail
+11: 
+12: /-- The literal all-order absolute upper tail at every admissible selected
+13: prime point. There is no sector-smallness or tail-smallness hypothesis. -/
+14: theorem theorem_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+15:     {a b : ℤ} (ha : PrimeFamily.Admissible p a)
+16:     (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
+17:     ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+18:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j :=
+19:   selected_absolute_upper_tail_small hp hp11 ha hb hab
+20: 
+21: /-- Complete TAIL package: convergence of the exact higher-even norm sequence
+22: at each positive radial parameter, together with the existing little-o bound. -/
+23: theorem theorem_tail_with_summability {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+24:     {a b : ℤ} (ha : PrimeFamily.Admissible p a)
+25:     (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
+26:     ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+27:       (∀ eps : ℝ, 0 < eps → Summable (fun n : ℕ =>
+28:         ‖iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+29:           (IsingBulk.Branch.radialParameter (selectedOrderedChart ha hb).theta eps)‖)) ∧
+30:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j := fun j hj =>
+31:   ⟨fun _ heps => actual_upper_tail_summable p j (selectedOrderedChart ha hb).sin_theta_pos heps,
+32:    theorem_tail hp hp11 ha hb hab j hj⟩
+33: 
+34: /-- Natural boundary of the internally constructed exterior normalized bulk
+35: series, with the absolute-tail premise discharged. -/
+36: theorem theorem_nb :
+37:     ∀ z : ℂ, ‖z‖ = 1 → ¬ HasExteriorExtension exteriorNormalizedBulk z := by
+38:   exact theorem_conditional
+39:     (fun _ _ _ hp hp11 ha hb hab => theorem_tail hp hp11 ha hb hab)
+40: 
+41: /-- Real finite-order obstruction at each selected point, with the actual
+42: TAIL internally discharged. The finite-prime arc covering is manuscript-only. -/
+43: theorem theorem_selected_no_Ck_extension {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+44:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+45:     (hab : a ≠ b) :
+46:     ¬ HasExteriorCkExtension exteriorNormalizedBulk (PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) :=
+47:   selected_exterior_no_Ck_extension_of_tail hp hp11 ha hb hab
+48:     (theorem_tail hp hp11 ha hb hab)
+49: 
+50: /-- The physical bulk susceptibility germ and every boundary point retain
+51: only the original E1 and E2 physical input boundaries. Lower-order and
+52: TAIL bounds are internally proved. -/
+53: theorem theorem_nb_physical {J : ℝ} (hJ : 0 < J)
+54:     {chi : ℂ → ℂ} {M : ℝ → ℂ}
+55:     (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M) :
+56:     AnalyticOnNhd ℂ (rightPhysicalBulk J) {s : ℂ | 1 < ‖s‖ ∧ 0 < s.re} ∧
+57:       (∀ x : ℝ, 16 < x → chi (x:ℂ) = rightPhysicalBulk J (x:ℂ)) ∧
+58:       (∀ z : ℂ, ‖z‖ = 1 → ¬ HasPhysicalBoundaryExtension J exteriorNormalizedBulk z) := by
+59:   exact theorem_conditional_physical hJ hE1 hE2
+60:     (fun _ _ _ hp hp11 ha hb hab => theorem_tail hp hp11 ha hb hab)
+61: 
+62: end
+63: end IsingBulk.Final
+
+===== IsingBulk/Final/ConditionalNaturalBoundary.lean SHA256 372335b7cf6231264d8f0be7adf0b2afbad8a45cd8d694a1cb6ce5c0b8ca968d =====
+1: import IsingBulk.Final.UpperNoncancellation
+2: import IsingBulk.Final.DenseBoundary
+3: import IsingBulk.Final.PhysicalInputs
+4: import IsingBulk.Tail.ExteriorSeries
+5: import IsingBulk.First.ExteriorIdentitySymmetry
+6: 
+7: /-! Source thm:conditional, using the internally constructed whole-exterior
+8: series. The actual absolute tail remains an explicit premise here; only a
+9: separate theorem_tail may discharge it for the unconditional thm:nb. -/
+10: namespace IsingBulk.Final
+11: noncomputable section
+12: open Filter Set IsingBulk.First IsingBulk.Tail
+13: open scoped Topology
+14: 
+15: theorem sourceS_im_pos_of_upper_exterior {s : ℂ} (hs : 1 < ‖s‖) (hi : 0 < s.im) :
+16:     0 < (sourceS s).im := by
+17:   have hn : 1 < Complex.normSq s := Complex.one_lt_normSq_iff.mpr hs
+18:   have h0 : Complex.normSq s ≠ 0 := by linarith
+19:   have hform : (sourceS s).im = s.im*(Complex.normSq s-1)/Complex.normSq s := by
+20:     simp only [sourceS,Complex.add_im,Complex.inv_im]
+21:     field_simp
+22:     ring
+23:   rw [hform]
+24:   exact div_pos (mul_pos hi (by linarith)) (by linarith)
+25: 
+26: theorem exteriorNormalizedBulk_symmetry :
+27:     ∀ s : ℂ, 1 < ‖s‖ →
+28:       exteriorNormalizedBulk (-s)=exteriorNormalizedBulk s ∧
+29:       exteriorNormalizedBulk (star s)=star (exteriorNormalizedBulk s) := by
+30:   apply exterior_symmetry_of_near_infinity exteriorNormalizedBulk exteriorNormalizedBulk_analyticOn
+31:   · intro s hs
+32:     rw [exteriorNormalizedBulk_eq_quarter_far (by simpa only [norm_neg] using hs),
+33:       exteriorNormalizedBulk_eq_quarter_far hs,normalizedBulkSeries_even]
+34:   · intro s hs
+35:     rw [exteriorNormalizedBulk_eq_quarter_far (by simpa only [norm_star] using hs),
+36:       exteriorNormalizedBulk_eq_quarter_far hs]
+37:     exact normalizedBulkSeries_conjugate _ (by linarith)
+38: 
+39: theorem selected_exterior_nonextension_of_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+40:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+41:     (hab : a ≠ b)
+42:     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+43:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+44:     ¬ HasExteriorExtension exteriorNormalizedBulk (PrimeFamily.selectedPoint p a b) := by
+45:   have hlocal := selected_bulk_nonextension_of_absolute_tail hp hp11 ha hb hab hTail
+46:   apply no_extension_of_eventuallyEq_exterior _ hlocal
+47:   have hi : 0 < (PrimeFamily.selectedPoint p a b).im := by
+48:     rw [PrimeFamily.selectedPoint,Complex.exp_ofReal_mul_I_im]
+49:     exact (selectedOrderedChart ha hb).sin_theta_pos
+50:   filter_upwards [Complex.continuous_im.continuousAt.eventually (Ioi_mem_nhds hi)] with s hs
+51:   intro hse
+52:   have hu := sourceS_im_pos_of_upper_exterior hse hs
+53:   simp only [normalizedUpperBulk,exteriorNormalizedBulk,exteriorEvenSeries_eq_upper hu]
+54: 
+55: /-- The same selected singularity forbids genuine real C^k extension of
+56: the whole exterior normalized bulk germ. -/
+57: theorem selected_exterior_no_Ck_extension_of_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+58:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+59:     (hab : a ≠ b)
+60:     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+61:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+62:     ¬ HasExteriorCkExtension exteriorNormalizedBulk (PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) := by
+63:   have hlocal := selected_bulk_no_Ck_extension_of_absolute_tail hp hp11 ha hb hab hTail
+64:   intro hext
+65:   apply hlocal (Ck_extension_of_eventuallyEq_exterior ?_ hext)
+66:   have hi : 0 < (PrimeFamily.selectedPoint p a b).im := by
+67:     rw [PrimeFamily.selectedPoint,Complex.exp_ofReal_mul_I_im]
+68:     exact (selectedOrderedChart ha hb).sin_theta_pos
+69:   filter_upwards [Complex.continuous_im.continuousAt.eventually (Ioi_mem_nhds hi)] with s hs
+70:   intro hse
+71:   have hu := sourceS_im_pos_of_upper_exterior hse hs
+72:   simp only [normalizedUpperBulk,exteriorNormalizedBulk,exteriorEvenSeries_eq_upper hu]
+73: 
+74: /-- The manuscript's conditional natural-boundary implication. Its conditional
+75: premise is the literal all-j absolute higher-even tail for every selected point.
+76: No root continuation, full-series holomorphy or noncancellation is external. -/
+77: theorem theorem_conditional
+78:     (hTail : ∀ p : ℕ, ∀ a b : ℤ, ∀ _hp : p.Prime, ∀ _hp11 : 11 ≤ p,
+79:       ∀ ha : PrimeFamily.Admissible p a, ∀ hb : PrimeFamily.Admissible p b,
+80:       a ≠ b → ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+81:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+82:     ∀ z : ℂ, ‖z‖=1 → ¬ HasExteriorExtension exteriorNormalizedBulk z := by
+83:   apply unit_circle_no_extension_of_selected
+84:     (fun s hs => (exteriorNormalizedBulk_symmetry s hs).1)
+85:     (fun s hs => (exteriorNormalizedBulk_symmetry s hs).2)
+86:   rintro z ⟨p,a,b,hp,hp11,hab,ha,hb,rfl⟩
+87:   exact selected_exterior_nonextension_of_tail hp hp11 ha hb hab (hTail p a b hp hp11 ha hb hab)
+88: 
+89: /-- E1 and E2 identify the real restriction of the internally constructed
+90: exterior germ. They do not supply its complex convergence or analyticity. -/
+91: theorem physical_exterior_germ_identification {X : ℂ → ℂ} {M : ℝ → ℂ}
+92:     (hE1 : RealFredholmE1 X M) (hE2 : YangMagnetizationE2 M) :
+93:     AnalyticOnNhd ℂ exteriorNormalizedBulk exteriorDomain ∧
+94:       ∀ x : ℝ, 16 < x → X (x:ℂ)=exteriorNormalizedBulk (x:ℂ) := by
+95:   refine ⟨exteriorNormalizedBulk_analyticOn,?_⟩
+96:   intro x hx
+97:   rw [exteriorNormalizedBulk_eq_quarter_far (by
+98:     rw [Complex.norm_real,Real.norm_eq_abs,abs_of_pos (by linarith)]; exact hx)]
+99:   exact realNormalizedFredholmRepresentation_quarter X
+100:     (normalized_real_representation_of_E1_E2 hE1 hE2) x hx
+101: 
+102: end
+103: end IsingBulk.Final
+
+===== IsingBulk/Final/ConditionalPhysicalBoundary.lean SHA256 219e07cbdbf621cc8c0898ec3ac25edf0828761d497a83b035d3f4f4ff0d8d28 =====
+1: import IsingBulk.Final.PhysicalBoundaryExtension
+2: 
+3: /-! Complete physical-germ form of the source conditional criterion.
+4: The actual normalized exterior series is internal, and chi=beta*X is
+5: identified by real-only E1/E2. All local inverse sheets are covered. -/
+6: namespace IsingBulk.Final
+7: noncomputable section
+8: open Set IsingBulk.First IsingBulk.Tail
+9: 
+10: theorem theorem_conditional_physical {J : ℝ} (hJ : 0 < J)
+11:     {chi : ℂ → ℂ} {M : ℝ → ℂ}
+12:     (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M)
+13:     (hTail : ∀ p : ℕ, ∀ a b : ℤ, ∀ _hp : p.Prime, ∀ _hp11 : 11 ≤ p,
+14:       ∀ ha : PrimeFamily.Admissible p a, ∀ hb : PrimeFamily.Admissible p b,
+15:       a ≠ b → ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+16:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+17:     AnalyticOnNhd ℂ (rightPhysicalBulk J) {s : ℂ | 1 < ‖s‖ ∧ 0 < s.re} ∧
+18:       (∀ x : ℝ, 16 < x → chi (x:ℂ)=rightPhysicalBulk J (x:ℂ)) ∧
+19:       (∀ z : ℂ, ‖z‖=1 → ¬ HasPhysicalBoundaryExtension J exteriorNormalizedBulk z) := by
+20:   obtain ⟨ha,hreal⟩ := physical_real_germ_identification hJ hE1 hE2
+21:   exact ⟨ha,hreal,physical_no_boundary_extension exteriorNormalizedBulk_analyticOn
+22:     (theorem_conditional hTail) hJ⟩
+23: 
+24: end
+25: end IsingBulk.Final
+
+===== IsingBulk/Final/PhysicalInputs.lean SHA256 a27ac41ccc02bf0f42a0b912edb762fbf6a8a67443fe2b1b61ad57ff47382efb =====
+1: import IsingBulk.First.RealFredholmIdentification
+2: import IsingBulk.First.PublishedFixedOrder
+3: 
+4: /-! Narrow separated E1/E2 boundaries. Both apply only to real low-temperature
+5: physical data. All complex continuation, noncancellation and tail bounds stay
+6: internal. The historical fixed-order comparison interface is imported
+7: for compatibility; it is absent from the canonical proof dependency chain. -/
+8: namespace IsingBulk.Final
+9: noncomputable section
+10: open IsingBulk.First
+11: open scoped BigOperators
+12: 
+13: /-- E1: Palmer--Tracy 1981 Theorem 5.0/proof pp.374--378, in the published
+14: Tracy--Widom 2014 Appendix 1 (7)--(8), with the manuscript section 2/Appendix F
+15: normalized offsite convention. M is the real physical squared magnetization;
+16: no formula or complex analyticity for it is included here. -/
+17: def RealFredholmE1 (X : ℂ → ℂ) (M : ℝ → ℂ) : Prop :=
+18:   ∀ x : ℝ, 1 < x → ∃ r₀ : ℝ, 0 < r₀ ∧ r₀ < 1 ∧
+19:     ∀ r : ℝ, r₀ < r → r < 1 →
+20:       Summable (fun n : ℕ => doubleFormFactor (2*(n+1)) r (x:ℂ)) ∧
+21:       X (x:ℂ) = 1-M x+2*M x*(∑' n : ℕ, doubleFormFactor (2*(n+1)) r (x:ℂ))
+22: 
+23: /-- E2: Yang 1952 spontaneous squared magnetization, real low temperature.
+24: The chosen fourth root tends to one at infinity, as proved for the expression.
+25: Local complex branch regularity/nonvanishing is established internally. -/
+26: def YangMagnetizationE2 (M : ℝ → ℂ) : Prop :=
+27:   ∀ x : ℝ, 1 < x → M x = magnetizationSquared (x:ℂ)
+28: 
+29: theorem normalized_real_representation_of_E1_E2 {X : ℂ → ℂ} {M : ℝ → ℂ}
+30:     (hE1 : RealFredholmE1 X M) (hE2 : YangMagnetizationE2 M) :
+31:     RealNormalizedFredholmRepresentation X := by
+32:   intro x hx
+33:   obtain ⟨r₀,hr₀,hr₀1,hrep⟩ := hE1 x hx
+34:   refine ⟨r₀,hr₀,hr₀1,?_⟩
+35:   intro r hr hr1
+36:   obtain ⟨hs,hX⟩ := hrep r hr hr1
+37:   refine ⟨hs,?_⟩
+38:   simpa only [hE2 x hx,normalizedBulkSeries] using hX
+39: 
+40: end
+41: end IsingBulk.Final
+
+===== IsingBulk/Final/PhysicalGerm.lean SHA256 2c3d3120d05755300241c132717c26a8a147a203398f231c2adeb4b68df4afc4 =====
+1: import IsingBulk.Final.ConditionalNaturalBoundary
+2: import IsingBulk.Final.InverseTemperature
+3: import IsingBulk.Final.AnalyticFactorTransfer
+4: 
+5: /-! The actual physical susceptibility germ on the right-half-plane chart.
+6: The real PT/Yang inputs identify its real restriction. No globally single-
+7: valued inverse temperature or physical susceptibility is asserted here. -/
+8: namespace IsingBulk.Final
+9: noncomputable section
+10: open Set IsingBulk.First IsingBulk.Tail
+11: 
+12: def rightPhysicalBulk (J : ℝ) (s : ℂ) : ℂ :=
+13:   inverseTemperatureBranch J s * exteriorNormalizedBulk s
+14: 
+15: def PhysicalSusceptibilityE1 (J : ℝ) (chi : ℂ → ℂ) (M : ℝ → ℂ) : Prop :=
+16:   RealFredholmE1 (fun s => chi s/inverseTemperatureBranch J s) M
+17: 
+18: theorem rightPhysicalBulk_analyticOn {J : ℝ} (hJ : 0 < J) :
+19:     AnalyticOnNhd ℂ (rightPhysicalBulk J) {s : ℂ | 1 < ‖s‖ ∧ 0 < s.re} := by
+20:   intro s hs
+21:   exact (inverseTemperatureBranch_regular hs.2 hJ).1.mul
+22:     (exteriorNormalizedBulk_analyticOn s hs.1)
+23: 
+24: theorem physical_real_germ_identification {J : ℝ} (hJ : 0 < J)
+25:     {chi : ℂ → ℂ} {M : ℝ → ℂ}
+26:     (hE1 : PhysicalSusceptibilityE1 J chi M) (hE2 : YangMagnetizationE2 M) :
+27:     AnalyticOnNhd ℂ (rightPhysicalBulk J) {s : ℂ | 1 < ‖s‖ ∧ 0 < s.re} ∧
+28:       ∀ x : ℝ, 16 < x → chi (x:ℂ)=rightPhysicalBulk J (x:ℂ) := by
+29:   refine ⟨rightPhysicalBulk_analyticOn hJ,?_⟩
+30:   intro x hx
+31:   have hrep := (physical_exterior_germ_identification hE1 hE2).2 x hx
+32:   have hb0 := (inverseTemperatureBranch_regular
+33:     (show 0 < (x:ℂ).re by simpa only [Complex.ofReal_re] using (show 0 < x by linarith)) hJ).2
+34:   dsimp only [rightPhysicalBulk]
+35:   have hh := (div_eq_iff hb0).mp hrep
+36:   simpa only [mul_comm] using hh
+37: 
+38: theorem local_physical_branch_nonextension {beta : ℂ → ℂ} {z : ℂ}
+39:     (hb : AnalyticAt ℂ beta z) (hb0 : beta z ≠ 0)
+40:     (hX : ¬ HasExteriorExtension exteriorNormalizedBulk z) :
+41:     ¬ HasExteriorExtension (fun s => beta s*exteriorNormalizedBulk s) z := by
+42:   exact no_extension_mul_analytic_factor hb hb0 hX
+43: 
+44: theorem rightPhysicalBulk_nonextension {J : ℝ} (hJ : 0 < J) {z : ℂ}
+45:     (hz : 0 < z.re) (hX : ¬ HasExteriorExtension exteriorNormalizedBulk z) :
+46:     ¬ HasExteriorExtension (rightPhysicalBulk J) z := by
+47:   obtain ⟨hb,hb0⟩ := inverseTemperatureBranch_regular hz hJ
+48:   exact local_physical_branch_nonextension hb hb0 hX
+49: 
+50: end
+51: end IsingBulk.Final
+
+===== IsingBulk/Final/PhysicalBoundaryExtension.lean SHA256 35cce60686e2287447843eba56312dfb0becc0c2dc17df05dfffe91259330c1c =====
+1: import IsingBulk.Final.PhysicalGerm
+2: import IsingBulk.Final.ExteriorCrescent
+3: import IsingBulk.Final.InverseTemperatureSheets
+4: import IsingBulk.Final.InverseTemperatureLocalBranches
+5: 
+6: /-! A boundary-continuation candidate for the actual physical branch family.
+7: The inverse temperature need only exist on an arbitrary open exterior set
+8: approaching the boundary, not on a fictitious globally single-valued sheet.
+9: Normalization is the literal source chi=beta*X. -/
+10: namespace IsingBulk.Final
+11: noncomputable section
+12: open Set Filter Metric IsingBulk.Tail
+13: open scoped Topology
+14: 
+15: def physicalHalfPlane (sigma : ℝ) : Set ℂ := {s | 0 < sigma*s.re}
+16: 
+17: def HasPhysicalBoundaryExtension (J : ℝ) (X : ℂ → ℂ) (z : ℂ) : Prop :=
+18:   ∃ R : ℝ, 0 < R ∧ ∃ U : Set ℂ, IsOpen U ∧ z ∈ closure U ∧
+19:     U ⊆ exteriorCrescent z R ∧ ∃ beta g : ℂ → ℂ,
+20:       AnalyticOnNhd ℂ beta U ∧ AnalyticOnNhd ℂ g (ball z R) ∧
+21:       (∀ s ∈ U, Complex.sinh (2*(J:ℂ)*beta s)=s) ∧ EqOn g (fun s => beta s*X s) U
+22: 
+23: theorem physicalHalfPlane_isOpen (sigma : ℝ) : IsOpen (physicalHalfPlane sigma) :=
+24:   isOpen_lt continuous_const (continuous_const.mul Complex.continuous_re)
+25: 
+26: theorem physicalHalfPlane_convex (sigma : ℝ) : Convex ℝ (physicalHalfPlane sigma) := by
+27:   intro x hx y hy a b ha hb hab
+28:   change 0 < sigma*(a • x+b • y).re
+29:   simp only [Complex.add_re,Complex.smul_re,smul_eq_mul]
+30:   have hx' : 0 < sigma*x.re := hx
+31:   have hy' : 0 < sigma*y.re := hy
+32:   by_cases ha0 : a=0
+33:   · have hb1 : b=1 := by linarith
+34:     simpa only [ha0,hb1,zero_mul,one_mul,zero_add] using hy'
+35:   · have hap : 0 < a := lt_of_le_of_ne ha (Ne.symm ha0)
+36:     have h1 := mul_pos hap hx'
+37:     have h2 := mul_nonneg hb hy'.le
+38:     nlinarith
+39: 
+40: theorem physicalHalfPlane_canonical {J sigma : ℝ} (hJ : 0 < J) (hsigma : sigma^2=1) :
+41:     ∃ beta0 : ℂ → ℂ, AnalyticOnNhd ℂ beta0 (physicalHalfPlane sigma) ∧
+42:       ∀ s ∈ physicalHalfPlane sigma, Complex.sinh (2*(J:ℂ)*beta0 s)=s := by
+43:   rcases sq_eq_one_iff.mp hsigma with rfl|rfl
+44:   · refine ⟨inverseTemperatureBranch J,?_,?_⟩
+45:     · intro s hs
+46:       exact (inverseTemperatureBranch_regular (by simpa only [physicalHalfPlane,mem_ofPred_eq,one_mul] using hs) hJ).1
+47:     · intro s hs
+48:       exact inverseTemperatureBranch_relation (by simpa only [physicalHalfPlane,mem_ofPred_eq,one_mul] using hs) hJ
+49:   · refine ⟨inverseTemperatureLeft J,?_,?_⟩
+50:     · intro s hs
+51:       have hr : s.re < 0 := by change 0 < (-1)*s.re at hs; linarith
+52:       exact (inverseTemperatureLeft_regular hr hJ).1
+53:     · intro s hs
+54:       have hr : s.re < 0 := by change 0 < (-1)*s.re at hs; linarith
+55:       exact inverseTemperatureLeft_relation hr hJ
+56: 
+57: theorem open_nonempty_nonaxis {U : Set ℂ} (hU : IsOpen U) (hne : U.Nonempty) :
+58:     ∃ s ∈ U, s.re ≠ 0 := by
+59:   obtain ⟨s,hs⟩ := hne
+60:   by_cases hr : s.re=0
+61:   · obtain ⟨d,hd,hdU⟩ := Metric.mem_nhds_iff.mp (hU.mem_nhds hs)
+62:     refine ⟨s+(d/2:ℝ),hdU ?_,?_⟩
+63:     · rw [mem_ball_iff_norm]
+64:       simp only [add_sub_cancel_left,Complex.norm_real,Real.norm_eq_abs,abs_of_pos (half_pos hd)]
+65:       linarith
+66:     · simp only [Complex.add_re,Complex.ofReal_re,hr,zero_add]
+67:       exact (half_pos hd).ne'
+68:   · exact ⟨s,hs,hr⟩
+69: 
+70: theorem ball_subset_physicalHalfPlane {z : ℂ} {r sigma : ℝ}
+71:     (hsigma : sigma^2=1) (hz : 0 < sigma*z.re) (hr : r ≤ sigma*z.re/2) :
+72:     ball z r ⊆ physicalHalfPlane sigma := by
+73:   have hsigabs : |sigma|=1 := by nlinarith [sq_abs sigma,abs_nonneg sigma]
+74:   intro s hs
+75:   have hn := mem_ball_iff_norm.mp hs
+76:   have hh : |s.re-z.re| < r := by
+77:     have hh' : |s.re-z.re| ≤ ‖s-z‖ := by
+78:       simpa only [Complex.sub_re] using Complex.abs_re_le_norm (s-z)
+79:     exact hh'.trans_lt hn
+80:   have hm : |sigma*(s.re-z.re)| < r := by rw [abs_mul,hsigabs,one_mul]; exact hh
+81:   have hl := (abs_lt.mp hm).1
+82:   change 0 < sigma*s.re
+83:   nlinarith
+84: 
+85: theorem half_crescent_candidate_contradiction {X : ℂ → ℂ}
+86:     (hXa : AnalyticOnNhd ℂ X {s : ℂ | 1 < ‖s‖})
+87:     (hX : ∀ w : ℂ, ‖w‖=1 → ¬ HasExteriorExtension X w)
+88:     {J sigma R r : ℝ} (hJ : 0 < J) (hsigma : sigma^2=1) {z w : ℂ}
+89:     (hrR : r ≤ R) (hw : ‖w‖=1) (hwb : w ∈ ball z r ∩ physicalHalfPlane sigma)
+90:     {U : Set ℂ} (hU : IsOpen U) (beta g : ℂ → ℂ)
+91:     (hb : AnalyticOnNhd ℂ beta U) (hg : AnalyticOnNhd ℂ g (ball z R))
+92:     (hrel : ∀ s ∈ U, Complex.sinh (2*(J:ℂ)*beta s)=s)
+93:     (hEq : EqOn g (fun s => beta s*X s) U)
+94:     (hD : IsPreconnected (exteriorCrescent z r ∩ physicalHalfPlane sigma))
+95:     (hseed : (U ∩ (exteriorCrescent z r ∩ physicalHalfPlane sigma)).Nonempty) : False := by
+96:   let D := exteriorCrescent z r ∩ physicalHalfPlane sigma
+97:   obtain ⟨s0,hs0⟩ := hseed
+98:   have hOpen : IsOpen (U ∩ D) := hU.inter ((exteriorCrescent_isOpen z r).inter (physicalHalfPlane_isOpen sigma))
+99:   obtain ⟨d,hd,hdsub⟩ := Metric.mem_nhds_iff.mp (hOpen.mem_nhds hs0)
+100:   have hballU : ball s0 d ⊆ U := fun s hs => (hdsub hs).1
+101:   have hballD : ball s0 d ⊆ D := fun s hs => (hdsub hs).2
+102:   obtain ⟨beta0,hb0,hrel0⟩ := physicalHalfPlane_canonical hJ hsigma
+103:   obtain ⟨betaExt,hbe,hbee,hber,hben⟩ := inverseTemperature_sheet_extension isOpen_ball
+104:     (convex_ball s0 d).isPreconnected ⟨s0,mem_ball_self hd⟩
+105:     (fun s hs => (hballD hs).2) (physicalHalfPlane_convex sigma).isPreconnected hJ beta beta0
+106:     (hb.mono hballU) hb0 (fun s hs => hrel s (hballU hs)) hrel0
+107:   have hgD : AnalyticOnNhd ℂ g D := fun s hs => hg s ((ball_subset_ball hrR) hs.1.1)
+108:   have hxD : AnalyticOnNhd ℂ (fun s => betaExt s*X s) D :=
+109:     fun s hs => (hbe s hs.2).mul (hXa s hs.1.2)
+110:   have heq : g =ᶠ[𝓝 s0] (fun s => betaExt s*X s) := by
+111:     filter_upwards [ball_mem_nhds s0 hd] with s hs
+112:     rw [hEq (hballU hs),hbee hs]
+113:   have hfull : EqOn g (fun s => betaExt s*X s) D :=
+114:     hgD.eqOn_of_preconnected_of_eventuallyEq hxD hD hs0.2 heq
+115:   have hext : HasExteriorExtension (fun s => betaExt s*X s) w := by
+116:     refine ⟨ball z r ∩ physicalHalfPlane sigma,isOpen_ball.inter (physicalHalfPlane_isOpen sigma),
+117:       hwb,g,?_,?_⟩
+118:     · intro s hs
+119:       exact hg s ((ball_subset_ball hrR) hs.1)
+120:     · intro s hs
+121:       exact hfull ⟨⟨hs.1.1,hs.2⟩,hs.1.2⟩
+122:   have hw0 : w ≠ 0 := by intro he; simp [he] at hw
+123:   exact hX w hw (extension_of_analytic_factor_extension (hbe w hwb.2) (hben w hwb.2 hw0) hext)
+124: 
+125: 
+126: theorem physical_no_boundary_extension {X : ℂ → ℂ}
+127:     (hXa : AnalyticOnNhd ℂ X {s : ℂ | 1 < ‖s‖})
+128:     (hX : ∀ w : ℂ, ‖w‖=1 → ¬ HasExteriorExtension X w)
+129:     {J : ℝ} (hJ : 0 < J) :
+130:     ∀ z : ℂ, ‖z‖=1 → ¬ HasPhysicalBoundaryExtension J X z := by
+131:   intro z hz hc
+132:   obtain ⟨R,hR,U,hU,hzU,hsub,beta,g,hb,hg,hrel,hEq⟩ := hc
+133:   have hnear (r : ℝ) (hr : 0 < r) : (U ∩ ball z r).Nonempty := by
+134:     have hh := mem_closure_iff_nhds.mp hzU (ball z r) (ball_mem_nhds z hr)
+135:     simpa only [inter_comm] using hh
+136:   have hsign {w : ℂ} (hw : w.re ≠ 0) : ∃ sigma : ℝ, sigma^2=1 ∧ 0 < sigma*w.re := by
+137:     rcases lt_or_gt_of_ne hw with hl|hr
+138:     · exact ⟨-1,by norm_num,by linarith⟩
+139:     · exact ⟨1,by norm_num,by simpa only [one_mul] using hr⟩
+140:   by_cases haxis : z.re=0
+141:   · let r := min R (1/2)
+142:     have hr : 0 < r := lt_min hR (by norm_num)
+143:     have hrR : r ≤ R := min_le_left _ _
+144:     have hrs : r ≤ 1/2 := min_le_right _ _
+145:     obtain ⟨s0,hs0,hs0re⟩ := open_nonempty_nonaxis (hU.inter isOpen_ball) (hnear r hr)
+146:     obtain ⟨sigma,hsigma,hsign0⟩ := hsign hs0re
+147:     obtain ⟨w,hw,hwb,hwh⟩ := axis_unit_point_near hz haxis hr hsigma
+148:     have hconn : IsPreconnected (exteriorCrescent z r ∩ physicalHalfPlane sigma) :=
+149:       (axisCrescent_half_isConnected hz haxis hr hrs hsigma).isPreconnected
+150:     apply half_crescent_candidate_contradiction hXa hX hJ hsigma hrR hw ⟨hwb,hwh⟩
+151:       hU beta g hb hg hrel hEq hconn
+152:     exact ⟨s0,hs0.1,⟨⟨hs0.2,(hsub hs0.1).2⟩,hsign0⟩⟩
+153:   · obtain ⟨sigma,hsigma,hzhalf⟩ := hsign haxis
+154:     let r := min R (min (1/2) (sigma*z.re/2))
+155:     have hr : 0 < r := lt_min hR (lt_min (by norm_num) (half_pos hzhalf))
+156:     have hrR : r ≤ R := min_le_left _ _
+157:     have hrs : r ≤ 1/2 := (min_le_right _ _).trans (min_le_left _ _)
+158:     have hrz : r ≤ sigma*z.re/2 := (min_le_right _ _).trans (min_le_right _ _)
+159:     have hball := ball_subset_physicalHalfPlane hsigma hzhalf hrz
+160:     have heq : exteriorCrescent z r ∩ physicalHalfPlane sigma=exteriorCrescent z r :=
+161:       inter_eq_left.mpr (fun s hs => hball hs.1)
+162:     have hconn : IsPreconnected (exteriorCrescent z r ∩ physicalHalfPlane sigma) := by
+163:       rw [heq]
+164:       exact (exteriorCrescent_isConnected hz hr hrs).isPreconnected
+165:     apply half_crescent_candidate_contradiction hXa hX hJ hsigma hrR hz ⟨mem_ball_self hr,hzhalf⟩
+166:       hU beta g hb hg hrel hEq hconn
+167:     obtain ⟨s0,hsU,hsB⟩ := hnear r hr
+168:     exact ⟨s0,hsU,⟨⟨hsB,(hsub hsU).2⟩,hball hsB⟩⟩
+169: 
+170: 
+171: /-- Any ordinary extension of an actual local inverse-temperature chart is
+172: included in the branch-independent continuation predicate. -/
+173: theorem physical_boundary_extension_of_chart {J : ℝ} {X beta : ℂ → ℂ} {z : ℂ}
+174:     (hz : ‖z‖=1) (hb : AnalyticAt ℂ beta z)
+175:     (hrel : ∀ᶠ s in 𝓝 z, Complex.sinh (2*(J:ℂ)*beta s)=s)
+176:     (he : HasExteriorExtension (fun s => beta s*X s) z) :
+177:     HasPhysicalBoundaryExtension J X z := by
+178:   obtain ⟨V,hV,hzV,g,hg,hEq⟩ := he
+179:   have hnear : ∀ᶠ s in 𝓝 z, s ∈ V ∧ AnalyticAt ℂ beta s ∧
+180:       Complex.sinh (2*(J:ℂ)*beta s)=s := (show ∀ᶠ s in 𝓝 z, s ∈ V from hV.mem_nhds hzV).and (hb.eventually_analyticAt.and hrel)
+181:   obtain ⟨r,hr,hsub⟩ := Metric.mem_nhds_iff.mp hnear
+182:   refine ⟨r,hr,exteriorCrescent z r,exteriorCrescent_isOpen z r,
+183:     unit_mem_closure_exteriorCrescent hz hr,Subset.rfl,beta,g,?_,?_,?_,?_⟩
+184:   · intro s hs
+185:     exact (hsub hs.1).2.1
+186:   · intro s hs
+187:     exact hg s (hsub hs).1
+188:   · intro s hs
+189:     exact (hsub hs.1).2.2
+190:   · intro s hs
+191:     exact hEq ⟨(hsub hs.1).1,hs.2⟩
+192: 
+193: end
+194: end IsingBulk.Final
+
+===== IsingBulk/Final/UpperNoncancellation.lean SHA256 9f069552ec7f4ae0916269269be2aac991c3d4027ce4251155774297fe83c411 =====
+1: import IsingBulk.Tail.UpperExteriorSeries
+2: import IsingBulk.First.FirstTheorem
+3: import IsingBulk.Final.LowerEvenSum
+4: import IsingBulk.Final.AbsoluteTail
+5: import IsingBulk.Final.LeibnizLimit
+6: import IsingBulk.Final.MagnetizationBoundary
+7: import IsingBulk.Final.SmoothExtension
+8: 
+9: /-! Actual upper-trace series noncancellation. The sole unproved analytic
+10: hypothesis here is the literal absolute higher-tail assertion of thm:tail;
+11: it is permitted in thm:conditional, never in an unconditional tail endpoint. -/
+12: namespace IsingBulk.Final
+13: noncomputable section
+14: open Filter IsingBulk.First IsingBulk.Branch IsingBulk.Tail
+15: open scoped Topology BigOperators
+16: 
+17: theorem sourceRadialTrace_pos {theta e : ℝ} (htheta : 0 < Real.sin theta) (he : 0 < e) :
+18:     0 < (sourceS (radialParameter theta e)).im := by
+19:   have h := (radial_trace_components theta e (by linarith)).2
+20:   change (sourceS (radialParameter theta e)).im = _ at h
+21:   rw [h]
+22:   have heq : 2*e-e^2/(1+e) = e*(2+e)/(1+e) := by
+23:     field_simp
+24:     ring
+25:   rw [heq]
+26:   positivity
+27: 
+28: theorem upperEvenSeries_radial_split {p : ℕ} (hp : 0 < p) (j : ℕ)
+29:     {theta e : ℝ} (htheta : 0 < Real.sin theta) (he : 0 < e) :
+30:     iteratedDeriv j upperEvenSeries (radialParameter theta e) =
+31:       (∑ n ∈ Finset.range (p-1), iteratedDeriv j (upperFormFactor (2*(n+1)))
+32:         (radialParameter theta e)) +
+33:       iteratedDeriv j (upperFormFactor (2*p)) (radialParameter theta e) +
+34:       ∑' n : ℕ, iteratedDeriv j (upperFormFactor (2*(n+p+1))) (radialParameter theta e) := by
+35:   have hs := sourceRadialTrace_pos htheta he
+36:   rw [upperEvenSeries_iteratedDeriv j hs]
+37:   have hsum := (upperEven_derivative_summable j hs).of_norm.sum_add_tsum_nat_add p
+38:   have hpred : p-1+1=p := by omega
+39:   rw [← hpred,Finset.sum_range_succ] at hsum
+40:   simpa only [hpred] using hsum.symm
+41: 
+42: /-- The exact source higher-even tail, with the absolute sum taken before
+43: any asymptotic limit. No estimate of individual summands can replace it. -/
+44: def AbsoluteUpperTailSmall (p : ℕ) (theta : ℝ) (j : ℕ) : Prop :=
+45:   Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+46:     (fun e => ∑' n : ℕ, ‖iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+47:       (radialParameter theta e)‖)
+48:     (fun e => (Real.sqrt e)⁻¹)
+49: 
+50: theorem actual_upper_complex_tail_small {p : ℕ} {theta : ℝ} (htheta : 0 < Real.sin theta)
+51:     (j : ℕ) (hTail : AbsoluteUpperTailSmall p theta j) :
+52:     Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+53:       (fun e => ∑' n : ℕ, iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+54:         (radialParameter theta e)) (fun e => (Real.sqrt e:ℂ)⁻¹) := by
+55:   apply complex_tail_isLittleO_of_absolute _ hTail
+56:   filter_upwards [self_mem_nhdsWithin] with e he
+57:   exact (upperEven_derivative_summable j (sourceRadialTrace_pos htheta he)).comp_injective
+58:     (fun a b h => by omega)
+59: 
+60: theorem selected_upper_top_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+61:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+62:     (hab : a ≠ b)
+63:     (hTail : AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta ((2*p)^2/2-1)) :
+64:     let k := (2*p)^2/2-1
+65:     let A := selectedOrderedChart ha hb
+66:     let L := localLeadingCoefficient A (2*p-1) k
+67:     L ≠ 0 ∧ Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+68:       (fun e => iteratedDeriv k upperEvenSeries (radialParameter A.theta e) -
+69:         (Real.sqrt e:ℂ)⁻¹*(2*L)) (fun e => (Real.sqrt e:ℂ)⁻¹) := by
+70:   dsimp only
+71:   obtain ⟨hL,hTop,_⟩ := first_upper_asymptotic hp hp11 ha hb hab
+72:   have hn : 2*p-1+1=2*p := by have := hp.pos; omega
+73:   simp only [hn] at hL hTop
+74:   refine ⟨hL,?_⟩
+75:   have hLow := lower_even_sum_isLittleO hp hp11 ha hb ((2*p)^2/2-1)
+76:   have hT := actual_upper_complex_tail_small (selectedOrderedChart ha hb).sin_theta_pos _ hTail
+77:   apply ((hLow.add hTop).add hT).congr' _ (Eventually.of_forall (fun _ => rfl))
+78:   filter_upwards [self_mem_nhdsWithin] with e he
+79:   rw [upperEvenSeries_radial_split hp.pos _ (selectedOrderedChart ha hb).sin_theta_pos he]
+80:   ring
+81: 
+82: theorem selected_upper_lower_negligible {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+83:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+84:     (hab : a ≠ b)
+85:     {j : ℕ} (hj : j < (2*p)^2/2-1)
+86:     (hTail : AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+87:     Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+88:       (fun e => iteratedDeriv j upperEvenSeries (radialParameter (selectedOrderedChart ha hb).theta e))
+89:       (fun e => (Real.sqrt e:ℂ)⁻¹) := by
+90:   obtain ⟨_,_,d,hd,hfirst⟩ := first_upper_asymptotic hp hp11 ha hb hab
+91:   have hn : 2*p-1+1=2*p := by have := hp.pos; omega
+92:   simp only [hn] at hfirst
+93:   obtain ⟨C,_,hbound⟩ := hfirst j hj
+94:   have hF : Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+95:       (fun e => iteratedDeriv j (upperFormFactor (2*p))
+96:         (radialParameter (selectedOrderedChart ha hb).theta e))
+97:       (fun e => (Real.sqrt e:ℂ)⁻¹) := by
+98:     apply IsingBulk.First.bounded_radial_term_isLittleO (show 0 < d/2 by positivity)
+99:     exact fun e he hed => hbound e he (by linarith)
+100:   have hLow := lower_even_sum_isLittleO hp hp11 ha hb j
+101:   have hT := actual_upper_complex_tail_small (selectedOrderedChart ha hb).sin_theta_pos _ hTail
+102:   apply ((hLow.add hF).add hT).congr' _ (Eventually.of_forall (fun _ => rfl))
+103:   filter_upwards [self_mem_nhdsWithin] with e he
+104:   exact (upperEvenSeries_radial_split hp.pos j (selectedOrderedChart ha hb).sin_theta_pos he).symm
+105: 
+106: /-- The internally convergent actual normalized bulk on the upper-trace domain. -/
+107: def normalizedUpperBulk (s : ℂ) : ℂ :=
+108:   1-magnetizationSquared s+2*magnetizationSquared s*upperEvenSeries s
+109: 
+110: /-- Selected-point bulk noncancellation with exactly the source's all-j
+111: absolute-tail hypothesis. The conclusion forbids a genuine open-neighborhood
+112: extension; there is no assumed global holomorphic continuation. -/
+113: theorem selected_bulk_radial_limit_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+114:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+115:     (hab : a ≠ b)
+116:     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+117:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+118:     let k := (2*p)^2/2-1
+119:     let L := localLeadingCoefficient (selectedOrderedChart ha hb) (2*p-1) k
+120:     L ≠ 0 ∧ Tendsto (fun e : ℝ => Real.sqrt e •
+121:       iteratedDeriv k normalizedUpperBulk ((1+(e:ℂ))*PrimeFamily.selectedPoint p a b))
+122:       (𝓝[>] 0) (𝓝 (4*magnetizationSquared (PrimeFamily.selectedPoint p a b)*L)) := by
+123:   let k := (2*p)^2/2-1
+124:   let A := selectedOrderedChart ha hb
+125:   let L := localLeadingCoefficient A (2*p-1) k
+126:   let z := PrimeFamily.selectedPoint p a b
+127:   obtain ⟨hL,hTop⟩ := selected_upper_top_asymptotic hp hp11 ha hb hab (hTail k le_rfl)
+128:   change L ≠ 0 at hL
+129:   change Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+130:     (fun e => iteratedDeriv k upperEvenSeries (radialParameter A.theta e) -
+131:       (Real.sqrt e:ℂ)⁻¹*(2*L)) (fun e => (Real.sqrt e:ℂ)⁻¹) at hTop
+132:   have hpath (e : ℝ) : radialParameter A.theta e = (1+(e:ℂ))*z := by
+133:     simp only [radialParameter,A,z,selectedOrderedChart,PrimeFamily.selectedPoint,
+134:       Complex.ofReal_add,Complex.ofReal_one]
+135:   have hlimits : ∀ i : ℕ, i ≤ k → Tendsto
+136:       (fun e : ℝ => Real.sqrt e • iteratedDeriv i upperEvenSeries ((1+(e:ℂ))*z))
+137:       (𝓝[>] 0) (𝓝 (if i=k then 2*L else 0)) := by
+138:     intro i hi
+139:     by_cases hik : i=k
+140:     · subst i
+141:       rw [ite_eq_left rfl]
+142:       simpa only [hpath] using sqrt_limit_of_isLittleO hTop
+143:     · rw [ite_eq_right hik]
+144:       have hlow := selected_upper_lower_negligible hp hp11 ha hb hab
+145:         (lt_of_le_of_ne hi hik) (hTail i hi)
+146:       have hl : Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+147:           (fun e => iteratedDeriv i upperEvenSeries (radialParameter A.theta e) -
+148:             (Real.sqrt e:ℂ)⁻¹*(0:ℂ)) (fun e => (Real.sqrt e:ℂ)⁻¹) := by
+149:         simpa only [mul_zero,sub_zero] using hlow
+150:       simpa only [hpath] using sqrt_limit_of_isLittleO hl
+151:   have hm := selectedPoint_magnetization_regular ha hb
+152:   have hU : ∀ᶠ e : ℝ in 𝓝[>] 0, AnalyticAt ℂ upperEvenSeries ((1+(e:ℂ))*z) := by
+153:     filter_upwards [self_mem_nhdsWithin] with e he
+154:     rw [← hpath]
+155:     exact upperEvenSeries_analyticAt (sourceRadialTrace_pos A.sin_theta_pos he)
+156:   have hbulk := sqrt_radial_bulk_limit k hm.1 hU hlimits
+157:   exact ⟨hL,hbulk⟩
+158: 
+159: theorem selected_bulk_nonextension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+160:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+161:     (hab : a ≠ b)
+162:     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+163:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+164:     ¬ HasExteriorExtension normalizedUpperBulk (PrimeFamily.selectedPoint p a b) := by
+165:   obtain ⟨hL,hlim⟩ := selected_bulk_radial_limit_of_absolute_tail hp hp11 ha hb hab hTail
+166:   have hm := selectedPoint_magnetization_regular ha hb
+167:   exact no_extension_of_nonzero_radial_limit (Complex.norm_exp_ofReal_mul_I _)
+168:     (mul_ne_zero (mul_ne_zero (by norm_num) hm.2) hL) _ hlim
+169: 
+170: /-- Genuine real C^k obstruction for the same bulk observable. -/
+171: theorem selected_bulk_no_Ck_extension_of_absolute_tail {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p)
+172:     {a b : ℤ} (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b)
+173:     (hab : a ≠ b)
+174:     (hTail : ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+175:       AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j) :
+176:     ¬ HasExteriorCkExtension normalizedUpperBulk (PrimeFamily.selectedPoint p a b) ((2*p)^2/2-1) := by
+177:   obtain ⟨hL,hlim⟩ := selected_bulk_radial_limit_of_absolute_tail hp hp11 ha hb hab hTail
+178:   have hm := selectedPoint_magnetization_regular ha hb
+179:   apply no_Ck_extension_of_nonzero_radial_limit (Complex.norm_exp_ofReal_mul_I _)
+180:     (mul_ne_zero (mul_ne_zero (by norm_num) hm.2) hL) _ _ hlim
+181:   filter_upwards [self_mem_nhdsWithin,
+182:     (radialPath_tendsto (PrimeFamily.selectedPoint p a b)).eventually hm.1.eventually_analyticAt]
+183:     with e he hme
+184:   have ht : 0 < (sourceS ((1+(e:ℂ))*PrimeFamily.selectedPoint p a b)).im := by
+185:     simpa only [IsingBulk.Branch.radialParameter,selectedOrderedChart,PrimeFamily.selectedPoint,
+186:       Complex.ofReal_add,Complex.ofReal_one] using
+187:       sourceRadialTrace_pos (selectedOrderedChart ha hb).sin_theta_pos he
+188:   exact (analyticAt_const.sub hme).add
+189:     ((analyticAt_const.mul hme).mul (upperEvenSeries_analyticAt ht))
+190: 
+191: 
+192: end
+193: end IsingBulk.Final
+
+===== IsingBulk/Final/LocalExtension.lean SHA256 e6bd284c1b4fca8c06d2832245a53a88816b45a828793ab95d741785a32e4522 =====
+1: import IsingBulk.Final.RadialNoncancellation
+2: import IsingBulk.First.ExteriorAnalyticGeometry
+3: import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+4: 
+5: /-! Local holomorphic extension is expressed by agreement on the actual open
+6: exterior overlap. The obstruction uses a proved radial derivative limit. -/
+7: namespace IsingBulk.Final
+8: noncomputable section
+9: open Filter Set
+10: open scoped Topology
+11: 
+12: /-- A genuine local extension across a point, with an open overlap on which
+13: all derivatives agree. No global continuation is hidden in this definition. -/
+14: def HasExteriorExtension (f : ℂ → ℂ) (z : ℂ) : Prop :=
+15:   ∃ U : Set ℂ, IsOpen U ∧ z ∈ U ∧ ∃ g : ℂ → ℂ,
+16:     AnalyticOnNhd ℂ g U ∧ EqOn g f (U ∩ {s : ℂ | 1 < ‖s‖})
+17: 
+18: theorem radialPath_tendsto (z : ℂ) :
+19:     Tendsto (fun e : ℝ => (1+(e:ℂ))*z) (𝓝[>] 0) (𝓝 z) := by
+20:   have h : Tendsto (fun e : ℝ => (e:ℂ)) (𝓝[>] 0) (𝓝 0) := by
+21:     simpa using (Complex.continuous_ofReal.tendsto (0:ℝ)).mono_left nhdsWithin_le_nhds
+22:   simpa using ((tendsto_const_nhds (x := (1:ℂ))).add h).mul_const z
+23: 
+24: theorem radialPath_exterior {z : ℂ} (hz : ‖z‖ = 1) {e : ℝ} (he : 0 < e) :
+25:     1 < ‖(1+(e:ℂ))*z‖ := by
+26:   rw [norm_mul, hz, mul_one]
+27:   have h : 1+(e:ℂ) = ((1+e:ℝ):ℂ) := by simp
+28:   rw [h, Complex.norm_real, Real.norm_eq_abs, abs_of_pos (by linarith)]
+29:   linarith
+30: 
+31: /-- Any nonzero normalized radial derivative limit forbids local extension.
+32: The derivative is the complex derivative of the actual exterior function. -/
+33: theorem no_extension_of_nonzero_radial_limit {f : ℂ → ℂ} {z L : ℂ}
+34:     (hz : ‖z‖ = 1) (hL : L ≠ 0) (k : ℕ)
+35:     (hlim : Tendsto (fun e : ℝ => Real.sqrt e •
+36:         iteratedDeriv k f ((1+(e:ℂ))*z)) (𝓝[>] 0) (𝓝 L)) :
+37:     ¬ HasExteriorExtension f z := by
+38:   rintro ⟨U,hU,hzU,g,hg,heq⟩
+39:   have hpath := radialPath_tendsto z
+40:   have hUevent := hpath.eventually (hU.mem_nhds hzU)
+41:   have hderiv : ∀ᶠ e : ℝ in 𝓝[>] 0,
+42:       iteratedDeriv k f ((1+(e:ℂ))*z) = iteratedDeriv k g ((1+(e:ℂ))*z) := by
+43:     filter_upwards [hUevent,self_mem_nhdsWithin] with e heU he
+44:     apply Filter.EventuallyEq.iteratedDeriv_eq
+45:     have hopen : IsOpen (U ∩ {s : ℂ | 1 < ‖s‖}) :=
+46:       hU.inter (isOpen_lt continuous_const continuous_norm)
+47:     filter_upwards [hopen.mem_nhds ⟨heU,radialPath_exterior hz he⟩] with s hs
+48:     exact (heq hs).symm
+49:   have hcont : ContinuousAt (iteratedDeriv k g) z := by
+50:     simpa only [iteratedDeriv_eq_iterate] using ((hg z hzU).iterated_deriv k).continuousAt
+51:   have hgpath := hcont.tendsto.comp hpath
+52:   have hsqrt : Tendsto Real.sqrt (𝓝[>] (0:ℝ)) (𝓝 0) := by
+53:     simpa only [Real.sqrt_zero] using
+54:       (Real.continuous_sqrt.tendsto (0:ℝ)).mono_left nhdsWithin_le_nhds
+55:   have hzero : Tendsto (fun e : ℝ => Real.sqrt e •
+56:       iteratedDeriv k g ((1+(e:ℂ))*z)) (𝓝[>] 0) (𝓝 (0:ℂ)) := by
+57:     simpa using hsqrt.smul hgpath
+58:   have hzeroF : Tendsto (fun e : ℝ => Real.sqrt e •
+59:       iteratedDeriv k f ((1+(e:ℂ))*z)) (𝓝[>] 0) (𝓝 (0:ℂ)) :=
+60:     hzero.congr' (hderiv.mono (fun e he => by dsimp only; rw [he]))
+61:   exact hL (tendsto_nhds_unique hlim hzeroF)
+62: 
+63: /-- Obstructions on a dense boundary subset rule out extension at every point
+64: of its closure, including the axis points absent from the selected family. -/
+65: theorem no_extension_on_closure {f : ℂ → ℂ} {S : Set ℂ}
+66:     (hS : ∀ z ∈ S, ¬ HasExteriorExtension f z) {z : ℂ} (hz : z ∈ closure S) :
+67:     ¬ HasExteriorExtension f z := by
+68:   rintro ⟨U,hU,hzU,g,hg,heq⟩
+69:   obtain ⟨w,hwU,hwS⟩ := mem_closure_iff.mp hz U hU hzU
+70:   exact hS w hwS ⟨U,hU,hwU,g,hg,heq⟩
+71: 
+72: /-- Equality of actual exterior germs near the boundary transfers extensions.
+73: The equality is only required on the exterior part of that neighborhood. -/
+74: theorem extension_of_eventuallyEq_exterior {f g : ℂ → ℂ} {z : ℂ}
+75:     (hfg : ∀ᶠ s in 𝓝 z, 1 < ‖s‖ → f s = g s)
+76:     (hg : HasExteriorExtension g z) : HasExteriorExtension f z := by
+77:   obtain ⟨U,hU,hzU,G,hG,hEq⟩ := hg
+78:   obtain ⟨V,hV,hVopen,hzV⟩ := mem_nhds_iff.mp hfg
+79:   refine ⟨U ∩ V,hU.inter hVopen,⟨hzU,hzV⟩,G,hG.mono inter_subset_left,?_⟩
+80:   intro s hs
+81:   exact (hEq ⟨hs.1.1,hs.2⟩).trans (hV hs.1.2 hs.2).symm
+82: 
+83: theorem no_extension_of_eventuallyEq_exterior {f g : ℂ → ℂ} {z : ℂ}
+84:     (hfg : ∀ᶠ s in 𝓝 z, 1 < ‖s‖ → f s = g s)
+85:     (hf : ¬ HasExteriorExtension f z) : ¬ HasExteriorExtension g z :=
+86:   fun hg => hf (extension_of_eventuallyEq_exterior hfg hg)
+87: 
+88: end
+89: end IsingBulk.Final
+
+===== IsingBulk/Final/SmoothExtension.lean SHA256 6cde66fd3818ff16714be6a5af1b267ceea546d42ea1bb55c0b94bbd800fdbbc =====
+1: import IsingBulk.Final.LocalExtension
+2: import Mathlib.Analysis.Calculus.ContDiff.RestrictScalars
+3: 
+4: /-! A real C^k extension is weaker than a holomorphic extension. The
+5: obstruction compares actual exterior complex derivatives with the real
+6: Fréchet derivatives of an agreeing extension, rather than assuming that a
+7: smooth extension is holomorphic. -/
+8: namespace IsingBulk.Final
+9: noncomputable section
+10: open Set Filter
+11: open scoped Topology
+12: 
+13: def HasExteriorCkExtension (f : ℂ → ℂ) (z : ℂ) (k : ℕ) : Prop :=
+14:   ∃ U : Set ℂ, IsOpen U ∧ z ∈ U ∧ ∃ g : ℂ → ℂ,
+15:     ContDiffOn ℝ k g U ∧ EqOn g f (U ∩ {s : ℂ | 1 < ‖s‖})
+16: 
+17: theorem Ck_extension_of_eventuallyEq_exterior {f g : ℂ → ℂ} {z : ℂ} {k : ℕ}
+18:     (hfg : ∀ᶠ s in 𝓝 z, 1 < ‖s‖ → f s = g s)
+19:     (hg : HasExteriorCkExtension g z k) : HasExteriorCkExtension f z k := by
+20:   obtain ⟨U,hU,hzU,G,hG,hEq⟩ := hg
+21:   obtain ⟨V,hV,hVopen,hzV⟩ := mem_nhds_iff.mp hfg
+22:   refine ⟨U ∩ V,hU.inter hVopen,⟨hzU,hzV⟩,G,hG.mono inter_subset_left,?_⟩
+23:   intro s hs
+24:   exact (hEq ⟨hs.1.1,hs.2⟩).trans (hV hs.1.2 hs.2).symm
+25: 
+26: theorem no_Ck_extension_of_nonzero_radial_limit {f : ℂ → ℂ} {z L : ℂ}
+27:     (hz : ‖z‖ = 1) (hL : L ≠ 0) (k : ℕ)
+28:     (ha : ∀ᶠ e : ℝ in 𝓝[>] 0, AnalyticAt ℂ f ((1+(e:ℂ))*z))
+29:     (hlim : Tendsto (fun e : ℝ => Real.sqrt e •
+30:         iteratedDeriv k f ((1+(e:ℂ))*z)) (𝓝[>] 0) (𝓝 L)) :
+31:     ¬ HasExteriorCkExtension f z k := by
+32:   rintro ⟨U,hU,hzU,g,hg,heq⟩
+33:   let J : ℂ → ℂ := fun s => iteratedFDeriv ℝ k g s (fun _ => 1)
+34:   have hcont : ContinuousAt J z :=
+35:     (continuous_eval_const (fun _ : Fin k => (1:ℂ))).continuousAt.comp
+36:       ((hg.contDiffAt (hU.mem_nhds hzU)).continuousAt_iteratedFDeriv le_rfl)
+37:   have hpath := radialPath_tendsto z
+38:   have hUevent := hpath.eventually (hU.mem_nhds hzU)
+39:   have hjet : ∀ᶠ e : ℝ in 𝓝[>] 0, iteratedDeriv k f ((1+(e:ℂ))*z) = J ((1+(e:ℂ))*z) := by
+40:     filter_upwards [ha,hUevent,self_mem_nhdsWithin] with e hA heU he
+41:     have hopen : IsOpen (U ∩ {s : ℂ | 1 < ‖s‖}) :=
+42:       hU.inter (isOpen_lt continuous_const continuous_norm)
+43:     have hfg : f =ᶠ[𝓝 ((1+(e:ℂ))*z)] g := by
+44:       filter_upwards [hopen.mem_nhds ⟨heU,radialPath_exterior hz he⟩] with s hs
+45:       exact (heq hs).symm
+46:     have hR : ContDiffAt ℂ k f ((1+(e:ℂ))*z) := hA.contDiffAt
+47:     have hr := hR.restrictScalars_iteratedFDeriv (𝕜 := ℝ)
+48:     have hv := congrArg (fun T : ContinuousMultilinearMap ℝ (fun _ : Fin k => ℂ) ℂ =>
+49:       T (fun _ => 1)) hr
+50:     change iteratedFDeriv ℂ k f ((1+(e:ℂ))*z) (fun _ => 1) =
+51:       iteratedFDeriv ℝ k f ((1+(e:ℂ))*z) (fun _ => 1) at hv
+52:     rw [iteratedDeriv_eq_iteratedFDeriv,hv]
+53:     exact congrArg (fun T : ContinuousMultilinearMap ℝ (fun _ : Fin k => ℂ) ℂ =>
+54:       T (fun _ => 1)) ((hfg.iteratedFDeriv ℝ k).eq_of_nhds)
+55:   have hsqrt : Tendsto Real.sqrt (𝓝[>] (0:ℝ)) (𝓝 0) := by
+56:     simpa using (Real.continuous_sqrt.tendsto (0:ℝ)).mono_left nhdsWithin_le_nhds
+57:   have hzero : Tendsto (fun e : ℝ => Real.sqrt e • J ((1+(e:ℂ))*z))
+58:       (𝓝[>] 0) (𝓝 (0:ℂ)) := by
+59:     simpa using hsqrt.smul (hcont.tendsto.comp hpath)
+60:   have hzF : Tendsto (fun e : ℝ => Real.sqrt e • iteratedDeriv k f ((1+(e:ℂ))*z))
+61:       (𝓝[>] 0) (𝓝 (0:ℂ)) :=
+62:     hzero.congr' (hjet.mono (fun e he => by dsimp only; rw [he]))
+63:   exact hL (tendsto_nhds_unique hlim hzF)
+64: 
+65: end
+66: end IsingBulk.Final
+
+===== IsingBulk/First/FirstTheorem.lean SHA256 30032ae64b902c5f7d3288a27c13f459ef5bc9f951dfa9cc8fd0e27f5881630f =====
+1: import IsingBulk.First.FirstUpperAsymptotic
+2: import IsingBulk.First.LowerOrderFixedRadius
+3: import IsingBulk.First.LowerOrderFiniteWindow
+4: 
+5: /-! FIRST, in the literal source fixed-radius T_N representation. Every lower even order is bounded internally by non-Nickel gradient
+6: separation and the original offsite contour integration-by-parts estimate. -/
+7: namespace IsingBulk.First
+8: noncomputable section
+9: open Complex Filter IsingBulk.Branch
+10: open scoped Topology
+11: 
+12: theorem radial_upper_double_derivatives (N : ℕ) (hN : 0 < N) {theta : ℝ}
+13:     (htheta : 0 < Real.sin theta) :
+14:     ∃ e : ℝ, 0 < e ∧ ∀ epsilon : ℝ, 0 < epsilon → epsilon < e → ∀ j : ℕ,
+15:       iteratedDeriv j (upperFormFactor N) (radialParameter theta epsilon) =
+16:         (deriv^[j] (doubleFormFactor N (sourceRadialPair theta epsilon).1))
+17:           (sourceRadialPair theta epsilon).2 := by
+18:   obtain ⟨e,he,_,hMargin⟩ := radial_disk_source_trace_margin htheta
+19:   refine ⟨e,he,?_⟩
+20:   intro epsilon hp hsmall j
+21:   have hr : 0 < (sourceRadialPair theta epsilon).1 := Real.exp_pos _
+22:   have hr1 : (sourceRadialPair theta epsilon).1 < 1 := by
+23:     change Real.exp (-(Real.sin theta/4)*epsilon) < 1
+24:     rw [Real.exp_lt_one_iff]
+25:     nlinarith [mul_pos htheta hp]
+26:   have hm := (hMargin epsilon hp hsmall (radialParameter theta epsilon)
+27:     (by simpa using mul_pos (div_pos htheta (by norm_num) : 0 < Real.sin theta/16) hp)).2
+28:   simpa only [iteratedDeriv_eq_iterate,sourceRadialPair] using
+29:     upperFormFactor_iteratedDeriv_fixed_radius N hN j hr hr1 hm
+30: 
+31: /-- The complete first-particle-order asymptotic and every lower derivative
+32: bound use the actual fixed-radius offsite contour, not the full-site coefficient. -/
+33: theorem first_fixed_source_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
+34:     (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
+35:     let k := (2*p)^2/2-1
+36:     let A := selectedOrderedChart ha hb
+37:     let L := localLeadingCoefficient A (2*p-1) k
+38:     L ≠ 0 ∧
+39:       Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+40:         (fun epsilon => (deriv^[k] (doubleFormFactor (2*p) (sourceRadialPair A.theta epsilon).1))
+41:           (sourceRadialPair A.theta epsilon).2 - (Real.sqrt epsilon:ℂ)⁻¹*(2*L))
+42:         (fun epsilon => (Real.sqrt epsilon:ℂ)⁻¹) ∧
+43:       ∃ e : ℝ, 0 < e ∧ ∀ j : ℕ, j < k → ∃ C : ℝ, 0 ≤ C ∧ ∀ epsilon : ℝ,
+44:         0 < epsilon → epsilon < e →
+45:         ‖(deriv^[j] (doubleFormFactor (2*p) (sourceRadialPair A.theta epsilon).1))
+46:           (sourceRadialPair A.theta epsilon).2‖ ≤ C := by
+47:   dsimp only
+48:   have hN : 2*p-1+1=2*p := by have := hp.pos; omega
+49:   obtain ⟨hL,hTop,e,he,hLow⟩ := first_upper_asymptotic hp hp11 ha hb hab
+50:   simp only [hN] at hL hTop hLow
+51:   obtain ⟨d,hd,hRep⟩ := radial_upper_double_derivatives (2*p)
+52:     (Nat.mul_pos (by omega) hp.pos) (selectedOrderedChart ha hb).sin_theta_pos
+53:   refine ⟨hL,?_,min e d,lt_min he hd,?_⟩
+54:   · apply hTop.congr' ?_ (Filter.Eventually.of_forall (fun _ => rfl))
+55:     filter_upwards [self_mem_nhdsWithin,
+56:       (eventually_lt_nhds hd).filter_mono nhdsWithin_le_nhds] with epsilon hp heps
+57:     rw [hRep epsilon hp heps]
+58:   · intro j hj
+59:     obtain ⟨C,hC,hB⟩ := hLow j hj
+60:     refine ⟨C,hC,?_⟩
+61:     intro epsilon hp heps
+62:     have h := hB epsilon hp (heps.trans_le (min_le_left _ _))
+63:     rw [hRep epsilon hp (heps.trans_le (min_le_right _ _))] at h
+64:     exact h
+65: 
+66: /-- Source theorem thm:first. The lower-even-order clause retains the correct
+67: fixed-order quantifier order: each fixed N and each fixed j has its own approach
+68: threshold and bound. No uniformity over infinitely many j or any tail is asserted. -/
+69: theorem theorem_first {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
+70:     (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
+71:     let k := (2*p)^2/2-1
+72:     let A := selectedOrderedChart ha hb
+73:     let L := localLeadingCoefficient A (2*p-1) k
+74:     L ≠ 0 ∧
+75:       Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+76:         (fun epsilon => (deriv^[k] (doubleFormFactor (2*p) (sourceRadialPair A.theta epsilon).1))
+77:           (sourceRadialPair A.theta epsilon).2 - (Real.sqrt epsilon:ℂ)⁻¹*(2*L))
+78:         (fun epsilon => (Real.sqrt epsilon:ℂ)⁻¹) ∧
+79:       (∃ e : ℝ, 0 < e ∧ ∀ j : ℕ, j < k → ∃ C : ℝ, 0 ≤ C ∧ ∀ epsilon : ℝ,
+80:         0 < epsilon → epsilon < e →
+81:         ‖(deriv^[j] (doubleFormFactor (2*p) (sourceRadialPair A.theta epsilon).1))
+82:           (sourceRadialPair A.theta epsilon).2‖ ≤ C) ∧
+83:       (∀ N : ℕ, 0 < N → Even N → N < 2*p → ∀ j : ℕ,
+84:         ∃ e C : ℝ, 0 < e ∧ 0 ≤ C ∧ ∀ epsilon : ℝ, 0 < epsilon → epsilon < e →
+85:           ‖(deriv^[j] (doubleFormFactor N (sourceRadialPair A.theta epsilon).1))
+86:             (sourceRadialPair A.theta epsilon).2‖ ≤ C) := by
+87:   dsimp only
+88:   have h := first_fixed_source_asymptotic hp hp11 ha hb hab
+89:   exact ⟨h.1,h.2.1,h.2.2,selected_lower_orders_fixed_radius_bounded hp hp11 ha hb⟩
+90: 
+91: end
+92: end IsingBulk.First
+
+===== IsingBulk/First/FirstUpperAsymptotic.lean SHA256 26be86815ec2a2eb67f186e02db95c38b20d3a77ada9436690a793d8c05d9ff3 =====
+1: import IsingBulk.First.SelectedLocalPair
+2: import IsingBulk.First.SelectedComplementBound
+3: import IsingBulk.First.LocalizedAnalytic
+4: 
+5: /-! The two constructed local source integrals and the actual complementary
+6: integral are assembled. All three s-derivatives use the same fixed evaluation radius. -/
+7: namespace IsingBulk.First
+8: noncomputable section
+9: open Complex Filter IsingBulk.Branch
+10: open scoped Topology
+11: 
+12: theorem first_upper_asymptotic {p : ℕ} (hp : p.Prime) (hp11 : 11 ≤ p) {a b : ℤ}
+13:     (ha : PrimeFamily.Admissible p a) (hb : PrimeFamily.Admissible p b) (hab : a ≠ b) :
+14:     let n := 2*p-1
+15:     let k := (n+1)^2/2-1
+16:     let A := selectedOrderedChart ha hb
+17:     let L := localLeadingCoefficient A n k
+18:     L ≠ 0 ∧
+19:       Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+20:         (fun epsilon => iteratedDeriv k (upperFormFactor (n+1)) (radialParameter A.theta epsilon)-
+21:           (Real.sqrt epsilon:ℂ)⁻¹*(2*L))
+22:         (fun epsilon => (Real.sqrt epsilon:ℂ)⁻¹) ∧
+23:       ∃ e : ℝ, 0 < e ∧ ∀ j : ℕ, j < k → ∃ C : ℝ, 0 ≤ C ∧ ∀ epsilon : ℝ,
+24:         0 < epsilon → epsilon < e →
+25:         ‖iteratedDeriv j (upperFormFactor (n+1)) (radialParameter A.theta epsilon)‖ ≤ C := by
+26:   dsimp only
+27:   let n := 2*p-1
+28:   let k := (n+1)^2/2-1
+29:   let A := selectedOrderedChart ha hb
+30:   obtain ⟨hL,U,c,hLeft,hRight,eL,heL,hLocal⟩ := selected_local_pair_profile hp ha hb hab
+31:   obtain ⟨eC,heC,hComplement⟩ := selected_compatible_complement_bounded hp hp11 ha hb c
+32:   obtain ⟨d,hd,_,hMargin⟩ := radial_disk_source_trace_margin A.sin_theta_pos
+33:   have hSplit (epsilon : ℝ) (heps : 0 < epsilon) (hepsd : epsilon < d) (j : ℕ) :
+34:       iteratedDeriv j (upperFormFactor (n+1)) (radialParameter A.theta epsilon) =
+35:         radialWeightedDerivative n j A.theta c.leftWeight epsilon +
+36:         radialWeightedDerivative n j A.theta c.rightWeight epsilon +
+37:         iteratedDeriv j (fun s => localizedDoubleFormFactor (n+1)
+38:           (sourceRadialPair A.theta epsilon).1 s (fun u => c.remainder u.2))
+39:           (sourceRadialPair A.theta epsilon).2 := by
+40:     have hr : 0 < (sourceRadialPair A.theta epsilon).1 := Real.exp_pos _
+41:     have hr1 : (sourceRadialPair A.theta epsilon).1 < 1 := by
+42:       change Real.exp (-(Real.sin A.theta/4)*epsilon) < 1
+43:       rw [Real.exp_lt_one_iff]
+44:       nlinarith [mul_pos A.sin_theta_pos heps]
+45:     have hm := (hMargin epsilon heps hepsd (radialParameter A.theta epsilon)
+46:       (by simpa using mul_pos (div_pos A.sin_theta_pos (by norm_num) : 0 < Real.sin A.theta/16) heps)).2
+47:     have hs := upperFormFactor_iteratedDeriv_split (n+1) (Nat.succ_pos n) j hr hr1 hm
+48:       c.leftWeight c.rightWeight c.left_smooth.continuous c.right_smooth.continuous
+49:     simpa only [radialWeightedDerivative,sourceRadialPair,CompatibleYCutoffData.leftWeight,
+50:       CompatibleYCutoffData.rightWeight,CompatibleYCutoffData.remainder,fixedYComplement] using hs
+51:   obtain ⟨Ck,_,hCk⟩ := hComplement k
+52:   have hComp : Asymptotics.IsLittleO (𝓝[>] (0:ℝ))
+53:       (fun epsilon => iteratedDeriv k (fun s => localizedDoubleFormFactor (n+1)
+54:         (sourceRadialPair A.theta epsilon).1 s (fun u => c.remainder u.2))
+55:         (sourceRadialPair A.theta epsilon).2)
+56:       (fun epsilon => (Real.sqrt epsilon:ℂ)⁻¹) := by
+57:     apply bounded_radial_term_isLittleO heC
+58:     intro epsilon hp he
+59:     simpa only [iteratedDeriv_eq_iterate,n,A] using! (hCk epsilon hp he)
+60:   refine ⟨hL,?_,?_⟩
+61:   · apply ((hLeft.add hRight).add hComp).congr' ?_ (Filter.Eventually.of_forall (fun _ => rfl))
+62:     filter_upwards [self_mem_nhdsWithin,
+63:       (eventually_lt_nhds hd).filter_mono nhdsWithin_le_nhds] with epsilon hp he
+64:     rw [hSplit epsilon hp he k]
+65:     ring
+66:   · refine ⟨min eL (min eC d),lt_min heL (lt_min heC hd),?_⟩
+67:     intro j hj
+68:     obtain ⟨Cl,hCl,hcl⟩ := hLocal j hj
+69:     obtain ⟨Cc,hCc,hcc⟩ := hComplement j
+70:     refine ⟨2*Cl+Cc,by positivity,?_⟩
+71:     intro epsilon hp he
+72:     have hl := hcl epsilon hp (he.trans_le (min_le_left _ _))
+73:     have hc : ‖iteratedDeriv j (fun s => localizedDoubleFormFactor (n+1)
+74:         (sourceRadialPair A.theta epsilon).1 s (fun u => c.remainder u.2))
+75:         (sourceRadialPair A.theta epsilon).2‖ ≤ Cc := by
+76:       simpa only [iteratedDeriv_eq_iterate,n,A] using! (hcc epsilon hp
+77:         (he.le.trans ((min_le_right _ _).trans (min_le_left _ _))))
+78:     rw [hSplit epsilon hp (he.trans_le ((min_le_right _ _).trans (min_le_right _ _))) j]
+79:     have hll : ‖radialWeightedDerivative n j A.theta c.leftWeight epsilon‖ ≤ Cl := by
+80:       simpa only [n,A] using hl.1
+81:     have hlr : ‖radialWeightedDerivative n j A.theta c.rightWeight epsilon‖ ≤ Cl := by
+82:       simpa only [n,A] using hl.2
+83:     let x : ℂ := radialWeightedDerivative n j A.theta c.leftWeight epsilon
+84:     let y : ℂ := radialWeightedDerivative n j A.theta c.rightWeight epsilon
+85:     let z : ℂ := iteratedDeriv j (fun s => localizedDoubleFormFactor (n+1)
+86:       (sourceRadialPair A.theta epsilon).1 s (fun u => c.remainder u.2))
+87:       (sourceRadialPair A.theta epsilon).2
+88:     change ‖x+y+z‖ ≤ 2*Cl+Cc
+89:     change ‖x‖ ≤ Cl at hll
+90:     change ‖y‖ ≤ Cl at hlr
+91:     change ‖z‖ ≤ Cc at hc
+92:     calc
+93:       ‖x+y+z‖ ≤ ‖x+y‖+‖z‖ := norm_add_le (x+y) z
+94:       _ ≤ (‖x‖+‖y‖)+‖z‖ := by linarith only [norm_add_le x y]
+95:       _ ≤ Cl+Cl+Cc := add_le_add (add_le_add hll hlr) hc
+96:       _ = 2*Cl+Cc := by ring
+97: 
+98: 
+99: end
+100: end IsingBulk.First
+
+===== IsingBulk/First/BulkSymmetry.lean SHA256 c981ebf6140008225ff81af439c8527fcbe727c4d206d8b685806f9ac5cdf8e3 =====
+1: import IsingBulk.First.SymmetryIntegral
+2: import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
+3: import Mathlib.Analysis.Normed.Field.Lemmas
+4: 
+5: /-! The physical prefactor branch and the actual infinite source expansion.
+6: Convergence of the physical expansion is explicitly separated from symmetry. -/
+7: namespace IsingBulk.First
+8: noncomputable section
+9: open Complex Filter Bornology
+10: open scoped Topology
+11: 
+12: /-- The fourth-root branch tending to one at infinity. -/
+13: def magnetizationSquared (s : ℂ) : ℂ := (1-(s^(4:ℕ))⁻¹) ^ (1/4:ℂ)
+14: 
+15: theorem magnetization_argument_slit {s : ℂ} (hs : 1 < ‖s‖) :
+16:     1-(s^(4:ℕ))⁻¹ ∈ Complex.slitPlane := by
+17:   apply Or.inl
+18:   have hn : 1 < ‖s‖^(4:ℕ) := one_lt_pow₀ hs (by decide)
+19:   have hi : ‖(s^(4:ℕ))⁻¹‖ < 1 := by
+20:     rw [norm_inv, norm_pow]
+21:     exact inv_lt_one_of_one_lt₀ hn
+22:   have hre := Complex.re_le_norm ((s^(4:ℕ))⁻¹)
+23:   simp only [Complex.sub_re, Complex.one_re]
+24:   linarith
+25: 
+26: theorem magnetizationSquared_even (s : ℂ) : magnetizationSquared (-s) = magnetizationSquared s := by
+27:   have he : (-s)^(4:ℕ) = s^(4:ℕ) := by ring
+28:   unfold magnetizationSquared
+29:   rw [he]
+30: 
+31: theorem magnetizationSquared_conjugate {s : ℂ} (hs : 1 < ‖s‖) :
+32:     magnetizationSquared (star s) = star (magnetizationSquared s) := by
+33:   have ha := Complex.slitPlane_arg_ne_pi (magnetization_argument_slit hs)
+34:   unfold magnetizationSquared
+35:   change (1-((starRingEnd ℂ) s ^ (4:ℕ))⁻¹) ^ (1/4:ℂ) = (starRingEnd ℂ) ((1-(s^(4:ℕ))⁻¹) ^ (1/4:ℂ))
+36:   simpa only [map_sub, map_one, map_inv₀, map_pow, map_div₀, map_ofNat] using Complex.conj_cpow (1-(s^(4:ℕ))⁻¹) (1/4:ℂ) ha
+37: 
+38: theorem magnetizationSquared_tendsto_one :
+39:     Tendsto magnetizationSquared (cobounded ℂ) (𝓝 1) := by
+40:   have h : Tendsto (fun s : ℂ => 1-(s^(4:ℕ))⁻¹) (cobounded ℂ) (𝓝 1) := by
+41:     have hi := (tendsto_inv₀_cobounded (α := ℂ)).pow 4
+42:     simpa using tendsto_const_nhds.sub hi
+43:   have hc : ContinuousAt (fun z : ℂ => z ^ (1/4:ℂ)) 1 :=
+44:     continuousAt_cpow_const (Or.inl (by norm_num))
+45:   change Tendsto (fun s : ℂ => (1-(s^(4:ℕ))⁻¹) ^ (1/4:ℂ)) (cobounded ℂ) (𝓝 1)
+46:   simpa only [Function.comp_def, Complex.one_cpow] using hc.tendsto.comp h
+47: 
+48: /-- The literal normalized bulk series in the manuscript, at fixed radius.
+49: Its physical interpretation requires convergence and the physical representation. -/
+50: def normalizedBulkSeries (r : ℝ) (s : ℂ) : ℂ :=
+51:   1-magnetizationSquared s + 2*magnetizationSquared s *
+52:     ∑' n : ℕ, doubleFormFactor (2*(n+1)) r s
+53: 
+54: theorem normalizedBulkSeries_even (r : ℝ) (s : ℂ) :
+55:     normalizedBulkSeries r (-s) = normalizedBulkSeries r s := by
+56:   unfold normalizedBulkSeries
+57:   rw [magnetizationSquared_even]
+58:   have ht : (∑' n : ℕ, doubleFormFactor (2*(n+1)) r (-s)) =
+59:       ∑' n : ℕ, doubleFormFactor (2*(n+1)) r s := by
+60:     apply tsum_congr
+61:     intro n
+62:     exact doubleFormFactor_even _ (even_two_mul (n+1)) r s
+63:   rw [ht]
+64: 
+65: theorem normalizedBulkSeries_conjugate (r : ℝ) {s : ℂ} (hs : 1 < ‖s‖) :
+66:     normalizedBulkSeries r (star s) = star (normalizedBulkSeries r s) := by
+67:   have hm := magnetizationSquared_conjugate hs
+68:   have ht : (∑' n : ℕ, doubleFormFactor (2*(n+1)) r (star s)) =
+69:       star (∑' n : ℕ, doubleFormFactor (2*(n+1)) r s) := by
+70:     change _ = (starRingEnd ℂ) _
+71:     rw [Complex.conj_tsum]
+72:     apply tsum_congr
+73:     intro n
+74:     exact doubleFormFactor_conjugate _ r s
+75:   unfold normalizedBulkSeries
+76:   rw [hm, ht]
+77:   simp only [star_add, star_sub, star_one, star_mul, star_ofNat]
+78:   ring
+79: 
+80: /-- Explicit transfer on the three-point symmetry orbit at a common admissible
+81: radius. There is no assumption that one radius works on the entire exterior.
+82: The only external-facing equalities are the actual physical bulk expansion. -/
+83: theorem susceptibility_symmetry_of_representation (χ : ℂ → ℂ) (r : ℝ) (s : ℂ)
+84:     (hs : 1 < ‖s‖)
+85:     (hphysical : χ s = normalizedBulkSeries r s)
+86:     (hphysical_neg : χ (-s) = normalizedBulkSeries r (-s))
+87:     (hphysical_conj : χ (star s) = normalizedBulkSeries r (star s))
+88:     (_hconvergent : ∀ t ∈ ({s, -s, star s} : Set ℂ),
+89:       Summable (fun n : ℕ => doubleFormFactor (2*(n+1)) r t)) :
+90:     χ (-s) = χ s ∧ χ (star s) = star (χ s) := by
+91:   constructor
+92:   · rw [hphysical_neg, hphysical, normalizedBulkSeries_even]
+93:   · rw [hphysical_conj, hphysical, normalizedBulkSeries_conjugate r hs]
+94: 
+95: end
+96: end IsingBulk.First
+
+===== IsingBulk/First/RealFredholmIdentification.lean SHA256 65445c241ad06446e59d721157d0f32fd90eaf6efd4eb37f788b9aeb60fb8ce7 =====
+1: import IsingBulk.First.NearInfinityBulkSeries
+2: import IsingBulk.First.FarExteriorRadiusIndependence
+3: 
+4: /-! The physical representation input is confined to real low temperatures.
+5: It identifies the normalized response, not the response multiplied by inverse
+6: temperature. No complex full-series convergence or symmetry is imported. -/
+7: namespace IsingBulk.First
+8: noncomputable section
+9: open scoped BigOperators
+10: 
+11: /-- E1: the normalized real low-temperature representation from the published
+12: Tracy--Widom Appendix 1, equations (7)--(8), and the manuscript's normalized
+13: offsite convention in section 2 and Appendix F. This is a theorem parameter. -/
+14: def RealNormalizedFredholmRepresentation (X : ℂ → ℂ) : Prop :=
+15:   ∀ x : ℝ, 1 < x → ∃ r₀ : ℝ, 0 < r₀ ∧ r₀ < 1 ∧
+16:     ∀ r : ℝ, r₀ < r → r < 1 →
+17:       Summable (fun n : ℕ => doubleFormFactor (2*(n+1)) r (x:ℂ)) ∧
+18:       X (x:ℂ)=normalizedBulkSeries r (x:ℂ)
+19: 
+20: theorem normalizedBulkSeries_radius_eq_farExterior {r : ℝ}
+21:     (hr : (1/4:ℝ) ≤ r) (hr1 : r < 1) {s : ℂ} (hs : 16 < ‖s‖) :
+22:     normalizedBulkSeries r s=normalizedBulkSeries (1/4) s := by
+23:   have he : (∑' n : ℕ, doubleFormFactor (2*(n+1)) r s) =
+24:       ∑' n : ℕ, doubleFormFactor (2*(n+1)) (1/4) s := by
+25:     apply tsum_congr
+26:     intro n
+27:     exact farExterior_doubleFormFactor_radius_eq _ (by omega) le_rfl hr1 hr hs
+28:   simp only [normalizedBulkSeries, he]
+29: 
+30: /-- Actual annulus moves identify the real physical expansion with the
+31: constructed normally convergent small-radius germ. -/
+32: theorem realNormalizedFredholmRepresentation_quarter (X : ℂ → ℂ)
+33:     (hphysical : RealNormalizedFredholmRepresentation X) (x : ℝ) (hx : 16 < x) :
+34:     X (x:ℂ)=normalizedBulkSeries (1/4) (x:ℂ) := by
+35:   obtain ⟨r₀, _hr₀, hr₀1, hrep⟩ := hphysical x (by linarith)
+36:   let r : ℝ := (max r₀ (1/4)+1)/2
+37:   have hm : max r₀ (1/4:ℝ) < 1 := max_lt hr₀1 (by norm_num)
+38:   have hr₀r : r₀ < r := by dsimp only [r]; have h := le_max_left r₀ (1/4:ℝ); linarith
+39:   have hr1 : r < 1 := by dsimp only [r]; linarith
+40:   have hr : (1/4:ℝ) ≤ r := by dsimp only [r]; have h := le_max_right r₀ (1/4:ℝ); linarith
+41:   have hcx : 16 < ‖(x:ℂ)‖ := by simpa [Complex.norm_real, abs_of_pos (show 0 < x by linarith)] using hx
+42:   exact (hrep r hr₀r hr1).2.trans (normalizedBulkSeries_radius_eq_farExterior hr hr1 hcx)
+43: 
+44: end
+45: end IsingBulk.First
+
+===== IsingBulk/Tail/AbsoluteTailAssembly.lean SHA256 f4ad4387b11f8c37311fc79a25cb97fcf625104e59044d73b2f55a05d83df30a =====
+1: import IsingBulk.Tail.IntermediateWindowAssembly
+2: import IsingBulk.Tail.RadialSourceDomain
+3: import IsingBulk.Final.UpperNoncancellation
+4: 
+5: /-! Assembly of the actual absolute higher-even tail at the FIRST scale.
+6: All source estimates use the same selector parameters. Absolute values
+7: remain inside the infinite sum throughout the argument. -/
+8: namespace IsingBulk.Tail
+9: noncomputable section
+10: open IsingBulk.First IsingBulk.Branch Filter Asymptotics MeasureTheory Set
+11: open scoped Topology
+12: 
+13: /-- The source current cutoff is strictly positive and belongs to the legal
+14: unit interval on one eventual radial neighborhood. -/
+15: theorem radial_power_cutoff_eventually_pos_le_one {beta : ℝ} (hbeta : 0 ≤ beta) :
+16:     ∀ᶠ eps : ℝ in 𝓝[>] 0, 0 < eps^beta ∧ eps^beta ≤ 1 := by
+17:   filter_upwards [self_mem_nhdsWithin,
+18:     (show ∀ᶠ eps : ℝ in 𝓝[>] 0, eps < 1 from
+19:       mem_nhdsWithin_of_mem_nhds (eventually_lt_nhds (zero_lt_one : (0:ℝ)<1)))]
+20:     with eps heps heps1
+21:   exact ⟨Real.rpow_pos_of_pos heps _, Real.rpow_le_one heps.le heps1.le hbeta⟩
+22: 
+23: /-- A finite radial limit is negligible compared with the FIRST singular
+24: scale. This is used with the internally proved high-KS limit at Q = 0. -/
+25: theorem radial_tendsto_littleO_inv_sqrt {f : ℝ → ℝ} {L : ℝ}
+26:     (hf : Tendsto f (𝓝[>] (0:ℝ)) (𝓝 L)) :
+27:     f =o[𝓝[>] 0] (fun eps : ℝ => (Real.sqrt eps)⁻¹) := by
+28:   have hone : (fun _ : ℝ => (1:ℝ)) =o[𝓝[>] 0]
+29:       (fun eps : ℝ => (Real.sqrt eps)⁻¹) := by
+30:     simpa only [zero_mul, Real.exp_zero] using radial_log_square_growth_littleO 0
+31:   exact (hf.isBigO_one ℝ).trans_isLittleO hone
+32: 
+33: /-- Domination is applied to an infinite sum of nonnegative source terms,
+34: not to a complex sum and not to individual particle orders. -/
+35: theorem radial_tsum_littleO_of_nonnegative_domination
+36:     {E : ℝ → ℕ → ℝ} {G : ℝ → ℝ}
+37:     (hE : ∀ eps N, 0 ≤ E eps N)
+38:     (hbound : ∀ᶠ eps : ℝ in 𝓝[>] 0, (∑' N : ℕ, E eps N) ≤ G eps)
+39:     (hG : G =o[𝓝[>] 0] (fun eps : ℝ => (Real.sqrt eps)⁻¹)) :
+40:     (fun eps : ℝ => ∑' N : ℕ, E eps N) =o[𝓝[>] 0]
+41:       (fun eps : ℝ => (Real.sqrt eps)⁻¹) := by
+42:   apply IsBigO.trans_isLittleO (g := G) _ hG
+43:   apply IsBigO.of_bound'
+44:   filter_upwards [hbound] with eps hb
+45:   calc
+46:     ‖∑' N : ℕ, E eps N‖ = ∑' N : ℕ, E eps N :=
+47:       Real.norm_of_nonneg (tsum_nonneg (hE eps))
+48:     _ ≤ G eps := hb
+49:     _ ≤ ‖G eps‖ := le_abs_self _
+50: 
+51: /-- The exact target sequence is genuinely summable at every positive
+52: radial parameter. In particular its `tsum` is never used as a substitute
+53: for convergence in the tail argument. -/
+54: theorem actual_upper_tail_summable (p j : ℕ) {theta eps : ℝ}
+55:     (htheta : 0 < Real.sin theta) (heps : 0 < eps) :
+56:     Summable (fun n : ℕ => ‖iteratedDeriv j (upperFormFactor (2*(n+p+1)))
+57:       (radialParameter theta eps)‖) := by
+58:   exact (upperEven_derivative_summable j
+59:     (IsingBulk.Final.sourceRadialTrace_pos htheta heps)).comp_injective
+60:       (show Function.Injective (fun n : ℕ => n+p) from
+61:         fun _ _ h => Nat.add_right_cancel h)
+62: 
+63: /-- All completed source sectors and the exact intermediate window combine
+64: at one common selector, current cutoff and particle threshold. The structure
+65: argument is constructed internally by `common_all_sector_parameters`. -/
+66: theorem common_absoluteUpperTailSmall {p order : ℕ} {d : LocalBranchData}
+67:     (cfg : CommonAllSectorParameters p d order) (j : ℕ) (hj : j ≤ order) :
+68:     IsingBulk.Final.AbsoluteUpperTailSmall p d.theta j := by
+69:   have hhigh := radial_tendsto_littleO_inv_sqrt (cfg.high_tendsto j hj)
+70:   have hmiddle := common_intermediateKSNormWindow_littleO cfg j hj
+71:   have htotal := (((cfg.f_small j hj).add (cfg.large_small j hj)).add hmiddle).add hhigh
+72:   apply radial_tsum_littleO_of_nonnegative_domination
+73:     (fun _ _ => norm_nonneg _) _ htotal
+74:   obtain ⟨e, he, hsource⟩ := cfg.source_summability
+75:   filter_upwards [self_mem_nhdsWithin,
+76:     radial_power_cutoff_eventually_pos_le_one cfg.beta_pos.le,
+77:     radial_source_eventually_damping d cfg.c0_small,
+78:     (show ∀ᶠ eps : ℝ in 𝓝[>] 0, eps < e from
+79:       mem_nhdsWithin_of_mem_nhds (eventually_lt_nhds he))]
+80:     with eps heps hcut hdamping hsmall
+81:   obtain ⟨hF, hL, hK⟩ := hsource j hj eps (eps^cfg.beta) heps hsmall hcut.1 hcut.2
+82:   exact actual_higher_tail_domination p d cfg.eta d.alpha d.tau cfg.D eps (eps^cfg.beta)
+83:     cfg.selector_regular d.tau_pos.le heps ⟨hcut.1.le, hcut.2⟩ hdamping.2.2 j hF hL hK
+84: 
+85: /-- The requested all-order absolute tail for the actual selected prime
+86: family. The infinite norm series and the full derivative ceiling are kept
+87: literally; no physical or fixed-order smoothness input is used here. -/
+88: theorem selected_absolute_upper_tail_small {p : ℕ} (hp : p.Prime) (_hp11 : 11 ≤ p)
+89:     {a b : ℤ} (ha : IsingBulk.PrimeFamily.Admissible p a)
+90:     (hb : IsingBulk.PrimeFamily.Admissible p b) (_hab : a ≠ b) :
+91:     ∀ j : ℕ, j ≤ (2*p)^2/2-1 →
+92:       IsingBulk.Final.AbsoluteUpperTailSmall p (selectedOrderedChart ha hb).theta j := by
+93:   obtain ⟨tau, alpha, htau, halpha, ⟨cfg⟩⟩ :=
+94:     common_all_sector_parameters hp ha hb ((2*p)^2/2-1) le_rfl
+95:   intro j hj
+96:   simpa only [selectedLocalBranchData_theta] using common_absoluteUpperTailSmall cfg j hj
+97: 
+98: end
+99: end IsingBulk.Tail
+
+===== IsingBulk/Tail/SelectedFActualPairs.lean SHA256 6249d4a3d029872e8ffa1cdd6c11f0cf378534cfc3b74b34960ceffd01601fa3 =====
+1: import IsingBulk.Tail.SelectedFIndexedPairs
+2: import IsingBulk.Tail.SelectedFDiskSupport
+3: 
+4: /-! Source-attached selected-F Schur pair bounds. The compact assignment is
+5: geometric, and all compact perturbations are compared with actual radial
+6: roots. True branch roots are kept at the disk point during comparison. -/
+7: namespace IsingBulk.Tail
+8: noncomputable section
+9: open IsingBulk.First IsingBulk.Branch Set Filter Metric
+10: open scoped Topology BigOperators
+11: 
+12:  def selectedCompactIndexSet {N : ℕ} (b η : ℝ) (θ : Fin N → ℝ) : Finset (Fin N) :=
+13:   Finset.univ.filter (fun i => η^2/2 ≤ lowerChord b (θ i))
+14: 
+15: set_option backward.isDefEq.respectTransparency false in
+16: set_option maxHeartbeats 2000000 in
+17:  theorem selected_actual_pair_bounds (d : LocalBranchData)
+18:     (hcsmall : d.c₀ < Real.sin d.theta/2) :
+19:     ∃ η₀ τ₀ : ℝ, 0 < η₀ ∧ 0 < τ₀ ∧
+20:       ∀ η α τ : ℝ, 0 < η → η < η₀ → 0 < α → α < Real.sin d.thetaB/4 →
+21:         0 < τ → τ < τ₀ → ∃ c eps₀ C q : ℝ, 0 < c ∧ 0 < eps₀ ∧ 0 < C ∧ 0 < q ∧ q < 1 ∧
+22:         ∀ (N : ℕ) (eps : ℝ) (θ : Fin N → ℝ) (s : ℂ),
+23:           1 ≤ N → 0 < eps → eps < eps₀ → θ ∈ angleBox N →
+24:           θ ∈ tsupport (fun θ : Fin N → ℝ => 1-angularSelector (constructedSelector d.thetaB η α) θ) →
+25:           ‖s-radialParameter d.theta eps‖ ≤ c/(N:ℝ) →
+26:           ∃ color : Fin N → Bool,
+27:             (∀ i ∈ selectedCompactIndexSet d.thetaB η θ, ∀ j ∈ selectedCompactIndexSet d.thetaB η θ,
+28:               color i=color j →
+29:               ‖pairKernel
+30:                 (selectedContinuedRoot s (deformedPoint (constructedSelector d.thetaB η α) (Real.exp (-d.c₀*eps)) τ 1 θ i))
+31:                 (selectedContinuedRoot s (deformedPoint (constructedSelector d.thetaB η α) (Real.exp (-d.c₀*eps)) τ 1 θ j))‖ ≤ q) ∧
+32:             (∀ i j,
+33:               ‖pairKernel
+34:                 (selectedContinuedRoot s (deformedPoint (constructedSelector d.thetaB η α) (Real.exp (-d.c₀*eps)) τ 1 θ i))
+35:                 (selectedContinuedRoot s (deformedPoint (constructedSelector d.thetaB η α) (Real.exp (-d.c₀*eps)) τ 1 θ j))‖ ≤
+36:                 1+C/(N:ℝ)) := by
+37:   classical
+38:   obtain ⟨b,r,hb,hr,hbranch⟩ := selected_disk_true_branch d
+39:   obtain ⟨ηA,hηA,hcoord⟩ := lowerChord_small_coordinate d.thetaB_pos d.thetaB_lt hr
+40:   have hsinb : 0 < Real.sin d.thetaB := d.a_pos
+41:   have hS : 0 < 1+Real.cos d.thetaB := by
+42:     have hh := Real.cos_pos_of_mem_Ioo ⟨by linarith [Real.pi_pos,d.theta_pos],d.theta_lt⟩
+43:     linarith [d.angle_relation]
+44:   let η₀ := min ηA (Real.sin d.thetaB/4)
+45:   let τ₀ := min r (min (1/2:ℝ) ((1+Real.cos d.thetaB)/8))
+46:   refine ⟨η₀,τ₀,lt_min hηA (by positivity),lt_min hr (lt_min (by norm_num) (by positivity)),?_⟩
+47:   intro η α τ hη hηlt hα hαsmall hτ hτlt
+48:   have hηsmall : η ≤ Real.sin d.thetaB/4 := hηlt.le.trans (min_le_right _ _)
+49:   have hηA' : η ≤ ηA := hηlt.le.trans (min_le_left _ _)
+50:   have hτr : τ < r := hτlt.trans_le (min_le_left _ _)
+51:   have hτsmall : 2*τ ≤ 1 := by
+52:     have hh := hτlt.le.trans ((min_le_right _ _).trans (min_le_left _ _))
+53:     linarith
+54:   have hτS : 4*τ < 1+Real.cos d.thetaB := by
+55:     have hh := hτlt.trans_le ((min_le_right _ _).trans (min_le_right _ _))
+56:     linarith
+57:   obtain ⟨cB,hcB,hB⟩ := hbranch τ hτ hτr
+58:   obtain ⟨epsG,hepsG,Z,hZ,hphys,hZcover,g,q,hg,hq,hq1,hgroups,hsame,_hcross⟩ :=
+59:     selected_compact_root_groups d hcsmall hη hηsmall hα hαsmall hτ hτsmall hτS
+60:   obtain ⟨epsW,hepsW,K,hK,hKD,_hKi,hWcover⟩ :=
+61:     selected_regular_physical_compact d hcsmall hη hηsmall hα hαsmall hτ hτsmall hτS
+62:   obtain ⟨cW,L,hcW,hL,hmotion⟩ := continuedRoot_compact_motion hK hKD
+63:   let B : ℝ := 4/g+12/g^2
+64:   have hBpos : 0 < B := by dsimp [B]; positivity
+65:   let Dcap := min 1 (min (g/6) ((1-q)/(2*B)))
+66:   have hDcap : 0 < Dcap := lt_min zero_lt_one (lt_min (by positivity) (by positivity))
+67:   let c := min cB (min (1/4:ℝ) (min (cW/3) (Dcap/(3*L))))
+68:   let D := 3*L*c
+69:   let eps₀ := min epsG (min epsW (min r 1))
+70:   have hc : 0 < c := lt_min hcB (lt_min (by norm_num) (lt_min (by positivity) (by positivity)))
+71:   have hD : 0 < D := by dsimp [D]; positivity
+72:   have hDc : D ≤ Dcap := by
+73:     have hc' : c ≤ Dcap/(3*L) := (min_le_right _ _).trans ((min_le_right _ _).trans (min_le_right _ _))
+74:     have hh := (le_div_iff₀ (by positivity : 0 < 3*L)).mp hc'
+75:     dsimp [D]
+76:     nlinarith only [hh]
+77:   have hD1 : D ≤ 1 := hDc.trans (min_le_left _ _)
+78:   have hDg : D ≤ g/6 := hDc.trans ((min_le_right _ _).trans (min_le_left _ _))
+79:   have hDq : B*D ≤ (1-q)/2 := by
+80:     have hh := (le_div_iff₀ (by positivity : 0 < 2*B)).mp
+81:       (hDc.trans ((min_le_right _ _).trans (min_le_right _ _)))
+82:     nlinarith only [hh]
+83:   have hcB' : c ≤ cB := min_le_left _ _
+84:   have hcquarter : c ≤ 1/4 := (min_le_right _ _).trans (min_le_left _ _)
+85:   have hcW' : c ≤ cW/3 := (min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _))
+86:   refine ⟨c,eps₀,B*D,(1+q)/2,hc,lt_min hepsG (lt_min hepsW (lt_min hr zero_lt_one)),
+87:     mul_pos hBpos hD,by linarith,by linarith,?_⟩
+88:   intro N eps θ s hN heps hepslt hθ hsupport hsd
+89:   let f := constructedSelector d.thetaB η α
+90:   let P := occupancy (fun i => f.p (θ i))
+91:   let ρ := P/(N:ℝ)
+92:   let y := deformedPoint f (Real.exp (-d.c₀*eps)) τ 1 θ
+93:   let W₀ : Fin N → ℂ := fun i => sourceW (radialParameter d.theta eps) (y i)
+94:   let W : Fin N → ℂ := fun i => sourceW s (y i)
+95:   let J := selectedCompactIndexSet d.thetaB η θ
+96:   let z : Fin N → ℂ := fun i => continuedRoot (W i)
+97:   let z₀ : Fin N → ℂ := fun i => if i ∈ J then continuedRoot (W₀ i) else z i
+98:   let color : Fin N → Bool := fun i => decide (‖z₀ i‖ ≤ 1-g)
+99:   have hn : (1:ℝ) ≤ N := by exact_mod_cast hN
+100:   have hn0 : (0:ℝ) < N := by linarith
+101:   have hepsG' : eps < epsG := hepslt.trans_le (min_le_left _ _)
+102:   have hepsW' : eps < epsW := hepslt.trans_le ((min_le_right _ _).trans (min_le_left _ _))
+103:   have hepsr : eps < r := hepslt.trans_le ((min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _)))
+104:   have hp0 : ∀ x, 0 ≤ f.p x := fun x => (thresholdStep_range _ _ _).1
+105:   have hp1 : ∀ x, f.p x ≤ 1 := fun x => (thresholdStep_range _ _ _).2
+106:   obtain ⟨k,hk⟩ := selected_tsupport_named f θ hsupport
+107:   obtain ⟨hkp,_hkm,_hks,_hkc⟩ := constructed_named_support hsinb hη hηsmall hα hk
+108:   have hP : 1 ≤ P := occupancy_named (fun i => hp0 (θ i)) k hkp
+109:   have hPN : P ≤ N := occupancy_le (fun i => hp1 (θ i))
+110:   have hρ0 : 0 ≤ ρ := by dsimp [ρ]; positivity
+111:   have hρ1 : ρ ≤ 1 := (div_le_one hn0).mpr hPN
+112:   have hWform (i : Fin N) : W₀ i=selectedCenterW d.theta d.c₀ f τ eps ρ (θ i) := by
+113:     change sourceW _ (y i)=_
+114:     rw [show y i=radialAnglePoint (-d.c₀*eps+selectedLimitingShift f τ ρ (θ i)) (θ i) from
+115:       deformedPoint_selected_formula f d.c₀ eps τ θ i]
+116:     rfl
+117:   have hJmem (i : Fin N) : i ∈ J ↔ η^2/2 ≤ lowerChord d.thetaB (θ i) := by
+118:     simp [J,selectedCompactIndexSet]
+119:   have hparam (i : Fin N) (hi : i ∈ J) : (ρ,θ i) ∈ selectedCompactParameters d.thetaB η :=
+120:     ⟨⟨hρ0,hρ1⟩,⟨⟨hθ.1 i,hθ.2 i⟩,(hJmem i).mp hi⟩⟩
+121:   have hbaseK (i : Fin N) (hi : i ∈ J) : z₀ i ∈ Z := by
+122:     simp [z₀,hi]
+123:     rw [hWform]
+124:     exact hZcover eps heps hepsG' (ρ,θ i) (hparam i hi)
+125:   have hcenterK (i : Fin N) (hi : i ∈ J) : W₀ i ∈ K := by
+126:     rw [hWform]
+127:     exact hWcover eps heps hepsW' (ρ,θ i) (hparam i hi)
+128:   have hsmall : ‖s-radialParameter d.theta eps‖ < (1:ℝ)/2 := by
+129:     have hh : c/(N:ℝ) ≤ c := div_le_self hc.le hn
+130:     linarith only [hsd,hh,hcquarter]
+131:   have hnorm : 1 ≤ ‖radialParameter d.theta eps‖ := by rw [radialParameter_norm heps.le]; linarith
+132:   have hsn := norm_ge_half_of_near_unit hnorm hsmall
+133:   have hdiff (i : Fin N) : ‖W i-W₀ i‖ ≤ 3*c/(N:ℝ) := by
+134:     have he : W i-W₀ i=sourceS s-sourceS (radialParameter d.theta eps) := by dsimp [W,W₀,sourceW]; ring
+135:     rw [he]
+136:     calc
+137:       _ ≤ 3*‖s-radialParameter d.theta eps‖ := sourceS_sub_norm_le hsn hnorm
+138:       _ ≤ 3*(c/(N:ℝ)) := mul_le_mul_of_nonneg_left hsd (by norm_num)
+139:       _ = _ := by ring
+140:   have hdiffc : 3*c/(N:ℝ) ≤ cW := by
+141:     have hh : 3*c/(N:ℝ) ≤ 3*c := div_le_self (by positivity) hn
+142:     linarith only [hh,hcW']
+143:   have hbranch (i : Fin N) (hi : i ∉ J) : ‖z i‖ ≤ 1 ∧ (z i).im ≤ 0 := by
+144:     have hic : ¬ η^2/2 ≤ lowerChord d.thetaB (θ i) := fun h => hi ((hJmem i).mpr h)
+145:     have hch : lowerChord d.thetaB (θ i) ≤ η^2 := by linarith [sq_nonneg η]
+146:     obtain ⟨hmi,hpi⟩ := constructed_lower_core_plateau hsinb hη hηsmall hα hch
+147:     let u := θ i+d.thetaB-2*Real.pi
+148:     have hu : |u| < r := hcoord (θ i) (hθ.1 i) (hθ.2 i)
+149:       (hch.trans (pow_le_pow_left₀ hη.le hηA' 2))
+150:     have hyp : y i=plateauY d.c₀ eps τ ρ d.thetaB u :=
+151:       deformedPoint_selected_plateau f d.thetaB d.c₀ eps τ θ i hpi hmi
+152:     have hsB := hsd.trans (div_le_div_of_nonneg_right hcB' hn0.le)
+153:     have hbnd := (hB N eps P u s hN heps hepsr hP hPN hu hsB).1
+154:     have hWi : 0 < (W i).im := by
+155:       change 0 < (sourceW s (y i)).im
+156:       rw [hyp]
+157:       exact lt_of_lt_of_le (by positivity : 0 < b*(eps+τ*ρ)) hbnd
+158:     dsimp only [z]
+159:     rw [continuedRoot_eq_interiorRoot hWi]
+160:     exact ⟨(interiorRoot_norm_lt_one hWi).le,(interiorRoot_lower_im hWi).le⟩
+161:   have hbase (i : Fin N) : ‖z₀ i‖ ≤ 1 ∧ (z₀ i).im ≤ 0 := by
+162:     by_cases hi : i ∈ J
+163:     · exact ⟨(hphys _ (hbaseK i hi)).1,(hphys _ (hbaseK i hi)).2.1⟩
+164:     · simpa only [z₀,hi,ite_false] using hbranch i hi
+165:   have hmov (i : Fin N) : ‖z i-z₀ i‖ ≤ D/(N:ℝ) := by
+166:     by_cases hi : i ∈ J
+167:     · have hm := (hmotion (W₀ i) (hcenterK i hi) (W i) ((hdiff i).trans hdiffc)).2
+168:       have hh := hm.trans (mul_le_mul_of_nonneg_left (hdiff i) hL.le)
+169:       have he : L*(3*c/(N:ℝ))=D/(N:ℝ) := by dsimp [D]; ring
+170:       simpa only [z,z₀,hi,ite_true] using hh.trans_eq he
+171:     · simp only [z₀,hi,ite_false,sub_self,norm_zero]
+172:       positivity
+173:   have hcov (i : Fin N) (hi : i ∈ J) : ‖z₀ i‖ ≤ 1-g ∨ (z₀ i).im ≤ -g := hgroups _ (hbaseK i hi)
+174:   have hsame' : ∀ i ∈ J, ∀ j ∈ J, color i=color j → ‖pairKernel (z₀ i) (z₀ j)‖ ≤ q := by
+175:     intro i hi j hj hcol
+176:     apply hsame _ (hbaseK i hi) _ (hbaseK j hj)
+177:     by_cases hni : ‖z₀ i‖ ≤ 1-g
+178:     · have hnj : ‖z₀ j‖ ≤ 1-g := by simpa [color,hni] using hcol.symm
+179:       exact Or.inl ⟨hni,hnj⟩
+180:     · have hnj : ¬ ‖z₀ j‖ ≤ 1-g := by simpa [color,hni] using hcol.symm
+181:       exact Or.inr ⟨(hcov i hi).resolve_left hni,(hcov j hj).resolve_left hnj⟩
+182:   obtain ⟨hsameDisk,hgeneral,hbranchPair⟩ := compact_perturbed_pair_bounds hN J color z₀ z hg hq1 hD.le
+183:     hD1 hDg hDq (fun i => (hbase i).1) (fun i => (hbase i).2) hcov hsame' hmov
+184:     (fun i hi => by simp [z₀,hi])
+185:   refine ⟨color,hsameDisk,?_⟩
+186:   intro i j
+187:   by_cases hi : i ∈ J
+188:   · exact hgeneral i j (Or.inl hi)
+189:   · by_cases hj : j ∈ J
+190:     · exact hgeneral i j (Or.inr hj)
+191:     · exact (hbranchPair i hi j hj).trans (le_add_of_nonneg_right (by positivity))
+192: 
+193: end
+194: end IsingBulk.Tail
+
+===== IsingBulk/Tail/SelectedFPairMotion.lean SHA256 0e6ead0c641df1a24fae843e2faa3d5e83cbc12fd9aa65f816fbe56a8c294100 =====
+1: import IsingBulk.Tail.SelectedFCompactMotion
+2: import IsingBulk.Tail.CompactPairGap
+3: 
+4: /-! Uniform two-coordinate Schur-kernel motion near compact physical roots.
+5: The perturbed roots may lie outside the unit disk. -/
+6: namespace IsingBulk.Tail
+7: noncomputable section
+8: open IsingBulk.First
+9: 
+10: theorem pairKernel_two_coordinate_motion {z w z' w' : ℂ} {g δ : ℝ}
+11:     (hg : 0 < g) (hδ : 0 ≤ δ) (hδ1 : δ ≤ 1) (hδg : δ ≤ g/6)
+12:     (hz : ‖z‖ ≤ 1) (hw : ‖w‖ ≤ 1)
+13:     (hz' : ‖z'-z‖ ≤ δ) (hw' : ‖w'-w‖ ≤ δ)
+14:     (hgap : g ≤ ‖1-z*w‖) :
+15:     ‖pairKernel z' w'-pairKernel z w‖ ≤ (4/g+12/g^2)*δ := by
+16:   have hwp : ‖w'‖ ≤ 2 := by
+17:     have hh := norm_sub_norm_le w' w
+18:     linarith
+19:   have hdenmove : ‖(1-z*w)-(1-z'*w')‖ ≤ 3*δ := by
+20:     have he : (1-z*w)-(1-z'*w')=(z'-z)*w'+z*(w'-w) := by ring
+21:     rw [he]
+22:     calc
+23:       _ ≤ ‖(z'-z)*w'‖+‖z*(w'-w)‖ := norm_add_le _ _
+24:       _ = ‖z'-z‖*‖w'‖+‖z‖*‖w'-w‖ := by rw [norm_mul,norm_mul]
+25:       _ ≤ δ*2+1*δ := add_le_add
+26:         (mul_le_mul hz' hwp (norm_nonneg _) hδ)
+27:         (mul_le_mul hz hw' (norm_nonneg _) (by norm_num))
+28:       _ = _ := by ring
+29:   have hgap' : g/2 ≤ ‖1-z'*w'‖ := by
+30:     have hh := norm_sub_norm_le (1-z*w) (1-z'*w')
+31:     linarith
+32:   have hd0 : 1-z*w ≠ 0 := norm_pos_iff.mp (hg.trans_le hgap)
+33:   have hd'0 : 1-z'*w' ≠ 0 := norm_pos_iff.mp ((half_pos hg).trans_le hgap')
+34:   have hnum : ‖(z'-w')-(z-w)‖ ≤ 2*δ := by
+35:     have he : (z'-w')-(z-w)=(z'-z)-(w'-w) := by ring
+36:     rw [he]
+37:     exact (norm_sub_le _ _).trans (by linarith)
+38:   have hnbase : ‖z-w‖ ≤ 2 := (norm_sub_le _ _).trans (by linarith)
+39:   have he : pairKernel z' w'-pairKernel z w =
+40:       ((z'-w')-(z-w))/(1-z'*w')+
+41:         (z-w)*((1-z*w)-(1-z'*w'))/((1-z'*w')*(1-z*w)) := by
+42:     unfold pairKernel
+43:     field_simp
+44:     ring
+45:   have hfirst : ‖((z'-w')-(z-w))/(1-z'*w')‖ ≤ (2*δ)/(g/2) := by
+46:     rw [norm_div]
+47:     exact div_le_div₀ (by positivity) hnum (half_pos hg) hgap'
+48:   have hdenprod : (g/2)*g ≤ ‖(1-z'*w')*(1-z*w)‖ := by
+49:     rw [norm_mul]
+50:     exact mul_le_mul hgap' hgap hg.le (norm_nonneg _)
+51:   have hsecond : ‖(z-w)*((1-z*w)-(1-z'*w'))/((1-z'*w')*(1-z*w))‖ ≤
+52:       (6*δ)/((g/2)*g) := by
+53:     rw [norm_div,norm_mul]
+54:     apply div_le_div₀ (by positivity) _ (by positivity) hdenprod
+55:     have hh := mul_le_mul hnbase hdenmove (norm_nonneg _) (by norm_num : (0:ℝ)≤2)
+56:     nlinarith only [hh]
+57:   rw [he]
+58:   calc
+59:     _ ≤ ‖((z'-w')-(z-w))/(1-z'*w')‖+
+60:         ‖(z-w)*((1-z*w)-(1-z'*w'))/((1-z'*w')*(1-z*w))‖ := norm_add_le _ _
+61:     _ ≤ (2*δ)/(g/2)+(6*δ)/((g/2)*g) := add_le_add hfirst hsecond
+62:     _ = _ := by field_simp; ring
+63: 
+64: end
+65: end IsingBulk.Tail

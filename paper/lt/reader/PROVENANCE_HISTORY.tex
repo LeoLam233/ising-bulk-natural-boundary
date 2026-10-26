@@ -1,0 +1,175 @@
+% Verbatim historical narrative from the frozen LT v0.1-rc6 authority.
+% Fragment, not a standalone paper. Mathematical proof text remains in reader.tex.
+\subsection{Reconstruction boundary}
+Revision 2 retains the first nonzero-angle prime family and
+the final thirteen-sector tail route of checkpoint v38.
+It expands the real-cutoff jet recurrence, separates the
+radial-center and protected-disk arguments, and exposes the
+hybrid measure and constant choices. These additions are
+mathematical exposition to audit, not an external validation.
+
+Revision 3 corrects the exterior convergence paragraph in
+Appendix~\ref{app:pfaffian}: global inverse products are bounded
+exponentially in \(N\), rather than independently of \(N\).
+The displayed Pfaffian--factorial bound absorbs this cost, and
+the compact-set Cauchy estimate makes the differentiated
+normal convergence explicit. This revision leaves the main
+claim, boundary-point family, and tail estimates unchanged.
+
+Revision 4 corrects the one-body argument in
+Lemma~\ref{lem:originaldisk}: the branch-center displacement
+on a complex parameter disk includes \(|s-\se|\).
+The two-region estimate now retains this perturbation and
+proves the same occupancy-independent integrable majorant.
+No contour, particle-number window, or main claim is changed.
+
+Revision 5 incorporates the explicitly identified first-term gluing
+supplement from the subsequent full-chain audit. Section~\ref{sec:first}
+now constructs a \(y\)-only angular partition before taking any
+\(x\) residues, replaces its smooth mean cutoffs only across separated
+edge regions, and gives a quantitative finite-cover estimate for the
+complement. These additions connect the local residue calculation to
+the whole double torus. They are new exposition and supporting
+derivations relative to revision 4, not a claim that revision 4 already
+contained this construction. The tail estimates and the main target
+are unchanged; the audit's other verification labels are not imported
+as premises.
+
+Revision 6 makes four further interfaces explicit following a
+separate audit of revision 5: compact upper supports and branch
+plateaus; a periodic left/right partition whose extra seam lies
+where all relevant weighted jets vanish; Cauchy's inequality
+applied to the complete holomorphic \(F_N\); and exponential-scale
+inclusions imposed at every finite tail order. The related negative
+anchor scale is chosen with the same uniform inclusion. These are
+explicit choices and local justifications within the existing proof
+route. The model, theorem, point family, derivative range, and
+particle-number windows are unchanged. No audit verdict is used
+as a mathematical premise.
+
+Revision 7 corrects the logarithmic expansion of the microcore
+majorant by displaying its negative \(N^2\log N/2\) term. It also
+records the angle and power conventions required for a comparison
+with the review amplitude, and explicitly includes the unwrapped
+phase lengths and period counts in near-equality coarea estimates.
+The physical-state convention is stated at the outset; the current
+E1 integration specifies the \(+\) boundary-condition state. These are local corrections and
+clarifications; the two main estimates, point family, derivative
+range, and particle windows are unchanged. The received audit's
+failure to find a counterexample is not an additional proof premise.
+
+Revision 8 supplies the missing historical and methodological
+attribution, including the diagonal noncancellation argument and the
+upstream correlation representation. It distinguishes the proposed
+bulk estimates from the existing proof architecture. The endpoint
+wording in Lemma~\ref{lem:contraction} now asserts strictness only
+within groups and explicitly permits cross-group equality. Inverse
+temperature and the inner branch cutoff have distinct symbols from
+the geometric angle \(\beta\). The selected family, two central
+estimates, derivative range, and particle windows are unchanged.
+The separate revision record states the checks actually performed;
+earlier audit verdicts are attached to their earlier manuscript
+versions and are not automatically new audits of revision 8.
+
+Earlier routes involving a jointly absolute mean/shape
+limit, a multiplier obtained by dividing by the original
+Vandermonde, a central connector contour, or a degenerate
+four-particle endpoint amplitude are not assumptions of
+this manuscript. The separate source-coverage record names
+their replacements in v38. A historical file being
+present in the checkpoint is not by itself a reason to
+include its superseded argument in the proof.
+
+The accompanying release records identify file hashes, the active-source
+mapping, and the edits from the preceding reconstruction.
+Those checks establish provenance and textual coverage.
+They do not establish truth of any proposition, settle
+literature priority, or constitute a completed independent
+adversarial audit.
+
+% END SOURCE
+
+\subsection*{Historical rc4 W2 repair}
+Version 0.1-rc4 adds the explicit support geometry,
+local root-continuation and complete-pair transfer arguments,
+reserved disk slack, tau-dependent protected-disk restrictions,
+and coupled-occupancy product-rule count. Lemma~\ref{lem:originaldisk}
+now explicitly confines its pair estimates to \(K\) and named
+Stokes supports. The theorem, point family, derivative range and
+particle windows are unchanged. These are new scoped proof repairs,
+not arguments attributed retrospectively to rc3. The supplied
+audits and finite diagnostics were treated as untrusted evidence.
+This candidate is prepared for public review. The subsequent E1 integration
+checks the primary-source interface, specifies the \(+\) state, and
+reconciles the published full-site coefficient with the existing
+offsite formulas. It changes no W1/W2 estimate or theorem statement.
+That analytic release did not claim human, peer, or proof-assistant certification.
+
+\subsection*{Historical rc3 status and AI assistance}
+Version 0.1-rc3 incorporates the W1 proof-interface repairs described in this revision record.
+It adds the current support partition and deformed branch geometry,
+recounts the remaining pair factors after differentiation, corrects
+the near-collision slope cost, and expands the constant dependencies.
+These substantive proof repairs received a scoped AI analytic audit;
+the historical rc2 records retain their original inputs and verdicts.
+Three problem-only reconstruction runs returned partial results;
+none reconstructed the complete natural-boundary proof. One
+method-informed run claimed the full tail estimate while explicitly
+leaving its whole-integral first singular term (node I3) unresolved.
+Its tail claim has not received a complete independent verification
+by the receiving workflow. The different point families used in
+some runs do not allow their conclusions to be combined silently.
+The repository separates these run claims from manuscript claims,
+version-specific audit reports, and finite computational checks.
+
+Generative AI was used extensively in research exploration,
+mathematical derivation, manuscript writing, code, internal audits,
+and reconstruction attempts. Dehao Lin is the named human author
+and public contact. No specific division of mathematical contributions
+or line-by-line human verification is asserted here.
+An AI audit verdict is not proof certification. No independent human
+expert certification is claimed. Formal verification has the statement
+and trust boundaries specified for the current candidate below.
+The author declares no additional funding or competing interests
+for this project. Project text is offered under CC BY 4.0 to the extent
+the author holds rights in it; project code is offered under the MIT
+license. Cited third-party works retain their own rights.
+The accompanying provenance record states
+the limits of the available historical access evidence.
+
+\subsection*{Rc5 internal regularity and formal scope}
+Version 0.1-rc5 was paired with Lean candidate 0.3.0-rc1.
+The original rc4 source, PDF and label index remain separate frozen
+artifacts. The internal lower-order proof removes E3 from the canonical
+FIRST and natural-boundary theorem statements and their proof dependency
+chain. The constructed normalized exterior series has no external physics
+input; its identification with the physical susceptibility uses E1 and E2.
+The stronger selected-contour pair bound was already proved by the earlier
+Lean source; this revision makes that strength explicit in the manuscript.
+The closed-form amplitude evaluation and finite-prime covering calculation
+are analytic manuscript results, not new Lean exports of those formulas.
+Lean proves the actual selected-point real \(C^k\) obstruction with the tail
+internally discharged. The all-arc quantitative covering is not formalized.
+
+\subsection*{Rc6 complete-amplitude comparison and formal scope}
+The current manuscript is 0.1-rc6, paired with Lean candidate 0.3.0-rc2.
+Proposition~\ref{prop:amplitudecomparison} identifies the full-site
+observable from the review's cited integral, fixes the exterior branch,
+and proves the four-chart conversion of its printed scalar. It also
+distinguishes the lower double-contour coefficient from the full offsite
+lattice coefficient and includes both physical prefactors. The new
+conversion and radial Taylor reconstruction are manuscript results;
+the factorial and literature-amplitude identities are not new Lean exports.
+The production Lean theorem sources and their mathematical dependency
+chain are unchanged from the verified rc5/0.3.0-rc1 candidate. Updated
+source correspondence and verification identities belong to this revision;
+the preserved commit records the earlier candidate without reassigning its
+receipts to new bytes.
+
+Exact build, transitive-dependency, axiom, kernel-replay, and PDF receipts
+are supplied separately with their candidate hashes. They do not extend
+earlier AI audit verdicts to these new bytes. Dependency binary/source
+correspondence remains trusted, and build and replay use the same Lean
+kernel implementation. Neither these internal checks nor compilation is
+independent human review or a literature-priority certificate.
+
