@@ -1,0 +1,834 @@
+[
+  {
+    "id": "LT-E001",
+    "section": "front matter",
+    "reason": "Identify the side-by-side reader edition and its invariant policy.",
+    "original_line": 1,
+    "old": "% Standalone audit manuscript. All sections, appendices, and bibliography are embedded.",
+    "new": "% Standalone reader edition of the SHA-256-bound LT v0.1-rc6 manuscript.\n% Mathematical display bodies, theorem statements, labels, and bibliography are preserved.\n% Editorial script and semantic correspondence are supplied alongside this file."
+  },
+  {
+    "id": "LT-E002",
+    "section": "typesetting",
+    "reason": "Use scalable Latin Modern fonts so pdfLaTeX microtype expansion compiles in the available environment; no mathematical content changes.",
+    "original_line": 13,
+    "old": "\\usepackage{microtype}",
+    "new": "\\usepackage{lmodern}\n\\usepackage{microtype}"
+  },
+  {
+    "id": "LT-E003",
+    "section": "front matter",
+    "reason": "Give the PDF an informative title and accurate scope metadata.",
+    "original_line": 16,
+    "old": "\\hypersetup{pdftitle={A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={AI-assisted candidate proof, v0.1-rc6; Lean candidate v0.3.0-rc2; no independent human certification}}",
+    "new": "\\hypersetup{pdftitle={A natural boundary for the low-temperature bulk square-lattice Ising susceptibility},pdfauthor={Dehao Lin},pdfsubject={Reader edition of LT v0.1-rc6: complete normalized proof, physical E1/E2 premises, and formal scope}}"
+  },
+  {
+    "id": "LT-E004",
+    "section": "front matter",
+    "reason": "Name the actual phase and full-lattice observable in the title.",
+    "original_line": 43,
+    "old": "\\title{A candidate natural-boundary proof\\\\\nfor the bulk square-lattice Ising susceptibility}",
+    "new": "\\title{A natural boundary for the low-temperature\\\\\nbulk square-lattice Ising susceptibility}"
+  },
+  {
+    "id": "LT-E005",
+    "section": "front matter",
+    "reason": "Separate editorial date from the frozen authority.",
+    "original_line": 49,
+    "old": "\\date{Version 0.1-rc6 (candidate for mathematical review)\\\\17 October 2026}",
+    "new": "\\date{Reader edition, 26 October 2026\\\\Based on the frozen version 0.1-rc6 of 17 October 2026}"
+  },
+  {
+    "id": "LT-E006",
+    "section": "abstract",
+    "reason": "Replace release/audit rhetoric by the observable, two proof tasks, physical premises, and precise formal scope.",
+    "original_line": 54,
+    "old": "\\begin{abstract}\nThis manuscript presents a candidate proof that the unit circle is a\nnatural boundary for the zero-field, isotropic, infinite square-lattice\nIsing susceptibility continued from low temperature. The argument has\ntwo separate analytic tasks. At a dense cyclotomic family of boundary\npoints, an actual average-angle residue produces a nonzero first\nsingular derivative. A weighted contour deformation and a partition of\nthe entire particle-number tail are then used to claim an absolute\nsmaller-order bound for every derivative needed in the bulk product\nrule. The decisive estimates, support conditions, differentiation\nrecurrences, and order of choices are included in the paper.\n\nThis release candidate is reconstructed from an AI-generated research checkpoint.\nIts propositions are the proof claims to be checked, not independently\ncertified results. Appendix~\\ref{app:auditmap} identifies the load-bearing\nchecks and the coverage of all tail sectors. No exhaustive priority\nclearance is claimed; the natural-boundary conclusion has no\nindependent human certification. This revision proves the required\nlower-order radial bounds internally, strengthens the selected-contour\npair bound, evaluates the singular coefficient, and records a finite-order\nobstruction to smooth extension on every boundary arc. It also identifies\nthe complete selected-point amplitude relative to the literature\nformula, including its four-chart degeneracy and physical branch. The corresponding\nLean candidate is version 0.3.0-rc2; the frozen 0.1-rc4 manuscript and\n0.2.1 Lean release retain their separate identities.\n\\end{abstract}",
+    "new": "\\begin{abstract}\nThe unit circle is a natural boundary for the normalized zero-field\nsusceptibility of the isotropic infinite square lattice, continued from\nthe low-temperature ordered pure phase. The proof isolates a nonzero\nsingular derivative at a dense cyclotomic family of boundary points and\nshows that the complete higher-particle tail is smaller in every\nderivative required by the product rule. The first term is evaluated by\nan average-angle residue followed by a convergent shape integral. The\ntail is controlled by an exact weighted contour deformation, protected\nparameter disks, and a partition covering every particle number and\nangular region. The paper includes the support conditions, high-order\ndifferentiation recurrence, and order of parameter choices on which\nthese estimates depend.\n\nThe physical interpretation retains the onsite contribution, the\nmagnetization-square subtraction, and the full positive even-particle\nsum. It uses the published low-temperature correlation representation\nand spontaneous magnetization as explicit physical inputs. The analytic\nconstruction itself, including the lower-order radial bounds, is\ninternal. We also give a selected-point amplitude evaluation, its\nfour-chart literature comparison, and a finite-order obstruction on\nevery boundary arc. These last scalar and covering calculations have\nthe manuscript-only scope recorded in Appendix~\\ref{app:auditmap}.\nThat appendix also records the precise Lean endpoint and the source\nand AI-assistance provenance of this reader edition.\n\\end{abstract}"
+  },
+  {
+    "id": "LT-E007",
+    "section": "1",
+    "reason": "Make the full observable explicit without changing its formula.",
+    "original_line": 98,
+    "old": "The function \\(\\mathcal X\\) is the full\nbulk response. The proposed conclusion is",
+    "new": "The function \\(\\mathcal X\\) is the full\nbulk response, including the onsite term. The conclusion is"
+  },
+  {
+    "id": "LT-E008",
+    "section": "1.1",
+    "reason": "Use a mathematical heading.",
+    "original_line": 114,
+    "old": "\\subsection{Related work and the proposed contribution}",
+    "new": "\\subsection{Related work and the bulk problem}"
+  },
+  {
+    "id": "LT-E009",
+    "section": "1.1",
+    "reason": "Keep methodological attribution in direct prose.",
+    "original_line": 143,
+    "old": "Thus the architecture of isolating a\nsingular derivative and controlling the tail to exclude cancellation\nis an established method, not a new principle claimed here.",
+    "new": "These results establish the strategy of isolating a singular derivative\nand controlling the remaining sum to exclude cancellation."
+  },
+  {
+    "id": "LT-E010",
+    "section": "1.1",
+    "reason": "Connect the cited precedents to the obligations actually proved.",
+    "original_line": 149,
+    "old": "These tools and organizing ideas are\nprecedents for this work, not inventions attributed to the present\nmanuscript. Their bulk implementation must still be justified here.",
+    "new": "The present proof uses these tools in the bulk setting; the bulk\ncontour geometry and the uniform estimates are proved below."
+  },
+  {
+    "id": "LT-E011",
+    "section": "1.1",
+    "reason": "Explain what each contribution does, retaining the same proof obligations.",
+    "original_line": 165,
+    "old": "The proposed technical work here is the selected uniquely-first point\nfamily, the compatible whole-integral first-amplitude calculation,\nand the estimates for the weighted contour decomposition, protected\nparameter disks, and differentiated tail sectors of the bulk integral.\nThese are the claims to assess against the displayed derivations and\nthe prior literature. Neither an internal audit verdict nor the\ninclusion of additional references establishes their correctness or\ntheir novelty. No exhaustive literature-priority clearance is claimed.",
+    "new": "The bulk argument has three main ingredients: a dense family with a\nunique first singular even order; a local amplitude calculation glued\nto the complete double integral; and uniform estimates for the weighted\ncontour decomposition, its protected parameter disks, and every\ndifferentiated tail sector. The first ingredient identifies where to\nlook for an obstruction. The other two show that the obstruction\nsurvives in the full susceptibility."
+  },
+  {
+    "id": "LT-E012",
+    "section": "1.2",
+    "reason": "Lead directly into the unchanged decisive formulas.",
+    "original_line": 177,
+    "old": "The proposed argument\nestablishes",
+    "new": "The two estimates are"
+  },
+  {
+    "id": "LT-E013",
+    "section": "1.2",
+    "reason": "Explain why all derivative orders occur in the product rule.",
+    "original_line": 196,
+    "old": "In particular, a proof only of \\eqref{eq:roadmapfirst}, or a tail\nestimate only for \\(j=k\\), does not complete the proposed argument.",
+    "new": "The full range of derivatives in \\eqref{eq:roadmaptail} is needed\nbecause differentiating the magnetization prefactor also uses the\nlower derivatives of the series. The first-term estimate\n\\eqref{eq:roadmapfirst} is therefore paired with the entire tail estimate."
+  },
+  {
+    "id": "LT-E014",
+    "section": "1.3",
+    "reason": "Make the appendices useful as reader navigation.",
+    "original_line": 208,
+    "old": "Appendix~\\ref{app:constants}; Appendix~\\ref{app:auditmap} is a route\nthrough the proof for an adversarial reader.",
+    "new": "Appendix~\\ref{app:constants}. Appendix~\\ref{app:auditmap} collects\nthe dependency map, the complete sector table, and the physical and\nformal scope of the result."
+  },
+  {
+    "id": "LT-E015",
+    "section": "2",
+    "reason": "Orient the reader to normalization, the physical interface, and reduction.",
+    "original_line": 238,
+    "old": "\\section{The normalized bulk representation}\\label{sec:setup}",
+    "new": "\\section{The normalized bulk representation}\\label{sec:setup}\n\nThis section fixes the observable and its integration measures before\nany asymptotic argument. The offsite form factors below reconstruct the\nfull connected susceptibility through the onsite term and the\nmagnetization prefactor. The residue reduction then gives the\none-contour form used for the tail estimates."
+  },
+  {
+    "id": "LT-E016",
+    "section": "2",
+    "reason": "Make the normalization operation explicit.",
+    "original_line": 264,
+    "old": "This normalization follows by converting the \\(N\\) normalized angular\nmeasures in Appendix~1, equation~(7), of \\cite{TW2014} and retaining\nthe \\(N\\) normalized auxiliary residues.",
+    "new": "To obtain this normalization, convert the \\(N\\) normalized angular\nmeasures in Appendix~1, equation~(7), of \\cite{TW2014} and retain\nthe \\(N\\) normalized auxiliary residues."
+  },
+  {
+    "id": "LT-E017",
+    "section": "lem:residue",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe first check which poles are enclosed, and then combine the two pair factors. Keeping the normalized measure at each residue fixes the coefficient in \\eqref{eq:reduced}.\n"
+  },
+  {
+    "id": "LT-E018",
+    "section": "2, proof of Lemma 2.1",
+    "reason": "Expose the induction behind successive residue evaluation.",
+    "original_line": 302,
+    "old": "These statements remain true after each\nsuccessive residue because each previously substituted root has modulus\nless than \\(r\\).",
+    "new": "The same pole separation holds at every subsequent residue: each root\nalready substituted has modulus less than \\(r\\)."
+  },
+  {
+    "id": "LT-E019",
+    "section": "2",
+    "reason": "Explain the purpose of the strict radius inequality.",
+    "original_line": 320,
+    "old": "Choosing \\(c_0<c_3\\) verifies the stronger condition \\(|z|<r\\), not merely\n\\(|z|<1\\). During an \\(s\\)-derivative this chosen \\(r\\) is held fixed.",
+    "new": "Choosing \\(c_0<c_3\\) therefore gives the contour admissibility condition\n\\(|z|<r\\); the weaker condition \\(|z|<1\\) would not suffice for the residue.\nDuring an \\(s\\)-derivative this chosen \\(r\\) is held fixed."
+  },
+  {
+    "id": "LT-E020",
+    "section": "lem:symmetry",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nBoth symmetries are checked on the normalized contour representation, so they apply to the complete bulk function as well as to each even form factor.\n"
+  },
+  {
+    "id": "LT-E021",
+    "section": "3",
+    "reason": "Link the arithmetic conclusions to their later analytic uses.",
+    "original_line": 345,
+    "old": "\\label{sec:arithmetic}",
+    "new": "\\label{sec:arithmetic}\n\nThe first singular order must be isolated before estimating its\namplitude. The family constructed here has two useful features: the\nfirst even Nickel order is unique, and the branch endpoint is\nnonresonant. The first property identifies the two contributing local\ncharts; the second gives the exponential separation used in the\nall-branch tail."
+  },
+  {
+    "id": "LT-E022",
+    "section": "thm:prime",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe proof has four parts: exclude smaller even orders, establish uniqueness at the first order, prove density, and rule out a root of unity at the branch endpoint.\n"
+  },
+  {
+    "id": "LT-E023",
+    "section": "3, Theorem 3.1",
+    "reason": "Signpost the first arithmetic implication.",
+    "original_line": 384,
+    "old": "If an even \\(n<2p\\) represented the same Nickel point, then \\(p\\nmid n\\)",
+    "new": "\\smallskip\\noindent\\textit{First even order.}\nIf an even \\(n<2p\\) represented the same Nickel point, then \\(p\\nmid n\\)"
+  },
+  {
+    "id": "LT-E024",
+    "section": "3, Theorem 3.1",
+    "reason": "Identify the sparse-relation uniqueness argument.",
+    "original_line": 390,
+    "old": "At order \\(2p\\) every cosine is \\(\\pm u_j/2\\) or \\(\\pm1\\).",
+    "new": "\\smallskip\\noindent\\textit{Uniqueness.}\nAt order \\(2p\\) every cosine is \\(\\pm u_j/2\\) or \\(\\pm1\\)."
+  },
+  {
+    "id": "LT-E025",
+    "section": "3, Theorem 3.1",
+    "reason": "Distinguish density from the fixed-point statements.",
+    "original_line": 399,
+    "old": "For any \\(c_0\\in(0,1)\\), along unbounded primes choose two distinct",
+    "new": "\\smallskip\\noindent\\textit{Density.}\nFor any \\(c_0\\in(0,1)\\), along unbounded primes choose two distinct"
+  },
+  {
+    "id": "LT-E026",
+    "section": "3, Theorem 3.1",
+    "reason": "Identify the trace obstruction used by the resultant bound.",
+    "original_line": 403,
+    "old": "Finally \\(w=2\\cos\\theta_B=u_a+u_b-2\\) has trace \\(-2d-2\\).",
+    "new": "\\smallskip\\noindent\\textit{Branch nonresonance.}\nFinally \\(w=2\\cos\\theta_B=u_a+u_b-2\\) has trace \\(-2d-2\\)."
+  },
+  {
+    "id": "LT-E027",
+    "section": "lem:resultant",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nA nonzero integer resultant has absolute value at least one. Bounding all conjugate factors except the selected one converts this arithmetic fact into the required exponential lower bound.\n"
+  },
+  {
+    "id": "LT-E028",
+    "section": "4",
+    "reason": "Explain the order of operations and whole-integral gluing.",
+    "original_line": 436,
+    "old": "\\label{sec:first}",
+    "new": "\\label{sec:first}\n\nThe singularity is extracted in a fixed order. We first localize the\ncomplete double integral with weights depending only on the unreduced\nangles. We then take the mean residue, and only afterwards rescale the\nremaining shape variables. A separate complement estimate joins these\nlocal calculations back to the full form factor."
+  },
+  {
+    "id": "LT-E029",
+    "section": "4",
+    "reason": "Connect cutoff independence to the exact source decomposition.",
+    "original_line": 467,
+    "old": "The weights depend only on the \\(y\\) angles and are independent of\n\\(s\\), the \\(x\\) angles, and the varying evaluation radius.\nThus the exact identity",
+    "new": "These weights are fixed functions of the \\(y\\) angles. They do not\ndepend on \\(s\\), the \\(x\\) angles, or the varying evaluation radius,\nso the partition is compatible with the later residues. It gives the exact identity"
+  },
+  {
+    "id": "LT-E030",
+    "section": "4",
+    "reason": "Clarify why localization commutes with the permitted residue calculation.",
+    "original_line": 484,
+    "old": "In each \\(I_\\gamma\\), all \\(x\\) integrations remain unweighted.\nLemma~\\ref{lem:residue} consequently gives the reduced integral with\nthe same \\(y\\)-weight.",
+    "new": "Because every \\(x\\) integration in \\(I_\\gamma\\) remains unweighted,\nLemma~\\ref{lem:residue} applies directly and leaves exactly the same\n\\(y\\)-weight on the reduced integral."
+  },
+  {
+    "id": "LT-E031",
+    "section": "lem:mean",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThere are two points to check: the displaced mean contour has bounded side contributions, and the residue has a uniform nonlinear denominator bound. The orientation computation between them fixes the sign of the leading coefficient.\n"
+  },
+  {
+    "id": "LT-E032",
+    "section": "4, Lemma 4.1",
+    "reason": "Isolate the load-bearing residue sign.",
+    "original_line": 540,
+    "old": "The downward closure is clockwise. Since",
+    "new": "\\smallskip\\noindent\\textit{Orientation and residue.}\nThe downward closure is clockwise. Since"
+  },
+  {
+    "id": "LT-E033",
+    "section": "4, Lemma 4.1",
+    "reason": "Explain how the zero-sum constraint removes the linear phase.",
+    "original_line": 548,
+    "old": "Taylor's integral remainder on \\(\\sum t_j=0\\) supplies a phase\nseparation",
+    "new": "To turn curvature into a denominator estimate, apply Taylor's integral\nremainder on \\(\\sum t_j=0\\). It supplies a phase separation"
+  },
+  {
+    "id": "LT-E034",
+    "section": "lem:period",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe shape integral is evaluated on the zero-sum hyperplane. Its volume normalization and the continuation of the quadratic coefficient both matter for the complex amplitude.\n"
+  },
+  {
+    "id": "LT-E035",
+    "section": "4",
+    "reason": "Mark the transition from residue evaluation to the scaling limit.",
+    "original_line": 598,
+    "old": "After the actual mean residue, put \\(t=\\sqrt\\eps\\,\\tau\\).",
+    "new": "\\paragraph{Rescaling the shape and adding the two charts.}\nAfter the actual mean residue, put \\(t=\\sqrt\\eps\\,\\tau\\)."
+  },
+  {
+    "id": "LT-E036",
+    "section": "4",
+    "reason": "Keep the integrability boundary explicit in clearer prose.",
+    "original_line": 607,
+    "old": "This is a dominated limit of the constrained shape integral,\nnot of the joint unintegrated mean/shape absolute value.",
+    "new": "The dominating function applies to the constrained shape integral\nafter the mean residue. It does not assert an absolute dominated limit\nfor the unintegrated mean and shape variables together."
+  },
+  {
+    "id": "LT-E037",
+    "section": "lem:complement",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nFirst classify the possible nonnegative relations among singular-factor gradients. Away from the two surviving configurations, a separating direction then gives an integrable auxiliary-parameter bound after repeated integration by parts.\n"
+  },
+  {
+    "id": "LT-E038",
+    "section": "4, Lemma 4.3",
+    "reason": "Separate classification from quantitative control.",
+    "original_line": 645,
+    "old": "For a fixed smooth weight whose support avoids these two\nconfigurations, cover its support by finitely many compact localized\npieces.",
+    "new": "\\smallskip\\noindent\\textit{Uniform bound on the complement.}\nFix a smooth weight supported away from these two configurations and\ncover its support by finitely many compact localized pieces."
+  },
+  {
+    "id": "LT-E039",
+    "section": "4",
+    "reason": "Replace version-history terminology by the mathematical content.",
+    "original_line": 678,
+    "old": "\\paragraph{Internal lower-order bound (replacement for E3).}",
+    "new": "\\paragraph{Lower-order radial bounds from the original contour.}"
+  },
+  {
+    "id": "LT-E040",
+    "section": "4",
+    "reason": "Make the reused mechanism and changed particle number explicit.",
+    "original_line": 692,
+    "old": "To prove this, repeat the active-gradient classification in\nLemma~\\ref{lem:complement} with \\(n\\) coordinates.",
+    "new": "The same active-gradient classification as in\nLemma~\\ref{lem:complement}, now with \\(n\\) coordinates, proves this bound."
+  },
+  {
+    "id": "LT-E041",
+    "section": "4",
+    "reason": "Connect the arithmetic exclusion to the analytic separation.",
+    "original_line": 707,
+    "old": "Consequently the active vectors at every point of the entire\n\\(2n\\)-torus have convex hull separated from zero.",
+    "new": "With every possible Nickel configuration excluded, the active vectors\nat each point of the entire \\(2n\\)-torus have convex hull separated from zero."
+  },
+  {
+    "id": "LT-E042",
+    "section": "thm:first",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe now assemble the localized contributions. The only unbounded leading terms are the two mean residues; their equality of phase makes them add, while the complement and the lower particle orders remain bounded.\n"
+  },
+  {
+    "id": "LT-E043",
+    "section": "5",
+    "reason": "Explain the exact decomposition before its quantitative budgets.",
+    "original_line": 765,
+    "old": "\\label{sec:tailreduction}",
+    "new": "\\label{sec:tailreduction}\n\nThe tail proof begins with an identity, before making any estimates.\nA weighted contour deformation separates a selected final contour,\na weighted original contour, and the current generated by the weight.\nAfter differentiation these pieces are divided into particle-number\nand current-parameter windows. The four bounds at the end of this\nsection are the targets used in the final summation."
+  },
+  {
+    "id": "LT-E044",
+    "section": "prop:selector",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe check the deformation in three stages: no pole is crossed, the pullback Jacobian has the stated structure, and Cartan's formula supplies the current with its sign.\n"
+  },
+  {
+    "id": "LT-E045",
+    "section": "5, Proposition 5.1",
+    "reason": "Isolate the determinant computation.",
+    "original_line": 834,
+    "old": "Normalize the angular Jacobian row \\(i\\) by \\(y_i\\). Its matrix is",
+    "new": "\\smallskip\\noindent\\textit{Jacobian and current coefficient.}\nNormalize the angular Jacobian row \\(i\\) by \\(y_i\\). Its matrix is"
+  },
+  {
+    "id": "LT-E046",
+    "section": "5",
+    "reason": "Explain the weighted Stokes term and prevent moving-window differentiation.",
+    "original_line": 854,
+    "old": "No equality is claimed between an individually weighted original chart\nand the same weighted deformed chart. The current is indispensable.\nAll \\(s\\)-derivatives are taken on the entire fixed interval\n\\([0,1]\\) before splitting the derivative density at \\(\\lambda_*\\).\nThus no derivative of that split endpoint enters.",
+    "new": "The weighted deformation includes the current term: an individual\nweighted chart changes under the deformation. To differentiate the\nidentity, take all \\(s\\)-derivatives over the fixed interval\n\\([0,1]\\), and then split the resulting density at \\(\\lambda_*\\).\nThis order of operations introduces no derivative of the split endpoint."
+  },
+  {
+    "id": "LT-E047",
+    "section": "prop:ultrahigh",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nAt very large particle number, factorial suppression alone is strong enough. The argument bounds one matched pair in the Pfaffian, counts matchings, and then applies Cauchy on the original parameter disk.\n"
+  },
+  {
+    "id": "LT-E048",
+    "section": "5",
+    "reason": "Explain how each target estimate is assigned a role.",
+    "original_line": 908,
+    "old": "The quantitative requirements are",
+    "new": "The remaining work is organized by the following four quantitative\nrequirements. The first two sum the selected contour and the large\ncurrent parameter; the last two control the original contour and the\nsmall current parameter in their respective particle windows:"
+  },
+  {
+    "id": "LT-E049",
+    "section": "6",
+    "reason": "Identify the anchor mechanism and why the larger Cauchy disk is available.",
+    "original_line": 932,
+    "old": "\\label{sec:F}",
+    "new": "\\label{sec:F}\n\nThe selected contour contains an upper anchor moved a fixed distance\ninward. This anchor opens both global product gaps and protects the\nbranch roots. Its parameter disk is therefore larger than the original\nradial disk. The proof uses that disk only after bounding the complete\nselected integral."
+  },
+  {
+    "id": "LT-E050",
+    "section": "prop:F",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe first obtain the protected disk, then estimate the two Pfaffians, and finally differentiate the complete integral. The pointwise group assignments used in the absolute estimates are never differentiated.\n"
+  },
+  {
+    "id": "LT-E051",
+    "section": "6",
+    "reason": "Mark the first quantitative step.",
+    "original_line": 939,
+    "old": "Telescope \\(1-\\psi\\). A named selected index has \\(p_q=1\\), hence \\(P\\ge1\\).",
+    "new": "\\smallskip\\noindent\\textit{The anchor and its protected disk.}\nTelescope \\(1-\\psi\\). A named selected index has \\(p_q=1\\), hence \\(P\\ge1\\)."
+  },
+  {
+    "id": "LT-E052",
+    "section": "6",
+    "reason": "Clarify the role and limitation of pointwise assignments.",
+    "original_line": 960,
+    "old": "The assignments in the following absolute estimates are made\npointwise at each fixed \\(s\\). Their domains need not be holomorphic\nin \\(s\\), and no assigned integral will be differentiated.",
+    "new": "\\smallskip\\noindent\\textit{Root-pair contraction.}\nFor the following absolute estimates, assign groups pointwise at each\nfixed \\(s\\). These assignment domains need not depend holomorphically\non \\(s\\), because differentiation will be applied only to the complete integral."
+  },
+  {
+    "id": "LT-E053",
+    "section": "6",
+    "reason": "Explain why square-root branch motion does not spoil the mixed estimate.",
+    "original_line": 970,
+    "old": "Here is the uniform mixed-pair calculation.",
+    "new": "The branch--compact pairs require a uniform estimate on the whole\nprotected disk. The following comparison holds the branch root fixed\nand moves only the compact root."
+  },
+  {
+    "id": "LT-E054",
+    "section": "6",
+    "reason": "Distinguish the angular Pfaffian estimate from the root Pfaffian.",
+    "original_line": 1005,
+    "old": "Every \\(y\\)-pair with a true branch index is bounded.",
+    "new": "\\smallskip\\noindent\\textit{Angular-pair matching.}\nEvery \\(y\\)-pair with a true branch index is bounded."
+  },
+  {
+    "id": "LT-E055",
+    "section": "6",
+    "reason": "Expose the final transition to summability and Cauchy.",
+    "original_line": 1032,
+    "old": "Combine these bounds and \\(N!\\ge(N/e)^N\\) to obtain, for each assignment,",
+    "new": "\\smallskip\\noindent\\textit{Factorial suppression and differentiation.}\nCombine the two Pfaffian bounds with \\(N!\\ge(N/e)^N\\). For each assignment this gives"
+  },
+  {
+    "id": "LT-E056",
+    "section": "7",
+    "reason": "Introduce the support, pair, and all-branch stages.",
+    "original_line": 1058,
+    "old": "\\label{sec:K}",
+    "new": "\\label{sec:K}\n\nThe original lower support needs a different estimate from the selected\ncontour. We first build a partition whose support survives every cutoff\nderivative. Complete pair factors then provide Gaussian decay in the\nparticle number. For the remaining intermediate orders, the all-branch\nregion is divided into a small nonresonant core and its complement."
+  },
+  {
+    "id": "LT-E057",
+    "section": "lem:partition",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe partition must retain its support properties under differentiation. We therefore construct nested branch cutoffs first, place the periodic seam where the weighted integrand vanishes, and then distinguish the current by its named upper index.\n"
+  },
+  {
+    "id": "LT-E058",
+    "section": "7, Lemma 7.1",
+    "reason": "Explain the role of the otherwise technical seam construction.",
+    "original_line": 1085,
+    "old": "To make the left/right labels periodic, choose an open arc \\(J\\)",
+    "new": "\\smallskip\\noindent\\textit{Periodic labels with an inactive seam.}\nTo make the left/right labels periodic, choose an open arc \\(J\\)"
+  },
+  {
+    "id": "LT-E059",
+    "section": "7, Lemma 7.1",
+    "reason": "Separate original-contour coverage from current coverage.",
+    "original_line": 1114,
+    "old": "For the current fix its named index \\(q_S\\) in",
+    "new": "\\smallskip\\noindent\\textit{Current supports.}\nFor the current fix its named index \\(q_S\\) in"
+  },
+  {
+    "id": "LT-E060",
+    "section": "7, Lemma 7.2",
+    "reason": "Remove release-history text from the proof heading.",
+    "original_line": 1165,
+    "old": "\\noindent\\textbf{Fixed groups and limiting equality loci (rc4 repair).}",
+    "new": "\\noindent\\textbf{Fixed groups and limiting equality loci.}"
+  },
+  {
+    "id": "LT-E061",
+    "section": "lem:contraction",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe decay comes from strict contraction inside each of three groups. Cross-group factors may attain equality, so they are controlled by reserved slack rather than by a false strictness assertion. The same count also permits finitely many differentiated pairs to be removed.\n"
+  },
+  {
+    "id": "LT-E062",
+    "section": "lem:originaldisk",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe original parameter disk is used for the high particle orders. We establish the product gaps and an integrable one-body majorant, then transfer the complete-pair contraction to the disk on the stated supports.\n"
+  },
+  {
+    "id": "LT-E063",
+    "section": "7, Lemma 7.3",
+    "reason": "Highlight the two-region argument that allows product integration.",
+    "original_line": 1372,
+    "old": "Choose a fixed branch radius \\(h\\) and a fixed \\(K\\ge1\\).",
+    "new": "\\smallskip\\noindent\\textit{An occupancy-independent majorant.}\nChoose a fixed branch radius \\(h\\) and a fixed \\(K\\ge1\\)."
+  },
+  {
+    "id": "LT-E064",
+    "section": "7, Lemma 7.3",
+    "reason": "Identify the support-restricted pair continuation step.",
+    "original_line": 1395,
+    "old": "For an explicit disk choice, let \\(b_0\\eps\\) be the",
+    "new": "\\smallskip\\noindent\\textit{Transferring the pair bounds.}\nFor an explicit disk choice, let \\(b_0\\eps\\) be the"
+  },
+  {
+    "id": "LT-E065",
+    "section": "lem:branch",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe square-root normal form controls both sides of the branch. On the negative side it gives attenuation; on the positive side it gives the slope and curvature needed for real coarea. We then repeat the calculation on a deformed branch plateau.\n"
+  },
+  {
+    "id": "LT-E066",
+    "section": "7, Lemma 7.4",
+    "reason": "Separate the undeformed geometry from its current analogue.",
+    "original_line": 1474,
+    "old": "For the current, write \\(y=e^{v+\\ii\\vartheta}\\),",
+    "new": "\\smallskip\\noindent\\textit{The deformed plateau.}\nFor the current, write \\(y=e^{v+\\ii\\vartheta}\\),"
+  },
+  {
+    "id": "LT-E067",
+    "section": "prop:micro",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nNonresonance keeps the angular product away from one on this exponentially small core. A one-phase transport field leaves the root-product kernel simple, and the Vandermonde then supplies the strong particle-number decay.\n"
+  },
+  {
+    "id": "LT-E068",
+    "section": "prop:allB",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe complement has a named coordinate outside the microcore. We separate configurations far from full equality from those near equality. The former use a two-phase coarea estimate; the latter use the full collision vanishing after all derivatives have been taken.\n"
+  },
+  {
+    "id": "LT-E069",
+    "section": "7, Proposition 7.6",
+    "reason": "Signpost the first coarea regime.",
+    "original_line": 1588,
+    "old": "On the far support \\(\\rho\\ge\\rho_N\\), the maximal separation",
+    "new": "\\smallskip\\noindent\\textit{Far from full equality.}\nOn the far support \\(\\rho\\ge\\rho_N\\), the maximal separation"
+  },
+  {
+    "id": "LT-E070",
+    "section": "8",
+    "reason": "Explain the exhaustive mechanisms and the separate large-current route.",
+    "original_line": 1698,
+    "old": "\\label{sec:sectors}",
+    "new": "\\label{sec:sectors}\n\nThe remaining intermediate sectors contain a compact coordinate.\nA left root gives a modulus gap; a mixed compact/branch pair supplies\na stable two-phase field; and the all-right sector uses strict phase\ncurvature. The large current parameter is handled separately on a\nprotected complex disk. These estimates complete the targets stated\nin Section~\\ref{sec:tailreduction}."
+  },
+  {
+    "id": "LT-E071",
+    "section": "prop:mixed",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe keep the compact angle and the regular branch coordinate together. This hybrid choice preserves the occupancy sums on the moving plateaus and permits differentiation with the complete Jacobian before coarea is used.\n"
+  },
+  {
+    "id": "LT-E072",
+    "section": "prop:compactR",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWith all roots in the compact right region, strict curvature replaces the branch slope separation. The rational atlas resolves pair coincidences while retaining the full-collision vanishing needed to close the integration-by-parts boundary terms.\n"
+  },
+  {
+    "id": "LT-E073",
+    "section": "lem:protected",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nFor the large current parameter, the named upper index supplies damping that remains after a small complex perturbation. We use this margin to choose the disk, allow controlled compact-root inflation, and retain both product gaps.\n"
+  },
+  {
+    "id": "LT-E074",
+    "section": "prop:largeS",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nApply Cauchy to the protected current slice, sum its Gaussian particle-number envelope, and integrate the remaining current-parameter power. The resulting stronger estimate implies the target budget.\n"
+  },
+  {
+    "id": "LT-E075",
+    "section": "prop:highKS",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nAt high particle number, the original parameter disk and the complete-pair Gaussian already give the required bound. This argument is independent of the large-current estimate.\n"
+  },
+  {
+    "id": "LT-E076",
+    "section": "9",
+    "reason": "Connect summation, noncancellation, geometry, and physical multiplication.",
+    "original_line": 2030,
+    "old": "\\label{sec:conclusion}",
+    "new": "\\label{sec:conclusion}\n\nWe now combine the estimates in the order required for the full\nsusceptibility. First, every differentiated tail is absolutely smaller\nthan the first singular term. Next, the product rule preserves its\nnonzero leading coefficient in the normalized observable. Symmetry and\ndensity then extend the local obstruction to the whole unit circle;\nlocal inverse-temperature branches transfer it to the physical response."
+  },
+  {
+    "id": "LT-E077",
+    "section": "thm:tail",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nNormal convergence first identifies the derivatives of the series with sums of derivatives in the exterior. We then split the already differentiated tail into the stated windows and compare each bound with the singular scale.\n"
+  },
+  {
+    "id": "LT-E078",
+    "section": "thm:conditional",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe use all three parts of the series decomposition: finitely many lower orders, the first singular order, and the infinite upper tail. The derivative range in the tail hypothesis is exactly what the physical product rule needs.\n"
+  },
+  {
+    "id": "LT-E079",
+    "section": "thm:nb",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe hypotheses of the preceding implication have now all been established internally for the normalized exterior series.\n"
+  },
+  {
+    "id": "LT-E080",
+    "section": "cor:smootharc",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nDensity alone gives an obstruction on every arc. To obtain the stated finite derivative order, choose a prime grid fine enough to place one selected point inside the arc and then use the selected-point obstruction.\n"
+  },
+  {
+    "id": "LT-E081",
+    "section": "A",
+    "reason": "Explain why the algebraic appendix is needed.",
+    "original_line": 2179,
+    "old": "\\section{Cyclotomic field intersection}",
+    "new": "\\section{Cyclotomic field intersection}\n\nThis appendix supplies the field-intersection fact used to exclude\nsmaller even Nickel orders. Its proof also makes explicit the minimal\npolynomial input behind the sparse cosine relation."
+  },
+  {
+    "id": "LT-E082",
+    "section": "lem:cyclotomic",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nWe prove the degree statement by the elementary cyclotomic irreducibility argument and then compare the two field degrees. The coprimality assumption is used in this comparison.\n"
+  },
+  {
+    "id": "LT-E083",
+    "section": "B",
+    "reason": "Clarify the integration order and separate scalar evaluation from formal nonvanishing.",
+    "original_line": 2226,
+    "old": "\\section{The order of local integrations}\\label{app:local}",
+    "new": "\\section{The order of local integrations}\\label{app:local}\n\nThe order of integration is part of the first-term proof. This appendix\nexplains why the mean residue comes before the shape scaling and then\nevaluates the same nonzero coefficient in closed form. The scalar\nfactorial evaluation is a manuscript calculation; the formalized\nnoncancellation argument uses the nonzero period."
+  },
+  {
+    "id": "LT-E084",
+    "section": "C",
+    "reason": "Distinguish finite-order algebra from interior compact convergence.",
+    "original_line": 2305,
+    "old": "\\section{Pfaffian identities and exterior convergence}\\label{app:pfaffian}",
+    "new": "\\section{Pfaffian identities and exterior convergence}\\label{app:pfaffian}\n\nThe tail estimates use the Pfaffian identity at finite particle number.\nThe full-sum argument also needs convergence on compact subsets of the\nexterior before any boundary limit is taken. The two facts are proved\nhere with their distinct domains and constants."
+  },
+  {
+    "id": "LT-E085",
+    "section": "lem:schur",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nInduction reduces the rational identity to its residues and its value at a regular point. This also fixes the sign convention used in the Pfaffian estimates.\n"
+  },
+  {
+    "id": "LT-E086",
+    "section": "D",
+    "reason": "Organize the technical appendix around its analytic purpose and operation order.",
+    "original_line": 2391,
+    "old": "\\label{app:lie}",
+    "new": "\\label{app:lie}\n\nThis appendix gives the differentiation rule used in the intermediate\nsectors. The integration domain and real cutoffs stay fixed. A transport\nfield moves the parameter derivative away from the two global phases,\nleaving simple kernels. The recurrence then counts the remaining poles,\nand the flux estimates justify every integration by parts before coarea."
+  },
+  {
+    "id": "LT-E087",
+    "section": "lem:lie",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nApply the transport identity once on a punctured fixed domain, retain its boundary flux, and then iterate. The assumed flux limits are required at every stage, which is why the sector arguments verify them through the full derivative order.\n"
+  },
+  {
+    "id": "LT-E088",
+    "section": "lem:jets",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nExpand one application of the full transport operator and track how it changes the numerator derivatives and the pole powers. The five cases below preserve the two displayed filtration inequalities at every iteration.\n"
+  },
+  {
+    "id": "LT-E089",
+    "section": "D.5",
+    "reason": "Replace revision terminology by the product-rule invariant.",
+    "original_line": 2649,
+    "old": "\\paragraph{Coupled occupancy and changed pairs (rc4 repair).}",
+    "new": "\\paragraph{Coupled occupancy and the number of changed pairs.}"
+  },
+  {
+    "id": "LT-E090",
+    "section": "E",
+    "reason": "State the purpose of the ordered constants before the detailed list.",
+    "original_line": 2737,
+    "old": "\\section{Constant and quantifier dependencies}\\label{app:constants}",
+    "new": "\\section{Constant and quantifier dependencies}\\label{app:constants}\n\nThe constants are chosen in the order below. This order prevents a\nlater disk or cutoff choice from weakening an earlier support or pair\nmargin. The boundary point and derivative order are fixed first; only\nafter the finitely many common choices is the radial parameter sent to\nzero. No uniformity over the dense family of points is required."
+  },
+  {
+    "id": "LT-E091",
+    "section": "F",
+    "reason": "Frame normalization and the manuscript-only amplitude comparison.",
+    "original_line": 2872,
+    "old": "\\label{app:normalization}",
+    "new": "\\label{app:normalization}\n\nThis appendix connects the offsite contour coefficients to the full\nphysical observable. It keeps track of the onsite term, the four\nangular charts, and both physical prefactors. The literature-amplitude\ncomparison is a separate manuscript calculation and is not an extra\nphysical premise for the natural-boundary proof."
+  },
+  {
+    "id": "LT-E092",
+    "section": "prop:amplitudecomparison",
+    "reason": "Explain the proof objective and the role of its stages; retain every original derivation.",
+    "original_line": null,
+    "old": "\\begin{proof}",
+    "new": "\\begin{proof}\nThe comparison uses the same physical branch and the same full-site integral on both sides. We first reconstruct the scalar singular term from its radial derivative, then account for the four charts and the observable-dependent prefactors.\n"
+  },
+  {
+    "id": "LT-E093",
+    "section": "G",
+    "reason": "Make the appendix serve the mathematical reader while preserving its anchor.",
+    "original_line": 3143,
+    "old": "\\section{Audit map, coverage, and status}\\label{app:auditmap}",
+    "new": "\\section{Proof map, coverage, and formal scope}\\label{app:auditmap}"
+  },
+  {
+    "id": "LT-E094",
+    "section": "G",
+    "reason": "Introduce proof navigation and formal scope without repeated audit rhetoric.",
+    "original_line": 3144,
+    "old": "This appendix records the structure of the proposed proof. It is not\nevidence for any estimate in the preceding sections. A correct\ndependency map and a complete list of source files do not certify\nthe mathematics.",
+    "new": "This appendix collects the dependencies and the complete tail-sector\ncoverage. It also separates the analytic construction, the external\nphysical identification, and the statements represented by the original\nLean source. The estimates themselves are proved in the sections cited."
+  },
+  {
+    "id": "LT-E095",
+    "section": "G.1",
+    "reason": "Name the physical and analytic interfaces directly.",
+    "original_line": 3149,
+    "old": "\\subsection{External inputs and internally claimed estimates}",
+    "new": "\\subsection{Physical inputs and internal analytic estimates}"
+  },
+  {
+    "id": "LT-E096",
+    "section": "G.1",
+    "reason": "Retain source roles while moving general provenance limitations out of proof prose.",
+    "original_line": 3168,
+    "old": "The bibliography records these\nroles; it is not a certificate that every related publication has\nbeen checked for priority.",
+    "new": "The bibliography records these distinct roles in the argument."
+  },
+  {
+    "id": "LT-E097",
+    "section": "G.1",
+    "reason": "State the preserved full-sum scope affirmatively.",
+    "original_line": 3172,
+    "old": "The remaining analytic statements are proposed internal derivations\nfrom the displayed formulas. In particular, the pair compactness\nestimates, all protected disks, the high-order Lie bounds, and\nthe complete sector sum require adversarial checking.\nThe paper asserts a candidate proof of the full bulk statement;\nit does not replace that statement by a diagonal susceptibility,\na finite sum, or a conditional numerical result.",
+    "new": "The pair compactness estimates, protected disks, high-order Lie bounds,\nand complete sector sum are internal analytic derivations from the\ndisplayed formulas. Together they concern the full bulk response: the\nsite sum, the onsite contribution, and every positive even particle\nnumber remain part of the observable."
+  },
+  {
+    "id": "LT-E098",
+    "section": "G.4",
+    "reason": "Use a neutral mathematical navigation heading.",
+    "original_line": 3285,
+    "old": "\\subsection{Load-bearing checks for an adversarial reader}",
+    "new": "\\subsection{Interfaces in the proof}"
+  },
+  {
+    "id": "LT-E099",
+    "section": "G.4",
+    "reason": "Explain why the checklist matters to reading the proof.",
+    "original_line": 3286,
+    "old": "The most direct way to disprove the proposed argument is to\nfind a failure of one of the two estimates\n\\eqref{eq:roadmapfirst}--\\eqref{eq:roadmaptail}.\nThe following checks expose their sensitive interfaces:",
+    "new": "The two estimates \\eqref{eq:roadmapfirst}--\\eqref{eq:roadmaptail}\nmeet at the following interfaces. Each item identifies a normalization,\nsupport, or uniformity requirement used by the conclusion:"
+  },
+  {
+    "id": "LT-E100",
+    "section": "G.5–G.7",
+    "reason": "Move duplicated historical process narrative to a verbatim companion; retain every distinct construction qualification, physical premise, formal boundary, authorship and rights disclosure.",
+    "original_line": 3317,
+    "old": "\\subsection{Reconstruction boundary}\nRevision 2 retains the first nonzero-angle prime family and\nthe final thirteen-sector tail route of checkpoint v38.\nIt expands the real-cutoff jet recurrence, separates the\nradial-center and protected-disk arguments, and exposes the\nhybrid measure and constant choices. These additions are\nmathematical exposition to audit, not an external validation.\n\nRevision 3 corrects the exterior convergence paragraph in\nAppendix~\\ref{app:pfaffian}: global inverse products are bounded\nexponentially in \\(N\\), rather than independently of \\(N\\).\nThe displayed Pfaffian--factorial bound absorbs this cost, and\nthe compact-set Cauchy estimate makes the differentiated\nnormal convergence explicit. This revision leaves the main\nclaim, boundary-point family, and tail estimates unchanged.\n\nRevision 4 corrects the one-body argument in\nLemma~\\ref{lem:originaldisk}: the branch-center displacement\non a complex parameter disk includes \\(|s-\\se|\\).\nThe two-region estimate now retains this perturbation and\nproves the same occupancy-independent integrable majorant.\nNo contour, particle-number window, or main claim is changed.\n\nRevision 5 incorporates the explicitly identified first-term gluing\nsupplement from the subsequent full-chain audit. Section~\\ref{sec:first}\nnow constructs a \\(y\\)-only angular partition before taking any\n\\(x\\) residues, replaces its smooth mean cutoffs only across separated\nedge regions, and gives a quantitative finite-cover estimate for the\ncomplement. These additions connect the local residue calculation to\nthe whole double torus. They are new exposition and supporting\nderivations relative to revision 4, not a claim that revision 4 already\ncontained this construction. The tail estimates and the main target\nare unchanged; the audit's other verification labels are not imported\nas premises.\n\nRevision 6 makes four further interfaces explicit following a\nseparate audit of revision 5: compact upper supports and branch\nplateaus; a periodic left/right partition whose extra seam lies\nwhere all relevant weighted jets vanish; Cauchy's inequality\napplied to the complete holomorphic \\(F_N\\); and exponential-scale\ninclusions imposed at every finite tail order. The related negative\nanchor scale is chosen with the same uniform inclusion. These are\nexplicit choices and local justifications within the existing proof\nroute. The model, theorem, point family, derivative range, and\nparticle-number windows are unchanged. No audit verdict is used\nas a mathematical premise.\n\nRevision 7 corrects the logarithmic expansion of the microcore\nmajorant by displaying its negative \\(N^2\\log N/2\\) term. It also\nrecords the angle and power conventions required for a comparison\nwith the review amplitude, and explicitly includes the unwrapped\nphase lengths and period counts in near-equality coarea estimates.\nThe physical-state convention is stated at the outset; the current\nE1 integration specifies the \\(+\\) boundary-condition state. These are local corrections and\nclarifications; the two main estimates, point family, derivative\nrange, and particle windows are unchanged. The received audit's\nfailure to find a counterexample is not an additional proof premise.\n\nRevision 8 supplies the missing historical and methodological\nattribution, including the diagonal noncancellation argument and the\nupstream correlation representation. It distinguishes the proposed\nbulk estimates from the existing proof architecture. The endpoint\nwording in Lemma~\\ref{lem:contraction} now asserts strictness only\nwithin groups and explicitly permits cross-group equality. Inverse\ntemperature and the inner branch cutoff have distinct symbols from\nthe geometric angle \\(\\beta\\). The selected family, two central\nestimates, derivative range, and particle windows are unchanged.\nThe separate revision record states the checks actually performed;\nearlier audit verdicts are attached to their earlier manuscript\nversions and are not automatically new audits of revision 8.\n\nEarlier routes involving a jointly absolute mean/shape\nlimit, a multiplier obtained by dividing by the original\nVandermonde, a central connector contour, or a degenerate\nfour-particle endpoint amplitude are not assumptions of\nthis manuscript. The separate source-coverage record names\ntheir replacements in v38. A historical file being\npresent in the checkpoint is not by itself a reason to\ninclude its superseded argument in the proof.\n\nThe accompanying release records identify file hashes, the active-source\nmapping, and the edits from the preceding reconstruction.\nThose checks establish provenance and textual coverage.\nThey do not establish truth of any proposition, settle\nliterature priority, or constitute a completed independent\nadversarial audit.\n\n% END SOURCE\n\n\\subsection*{Historical rc4 W2 repair}\nVersion 0.1-rc4 adds the explicit support geometry,\nlocal root-continuation and complete-pair transfer arguments,\nreserved disk slack, tau-dependent protected-disk restrictions,\nand coupled-occupancy product-rule count. Lemma~\\ref{lem:originaldisk}\nnow explicitly confines its pair estimates to \\(K\\) and named\nStokes supports. The theorem, point family, derivative range and\nparticle windows are unchanged. These are new scoped proof repairs,\nnot arguments attributed retrospectively to rc3. The supplied\naudits and finite diagnostics were treated as untrusted evidence.\nThis candidate is prepared for public review. The subsequent E1 integration\nchecks the primary-source interface, specifies the \\(+\\) state, and\nreconciles the published full-site coefficient with the existing\noffsite formulas. It changes no W1/W2 estimate or theorem statement.\nThat analytic release did not claim human, peer, or proof-assistant certification.\n\n\\subsection*{Historical rc3 status and AI assistance}\nVersion 0.1-rc3 incorporates the W1 proof-interface repairs described in this revision record.\nIt adds the current support partition and deformed branch geometry,\nrecounts the remaining pair factors after differentiation, corrects\nthe near-collision slope cost, and expands the constant dependencies.\nThese substantive proof repairs received a scoped AI analytic audit;\nthe historical rc2 records retain their original inputs and verdicts.\nThree problem-only reconstruction runs returned partial results;\nnone reconstructed the complete natural-boundary proof. One\nmethod-informed run claimed the full tail estimate while explicitly\nleaving its whole-integral first singular term (node I3) unresolved.\nIts tail claim has not received a complete independent verification\nby the receiving workflow. The different point families used in\nsome runs do not allow their conclusions to be combined silently.\nThe repository separates these run claims from manuscript claims,\nversion-specific audit reports, and finite computational checks.\n\nGenerative AI was used extensively in research exploration,\nmathematical derivation, manuscript writing, code, internal audits,\nand reconstruction attempts. Dehao Lin is the named human author\nand public contact. No specific division of mathematical contributions\nor line-by-line human verification is asserted here.\nAn AI audit verdict is not proof certification. No independent human\nexpert certification is claimed. Formal verification has the statement\nand trust boundaries specified for the current candidate below.\nThe author declares no additional funding or competing interests\nfor this project. Project text is offered under CC BY 4.0 to the extent\nthe author holds rights in it; project code is offered under the MIT\nlicense. Cited third-party works retain their own rights.\nThe accompanying provenance record states\nthe limits of the available historical access evidence.\n\n\\subsection*{Rc5 internal regularity and formal scope}\nVersion 0.1-rc5 was paired with Lean candidate 0.3.0-rc1.\nThe original rc4 source, PDF and label index remain separate frozen\nartifacts. The internal lower-order proof removes E3 from the canonical\nFIRST and natural-boundary theorem statements and their proof dependency\nchain. The constructed normalized exterior series has no external physics\ninput; its identification with the physical susceptibility uses E1 and E2.\nThe stronger selected-contour pair bound was already proved by the earlier\nLean source; this revision makes that strength explicit in the manuscript.\nThe closed-form amplitude evaluation and finite-prime covering calculation\nare analytic manuscript results, not new Lean exports of those formulas.\nLean proves the actual selected-point real \\(C^k\\) obstruction with the tail\ninternally discharged. The all-arc quantitative covering is not formalized.\n\n\\subsection*{Rc6 complete-amplitude comparison and formal scope}\nThe current manuscript is 0.1-rc6, paired with Lean candidate 0.3.0-rc2.\nProposition~\\ref{prop:amplitudecomparison} identifies the full-site\nobservable from the review's cited integral, fixes the exterior branch,\nand proves the four-chart conversion of its printed scalar. It also\ndistinguishes the lower double-contour coefficient from the full offsite\nlattice coefficient and includes both physical prefactors. The new\nconversion and radial Taylor reconstruction are manuscript results;\nthe factorial and literature-amplitude identities are not new Lean exports.\nThe production Lean theorem sources and their mathematical dependency\nchain are unchanged from the verified rc5/0.3.0-rc1 candidate. Updated\nsource correspondence and verification identities belong to this revision;\nthe preserved commit records the earlier candidate without reassigning its\nreceipts to new bytes.\n\nExact build, transitive-dependency, axiom, kernel-replay, and PDF receipts\nare supplied separately with their candidate hashes. They do not extend\nearlier AI audit verdicts to these new bytes. Dependency binary/source\ncorrespondence remains trusted, and build and replay use the same Lean\nkernel implementation. Neither these internal checks nor compilation is\nindependent human review or a literature-priority certificate.\n\n",
+    "new": "\\subsection{Construction details retained in this edition}\nThe present proof uses the first nonzero-angle prime family and all\nthirteen tail sectors. Its real-cutoff recurrence, hybrid measures,\nconstant choices, and separate radial-center and protected-disk\narguments are given in full. In exterior convergence, the inverse\nproducts cost an exponential factor in \\(N\\); the\nPfaffian--factorial bound absorbs that factor, and compact-set Cauchy\nestimates give differentiated normal convergence. In the original disk,\nthe real branch-center displacement includes the complex parameter\nperturbation \\(|s-\\se|\\). The two-region estimate retains it and yields the\noccupancy-independent integrable majorant.\n\nThe first-term calculation uses a partition depending only on the\n\\(y\\) angles, followed by \\(x\\) residues, separated mean-edge replacements,\nand a finite-cover complement estimate. The support construction retains\ncompact upper supports and branch plateaus, and its periodic seam lies\nwhere all relevant weighted jets vanish. Cauchy's inequality is applied\nto the complete holomorphic selected integral \\(F_N\\). The exponential support\ninclusions hold at every finite tail order, including the negative\nanchor scale. The microcore logarithm retains its negative\n\\(N^2\\log N/2\\) term. Near-equality coarea retains the\nunwrapped phase lengths and their period counts. The ordered \\(+\\) pure-phase\nconvention and the full-site/offsite normalization are explicit.\n\nThe complete-pair estimates assert strictness within groups and allow\ncross-group equality. Their continuation uses the actual supports,\nreserved disk slack, restrictions depending on the deformation strength,\nand the coupled-occupancy product-rule count. The original-disk pair\nestimate applies to the \\(K\\) and named-current supports. The current\npartition, deformed branch geometry, remaining-pair count, near-collision\nslope cost, and ordered constants are included, with \\(N\\) restricted to its stated\nwindow. The proof does not use\na jointly absolute mean/shape limit, division by the original\nVandermonde, a central connector contour, or a degenerate four-particle\nendpoint amplitude. Inverse temperature and the inner branch cutoff\nremain distinct from the geometric angle \\(\\beta\\).\n\n\\subsection{Formal scope and physical identification}\nThe original Lean source proves the natural-boundary theorem for the\nconstructed normalized exterior series without an external physics\npremise. Its canonical first-term and final dependency chain includes\nthe internal lower-order radial bound; the former external regularity\ninput E3 is absent from that chain. The stronger selected-contour pair\nbound is also represented in the source. The physical interpretation\nuses the explicit E1 correlation representation in the \\(+\\) state and\nthe E2 magnetization identity.\n\nMore precisely, the terminal declaration\n\\texttt{IsingBulk.Final.theorem\\_nb\\_physical} takes positive coupling\nand the explicit premises \\texttt{PhysicalSusceptibilityE1} and\n\\texttt{YangMagnetizationE2}. It proves analyticity of the constructed\nphysical branch on the right exterior, identification with the supplied\nphysical susceptibility on the real seed interval above sixteen, and\nnonextension through every unit-circle point for the specified family\nof local inverse-temperature branches. The seed interval is the literal\nidentification conclusion of this declaration; arbitrary supplied\nphysical data are not asserted to be holomorphic throughout the\nexterior. The local-branch formulation retains the inverse temperature's\nmonodromy.\n\nLean also proves the selected-point real \\(C^k\\) smoothness\nobstruction with the tail discharged internally. The closed factorial\namplitude, the finite-prime covering calculation for all arcs, and\nProposition~\\ref{prop:amplitudecomparison}'s complete-amplitude conversion\nand radial Taylor reconstruction remain manuscript results. The\nfactorial and literature-scalar identities are not new Lean exports.\nThe physical prefactors and the distinction between lower\n double-contour, full offsite, and full-site coefficients are retained\nin Appendix~\\ref{app:normalization}.\n\n\\subsection{Source and assistance provenance}\nThis reader edition uses the exact frozen LT manuscript v0.1-rc6 and\nits original Lean source closure. The source records pair that\nmanuscript with Lean candidate 0.3.0-rc2; the production theorem chain\nwas unchanged from the rc5/0.3.0-rc1 candidate. Earlier frozen editions\nretain their own identities and receipts. The accompanying editorial\nledger, literal source-type extracts, and correspondence report describe\nthis edition's checks. No fresh Lean build or kernel replay is claimed\nfor the editorial production.\n\nThe companion \\path{PROVENANCE_HISTORY.tex} preserves the full\nversion-history narrative verbatim. It records the earlier\nreconstruction runs, version-specific audits, and the limits of their\nverification. Such historical reports do not supply mathematical\npremises for the present proof, certify literature priority, or extend\ntheir verdicts to newly edited bytes. Existing formal receipts retain\ntheir source and dependency trust boundaries; build and replay used the\nsame Lean kernel implementation.\n\nGenerative AI was used extensively in research exploration,\nmathematical derivation, manuscript writing, code, internal audits,\nand reconstruction attempts. Dehao Lin is the named human author\nand public contact. No specific division of mathematical contributions\nor line-by-line human verification is asserted. No independent human\nexpert certification or exhaustive literature-priority clearance is\nclaimed. The author declares no additional funding or competing\ninterests. Project text is offered under CC BY 4.0 to the extent the\nauthor holds rights in it, and project code under the MIT license;\ncited third-party works retain their own rights.\n\n"
+  },
+  {
+    "id": "LT-E101",
+    "section": "G.3 layout",
+    "reason": "Give the sector table safe horizontal room without changing any cell.",
+    "original_line": 3218,
+    "old": "\\small\n\\begin{longtable}{>{\\raggedright\\arraybackslash}p{.06\\textwidth}",
+    "new": "\\small\n\\setlength{\\tabcolsep}{4pt}\n\\begin{longtable}{>{\\raggedright\\arraybackslash}p{.06\\textwidth}"
+  },
+  {
+    "id": "LT-E102",
+    "section": "G.3 layout",
+    "reason": "Restore standard table spacing after the sector table.",
+    "original_line": 3274,
+    "old": "\\end{longtable}\n\\normalsize\n\nThe upper inverse branch",
+    "new": "\\end{longtable}\n\\setlength{\\tabcolsep}{6pt}\n\\normalsize\n\nThe upper inverse branch"
+  },
+  {
+    "id": "LT-E103",
+    "section": "contents layout",
+    "reason": "Start the contents on its own page and prevent its heading from being stranded at the end of the introduction.",
+    "original_line": 235,
+    "old": "\\tableofcontents",
+    "new": "\\clearpage\n\\tableofcontents\n\\clearpage"
+  },
+  {
+    "id": "LT-E104",
+    "section": "7 layout",
+    "reason": "Stabilize a theorem boundary already at the next page so its auxiliary page reference agrees with its PDF destination.",
+    "original_line": 1328,
+    "old": "\\begin{lemma}[The original parameter disk]",
+    "new": "\\clearpage\n\\begin{lemma}[The original parameter disk]"
+  }
+]
