@@ -1,6 +1,5 @@
 name: Unified Ising publication acceptance
 on:
-  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
