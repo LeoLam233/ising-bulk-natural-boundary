@@ -13,6 +13,14 @@ The older three/four-result automatic filters now exclude both `lean/IsingBulk/P
 
 Future HT22, ANISO F002 and JOINT F001 routes must have separate namespaces, roots, immutable identities and acceptance workflows. Add exclusions only when their dependency ownership has been established; existing `lean/**` routing remains conservative until then. No future route is claimed complete by reserving this design.
 
+| Reserved future route | Manuscript path | Independent source directory and root | Dedicated workflow |
+|---|---|---|---|
+| HT22 | `paper/ht/pser/` | `lean/IsingBulk/HT22/` and `lean/IsingBulk/HT22.lean` | `ht22-lean-acceptance.yml` |
+| ANISO F002 | `paper/aniso/pser/` | `lean/IsingBulk/AnisotropicF002/` and `lean/IsingBulk/AnisotropicF002.lean` | `aniso-f002-lean-acceptance.yml` |
+| JOINT F001 | `paper/joint/pser/` | `lean/IsingBulk/JointF001/` and `lean/IsingBulk/JointF001.lean` | `joint-f001-lean-acceptance.yml` |
+
+These are proposed integration locations, with no source installation, formal-completion claim or publication in this LT22 release. Each future route needs its own proven source closure and shared-dependency review before its old-suite exclusions are added.
+
 ## Policy
 
 The previously published LT, HT, ANISO C001 and JOINT C002 Lean sources remain immutable for a Reader-only documentation change. The complete Reader editions under `paper/{lt,ht,aniso,joint}/reader/` do not change proof objects or their dependencies. Such changes must not trigger source-clean Lean builds or fresh kernel replays.
