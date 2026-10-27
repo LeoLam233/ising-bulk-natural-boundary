@@ -47,4 +47,4 @@ For isotropic couplings, s = sinh(2βJ); fixed-ratio anisotropy continues z = 2�
 
 **Reader** means the independently checked, exposition-improved complete paper. **Original/frozen** identifies its mathematical authority; some earlier **publication** editions changed only author/date metadata. Historical labels such as C001, C002 and HT-1.0 belong in the [version records](docs/VERSIONS.md), not in the main paper titles.
 
-[Paper editions](paper/README.md) · [Repository and theorem map](REPOSITORY_MAP.md) · [中文首页](README.zh.md) · [Authorship](AUTHORSHIP.md) · [MIT code license](LICENSE) · [CC BY 4.0 document license](LICENSE-DOCUMENTATION.md)
+[Paper editions](paper/README.md) · [Repository and theorem map](REPOSITORY_MAP.md) · [Evidence, reproducibility and citations](docs/EVIDENCE_AND_REPRODUCIBILITY.md) · [中文首页](README.zh.md) · [Authorship](AUTHORSHIP.md) · [MIT code license](LICENSE) · [CC BY 4.0 document license](LICENSE-DOCUMENTATION.md)

@@ -47,4 +47,4 @@
 
 **Reader 易读版**是独立核查过的完整行文改善稿；**原始/冻结版**是精确数学基准；较早的 **publication 署名版**有些只修改作者和日期元数据。C001、C002、HT-1.0 等内部标识保留在[版本记录](docs/VERSIONS.md)，不作为论文正式名称。
 
-[论文版本目录](paper/README.md) · [仓库与定理对应](REPOSITORY_MAP.md) · [English](README.md) · [作者与来源](AUTHORSHIP.md) · [MIT 源码许可](LICENSE) · [CC BY 4.0 文档许可](LICENSE-DOCUMENTATION.md)
+[论文版本目录](paper/README.md) · [仓库与定理对应](REPOSITORY_MAP.md) · [审计证据、复现与引用导航](docs/EVIDENCE_AND_REPRODUCIBILITY.md) · [English](README.md) · [作者与来源](AUTHORSHIP.md) · [MIT 源码许可](LICENSE) · [CC BY 4.0 文档许可](LICENSE-DOCUMENTATION.md)

@@ -9,7 +9,7 @@ First-time readers should open the **reviewed Reader editions** below. The origi
 | Isotropic high-temperature bulk susceptibility | [PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | [Frozen original manuscript](paper/ht/frozen/manuscript.pdf) | [Exact theorem source](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
 | Isotropic low-temperature connected bulk susceptibility | [PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Canonical v0.1-rc6 manuscript](paper/next/manuscript.pdf) | [Exact theorem source](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
 
-Reader manuscripts are editorial editions, not newly reconstructed mathematical proofs. For physical-premise and manuscript-only scope boundaries consult the result-specific proof maps and [paper index](paper/README.md).
+Reader manuscripts are editorial editions, not newly reconstructed mathematical proofs. For physical-premise and manuscript-only scope boundaries consult the result-specific proof maps and [paper index](paper/README.md) and the [evidence and citation guide](docs/EVIDENCE_AND_REPRODUCIBILITY.md).
 
 ## Source ownership
 
