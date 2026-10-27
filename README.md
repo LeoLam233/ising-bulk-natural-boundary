@@ -1,40 +1,50 @@
 # Natural boundaries of the square-lattice Ising susceptibility
 
-**Four research results · distinct physical observables and theorem endpoints · one shared Lean library**
+This repository presents four mathematical developments on the **complete zero-field bulk susceptibility** of the infinite square-lattice Ising model, accompanied by Lean formalizations. The results range from separate isotropic low- and high-temperature proofs to fixed positive anisotropy ratios and a parent theorem in two independent complex couplings.
 
-This repository presents the complete bulk susceptibility on the infinite square lattice: separate isotropic low-temperature and high-temperature proofs, a fixed-ratio anisotropic result covering both phases, and the jointly holomorphic parent in two independent complex couplings. Every result retains its own manuscript, physical inputs, citation and reproducible Lean endpoint.
+**Recommended starting point: the four complete, independently reviewed Reader editions.** They improve the exposition while preserving the governing mathematical statements, hypotheses and proof mechanisms. The original manuscripts and the corresponding fixed Lean source declarations remain available for exact comparison.
 
-- **JOINT C002:** [manuscript](paper/joint/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Joint/Final/FullConclusion.lean) · [build](docs/joint/BUILD_AND_VERIFY.md) · [citation](joint/CITATION.cff).
-- **ANISO C001:** [manuscript](paper/aniso/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [build](docs/aniso/BUILD_AND_VERIFY.md) · [citation](anisotropic/CITATION.cff).
-- **Isotropic HT:** [manuscript](paper/ht/publication/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [build](docs/ht/BUILD_AND_VERIFY.md) · [citation](high-temperature/CITATION.cff).
-- **Isotropic LT:** [manuscript](paper/next/manuscript.pdf) · [Lean endpoint](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [build](lean/README.md) · [citation](low-temperature/CITATION.cff).
+## Papers
 
-## Joint independent complex couplings — JOINT C002
+| Mathematical result | Recommended reading | Governing original | Lean formalization |
+|---|---|---|---|
+| **Joint natural boundaries with two independent complex couplings** | [Reader PDF](paper/joint/reader/manuscript.pdf) · [TeX](paper/joint/reader/manuscript.tex) | [Frozen 59-page manuscript](paper/joint/frozen/manuscript.pdf) | [Lean theorem](lean/IsingBulk/Joint/Final/FullConclusion.lean) |
+| **Fixed-ratio anisotropic natural boundaries** | [Reader PDF](paper/aniso/reader/manuscript.pdf) · [TeX](paper/aniso/reader/manuscript.tex) | [Frozen 38-page manuscript](paper/aniso/frozen/manuscript.pdf) | [Lean theorem](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) |
+| **Isotropic high-temperature bulk susceptibility** | [Reader PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | [Frozen original manuscript](paper/ht/frozen/manuscript.pdf) | [Lean theorem](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
+| **Isotropic low-temperature connected bulk susceptibility** | [Reader PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Canonical v0.1-rc6 manuscript](paper/next/manuscript.pdf) | [Lean theorem](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
 
-Theorem 1.1 ∧ Theorem 1.2 ∧ Corollary 1.3: complete joint HT/LT susceptibilities, every finite positive ratio, full isotropic descendants, all lattice sites and particle orders, every finite physical frontier point, and quantitative transverse/compact-family clauses. The two common real spin/Gibbs premises and χ = β X are [explicit](docs/joint/PHYSICAL_INPUTS.md).
+## Scope of the four results
 
-[Explore JOINT](joint/README.md) · [Manuscript](paper/joint/publication/manuscript.pdf) · [Lean: `IsingBulk.Joint.full_joint_conclusion`](lean/IsingBulk/Joint/Final/FullConclusion.lean) · [Build](docs/joint/BUILD_AND_VERIFY.md) · [Citation](joint/CITATION.cff)
+### Joint natural boundaries with two independent complex couplings
 
-## Fixed-ratio anisotropic result — ANISO C001
+The two-complex-variable parent theorem treats full high- and low-temperature bulk susceptibilities, their positive-ratio restrictions and isotropic descendants, and quantitative boundary obstructions. Its common real physical inputs are explicit premises.
 
-Every finite `J > 0`, `lam > 0`; all lattice sites and infinite odd/even particle orders. Natural boundaries at every finite point of the correct HT lens/LT epigraph frontiers, plus HT bilateral and LT plus-state right-sided uniform-field responses. The explicit real-spin and Gibbs-field inputs are [specified here](docs/aniso/PHYSICAL_INPUTS.md).
+[Result and scope](joint/README.md) · [Build and verification](docs/joint/BUILD_AND_VERIFY.md) · [Citation](joint/CITATION.cff)
 
-[Explore ANISO](anisotropic/README.md) · [Manuscript](paper/aniso/publication/manuscript.pdf) · [Lean: `IsingBulk.Anisotropic.full_uniform_field_conclusion`](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [Build](docs/aniso/BUILD_AND_VERIFY.md) · [Citation](anisotropic/CITATION.cff)
+### Fixed-ratio anisotropic natural boundaries
 
-## Isotropic high-temperature result — HT-1.0 / Lean 1747
+For every fixed finite positive coupling ratio, the full high- and low-temperature susceptibilities have the stated natural boundaries on their lens and epigraph domains. The field-derivative conventions and physical premises remain distinct and explicit.
 
-Complete disordered-phase susceptibility for `0 < s < 1`, with every odd-particle order and the unit circle approached from inside. The physical-germ theorem explicitly takes the published real-temperature full-bulk angular representation.
+[Result and scope](anisotropic/README.md) · [Build and verification](docs/aniso/BUILD_AND_VERIFY.md) · [Citation](anisotropic/CITATION.cff)
 
-[Explore HT](high-temperature/README.md) · [Manuscript](paper/ht/publication/manuscript.pdf) · [Lean: `IsingBulk.HT.Final.publishedPhysicalSusceptibility_germ_natural_boundary`](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) · [Build](docs/ht/BUILD_AND_VERIFY.md) · [Citation](high-temperature/CITATION.cff)
+### Isotropic high-temperature bulk susceptibility
 
-## Isotropic low-temperature result — manuscript v0.1-rc6 / Lean v0.3.0-rc2
+The disordered-phase theorem covers the complete odd-particle series, onsite contribution and all lattice sites. The unit circle is a natural boundary; the published real-temperature angular representation is an explicit physical premise.
 
-Connected ordered pure-phase susceptibility for `s > 1`, with every positive even-particle order, spontaneous magnetization squared subtracted, and the unit circle approached from outside. Physical identification retains the documented E1/E2 interface.
+[Result and scope](high-temperature/README.md) · [Build and verification](docs/ht/BUILD_AND_VERIFY.md) · [Citation](high-temperature/CITATION.cff)
 
-[Explore LT](low-temperature/README.md) · [Manuscript](paper/next/manuscript.pdf) · [Lean: `IsingBulk.Final.theorem_nb_physical`](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) · [Build](lean/README.md) · [Citation](low-temperature/CITATION.cff)
+### Isotropic low-temperature connected bulk susceptibility
 
-Here `s = sinh(2βJ)` in the isotropic results; ANISO fixes the coupling ratio before continuing `z = 2βJ` into the complex plane. The [repository map](REPOSITORY_MAP.md) and [version index](docs/VERSIONS.md) distinguish the shared mathematics, frozen sources and publication editions. Existing LT/HT paths, releases and historical records are retained.
+The ordered pure-phase theorem covers the complete positive even-particle series and all lattice sites, subtracting spontaneous magnetization squared. Its physical interface and independent original proof remain separately documented.
 
-The ANISO [frozen 38-page audit edition](paper/aniso/frozen/manuscript.pdf) and [separate 39-page research-original](paper/aniso/research-original/manuscript.pdf) remain available. Its initial publication edition changes only preamble metadata; [later editorial work](docs/aniso/EDITORIAL_FOLLOWUP_SCOPE.md) has a separate scope. [Audit provenance](docs/aniso/AUDIT_EVIDENCE.md) and current execution receipts distinguish reported investigations from actual publication gates.
+[Result and scope](low-temperature/README.md) · [Build and verification](lean/README.md) · [Citation](low-temperature/CITATION.cff)
 
-[中文首页](README.zh.md) · [Authorship and provenance](AUTHORSHIP.md) · [MIT source license](LICENSE) · [CC BY 4.0 author-document license](LICENSE-DOCUMENTATION.md)
+## Mathematical relationship, editions and reproducibility
+
+The two-variable parent establishes its own positive-ratio and isotropic descendants by internal arguments. The fixed-ratio theorem treats both physical phases, while the earlier direct isotropic high- and low-temperature proofs remain separate developments with distinct observables and particle expansions.
+
+For isotropic couplings, s = sinh(2βJ); fixed-ratio anisotropy continues z = 2βJ with the ratio held fixed. External physical correlation/Gibbs premises and any sharper statements established only in a manuscript are identified in the corresponding scope and proof documents; they are not silently described as literal Lean exports.
+
+**Reader** means the independently checked, exposition-improved complete paper. **Original/frozen** identifies its mathematical authority; some earlier **publication** editions changed only author/date metadata. Historical labels such as C001, C002 and HT-1.0 belong in the [version records](docs/VERSIONS.md), not in the main paper titles.
+
+[Paper editions](paper/README.md) · [Repository and theorem map](REPOSITORY_MAP.md) · [中文首页](README.zh.md) · [Authorship](AUTHORSHIP.md) · [MIT code license](LICENSE) · [CC BY 4.0 document license](LICENSE-DOCUMENTATION.md)
