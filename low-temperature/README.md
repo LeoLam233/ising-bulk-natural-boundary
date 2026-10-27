@@ -2,7 +2,7 @@
 
 **Ordered pure phase · complete connected bulk magnetic susceptibility**
 
-This is the **low-temperature proof**, a distinct development within the [two-proof Ising repository](../README.md). It concerns the zero-field, isotropic, infinite square-lattice Ising model for (J>0).
+This is the **low-temperature proof**, a distinct development within the [four-result Ising repository](../README.md). It concerns the zero-field, isotropic, infinite square-lattice Ising model for (J>0).
 
 The observable is the **pure-phase connected** bulk sum
 \[
@@ -18,7 +18,8 @@ The proof includes **every lattice site** and the **complete infinite even-parti
 
 | Resource | Location |
 |---|---|
-| Mathematical manuscript | [Low-temperature manuscript PDF](../paper/next/manuscript.pdf) · [TeX](../paper/next/manuscript.tex) |
+| **Recommended complete Reader** | [Reader PDF](../paper/lt/reader/manuscript.pdf) · [TeX](../paper/lt/reader/manuscript.tex) |
+| Canonical mathematical manuscript | [Low-temperature manuscript PDF](../paper/next/manuscript.pdf) · [TeX](../paper/next/manuscript.tex) |
 | Lean proof and build entry | [`IsingBulk.lean`](../lean/IsingBulk.lean) · [`Audit.lean`](../lean/Audit.lean) |
 | Main natural-boundary theorem | [Low-temperature final proof modules](../lean/IsingBulk/Final/) |
 | Reproducible validation | [Lean build guide](../lean/README.md) · [Version records](../docs/VERSIONS.md) |

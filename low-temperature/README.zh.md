@@ -18,7 +18,8 @@
 
 | 内容 | 入口 |
 |---|---|
-| 当前数学手稿 | [PDF](../paper/next/manuscript.pdf) · [TeX](../paper/next/manuscript.tex) |
+| **推荐：完整 Reader 易读版** | [PDF](../paper/lt/reader/manuscript.pdf) · [TeX](../paper/lt/reader/manuscript.tex) |
+| 原始数学基准稿 | [PDF](../paper/next/manuscript.pdf) · [TeX](../paper/next/manuscript.tex) |
 | Lean 独立入口 | [`IsingBulk.lean`](../lean/IsingBulk.lean) · [`Audit.lean`](../lean/Audit.lean) |
 | 最终自然边界定理 | [低温相 Final 模块](../lean/IsingBulk/Final/) |
 | 构建与验证 | [Lean 构建指南](../lean/README.md) · [版本记录](../docs/VERSIONS.md) |

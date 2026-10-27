@@ -1,5 +1,8 @@
-# Low-temperature manuscripts
+# Low-temperature connected bulk susceptibility — manuscript editions
 
-The current candidate manuscript lives at [`../next/manuscript.pdf`](../next/manuscript.pdf) with its [TeX source](../next/manuscript.tex). Older frozen manuscript artifacts remain directly in [`paper/`](../README.md), and their identities are recorded in the [version ledger](../../docs/VERSIONS.md).
+- **Recommended:** [complete Reader PDF](reader/manuscript.pdf) · [TeX](reader/manuscript.tex), 49 pages · [edition identity](reader/README.md).
+- **Canonical mathematical authority:** [v0.1-rc6 PDF](../next/manuscript.pdf) · [TeX](../next/manuscript.tex), 47 pages.
+- **Historical versions:** [paper index](../README.md) · [version ledger](../../docs/VERSIONS.md).
+- [Lean source and build](../../lean/README.md) · [Reader–Lean correspondence](reader/LEAN_CORRESPONDENCE.md).
 
-These paths are retained for compatibility with previous LT verification receipts and citations.
+The old `paper/next/` and frozen paths are preserved for reproducibility, while Reader is the default public reading edition.

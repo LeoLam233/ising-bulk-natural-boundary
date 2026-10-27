@@ -12,7 +12,8 @@
 
 | 内容 | 入口 |
 |---|---|
-| 数学论文（冻结审计稿） | [PDF](../paper/ht/frozen/manuscript.pdf) · [TeX](../paper/ht/frozen/manuscript.tex) |
+| **推荐：完整 Reader 易读版** | [PDF](../paper/ht/reader/manuscript.pdf) · [TeX](../paper/ht/reader/manuscript.tex) |
+| 数学原始冻结稿 | [PDF](../paper/ht/frozen/manuscript.pdf) · [TeX](../paper/ht/frozen/manuscript.tex) |
 | Lean 源码 | [高温相证明模块](../lean/IsingBulk/HT/) |
 | **最终 Lean 定理** | [`publishedPhysicalSusceptibility_germ_natural_boundary`](../lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
 | 独立构建与验证入口 | [`IsingBulkHT.lean`](../lean/IsingBulkHT.lean) · [`AuditHT.lean`](../lean/AuditHT.lean) |

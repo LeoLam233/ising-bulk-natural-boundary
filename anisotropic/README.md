@@ -1,10 +1,10 @@
 # Fixed-ratio anisotropic Ising susceptibility
 
-**ANISO C001 · every finite positive coupling ratio · both temperature phases**
+**Every finite positive coupling ratio · both temperature phases**
 
 For horizontal coupling `J > 0` and fixed vertical-to-horizontal ratio `lam > 0`, this result treats the complete bulk susceptibility of the infinite square lattice. The high-temperature observable sums every odd-particle order. The low-temperature observable is the connected plus-phase susceptibility, with spontaneous magnetization squared subtracted, and sums every positive even-particle order. Every lattice separation is retained.
 
-[Read the manuscript](../paper/aniso/publication/manuscript.pdf) · [Exact Lean endpoint](../lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [Build and verify](../docs/aniso/BUILD_AND_VERIFY.md) · [Cite ANISO](CITATION.cff) · [中文](README.zh.md)
+[Read the complete Reader PDF](../paper/aniso/reader/manuscript.pdf) · [TeX](../paper/aniso/reader/manuscript.tex) · [Frozen original](../paper/aniso/frozen/manuscript.pdf) · [Exact Lean endpoint](../lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [Build and verify](../docs/aniso/BUILD_AND_VERIFY.md) · [Cite ANISO](CITATION.cff) · [中文](README.zh.md)
 
 ## The result
 
