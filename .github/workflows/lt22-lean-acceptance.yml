@@ -24,7 +24,7 @@ permissions:
   contents: read
 concurrency:
   group: lt22-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   preferred22:
     runs-on: ubuntu-24.04
