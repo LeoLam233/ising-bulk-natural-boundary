@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'lean/**'
+      - '!lean/README.md'
       - 'paper/lt/pser/**'
       - 'provenance/lt22/**'
       - 'verification/lt22/**'
@@ -12,6 +13,7 @@ on:
     branches: [main]
     paths:
       - 'lean/**'
+      - '!lean/README.md'
       - 'paper/lt/pser/**'
       - 'provenance/lt22/**'
       - 'verification/lt22/**'

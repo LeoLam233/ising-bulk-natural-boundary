@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'lean/**'
+      - '!lean/README.md'
       - '!lean/IsingBulk/PSER/**'
       - '!lean/IsingBulk/Preferred22/**'
       - '!lean/IsingBulk/Preferred22.lean'
@@ -15,6 +16,7 @@ on:
     branches: [main]
     paths:
       - 'lean/**'
+      - '!lean/README.md'
       - '!lean/IsingBulk/PSER/**'
       - '!lean/IsingBulk/Preferred22/**'
       - '!lean/IsingBulk/Preferred22.lean'

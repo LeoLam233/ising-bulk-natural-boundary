@@ -24,6 +24,7 @@ def verify(source_bundle=False):
                         if fnmatch.fnmatchcase(path,pattern.lstrip('!')):yes=not pattern.startswith('!')
                     return yes
                 assert not matches('lean/IsingBulk/Preferred22.lean') and not matches('lean/IsingBulk/Preferred22/FullTheorem.lean')
+                assert not matches('lean/README.md'),('Navigation-only Lean README incorrectly triggers heavy replay',rel)
                 for shared in ('lean/lake-manifest.json','lean/lean-toolchain','lean/lakefile.toml','lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean','lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean','lean/IsingBulk/Anisotropic/Final/FullTheorem.lean'):
                     assert matches(shared),('Shared/original suite routing lost',rel,shared)
     for group in (identity['files'], protected['files']):
