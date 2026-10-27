@@ -1,0 +1,101 @@
+name: LT22 Preferred22 acceptance
+on:
+  pull_request:
+    paths:
+      - 'lean/**'
+      - '!lean/README.md'
+      - 'paper/lt/pser/**'
+      - 'provenance/lt22/**'
+      - 'verification/lt22/**'
+      - 'scripts/*lt22*'
+      - '.github/workflows/lt22-lean-acceptance.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'lean/**'
+      - '!lean/README.md'
+      - 'paper/lt/pser/**'
+      - 'provenance/lt22/**'
+      - 'verification/lt22/**'
+      - 'scripts/*lt22*'
+      - '.github/workflows/lt22-lean-acceptance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: lt22-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  preferred22:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      LEAN_NUM_THREADS: '2'
+      RAYON_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Verify frozen Preferred22 and protected four-result inputs
+        run: |
+          python3 scripts/verify_lt22_publication.py
+          python3 scripts/verify_lt22_preservation.py
+      - name: Install the exact official Lean 4.34.1 runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Restore only pinned third-party dependencies
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+        with:
+          path: lean/.lake/packages
+          key: mathlib-linux-v4.34.1-${{ hashFiles('lean/lake-manifest.json') }}
+      - name: Fetch matching official third-party artifacts
+        working-directory: lean
+        run: lake -f lakefile.toml exe cache get
+      - name: Clean source build, exact type and closure, official fresh replay
+        run: python3 -u scripts/run_lt22_acceptance.py --output "$RUNNER_TEMP/lt22-evidence"
+      - name: Retain actual acceptance receipts and raw streams
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: lt22-acceptance-${{ github.sha }}
+          path: ${{ runner.temp }}/lt22-evidence/
+          if-no-files-found: error
+          retention-days: 90
+  publish-lt22:
+    needs: preferred22
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Download the successful merged-main acceptance evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh run download "${{ github.run_id }}" --name "lt22-acceptance-${{ github.sha }}" --dir "$RUNNER_TEMP/lt22-evidence"
+      - name: Bind exact main, prepare assets and publish the independent LT22 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)" = "${{ github.sha }}"
+          if gh release view lt22-preferred22-v1.0.0 >/dev/null 2>&1; then
+            echo 'The immutable LT22 release already exists; no historical release is changed.'
+            exit 0
+          fi
+          python3 scripts/make_lt22_release.py --output "$RUNNER_TEMP/lt22-release" --commit "${{ github.sha }}" --run-url "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" --evidence "$RUNNER_TEMP/lt22-evidence"
+          gh release create lt22-preferred22-v1.0.0 --target "${{ github.sha }}" --title 'LT22 Preferred22 — frozen 22-page PSER proof' --notes-file "$RUNNER_TEMP/lt22-release/RELEASE_NOTES.md" "$RUNNER_TEMP/lt22-release/LT22_Preferred22_22page.pdf" "$RUNNER_TEMP/lt22-release/LT22_Preferred22_22page.tex" "$RUNNER_TEMP/lt22-release/LT22_Preferred22_SOURCE_ONLY.zip" "$RUNNER_TEMP/lt22-release/LT22_PUBLICATION_RECEIPT.json" "$RUNNER_TEMP/lt22-release/RELEASE_NOTES.md" "$RUNNER_TEMP/lt22-release/SHA256SUMS.txt"

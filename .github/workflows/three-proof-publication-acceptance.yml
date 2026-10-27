@@ -3,8 +3,11 @@ on:
   pull_request:
     paths:
       - 'lean/**'
+      - '!lean/README.md'
       - '!lean/IsingBulk/Joint/**'
       - '!lean/IsingBulk/PSER/**'
+      - '!lean/IsingBulk/Preferred22/**'
+      - '!lean/IsingBulk/Preferred22.lean'
       - '!lean/PSER/**'
       - '!lean/IsingBulkJoint.lean'
       - '!lean/AuditJoint.lean'
@@ -14,15 +17,17 @@ on:
       - 'scripts/verify_three_proof_publication.py'
       - 'scripts/prepare_three_proof_checkout.py'
       - 'scripts/run_three_proof_verification.py'
-      - '.github/workflows/three-proof-publication-acceptance.yml'
       - '.github/workflows/aniso-lean-acceptance.yml'
       - '.github/workflows/ht-lean-acceptance.yml'
   push:
     branches: [main]
     paths:
       - 'lean/**'
+      - '!lean/README.md'
       - '!lean/IsingBulk/Joint/**'
       - '!lean/IsingBulk/PSER/**'
+      - '!lean/IsingBulk/Preferred22/**'
+      - '!lean/IsingBulk/Preferred22.lean'
       - '!lean/PSER/**'
       - '!lean/IsingBulkJoint.lean'
       - '!lean/AuditJoint.lean'
@@ -32,7 +37,6 @@ on:
       - 'scripts/verify_three_proof_publication.py'
       - 'scripts/prepare_three_proof_checkout.py'
       - 'scripts/run_three_proof_verification.py'
-      - '.github/workflows/three-proof-publication-acceptance.yml'
       - '.github/workflows/aniso-lean-acceptance.yml'
       - '.github/workflows/ht-lean-acceptance.yml'
   workflow_dispatch:

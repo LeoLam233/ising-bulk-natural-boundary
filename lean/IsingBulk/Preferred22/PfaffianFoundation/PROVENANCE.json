@@ -1,0 +1,34 @@
+{
+  "repository": "https://github.com/hkjtsgmc79-boop/colombo-odd-lean",
+  "commit": "9f57b40c7ce9837966c701193bbfec71ed38ae2e",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "source_path": "ColomboGeneralK2/GeneralADPf.lean",
+      "sha256": "0795c57b54783c686a5cd4866ce3c71553ffa80a54e1af5c4fef229cbb958240",
+      "adapted_file": "GeneralADPf.lean",
+      "adapted_sha256": "d6a2b37a87adee1cc70fe208b784f21b28a51dfe6ca1ab04283fe6ef202477f2"
+    },
+    {
+      "source_path": "ColomboGeneralK2/GeneralADMS.lean",
+      "sha256": "f23f202df40b6f864feb2c1215295d3b528aceb34a94173bf73c31b95ae47505",
+      "adapted_file": "GeneralADMS.lean",
+      "adapted_sha256": "8d49b074fabb53d8895d0cd326262a933eff71083ea6d3dec706dec36b3f6653"
+    },
+    {
+      "source_path": "ColomboGeneralK2/OddPfaffianSquare.lean",
+      "sha256": "60706a5d397c6fc091b57f104d4ea663e32044f776124f1413ba189680fcb221",
+      "adapted_file": "Congruence.lean",
+      "excerpt": "beginning through recursivePf_pivotBlock; no determinant positivity or final Colombo theorem",
+      "adapted_sha256": "5f09fa45ec60cc0f8d3d9a34159e73425bc9c2c719dde4a9001d295db5543789"
+    }
+  ],
+  "inspected_not_included": [
+    {
+      "source_path": "ColomboGeneralK2/ADPf.lean",
+      "sha256": "2c0dcdc9973bc38eb94ffd27c4f31c9538ec6e219885fcd66f1d5634bae8c956",
+      "preserved_attempt_path": "work/logs/algebra_unused_ADPf.lean",
+      "preserved_attempt_sha256": "140ea519684d1d1f8b18479788f0bb3d39b21a3eacadbe7bbd68d81daa0e6986"
+    }
+  ]
+}

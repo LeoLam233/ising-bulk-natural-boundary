@@ -1,0 +1,37 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "compact_archive": {
+    "bytes": 19064972,
+    "sha256": "3cb4d0cd06607ceef90766d92db70285659474157a1045ffa8f3e9a294e0e99c"
+  },
+  "complete_archive": {
+    "bytes": 191357364,
+    "sha256": "f30e65eb9231411e9c08d2b53ee6e3157f46b8cd0694f61847a4ad80c03b1901"
+  },
+  "exact_type": "IsingBulk.Preferred22.PreferredFullTarget",
+  "fresh_kernel_exit_code": 0,
+  "frozen_input_sha256": "a060095bea00a0c53821981d8fe3eb03076cc36d813215f86758ee3a5662a527",
+  "note": "Historical October 25 receipts and full raw streams remain in the local immutable archives. Fresh repository integration acceptance is separately required; this record does not claim new execution.",
+  "root_premises": 0,
+  "source_clean_build": {
+    "all_required_flags": true,
+    "built_events": 486,
+    "built_missing": [],
+    "compiler_invocations": 486,
+    "expected": 486,
+    "extra_built": [],
+    "extra_compilers": [],
+    "invocation_missing": [],
+    "local_replays": 0,
+    "repeated_built": {},
+    "repeated_compilers": {},
+    "unique_built_events": 486,
+    "unique_compiler_invocations": 486
+  },
+  "source_unchanged": true,
+  "verdict": "EXHAUSTED"
+}
