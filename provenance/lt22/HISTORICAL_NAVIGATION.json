@@ -1,0 +1,35 @@
+{
+  "reason": "Legacy ANISO validator pins these six pre-Reader navigation files. Only the temporary historical validation view restores them; all proof/manuscript/configuration inputs remain current.",
+  "files": [
+    {
+      "path": "high-temperature/README.md",
+      "sha256": "e909a9b44363b93c22f7d2cadcd40d975785ac416a134d94c5c89392249d8ab0",
+      "git_commit": "76c3ad5457e883cc15032fdf4205da23ceba58fe"
+    },
+    {
+      "path": "high-temperature/README.zh.md",
+      "sha256": "65d22ed4f949d3cd0660ef7250a2158d9d6ef7960c1a96592ff867eaa9f94022",
+      "git_commit": "76c3ad5457e883cc15032fdf4205da23ceba58fe"
+    },
+    {
+      "path": "low-temperature/README.md",
+      "sha256": "2b62d9b8dac590202d8fe5cc0925c252346e892caf48923ddfc95904873243bc",
+      "git_commit": "76c3ad5457e883cc15032fdf4205da23ceba58fe"
+    },
+    {
+      "path": "low-temperature/README.zh.md",
+      "sha256": "2e9408e4676c350f59737fce4b1bb379c6883304ae4f0f1b3c9c8a9f9d93c5f2",
+      "git_commit": "76c3ad5457e883cc15032fdf4205da23ceba58fe"
+    },
+    {
+      "path": "paper/ht/README.md",
+      "sha256": "bb482c23a6455f18a7a593eebba9cdb25587708f4f93932b161c230de05e4758",
+      "git_commit": "76c3ad5457e883cc15032fdf4205da23ceba58fe"
+    },
+    {
+      "path": "paper/lt/README.md",
+      "sha256": "b02dc51fa1c228e0106f62ed9359c3f16dd66b4c00bfee29ef11bef60f69fe45",
+      "git_commit": "76c3ad5457e883cc15032fdf4205da23ceba58fe"
+    }
+  ]
+}

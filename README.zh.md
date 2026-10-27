@@ -1,5 +1,15 @@
 # 二维正方晶格 Ising 体磁化率的自然边界
 
+**LT22 PSER 是独立的低温证明路线。** [22 页冻结 PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) · [Preferred22 定理](lean/IsingBulk/Preferred22/FullTheorem.lean) · [物理范围与对应](docs/lt22/PROOF_MAP.md) · [复现](docs/lt22/BUILD_AND_VERIFY.md)。
+
+| 低温版本 | 论文 | 形式化路线 |
+|---|---|---|
+| Original（规范 LT 原稿） | [PDF](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
+| Reader（同一原证明的易读编辑版） | [PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
+| PSER（LT22，独立数学证明） | [22 页 PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) | [独立 Preferred22 Lean](lean/IsingBulk/Preferred22/FullTheorem.lean) |
+
+LT22 原样保留 10 月 25 日审查冻结的 333 个新模块与 153 个继承模块，以及 Lean 4.34.1 和九项依赖锁定。根定理 `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget` 没有根前提；Yang 与 Palmer–Tracy 实温物理输入只在物理对应子句中作为前件。[审查与身份](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 引用](low-temperature/lt22/CITATION.cff)。下方历史记录保持原有版本范围。本次只发布 LT22，不宣称 HT22、ANISO F002 或 JOINT F001 已形式化完成或发表。
+
 本仓库展示无限正方晶格 Ising 模型**零外场完整体磁化率**的四项数学研究及相应的 Lean 形式化：各向同性低温和高温的独立证明、任意固定正耦合比的各向异性结果，以及两个独立复耦合变量下的母定理。
 
 **首次阅读建议从四份完整 Reader 易读版开始。** 它们已经接受独立的编辑保真和 Lean 对应审查；原始数学命题、假设和证明机制保持不变，原稿及对应源码仍可用于精确核对。

@@ -1,5 +1,18 @@
 # Scope-aware proof CI (26 October 2026)
 
+The dedicated [LT22 Preferred22 workflow](../.github/workflows/lt22-lean-acceptance.yml) runs on PRs, main pushes and manual dispatch. It binds the frozen 491-entry source/provenance closure, 333 new modules, PDF/TeX and protected four-result bytes; builds the aggregate from zero project objects; checks the actual terminal type, allowed axioms and exact previously audited dependency graph; and runs official `leanchecker --fresh --verbose`. Failure propagates to CI and raw streams plus machine-readable receipts are retained for 90 days.
+
+The older three/four-result automatic filters now exclude both `lean/IsingBulk/Preferred22/**` and `lean/IsingBulk/Preferred22.lean`. Their verification jobs and historical algorithms are unchanged. Routing-only edits to those two entry-point workflow files do not automatically request historical heavy replays; use their retained manual dispatch when changing job logic. Historical verifier scripts and reusable implementations remain automatic triggers. Shared Lean sources, any lock/toolchain/configuration change, or original theorem changes still match `lean/**` and invoke the affected original suites as before. LT22 also conservatively matches all Lean changes.
+
+| Changed scope | Automatic acceptance |
+|---|---|
+| Preferred22 source, its frozen manuscript/identity/probe/runner/workflow | LT22; original four-result preservation inside that gate |
+| Original/shared LT, HT or ANISO formal sources or dependency/configuration pins | Existing three/four-result regressions and LT22 |
+| Original JOINT-only formal sources | Existing four-result regression and conservative LT22 |
+| Reader/navigation-only prose | No heavy proof replay |
+
+Future HT22, ANISO F002 and JOINT F001 routes must have separate namespaces, roots, immutable identities and acceptance workflows. Add exclusions only when their dependency ownership has been established; existing `lean/**` routing remains conservative until then. No future route is claimed complete by reserving this design.
+
 ## Policy
 
 The previously published LT, HT, ANISO C001 and JOINT C002 Lean sources remain immutable for a Reader-only documentation change. The complete Reader editions under `paper/{lt,ht,aniso,joint}/reader/` do not change proof objects or their dependencies. Such changes must not trigger source-clean Lean builds or fresh kernel replays.

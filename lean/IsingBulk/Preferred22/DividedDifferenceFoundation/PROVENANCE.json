@@ -1,0 +1,44 @@
+{
+  "repository": "https://github.com/LeoLam233/ising-bulk-natural-boundary",
+  "commit": "43a9ce897ba12de0c96d6e1a636790cd93fae8ff",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Dehao Lin",
+  "files": [
+    {
+      "original": "IsingBulk/Anisotropic/NegativeNormalForm/AnalyticParameterIntegral.lean",
+      "original_sha256": "8bcd8ace35941aff72a23e574df8d1b505269f75750771b60707f1d3f0e696ec",
+      "adapted": "IsingBulk/Preferred22/DividedDifferenceFoundation/AnalyticParameterIntegral.lean",
+      "adapted_sha256": "200d66c0b08037a09973b79e88235a654eb4db94ccaab9f4421d873a9d07a372",
+      "scope": "Whole generic calculus module; namespace/import relocation only plus provenance header."
+    },
+    {
+      "original": "IsingBulk/Anisotropic/NegativeNormalForm/AnalyticHadamard.lean",
+      "original_sha256": "a3e592d41e61eee72608e25208ffade2041c4023d9c9c7c325aac565597263d1",
+      "adapted": "IsingBulk/Preferred22/DividedDifferenceFoundation/AnalyticHadamard.lean",
+      "adapted_sha256": "ea599485b77e7a1cb5aa96efd9a30959bb4e594f2dff3036758c0d4eef98fab4",
+      "scope": "Whole generic calculus module; namespace/import relocation only plus provenance header."
+    },
+    {
+      "original": "IsingBulk/Anisotropic/NegativeNormalForm/HadamardFullDomain.lean",
+      "original_sha256": "40c900bb971b2632958a1156f78a0583fe76c8d86207db596c9a75b9d84f5dd9",
+      "adapted": "IsingBulk/Preferred22/DividedDifferenceFoundation/HadamardFullDomain.lean",
+      "adapted_sha256": "c820385bfae9f91970f79eabf82cbf5f937d0c297e6b20eb75090d0c4ca7970b",
+      "scope": "Whole generic calculus module; namespace/import relocation only plus provenance header."
+    },
+    {
+      "originals": [
+        {
+          "path": "IsingBulk/Anisotropic/NegativeNormalForm/FactorIdentification.lean",
+          "sha256": "532675c5fefb2ab9daf8d0b779e77732b18b02c05835e031777500a26247a299"
+        },
+        {
+          "path": "IsingBulk/Anisotropic/NegativeCycles/MovingDividedDifference.lean",
+          "sha256": "5fceb0f3128dbf3b49ee22a486e55f7c9d415b58b542f78994fef16f1ed3d146"
+        }
+      ],
+      "adapted": "IsingBulk/Preferred22/JointDividedDifference.lean",
+      "adapted_sha256": "dd039ef7e272ee8b2bd04a6cee89d69ea6f150b6227a55bc71eb826e94ced10f",
+      "scope": "Only dslope_eq_of_factorization and dslope_translate from FactorIdentification; generic coordinateHadamard_identity_axis, joint dslope and moving dslope proofs from MovingDividedDifference. Namespace/import relocation."
+    }
+  ]
+}

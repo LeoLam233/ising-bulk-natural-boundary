@@ -1,0 +1,13 @@
+{
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "canonical_graph_sha256": "f66146ae047d5f8c9c9949314477a82d12017c0fc55f8d6cc521ff4aae2167d7",
+  "historical_raw_graph_sha256": "311a019f8d54b2f24f1e5c16b6148975ca3625bf5d40de772bcd0de43fc3e5c2",
+  "reachable": 75225,
+  "root": "IsingBulk.Preferred22.preferred_full_target",
+  "scope": "Exact previously audited stored-type, proof-value and structural-support closure; equality prevents new dependencies, including old LT endpoints.",
+  "unsafe_or_partial": []
+}

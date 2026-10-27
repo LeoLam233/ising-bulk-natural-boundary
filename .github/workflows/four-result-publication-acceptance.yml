@@ -4,22 +4,24 @@ on:
     paths:
       - 'lean/**'
       - '!lean/IsingBulk/PSER/**'
+      - '!lean/IsingBulk/Preferred22/**'
+      - '!lean/IsingBulk/Preferred22.lean'
       - '!lean/PSER/**'
       - 'scripts/verify_four_result_publication.py'
       - 'scripts/prepare_three_proof_checkout.py'
       - 'scripts/run_three_proof_verification.py'
-      - '.github/workflows/four-result-publication-acceptance.yml'
       - '.github/workflows/joint-lean-acceptance.yml'
   push:
     branches: [main]
     paths:
       - 'lean/**'
       - '!lean/IsingBulk/PSER/**'
+      - '!lean/IsingBulk/Preferred22/**'
+      - '!lean/IsingBulk/Preferred22.lean'
       - '!lean/PSER/**'
       - 'scripts/verify_four_result_publication.py'
       - 'scripts/prepare_three_proof_checkout.py'
       - 'scripts/run_three_proof_verification.py'
-      - '.github/workflows/four-result-publication-acceptance.yml'
       - '.github/workflows/joint-lean-acceptance.yml'
   workflow_dispatch:
 permissions:
