@@ -1,0 +1,70 @@
+{
+  "base_main_sha": "465375f2b6cc0952adaca87eddc859a40f577748",
+  "files": {
+    "README.md": {
+      "old_sha256": "ded376472f3b4aeee75cfc638dffe769c87e3000859f212ddea38fa328f19949",
+      "new_sha256": "3dbabe454e996e5e2127d2b13a70e40cb5ff3358bedb6045037f6145294f42ad",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "README.zh.md": {
+      "old_sha256": "95bc84e332dbeee2cdbd63fe20bddae6d41beecae47f90c18ffac6848ecf82f9",
+      "new_sha256": "3c038602cad2f352eaed154356c328f4d807ab67410633b5b41b9c1185178ab4",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "REPOSITORY_MAP.md": {
+      "old_sha256": "5a0eee8a99eaffea09cebb9416d6c7e1651cb6c9a23214836be6c8d57a04ee58",
+      "new_sha256": "4dbb3c3d5952a6add2808810ed87d8c5712a6160b6bb9b4ac98eed75bd56e612",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "paper/README.md": {
+      "old_sha256": "04c388bd1e854abc69bcf7b718f600278b6741f4ad612dcbb8aeb320d6bbb67c",
+      "new_sha256": "31c488d5da17fde756201febf1c10909322271d2462bdcc9e6866b0c2248da2b",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "paper/ht/README.md": {
+      "old_sha256": "4a2c67d253a34ee5a1e8e6df656a6d0163557e37eba4594690689c6dd3578e85",
+      "new_sha256": "a041ca28026798f18d598898c0464fe3a25ab58aafa253a00d655f76c67a9ea7",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "docs/VERSIONS.md": {
+      "old_sha256": "afffcf30a12d760b90257203ba640933fc193e3beb4832666e7b08cc8b1800d0",
+      "new_sha256": "57cfb0948f03f7e25a2d4343245ce6e583c9b1e251b387a2cdfdc8046c9924be",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "docs/PROOF_CI_ROUTING.md": {
+      "old_sha256": "8083c18e235bd951bfa2d695a433813cae059f7229640520bbcf1d6e89c3c90c",
+      "new_sha256": "0b1fae4b2dfd629d957eeb6136117d534fee3ef72f024f23c68aa27d424aa652",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "high-temperature/README.md": {
+      "old_sha256": "33ee2f4275e5e6987db3cee01b289ef5bd5baf798dc317a3fc904c8af1e308b1",
+      "new_sha256": "f280d72cb7ba4ed36b3d3683851f68767e1acbaaa34556ca607f867ad6ad30b7",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    "high-temperature/README.zh.md": {
+      "old_sha256": "1fa0a43c2cd3516d8b2a6565f92fdef1d94f68032ca054a47870c7690df82755",
+      "new_sha256": "1b6e4725f9ffb139d869fb27d5897e154c1ce9c264932c38f04d4354f85501b6",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    ".github/workflows/three-proof-publication-acceptance.yml": {
+      "old_sha256": "e27a10827342bf6e7fd1ecf96a4399eb2634bcec7a3c0d9205f8204981a88ef1",
+      "new_sha256": "0f88523f32f6c28779bc734d72ad28b75c27effb34e741593d6051e33162666c",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    ".github/workflows/four-result-publication-acceptance.yml": {
+      "old_sha256": "195abe29dc6efb6f88cb8de2ee6cdfcedaa237787e4e39aa2a76d363756b547b",
+      "new_sha256": "77d248548624cec2998906804caa92ab7a0b31dd8e58f8f7f369fb6a9596b831",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    },
+    ".github/workflows/lt22-lean-acceptance.yml": {
+      "old_sha256": "35088b4bca39d9e6a9d71f9c0cf1da39165a6be054efdc09f33f0d92d7b7a328",
+      "new_sha256": "719b4cabc6791cf2bd83d54221757914f6e5263018852578967691154e0f0954",
+      "purpose": "Publication navigation / narrow additive CI routing only"
+    }
+  },
+  "workflow_body_sha256": {
+    ".github/workflows/three-proof-publication-acceptance.yml": "92b28dc4348ac05174654fbc115364a086e7610ab3c0925335ea497e5a8fd20f",
+    ".github/workflows/four-result-publication-acceptance.yml": "40824eb5636ea9b8fb6d20c75b06ddfe49f5a1775a70c4bfbb6e70e29b1054d4",
+    ".github/workflows/lt22-lean-acceptance.yml": "fedaca0cc92452d7ecd334aa7f5842abf53e556e2c44eaa3ee7d8fb81975e831"
+  }
+}

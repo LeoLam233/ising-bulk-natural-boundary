@@ -1,0 +1,73 @@
+{
+  "canonical_source_zip_sha256": "0e80db908bcb44298f3af03b19e322876e26c3b7028a1a3bcb91f272732437bd",
+  "codex_c001": {
+    "evidence_bytes": 2158865075,
+    "evidence_sha256": "bc65b3ca10c17ef30fa64c12ce8ee8b5731362812db3acce9ae244a79fc7905a",
+    "evidence_zip": "HT22_C001_COMPLETE_EVIDENCE.zip",
+    "large_evidence_copied": false,
+    "verdict": "EXHAUSTED"
+  },
+  "frozen_theorem": "IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget",
+  "not_independent_original_byte_replay": "The links and SHA-256 identities in this small package describe pre-existing completed external audits. This is not an independent replay of 2.16GB/807MB evidence.",
+  "persistent_pro": {
+    "evidence_bytes": 806734168,
+    "evidence_sha256": "82477c0f6e480ceb34b0bc5e1e838d0b357be65e7328e03753192d5ca66314f6",
+    "evidence_zip": "HT22_AUDIT_EVIDENCE_20261028.zip",
+    "large_evidence_copied": false,
+    "verdict": "EXHAUSTED"
+  },
+  "schema": "HT22-external-lean-audit-identities-v1",
+  "source_manifest_sha256": "a0c4ddb4725a86382ee8f57e1e81b25cf60b8a2e1469d165c9efa395a65d227f",
+  "dot_internal_audits": {
+    "status": "THREE_FINAL_AUDIT_SEALS_VERIFIED",
+    "time_utc": "2026-10-28T06:26:00.246637+00:00",
+    "source_manifest_sha256": "a0c4ddb4725a86382ee8f57e1e81b25cf60b8a2e1469d165c9efa395a65d227f",
+    "auditors": {
+      "alpha": {
+        "verdict": "EXHAUSTED",
+        "final_report_sha256": "ba84b425a5fd3f203ffa40b479ed3c6e0fe3241967bd80329bb016e9a00f31db",
+        "manifest_checks": {
+          "INITIAL_MANIFEST.json": {
+            "sha256": "512d7a9ff4d504d308820f559529755b0ce83616c819eafdc2acf0e411a0d4e3",
+            "files_verified": 34
+          },
+          "FINAL_EVIDENCE_MANIFEST.json": {
+            "sha256": "3e41f115b94c3f822104f05c091d7e2ed04ccec53d8a19c838e1cea5caa7814a",
+            "files_verified": 43
+          }
+        }
+      },
+      "beta": {
+        "verdict": "EXHAUSTED",
+        "final_report_sha256": "a5de4fcf4121acb50d0939bbc14b8f028efd0d81d68690957df5ee669ea28ea6",
+        "manifest_checks": {
+          "INITIAL_EVIDENCE_MANIFEST.json": {
+            "sha256": "b5f0e008aba09cbb7d7602d696bdbfff3e76307b702e832b69244382f82208e4",
+            "files_verified": 54
+          },
+          "FINAL_EVIDENCE_MANIFEST.json": {
+            "sha256": "6467a5102420bb578c50603df233f6c285dc8a718053db398a5640bdf48bdbb9",
+            "files_verified": 68
+          }
+        }
+      },
+      "gamma": {
+        "verdict": "EXHAUSTED",
+        "final_report_sha256": "7251006cbaf4d091633da53c8cb4e86c958fec406596099b94c7ef257f582ff6",
+        "manifest_checks": {
+          "INITIAL_MANIFEST.json": {
+            "sha256": "b8c0f248c8c8cfa225874a2190bccfe9f8340471b700a076d272f1a0caac9725",
+            "files_verified": 47
+          },
+          "FINAL_MANIFEST.json": {
+            "sha256": "5c9095d90c1b7f8270c4eae07ce63b444d206dab934d27fb056e549014cd3fd9",
+            "files_verified": 81
+          }
+        }
+      }
+    },
+    "initials_unchanged": true,
+    "mathematical_reconciliation_required_separately": true
+  },
+  "codex_report_sha256": "46a617ec389257427c74fdb481b4964b9b78b52c627c727b32217db98f5d965f"
+}

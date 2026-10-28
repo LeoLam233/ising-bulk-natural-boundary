@@ -4,21 +4,29 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/HT22/**'
+      - '!lean/IsingBulk/HT22.lean'
+      - '!lean/IsingBulkHT22.lean'
+      - '!lean/AuditHT22.lean'
+      - '!lean/lakefile.ht22.toml'
       - 'paper/lt/pser/**'
       - 'provenance/lt22/**'
       - 'verification/lt22/**'
       - 'scripts/*lt22*'
-      - '.github/workflows/lt22-lean-acceptance.yml'
   push:
     branches: [main]
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/HT22/**'
+      - '!lean/IsingBulk/HT22.lean'
+      - '!lean/IsingBulkHT22.lean'
+      - '!lean/AuditHT22.lean'
+      - '!lean/lakefile.ht22.toml'
       - 'paper/lt/pser/**'
       - 'provenance/lt22/**'
       - 'verification/lt22/**'
       - 'scripts/*lt22*'
-      - '.github/workflows/lt22-lean-acceptance.yml'
   workflow_dispatch:
 permissions:
   contents: read

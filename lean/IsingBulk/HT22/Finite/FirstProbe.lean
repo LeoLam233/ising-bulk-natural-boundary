@@ -1,0 +1,12 @@
+import IsingBulk.HT22.Finite.FirstTheorem
+#print axioms IsingBulk.HT22.LocalLimit.negativeCritical_two_chart_limit
+#print axioms IsingBulk.HT22.LocalLimit.signedCriticalLeadingCoefficient_transfer_back
+#print axioms IsingBulk.HT22.LocalLimit.prime_physicalCriticalLeadingCoefficient_ne_zero
+#print axioms IsingBulk.HT22.Finite.prime_actual_critical_cutoff_limit
+#print axioms IsingBulk.HT22.Finite.prime_right_limit_of_separated_remainder
+#print axioms IsingBulk.HT22.Finite.coefficient_limit_of_right_limit
+
+#print axioms IsingBulk.HT22.Finite.actual_prime_first_limit
+#print axioms IsingBulk.HT22.Finite.actual_original_prime_first_asymptotic
+set_option pp.universes true in
+#check IsingBulk.HT22.Finite.actual_original_prime_first_asymptotic

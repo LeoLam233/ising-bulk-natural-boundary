@@ -1,5 +1,16 @@
 # High-temperature natural boundary
 
+The **HT22 PSER proof** is a distinct independent high-temperature proof: [frozen 22-page PDF](../paper/ht/pser/manuscript.pdf) · [TeX](../paper/ht/pser/manuscript.tex) · [fourteen-field theorem](../lean/IsingBulk/HT22/Final/Target.lean) · [correspondence](../docs/ht22/PROOF_MAP.md) · [reproduce](../docs/ht22/BUILD_AND_VERIFY.md).
+
+| High-temperature edition | Paper | Formal route |
+|---|---|---|
+| Original HT (33 pages) | [PDF](../paper/ht/frozen/manuscript.pdf) · [TeX](../paper/ht/frozen/manuscript.tex) | [Original HT Lean 1747](../lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
+| Reader (editorial edition of Original HT) | [PDF](../paper/ht/reader/manuscript.pdf) · [TeX](../paper/ht/reader/manuscript.tex) | Same Original HT Lean route |
+| PSER HT22 (distinct independent proof) | [22-page PDF](../paper/ht/pser/manuscript.pdf) · [TeX](../paper/ht/pser/manuscript.tex) | [Independent HT22 Lean](../lean/IsingBulk/HT22/Final/Target.lean) |
+
+`IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget` has zero root premises and fourteen proved fields. Physical interpretation uses exactly `PhysicalScope.PublishedRealHTSpinFormFactors corr` as an antecedent: onsite spin-square and real sitewise odd form factors. No Gibbs-state construction is claimed. [Physical scope](../docs/ht22/PHYSICAL_INPUTS.md) · [Audit identities](../docs/ht22/AUDIT_EVIDENCE.md) · [HT22 citation](ht22/CITATION.cff). Original HT and its recommended Reader, LT22 and all earlier releases retain their own identities.
+
+
 **Disordered phase · complete square-lattice bulk magnetic susceptibility**
 
 This is the **high-temperature proof**, a distinct mathematical development within the [four-result Ising repository](../README.md). It concerns the zero-field, isotropic, infinite square-lattice Ising model at positive coupling (J).

@@ -1,0 +1,396 @@
+{
+  "scope": "Syntactic exact declaration identity only; no claim of actual graph reachability",
+  "main_root": "IsingBulk.HT22.Final.f001_natural_boundary",
+  "all_names_unique": true,
+  "checked": 43,
+  "missing_or_ambiguous": [],
+  "declarations": [
+    {
+      "name": "IsingBulk.HT22.Algebra.borderedMarkedDeterminant_hadamard",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Algebra/BorderedMinorBound.lean",
+      "line": 113,
+      "source_sha256": "edcba3dc98b372c68693c7f0311e2e430b874b014f54c7691343787a728dd834"
+    },
+    {
+      "name": "IsingBulk.HT22.Algebra.borderedMarkedDeterminant_scaled_bound",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Algebra/BorderedMinorBound.lean",
+      "line": 34,
+      "source_sha256": "edcba3dc98b372c68693c7f0311e2e430b874b014f54c7691343787a728dd834"
+    },
+    {
+      "name": "IsingBulk.HT22.Algebra.odd_constantBorderFirst_determinant",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Algebra/OddBordered.lean",
+      "line": 113,
+      "source_sha256": "aca51dea5b4192f5e79170b7a1581963f373a66861d6418466c58d933c7537c4"
+    },
+    {
+      "name": "IsingBulk.HT22.Far.actual_far_density_bound",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Far/ActualDensity.lean",
+      "line": 12,
+      "source_sha256": "1694c345db11d49758dab2a2f20b3feb4a9bc81d474106789bb699e06d99dab0"
+    },
+    {
+      "name": "IsingBulk.HT22.Far.actual_far_scalar_bound",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Far/ActualScalar.lean",
+      "line": 16,
+      "source_sha256": "7ed63051f42ffaf73a0080888a6c5132e3bc94e1538fceda052c196f5f5deb21"
+    },
+    {
+      "name": "IsingBulk.HT22.Far.actual_far_shell_sum",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Far/ActualSum.lean",
+      "line": 21,
+      "source_sha256": "79163615047a4d15342c3da153450b385eaeeca884af22eb7d1a9f6b60ed7719"
+    },
+    {
+      "name": "IsingBulk.HT22.Final.actual_prime_full_limit",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Final/NaturalBoundary.lean",
+      "line": 21,
+      "source_sha256": "a2c8cd0d8a479ade3361028dafe5b2fecb26a6a35fdd6345ea07678d1a4b74c5"
+    },
+    {
+      "name": "IsingBulk.HT22.Final.boundary_transfer_of_prime_obstructions",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Final/BoundaryTransfer.lean",
+      "line": 62,
+      "source_sha256": "18fd73963b4516dd4ec2ec46c0916f16b5680dfff313698431840d93d9dad9ca"
+    },
+    {
+      "name": "IsingBulk.HT22.Final.f001_natural_boundary",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Final/NaturalBoundary.lean",
+      "line": 51,
+      "source_sha256": "a2c8cd0d8a479ade3361028dafe5b2fecb26a6a35fdd6345ea07678d1a4b74c5"
+    },
+    {
+      "name": "IsingBulk.HT22.Finite.actual_original_prime_first_asymptotic",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Finite/FirstTheorem.lean",
+      "line": 52,
+      "source_sha256": "d162cc99e9c7e368f8e84c55ba48822fe71a384e414a93101580477356822ff5"
+    },
+    {
+      "name": "IsingBulk.HT22.Finite.actual_prime_first_limit",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Finite/FirstTheorem.lean",
+      "line": 14,
+      "source_sha256": "d162cc99e9c7e368f8e84c55ba48822fe71a384e414a93101580477356822ff5"
+    },
+    {
+      "name": "IsingBulk.HT22.Finite.prime_lower_coefficient_limit",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Finite/LowerTheorem.lean",
+      "line": 42,
+      "source_sha256": "9529a114bc9d6a4bb323623a07383313fe59054d8d49eab38f6bc66f9746a08a"
+    },
+    {
+      "name": "IsingBulk.HT22.FullTail.actual_absolute_tail",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/FullTail/Actual.lean",
+      "line": 18,
+      "source_sha256": "4a5b099edad5aedf0bf5c77e47b9898abfb129c45069ef08d0a1819a5f9c445b"
+    },
+    {
+      "name": "IsingBulk.HT22.Geometry.actual_mixed_covariance_lower",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Geometry/CovarianceSource.lean",
+      "line": 18,
+      "source_sha256": "34ec0dd5391454e75af9b696a7ee4810b14e21643beb470bb16591628ccf7307"
+    },
+    {
+      "name": "IsingBulk.HT22.Geometry.continuedRoot_ne_zero",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Geometry/RegularInverse.lean",
+      "line": 155,
+      "source_sha256": "ddbd9d2e4b99abe8b73ed45d1cc500319afe0ba88ff9ac6c410a74a6be4dd57f"
+    },
+    {
+      "name": "IsingBulk.HT22.Geometry.global_one_sided_inverse",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Geometry/RegularInverse.lean",
+      "line": 45,
+      "source_sha256": "ddbd9d2e4b99abe8b73ed45d1cc500319afe0ba88ff9ac6c410a74a6be4dd57f"
+    },
+    {
+      "name": "IsingBulk.HT22.Geometry.signed_actual_shell_scale_lintegral",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Geometry/SignedActualShell.lean",
+      "line": 30,
+      "source_sha256": "d5081f7e85f9de8a24fe5fad854d129549863090dcf5b8ae0a0d5aefdf07000d"
+    },
+    {
+      "name": "IsingBulk.HT22.Geometry.signed_right_extreme_integral",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Geometry/SignedRightCoarea.lean",
+      "line": 15,
+      "source_sha256": "f7a5ee0c4afaafc5ace64d74fb697fb2e30ab1f91d9bec427f3d08de72e332c3"
+    },
+    {
+      "name": "IsingBulk.HT22.InverseFactorJets.actual_inverse_factor_frame_jets",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/InverseFactorJets/Actual.lean",
+      "line": 17,
+      "source_sha256": "31e3e31d79ecd399996f1abf564fa7ff642f7291e454311864571a73da11a501"
+    },
+    {
+      "name": "IsingBulk.HT22.Near.actual_near_shell_sum",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Near/ActualSum.lean",
+      "line": 13,
+      "source_sha256": "ef4b33ba348c3cfc139eab3be583c781d0b1e3932c0753c9b60ec95b80b8fb7a"
+    },
+    {
+      "name": "IsingBulk.HT22.Physical.complete_derivative_partition",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Physical/DerivativePartition.lean",
+      "line": 34,
+      "source_sha256": "626edf3362e01d3e70eecd4d7f00c1599326659b0b468c13f062b47636de72c1"
+    },
+    {
+      "name": "IsingBulk.HT22.Physical.full_odd_lattice_norm_summable",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Physical/JointLatticeSummability.lean",
+      "line": 14,
+      "source_sha256": "21ff945e3d0d01c0fb2cdf7792a4326386e08781ba76988ac55c9b06cd352945"
+    },
+    {
+      "name": "IsingBulk.HT22.Physical.interiorBulk_eqOn_existing",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Physical/GermBridge.lean",
+      "line": 82,
+      "source_sha256": "a27e7f61c3afb8390df63d2eb4c4115c37b70721245dbb89fc12cd856da715d6"
+    },
+    {
+      "name": "IsingBulk.HT22.Physical.oddSeries_real_eq_siteFirst",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Physical/JointLatticeSummability.lean",
+      "line": 27,
+      "source_sha256": "21ff945e3d0d01c0fb2cdf7792a4326386e08781ba76988ac55c9b06cd352945"
+    },
+    {
+      "name": "IsingBulk.HT22.Physical.physicalSusceptibility_eqOn_existing",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Physical/GermBridge.lean",
+      "line": 114,
+      "source_sha256": "a27e7f61c3afb8390df63d2eb4c4115c37b70721245dbb89fc12cd856da715d6"
+    },
+    {
+      "name": "IsingBulk.HT22.Physical.signedCoefficient_eq_wholeContour",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Physical/WholeDeformation.lean",
+      "line": 204,
+      "source_sha256": "e0cf836362a3f3acc1164e6d1484d55da924f7ff75613502a9fc4976c3e58bdf"
+    },
+    {
+      "name": "IsingBulk.HT22.PhysicalScope.realBulk_origin_add_offOrigin",
+      "main_required": false,
+      "aggregate_required": false,
+      "physical_required": true,
+      "path": "repository/lean/IsingBulk/HT22/PhysicalScope/RealSpin.lean",
+      "line": 65,
+      "source_sha256": "363d36a1fd4effcf8bc2b6fa41e7486ba6413dffafb235ce4d3572d0b31d4152"
+    },
+    {
+      "name": "IsingBulk.HT22.PhysicalScope.realBulk_summable_and_eq",
+      "main_required": false,
+      "aggregate_required": false,
+      "physical_required": true,
+      "path": "repository/lean/IsingBulk/HT22/PhysicalScope/RealSpin.lean",
+      "line": 30,
+      "source_sha256": "363d36a1fd4effcf8bc2b6fa41e7486ba6413dffafb235ce4d3572d0b31d4152"
+    },
+    {
+      "name": "IsingBulk.HT22.PhysicalScope.realSpin_absolute_summability",
+      "main_required": false,
+      "aggregate_required": false,
+      "physical_required": true,
+      "path": "repository/lean/IsingBulk/HT22/PhysicalScope/RealSpin.lean",
+      "line": 48,
+      "source_sha256": "363d36a1fd4effcf8bc2b6fa41e7486ba6413dffafb235ce4d3572d0b31d4152"
+    },
+    {
+      "name": "IsingBulk.HT22.PhysicalScope.realSusceptibility_eq_physicalGerm",
+      "main_required": false,
+      "aggregate_required": false,
+      "physical_required": true,
+      "path": "repository/lean/IsingBulk/HT22/PhysicalScope/RealSpin.lean",
+      "line": 81,
+      "source_sha256": "363d36a1fd4effcf8bc2b6fa41e7486ba6413dffafb235ce4d3572d0b31d4152"
+    },
+    {
+      "name": "IsingBulk.HT22.PhysicalScope.real_temperature_coordinate",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/PhysicalScope/RealSpin.lean",
+      "line": 90,
+      "source_sha256": "363d36a1fd4effcf8bc2b6fa41e7486ba6413dffafb235ce4d3572d0b31d4152"
+    },
+    {
+      "name": "IsingBulk.HT22.SharpCovarianceJets.actual_sharp_covariance_jets",
+      "main_required": false,
+      "aggregate_required": true,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/SharpCovarianceJets/Actual.lean",
+      "line": 13,
+      "source_sha256": "0f4bf2cc6b1372647171bfa5f9a659785f55f9b8e1ffff5a06541cb45fb62ca9"
+    },
+    {
+      "name": "IsingBulk.HT22.Tail.actual_near_scalar_quadratic_full",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Tail/ActualNearQuadraticFull.lean",
+      "line": 10,
+      "source_sha256": "926066cc247b01c7ee166de399b10a7b8225578e5b249e23dd3952750f8acf77"
+    },
+    {
+      "name": "IsingBulk.HT22.Tail.actual_right_integral_identity",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Tail/ActualIntegralIdentity.lean",
+      "line": 15,
+      "source_sha256": "0970227abbc9a56ff750557ba26577f0b2880cfb5fb83e11db6a5e25ba0b1411"
+    },
+    {
+      "name": "IsingBulk.HT22.Tail.coordinateJacobian_piola",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Tail/SourcePiola.lean",
+      "line": 114,
+      "source_sha256": "15bf660e7544ab04b1afa4a08ebd06c1cdcfb8b8c1756865fff13e34a0d9cada"
+    },
+    {
+      "name": "IsingBulk.HT22.Tail.physical_transport_factorization",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Tail/PhysicalRecurrence.lean",
+      "line": 75,
+      "source_sha256": "d1c94e25c615780bc2e18b16a134b15506d823b23f382ad2ec82c140ef2ca8f5"
+    },
+    {
+      "name": "IsingBulk.HT22.Tail.transportedDensity_eq_reconstructed",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Tail/PhysicalRecurrence.lean",
+      "line": 103,
+      "source_sha256": "d1c94e25c615780bc2e18b16a134b15506d823b23f382ad2ec82c140ef2ca8f5"
+    },
+    {
+      "name": "IsingBulk.HT22.actual_angular_field_diameter_bound_from_jets",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/FieldNeighborhood/ActualAngularFrameJets.lean",
+      "line": 125,
+      "source_sha256": "096e728a79dbfdac28a8d13b3144c8024b20177d2f782b8996a373cc228ea338"
+    },
+    {
+      "name": "IsingBulk.HT22.actual_angular_field_uniform_frame_budget",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/FieldNeighborhood/ActualAngularFrameJets.lean",
+      "line": 16,
+      "source_sha256": "096e728a79dbfdac28a8d13b3144c8024b20177d2f782b8996a373cc228ea338"
+    },
+    {
+      "name": "IsingBulk.HT22.actual_mixed_field_scale_jets_uniform_cap",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/FieldNeighborhood/ActualScaleJets.lean",
+      "line": 119,
+      "source_sha256": "bb00ccdc61b461113f9bac941b7498f7ada696fb76750c2851d09a14bac5db01"
+    },
+    {
+      "name": "IsingBulk.HT22.actual_sourceResidual_joint_jets_uniform_cap",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/FieldNeighborhood/ActualFieldJets.lean",
+      "line": 89,
+      "source_sha256": "89ecb2df525aec5693396f167994def449100032b911a2f187eb47c4200f5bab"
+    },
+    {
+      "name": "IsingBulk.HT22.mixedCovariance",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/MixedCovariance.lean",
+      "line": 12,
+      "source_sha256": "d9dd6c1e8eeb4623e7798dd75d92ded48b8b3c2d8b8263ae663f803de88a5c26"
+    },
+    {
+      "name": "IsingBulk.HT22.sourceResidual_joint_jets_of_base_inverse_geometry",
+      "main_required": true,
+      "aggregate_required": false,
+      "physical_required": false,
+      "path": "repository/lean/IsingBulk/HT22/Transport/FieldNeighborhood/JetTheorem.lean",
+      "line": 17,
+      "source_sha256": "93865c2b4d2803b293794ba06fee2b418e0de08bbb2d5b7e599a6f0261d5e1a8"
+    }
+  ]
+}

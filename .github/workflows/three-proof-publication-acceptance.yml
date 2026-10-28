@@ -4,6 +4,11 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/HT22/**'
+      - '!lean/IsingBulk/HT22.lean'
+      - '!lean/IsingBulkHT22.lean'
+      - '!lean/AuditHT22.lean'
+      - '!lean/lakefile.ht22.toml'
       - '!lean/IsingBulk/Joint/**'
       - '!lean/IsingBulk/PSER/**'
       - '!lean/IsingBulk/Preferred22/**'
@@ -24,6 +29,11 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/HT22/**'
+      - '!lean/IsingBulk/HT22.lean'
+      - '!lean/IsingBulkHT22.lean'
+      - '!lean/AuditHT22.lean'
+      - '!lean/lakefile.ht22.toml'
       - '!lean/IsingBulk/Joint/**'
       - '!lean/IsingBulk/PSER/**'
       - '!lean/IsingBulk/Preferred22/**'

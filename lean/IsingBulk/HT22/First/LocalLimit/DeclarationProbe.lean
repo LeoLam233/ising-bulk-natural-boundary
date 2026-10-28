@@ -1,0 +1,9 @@
+import IsingBulk.HT22.First.LocalLimit.PrimeCharts
+import IsingBulk.HT22.First.LocalLimit.OneParticle
+
+#print IsingBulk.HT22.LocalLimit.prime_two_chart_asymptotic
+#print IsingBulk.HT22.LocalLimit.equalAngleLeadingCoefficient_radial_formula
+#print IsingBulk.HT22.LocalLimit.oneParticle_radial_derivative_bound
+#print axioms IsingBulk.HT22.LocalLimit.prime_two_chart_asymptotic
+#print axioms IsingBulk.HT22.LocalLimit.equalAngleLeadingCoefficient_radial_formula
+#print axioms IsingBulk.HT22.LocalLimit.oneParticle_radial_derivative_bound

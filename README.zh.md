@@ -1,5 +1,16 @@
 # 二维正方晶格 Ising 体磁化率的自然边界
 
+**HT22 PSER 是独立的高温证明。** [22 页冻结 PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) · [十四字段 Lean 定理](lean/IsingBulk/HT22/Final/Target.lean) · [数学对应](docs/ht22/PROOF_MAP.md) · [复现](docs/ht22/BUILD_AND_VERIFY.md)。
+
+| 高温版本 | 论文 | 形式化路线 |
+|---|---|---|
+| Original（33 页原稿） | [PDF](paper/ht/frozen/manuscript.pdf) · [TeX](paper/ht/frozen/manuscript.tex) | [原 HT Lean 1747](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
+| Reader（原证明的易读编辑版） | [PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | 同一原 HT 路线 |
+| PSER HT22（独立证明） | [22 页 PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) | [独立 HT22 Lean](lean/IsingBulk/HT22/Final/Target.lean) |
+
+根定理 `IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget` 无根前提，实际证明十四个字段。物理对应恰以 `PhysicalScope.PublishedRealHTSpinFormFactors corr` 为前件，包含同点自旋平方和实温逐格点奇粒子形状因子恒等式；不声称构造 Gibbs 态。[物理范围](docs/ht22/PHYSICAL_INPUTS.md) · [审查身份](docs/ht22/AUDIT_EVIDENCE.md) · [引用](high-temperature/ht22/CITATION.cff)。原 HT、推荐 Reader、LT22 和既有 Release 保持独立身份。
+
+
 **LT22 PSER 是独立的低温证明路线。** [22 页冻结 PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) · [Preferred22 定理](lean/IsingBulk/Preferred22/FullTheorem.lean) · [物理范围与对应](docs/lt22/PROOF_MAP.md) · [复现](docs/lt22/BUILD_AND_VERIFY.md)。
 
 | 低温版本 | 论文 | 形式化路线 |
@@ -8,7 +19,7 @@
 | Reader（同一原证明的易读编辑版） | [PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
 | PSER（LT22，独立数学证明） | [22 页 PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) | [独立 Preferred22 Lean](lean/IsingBulk/Preferred22/FullTheorem.lean) |
 
-LT22 原样保留 10 月 25 日审查冻结的 333 个新模块与 153 个继承模块，以及 Lean 4.34.1 和九项依赖锁定。根定理 `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget` 没有根前提；Yang 与 Palmer–Tracy 实温物理输入只在物理对应子句中作为前件。[审查与身份](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 引用](low-temperature/lt22/CITATION.cff)。下方历史记录保持原有版本范围。本次只发布 LT22，不宣称 HT22、ANISO F002 或 JOINT F001 已形式化完成或发表。
+LT22 原样保留 10 月 25 日审查冻结的 333 个新模块与 153 个继承模块，以及 Lean 4.34.1 和九项依赖锁定。根定理 `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget` 没有根前提；Yang 与 Palmer–Tracy 实温物理输入只在物理对应子句中作为前件。[审查与身份](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 引用](low-temperature/lt22/CITATION.cff)。下方历史记录保持原有版本范围。此 LT22 段落保留其发布范围。HT22 现于上方独立介绍；ANISO F002 与 JOINT F001 仍是后续发布任务。
 
 本仓库展示无限正方晶格 Ising 模型**零外场完整体磁化率**的四项数学研究及相应的 Lean 形式化：各向同性低温和高温的独立证明、任意固定正耦合比的各向异性结果，以及两个独立复耦合变量下的母定理。
 

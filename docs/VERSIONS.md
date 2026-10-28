@@ -1,5 +1,10 @@
 # Authoritative versions and artifact identities
 
+## HT22 PSER F001 — 28 October 2026
+
+The distinct independent high-temperature route has the exact fourteen-field root `IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget`. The 378 frozen HT22 submodules, roots/audit/config, exact 22-page PDF/TeX and separate editorial clarifications retain canonical source manifest `a0c4ddb4725a86382ee8f57e1e81b25cf60b8a2e1469d165c9efa395a65d227f`. [Identity](../provenance/ht22/SOURCE_IDENTITY.json) · [Build and verify](ht22/BUILD_AND_VERIFY.md) · [versioned release](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/ht22-pser-f001-v1.0.0). Earlier chronological notes below describe their original scope.
+
+
 The **LT22 PSER proof** is an independent low-temperature route: [frozen 22-page PDF](../paper/lt/pser/manuscript.pdf) · [TeX](../paper/lt/pser/manuscript.tex) · [Preferred22 theorem](../lean/IsingBulk/Preferred22/FullTheorem.lean) · [scope and correspondence](../docs/lt22/PROOF_MAP.md) · [reproduce](../docs/lt22/BUILD_AND_VERIFY.md).
 
 | Low-temperature edition | Paper | Formal route |

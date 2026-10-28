@@ -1,5 +1,14 @@
 # Scope-aware proof CI (26 October 2026)
 
+## HT22 active route — 28 October 2026
+
+The [HT22 workflow](../.github/workflows/ht22-lean-acceptance.yml) runs on HT22/shared Lean inputs, pinned configurations, dedicated tooling/manuscript/provenance and relevant CI routing changes. It source-cleans the project, uses only freshly fetched official dependency cache, builds all 378 HT22 submodules and strict root/audit, performs separate official fresh replay, reconstructs every stored field proof and enhanced complete closure, and executes effective positive/negative route controls. Evidence is bound to the PR head or actual merged main SHA. Only successful exact-main acceptance can publish the new release.
+
+The three-result, four-result and LT22 automatic routes exclude exactly HT22-owned namespace/root/audit/config additions. Their job bodies and historical algorithms are unchanged. All previous mathematical sources and dependency locks retain their original hashes; exact old-root import closures have empty intersection with the additions. These two positive noninterference checks justify the exclusions. Shared-source, old theorem, old config, lock and toolchain edits still trigger their old suites. Reader/navigation-only changes continue to avoid heavy replay. Historical navigation is restored only in a hash-verified temporary view for old byte-pinning validators.
+
+The earlier future-route tables below are retained as the LT22 planning record. HT22 is now active at the locations above; ANISO F002 and JOINT F001 remain reserved.
+
+
 The dedicated [LT22 Preferred22 workflow](../.github/workflows/lt22-lean-acceptance.yml) runs on PRs, main pushes and manual dispatch. It binds the frozen 491-entry source/provenance closure, 333 new modules, PDF/TeX and protected four-result bytes; builds the aggregate from zero project objects; checks the actual terminal type, allowed axioms and exact previously audited dependency graph; and runs official `leanchecker --fresh --verbose`. Failure propagates to CI and raw streams plus machine-readable receipts are retained for 90 days.
 
 The older three/four-result automatic filters now exclude both `lean/IsingBulk/Preferred22/**` and `lean/IsingBulk/Preferred22.lean`. All three routes also exclude the navigation-only `lean/README.md`. Their verification jobs and historical algorithms are unchanged. Routing-only edits to those two entry-point workflow files do not automatically request historical heavy replays; use their retained manual dispatch when changing job logic. Historical verifier scripts and reusable implementations remain automatic triggers. Shared Lean sources, any lock/toolchain/configuration change, or original theorem changes still match `lean/**` and invoke the affected original suites as before. LT22 also conservatively matches all Lean formal/configuration changes.
