@@ -217,7 +217,7 @@
        - '!lean/IsingBulk/Preferred22.lean'
 --- base/.github/workflows/lt22-lean-acceptance.yml
 +++ published/.github/workflows/lt22-lean-acceptance.yml
-@@ -4,6 +4,11 @@
+@@ -4,21 +4,29 @@
      paths:
        - 'lean/**'
        - '!lean/README.md'
@@ -229,7 +229,10 @@
        - 'paper/lt/pser/**'
        - 'provenance/lt22/**'
        - 'verification/lt22/**'
-@@ -14,6 +19,11 @@
+       - 'scripts/*lt22*'
+-      - '.github/workflows/lt22-lean-acceptance.yml'
+   push:
+     branches: [main]
      paths:
        - 'lean/**'
        - '!lean/README.md'
@@ -241,3 +244,8 @@
        - 'paper/lt/pser/**'
        - 'provenance/lt22/**'
        - 'verification/lt22/**'
+       - 'scripts/*lt22*'
+-      - '.github/workflows/lt22-lean-acceptance.yml'
+   workflow_dispatch:
+ permissions:
+   contents: read

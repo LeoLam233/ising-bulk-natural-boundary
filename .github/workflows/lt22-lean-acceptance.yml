@@ -13,7 +13,6 @@ on:
       - 'provenance/lt22/**'
       - 'verification/lt22/**'
       - 'scripts/*lt22*'
-      - '.github/workflows/lt22-lean-acceptance.yml'
   push:
     branches: [main]
     paths:
@@ -28,7 +27,6 @@ on:
       - 'provenance/lt22/**'
       - 'verification/lt22/**'
       - 'scripts/*lt22*'
-      - '.github/workflows/lt22-lean-acceptance.yml'
   workflow_dispatch:
 permissions:
   contents: read

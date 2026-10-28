@@ -58,7 +58,7 @@
     },
     ".github/workflows/lt22-lean-acceptance.yml": {
       "old_sha256": "35088b4bca39d9e6a9d71f9c0cf1da39165a6be054efdc09f33f0d92d7b7a328",
-      "new_sha256": "57d62122c3760835a83a1b0927897c5d9597204e44bcde17e0f967d381fc845d",
+      "new_sha256": "719b4cabc6791cf2bd83d54221757914f6e5263018852578967691154e0f0954",
       "purpose": "Publication navigation / narrow additive CI routing only"
     }
   },
