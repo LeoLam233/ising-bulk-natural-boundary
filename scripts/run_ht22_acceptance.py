@@ -44,11 +44,19 @@ class PublicationJob(Job):
         invocations={}
         for label in ['10-clean-root-build','11-audit-build','12-all-additive-source-build','13-bypass-fixture-prerequisite']:
             text=(self.receipts/(label+'.stdout.log')).read_text(errors='replace')+(self.receipts/(label+'.stderr.log')).read_text(errors='replace')
+            event=None
             for line in text.splitlines():
+                match=re.search(r'\b(Built|Replayed) ([A-Za-z_][A-Za-z0-9_.]*)',line)
+                if match:event=(match.group(1),match.group(2))
                 if '.lean -o ' not in line or str(self.project) not in line:continue
                 for rel in re.findall(re.escape(str(self.project)) + r'/([^\s]+)\.lean -o ',line):
+                    rel=pathlib.PurePosixPath(rel).as_posix()
+                    if rel.startswith('.lake/'):continue
+                    module=rel.replace('/','.')
+                    if event!=('Built',module):continue
                     require('-j1' in line and '-DwarningAsError=true' in line,'Non-strict compiler invocation')
-                    invocations[pathlib.PurePosixPath(rel).as_posix().replace('/','.')]=line
+                    require(module not in invocations,'Local source compiled more than once: '+module)
+                    invocations[module]=line
         expected=local_closure(self.graph,self.added_modules+['IsingBulk.HT.Final.FullNaturalBoundary'])
         require(set(invocations)==expected,'Missing strict compiler traces: '+str(sorted(expected-set(invocations))))
         self.save('STRICT_COMPILER_COVERAGE.json',dict(expected=len(expected),unique_source_compilations=len(invocations),all_378_submodules=True,missing=[],source_object_traces=invocations))
