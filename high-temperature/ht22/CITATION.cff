@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Cite the distinct HT22 PSER manuscript and the exact HT22 release tag/commit consulted. Internal audit and Lean acceptance do not claim human peer review."
+type: article
+title: "The complete high-temperature Ising susceptibility: a constrained-coordinate proof of the natural boundary"
+authors:
+  - family-names: Lin
+    given-names: Dehao
+    orcid: "https://orcid.org/0009-0001-4551-8490"
+    affiliation: "School of Physics, Sun Yat-sen University"
+    email: "lindh9@mail2.sysu.edu.cn"
+version: "ht22-pser-f001-v1.0.0"
+license: CC-BY-4.0
+repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
+url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/main/paper/ht/pser"

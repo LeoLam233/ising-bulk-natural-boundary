@@ -1,5 +1,16 @@
 # Research results, manuscripts and Lean correspondence
 
+The **HT22 PSER proof** is a distinct independent high-temperature proof: [frozen 22-page PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) · [fourteen-field theorem](lean/IsingBulk/HT22/Final/Target.lean) · [correspondence](docs/ht22/PROOF_MAP.md) · [reproduce](docs/ht22/BUILD_AND_VERIFY.md).
+
+| High-temperature edition | Paper | Formal route |
+|---|---|---|
+| Original HT (33 pages) | [PDF](paper/ht/frozen/manuscript.pdf) · [TeX](paper/ht/frozen/manuscript.tex) | [Original HT Lean 1747](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
+| Reader (editorial edition of Original HT) | [PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | Same Original HT Lean route |
+| PSER HT22 (distinct independent proof) | [22-page PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) | [Independent HT22 Lean](lean/IsingBulk/HT22/Final/Target.lean) |
+
+`IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget` has zero root premises and fourteen proved fields. Physical interpretation uses exactly `PhysicalScope.PublishedRealHTSpinFormFactors corr` as an antecedent: onsite spin-square and real sitewise odd form factors. No Gibbs-state construction is claimed. [Physical scope](docs/ht22/PHYSICAL_INPUTS.md) · [Audit identities](docs/ht22/AUDIT_EVIDENCE.md) · [HT22 citation](high-temperature/ht22/CITATION.cff). Original HT and its recommended Reader, LT22 and all earlier releases retain their own identities.
+
+
 The **LT22 PSER proof** is an independent low-temperature route: [frozen 22-page PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) · [Preferred22 theorem](lean/IsingBulk/Preferred22/FullTheorem.lean) · [scope and correspondence](docs/lt22/PROOF_MAP.md) · [reproduce](docs/lt22/BUILD_AND_VERIFY.md).
 
 | Low-temperature edition | Paper | Formal route |
@@ -8,7 +19,7 @@ The **LT22 PSER proof** is an independent low-temperature route: [frozen 22-page
 | Reader paper (editorial edition of Original) | [PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
 | PSER paper (LT22, distinct proof) | [22-page PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) | [Independent Preferred22 Lean](lean/IsingBulk/Preferred22/FullTheorem.lean) |
 
-LT22 preserves the October 25 audited source bytes: 333 new modules, 153 identical inherited modules, unchanged Lean 4.34.1 and nine dependency pins. The exact root is `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget`, with zero root premises; Yang and Palmer–Tracy inputs are antecedents only within the physical identification clause. [Identity and prior audit](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 citation](low-temperature/lt22/CITATION.cff). The records below retain their historical version-specific scope. HT22, ANISO F002 and JOINT F001 are separate future publication tasks; this LT22 addition makes no completion or publication claim for them.
+LT22 preserves the October 25 audited source bytes: 333 new modules, 153 identical inherited modules, unchanged Lean 4.34.1 and nine dependency pins. The exact root is `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget`, with zero root premises; Yang and Palmer–Tracy inputs are antecedents only within the physical identification clause. [Identity and prior audit](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 citation](low-temperature/lt22/CITATION.cff). The records below retain their historical version-specific scope. The LT22 paragraph records that release’s scope. HT22 is now presented separately above; ANISO F002 and JOINT F001 remain future publication tasks.
 
 First-time readers should open the **reviewed Reader editions** below. The original/frozen mathematical authority and the terminal Lean theorem interface remain distinct.
 

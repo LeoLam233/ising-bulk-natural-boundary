@@ -1,0 +1,22 @@
+{
+  "frozen_acceptance_sha256": "0ae8d9c6613792ee6ac7d14344078b1e896129bf14408a8723a183b85cae31ae",
+  "enhanced_scanner_sha256": "2a6e4a3d3965a0aa1ec60cd1cd22b10ccbbc8b1a3459c5c66f7ba768e8c03dad",
+  "enhanced_scanner_origin": "Completed Codex C001 enhanced reverse-recursor/quotient scanner; publication wrapper is separate tooling, no mathematical source changes.",
+  "frozen_controls": {
+    "CONTROLS_LEDGER.md": "fd98605449bcfc2515cfacc31b960dc256723ee3272fb92f6e5bf3274c7e23f7",
+    "make_graph_driver.py": "0b9de72f3bdceaca42daf5467ea90a934ddc4fa7fdd86a64d130789c7db01592",
+    "README.md": "18d5e05b4a10fb6831a7518a6b15ddb298764fb86ce5d69e31778678df8c660e",
+    "requirements_source_map.json": "5911d455fd69836addb25e501025ab4081a08303a55df21043438ac7ec546e8d",
+    "route_policy.py": "dae743071a978982081ce583f50b926361fb7e7a6ebd294f4381392badb0ab34",
+    "run_controls.py": "685d0989d6c4bd6659b7a500bb25824f0f8d1c32d1b123cc1461d8e5662a6297",
+    "test_controls_runner.py": "658eb2ed3956db8290eaef8d47944c755745a8e30d171bb4730e4d5600b22824",
+    "test_route_policy.py": "d4ef9d470880c4f3c5cc069a950f5f593e79e319e36172ebb2c5009b8b5202f1",
+    "fixtures/FiniteSubstitution.lean": "609b574cbda6c4dd46e34c49af4caf364562c4ba3c4d25c49d35d22b9f818bc1",
+    "fixtures/OldRouteBypass.lean": "36f8108a4f3c2ace66071cc9eaddd6bcb5a7529c79acb90da61dee0386846c06",
+    "fixtures/OmittedOrigin.lean": "837d5a0904682c7af58be797a939daaabd03f3e473dfdcca07cb020aa255b4d1",
+    "fixtures/PositiveAxioms.lean": "5f6f7858e9ffbc5d92521ac3afd1ee9bd7f713e944167622d3b80d99647145d1",
+    "fixtures/ZeroCoupling.lean": "dbcfe3a4a5fde1bef59b3b0ac3e53ce4c41f9f1c12ab464474b0ce24f5178da2",
+    "fixtures/ZeroObservable.lean": "d1cd91519a8f9a85acbaee5d2150e2ab71766e59b5517bce8c0777f05b2113b9",
+    "fixtures/ZeroPhysics.lean": "4ffb30e83136e14afe5a1b42065d6033d4409e6f6019684aed86e41aa252688e"
+  }
+}

@@ -1,5 +1,8 @@
 # Manuscripts: four reviewed Reader editions
 
+**Independent HT22 PSER:** [22-page PDF](ht/pser/manuscript.pdf) · [TeX](ht/pser/manuscript.tex) · [exact clarifications](ht/pser/MATHEMATICAL_ERRATA.md) · [independent Lean route](../lean/IsingBulk/HT22/Final/Target.lean). This is a distinct proof alongside Original HT and its recommended Reader.
+
+
 The **LT22 PSER proof** is an independent low-temperature route: [frozen 22-page PDF](../paper/lt/pser/manuscript.pdf) · [TeX](../paper/lt/pser/manuscript.tex) · [Preferred22 theorem](../lean/IsingBulk/Preferred22/FullTheorem.lean) · [scope and correspondence](../docs/lt22/PROOF_MAP.md) · [reproduce](../docs/lt22/BUILD_AND_VERIFY.md).
 
 | Low-temperature edition | Paper | Formal route |

@@ -1,5 +1,16 @@
 # 高温相自然边界证明
 
+**HT22 PSER 是独立的高温证明。** [22 页冻结 PDF](../paper/ht/pser/manuscript.pdf) · [TeX](../paper/ht/pser/manuscript.tex) · [十四字段 Lean 定理](../lean/IsingBulk/HT22/Final/Target.lean) · [数学对应](../docs/ht22/PROOF_MAP.md) · [复现](../docs/ht22/BUILD_AND_VERIFY.md)。
+
+| 高温版本 | 论文 | 形式化路线 |
+|---|---|---|
+| Original（33 页原稿） | [PDF](../paper/ht/frozen/manuscript.pdf) · [TeX](../paper/ht/frozen/manuscript.tex) | [原 HT Lean 1747](../lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
+| Reader（原证明的易读编辑版） | [PDF](../paper/ht/reader/manuscript.pdf) · [TeX](../paper/ht/reader/manuscript.tex) | 同一原 HT 路线 |
+| PSER HT22（独立证明） | [22 页 PDF](../paper/ht/pser/manuscript.pdf) · [TeX](../paper/ht/pser/manuscript.tex) | [独立 HT22 Lean](../lean/IsingBulk/HT22/Final/Target.lean) |
+
+根定理 `IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget` 无根前提，实际证明十四个字段。物理对应恰以 `PhysicalScope.PublishedRealHTSpinFormFactors corr` 为前件，包含同点自旋平方和实温逐格点奇粒子形状因子恒等式；不声称构造 Gibbs 态。[物理范围](../docs/ht22/PHYSICAL_INPUTS.md) · [审查身份](../docs/ht22/AUDIT_EVIDENCE.md) · [引用](ht22/CITATION.cff)。原 HT、推荐 Reader、LT22 和既有 Release 保持独立身份。
+
+
 **无序高温相 · 无限正方晶格完整体磁化率**
 
 这是仓库中的**高温相独立证明**，研究零外场、各向同性、无限二维正方晶格 Ising 模型。

@@ -1,0 +1,24 @@
+# HT22 PSER F001 — mathematical and Lean correspondence
+
+The exact frozen theorem is `IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget`, in [Final/Target.lean](../../lean/IsingBulk/HT22/Final/Target.lean). It has zero root hypotheses and fourteen actual proved fields. This map adapts the frozen author crosswalk; CI reconstructs the actual stored constructor arguments and inferred types independently.
+
+| Aggregate field | Exact scope | Producer |
+|---|---|---|
+| `bulk_analytic` (L51) | Analytic on the full open unit disk, including the removable origin. | `Physical.interiorBulk; Final.f001_natural_boundary.1` |
+| `bulk_boundary` (L52) | No local holomorphic extension at EVERY unit-circle point; axes are not excluded. | `Final.f001_natural_boundary.2.1` |
+| `susceptibility` (L54) | For every real J>0: disk analyticity and every-point unit-circle nonextension of the beta-inclusive susceptibility. | `Final.f001_natural_boundary.2.2` |
+| `same_bulk_germ` (L57) | Equality to the existing HT bulk function everywhere \|s\|<1, including 0. This equality is not an assumed old boundary conclusion. | `Physical.interiorBulk_eqOn_existing` |
+| `same_susceptibility_germ` (L58) | Equality of the two beta-inclusive function definitions for all real J on \|s\|<1; the boundary assertion itself requires J>0. | `Physical.physicalSusceptibility_eqOn_existing` |
+| `physical_input` (L61) | Conditional real-physics application: any corr satisfying precisely spin_square and the real sitewise odd-form-factor identity gives absolute all-site summability, both germ identifications, and the origin-plus-off-origin formula on 0<s<1. No existence of an Ising spin correlation is constructed here. | `Final.f001_full_lattice_physical` |
+| `beta_coordinate` (L69) | For real J>0 and s>0: beta=arsinh(s)/(2J)>0 and sinh(2 beta J)=s. | `PhysicalScope.real_temperature_coordinate` |
+| `joint_lattice` (L71) | For real t>1: joint norm summability on Nat x (Int x Int), plus equality of the full odd series with the site-first double sum. | `Physical.full_odd_lattice_norm_summable; Physical.oddSeries_real_eq_siteFirst` |
+| `one_particle` (L76) | Real t>1: the actual positive one-particle coefficient is 1/(t+t^-1-2). The negative and complex-exterior identities are separate mapped theorems, not extra fields here. | `Physical.coefficient_one_real` |
+| `absolute_tail` (L77) | For each branch datum, epsilon_0 is chosen BEFORE odd p>=5, derivative order j<=k(p), either sign, and epsilon. C may depend on branch,p,j, but not epsilon or particle index. The norm sum ranges over N=p+2+2n without truncation. | `FullTail.actual_absolute_tail` |
+| `first_coefficient` (L83) | For every prime p>=5 and 1<=a with 2a<p: exact original positive coefficient at angle 2pi a/p has nonzero Lambda and Lambda/epsilon + o(1/epsilon) at k=(p^2-1)/2. No FIRST premise is assumed. | `Finite.actual_original_prime_first_asymptotic` |
+| `prime_full_limit` (L91) | The full signed odd SERIES, not merely the first particle term, has its nonzero epsilon-scaled kth-derivative limit in the effective positive-geometry chart, with the correct sign/reflection-dependent leading constant. | `Final.actual_prime_full_limit` |
+| `angular_jets` (L98) | Actual angular V, all words in the real smooth fixed-v frame, total word length<=j: C_j*N^(2j^2+10j+3)*Delta^(-1-length). Cap precedes B; geometry precedes j and N; C follows j. No holomorphic extension of smooth occupancy is asserted. | `actual_angular_field_uniform_frame_budget` |
+| `sharp_covariance_jets` (L99) | Actual joint complex Frechet R, R^-1 and centered-G jets with N^(2m+2) and exact Delta powers, plus a common-ball lower bound on \|R\| at radius rho_0*Delta/N^2. The exported field states the lower bound and jets; analytic-domain facts are proved upstream, not an additional field here. | `SharpCovarianceJets.actual_sharp_covariance_jets` |
+
+The all-site physical interpretation retains precisely the published-real antecedent. The analytic germs themselves are explicitly constructed. The independent boundary proof consumes new whole constrained deformation, bordered minors, mixed covariance/coarea, source transport, finite FIRST and complete near/far infinite-tail arguments. Existing compact convergence, germ equality, arithmetic and generic transfer infrastructure is reused. Old HT finished boundary/noncancellation/FIRST/differentiated-tail endpoints are forbidden by proof-route policy.
+
+Angular V jets are consumed by MAIN through actual stored values; the sharp R/R-inverse/G jet table is a separate quantitative aggregate export. CI checks the MAIN subclosure on stored-value/structural paths excluding type-only edges, in addition to the complete type/value/structural graph. [Exact physical scope](PHYSICAL_INPUTS.md) · [Reproduce](BUILD_AND_VERIFY.md).
