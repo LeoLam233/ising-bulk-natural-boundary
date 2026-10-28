@@ -92,20 +92,28 @@ def publish(out,commit,run_url):
         if tag.returncode==0:assert json.loads(tag.stdout)['object']['sha']==commit,'Existing immutable tag mismatch'
         else:gh('api','--method','POST','repos/'+REPO+'/git/refs','-f','ref=refs/tags/'+TAG,'-f','sha='+commit)
         asset_files=[p for p in sorted(out.iterdir()) if p.is_file()]
-        gh('release','create',TAG,'--repo',REPO,'--verify-tag','--title','HT22 — independent 22-page high-temperature PSER proof','--notes-file',str(out/'RELEASE_NOTES.md'),*[str(p) for p in asset_files])
+        gh('release','create',TAG,'--repo',REPO,'--verify-tag','--draft','--title','HT22 — independent 22-page high-temperature PSER proof','--notes-file',str(out/'RELEASE_NOTES.md'),*[str(p) for p in asset_files])
         release=api('releases/tags/'+TAG)
     target=api('git/ref/tags/'+TAG)['object']
     if target['type']=='tag':target=api('git/tags/'+target['sha'])['object']
     assert target['sha']==commit
     expected={p.name:p for p in out.iterdir() if p.is_file()}
     assert {a['name'] for a in release['assets']}==set(expected),'Release asset inventory differs'
+    if release['draft']:
+        # Verify every draft asset before publishing locks its bytes and tag.
+        with tempfile.TemporaryDirectory(prefix='ht22-draft-readback-') as tmp:
+            gh('release','download',TAG,'--repo',REPO,'--dir',tmp)
+            for name,p in expected.items():assert sha(pathlib.Path(tmp)/name)==sha(p),name
+        gh('release','edit',TAG,'--repo',REPO,'--draft=false')
+        release=api('releases/tags/'+TAG)
+    assert release.get('immutable') is True,'GitHub release/tag immutability is not enforced'
     checks={}
     for asset in release['assets']:
         p=expected[asset['name']]
         raw=urllib.request.urlopen(urllib.request.Request(asset['browser_download_url'],headers={'User-Agent':'HT22-publication-readback'})).read()
         assert len(raw)==p.stat().st_size and digest(raw)==sha(p),asset['name']
         checks[asset['name']]=dict(url=asset['browser_download_url'],bytes=len(raw),sha256=digest(raw))
-    dump(out/'RELEASE_READBACK.json',dict(status='VERIFIED',release_url=release['html_url'],merged_main_sha=commit,tag_target=target['sha'],assets=checks))
+    dump(out/'RELEASE_READBACK.json',dict(status='VERIFIED',release_url=release['html_url'],merged_main_sha=commit,tag_target=target['sha'],github_immutable=True,assets=checks))
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=pathlib.Path,required=True);p.add_argument('--commit',required=True);p.add_argument('--run-url',required=True);p.add_argument('--evidence',type=pathlib.Path,required=True);p.add_argument('--publish',action='store_true');a=p.parse_args()
     prepare(a.output,a.commit,a.run_url,a.evidence)

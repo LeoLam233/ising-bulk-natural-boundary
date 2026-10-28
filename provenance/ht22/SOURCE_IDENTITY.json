@@ -4733,7 +4733,7 @@
     "paper/ht/pser/manuscript.tex": "5d962d44180f33df66fbad90e2f66a8c95425d3eddc91765abb6953bd3b48c0f",
     "provenance/ht22/PRIOR_AUDITS.json": "cc2bd567b7f8972acfdfe76fa6982a304dfc13f215b4ce0a07501236ea3a148c",
     "provenance/ht22/TOOLING_ORIGINS.json": "00e4b87f5b5384cc1fa8eeaeb8a1f51b87bb12eafe3173dba253475bbfd794ed",
-    "scripts/make_ht22_release.py": "16bd34846b1fa427fa267d3b750eada13f022598d2fc33c320813ce64feeeded",
+    "scripts/make_ht22_release.py": "00f140219480071617697ed9c196bcaf182d82569da61178d131367f2fc45cde",
     "scripts/run_ht22_acceptance.py": "b27d604ad713f005e824afd3eafcc17b52a1a19a01f335df8bcd158e3eee3af3",
     "scripts/verify_ht22_preservation.py": "45f61fd223348daac02c0cf705b552ef7a2864177a09ff2d6caf6af4dfcc39ef",
     "scripts/verify_ht22_publication.py": "3634dd8e5e85c4eb5ed4af1a8cddd4ca60d84f0842623e4452df3b88e12a1da5",
