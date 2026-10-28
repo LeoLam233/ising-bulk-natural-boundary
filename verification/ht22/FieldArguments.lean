@@ -1,5 +1,5 @@
 open Lean Elab Command Meta
-elab "publication_fields to " destination:str : command => do
+elab "publication_fields " "to " destination:str : command => do
   let env := (← getEnv).setExporting false
   let some info := env.checked.get.find? `IsingBulk.HT22.ht22_full_target | throwError "missing terminal"
   let some stored := info.value? (allowOpaque := true) | throwError "missing stored proof"

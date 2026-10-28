@@ -9,6 +9,15 @@ from route_policy import validate_production,MAIN_REQUIRED,AGGREGATE_REQUIRED,PH
 
 FIELDS=['bulk_analytic','bulk_boundary','susceptibility','same_bulk_germ','same_susceptibility_germ','physical_input','beta_coordinate','joint_lattice','one_particle','absolute_tail','first_coefficient','prime_full_limit','angular_jets','sharp_covariance_jets']
 class PublicationJob(Job):
+    def run(self,label,command,cwd=None,env=None):
+        if label in {'10-clean-root-build','11-audit-build','12-all-additive-source-build','13-bypass-fixture-prerequisite'}:
+            # Two Lake scheduler workers; every Lean source invocation still
+            # uses the frozen -j1 -DwarningAsError=true configuration. Record
+            # the actual scheduler setting, then restore one for all replays.
+            previous=self.env['LEAN_NUM_THREADS'];self.env['LEAN_NUM_THREADS']='2'
+            try:return super().run(label,command,cwd=cwd,env=env)
+            finally:self.env['LEAN_NUM_THREADS']=previous
+        return super().run(label,command,cwd=cwd,env=env)
     def extract(self):
         self.identity=verify(self.a.source_bundle)
         require(not list((REPO/'lean/.lake/build').rglob('*.olean*')),'Incoming project objects must be absent; only upstream cache is allowed')
