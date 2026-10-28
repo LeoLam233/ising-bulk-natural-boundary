@@ -28,6 +28,26 @@ class PublicationJob(Job):
         super().environment()
         expected={'lean':'e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550','lake':'6f53827dab18010d6c690d14c8401cacabc1db958edb3552a877ed4cf1dd995d','leanchecker':'ccef1bfe9bfeecea65137d94a69033c1a89f360711f50fa3178e7ba3e696fcbe'}
         require({k:v['sha256'] for k,v in self.binaries.items()}==expected,'Official Linux binary hashes differ')
+    def dependencies(self):
+        cache=self.a.packages.resolve();dest=self.project/'.lake/packages';dest.mkdir(parents=True)
+        records=[]
+        for name in PINS:
+            self.verify_package(name,cache,'05-input')
+            package=(cache/name).resolve();links={}
+            for p in package.rglob('*'):
+                if p.is_symlink():
+                    target=os.readlink(p)
+                    require(not pathlib.Path(target).is_absolute() and p.resolve().is_relative_to(package),'External/absolute upstream symlink: '+str(p))
+                    links[p.relative_to(package).as_posix()]=target
+            # Preserve Git-tracked relative symlinks as links. Dereferencing the
+            # two official Mathlib benchmark links changes their tracked modes.
+            # All targets are proved internal; the copied tree shares no files.
+            shutil.copytree(package,dest/name,symlinks=True)
+            copied={p.relative_to(dest/name).as_posix():os.readlink(p) for p in (dest/name).rglob('*') if p.is_symlink()}
+            require(copied==links,'Upstream symlink identity drift')
+            row=self.verify_package(name,dest,'06-isolated');row['relative_internal_symlinks']=links;records.append(row)
+        self.save('DEPENDENCIES.json',dict(pins=PINS,method='Independent copies preserving validated package-internal relative symlinks; no hardlinks or external targets',packages=records))
+        self.verify_sources();self.steps['nine_pinned_dependencies']='PASS'
     def plan_build_and_regressions(self):
         self.graph=local_import_graph(self.project)
         self.added_modules=sorted(n for n in self.graph if n=='IsingBulk.HT22' or n.startswith('IsingBulk.HT22.') or n in (ROOT,AUDIT))
