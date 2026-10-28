@@ -28,6 +28,8 @@ def verify(source_bundle=False):
     pins=json.loads((ROOT/'lean/lake-manifest.json').read_text())['packages']
     assert len(pins)==9 and {p['name']:p['rev'] for p in pins}==identity['dependency_pins']
     assert (ROOT/'lean/lean-toolchain').read_text().strip()=='leanprover/lean4:v4.34.1'
+    foreign=[p.relative_to(ROOT).as_posix() for p in (ROOT/'lean').rglob('*.olean*') if '.lake' not in p.parts]
+    assert not foreign,('Foreign proof objects in source tree',foreign[:10])
     if source_bundle:
         marker=read('HT22_SOURCE_BUNDLE.json')
         assert marker['source_identity_sha256']==sha(ROOT/'provenance/ht22/SOURCE_IDENTITY.json')

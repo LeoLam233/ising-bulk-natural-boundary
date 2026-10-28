@@ -11,6 +11,7 @@ FIELDS=['bulk_analytic','bulk_boundary','susceptibility','same_bulk_germ','same_
 class PublicationJob(Job):
     def extract(self):
         self.identity=verify(self.a.source_bundle)
+        require(not list((REPO/'lean/.lake/build').rglob('*.olean*')),'Incoming project objects must be absent; only upstream cache is allowed')
         self.original_manifest_sha256='a0c4ddb4725a86382ee8f57e1e81b25cf60b8a2e1469d165c9efa395a65d227f'
         self.source.mkdir(parents=True)
         for rel in self.identity['files']:
