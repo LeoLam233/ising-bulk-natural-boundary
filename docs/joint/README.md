@@ -1,5 +1,7 @@
-# JOINT C002 documentation
+# Susceptibility in two independent complex coupling variables
 
-[Result](../../joint/README.md) · [Manuscripts](../../paper/joint/README.md) · [Proof map](PROOF_MAP.md) · [Physical inputs](PHYSICAL_INPUTS.md) · [Build and verification](BUILD_AND_VERIFY.md) · [Version identity](VERSION_IDENTITY.md) · [Audit evidence](AUDIT_EVIDENCE.md).
+[Read the two current scholarly papers](../../papers/two-complex-couplings/README.md).
 
-Original frozen navigation is preserved under [frozen/](frozen/PROOF_MAP.md), including mechanism-level maps. These original documents supply source navigation; new execution receipts establish actual publication acceptance.
+[Exact formal theorem and physical scope](../../docs/eight-papers/LEAN_CORRESPONDENCE.md) · [Formalization status](../../docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md).
+
+Older version-specific records retain their original identities in the [historical manuscript archive](../../archive/manuscripts/pre-eight-2026-10-30/README.md).

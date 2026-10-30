@@ -9,6 +9,10 @@ import subprocess
 import tempfile
 
 ROOT=Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 
 

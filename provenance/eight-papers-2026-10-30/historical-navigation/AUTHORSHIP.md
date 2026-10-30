@@ -1,0 +1,37 @@
+# Authorship, AI assistance and declarations
+
+**Dehao Lin**  
+ORCID: [0009-0001-4551-8490](https://orcid.org/0009-0001-4551-8490)<br>
+School of Physics, Sun Yat-sen University  
+lindh9@mail2.sysu.edu.cn
+
+Dehao Lin is the named human author and public contact for this project. The listed affiliation identifies the author and does not imply institutional endorsement. No additional authors are listed.
+
+Generative AI was used extensively for research exploration, mathematical derivations, manuscript writing, code, internal adversarial checks, reconstruction attempts and release preparation. AI systems are not listed as authors. This statement does not assign specific mathematical contributions or research-management roles beyond the documented facts. No line-by-line independent human verification, independent human expert certification or peer review is claimed. Historical Lean [v0.2.1](https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/v0.2.1) retained E1/E2/E3. In the current v0.3.0-rc2 candidate, canonical E3 is replaced internally and physical identification retains E1/E2. [Exact current verification](release/next/VALIDATION.json) and [version identities](docs/VERSIONS.md) are separate from old release receipts.
+
+Historical audit and reconstruction records retain their original session descriptions and limitations. Such descriptions do not independently establish model identity, isolation or statistical independence. Their verdicts are not peer review or mathematical certification; see the [audit index](audits/README.md) and [reconstruction records](reproduction/README.md).
+
+Project code: [MIT](LICENSE). Manuscript and project-authored prose: [CC BY 4.0](LICENSE-DOCUMENTATION.md), to the extent of the author's rights; third-party content retains its own rights. No additional funding or competing interests are declared. See [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## Four separately identified results
+
+[JOINT C002](joint/README.md), publication metadata dated 25 October 2026, adds the jointly holomorphic parent in two independent complex couplings and its exact ratio/isotropic descendants. Its 59-page mathematical authority is unchanged; the publication edition changes only preamble metadata. The same human author, affiliation, ORCID, contact, AI-assistance declaration and MIT/CC BY 4.0 license split apply. [Physical premises](docs/joint/PHYSICAL_INPUTS.md), [source identity](docs/joint/VERSION_IDENTITY.md) and [distinct audit provenance](docs/joint/AUDIT_EVIDENCE.md) are explicit.
+
+The same human author and contact apply to the fixed-ratio anisotropic, high-temperature and low-temperature
+results. The high-temperature manuscript HT-1.0 has a frozen audited edition and a
+separate [21 October 2026 publication edition](paper/ht/publication/README.md),
+with Lean freeze `HT_STANDALONE_20261020T1747Z`. Its sole external physical input
+is the published real-temperature full-bulk odd-particle angular representation.
+The low-temperature manuscript v0.1-rc6 and Lean v0.3.0-rc2 retain their own
+physical E1/E2 interfaces and historical identities. The earlier version references
+above describe the low-temperature development.
+
+The [ANISO C001 publication](anisotropic/README.md), dated 24 October 2026,
+preserves its frozen 38-page mathematical audit edition and a separate 39-page
+research-original. Its author-identified edition changes only preamble metadata.
+The two explicit physical-entry structures and their Gibbs interpretation are
+[specified together](docs/aniso/PHYSICAL_INPUTS.md). Its historical C001 label
+is a source label, not a reconstructed Git commit. [Audit provenance and archive
+availability](docs/aniso/AUDIT_EVIDENCE.md) distinguish internal, independent
+Codex, independent Pro and current publication executions. The same MIT/CC BY
+4.0 split and authorship declarations above apply.

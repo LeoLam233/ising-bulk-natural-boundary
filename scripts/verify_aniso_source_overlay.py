@@ -4,6 +4,10 @@ from pathlib import Path
 import hashlib,json,subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 SHA=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 
 def verify():

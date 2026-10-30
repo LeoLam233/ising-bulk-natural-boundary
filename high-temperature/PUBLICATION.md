@@ -8,8 +8,8 @@ connected pure-phase observable, even-particle expansion and endpoint.
 | Artifact | Identity |
 |---|---|
 | Mathematical manuscript | HT-1.0, 17 October 2026 |
-| Human-author publication edition | 21 October 2026; [PDF](../paper/ht/publication/manuscript.pdf), [editorial identity](../paper/ht/publication/EDITORIAL.json), [build record](../paper/ht/publication/BUILD.json) |
-| Frozen audited manuscript | [Unchanged TeX/PDF](../paper/ht/frozen/); source SHA-256 `128739407e585457b38d150bd5a74514d8567b5a936c8b4bc2a5c613b1962c65` |
+| Human-author publication edition | 21 October 2026; [PDF](../archive/manuscripts/pre-eight-2026-10-30/paper/ht/publication/manuscript.pdf), [editorial identity](../archive/manuscripts/pre-eight-2026-10-30/paper/ht/publication/EDITORIAL.json), [build record](../archive/manuscripts/pre-eight-2026-10-30/paper/ht/publication/BUILD.json) |
+| Frozen audited manuscript | [Unchanged TeX/PDF](../archive/manuscripts/pre-eight-2026-10-30/paper/ht/frozen/); source SHA-256 `128739407e585457b38d150bd5a74514d8567b5a936c8b4bc2a5c613b1962c65` |
 | Audited mathematical Lean project | `HT_STANDALONE_20261020T1747Z` |
 | Baseline low-temperature library tree | `ca47fde26285028603c7e87a9893aad31933b526` |
 | Source inventory | [1,079 unchanged baseline files and 447 exact additions](../HT_1747_OVERLAY_MANIFEST.json); all 1,521 files of the original standalone project are present byte-identically |

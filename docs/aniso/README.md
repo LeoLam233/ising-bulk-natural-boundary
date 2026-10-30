@@ -1,10 +1,7 @@
-# ANISO C001 guide
+# Fixed-ratio anisotropic susceptibility
 
-[Research entrance](../../anisotropic/README.md) · [Paper](../../paper/aniso/publication/manuscript.pdf) · [Terminal Lean theorem](../../lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) · [Citation](../../anisotropic/CITATION.cff)
+[Read the two current scholarly papers](../../papers/fixed-ratio-anisotropy/README.md).
 
-- [Proof map](PROOF_MAP.md): actual theorem type, complex domains, infinite sums, full dependency chain and inherited isotropic seeds.
-- [Physical inputs](PHYSICAL_INPUTS.md): complete explicit real-spin and real-Gibbs interfaces, state conventions and uniform-field derivatives.
-- [Build and verify](BUILD_AND_VERIFY.md): exact pinned toolchain, clean source procedure, bounded compilation and fresh kernel replay.
-- [Version identity](VERSION_IDENTITY.md): frozen files, shared/additive overlay, protected prior files and paper hashes.
-- [Audit evidence](AUDIT_EVIDENCE.md): distinct mathematical, internal, Codex and Pro records with honest archive availability.
-- [Editorial follow-up scope](EDITORIAL_FOLLOWUP_SCOPE.md): separate reader editions for LT, HT and ANISO.
+[Exact formal theorem and physical scope](../../docs/eight-papers/LEAN_CORRESPONDENCE.md) · [Formalization status](../../docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md).
+
+Older version-specific records retain their original identities in the [historical manuscript archive](../../archive/manuscripts/pre-eight-2026-10-30/README.md).

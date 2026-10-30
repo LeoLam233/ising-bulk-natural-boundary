@@ -1,0 +1,309 @@
+{
+  "base": "923266754afd65f5922a51f59a72ca56e1a88942",
+  "archive_prefix": "archive/manuscripts/pre-eight-2026-10-30/",
+  "historical_navigation_prefix": "provenance/eight-papers-2026-10-30/historical-navigation",
+  "current_pairs": {
+    "papers/low-temperature/original-proof/manuscript.tex": {
+      "sha256": "a984e829ace52cd68e03167daadec4715d84bf2540d54d51c36e58265fc17029",
+      "input_paper": "LT_Reader"
+    },
+    "papers/low-temperature/original-proof/manuscript.pdf": {
+      "sha256": "ef7a3edd9a9c7fc1442fdf432cb6bfa10babc88e85311994540434a5228d69b1",
+      "input_paper": "LT_Reader"
+    },
+    "papers/low-temperature/alternative-proof/manuscript.tex": {
+      "sha256": "98877fbf21eacbe1bd6537b3044139dde5f32adc878e3c3984dfd8a59c6a0730",
+      "input_paper": "LT_PSER"
+    },
+    "papers/low-temperature/alternative-proof/manuscript.pdf": {
+      "sha256": "ad0d0a66d9b8d4ceb36e490bfd591e707a7389b51a44a864b15b599190198c2c",
+      "input_paper": "LT_PSER"
+    },
+    "papers/high-temperature/original-proof/manuscript.tex": {
+      "sha256": "21730113b199269a5eb1eb25e48f0202a65b584bb0e9c4184c4ed3cf66be113f",
+      "input_paper": "HT_Reader"
+    },
+    "papers/high-temperature/original-proof/manuscript.pdf": {
+      "sha256": "9ab769e322d82f086f72cbcf7c205e92062d1c59433ed579450fbe1db6c65729",
+      "input_paper": "HT_Reader"
+    },
+    "papers/high-temperature/alternative-proof/manuscript.tex": {
+      "sha256": "3fdcd2562d66efa0f301879e1e78b57762d15653f59c59c29ba9896357e40081",
+      "input_paper": "HT_PSER"
+    },
+    "papers/high-temperature/alternative-proof/manuscript.pdf": {
+      "sha256": "3a89e17c6bf0125bd5938d0d849449423e12cd8c29e9743b22bf2130da534b6b",
+      "input_paper": "HT_PSER"
+    },
+    "papers/fixed-ratio-anisotropy/original-proof/manuscript.tex": {
+      "sha256": "4465ec58563a67da149fbd5bb9fc11fd7691d64ccce16f4b532d3111be96b357",
+      "input_paper": "ANISO_Reader"
+    },
+    "papers/fixed-ratio-anisotropy/original-proof/manuscript.pdf": {
+      "sha256": "0b89774a42b7f985ce2b096d2e7793b11625e8c5132b82486af2815e58cea45e",
+      "input_paper": "ANISO_Reader"
+    },
+    "papers/fixed-ratio-anisotropy/alternative-proof/manuscript.tex": {
+      "sha256": "c92c1a226e74d6f7424151b87b4e4b93bef52529d9344e494b417f0aee1c39a4",
+      "input_paper": "ANISO_PSER"
+    },
+    "papers/fixed-ratio-anisotropy/alternative-proof/manuscript.pdf": {
+      "sha256": "0855cd0083c9b0e400f17d6763e94a5121299779561ae37ad0e50e95f2fda862",
+      "input_paper": "ANISO_PSER"
+    },
+    "papers/two-complex-couplings/original-proof/manuscript.tex": {
+      "sha256": "186fb024755708ce84e7879678adfb8c71096638bafa0f99923e430cefdb7539",
+      "input_paper": "JOINT_Reader"
+    },
+    "papers/two-complex-couplings/original-proof/manuscript.pdf": {
+      "sha256": "720276785d482e72b17661edbd790b4b6fd5400f593c609fed565c4f15763fe9",
+      "input_paper": "JOINT_Reader"
+    },
+    "papers/two-complex-couplings/alternative-proof/manuscript.tex": {
+      "sha256": "584bedeea5ae5e6fa420d184dde56b7e43c35d01857dafda8f8a35b8b43d5cd0",
+      "input_paper": "JOINT_PSER"
+    },
+    "papers/two-complex-couplings/alternative-proof/manuscript.pdf": {
+      "sha256": "1938094749a52c6183a51bad4a657444532c53554e32c8cf48ca65df7a03578c",
+      "input_paper": "JOINT_PSER"
+    }
+  },
+  "navigation_and_routing_changes": {
+    ".github/workflows/four-result-publication-acceptance.yml": {
+      "old_sha256": "77d248548624cec2998906804caa92ab7a0b31dd8e58f8f7f369fb6a9596b831",
+      "new_sha256": "6a3bb1d38d2c69f667ced117e06ca178f9cbf50c7747ae5a23b6332ff41b6bc9"
+    },
+    ".github/workflows/ht22-lean-acceptance.yml": {
+      "old_sha256": "a7f313fd86235a47e137b16a2813d6b4424b0804f5e0e339fd33a3a70732aa6b",
+      "new_sha256": "d4eb7b5b4b8848e79f139502b4c56db1180015ea9f2c2d16cf3b954f20eef409"
+    },
+    ".github/workflows/lt22-lean-acceptance.yml": {
+      "old_sha256": "719b4cabc6791cf2bd83d54221757914f6e5263018852578967691154e0f0954",
+      "new_sha256": "46103882fe02b91193bb9b578a9372f2371fe23df5301a727970acf7eb2eab61"
+    },
+    ".github/workflows/release-v0.2.0.yml": {
+      "old_sha256": "1eefcd6903607c040ea8c8c714a0bec7870e36e9e78a18182f08072b9a1175c3",
+      "new_sha256": "67aa72901115ed396b28d0264ea9a3b1b9c352db52a75643ba374cf01bb21b18"
+    },
+    ".github/workflows/three-proof-publication-acceptance.yml": {
+      "old_sha256": "0f88523f32f6c28779bc734d72ad28b75c27effb34e741593d6051e33162666c",
+      "new_sha256": "977744565c10d4209027fd9d146a56187beb6e19621aec8cc0f16ecfec742560"
+    },
+    ".github/workflows/unified-publication-acceptance.yml": {
+      "old_sha256": "bca5011051281cbf6b96f608a503734e85c44b97dec230c3519fbcb6b45f8784",
+      "new_sha256": "fa53eb3ef8758bba6dd618fdd098f367b7ed56840d18f7d24fa983890b40798d"
+    },
+    "AUTHORSHIP.md": {
+      "old_sha256": "9c6f99925fdbb0af688b4d6914964d02ad4dd122deda29e82d680cde69d207c3",
+      "new_sha256": "f3845ca747e447c4ea8fccc2e65cf3d99c7a541b525223eb7be3054ee0034c2b"
+    },
+    "README.md": {
+      "old_sha256": "3dbabe454e996e5e2127d2b13a70e40cb5ff3358bedb6045037f6145294f42ad",
+      "new_sha256": "d8417c847ff75080a21efcec16eff01d5aa3787158e78619b59731bff60dc719"
+    },
+    "README.zh.md": {
+      "old_sha256": "3c038602cad2f352eaed154356c328f4d807ab67410633b5b41b9c1185178ab4",
+      "new_sha256": "2b6413dbe54a70abba7e92f6dc6330c436b0f3249dc3e2733092c423041acb4f"
+    },
+    "REPOSITORY_MAP.md": {
+      "old_sha256": "4dbb3c3d5952a6add2808810ed87d8c5712a6160b6bb9b4ac98eed75bd56e612",
+      "new_sha256": "6ccaa4ac8082e12bd5ed96ca7f9f0e381316133b94acf9e0a5f0406fc40c6479"
+    },
+    "anisotropic/PUBLICATION.md": {
+      "old_sha256": "16e0aad0e26f5dcb796a14b30b9d003b4d4429187c844c08acbe6e4c0918f934",
+      "new_sha256": "496404dd03447a51c029fdf32aa1cc88c49e7d42f793789cd519b27786f41b1e"
+    },
+    "anisotropic/README.md": {
+      "old_sha256": "f9a09ba743d3937f2947f7bdf1bbe64efe1e4e6d5c1fa5cb7bc7c54f0a7a5e5f",
+      "new_sha256": "5a211c91906b326712d68002587acc00a296ef76598bf1c6f1beaa25798d6685"
+    },
+    "anisotropic/README.zh.md": {
+      "old_sha256": "9c3338a57bccb37cb397cc879c18ec05cd71759d3093b5e6eed06ebd98c4542d",
+      "new_sha256": "5a211c91906b326712d68002587acc00a296ef76598bf1c6f1beaa25798d6685"
+    },
+    "docs/EVIDENCE_AND_REPRODUCIBILITY.md": {
+      "old_sha256": "fd9717b0897d3e37c0a673a28824d6acbf98d2c1735519de216e3f50e64b67ac",
+      "new_sha256": "dc3a0794591dd07277aefe07938c0fa142bd03b557e10dce65a7fb523eccc18c"
+    },
+    "docs/PROOF_CI_ROUTING.md": {
+      "old_sha256": "0b1fae4b2dfd629d957eeb6136117d534fee3ef72f024f23c68aa27d424aa652",
+      "new_sha256": "912df9fd9e19ae77255f5eed5626777f5575b36cce5cc29b331a13d0e83985aa"
+    },
+    "docs/PROOF_GUIDE.md": {
+      "old_sha256": "9cabe67a7e033511f79563958f8924b18afc40b6257618296b5e74747c52cf70",
+      "new_sha256": "84bcb7ee581258142a74c0e3eecdbfa03e6dec151ea6af831b627d65ff39253d"
+    },
+    "docs/VERSIONS.md": {
+      "old_sha256": "57cfb0948f03f7e25a2d4343245ce6e583c9b1e251b387a2cdfdc8046c9924be",
+      "new_sha256": "0241818e2661f1d139154a5434631c3e7b06bff4cf44f225a78ccb89b441064b"
+    },
+    "docs/aniso/README.md": {
+      "old_sha256": "dd31cc5977769b6839a4528aa41bce3efa3f091329c4415c49faf7ce6b7d2ada",
+      "new_sha256": "e046bccd947f5627694c9ed906ba75e4fcfd95160fef315da80cb0e99b274ec1"
+    },
+    "docs/aniso/VERSION_IDENTITY.md": {
+      "old_sha256": "2a7365e2e1d6aa7359b301aa4e8c286c8e9455a6830909f299cd358cdc55ac81",
+      "new_sha256": "051c18c9ba082f4086816c395e2af561563973225d9e6cac95ce7b1bd3987f05"
+    },
+    "docs/ht/PUBLICATION_CHECKLIST.md": {
+      "old_sha256": "ddbe69278a11f9c9a8615a1c79fc0d3d790bc0bc9234b76b897b8f67a0c15285",
+      "new_sha256": "195c0f956cefb7932d4f43ee5ee4284b52c1a87a5def5bea9be19ac9317c4aed"
+    },
+    "docs/ht/README.md": {
+      "old_sha256": "cec34199d927eebc65dfb226fb09c3a64b87cda55507ee85b0fe8bf9333f40ae",
+      "new_sha256": "012210be6164ec10340456b7d9772fd3c931df90c6e4d75e8c3375028c33e136"
+    },
+    "docs/ht/VERSION_IDENTITY.md": {
+      "old_sha256": "3e6c093888a8de186b76dcc6c00e5038ec81ec7b8d9a8c0edc23fef6d0a99ef4",
+      "new_sha256": "92dd2f7b3720ea88839719c4f82eedb84030d27b793ee4e890ba7fbab23a79da"
+    },
+    "docs/ht22/PHYSICAL_INPUTS.md": {
+      "old_sha256": "e068b04f9756e02df97cfb6ac037186aa56c9fbd78ae991544ccebfd5168b829",
+      "new_sha256": "f6477d0aae29a89ef6a9d050ce3e897b3d07c75f47f7f8578a9d5b524ae38e8c"
+    },
+    "docs/joint/README.md": {
+      "old_sha256": "bb31f5ceab3504758192ce41bc4d468cd35c77f1007109680ddb044fc629293d",
+      "new_sha256": "254ea9fa063e560cc1bd6be3c07059b44dce3f0171108ffd1a72220152d45cab"
+    },
+    "docs/joint/VERSION_IDENTITY.md": {
+      "old_sha256": "b8df119a75de753a4275f0c33eee8c5fc62dc72a06a05103bc7fa1320aa3e866",
+      "new_sha256": "1a1443c298ef2e5bae7f0b77cb19bdf98c4f395a0410188214c41ef7b0ddeb8e"
+    },
+    "docs/lt/README.md": {
+      "old_sha256": "2f2f664b52a4c5636aa45ec24372ea989b0ebd527bd07029ea2d777bd01405b5",
+      "new_sha256": "fc04b8d118bd7a6f91b2f06e44269f987572210f52682a5054d0ceff1c87ebd9"
+    },
+    "docs/lt22/PROOF_MAP.md": {
+      "old_sha256": "14605d7bcc27ac37bae9ce733e4e4f1e5769153324c8d624493cc5bd2cbd65b0",
+      "new_sha256": "9f792baa2121d1142039173ef290b46ce65d210a77fa92f3eb6585b2245af6d5"
+    },
+    "high-temperature/PUBLICATION.md": {
+      "old_sha256": "01c99cf2ad34f4a5f05b81fec45276b4130562f00b8de530a54de4d757ac3dcc",
+      "new_sha256": "49c3573da300c3ff0ed7ac451d0a1382f408aa6ab49311082c4180e2646cebc7"
+    },
+    "high-temperature/README.md": {
+      "old_sha256": "f280d72cb7ba4ed36b3d3683851f68767e1acbaaa34556ca607f867ad6ad30b7",
+      "new_sha256": "b0a57eb3b9de4443c7770c4007dece484fe41d935fb2b0cdbcb36b8d022ff487"
+    },
+    "high-temperature/README.zh.md": {
+      "old_sha256": "1b6e4725f9ffb139d869fb27d5897e154c1ce9c264932c38f04d4354f85501b6",
+      "new_sha256": "b0a57eb3b9de4443c7770c4007dece484fe41d935fb2b0cdbcb36b8d022ff487"
+    },
+    "joint/README.md": {
+      "old_sha256": "2c8d245dcc4c4514dbaebe34c19d735cd23a68656fcb61e74a9bcba04299d474",
+      "new_sha256": "fa1e3a491e11ddc34e6c3e54023cd332c32eb53c296164da29a90179aa9a7152"
+    },
+    "joint/README.zh.md": {
+      "old_sha256": "f9e45c03ab298c8a1f7447779cac76c9d13e949ec746e93fed511451a1bb15b7",
+      "new_sha256": "fa1e3a491e11ddc34e6c3e54023cd332c32eb53c296164da29a90179aa9a7152"
+    },
+    "low-temperature/README.md": {
+      "old_sha256": "eb71e0af12b7561f10a0a5eee40e5f3ffafc6e8dd1fac54e9fa496572e80a8ce",
+      "new_sha256": "6aeb1210e8d389b05566c36b1cc923207da56fb977b4be8296fa9139b24dfb1a"
+    },
+    "low-temperature/README.zh.md": {
+      "old_sha256": "bf81ffb2bc45a6f03a96a3a471d5343ed4211e6a6fb77276159969f7c0234d8c",
+      "new_sha256": "6aeb1210e8d389b05566c36b1cc923207da56fb977b4be8296fa9139b24dfb1a"
+    },
+    "scripts/build_candidate_paper.py": {
+      "old_sha256": "491c286c8048980a48abae3e713e29abd689cbaea548406e5896cf033ae6fc32",
+      "new_sha256": "db5f1e18909f05021f2f1aabd83a80d07526d9d09cfc51f803a6d763d6005d34",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/build_paper.py": {
+      "old_sha256": "7b7cb4e88641fa34bba9447d9d43208c5f6f1060a06d20969463589851016b11",
+      "new_sha256": "49f5c014da3d451e583a3e4017d036bc09767258a4fbbd4ff24458ddd226eb97",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/make_lt22_release.py": {
+      "old_sha256": "d904613c184da667dfa0e8db623bfa9b915cf445d6a7c3505f6c98ce86b2b1d9",
+      "new_sha256": "9c8ef7c29b587ed42efb7242c20aa4b213943163f049928a596fc5c8777adf02",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_aniso_source_overlay.py": {
+      "old_sha256": "2f4397634ea7b50136f8c8068ab6db4f3d533c6627dc0ac73e89f0319035e1fd",
+      "new_sha256": "76dba74604d2a48c6667b872a1be01739898e42122a8552d24f6bd536f745616",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_candidate.py": {
+      "old_sha256": "03fc2f53b2fb59b329e2095455375c118d85bcc5b488368e869dcde6e7c817dc",
+      "new_sha256": "69ee63051e6b334a1e5df3f46b49a422b8876824f4990bd7fa2d0635fe822dd9",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_four_result_publication.py": {
+      "old_sha256": "106aff3e73711b5910feb310a256b78cb1bf658ffa938173f941d250dcc795d7",
+      "new_sha256": "a7bf249bcf0c7f099452eb04052bdd6d1a3289270f6cf476a9309c2461639e89",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_ht22_publication.py": {
+      "old_sha256": "3634dd8e5e85c4eb5ed4af1a8cddd4ca60d84f0842623e4452df3b88e12a1da5",
+      "new_sha256": "9d15119af82120848c955b473e1cbcf64f206aa53c28c1928e2d7d267d68edc6",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_ht_source_overlay.py": {
+      "old_sha256": "cd3a18ef9c6eb7b08b2a59d5d68d3103b995e87933f70552170dd47d38c2f6c4",
+      "new_sha256": "3a677a4384604d32227a8b10366b0ca07e0a657c5182f7686cb53b55bb7975cb",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nbase=historical_root(base)\n"
+    },
+    "scripts/verify_lt22_preservation.py": {
+      "old_sha256": "10c9ce91413097711cbc0ba4921b5e90da7744a02945e95bc9f5427623fd5e9e",
+      "new_sha256": "219b736b4f28747d336fff87678b5051903c6614355221347fceaddba739c328",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_lt22_publication.py": {
+      "old_sha256": "0faac9538386e880d2a27ab52fcd0ef7688231650629652a2c20db04140abf65",
+      "new_sha256": "257e18f45bf6dc2401e1f8814b5cde0706542b5f8d841c75367db35122392223",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_three_proof_publication.py": {
+      "old_sha256": "6bdb5c4edbfc79fd0a86a10812c8d8aa700ec25fb9ac3fbdef385352a4124647",
+      "new_sha256": "a3e94d9159c8cdc60bba29e700d87bb4a47196635c63088f6273703aaa29589a",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    },
+    "scripts/verify_unified_publication.py": {
+      "old_sha256": "8ad4437cb1940ab125ec22661c25a762f8a35db7e5c8dd87b27a04c46971a3a9",
+      "new_sha256": "645a99e643b0123e1186bfce1af5dc8c4a42d71e43f0e4f10770a6638f4737a0",
+      "routing_insertion": "\n# Editorial migration: preserve the historical checker core in a verified temporary view.\nfrom eight_paper_paths import historical_root\nROOT=historical_root(ROOT)\n"
+    }
+  },
+  "live_markdown": [
+    "AUTHORSHIP.md",
+    "README.md",
+    "README.zh.md",
+    "REPOSITORY_MAP.md",
+    "anisotropic/PUBLICATION.md",
+    "anisotropic/README.md",
+    "anisotropic/README.zh.md",
+    "docs/EVIDENCE_AND_REPRODUCIBILITY.md",
+    "docs/PROOF_CI_ROUTING.md",
+    "docs/PROOF_GUIDE.md",
+    "docs/VERSIONS.md",
+    "docs/aniso/README.md",
+    "docs/aniso/VERSION_IDENTITY.md",
+    "docs/ht/PUBLICATION_CHECKLIST.md",
+    "docs/ht/README.md",
+    "docs/ht/VERSION_IDENTITY.md",
+    "docs/ht22/PHYSICAL_INPUTS.md",
+    "docs/joint/README.md",
+    "docs/joint/VERSION_IDENTITY.md",
+    "docs/lt/README.md",
+    "docs/lt22/PROOF_MAP.md",
+    "high-temperature/PUBLICATION.md",
+    "high-temperature/README.md",
+    "high-temperature/README.zh.md",
+    "joint/README.md",
+    "joint/README.zh.md",
+    "low-temperature/README.md",
+    "low-temperature/README.zh.md",
+    "papers/README.md",
+    "papers/fixed-ratio-anisotropy/README.md",
+    "papers/high-temperature/README.md",
+    "papers/low-temperature/README.md",
+    "papers/two-complex-couplings/README.md",
+    "archive/manuscripts/pre-eight-2026-10-30/README.md"
+  ],
+  "unchanged_formal_tree": "Every lean/ file, all verification/ sources, original provenance and release/audit identities are checked by Git blob against base.",
+  "exceptions": [
+    "Sealed technical metadata and README snapshots under lean/ retain historical paths and resolve through the archive crosswalk. Immutable history/receipts/overlay manifests likewise retain embedded old paths."
+  ]
+}

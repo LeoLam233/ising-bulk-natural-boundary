@@ -19,7 +19,7 @@ Project code: [MIT](LICENSE). Manuscript and project-authored prose: [CC BY 4.0]
 
 The same human author and contact apply to the fixed-ratio anisotropic, high-temperature and low-temperature
 results. The high-temperature manuscript HT-1.0 has a frozen audited edition and a
-separate [21 October 2026 publication edition](paper/ht/publication/README.md),
+separate [21 October 2026 publication edition](archive/manuscripts/pre-eight-2026-10-30/paper/ht/publication/README.md),
 with Lean freeze `HT_STANDALONE_20261020T1747Z`. Its sole external physical input
 is the published real-temperature full-bulk odd-particle angular representation.
 The low-temperature manuscript v0.1-rc6 and Lean v0.3.0-rc2 retain their own

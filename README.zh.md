@@ -1,71 +1,30 @@
-# 二维正方晶格 Ising 体磁化率的自然边界
+# Ising 磁化率八篇论文
 
-**HT22 PSER 是独立的高温证明。** [22 页冻结 PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) · [十四字段 Lean 定理](lean/IsingBulk/HT22/Final/Target.lean) · [数学对应](docs/ht22/PROOF_MAP.md) · [复现](docs/ht22/BUILD_AND_VERIFY.md)。
+[当前八篇论文入口](papers/README.md) · [English](README.md) · [仓库地图](REPOSITORY_MAP.md)
 
-| 高温版本 | 论文 | 形式化路线 |
-|---|---|---|
-| Original（33 页原稿） | [PDF](paper/ht/frozen/manuscript.pdf) · [TeX](paper/ht/frozen/manuscript.tex) | [原 HT Lean 1747](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
-| Reader（原证明的易读编辑版） | [PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | 同一原 HT 路线 |
-| PSER HT22（独立证明） | [22 页 PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) | [独立 HT22 Lean](lean/IsingBulk/HT22/Final/Target.lean) |
+四个主题各有两条不同的数学证明：低温磁化率、高温磁化率、固定比值各向异性磁化率，以及两个独立复耦合变量下的磁化率。入口列出八篇真实学术标题及 PDF/TeX；作者信息和论文内 ChatGPT 声明均保留。
 
-根定理 `IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget` 无根前提，实际证明十四个字段。物理对应恰以 `PhysicalScope.PublishedRealHTSpinFormFactors corr` 为前件，包含同点自旋平方和实温逐格点奇粒子形状因子恒等式；不声称构造 Gibbs 态。[物理范围](docs/ht22/PHYSICAL_INPUTS.md) · [审查身份](docs/ht22/AUDIT_EVIDENCE.md) · [引用](high-temperature/ht22/CITATION.cff)。原 HT、推荐 Reader、LT22 和既有 Release 保持独立身份。
+原始固定比值证明在等耦合处合法调用原始低温、高温归一化自然边界定理；其实循环替代证明在文内独立处理等耦合情形。两篇双复变量证明各自证明联合结论、所有正比值切片及等耦合下降，未用环境空间非延拓代替切片证明。
 
+六条路线的已完成 Lean 结果有[明确的类型、前提和字段范围](docs/eight-papers/LEAN_CORRESPONDENCE.md)。固定比值实循环替代路线仍为 PARTIAL；双复变量端点/输运替代路线仍为 NOT_SEPARATELY_FORMALIZED。[逐篇状态](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md)和[对应矩阵](docs/eight-papers/SIX_PAPER_LEAN_SCOPE_MATRIX.csv)给出限定。
 
-**LT22 PSER 是独立的低温证明路线。** [22 页冻结 PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) · [Preferred22 定理](lean/IsingBulk/Preferred22/FullTheorem.lean) · [物理范围与对应](docs/lt22/PROOF_MAP.md) · [复现](docs/lt22/BUILD_AND_VERIFY.md)。
+[Lean 代码](lean/)及锁定依赖保持原字节。旧论文整树保存在[次级历史档案](archive/manuscripts/pre-eight-2026-10-30/README.md)；原有固定提交和标签 URL 不变。移动 main 分支上的旧文件 URL 不会自动重定向。Lean 内冻结的技术说明及元数据保留旧路径，使用档案映射查阅。
 
-| 低温版本 | 论文 | 形式化路线 |
-|---|---|---|
-| Original（规范 LT 原稿） | [PDF](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
-| Reader（同一原证明的易读编辑版） | [PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
-| PSER（LT22，独立数学证明） | [22 页 PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) | [独立 Preferred22 Lean](lean/IsingBulk/Preferred22/FullTheorem.lean) |
+运行 `python scripts/verify_eight_papers.py --historical-checks` 校验本次迁移及原验证器；运行 `python scripts/build_current_papers.py --output PATH` 在独立目录重编译当前八篇，不改动已发布稿件。
 
-LT22 原样保留 10 月 25 日审查冻结的 333 个新模块与 153 个继承模块，以及 Lean 4.34.1 和九项依赖锁定。根定理 `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget` 没有根前提；Yang 与 Palmer–Tracy 实温物理输入只在物理对应子句中作为前件。[审查与身份](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 引用](low-temperature/lt22/CITATION.cff)。下方历史记录保持原有版本范围。此 LT22 段落保留其发布范围。HT22 现于上方独立介绍；ANISO F002 与 JOINT F001 仍是后续发布任务。
+## Low-temperature susceptibility
 
-本仓库展示无限正方晶格 Ising 模型**零外场完整体磁化率**的四项数学研究及相应的 Lean 形式化：各向同性低温和高温的独立证明、任意固定正耦合比的各向异性结果，以及两个独立复耦合变量下的母定理。
+- **A natural boundary for the low-temperature bulk square-lattice Ising susceptibility** (Original proof): [PDF](papers/low-temperature/original-proof/manuscript.pdf) · [TeX](papers/low-temperature/original-proof/manuscript.tex).
+- **The full low-temperature Ising susceptibility: a regular-coordinate proof of the natural boundary** (Alternative regular-coordinate proof): [PDF](papers/low-temperature/alternative-proof/manuscript.pdf) · [TeX](papers/low-temperature/alternative-proof/manuscript.tex).
+## High-temperature susceptibility
 
-**首次阅读建议从四份完整 Reader 易读版开始。** 它们已经接受独立的编辑保真和 Lean 对应审查；原始数学命题、假设和证明机制保持不变，原稿及对应源码仍可用于精确核对。
+- **High-temperature bulk Ising susceptibility: a natural-boundary proof** (Original proof): [PDF](papers/high-temperature/original-proof/manuscript.pdf) · [TeX](papers/high-temperature/original-proof/manuscript.tex).
+- **The complete high-temperature Ising susceptibility: a constrained-coordinate proof of the natural boundary** (Alternative constrained-coordinate proof): [PDF](papers/high-temperature/alternative-proof/manuscript.pdf) · [TeX](papers/high-temperature/alternative-proof/manuscript.tex).
+## Fixed-ratio anisotropic susceptibility
 
-## 四篇论文
+- **Natural boundaries of the full bulk susceptibility for the fixed-ratio anisotropic square-lattice Ising model** (Original proof): [PDF](papers/fixed-ratio-anisotropy/original-proof/manuscript.pdf) · [TeX](papers/fixed-ratio-anisotropy/original-proof/manuscript.tex).
+- **Natural boundaries of anisotropic Ising susceptibility via real-cycle pole estimates** (Alternative real-cycle proof): [PDF](papers/fixed-ratio-anisotropy/alternative-proof/manuscript.pdf) · [TeX](papers/fixed-ratio-anisotropy/alternative-proof/manuscript.tex).
+## Susceptibility in two independent complex coupling variables
 
-| 数学成果 | 推荐阅读 | 数学原稿 | Lean 形式化 |
-|---|---|---|---|
-| **两个独立复耦合的联合自然边界** | [Reader PDF](paper/joint/reader/manuscript.pdf) · [TeX](paper/joint/reader/manuscript.tex) | [原始数学稿](paper/joint/frozen/manuscript.pdf) | [Lean 定理](lean/IsingBulk/Joint/Final/FullConclusion.lean) |
-| **固定正耦合比的各向异性自然边界** | [Reader PDF](paper/aniso/reader/manuscript.pdf) · [TeX](paper/aniso/reader/manuscript.tex) | [原始数学稿](paper/aniso/frozen/manuscript.pdf) | [Lean 定理](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) |
-| **各向同性高温体磁化率** | [Reader PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | [原始数学稿](paper/ht/frozen/manuscript.pdf) | [Lean 定理](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
-| **各向同性低温连通体磁化率** | [Reader PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [原始数学稿](paper/next/manuscript.pdf) | [Lean 定理](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
-
-## 四项结果的范围
-
-### 两个独立复耦合的联合自然边界
-
-双复变量母定理处理完整高低温体磁化率、正耦合比切片、各向同性特化和定量边界障碍，明确列出共同的实物理前提。
-
-[成果说明](joint/README.zh.md) · [构建与验证](docs/joint/BUILD_AND_VERIFY.md) · [引用](joint/CITATION.cff)
-
-### 固定正耦合比的各向异性自然边界
-
-对任意固定有限正耦合比，完整高低温体磁化率在相应透镜域和上图域具有自然边界，并严格区分两侧的场导数及物理前提。
-
-[成果说明](anisotropic/README.zh.md) · [构建与验证](docs/aniso/BUILD_AND_VERIFY.md) · [引用](anisotropic/CITATION.cff)
-
-### 各向同性高温体磁化率
-
-无序相定理覆盖完整奇粒子展开、同点项和全部格点，以单位圆为自然边界；已发表的实温角积分表示是明确的物理前提。
-
-[成果说明](high-temperature/README.zh.md) · [构建与验证](docs/ht/BUILD_AND_VERIFY.md) · [引用](high-temperature/CITATION.cff)
-
-### 各向同性低温连通体磁化率
-
-有序纯相定理覆盖全部格点与完整正偶粒子展开，扣除自发磁化平方，并保留独立原始证明与物理接口。
-
-[成果说明](low-temperature/README.zh.md) · [构建与验证](lean/README.md) · [引用](low-temperature/CITATION.cff)
-
-## 数学关系、版本与复现
-
-双复变量母定理通过内部论证回收固定正耦合比与各向同性特化结论；固定耦合比结果覆盖两相，而较早的高温与低温独立证明及各自物理对象仍完整保留。
-
-各向同性变量为 s = sinh(2βJ)；各向异性先固定耦合比，再对 z = 2βJ 作复延拓。外部物理关联函数及 Gibbs 场前提、仅在自然语言论文中给出的更精细结论，均在各篇的对应文档中独立标明，不被混称为逐字形式化的 Lean 导出定理。
-
-**Reader 易读版**是独立核查过的完整行文改善稿；**原始/冻结版**是精确数学基准；较早的 **publication 署名版**有些只修改作者和日期元数据。C001、C002、HT-1.0 等内部标识保留在[版本记录](docs/VERSIONS.md)，不作为论文正式名称。
-
-[论文版本目录](paper/README.md) · [仓库与定理对应](REPOSITORY_MAP.md) · [审计证据、复现与引用导航](docs/EVIDENCE_AND_REPRODUCIBILITY.md) · [English](README.md) · [作者与来源](AUTHORSHIP.md) · [MIT 源码许可](LICENSE) · [CC BY 4.0 文档许可](LICENSE-DOCUMENTATION.md)
+- **Natural boundaries of the full square-lattice Ising susceptibility in two complex coupling variables: Spectral domains and physical-slice restrictions** (Original proof): [PDF](papers/two-complex-couplings/original-proof/manuscript.pdf) · [TeX](papers/two-complex-couplings/original-proof/manuscript.tex).
+- **Natural boundaries of the full square-lattice Ising susceptibility in two complex coupling variables: Endpoint geometry and constrained transport** (Alternative endpoint/transport proof): [PDF](papers/two-complex-couplings/alternative-proof/manuscript.pdf) · [TeX](papers/two-complex-couplings/alternative-proof/manuscript.tex).

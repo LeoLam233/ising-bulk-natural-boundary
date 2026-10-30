@@ -1,0 +1,105 @@
+name: HT22 PSER F001 acceptance
+on:
+  pull_request:
+    paths:
+      - 'lean/**'
+      - '!lean/README.md'
+      - 'paper/ht/pser/**'
+      - 'provenance/ht22/**'
+      - 'verification/ht22/**'
+      - 'scripts/*ht22*'
+      - '.github/workflows/*publication-acceptance.yml'
+      - '.github/workflows/lt22-lean-acceptance.yml'
+      - '.github/workflows/ht22-lean-acceptance.yml'
+      - 'docs/ht22/**'
+  push:
+    branches: [main]
+    paths:
+      - 'lean/**'
+      - '!lean/README.md'
+      - 'paper/ht/pser/**'
+      - 'provenance/ht22/**'
+      - 'verification/ht22/**'
+      - 'scripts/*ht22*'
+      - '.github/workflows/*publication-acceptance.yml'
+      - '.github/workflows/lt22-lean-acceptance.yml'
+      - '.github/workflows/ht22-lean-acceptance.yml'
+      - 'docs/ht22/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ht22-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  ht22:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: '1'
+      RAYON_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Frozen overlay, old bytes and unchanged historical validators
+        run: |
+          python3 scripts/verify_ht22_publication.py
+          python3 scripts/verify_ht22_preservation.py
+      - name: Install hash-verified official Lean 4.34.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          rm "$RUNNER_TEMP/lean.tar.zst"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+          df -h "$RUNNER_TEMP"
+      - name: Fetch only official upstream cache with all nine exact Lake pins
+        working-directory: lean
+        run: lake -f lakefile.ht22.toml exe cache get
+      - name: Source-clean strict root, audit, 378 modules, closure, controls and separate official fresh replay
+        run: python3 -u scripts/run_ht22_acceptance.py --output "$RUNNER_TEMP/ht22-evidence"
+      - name: Preserve original commands, source/object hashes, graphs and raw streams
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ht22-acceptance-${{ github.sha }}
+          path: ${{ runner.temp }}/ht22-evidence/receipts/
+          if-no-files-found: error
+          retention-days: 90
+  publish-ht22:
+    needs: ht22
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Obtain successful evidence for this exact merged main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh run download "${{ github.run_id }}" --name "ht22-acceptance-${{ github.sha }}" --dir "$RUNNER_TEMP/accepted"
+      - name: Prepare, validate, publish and independently read back new HT22 assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 scripts/make_ht22_release.py --output "$RUNNER_TEMP/ht22-release" --commit "${{ github.sha }}" --run-url "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" --evidence "$RUNNER_TEMP/accepted" --publish
+      - name: Retain exact published assets and readback receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ht22-release-${{ github.sha }}
+          path: ${{ runner.temp }}/ht22-release/
+          if-no-files-found: error
+          retention-days: 90

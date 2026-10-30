@@ -2,6 +2,10 @@
 """Execute unchanged historical validators with their exact pinned navigation context."""
 import hashlib,json,pathlib,shutil,subprocess,sys,tempfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 sys.path.insert(0,str(ROOT/'scripts'))
 from verify_lt22_publication import verify
 

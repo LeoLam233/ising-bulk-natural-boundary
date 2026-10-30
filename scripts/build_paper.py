@@ -4,6 +4,10 @@ Uses an existing Tectonic executable. Does not install or download a TeX runtime
 from pathlib import Path
 import argparse, shutil, subprocess, tempfile
 ROOT=Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--tectonic',default='tectonic')

@@ -6,6 +6,10 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 
 def main():
     subprocess.run([sys.executable, str(ROOT/'scripts/verify_ht_source_overlay.py')], check=True)

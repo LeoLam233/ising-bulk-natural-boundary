@@ -1,6 +1,6 @@
 # LT22 theorem and physical scope
 
-The frozen [22-page paper](../../paper/lt/pser/manuscript.pdf) has the independent root [FullTheorem.lean](../../lean/IsingBulk/Preferred22/FullTheorem.lean), imported by [Preferred22.lean](../../lean/IsingBulk/Preferred22.lean):
+The frozen [22-page paper](../../archive/manuscripts/pre-eight-2026-10-30/paper/lt/pser/manuscript.pdf) has the independent root [FullTheorem.lean](../../lean/IsingBulk/Preferred22/FullTheorem.lean), imported by [Preferred22.lean](../../lean/IsingBulk/Preferred22.lean):
 
 ```lean
 IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget

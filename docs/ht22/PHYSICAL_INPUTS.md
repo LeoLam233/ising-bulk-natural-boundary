@@ -39,4 +39,4 @@ The old HT terminal natural-boundary/noncancellation/full-tail endpoints are
 forbidden substitutes. The definitive check of their absence is the post-freeze
 complete type/value/structural-support scan, not import-path inspection.
 
-The publication CI checks the literal elaborated predicate and all fourteen stored proof arguments, separately from the completed AI audits. [Frozen authority](../../paper/ht/pser/README.md) · [Correspondence](PROOF_MAP.md).
+The publication CI checks the literal elaborated predicate and all fourteen stored proof arguments, separately from the completed AI audits. [Frozen authority](../../archive/manuscripts/pre-eight-2026-10-30/paper/ht/pser/README.md) · [Correspondence](PROOF_MAP.md).

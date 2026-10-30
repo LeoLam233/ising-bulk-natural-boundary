@@ -2,6 +2,10 @@
 """Fail-closed immutable HT22 source, inventory, preservation and routing gate."""
 import argparse,fnmatch,hashlib,json,pathlib,re,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 def read(rel):return json.loads((ROOT/rel).read_text(encoding='utf-8'))
 def verify(source_bundle=False):

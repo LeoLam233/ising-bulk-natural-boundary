@@ -8,7 +8,7 @@ This staging branch is based on the existing LT `main` commit `2cf997226db314ad5
 - [x] Offline source overlay constructed and checked against the complete HT freeze: 397 HT-namespace modules, 35 new reusable proof modules, `IsingBulkHT.lean`, `AuditHT.lean`, and additive `lakefile.ht.toml`.
 - [x] Rechecked the final transport archive: all 447 overlay payloads match their SHA-256 manifest; all 435 Lean overlay files are byte-identical to the independent Codex audit's frozen source project. Archive SHA-256: `6ee554b405591d182f437e5909843a44a2ad48111da59075176b8bbf665d180d`.
 - [ ] Apply byte-identical overlay in this branch without modifying existing LT proof files, `IsingBulk.lean`, `Audit.lean`, `lakefile.toml`, `lake-manifest.json`, or Lean toolchain.
-- [ ] Add HT-1.0 frozen TeX/PDF at `paper/ht/frozen/`; index LT and HT manuscripts separately.
+- [ ] Add HT-1.0 frozen TeX/PDF at `archive/manuscripts/pre-eight-2026-10-30/paper/ht/frozen/`; index LT and HT manuscripts separately.
 - [ ] Add HT-only build/verification workflow and independent, bilingual LT/HT landing pages.
 
 ## Validation after source push
@@ -30,8 +30,8 @@ This staging branch is based on the existing LT `main` commit `2cf997226db314ad5
 ## Repository boundaries
 
 ```text
-paper/next/                      LT manuscript, existing path retained
-paper/ht/frozen/                 HT manuscript, audited bytes retained
+archive/manuscripts/pre-eight-2026-10-30/paper/next/                      LT manuscript, existing path retained
+archive/manuscripts/pre-eight-2026-10-30/paper/ht/frozen/                 HT manuscript, audited bytes retained
 lean/IsingBulk/{Algebra,...}/    existing LT/shared mathematical base
 lean/IsingBulk/First/Regular*    34 new HT-required reusable proof modules
 lean/IsingBulk/Analysis/BranchUpper.lean  1 reusable module
