@@ -1,0 +1,270 @@
+{
+  "LT_Reader": {
+    "nodes": [
+      {
+        "through_final_line": 235,
+        "node": "scope",
+        "mathematical_check": "The observable is the complete connected plus/minus pure-phase lattice response, X=1-M^2+2M^2 sum T_N. The first singular order N0=2p and k=N0^2/2-1 are fixed before epsilon. The replacement roadmap explicitly retains every j=0,...,k, as the unchanged tail theorem and Leibniz product rule require; no j=k-only hypothesis is substituted. Historical candidate/audit wording and priority claims are not mathematical antecedents."
+      },
+      {
+        "through_final_line": 339,
+        "node": "residue",
+        "mathematical_check": "The two normalized contour measures, N!, and the offsite/full-site conversion are unchanged. Lemma lem:residue still requires |z|<r<1, not merely |z|<1. The same pole exclusion holds after every successive residue because substituted roots remain inside r. The radius is fixed during parameter differentiation. Added explanations restate these same hypotheses and operations."
+      },
+      {
+        "through_final_line": 438,
+        "node": "arithmetic",
+        "mathematical_check": "The prime-family theorem, trace computation, sparse cosine relation, density argument, and integer-resultant estimate are unchanged. The endpoint root remains algebraic and non-torsion. Consequently the exponential gap used in the all-branch sector is the same gap, with point-dependent constants rather than prime-uniform ones."
+      },
+      {
+        "through_final_line": 774,
+        "node": "first",
+        "mathematical_check": "The fixed y-only partition is applied before x residues; the hard mean segment is moved only after replacing the cutoff across a separated edge. Clockwise closure and d_v(1-Y)=-i give +2pi. The constrained shape measure has 1/sqrt(N), and its R^-2 tail supplies dominated convergence only after the mean residue. The swapped charts retain equal complex phases L_alpha=L_beta. The complement classification and all lower-even-order radial bounds are still internal, not an application of a non-Nickel theorem at a Nickel point."
+      },
+      {
+        "through_final_line": 1085,
+        "node": "retraction-selected",
+        "mathematical_check": "The exact identity T_N=F_N+K_N+S_N retains the weighted Stokes current and its -2i tau coefficient. Derivatives are taken over the fixed [0,1] current interval before the epsilon-dependent split. The selected integral is holomorphic on its common c/N disk; pointwise absolute root assignments are not differentiated. Same-group Schur contraction, cross inflation, matching counts, and N! yield the unchanged summable selected-contour budget."
+      },
+      {
+        "through_final_line": 1737,
+        "node": "original-branch",
+        "mathematical_check": "The fixed nested cutoff supports, inactive periodic seam, compact/branch labels and named Stokes index are unchanged. The complete-pair Gaussian is proved at radial centers and transferred to the original c epsilon disk, with compact-root continuation and occupancy-independent one-body majorants. The microcore and equality scales are fixed with inclusions valid even at the smallest tail index. Near/far all-branch estimates retain Vandermonde vanishing, real coarea, phase-map multiplicities, and every j<=k."
+      },
+      {
+        "through_final_line": 2075,
+        "node": "mixed-current",
+        "mathematical_check": "The hybrid regular coordinates preserve the relevant occupancy sums on plateaus; the full density and Jacobian are differentiated before coarea. Compact-right fields retain coupled occupancy terms, selected-pole filtration and vanishing puncture fluxes at every preceding stage. Protected large-current disks are established before applying Cauchy; the separate high-particle estimate uses the original disk. No unbounded-N estimate 1-r^N>=c N epsilon is introduced."
+      },
+      {
+        "through_final_line": 2228,
+        "node": "closure",
+        "mathematical_check": "Local normal convergence identifies derivatives of the entire series before the particle windows are split. The first term, all lower terms and the absolute upper tail are combined in the full finite Leibniz rule for M^2. Symmetry and density then give every circle point, with local inverse-temperature branches for the physical response. The selected C^k obstruction and finite-prime arc bound retain their distinct scope."
+      },
+      {
+        "through_final_line": 2797,
+        "node": "appendix-calculus",
+        "mathematical_check": "The cyclotomic proof, Schur identity, closed coefficient evaluation, and fixed-real-domain Lie recurrence have the same formulas and hypotheses. The unfactored Vandermonde is retained, so no poles at unselected diagonals are introduced. Shape radii exchanged for a phase variable are counted once. New guide sentences refer to the existing derivations rather than providing new assumptions."
+      },
+      {
+        "through_final_line": 3010,
+        "node": "quantifiers-table",
+        "mathematical_check": "The point and derivative order precede all constants, which precede epsilon and all particle indices. All thirteen tail sectors retain their windows, named supports and proof destinations. The sector table has moved from the audit appendix to the constant-dependency appendix; its row names/headings are nonmathematical."
+      },
+      {
+        "through_final_line": 3281,
+        "node": "normalization-amplitude",
+        "mathematical_check": "The full onsite identity, independent angular integral, four-chart degeneracy, physical sheet, and complete-amplitude conversion proposition are unchanged. The comparison still excludes degenerate angles, the four-particle endpoint and nonphysical sheets, and the printed literature amplitude remains outside the proof premises. Removing subjective wording about the literature interpretation does not enlarge the selected-angle comparison."
+      },
+      {
+        "through_final_line": 100000,
+        "node": "removed-audit-history",
+        "mathematical_check": "The deleted appendix is a proof-navigation/history and formal-scope record, not an additional estimate. Its thirteen-sector table survives at final lines 2933-3005. Its dependency arrows are realized by the retained named lemmas and propositions and are reproduced in this delivery. Historical version commentary is NONLOADBEARING. Its important formal-scope qualifications (physical E1/E2, selected C^k versus unformalized arc constants and amplitude conversions) are explicitly retained in LEAN_CORRESPONDENCE.md and the six-paper matrix, rather than being represented as new Lean exports."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  },
+  "LT_PSER": {
+    "nodes": [
+      {
+        "through_final_line": 100000,
+        "node": "independent-coordinate-route",
+        "mathematical_check": "All twenty statement environments and every displayed proof formula are retained. The proof still uses its own equal-angle prime family, four-point determinant propagation, exact constrained homotopy, regular inverse, collective current, oblique coarea and complete logarithmic tail. The removed sentence only listed methods not needed on the left-root piece; the separated product kernel and C^N one-body integration proving that piece remain in place. The one mathematical notation correction is the argument of sin(phi): the square-root normal form gives arg sin(phi) in [-pi/4,0] up to a small enlargement, so arg[-phi_doubleprime] lies in [0,3pi/4] and rotation by -3pi/8 has a uniformly positive real part. This is exactly the sector estimate used by the unchanged equation g-G3, not a claim that a complex sine value is a negative real number. Added historical citations do not enter the proof."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  },
+  "HT_Reader": {
+    "nodes": [
+      {
+        "through_final_line": 294,
+        "node": "physical",
+        "mathematical_check": "The full positive-odd series and C_N=f_N+2T_N remain the physical observable, with every lattice site. The fourth-root branch is positive on 0<s<1 and t=1/s. Residue measures and all compact-set differentiated convergence claims are unchanged. New physical/outline prose does not replace the full lattice by the diagonal or omit the origin."
+      },
+      {
+        "through_final_line": 594,
+        "node": "arithmetic-first",
+        "mathematical_check": "The distinct-angle prime family, both upper quadrants and the negative-real-part endpoint exception are retained. Mean integration precedes the constrained shape limit. The residue multiplier is +2pi; the rational radial primitive applies for k=(p^2-1)/2 divisible by four, for either sign of d. Both ordered charts add with the same phase. Lower derivatives remain bounded through k-2 and logarithmic at k-1."
+      },
+      {
+        "through_final_line": 892,
+        "node": "signed-selected",
+        "mathematical_check": "T_N^sigma retains both signed product denominators. Negation/conjugation is an identity of auxiliary integrals and does not assert evenness of physical X_H. The weighted deformation includes its current; the selected integral is estimated on its protected disk before Cauchy. The compact roots may leave the unit disk on continued neighborhoods; the complete-pair estimate, rather than a disk Schur assertion, supplies the bound."
+      },
+      {
+        "through_final_line": 1528,
+        "node": "original-tail",
+        "mathematical_check": "The fixed cutoff partition and all branch/compact/current supports are unchanged. Same-group contraction, non-strict cross bounds and uniform named-pair bounds are used with reserved slack. Margins precede slack and sliver width. The original c epsilon disk and occupancy-independent one-body majorant retain their domains. Microcore and equality inclusions are valid for every finite tail order; coarea multiplicity and translated period boxes are charged exactly once."
+      },
+      {
+        "through_final_line": 1855,
+        "node": "mixed-current",
+        "mathematical_check": "All intermediate sectors retain fixed-domain differentiation before absolute coarea and all previous puncture-flux checks. The large-current disk is chosen after tau and before epsilon_0, so the sheet margin persists. Limiting distance from W=-1 is a distance of W-values. High orders use c min(1,N epsilon)>=c epsilon on epsilon<=1; this follows from the elementary bound 1-e^(-a x)>=c_a min(1,x), and does not use the false unbounded-index linear lower bound."
+      },
+      {
+        "through_final_line": 2007,
+        "node": "onsite-tail",
+        "mathematical_check": "The onsite norm series is estimated independently before the infinite tail is assembled. In the physical consistency check, sigma=1 gives exactly the ordinary T_N, so T_N^1 is the same offsite integral. Onsite spin-square gives prefactor times sum f_N=1, then C_N=f_N+2T_N^1 gives the displayed full susceptibility. The absolute full-site tail still holds for every 0<=j<=k and all odd N>p."
+      },
+      {
+        "through_final_line": 2409,
+        "node": "closure-calculus",
+        "mathematical_check": "The full odd infinite series, the first coefficient and every product-rule derivative are retained. The pole-counting recurrence still differentiates the unfactored numerator on a fixed smooth real domain. Overlapping weighted charts use their own fields, preserving each frozen-product identity independently. Shape radius and phase measure are not counted twice. Density and inversion t=1/s yield every unit-circle point."
+      },
+      {
+        "through_final_line": 100000,
+        "node": "constants-citations",
+        "mathematical_check": "The original radial radius constant c_0 and original-disk constant c_O refer to the explicitly defined constants in the proof, distinct from protected-disk c_P. Replacing c_1 by c_O in the dependency table repairs the table referent without changing a chosen radius or quantifier. Bibliography locator cleanup retains the same real physical input; removal of the internal Snapshot self-citation does not import or discard any theorem premise."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  },
+  "HT_PSER": {
+    "nodes": [
+      {
+        "through_final_line": 100000,
+        "node": "independent-constrained-route",
+        "mathematical_check": "All twenty statement environments and every displayed formula are retained. The signed constrained measures, bordered odd determinant, normal convergence, both upper quadrants, complete logarithmic higher-odd tail, finite complement and exact first coefficient are unchanged. The normalized Haar measure d mu_N was already defined for the eliminated-angle torus; writing it explicitly preserves the (2pi)^(1-N) normalization. Reworded transport paragraphs still use scalar coefficients on the original real constrained measure, smooth real-angle occupancies, and the commuting frame. The displaced mixed pieces remain holomorphic on a disk depending on the fixed order. The replacement scope sentence explicitly includes every constrained mean and every odd tail order N>=N_*+2; no excluded range or new uniformity is introduced."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  },
+  "ANISO_Reader": {
+    "nodes": [
+      {
+        "through_final_line": 442,
+        "node": "physical",
+        "mathematical_check": "The Hamiltonian/energy-field convention, beta=z/(2Jx), bilateral HT and right plus-phase LT derivative, onsite values 1 and 1-M^2, and all sitewise spin form factors are unchanged. Finite-volume concavity gives the upper response bound and a finite-supported field gives the lower bound; absolute covariance summability then exhausts the full lattice. The Schur contraction controls the particle sum uniformly through the real-cylinder limit. No field derivative or complex regularity is promoted to an input."
+      },
+      {
+        "through_final_line": 1092,
+        "node": "geometry",
+        "mathematical_check": "The unsquared spectral equation, exact F1 F2 sign criterion, HT lens, LT epigraph, independent spectral definition and locally discrete exceptional sets are unchanged. The geometry still includes odd/odd rational simultaneous cosine zeros, collinearity, corners and critical edge-map points. Both rational and irrational positive finite ratios remain covered. A point in the interior of the spectral set is not declared a susceptibility singularity."
+      },
+      {
+        "through_final_line": 1376,
+        "node": "regular-edges",
+        "mathematical_check": "The complete canceled pair need not have modulus <=1; strict contraction is applied to the uncanceled spectral Schur factor. The matching count supplies the unchanged Gaussian envelope. The finite collision range and the large-index majorant together control every differentiated higher order. The unique collision chart and its analytic complement are retained, so its nonzero period is the full coefficient, not one unglued local chart."
+      },
+      {
+        "through_final_line": 2036,
+        "node": "normal-form",
+        "mathematical_check": "The exact symmetric normal form, bilinear zero-mean plane, coincidence-divisor preservation, rank-one mean correction, logarithmic Jacobian bound, full residue normalization, real-cycle deformation and boundary tube all remain in place. The common fixed bidisk supplies dimension-independent neighborhoods. No n^2 ||v||_infty^2 inflation is added to the density comparison. The exact gamma quotient and beta-density error are retained."
+      },
+      {
+        "through_final_line": 2720,
+        "node": "negative-indices",
+        "mathematical_check": "Boundary jets are obtained by absolute summation on shrinking coefficientwise disks, not from a common continuation disk. Exact pole subtraction remains before the quadratic normal form. Neighboring-index differences are computed from exact factorial/gamma/pole factors, never by differentiating an uncontrolled O-term. The selected modulus gap handles arbitrary phases. Low, middle, high and all winding ranges still exhaust the infinite odd sum, with the same sharp selected-index asymptotic."
+      },
+      {
+        "through_final_line": 2891,
+        "node": "closure-isotropic-import",
+        "mathematical_check": "The closure of dense regular obstructions still covers every finite boundary point. At lambda=1, the proof explicitly invokes the original normalized low- and high-temperature natural-boundary theorems, after the exact coefficient/prefactor and covering identities. The low-temperature destinations are Corollary 9.3, Theorem 4.4 and Theorem 9.1 of the accompanying original Reader; the rebuilt auxiliary labels independently confirm these numbers. Real Gibbs/field identification remains a separate interface. No lambda-to-one limit or phase duality is substituted."
+      },
+      {
+        "through_final_line": 100000,
+        "node": "citations",
+        "mathematical_check": "The primary bibliography keys and proof destinations remain the real spin, Gibbs-state and GHS inputs. The newly precise original-isotropic citations point to immutable 9232667... Reader PDFs and retain the legitimate theorem dependency. These immutable URLs remain valid across an archive move. Scholarly bibliographic completion does not create a mathematical hypothesis or replace either exact source."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "Original LT and HT normalized endpoints at lambda=1 only."
+  },
+  "ANISO_PSER": {
+    "nodes": [
+      {
+        "through_final_line": 2352,
+        "node": "real-cycle-route",
+        "mathematical_check": "The exact physical definitions and every main hypothesis are unchanged. Endpoint incidence and analytic profile differences replace no frozen argument: they are the same distinct frozen F002 route. The negative-odd analysis retains its real-plane pole estimate, complete residue, angular exponential moment, positive-majorant comparison on the same real cycle, exact complex beta period, two first windings, integer selection and all-index/winding remainder bounds. Removed negative descriptions only state which alternative methods are unnecessary; the actual estimates and their domain restrictions remain. The full spectral interior is still distinguished from the physical frontiers."
+      },
+      {
+        "through_final_line": 2391,
+        "node": "isotropic-coefficient-name",
+        "mathematical_check": "At B=1, C=s+s^-1 and W=C-cos(q); the interior transfer root, independent-angle normalized measure, full pair product and every particle order agree term by term with the isotropic coefficient. Thus the formerly external notation C_N^iso(1/s) equals the manuscript-own C_N(s) on 0<s<1. The prefactor (1-s^4)^(1/4)/s and the connected LT onsite term are unchanged. Replacing that alias removes a workflow self-citation, not an external natural-boundary premise."
+      },
+      {
+        "through_final_line": 100000,
+        "node": "internal-isotropic-transport",
+        "mathematical_check": "The internal lambda=1 proof remains complete in Section 7: signed constrained homotopy before weights, Schur matchings, retained collision factors, regular inverse, phase-preserving current, its joint jets, flux limits, all means/diameters, finite complements and first periods. At a branch theta_b=+/-b, the normal form is a statement about W-1 in the real angular variable theta-theta_b. Its imaginary margin controls the near region and its nonzero linear real part controls the complement, yielding the same integrable distance^(-1/2) majorant. This correction does not refer to the later inverse coordinate u. The unchanged full even/odd tail and covering proof establish lambda=1 internally. The distinct F002 Lean status remains PARTIAL."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  },
+  "JOINT_Reader": {
+    "nodes": [
+      {
+        "through_final_line": 263,
+        "node": "joint-target",
+        "mathematical_check": "The complete J AND R AND I statements retain independent complex Kx,Ky, componentwise extension, arbitrary reached unramified Riemann domains, actual nonramified transverse curves, local complex-family uniformity, all positive finite ratios and exact isotropic descendants. The common physical normalization and all lattice/particle orders remain. The scope exclusions (no prime-uniformity, no passage through Im B=0, no spectral-interior singularity assertion) are retained."
+      },
+      {
+        "through_final_line": 1319,
+        "node": "joint-geometry",
+        "mathematical_check": "The independent two-complex-variable spectral calculation, all components, physical domains, pseudoconvex exhaustion, axes, regular-face density, exact positive-ratio pullbacks and separate same-slice density are unchanged. The collar and accumulating-component definition retain their quantifiers. Pseudoconvexity excludes a compulsory Hartogs filling but does not prove nonextension of the physical function; whole-sum obstructions remain separate."
+      },
+      {
+        "through_final_line": 1665,
+        "node": "physical-joint",
+        "mathematical_check": "The exact full-site formulas, onsite HT=1 and LT=1-M^2, real cylinder-limit/state inputs, coupled holomorphic sums, removable HT axes and energy-field derivatives are unchanged. The entire decoupled-axis example is retained, explicitly refuting restriction of ambient nonextension to arbitrary curves. The new paragraph headings and matching explanations do not replace these interfaces."
+      },
+      {
+        "through_final_line": 1932,
+        "node": "positive-curves",
+        "mathematical_check": "The complete first coefficient and all differentiated higher-index tails remain on the actual holomorphic curve B(u), rather than at frozen B. With alpha=(n^2-1)/2 the radial error is logarithmic for odd n at k=alpha and bounded for even n at k=alpha-1/2. The parity label is corrected to particle number n; the old phrase about odd k was inconsistent with these same defining formulas. For odd n the radial power is R^-1 and for even n it is R^0 at zero, which gives exactly the unchanged displayed remainder budgets."
+      },
+      {
+        "through_final_line": 3321,
+        "node": "negative-family",
+        "mathematical_check": "All negative-odd estimates retain variable complex B(t,eta), the exact particle-dependent phase, coefficientwise disks, pole reduction, dimension-uniform quadratic maps, coincidence divisors, full density/cycle normalization, beta periods, both first windings, exact-factor finite differences and all remaining particle/winding ranges. Selected integers may depend on eta. Reworded guides do not assume aligned phases, a common continuation disk or a frozen anisotropy."
+      },
+      {
+        "through_final_line": 4540,
+        "node": "own-isotropic",
+        "mathematical_check": "The own isotropic route retains both parities and both HT signs, distinct-angle arithmetic, two double-contour charts/four full-coefficient charts, fixed-order complements, onsite estimates, the complete weighted retraction/current and every differentiated upper-tail window. No original ANISO or LT/HT boundary theorem is imported as this proof. The physical identities and local nonzero factors precede the dense obstruction."
+      },
+      {
+        "through_final_line": 4760,
+        "node": "closure-slices",
+        "mathematical_check": "Actual transverse-curve obstructions imply ambient nonextension; the reverse implication is never used. Each positive-ratio slice uses its separate regular density, its own B(u), and the one-variable collar. At lambda=1 the internally proved isotropic local obstruction is used. The sinh disk/exterior covering, deck invariance, removable HT origin, exceptional/ramified boundary points and beta=zeta/(2Jx) transfer are unchanged. Proposition ana:normal is the correct constructed-holomorphic-functions reference."
+      },
+      {
+        "through_final_line": 100000,
+        "node": "deleted-navigation",
+        "mathematical_check": "The deleted P0/G1/A1/N1/N2/N3/R1/I0/I1 table is a dependency index, not a removed proof. Every named theorem and equation remains at its corresponding destination, and the table is reconstructed in this delivery. Diagnostic/test/audit-history discussion is NONLOADBEARING. The decoupled-axis and strict-spectral-set examples, including their negative mathematical qualifications, remain. Deleted supplied-manuscript self-citations are provenance rather than theorem imports."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  },
+  "JOINT_PSER": {
+    "nodes": [
+      {
+        "through_final_line": 2795,
+        "node": "endpoint-real-cycle",
+        "mathematical_check": "The frozen F001 statement, endpoint-incidence geometry, componentwise collar, complete physical sums and actual complex transverse curves are unchanged. Its negative edge still uses scalar poles on the original real plane, full residue and angular exponential-moment estimates, an exact complex beta period, two first windings, exact-factor integer dominance and exhaustion of all indices/windings. No symmetric-normal-form proof from Original is substituted. Internal source/workflow self-citations are removed without deleting their reproduced arguments."
+      },
+      {
+        "through_final_line": 3762,
+        "node": "own-constrained-transport",
+        "mathematical_check": "The own isotropic constrained-cycle proof retains the distinct-angle prime family, both signed geometries, homotopy before angular weights, complete Schur products, mixed branches, retained collision block, regular inverse, protected variance, joint current jets, all shell scales and means, flux limits and the full logarithmic tail. The branch clarification is in theta-theta_b and W-1, so the same distance^(-1/2) majorant applies; it does not make the later inverse coordinate the branch displacement."
+      },
+      {
+        "through_final_line": 4011,
+        "node": "isotropic-first-origin",
+        "mathematical_check": "The original four full-coefficient charts, exact phase, finite complement and physical isotropic identities remain. The decaying transfer root is rho=s/2+O(s^2): W=s^-1+O(1), and rho=(2W)^-1+O(W^-3). The ambient variable z=2Kx is not this root. Consequently each one-body/pair power and the O(s^(N^2)) coefficient estimate are unchanged, including N=1 and the removable value X_H(0)=1."
+      },
+      {
+        "through_final_line": 100000,
+        "node": "closure",
+        "mathematical_check": "J, every positive-ratio slice and the two isotropic descendants are closed in separate arguments. Holomorphy of restrictions comes from Proposition ana:normal; real physics/Gibbs inputs are in ana:physical. The beta factor is entire in the temperature-line coordinate and nonzero at its physical boundaries. No ambient-only restriction inference or old completed Lean certificate is transferred to this independent route."
+      }
+    ],
+    "closure": "Real full-site inputs -> exact coefficient normalization/Fubini -> normal convergence -> first nonzero coefficient + finite lower orders + complete differentiated absolute infinite tail -> no cancellation -> actual curve/local obstruction -> density and componentwise closure -> physical analytic-unit transfer. Each route uses its own corresponding nodes.",
+    "cross_paper_imports": "No completed natural-boundary endpoint of a different proof route is substituted."
+  }
+}

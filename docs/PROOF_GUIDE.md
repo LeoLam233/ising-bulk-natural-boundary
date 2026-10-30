@@ -1,6 +1,6 @@
 # Reading manuscript v0.1-rc6 and Lean v0.3.0-rc2
 
-[Candidate PDF](../paper/next/manuscript.pdf) · [Current labels/pages](../paper/next/LABEL_INDEX.json) · [Version identities](VERSIONS.md). All 67 verified rc5 mathematical label numbers remain unchanged; Proposition F.1 is added.
+[Candidate PDF](../archive/manuscripts/pre-eight-2026-10-30/paper/next/manuscript.pdf) · [Current labels/pages](../archive/manuscripts/pre-eight-2026-10-30/paper/next/LABEL_INDEX.json) · [Version identities](VERSIONS.md). All 67 verified rc5 mathematical label numbers remain unchanged; Proposition F.1 is added.
 
 | Stage | Manuscript | Actual interface |
 |---|---|---|

@@ -6,9 +6,9 @@ The planned release identity is `anisotropic-v1.0.0-leanc001`. A release is issu
 
 ## Publication contents
 
-- [Frozen 38-page mathematical audit PDF](../paper/aniso/frozen/manuscript.pdf) and exact TeX.
-- [Author-identified 38-page publication PDF](../paper/aniso/publication/manuscript.pdf), with a byte-identical TeX document body.
-- [Separate 39-page research-original edition](../paper/aniso/research-original/manuscript.pdf).
+- [Frozen 38-page mathematical audit PDF](../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/frozen/manuscript.pdf) and exact TeX.
+- [Author-identified 38-page publication PDF](../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/publication/manuscript.pdf), with a byte-identical TeX document body.
+- [Separate 39-page research-original edition](../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/research-original/manuscript.pdf).
 - Unchanged C001 proofs, [actual final theorem](../lean/IsingBulk/Anisotropic/Final/FullTheorem.lean), separate [partial/unsafe closure audit](../lean/AuditAnisotropicClosure.lean), and [reproduction instructions](../docs/aniso/BUILD_AND_VERIFY.md).
 - Release manuscripts, source-only reproducer, independently checkable SHA-256 manifest, and compact execution/source receipts. Large raw logs and compiled artifacts remain outside Git.
 

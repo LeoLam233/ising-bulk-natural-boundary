@@ -3,6 +3,10 @@
 from pathlib import Path
 import argparse,difflib,hashlib,json,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def main():
     p=argparse.ArgumentParser();p.add_argument('--source-only',action='store_true');a=p.parse_args()

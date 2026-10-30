@@ -1,7 +1,7 @@
 # HT version and evidence identities
 
 - Frozen Lean candidate: `HT_STANDALONE_20261020T1747Z` (the **1747** source freeze).
-- Mathematical manuscript: **HT-1.0**, 17 October 2026; audited source/PDF under `paper/ht/frozen/`.
+- Mathematical manuscript: **HT-1.0**, 17 October 2026; audited source/PDF under `archive/manuscripts/pre-eight-2026-10-30/paper/ht/frozen/`.
 - Runtime: Lean 4.34.1, compiler commit `5045d0056413266e57c625dcd7c365b10e377c52`.
 - Mathlib: `d13f23b723b8a846827a245b89c10fc7d3f11612`.
 - Pre-existing LT source Git tree (unchanged): `ca47fde26285028603c7e87a9893aad31933b526`.

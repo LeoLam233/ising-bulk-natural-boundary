@@ -1,10 +1,7 @@
-# Low-temperature programme
+# Low-temperature susceptibility
 
-The established low-temperature proof and its history remain at their original paths:
+[Read the two current scholarly papers](../../papers/low-temperature/README.md).
 
-- [Current LT mathematical manuscript](../../paper/next/manuscript.pdf) and [TeX](../../paper/next/manuscript.tex)
-- [LT Lean entry](../../lean/IsingBulk.lean) and [LT Lean build guide](../../lean/README.md)
-- [LT mathematical claims](../../CLAIMS.md) and [version ledger](../VERSIONS.md)
-- [LT validation](../../release/next/VALIDATION.json) and [audit history](../../audits/README.md)
+[Exact formal theorem and physical scope](../../docs/eight-papers/LEAN_CORRESPONDENCE.md) · [Formalization status](../../docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md).
 
-No LT source, published release asset, tag or historical audit has been overwritten to add HT.
+Older version-specific records retain their original identities in the [historical manuscript archive](../../archive/manuscripts/pre-eight-2026-10-30/README.md).

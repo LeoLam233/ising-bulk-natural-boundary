@@ -4,6 +4,10 @@ Requires a Git checkout. Hash/consistency checks are not mathematical certificat
 """
 import argparse,csv,hashlib,json,pathlib,re,subprocess,sys,tarfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 MANIFEST='release/next/MANIFEST.json'
 MANUSCRIPT='v0.1-rc6'
 LEAN_CANDIDATE='v0.3.0-rc2'

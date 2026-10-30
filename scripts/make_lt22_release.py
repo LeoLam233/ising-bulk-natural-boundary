@@ -2,6 +2,10 @@
 """Build compact frozen source assets and path-free public acceptance receipts."""
 import argparse,hashlib,json,pathlib,shutil,zipfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+# Editorial migration: preserve the historical checker core in a verified temporary view.
+from eight_paper_paths import historical_root
+ROOT=historical_root(ROOT)
+
 TAG='lt22-preferred22-v1.0.0'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 

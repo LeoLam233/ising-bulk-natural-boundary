@@ -28,6 +28,6 @@ The [overlay manifest](../../ANISO_C001_OVERLAY_MANIFEST.json) lists every path 
 | Separate 39-page research-original PDF | `9252c8d43fc489396fa9fe822d26aa6257e3ed82c95cdcf55f1158246320de85` |
 | Separate research-original TeX | `2596c367f17132d7b5e6fb0619f4bb965031d16c3bfddcc66b02c44aaa526c2c` |
 
-The [editorial JSON](../../paper/aniso/publication/EDITORIAL.json), [literal diff](../../paper/aniso/publication/EDITORIAL.diff), [edition explanation](../../paper/aniso/publication/README.md) and [PDF QA](../../paper/aniso/publication/PDF_QA.json) describe the metadata-only derivation. The historical original is never substituted for the audited edition.
+The [editorial JSON](../../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/publication/EDITORIAL.json), [literal diff](../../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/publication/EDITORIAL.diff), [edition explanation](../../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/publication/README.md) and [PDF QA](../../archive/manuscripts/pre-eight-2026-10-30/paper/aniso/publication/PDF_QA.json) describe the metadata-only derivation. The historical original is never substituted for the audited edition.
 
-LT `paper/next/`, HT `paper/ht/frozen/` and HT's 21 October 2026 publication edition remain intact. The [global version index](../VERSIONS.md) preserves the historical LT ledger verbatim below the current result index.
+LT `archive/manuscripts/pre-eight-2026-10-30/paper/next/`, HT `archive/manuscripts/pre-eight-2026-10-30/paper/ht/frozen/` and HT's 21 October 2026 publication edition remain intact. The [global version index](../VERSIONS.md) preserves the historical LT ledger verbatim below the current result index.

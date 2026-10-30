@@ -1,0 +1,86 @@
+name: Unified Ising publication acceptance
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  low-temperature-build-audit-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+    env:
+      LEAN_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify frozen baseline, overlay and editorial source
+        run: python3 scripts/verify_three_proof_publication.py
+      - name: Install pinned official Lean 4.34.1
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Restore pinned dependency artifacts
+        working-directory: lean
+        run: |
+          lean --version
+          lake -f lakefile.toml exe cache get
+      - name: Build and audit the original low-temperature endpoint
+        working-directory: lean
+        run: |
+          set -o pipefail
+          lake -f lakefile.toml build IsingBulk Audit 2>&1 | tee "$RUNNER_TEMP/low-temperature-build.log"
+      - name: Fresh kernel replay of the low-temperature root
+        working-directory: lean
+        run: |
+          set -o pipefail
+          lake -f lakefile.toml env leanchecker --fresh --verbose IsingBulk 2>&1 | tee "$RUNNER_TEMP/low-temperature-replay.log"
+      - name: Recheck source identity
+        run: python3 scripts/verify_three_proof_publication.py
+      - name: Preserve low-temperature execution logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: low-temperature-regression-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/low-temperature-build.log
+            ${{ runner.temp }}/low-temperature-replay.log
+          if-no-files-found: ignore
+          retention-days: 90
+
+  high-temperature-final-tree:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      LEAN_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install pinned official Lean 4.34.1
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Fetch pinned dependency artifacts
+        working-directory: lean
+        run: lake -f lakefile.ht.toml exe cache get
+      - name: Execute the complete source-only high-temperature gate with receipts
+        run: |
+          python3 scripts/prepare_three_proof_checkout.py --output "$RUNNER_TEMP/high-temperature-source"
+          python3 -u "$RUNNER_TEMP/high-temperature-source/scripts/run_three_proof_verification.py" --only ht --output "$RUNNER_TEMP/high-temperature-verification"
+      - name: Preserve exact commands, stdout, stderr and receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: high-temperature-final-tree-${{ github.sha }}
+          path: ${{ runner.temp }}/high-temperature-verification/
+          if-no-files-found: ignore
+          retention-days: 90

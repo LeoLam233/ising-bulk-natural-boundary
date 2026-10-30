@@ -1,71 +1,32 @@
-# Natural boundaries of the square-lattice Ising susceptibility
+# Ising susceptibility: eight mathematical papers
 
-The **HT22 PSER proof** is a distinct independent high-temperature proof: [frozen 22-page PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) · [fourteen-field theorem](lean/IsingBulk/HT22/Final/Target.lean) · [correspondence](docs/ht22/PROOF_MAP.md) · [reproduce](docs/ht22/BUILD_AND_VERIFY.md).
+[Read the current eight-paper collection](papers/README.md) · [中文](README.zh.md) · [Repository map](REPOSITORY_MAP.md)
 
-| High-temperature edition | Paper | Formal route |
-|---|---|---|
-| Original HT (33 pages) | [PDF](paper/ht/frozen/manuscript.pdf) · [TeX](paper/ht/frozen/manuscript.tex) | [Original HT Lean 1747](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
-| Reader (editorial edition of Original HT) | [PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | Same Original HT Lean route |
-| PSER HT22 (distinct independent proof) | [22-page PDF](paper/ht/pser/manuscript.pdf) · [TeX](paper/ht/pser/manuscript.tex) | [Independent HT22 Lean](lean/IsingBulk/HT22/Final/Target.lean) |
+The collection contains two distinct proofs for each of four subjects: low-temperature susceptibility, high-temperature susceptibility, fixed-ratio anisotropic susceptibility, and susceptibility in two independent complex coupling variables. Each paper studies the full bulk response, with its physical normalization and published-real input interfaces. Article titles, authorship and the visible ChatGPT disclosures are preserved.
 
-`IsingBulk.HT22.ht22_full_target : IsingBulk.HT22.HT22FullTarget` has zero root premises and fourteen proved fields. Physical interpretation uses exactly `PhysicalScope.PublishedRealHTSpinFormFactors corr` as an antecedent: onsite spin-square and real sitewise odd form factors. No Gibbs-state construction is claimed. [Physical scope](docs/ht22/PHYSICAL_INPUTS.md) · [Audit identities](docs/ht22/AUDIT_EVIDENCE.md) · [HT22 citation](high-temperature/ht22/CITATION.cff). Original HT and its recommended Reader, LT22 and all earlier releases retain their own identities.
+The [current index](papers/README.md) gives every scholarly title and PDF/TeX link. The original fixed-ratio proof legitimately imports the original low- and high-temperature normalized equal-coupling theorems. Its alternative proves that case internally. Both two-complex-variable proofs establish the joint, positive-ratio-slice and isotropic conclusions through their own curve-level arguments.
 
+Six proof routes have completed formal developments at their [precise theorem/field scope](docs/eight-papers/LEAN_CORRESPONDENCE.md). The real-cycle anisotropic alternative remains PARTIAL; the endpoint/transport two-complex-variable alternative is NOT_SEPARATELY_FORMALIZED. See the [eight-route status](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md), [scope matrix](docs/eight-papers/SIX_PAPER_LEAN_SCOPE_MATRIX.csv), and [independent preservation audit](docs/eight-papers/EIGHT_PAPER_MATH_PRESERVATION_REPORT.md).
 
-The **LT22 PSER proof** is an independent low-temperature route: [frozen 22-page PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) · [Preferred22 theorem](lean/IsingBulk/Preferred22/FullTheorem.lean) · [scope and correspondence](docs/lt22/PROOF_MAP.md) · [reproduce](docs/lt22/BUILD_AND_VERIFY.md).
+The active formal code remains in [lean/](lean/). All formal source, toolchain, dependency pins and prior audit records are byte-identical to the pinned pre-migration base. Historical source metadata and technical README snapshots under lean/ keep their original paths; resolve those through the [archive crosswalk](archive/manuscripts/pre-eight-2026-10-30/README.md), not as current reading entrances.
 
-| Low-temperature edition | Paper | Formal route |
-|---|---|---|
-| Original paper (canonical LT) | [PDF](paper/next/manuscript.pdf) · [TeX](paper/next/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
-| Reader paper (editorial edition of Original) | [PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Original LT Lean](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
-| PSER paper (LT22, distinct proof) | [22-page PDF](paper/lt/pser/manuscript.pdf) · [TeX](paper/lt/pser/manuscript.tex) | [Independent Preferred22 Lean](lean/IsingBulk/Preferred22/FullTheorem.lean) |
+Historical manuscripts are preserved once in the [secondary archive](archive/manuscripts/pre-eight-2026-10-30/README.md). Immutable commit/tag URLs keep their old layouts; deleted moving-main file paths have no automatic GitHub redirect.
 
-LT22 preserves the October 25 audited source bytes: 333 new modules, 153 identical inherited modules, unchanged Lean 4.34.1 and nine dependency pins. The exact root is `IsingBulk.Preferred22.preferred_full_target : IsingBulk.Preferred22.PreferredFullTarget`, with zero root premises; Yang and Palmer–Tracy inputs are antecedents only within the physical identification clause. [Identity and prior audit](provenance/lt22/PRIOR_ACCEPTANCE.json) · [LT22 citation](low-temperature/lt22/CITATION.cff). The records below retain their historical version-specific scope. The LT22 paragraph records that release’s scope. HT22 is now presented separately above; ANISO F002 and JOINT F001 remain future publication tasks.
+For editorial verification run `python scripts/verify_eight_papers.py --historical-checks`. Rebuild all current TeX in a separate directory with `python scripts/build_current_papers.py --output PATH`. These commands preserve every published manuscript byte. Existing formal acceptance commands remain available, with hash-checked historical-path routing for their original verifier cores.
 
-This repository presents four mathematical developments on the **complete zero-field bulk susceptibility** of the infinite square-lattice Ising model, accompanied by Lean formalizations. The results range from separate isotropic low- and high-temperature proofs to fixed positive anisotropy ratios and a parent theorem in two independent complex couplings.
+## Low-temperature susceptibility
 
-**Recommended starting point: the four complete, independently reviewed Reader editions.** They improve the exposition while preserving the governing mathematical statements, hypotheses and proof mechanisms. The original manuscripts and the corresponding fixed Lean source declarations remain available for exact comparison.
+- **A natural boundary for the low-temperature bulk square-lattice Ising susceptibility** (Original proof): [PDF](papers/low-temperature/original-proof/manuscript.pdf) · [TeX](papers/low-temperature/original-proof/manuscript.tex).
+- **The full low-temperature Ising susceptibility: a regular-coordinate proof of the natural boundary** (Alternative regular-coordinate proof): [PDF](papers/low-temperature/alternative-proof/manuscript.pdf) · [TeX](papers/low-temperature/alternative-proof/manuscript.tex).
+## High-temperature susceptibility
 
-## Papers
+- **High-temperature bulk Ising susceptibility: a natural-boundary proof** (Original proof): [PDF](papers/high-temperature/original-proof/manuscript.pdf) · [TeX](papers/high-temperature/original-proof/manuscript.tex).
+- **The complete high-temperature Ising susceptibility: a constrained-coordinate proof of the natural boundary** (Alternative constrained-coordinate proof): [PDF](papers/high-temperature/alternative-proof/manuscript.pdf) · [TeX](papers/high-temperature/alternative-proof/manuscript.tex).
+## Fixed-ratio anisotropic susceptibility
 
-| Mathematical result | Recommended reading | Governing original | Lean formalization |
-|---|---|---|---|
-| **Joint natural boundaries with two independent complex couplings** | [Reader PDF](paper/joint/reader/manuscript.pdf) · [TeX](paper/joint/reader/manuscript.tex) | [Frozen 59-page manuscript](paper/joint/frozen/manuscript.pdf) | [Lean theorem](lean/IsingBulk/Joint/Final/FullConclusion.lean) |
-| **Fixed-ratio anisotropic natural boundaries** | [Reader PDF](paper/aniso/reader/manuscript.pdf) · [TeX](paper/aniso/reader/manuscript.tex) | [Frozen 38-page manuscript](paper/aniso/frozen/manuscript.pdf) | [Lean theorem](lean/IsingBulk/Anisotropic/Final/FullTheorem.lean) |
-| **Isotropic high-temperature bulk susceptibility** | [Reader PDF](paper/ht/reader/manuscript.pdf) · [TeX](paper/ht/reader/manuscript.tex) | [Frozen original manuscript](paper/ht/frozen/manuscript.pdf) | [Lean theorem](lean/IsingBulk/HT/Final/PublishedPhysicalTheorem.lean) |
-| **Isotropic low-temperature connected bulk susceptibility** | [Reader PDF](paper/lt/reader/manuscript.pdf) · [TeX](paper/lt/reader/manuscript.tex) | [Canonical v0.1-rc6 manuscript](paper/next/manuscript.pdf) | [Lean theorem](lean/IsingBulk/Final/UnconditionalNaturalBoundary.lean) |
+- **Natural boundaries of the full bulk susceptibility for the fixed-ratio anisotropic square-lattice Ising model** (Original proof): [PDF](papers/fixed-ratio-anisotropy/original-proof/manuscript.pdf) · [TeX](papers/fixed-ratio-anisotropy/original-proof/manuscript.tex).
+- **Natural boundaries of anisotropic Ising susceptibility via real-cycle pole estimates** (Alternative real-cycle proof): [PDF](papers/fixed-ratio-anisotropy/alternative-proof/manuscript.pdf) · [TeX](papers/fixed-ratio-anisotropy/alternative-proof/manuscript.tex).
+## Susceptibility in two independent complex coupling variables
 
-## Scope of the four results
-
-### Joint natural boundaries with two independent complex couplings
-
-The two-complex-variable parent theorem treats full high- and low-temperature bulk susceptibilities, their positive-ratio restrictions and isotropic descendants, and quantitative boundary obstructions. Its common real physical inputs are explicit premises.
-
-[Result and scope](joint/README.md) · [Build and verification](docs/joint/BUILD_AND_VERIFY.md) · [Citation](joint/CITATION.cff)
-
-### Fixed-ratio anisotropic natural boundaries
-
-For every fixed finite positive coupling ratio, the full high- and low-temperature susceptibilities have the stated natural boundaries on their lens and epigraph domains. The field-derivative conventions and physical premises remain distinct and explicit.
-
-[Result and scope](anisotropic/README.md) · [Build and verification](docs/aniso/BUILD_AND_VERIFY.md) · [Citation](anisotropic/CITATION.cff)
-
-### Isotropic high-temperature bulk susceptibility
-
-The disordered-phase theorem covers the complete odd-particle series, onsite contribution and all lattice sites. The unit circle is a natural boundary; the published real-temperature angular representation is an explicit physical premise.
-
-[Result and scope](high-temperature/README.md) · [Build and verification](docs/ht/BUILD_AND_VERIFY.md) · [Citation](high-temperature/CITATION.cff)
-
-### Isotropic low-temperature connected bulk susceptibility
-
-The ordered pure-phase theorem covers the complete positive even-particle series and all lattice sites, subtracting spontaneous magnetization squared. Its physical interface and independent original proof remain separately documented.
-
-[Result and scope](low-temperature/README.md) · [Build and verification](lean/README.md) · [Citation](low-temperature/CITATION.cff)
-
-## Mathematical relationship, editions and reproducibility
-
-The two-variable parent establishes its own positive-ratio and isotropic descendants by internal arguments. The fixed-ratio theorem treats both physical phases, while the earlier direct isotropic high- and low-temperature proofs remain separate developments with distinct observables and particle expansions.
-
-For isotropic couplings, s = sinh(2βJ); fixed-ratio anisotropy continues z = 2βJ with the ratio held fixed. External physical correlation/Gibbs premises and any sharper statements established only in a manuscript are identified in the corresponding scope and proof documents; they are not silently described as literal Lean exports.
-
-**Reader** means the independently checked, exposition-improved complete paper. **Original/frozen** identifies its mathematical authority; some earlier **publication** editions changed only author/date metadata. Historical labels such as C001, C002 and HT-1.0 belong in the [version records](docs/VERSIONS.md), not in the main paper titles.
-
-[Paper editions](paper/README.md) · [Repository and theorem map](REPOSITORY_MAP.md) · [Evidence, reproducibility and citations](docs/EVIDENCE_AND_REPRODUCIBILITY.md) · [中文首页](README.zh.md) · [Authorship](AUTHORSHIP.md) · [MIT code license](LICENSE) · [CC BY 4.0 document license](LICENSE-DOCUMENTATION.md)
+- **Natural boundaries of the full square-lattice Ising susceptibility in two complex coupling variables: Spectral domains and physical-slice restrictions** (Original proof): [PDF](papers/two-complex-couplings/original-proof/manuscript.pdf) · [TeX](papers/two-complex-couplings/original-proof/manuscript.tex).
+- **Natural boundaries of the full square-lattice Ising susceptibility in two complex coupling variables: Endpoint geometry and constrained transport** (Alternative endpoint/transport proof): [PDF](papers/two-complex-couplings/alternative-proof/manuscript.pdf) · [TeX](papers/two-complex-couplings/alternative-proof/manuscript.tex).

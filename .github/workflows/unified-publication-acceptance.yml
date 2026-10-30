@@ -4,7 +4,26 @@ on:
 permissions:
   contents: read
 jobs:
+  migration-integrity:
+    runs-on: ubuntu-24.04
+    outputs:
+      formal: ${{ steps.scope.outputs.formal }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - id: scope
+        shell: bash
+        run: |
+          if test '${{ github.event_name }}' != 'workflow_dispatch' && test -f provenance/eight-papers-2026-10-30/MIGRATION.json; then
+            python3 scripts/verify_eight_papers.py --historical-checks
+            echo "formal=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "formal=true" >> "$GITHUB_OUTPUT"
+          fi
   low-temperature-build-audit-replay:
+    if: needs.migration-integrity.outputs.formal == 'true'
+    needs: migration-integrity
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     defaults:
@@ -53,6 +72,8 @@ jobs:
           retention-days: 90
 
   high-temperature-final-tree:
+    if: needs.migration-integrity.outputs.formal == 'true'
+    needs: migration-integrity
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     env:

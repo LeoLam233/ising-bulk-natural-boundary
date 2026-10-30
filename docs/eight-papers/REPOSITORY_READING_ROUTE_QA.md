@@ -1,0 +1,11 @@
+# Current reading route and archival QA
+
+The root English/Chinese READMEs, papers/README.md and four descriptive topic READMEs expose the eight exact scholarly titles and direct PDF/TeX links. There are exactly eight current pairs under papers/, once each, and no top-level paper/ tree or competing academic/ current collection. Original versus alternative routes are checked against the sealed final ZIP, including author metadata and ChatGPT disclosures.
+
+All 67 former tracked paper/ files are moved intact to archive/manuscripts/pre-eight-2026-10-30/paper/. Relative historical names are retained. ARCHIVE_PATH_MIGRATION_MAP.csv gives each old path, new main URL, immutable base URL and unchanged hash. The old moving-main URLs do not redirect. Ten pre-existing remote tags and all release assets remain historical; no tag/release mutation is authorized or performed.
+
+The current index links the 72-row paper-to-Lean scope matrix and eight proof statuses. It preserves the original fixed-ratio theorem's normalized LT/HT equal-coupling import, the real-cycle alternative's internal isotropic proof, and both two-complex-variable J AND R AND I routes. Six completed formal developments are scoped to their actual fields. The remaining two alternatives remain PARTIAL and NOT_SEPARATELY_FORMALIZED.
+
+Genuine archival exceptions: sealed audit/provenance/release records, overlay manifests, and byte-bound technical README/SOURCE metadata under lean/ retain embedded old paths. These are historical source identities, resolved by the crosswalk; they are not current paper entrances. All lean/ files, including these metadata, are checked unchanged against the base. Actual namespaces and theorem identifiers remain untouched. Live external version/tag citations retain their immutable URLs.
+
+All changed live Markdown links are resolved locally by the publication guard. Version-specific documentation now labels its older records as historical and links current status. Current manuscript building has a dedicated scripts/build_current_papers.py entry; preserved legacy builders and source verifiers use the checked temporary historical view. The old checker core is recovered byte-for-byte before execution, with a separate Git index and read-only object alternate. No public duplicate compatibility paper/ files are created.

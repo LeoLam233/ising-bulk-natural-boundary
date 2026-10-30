@@ -55,7 +55,7 @@ jobs:
           PY
           python3 lean/ci/verify_payload.py --expected-id "$(python3 -c 'import json; print(json.load(open("lean/ci/accepted_identity.json"))["PROOF_CRITICAL_PAYLOAD_ID"])')"
           gh run download "$FULL_CI_RUN" --name "ising-full-acceptance-$EXPECTED_COMMIT" --dir "$RUNNER_TEMP/ising-release/full-ci"
-          python3 lean/ci/prepare_release_assets.py --state "$RUNNER_TEMP/ising-release" --commit "$EXPECTED_COMMIT" --tree "$EXPECTED_TREE" --run "$FULL_CI_RUN"
+          python3 scripts/run_historical_manuscript_tool.py lean/ci/prepare_release_assets.py --state "$RUNNER_TEMP/ising-release" --commit "$EXPECTED_COMMIT" --tree "$EXPECTED_TREE" --run "$FULL_CI_RUN"
       - name: Create annotated tag and draft without replacing history
         env:
           GH_TOKEN: ${{ github.token }}

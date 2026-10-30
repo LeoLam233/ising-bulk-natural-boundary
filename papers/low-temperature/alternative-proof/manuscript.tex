@@ -1,0 +1,1856 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\T}{\mathbb T}
+\newcommand{\X}{\mathcal X}
+\newcommand{\Mtwo}{\mathcal M^2}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\hypersetup{pdftitle={The full low-temperature Ising susceptibility: a regular-coordinate proof of the natural boundary},pdfauthor={Dehao Lin},pdfsubject={Natural boundary of the full low-temperature square-lattice Ising susceptibility}}
+\title{The full low-temperature Ising susceptibility:\\ a regular-coordinate proof of the natural boundary}
+\author{Dehao Lin\\
+\small School of Physics, Sun Yat-sen University\\
+\small\texttt{lindh9@mail2.sysu.edu.cn}\\
+\small ORCID: \href{https://orcid.org/0009-0001-4551-8490}{0009-0001-4551-8490}}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that the complete connected bulk susceptibility of the
+isotropic square-lattice Ising model, continued from its low-temperature
+pure phase, has the unit circle as a natural boundary in
+$s=\sinh(2\beta_{\rm phys}J)$. An exact lattice Fourier sum expresses
+each full coefficient as an angular integral with a total-angle
+constraint and one product denominator. At a dense family of prime
+roots of unity, the first singular even-particle term has a nonzero
+$\varepsilon^{-1/2}$ derivative, computed directly on this constraint.
+An elementary four-point determinant identity, propagated by
+Pfaffian condensation, determines the exact local coefficient. A deformation preserving the total angle and one regular
+coordinate on its one-sided part give
+an absolute logarithmic bound for the entire differentiated
+higher-particle tail. One collective tangential field treats all right-side configurations.
+Oblique coarea and one mean scale control every collision diameter,
+including diameters below the radial distance; a bounded anchor
+field handles the remaining regions with a separated product kernel. The same geometry
+controls the finite-order complement of the first singular chart. These estimates establish
+noncancellation for the full infinite expansion.
+\end{abstract}
+
+\section{The bulk function and the argument}
+
+Consider the zero-field Ising model on the infinite square lattice,
+with equal positive nearest-neighbor coupling $J$. Set
+\[
+ s=\sinh(2\beta_{\rm phys}J),\qquad
+ \Mtwo(s)=(1-s^{-4})^{1/4},
+\]
+where the branch of $\Mtwo$ tends to one at infinity.
+For real $s>1$ the connected response in the plus pure phase is
+\begin{equation}\label{eq:physical}
+ \X(s)=\beta_{\rm phys}^{-1}\chi(s)
+ =\sum_{(a,b)\in\mathbb Z^2}
+       \bigl(\langle\sigma_{00}\sigma_{ab}\rangle_+
+                     -\Mtwo(s)\bigr).
+\end{equation}
+Spin reversal gives the same function in the minus pure phase.
+The physical inputs are Yang's magnetization formula and the
+low-temperature correlation expansion of Palmer--Tracy
+\cite{Yang,PalmerTracy}, in the normalization recorded by
+Tracy--Widom \cite[Appendix 1, pp.~1132--1133]{TracyWidom}.
+
+Nickel identified the unit-circle singularities of individual form
+factors \cite{Nickel1999,Nickel2000}. Their increasing density led to
+the natural-boundary conjecture for the full susceptibility; the series
+and amplitude analysis of Orrick, Nickel, Guttmann and Perk
+\cite{Orrick2001} provides further evidence. Passing from the singularities
+of individual terms to the infinite sum requires estimates that exclude
+cancellation. Tracy and Widom established a natural boundary for the
+diagonal susceptibility \cite{TracyWidomDiagonal}. The full lattice sum
+in \eqref{eq:physical} requires control of both lattice directions.
+
+The proof below establishes the natural boundary of the complete
+low-temperature bulk susceptibility using its constrained angular
+representation. A regular coordinate on the dispersion curve and a
+collective tangential field give a logarithmic bound for the complete
+differentiated tail.
+
+\begin{theorem}\label{thm:main}
+The exterior holomorphic function $\X$ determined by
+\eqref{eq:physical} has the entire circle $|s|=1$ as a natural
+boundary. The same local noncontinuation holds for the physical
+susceptibility $\chi=\beta_{\rm phys}\X$, with
+$\beta_{\rm phys}(s)=\operatorname{arsinh}(s)/(2J)$ continued from
+the real low-temperature interval.
+\end{theorem}
+
+We use coefficients $C_N$ that already contain the full lattice sum:
+\[
+ \X=\Mtwo\sum_{\substack{N\ge2\\N\ \mathrm{even}}} C_N.
+\]
+At a prime root $\zeta=e^{2\pi ia/p}$ in the first quadrant,
+the first singular even order is $N_*=2p$. For
+$k=N_*^2/2-1$ and $s_\varepsilon=(1+\varepsilon)\zeta$, we prove
+\begin{equation}\label{eq:two-goals}
+ \begin{split}
+ C_{N_*}^{(k)}(s_\varepsilon)
+    &=\Lambda_\alpha\varepsilon^{-1/2}+o(\varepsilon^{-1/2}),
+                  \qquad \Lambda_\alpha\ne0,\\
+ \sum_{\substack{N>N_*\\N\ \mathrm{even}}}
+          |C_N^{(k)}(s_\varepsilon)|
+    &=O(1+|\log\varepsilon|).
+ \end{split}
+\end{equation}
+All constants may depend on this fixed point and derivative order.
+The first estimate is a local shape integral. For the second, we
+deform the complete constrained angular torus and then partition it.
+The regular coordinate includes the moving branch center, so
+parameter differentiation has uniform coefficients even at a
+dispersion branch. One collective field freezes the angular
+constraint and the total phase on the entire right part. The
+remaining left-root part has a separated product kernel and needs
+only a bounded anchor field. Determinant minors retain factorial
+decay, while oblique coarea gives one estimate for every right-side
+diameter. A fixed finite mean gap places the small-order collision
+charts away from the branch.
+
+\subsection*{AI Declaration}
+ChatGPT was used extensively in the mathematical research, proof development,
+and preparation of this manuscript.
+
+\section{The full angular representation}
+\label{sec:representation}\label{sec:angular-bulk}
+
+Write
+\[
+ S(s)=s+s^{-1},\qquad
+ W(y;s)=S(s)-\tfrac12(y+y^{-1}),\qquad
+ z=W-\sqrt{W^2-1}=e^{-\gamma}.
+\]
+For $|s|>1$ and $|y|=1$, choose the unique interior root $|z|<1$,
+continued from real $s>1$. Indeed $S(s)\notin[-2,2]$ in the
+exterior, so $W$ cannot lie in $[-1,1]$. The local logarithms
+$\gamma$ have positive real part, and
+$\sinh\gamma=(z^{-1}-z)/2$ is single-valued.
+
+On $y_i=e^{i\theta_i}$ put $Z=\prod_i z_i$ and
+\begin{equation}\label{eq:angular-kernel}
+ K_{il}=\frac{\sin((\theta_i-\theta_l)/2)}
+                  {\sinh((\gamma_i+\gamma_l)/2)},
+ \qquad K_{ii}=0.
+\end{equation}
+Changing a half-angle or logarithmic sign changes one row and its
+corresponding column, so the determinant is unambiguous and periodic.
+Each kernel entry has the rational square
+\begin{equation}\label{eq:kernel-square}
+ K_{il}^2=-\frac{(y_i-y_l)^2z_i z_l}
+                    {y_i y_l(1-z_i z_l)^2}.
+\end{equation}
+The determinant is used directly in the physical expansion.
+Section~\ref{sec:determinant-local} proves its collision zeros
+and the precise local coefficient needed below.
+
+Let the constrained torus and its normalized Haar measure be
+\[
+ \mathbb H_N=\{\theta\in\mathbb T^N:
+                      \textstyle\sum_i\theta_i=0\pmod{2\pi}\},
+\]
+\[
+ d\mu_N=\prod_{i=1}^{N-1}\frac{d\theta_i}{2\pi},
+ \qquad \theta_N=-\sum_{i<N}\theta_i\pmod{2\pi}.
+\]
+Equivalently, $d\mu_N$ is Euclidean hypersurface measure divided
+by $\sqrt N(2\pi)^{N-1}$.
+
+\begin{proposition}[Complete lattice sum]\label{prop:angular-bulk}
+For even $N\ge2$, define
+\begin{equation}\label{eq:angular-bulk}
+ C_N(s)=\frac1{N!}\int_{\mathbb H_N}
+       \frac{1+Z}{1-Z}\det K\prod_{i=1}^N\frac1{\sinh\gamma_i}
+                         \,d\mu_N.
+\end{equation}
+Then the exterior continuation of the physical susceptibility is
+\begin{equation}\label{eq:bulk}
+ \X(s)=\Mtwo(s)\sum_{\substack{N\ge2\\N\ \mathrm{even}}} C_N(s).
+\end{equation}
+Every fixed differentiated series converges normally on compact
+exterior parameter sets. All lattice sites, including the origin,
+are included in \eqref{eq:bulk}.
+\end{proposition}
+\begin{proof}
+For real $s>1$, the physical input is the Fredholm formula
+\[
+ \langle\sigma_{00}\sigma_{ab}\rangle_+
+       =\Mtwo\det(I+g_{a,|b|}),\qquad
+ g_{a,|b|}(\theta_i,\theta_l)
+       =e^{ia\theta_i-|b|\gamma_i}K_{il},
+\]
+with measure $d\theta/(2\pi\sinh\gamma)$.
+The originally stated kernel is
+$\sinh((\gamma_i-\gamma_l)/2)/\sin((\theta_i+\theta_l)/2)$.
+Subtracting the dispersion equations and using the difference
+formulas for cosine and hyperbolic cosine gives exactly
+\eqref{eq:angular-kernel}, with removable values filled in by
+continuity. Each Fredholm minor is the product of its row weights
+and $\det K$. The odd minors vanish because $K$ is skew.
+The expansion therefore gives
+\[
+ \langle\sigma_{00}\sigma_{ab}\rangle_+
+   =\Mtwo\left(1+\sum_{\substack{N\ge2\\N\ \mathrm{even}}}
+                         c_N(a,b;s)\right),
+\]
+where
+\[
+ c_N(a,b;s)=\frac1{N!}\int_{\mathbb T^N}
+       e^{ia\sum_i\theta_i}Z^{|b|}\det K
+                    \prod_i\frac{d\theta_i}{2\pi\sinh\gamma_i}.
+\]
+For this fixed $s$, all entries and one-body factors are bounded on
+a common small angular strip, on which $|z_i|\le e^{-c}<1$.
+Shift every angle by $i\eta\,\operatorname{sgn}(a)$, with fixed
+small $\eta>0$. Periodicity and analyticity give the sitewise bound
+\[
+ |c_N(a,b;s)|\le\frac{C^N N^{N/2}}{N!}
+                    e^{-N(\eta|a|+c|b|)}.
+\]
+Hadamard's inequality supplies the determinant factor. The bound is
+summable in all sites and all even $N\ge2$, so the lattice and
+particle sums may be interchanged.
+
+Summing over $b\in\mathbb Z$ gives $(1+Z)/(1-Z)$. To justify
+the other direction with its exact normalization, for a periodic
+function $F$ on $\mathbb T^N$ define
+\[
+ Q(v)=\int_{\mathbb T^{N-1}}
+ F(\theta_1,\ldots,\theta_{N-1},v-\textstyle\sum_{i<N}\theta_i)
+                 \prod_{i<N}\frac{d\theta_i}{2\pi}.
+\]
+Its Fourier coefficient of index $-a$ is
+$\int e^{ia\sum\theta_i}F\prod_i d\theta_i/(2\pi)$.
+For the present analytic integrand the Fourier series is absolutely
+convergent. Summing those coefficients gives $Q(0)$, precisely
+\eqref{eq:angular-bulk}. Subtracting $\Mtwo$ in the correlation
+formula removes its zeroth-order term and proves \eqref{eq:bulk}.
+At the origin the full correlation is one, so its connected
+contribution in this sum is exactly $1-\Mtwo$.
+
+On a compact exterior neighborhood the unit-circle roots satisfy
+$m\le|z_i|\le q<1$. The complete kernel entries, one-body factors,
+and product denominator in \eqref{eq:angular-bulk} are uniformly
+bounded. Since $\mu_N(\mathbb H_N)=1$, Hadamard and
+$N!\ge(N/e)^N$ give
+\[
+ |C_N(s)|\le C_0(C_1/\sqrt N)^N.
+\]
+Cauchy's inequality on a slightly larger compact neighborhood gives
+the same summability for every fixed derivative. Analytic continuation
+from the real interval proves the exterior identity.
+\end{proof}
+
+Changing $s,y_i,z_i$ to $-s,-y_i,-z_i$ preserves the constrained
+torus when $N$ is even. It changes each complete matrix entry and
+each one-body factor by a minus sign; the full coefficient is
+unchanged. Thus $C_N$ and $\X$ are even. Their values also commute
+with complex conjugation, first on the physical germ and then by
+analytic continuation.
+
+\section{Prime roots with a unique first cosine pair}
+\label{sec:prime-roots}
+
+Choosing the two dispersion angles equal gives a dense family of roots
+of unity. At the first even singular order there is a unique cosine
+pair. Its two signed angular configurations are exchanged by reflection.
+
+\begin{lemma}\label{lem:prime-root-family}
+Let $p\geq5$ be prime and $1\leq a<p/4$. Put
+\[
+ \alpha=\frac{2\pi a}{p},\qquad
+ \zeta=e^{i\alpha},\qquad S_*=2\cos\alpha,
+ \qquad N_*=2p.
+\]
+Then the first positive even integer $n$ for which
+\[
+ S_*=\cos(2\pi l/n)+\cos(2\pi m/n)
+\]
+is $n=N_*$. At that order the unordered cosine pair is uniquely
+$\{\cos\alpha,\cos\alpha\}$. These points $\zeta$ are dense in the open
+upper-right quadrant of the unit circle. If
+\[
+ b=\arccos(S_*-1),\qquad \xi=e^{-ib},
+\]
+then $\xi$ is algebraic and is not a root of unity.
+\end{lemma}
+
+\begin{proof}
+Write $\zeta_p=e^{2\pi i/p}$, $d=(p-1)/2$, and
+$u_j=\zeta_p^j+\zeta_p^{-j}$ for $1\leq j\leq d$. In
+$E=\mathbb Q(\zeta_p+\zeta_p^{-1})$, every $u_j$ has trace $-1$:
+its conjugates sum the nontrivial $p$-th roots of unity once each.
+In particular $S_*=u_a>0$ is irrational, since rationality would give
+$d u_a=-1$.
+
+If $n<2p$ is even, then $p\nmid n$. The compositum of
+$\mathbb Q(\zeta_p)$ and $\mathbb Q(\zeta_n)$ is
+$\mathbb Q(\zeta_{pn})$. Its cyclotomic degree is
+$\varphi(pn)=\varphi(p)\varphi(n)$, so the two fields have intersection
+$\mathbb Q$. Thus a Nickel equation of order $n$ would make $S_*$
+rational. The displayed pair $(\alpha,\alpha)$ is available at order
+$2p$, proving the first-order assertion.
+
+Next $\xi+\xi^{-1}=2u_a-2$, so $\xi$ is algebraic. If $\xi$ were a
+root of unity, every conjugate of $2u_a-2$ would lie in $[-2,2]$.
+Its trace in $E$, however, is $-2-2d<-2d$. This proves nonresonance.
+
+At order $2p$ a cosine equal to $-1$ is impossible, since its partner
+would have to be $S_*+1>1$. A cosine equal to $1$ would make $\xi$
+a $2p$-th root of unity. All remaining twice-cosines belong to
+$\{\pm u_1,\ldots,\pm u_d\}$. The numbers $u_1,\ldots,u_d$ are
+linearly independent over $\mathbb Q$: a relation yields a polynomial
+of degree at most $p-1$, with zero constant coefficient, vanishing at
+$\zeta_p$. It is a multiple of $\Phi_p(X)=1+X+\cdots+X^{p-1}$, and
+its constant coefficient forces that multiple to be zero.
+Consequently $2u_a=v+w$, with $v,w\in\{\pm u_j\}$, implies
+$v=w=u_a$.
+
+Finally, given $\alpha_0\in(0,\pi/2)$, choose unbounded primes $p$
+and integers $a$ nearest to $p\alpha_0/(2\pi)$. Eventually
+$1\leq a<p/4$, and $2\pi a/p\to\alpha_0$.
+\end{proof}
+
+\section{A product identity for the correlation determinant}
+\label{sec:elementary-pfaffian}\label{sec:determinant-local}
+
+The dispersion relation makes a four-point identity an ordinary
+Vandermonde determinant.  Pfaffian condensation then proves the
+identity at every even order.  We give both steps, since they also
+fix all local signs and collision multiplicities.
+
+\begin{lemma}[Four points on the dispersion curve]
+Let nonzero $y_i,z_i$ satisfy
+$y_i+y_i^{-1}+z_i+z_i^{-1}=2S$ for $1\le i\le4$, and set
+$B_{ij}=(y_i-y_j)/(1-z_i z_j)$.  Then
+\[
+ B_{12}B_{34}-B_{13}B_{24}+B_{14}B_{23}
+ =\left(\prod_{i=1}^4\frac{z_i}{y_i}\right)
+   \prod_{i<j}B_{ij}.
+\]
+The equality holds wherever the expressions are defined and,
+after clearing denominators, at every point of the curve.
+\end{lemma}
+\begin{proof}
+Write $a_{ij}=y_i-y_j$, $t_i=z_i+z_i^{-1}$, and
+$Z_4=z_1z_2z_3z_4$.  For a partition $ij\mid kl$ of the four
+indices, direct multiplication gives
+\[
+ \frac{\prod_{v\in\{i,j\},\,w\in\{k,l\}}(1-z_vz_w)}{Z_4}
+ =R+t_it_j+t_kt_l,
+ \qquad
+ R=Z_4+Z_4^{-1}+2-\sum_{v<w}
+          \bigl(z_vz_w+(z_vz_w)^{-1}\bigr).
+\]
+Multiplying the proposed identity by
+$\prod_{i<j}(1-z_i z_j)$, the common $R$ term cancels because
+$a_{12}a_{34}-a_{13}a_{24}+a_{14}a_{23}=0$.
+The remaining left side, divided by $Z_4$, is
+\[
+ \begin{split}
+ &a_{12}a_{34}(t_1t_2+t_3t_4)
+ -a_{13}a_{24}(t_1t_3+t_2t_4)\\
+ &\hspace{25mm}+a_{14}a_{23}(t_1t_4+t_2t_3)
+ =\det[\,1,\ y_i,\ t_i,\ y_it_i\,]_{i=1}^4.
+ \end{split}
+\]
+Here the last equality is a two-column Laplace expansion.
+Since $t_i=2S-y_i-y_i^{-1}$, column operations give
+\[
+ \det[1,y_i,t_i,y_it_i]
+ =\det[1,y_i,y_i^{-1},y_i^2]
+ =\frac{\det[y_i,y_i^2,1,y_i^3]}{\prod_i y_i}
+ =\frac{\prod_{i<j}(y_i-y_j)}{\prod_i y_i}.
+\]
+This is the required cleared numerator.
+\end{proof}
+
+\begin{lemma}[Pfaffian propagation]\label{lem:pf-propagation}
+Suppose a skew matrix $K$ has the property that every four-index
+principal submatrix satisfies
+\[
+ K_{ab}K_{cd}-K_{ac}K_{bd}+K_{ad}K_{bc}
+   =\prod_{v<w\in\{a,b,c,d\}}K_{vw}
+ \quad(a<b<c<d).
+\]
+Then, at every even order for which the intervening products
+can be canceled, $\operatorname{Pf}K=\prod_{i<j}K_{ij}$.
+For a rational or analytic family with a dense set of such
+points, the identity extends to the whole family.
+\end{lemma}
+\begin{proof}
+Let $I$ be the first $N-4$ indices and let $a,b,c,d$ be the last
+four.  The elementary Pfaffian condensation identity is
+\[
+ \operatorname{Pf}K_{Iabcd}\operatorname{Pf}K_I
+ =\operatorname{Pf}K_{Iab}\operatorname{Pf}K_{Icd}
+  -\operatorname{Pf}K_{Iac}\operatorname{Pf}K_{Ibd}
+  +\operatorname{Pf}K_{Iad}\operatorname{Pf}K_{Ibc}.
+\]
+For completeness, when $K_I=A$ is invertible, the simultaneous
+row and column elimination in
+$\left[\begin{smallmatrix}A&B\\-B^T&C\end{smallmatrix}\right]$
+has determinant one and gives the diagonal blocks
+$A$ and $C+B^TA^{-1}B$.  Pfaffian multilinearity therefore
+reduces the displayed formula to the defining four-by-four
+Pfaffian formula.  The identity is polynomial, so it holds
+also when $A$ is singular.
+
+Assume the product formula at all smaller even orders.
+Writing $P_I=\prod_{i<j\in I}K_{ij}$, the right side factors as
+\[
+ P_I^2\prod_{i\in I,\,v\in\{a,b,c,d\}}K_{iv}
+ \bigl(K_{ab}K_{cd}-K_{ac}K_{bd}+K_{ad}K_{bc}\bigr)
+ =P_I\prod_{i<j}K_{ij}.
+\]
+The left side is $P_I\operatorname{Pf}K$.  Cancel $P_I$.
+The orders two and four start the induction.
+\end{proof}
+
+\begin{proposition}[Complete product and local coefficient]
+\label{prop:complete-product}\label{prop:local-determinant-coefficient}
+Choose local square roots $r_i^2=z_i/y_i$ and set
+$K_{ij}=-ir_i r_j B_{ij}$.  For every even $N$ on the
+dispersion curve,
+\[
+ \operatorname{Pf}K=\prod_{i<j}K_{ij},\qquad
+ \det K=\prod_{i<j}K_{ij}^2.
+\]
+The physical kernel has precisely this local form.  The
+determinant identity is independent of all square-root choices.
+\end{proposition}
+\begin{proof}
+At order four,
+\[
+ \Pf K=-\Bigl(\prod_i r_i\Bigr)\Pf B
+       =-\Bigl(\prod_i r_i^3\Bigr)\prod_{i<j}B_{ij}
+       =\prod_{i<j}K_{ij}.
+\]
+Thus the preceding identity is the four-point hypothesis for $K$.  Apply Lemma~\ref{lem:pf-propagation} at
+generic points, where all pair entries are nonzero, then clear
+denominators and continue.  This argument also covers
+degenerate parameter values by continuation.  The identity
+$(\operatorname{Pf}K)^2=\det K$ gives the second equality.
+Changing a square root changes one row and its column by a
+minus sign and leaves both determinant expressions invariant.
+\end{proof}
+
+\begin{corollary}[Fixed-order collision divisibility]
+\label{lem:alternating-division}
+On every regular fixed-order collision chart, each pair entry
+has a factor $\theta_i-\theta_j$; permutation covariance of
+the coupled contour gives the same factor when occupancies
+are present.  Thus $\det K$ has the full squared Vandermonde
+factor, with bounded fixed-order jets on compact regular
+charts.  Near $\theta_i=-\alpha+u_i$, $s=e^{i\alpha}$, the
+physical dispersion is $\gamma_i=i\alpha+O(u_i)$, and hence
+\[
+ K_{ij}=\frac{u_i-u_j}{2i\sin\alpha}
+          +O\bigl((u_i-u_j)|u|\bigr),\qquad
+ \det K=\Delta(u)^2\left[
+ (2i\sin\alpha)^{-N(N-1)}+O(|u|+|s-e^{i\alpha}|)\right].
+\]
+The analytic quotient and every parameter derivative retain
+the same Vandermonde factor.  With all one-body measures,
+$1+Z\to2$, and the factor $1/N!$ included, the normalized
+local coefficient is exactly
+\[
+ A_\alpha=\frac{2}{N!(2\pi)^{N-1}}
+           2^{-N(N-1)}\sin(\alpha)^{-N^2}>0.
+\]
+Indeed the combined phase is
+$(-i)^N(-1)^{N(N-1)/2}=i^{-N^2}=1$ for even $N$.
+\end{corollary}
+
+\section{A product-preserving deformation of the whole-bulk integral}
+\label{sec:constrained-deformation}
+
+We use the normalized coefficients $C_N$ of
+\eqref{eq:angular-bulk}.  Fix a selected point $s_*$, put
+$S_*=s_*+s_*^{-1}\in(0,2)$, and write
+\[
+ s_\varepsilon=(1+\varepsilon)s_*,\qquad
+ b=\arccos(S_*-1),\qquad \xi=e^{-ib},\qquad
+ H=\log(1/\varepsilon).
+\]
+The constants in this section may depend on the selected point and a
+fixed derivative order $k$, but never on the even particle number $N$
+or on $\varepsilon$.  The infinite-tail estimates concern $N\ge N_*+2$, where
+$k=N_*^2/2-1$. Set $N_c=2k+4$.
+We prove logarithmic absolute bounds through $k$, which are
+smaller than the first singular term. The deformation and the regular transport formulas
+are also used at fixed even orders $2\le N\le N_*$ in
+Section~\ref{sec:first-single}.
+
+For the regular dispersion coordinate we write
+\[
+ \varphi=\arccos W,\qquad z=e^{-i\varphi},\qquad
+ \gamma=i\varphi.
+\]
+Its physical continuation lies in the fourth quadrant near either
+inverse-dispersion branch.  The angular integration coordinates remain
+$\theta_i$, with $\sum_i\theta_i=0\pmod {2\pi}$.
+
+Choose a smooth periodic function $p$ supported in $(0,\pi)$,
+with $0\le p\le1$ and $p=1$ on $[\delta,\pi-\delta]$.
+Here $\delta>0$ is smaller than $\alpha/2$, $b/2$, and
+$(2\alpha-b)/2$, and is small enough that $b$ is inside this
+plateau and $1+g'(\theta)>0$ on the upper endpoint sliver.
+Here $g(\theta)=\arccos(S_*-\cos\theta)$; the choices are
+possible because $b<2\alpha$ and $g'(0)=0$.  Put $m(\theta)=p(-\theta)$.  Thus $p,m$ have
+disjoint supports, and both inverse branches have fixed plateau
+neighborhoods.  Define
+\begin{equation}\label{eq:constrained-homotopy}
+ \begin{aligned}
+ P&=\sum_i p(\theta_i),\qquad Q=\sum_i m(\theta_i),\\
+ h_i&=\frac\tau N\{P m(\theta_i)-Q p(\theta_i)\},\qquad
+ y_i(\lambda)=e^{i\theta_i+\lambda h_i},\quad 0\le\lambda\le1.
+ \end{aligned}
+\end{equation}
+The positive number $\tau$ is fixed and sufficiently small.  In
+particular $\sum_i h_i=0$, so $\prod_i y_i=1$ throughout the
+deformation.
+
+\begin{lemma}[Exact constrained deformation]
+\label{lem:constrained-homotopy}
+The full integral defining $C_N$ is unchanged by
+\eqref{eq:constrained-homotopy}.  Its angular Jacobian and its fixed
+jets have bounds $C_j^N N^{C_j}$, uniformly in $N$.
+\end{lemma}
+\begin{proof}
+For $y=e^{v+i\theta}$,
+\[
+ \Im W=\Im S-\sinh v\sin\theta.
+\]
+On the upper semicircle the motion in
+\eqref{eq:constrained-homotopy} is inward, and on the lower
+semicircle it is outward.  Both motions increase $\Im W$.
+For the admissible exterior parameters it remains positive, so every
+$z_i$ stays on the interior sheet.  Thus $1-Z$ and all the pair
+denominators $1-z_i z_l$ stay nonzero.  The kernel square \eqref{eq:kernel-square} has no
+$1-y_i y_l$ denominator.  The closed constrained torus therefore
+undergoes a legal holomorphic homotopy.
+
+Write $w_i=\theta_i-i h_i$, so $\sum_iw_i=\sum_i\theta_i$.
+The full matrix $I-iDh$ preserves the tangent hyperplane and induces
+the identity on its one-dimensional quotient.  Its full determinant
+is consequently its constrained tangent determinant.  Directly,
+\[
+ Dh=\frac\tau N\operatorname{diag}(P m'_i-Qp'_i)
+       +\frac\tau N(m\otimes p'-p\otimes m').
+\]
+The diagonal and the two rank-one terms have operator norms at most
+$C\tau$, independently of $N$.  Hence the Jacobian has modulus at
+most $C^N$, and its inverse matrix is uniformly bounded after reducing
+$\tau$.  Differentiating the determinant, or its logarithmic derivative
+formula, shows that fixed jets add only a polynomial in $N$.
+\end{proof}
+
+Let $\eta$ be smooth, $0\le\eta\le1$, with $\eta(t)=0$ for
+$t\le1/4$ and $\eta(t)=1$ for $t\ge1/2$.  Partition the final
+deformed integral with the three weights
+\[
+ w_F=\eta(P)\eta(Q),\qquad
+ w_L=\tfrac12(1-\eta(P))(1+\eta(Q)),\qquad
+ w_U=\tfrac12(1-\eta(Q))(1+\eta(P)).
+\]
+Their sum is one.  Reflection $\theta\mapsto-\theta$ exchanges
+$P,Q$, takes $y_i$ to $y_i^{-1}$, preserves $z_i$, and changes
+$K$ to $-K$. For even $N$ its determinant and the normalized
+constrained integral are unchanged. Therefore
+\begin{equation}\label{eq:constrained-split}
+ C_N=F_N+2L_N,
+\end{equation}
+where $F_N$ and $L_N$ are the final integrals with weights $w_F$
+and $w_L$.  All weights are imposed after the full closed homotopy.
+The support of $L_N$ has $P\le1/2$; it excludes the upper inverse
+branch and consists of the lower semicircle together with two small
+upper endpoint slivers.
+
+\subsection{The sector containing both branch populations}
+
+\begin{lemma}\label{lem:constrained-selected}
+For every fixed $j\ge0$ and every even $N\ge4$,
+\[
+ |F_N^{(j)}(s_\varepsilon)|
+    \le C_j N^{3j+1}\left(\frac{C_j}{\sqrt N}\right)^N.
+\]
+In particular these derivatives have a uniformly bounded absolute sum.
+\end{lemma}
+\begin{proof}
+On this support $P,Q\ge1/4$.  Both bump supports stay a fixed
+distance from the endpoints $0,\pi$.  The imaginary-part formula,
+and the bounded range of $W$, imply
+\[
+ -\log|Z|\ge c\left(N\varepsilon+\frac{\tau PQ}{N}\right)
+             \ge \frac cN.
+\]
+Every true lower branch has outward displacement $\tau P/N$,
+and every true upper branch has inward displacement $\tau Q/N$.
+Their normal forms give a branch distance at least $c/N$ in
+the $W$ plane.  All other coordinates stay in fixed regular
+neighborhoods.  Consequently $|\partial_s\log z_i|\le C\sqrt N$
+on a disk $|s-s_\varepsilon|\le c/N^3$.  Reduce $c$ once: the
+variation of $\log Z$ is at most $CN^{3/2}c/N^3$, smaller than
+half its preceding gap.  The true branches remain on their interior
+sheets throughout this disk.
+
+We estimate the correlation determinant directly.
+Entries with both points near the same inverse branch are bounded:
+the common factor $\varphi_i+\varphi_l$ cancels, leaving
+$(\varphi_i-\varphi_l)$ times a bounded analytic coefficient.
+Away from an opposite-branch pair, compactness gives the same bound.
+Let $B$ be the number of coordinates in the two fixed true-branch
+neighborhoods.  If a pair is near opposite branches, its numerator
+is bounded and
+\[
+ |1-z_i z_l|\ge c\sqrt{(P+Q)/N},\qquad
+ |K_{il}|\le C\sqrt{N/(P+Q)}\le C\sqrt{N/B}.
+\]
+Indeed both regular branch coordinates remain in a common sector
+of width strictly less than $\pi$ (a small fixed enlargement of the
+fourth quadrant suffices), while their imaginary dispersion margins are
+at least $c\tau P/N$ and $c\tau Q/N$.  Each such coordinate
+contributes one to $P+Q$.  There are at most $B$ exceptional
+entries in any row; all remaining entries are bounded.  Every row
+therefore has Euclidean norm at most $C\sqrt N$.  Hadamard gives
+\[
+ |\det K|\le C^N N^{N/2}
+\]
+uniformly on the disk.
+
+The one-body factors have a common independent angular majorant
+\[
+ f(\theta)=C\left(1+
+  \operatorname{dist}(\theta,\{b,-b\})^{-1/2}\right).
+\]
+To verify this, use the imaginary part of the branch normal form
+when $|u|\le C(\varepsilon+|h|)$ and its linear real part outside
+that interval.  The small parameter disk is absorbed in the positive
+branch displacement.  Thus $f\in L^{4/3}(\mathbb T)\cap L^1(\mathbb T)$.
+With normalized circle measure, the constrained product integral is
+$f^{*N}(0)$.  Indeed, $g=f*f$ belongs to $L^2$ by Young's
+inequality, and $g*g$ is bounded and continuous by
+Cauchy--Schwarz and continuity of translations in $L^2$.
+Further convolution with $f\in L^1$ preserves these properties.
+Thus evaluation at zero is legitimate, and Young's inequalities give
+\[
+ f^{*N}(0)\le \|f\|_{4/3}^{4}\|f\|_1^{N-4}\le C^N,
+ \qquad N\ge4.
+\]
+The Jacobian costs $C^N$ by Lemma~\ref{lem:constrained-homotopy}.
+The remaining product kernel costs $CN$.  Division by
+$N!\ge(N/e)^N$ bounds the integral on the disk by
+$N(C/\sqrt N)^N$.  Cauchy's inequality proves the assertion.
+\end{proof}
+
+\section{A regular coordinate for the one-sided contour}\label{sec:global-coordinate}
+
+
+The support of $L_N$ can be lifted to one angular interval
+$(-\pi-\delta,\delta)$: the remaining upper plateau has zero
+weight because $p(\theta_i)=1$ would imply $P>1/2$.
+The possible half-angle sign changes are row and column gauge
+changes, so this lift preserves the determinant and its integral.
+We use $w_i=\theta_i-ih_i$ and the physical phase
+$\varphi_i=\arccos(S-\cos w_i)$ throughout.
+
+Let $N_c=2k+4$. Choose a fixed branch width, decreased further
+below if needed, so that
+\begin{equation}\label{eq:finite-mean-exclusion}
+ \delta_B<\frac14\min_{\substack{2\le n\le N_c\\n\ \mathrm{even}}}
+       \operatorname{dist}(-b,2\pi\mathbb Z/n).
+\end{equation}
+The minimum is positive by Lemma~\ref{lem:prime-root-family}.
+The right interval will be $[-b-\delta_B,\delta]$; its
+complement on the one-sided support has a compact left root.
+Only this one smooth division will be needed. The displacement
+strength is chosen after these fixed margins and cutoffs.
+
+Let
+\[
+ w_B(s)=-\arccos(S(s)-1),\qquad
+ q=\varphi+w-w_B(s).
+\]
+The branch of $w_B$ is fixed by $w_B(s_*)=-b$.
+
+\begin{lemma}[Regular inverse and right-side convexity]\label{lem:inverse}
+The one-sided limiting dispersion curve has a fixed complex
+neighborhood on which $q$ is a regular coordinate and $w=U(s,q)$ is
+analytic, with uniformly bounded fixed jets. The inverse can be chosen
+on a fixed convex neighborhood $\mathcal D_R$ of the right $q$-interval,
+enlarged to contain a sufficiently short negative branch segment, so
+that
+\[
+ U(s,0)=w_B(s),\qquad U_q(s,0)=0,\qquad
+ \Rea U_{qq}(s,q)\ge c>0 \quad(q\in\mathcal D_R).
+\]
+The right angular interval extends from $-b-\delta_B$ to a sufficiently
+small positive endpoint sliver. The smallness of $\delta_B$ and the
+deformation strength guarantees that its actual $q$-images lie in
+$\mathcal D_R$.
+\end{lemma}
+\begin{proof}
+On the limiting compact right arc let
+$g(\theta)=\arccos(S_*-\cos\theta)$. Choose the upper endpoint small
+enough that $1+g'(\theta)>c>0$. Since
+\[
+ g''(\theta)=-\frac{S_*(1-\cos\theta\cos g(\theta))}{\sin^3g(\theta)}<0,
+\]
+the coordinate $q=g(\theta)+\theta+b$ is strictly increasing. Near the
+branch, use $\varphi$ itself: the lower inverse angular function is
+even analytic and $w-w_B=O(\varphi^2)$, so
+$q=\varphi+O(\varphi^2)$ is a regular analytic coordinate.
+
+There is also an explicit right inverse. Put $v=q+w_B(s)$; then
+$v=w+\varphi$ and
+\begin{equation}\label{eq:q-1}
+U(s,q)=\frac v2-
+ \arccos\left(\frac{S(s)}{2\cos(v/2)}\right).
+\end{equation}
+The branch is fixed by $w<\varphi$ on the limiting right arc. Its real
+$v$-interval is contained strictly in $(-2\alpha,2\alpha)$, after the
+upper sliver is shortened. With $x=v/2$ and
+$D=4\cos^2x-S_*^2>0$, differentiation gives
+\begin{equation}\label{eq:q-2}
+U_{qq}(s_*,q)=\frac{S_*}{4\cos^2x\sqrt D}
+                  +\frac{S_*\sin^2x}{D^{3/2}}>0.
+\end{equation}
+The endpoint at the lower branch is regular and has value
+$1/\sin b$. Compactness supplies a positive lower bound on the whole
+closed real $q$-interval. A sufficiently thin fixed convex rectangle
+about that interval retains $\Rea U_{qq}\ge c$, also for $s$ in a
+small complex neighborhood of $s_*$. At $q=0$, \eqref{eq:q-1}, or the dispersion
+identity, gives $U=w_B$ and $U_q=0$ identically in $s$.
+
+For the remaining compact left arc the limiting phase is
+$\varphi=-\ii\gamma$, $\gamma>0$. There $q$ has real part
+$\theta+b$, so its image is injective, and
+$\dd q/\dd w=1+g'(w)$ cannot vanish: $g'$ is purely imaginary.
+The two endpoint slivers remain regular after a small extension. The
+left image has negative real part, the right image positive real part,
+and they meet only in the regular branch chart. A finite cover by
+analytic inverse neighborhoods therefore gives one inverse along this
+embedded compact arc. Shrinking the neighborhoods, then fixing the
+small deformation and parameter neighborhood, gives the asserted
+bounded jets. The right inverse is the specific branch of \eqref{eq:q-1}.
+\end{proof}
+
+Set
+\[
+ \phi(s,q)=q-U(s,q)+w_B(s),\qquad
+ a(s,q)=\frac{U_q(s,q)}{\sinh(\ii\phi(s,q))}.
+\]
+The coefficient $a$ is analytic and bounded at $q=0$: both its numerator
+and denominator have a simple zero there, and
+$U_q=q/\sin b+O(q^2)$ at $s=s_*$. It and its fixed jets are bounded
+on the complete one-sided inverse neighborhoods.
+
+The complete kernel is analytic in these regular coordinates. Near
+the double branch the even inverse in $\varphi$ cancels the factor
+$\varphi_i+\varphi_j$ in its denominator. Elsewhere that denominator
+is separated, since the only limiting pair-product zero on the
+one-sided support is the double lower branch. In particular on
+$\mathcal D_R^2$,
+\begin{equation}\label{eq:q-3}
+|K(q_i,q_j)|\le C|q_i-q_j|,
+\end{equation}
+and fixed jets are bounded. The diagonal zero holds in the single inverse coordinate $q$ on
+this domain, including its angular endpoint.
+
+\subsection{Square-root geometry on the physical contour}
+\begin{lemma}[Branch normal form]\label{lem:constrained-branch-geometry}
+Put $u=\theta+b$ and $a_B=\sin b>0$.  On the original unit
+contour, and on a true lower branch displaced outward by a common
+$t_0\ge0$, set $E_0=\varepsilon+t_0$.  Uniformly for the fixed
+small branch arc and $0\le t_0\le\tau$, one has
+\[
+ \begin{aligned}
+ D&=1-W=a_Bu-i\beta+R,\qquad cE_0\le\beta\le CE_0,\\
+ R&\in\mathbb R,\quad |R|\le C(u^2+E_0^2),\qquad
+ D_u=a_B+O(|u|+E_0).
+ \end{aligned}
+\]
+Here $\beta$ may depend smoothly on $u$, with
+$|\beta_u|\le CE_0$.  On the physical fourth-quadrant branch,
+\begin{equation}\label{eq:constrained-branch-bounds}
+ \varphi=\sqrt{2D}\,h(D),\qquad h(0)=1,
+ \qquad |\varphi'|\asymp(|u|+E_0)^{-1/2},
+\end{equation}
+where $h$ is analytic.  Moreover
+\[
+ -\Im\varphi\ge c\sqrt{|u|+E_0}\quad(u\le0),\qquad
+ \Re\varphi'\ge\tfrac23|\varphi'|\quad(u\ge0),\qquad
+ \int_{|u|\le\delta_B}|\varphi'(u)|\,du\le C.
+\]
+For coordinates with the same outward shift, a minimum nonnegative
+coordinate $u_j$ satisfies $|\varphi'_i|\le C|\varphi'_j|$
+for every other nonnegative coordinate.
+
+\end{lemma}
+\begin{proof}
+Use $y=e^{t_0+i(-b+u)}$ and the exact real and imaginary parts of
+$W=S-\cosh(t_0+i(-b+u))$.  The imaginary part is
+\[
+ \beta=\Im S+\sinh(t_0)\sin(b-u),
+\]
+and $\Im S=2\sin(\arg s_*)\varepsilon+O(\varepsilon^2)$.
+The real part has the asserted expansion because
+$1-S_*+\cos b=0$, $\Re S-S_*=O(\varepsilon^2)$, and
+$\cosh t_0-1=O(t_0^2)$.  The analytic factorization of
+$\arccos(1-D)$ gives \eqref{eq:constrained-branch-bounds}.
+The relative error with respect to $a_Bu-i\beta$ is uniformly
+small after the branch width and $\tau$ are fixed small.  Its
+square root lies in a small fixed enlargement of the fourth quadrant.
+For $u\le0$
+its imaginary part has size at least a fixed multiple of its modulus;
+for $u\ge0$ the derivative lies in a cone whose angle is at most
+$\pi/4+o(1)$ from the positive real axis.  This proves the stated
+attenuation and $2/3$ cone bounds.  The integrable majorant and the
+minimum-coordinate comparison follow immediately from the two-sided
+derivative estimate.
+
+\end{proof}
+
+\subsection{Coordinate size and angular diameter}
+
+\begin{lemma}\label{lem:coordinate-scale}
+On the actual right contour put
+$u_i=\theta_i+b$, $t=N^{-1}\sum_i u_i$ and
+$d=\max_i\theta_i-\min_i\theta_i>0$.
+For any $r$ with $r\le d\le2r$, set $T=|t|+r+\varepsilon$.
+Then
+\begin{equation}\label{eq:q-21}
+ |1+\varphi_w(w_i)|\le C(|u_i|+\varepsilon)^{-1/2},
+\end{equation}
+\begin{equation}\label{eq:q-22}
+ \int_{t-2r}^{t+2r}(|u|+\varepsilon)^{-1/2}\dd u
+       \le\frac{Cr}{\sqrt T},
+\end{equation}
+and
+\begin{equation}\label{eq:q-23}
+ |q_i|\le C\sqrt T,\qquad
+ |q_i-q_l|+|K_{il}|\le Cr/\sqrt T.
+\end{equation}
+These are pointwise estimates. No extrema, diameter, or mean scale
+is differentiated, and no partition of the integral is made here.
+\end{lemma}
+\begin{proof}
+Near the lower branch, $p=0$, $m=1$, so the outward displacement
+is the same $\tau P/N$ at every such coordinate. The branch normal
+form gives \eqref{eq:q-21}; away from that branch compactness gives
+the same bound, with a larger constant. It also holds along a
+one-variable angular curve with the actual occupancies held fixed.
+The curve derivative has the additional bounded factor
+$1-\ii\tau[(P/N)m'-(Q/N)p']=1+O(\tau)$.
+
+If $|t|\ge4r$, the denominator in \eqref{eq:q-22} is comparable
+to $\sqrt{|t|+r+\varepsilon}$. Otherwise enlarge the interval to
+$[-6r,6r]$ and use
+\[
+ \sqrt{6r+\varepsilon}-\sqrt\varepsilon
+ =\frac{6r}{\sqrt{6r+\varepsilon}+\sqrt\varepsilon}.
+\]
+This proves the interval estimate even when the interval crosses
+the branch. Joining two actual angles along their fixed-occupancy
+curve gives exactly the actual $q$ endpoints. Integrating its
+derivative, and then using \eqref{eq:q-3}, proves the second
+inequality in \eqref{eq:q-23}.
+
+To prove the absolute coordinate bound, first suppose $P=0$.
+Nonnegativity of $p$ makes every $p(\theta_i)=0$, hence every
+$h_i=0$. The branch normal form and compactness give
+$|\varphi_i|\le C\sqrt{|u_i|+\varepsilon}$.
+Since $q_i=\varphi_i+u_i-b-w_B(s)$ and
+$w_B(s)+b=O(\varepsilon)$, this implies
+$|q_i|\le C\sqrt{|u_i|+\varepsilon}\le C\sqrt T$.
+If $P>0$, some actual right angle lies in the positive support
+of $p$. Therefore $\max u_i\ge b$ and $|t|+2r\ge b$, so
+$T\ge b/2$. Boundedness of the fixed regular domain gives the
+same conclusion. All estimates allow arbitrary actual occupancy
+means $P/N,Q/N$ in $[0,1]$ on the right rectangle.
+\end{proof}
+
+\section{Tangential differentiation of the complete one-sided integral}\label{sec:constrained-transport}\label{sec:global-transport}\subsection{The scalar density and its full Jacobian}
+
+Let $M=D_\theta w=I-\ii Dh$. Its inverse is uniformly bounded for
+small $\tau$, $\det M$ has bound $C^N$, and fixed jets add polynomial
+factors in $N$. Also $\boldsymbol1^TM=\boldsymbol1^T$, hence
+$\boldsymbol1^TM^{-1}=\boldsymbol1^T$. For
+$\chi_s(\theta)=(q_i)$,
+\begin{equation}\label{eq:q-4}
+D_\theta\chi_s=\operatorname{diag}(1/U_{q,i})M,
+ \quad J=\det D_\theta\chi_s
+       =\det M\prod_i(1/U_{q,i}).
+\end{equation}
+This identity is used at $\varepsilon>0$, where all factors are
+nonzero. The apparent branch poles will be retained as integrable
+Jacobian factors, never differentiated as unregularized amplitudes.
+
+The complete deformed scalar density is $J f(s,q)$, where
+\begin{equation}\label{eq:q-5}
+f(s,q)=\frac1{N!(2\pi)^{N-1}}
+ \frac{1+Z}{1-Z}\det K\prod_i a(s,q_i).
+\end{equation}
+Formula \eqref{eq:q-5} includes the unchanged factor $2\pi$ converting the
+ambient normalized density to constrained Haar normalization. The
+entire occupancy Jacobian has cancelled from the regular amplitude.
+
+For a residual field $B$ in $q$ coordinates define
+\begin{equation}\label{eq:q-6}
+V=-M^{-1}(\dot U+U_q B),
+\end{equation}
+where a dot denotes the fixed-$q$ derivative $\partial_s$ and products
+inside the vector are componentwise. Differentiating
+$U(s,\chi_s(\theta))=w(\theta)$ shows that \eqref{eq:q-6} is exactly
+$(D_\theta\chi_s)^{-1}(\partial_s\chi_s-B)$.
+If
+\begin{equation}\label{eq:q-7}
+\sum_i U_{q,i}B_i=-\sum_i\dot U_i,
+\end{equation}
+then $\sum_iV_i=0$ on an ambient neighborhood. If in addition
+\begin{equation}\label{eq:q-8}
+\sum_iB_i=-Nw_B'(s),
+\end{equation}
+then $(\partial_s-V\cdot\nabla_\theta)\sum_i\varphi_i=0$.
+Indeed $\sum\varphi_i=\sum q_i-\sum w_i+Nw_B(s)$, and
+$\sum w_i=\sum\theta_i$ is frozen by tangency.
+
+For every fixed smooth real angular weight $\omega$ the exact identity
+is
+\begin{equation}\label{eq:q-9}
+\partial_s(\omega Jf)-\operatorname{div}_\theta(V\omega Jf)
+ =\omega J[\partial_sf+\operatorname{div}_q(Bf)]
+    -(V\cdot\nabla_\theta\omega)Jf.
+\end{equation}
+To verify the identity, put $A_\chi=D_\theta\chi_s$.
+Commuting mixed derivatives of $\chi_s$ gives
+\[
+ (\operatorname{div}_qB)\circ\chi_s
+ =\operatorname{tr}\!\left[A_\chi^{-1}
+   \left(\partial_sA_\chi-\sum_iV_i\partial_iA_\chi\right)\right]
+     -\operatorname{div}_\theta V.
+\]
+Jacobi's formula therefore gives
+$J(\operatorname{div}_qB)\circ\chi_s
+=\partial_sJ-\operatorname{div}_\theta(JV)$.
+The product and chain rules prove \eqref{eq:q-9}. Because $\sum V_i=0$ identically, the intrinsic divergence on
+$\sum\theta_i=c$, parametrized by the first $N-1$ angles, is
+\[
+ \sum_{i<N}(\partial_i-\partial_N)V_i=\sum_i\partial_iV_i.
+\]
+The same formula holds for $V$ multiplied by any scalar density.
+Thus ambient divergence restricts to constrained divergence without
+an additional measure factor. Integration by parts applies to the
+real and imaginary parts of these complex fields.
+The identity is for scalar coefficients; it does not assert a new
+intrinsic complex measure on $\mathbb H_N$. Smooth real bumps are
+never analytically continued. Formal $q$ differentiation is the
+commuting complex frame $(D_\theta\chi_s)^{-1}\nabla_\theta$; its
+coefficients and their derivatives are controlled below.
+
+More explicitly, if $A_\chi=D_\theta\chi_s$, set
+\[
+ E_a=\sum_i(A_\chi^{-1})_{ia}\partial_{\theta_i},\qquad
+ E_s=\partial_s-
+       \sum_i(A_\chi^{-1}\partial_s\chi_s)_i\partial_{\theta_i}.
+\]
+Then $E_a\chi_b=\delta_{ab}$ and $E_s\chi_b=0$. Every commutator
+$[E_a,E_b]$ or $[E_s,E_a]$ is a linear combination of the real
+angular derivatives and annihilates all $\chi_b$. Invertibility of
+$A_\chi$ therefore makes every commutator zero. This is a pointwise
+differential-operator calculation on the original real domain, and
+requires no complex extension of its smooth occupancy functions.
+
+\subsection{A bounded transport when a left root is present}\label{sec:left-gap}
+
+Choose a single smooth right cutoff $r(\theta)$, equal to one for
+$\theta+b\ge-\delta_B/2$ and zero for
+$\theta+b\le-\delta_B$, with its harmless periodic return inside the
+excluded upper plateau. Decompose the complete one-sided integral by
+\[
+ 1=\prod_i r(\theta_i)+\left(1-\prod_i r(\theta_i)\right).
+\]
+Telescope the second term. Each of its at most $N$ terms has one fixed
+named anchor $a$ in a compact left region, including on every cutoff
+jet. That anchor has $|z_a|\le q_0<1$, and $|U_{q,a}|\ge c>0$.
+
+On such a term take
+\begin{equation}\label{eq:q-10}
+B_a=-\frac{\sum_i\dot U_i}{U_{q,a}},\qquad B_i=0\ (i\ne a).
+\end{equation}
+Equation \eqref{eq:q-7} holds; equation \eqref{eq:q-8} is unnecessary because
+$|1-Z|\ge1-q_0$. All fixed regular-coordinate and parameter jets of
+$B$, $V$ and the regular amplitude have polynomial $N$ bounds, apart
+from fixed one-body products costing $C_j^N$. In particular the
+derivatives of $Z=\exp(-\ii\sum\phi_i)$ are bounded by a polynomial
+in $N$, since $|Z|\le1$ at the actual contour and fixed jets of each
+$\phi_i$ are bounded.
+
+Hadamard applied to the complementary minors after fixed derivatives
+therefore bounds the transported density by
+\begin{equation}\label{eq:q-11}
+C_j^N N^{-N/2+C_j}\prod_i |1+\varphi_w(w_i)|.
+\end{equation}
+The named compact factor is bounded. Eliminate its angle using the
+constraint; every remaining factor has the independent majorant
+$C(1+\operatorname{dist}(\theta,-b)^{-1/2})$. Integrating the product
+costs $C^N$. This proves a uniform summable bound for every fixed
+derivative of the whole left-root part, including all its mixed
+branch configurations.
+
+\subsection{One collective field on the entire right part}\label{sec:right-field}
+
+For this part all inverse coordinates lie in $\mathcal D_R$. Put
+\[
+ c_0=-w_B'(s),\quad
+ A=-\sum_i\dot U_i-c_0\sum_iU_{q,i},\quad
+ R=\sum_{i<j}(U_i-U_j)^2,
+\]
+and, off full equality,
+\begin{equation}\label{eq:q-12}
+B_i=c_0+\frac A R\sum_{j\ne i}
+              \frac{(U_i-U_j)^2}{U_{q,i}-U_{q,j}}.
+\end{equation}
+Each summand extends analytically through its pair diagonal. Indeed
+\[
+ E(s;q,r)=\frac{U_q(s,q)-U_q(s,r)}{q-r}
+         =\int_0^1U_{qq}(s,r+t(q-r))\,\dd t
+\]
+has $\Rea E\ge c$; hence, writing
+$H=(U(s,q)-U(s,r))/(q-r)$, the summand is
+$(q-r)H^2/E$. Pairing its antisymmetric terms gives
+\begin{equation}\label{eq:q-13}
+\sum_iB_i=Nc_0=-Nw_B',\qquad
+ \sum_iU_{q,i}B_i=c_0\sum_iU_{q,i}+A=-\sum_i\dot U_i.
+\end{equation}
+Thus one field freezes both required quantities on the entire right
+part, including every mixture of branch and compact coordinates.
+
+\begin{lemma}[Uniform fixed-coordinate jets]\label{lem:jets}
+Let $d=\max\theta_i-\min\theta_i$. On the actual right contour and
+for any fixed total jet order,
+\begin{equation}\label{eq:q-14}
+|\partial_s^a\partial_q^\beta B_i|
+  +|\partial_s^a\partial_q^\beta V_i|
+ \le C_j N^{C_j}d^{-1-|\beta|}.
+\end{equation}
+There is no additional inverse power of $\varepsilon$.
+\end{lemma}
+\begin{proof}
+First, at actual contour points,
+$U_i-U_j=w_i-w_j=(\theta_i-\theta_j)-\ii(h_i-h_j)$.
+The same occupancies occur in both $h_i,h_j$, so
+\begin{equation}\label{eq:q-15}
+|h_i-h_j|\le C\tau|\theta_i-\theta_j|,
+ \quad \Rea R\ge(1-C^2\tau^2)\sum_{i<j}(\theta_i-\theta_j)^2.
+\end{equation}
+Consequently $|R|\ge c d^2$ and
+$\sum_{i<j}|U_i-U_j|^2\le C|R|$.
+
+Only a global diameter zero is needed for parameter derivatives.
+The identities $U(s,0)=w_B(s)$ and $U_q(s,0)=0$ give, on the
+fixed convex domain,
+\begin{equation}\label{eq:q-16}
+ |\partial_s^a U_q(s,q)|\le C_a|q|.
+\end{equation}
+Apply Lemma~\ref{lem:coordinate-scale} with $r=d$ and write
+$T_d=|t|+d+\varepsilon$. Every point of the straight segment
+joining $q_i$ and $q_j$ has modulus at most $C\sqrt{T_d}$.
+Integration of \eqref{eq:q-16} along this segment gives
+\begin{equation}\label{eq:q-17}
+ |\partial_s^a(U_i-U_j)|
+ \le C_a\sqrt{T_d}\,|q_i-q_j|\le C_a d.
+\end{equation}
+Consequently $|\partial_s^aR|\le C_aN^2d^2$.
+Its first fixed-$q$ derivatives are $O(C_jN^{C_j}d)$, since
+each differentiated product retains a pair difference.
+Higher fixed coordinate derivatives are bounded by $C_jN^{C_j}$.
+These assertions include arbitrary fixed additional parameter
+derivatives, by \eqref{eq:q-17} and bounded analytic jets.
+Together with $|R|\ge cd^2$, the quotient rule yields
+\[
+ |\partial_s^a\partial_q^\beta R^{-1}|
+       \le C_jN^{C_j}d^{-2-|\beta|}.
+\]
+For $d\le1$, this follows by assigning a factor
+$d^{2-|\beta|}$ to each jet of $R$; fixed parameter derivatives
+cost no power. For $d\ge1$, the denominator is uniformly
+separated and the fixed maximum diameter is absorbed in the constant.
+
+Every fixed parameter jet of $H$ has size $O(\sqrt{T_d})$ by
+\eqref{eq:q-16}, whereas all fixed jets of $E^{-1}$ are bounded.
+Thus the pair numerator $F(q_i,q_j)=(q_i-q_j)H^2/E$ satisfies
+\[
+ |\partial_s^aF(q_i,q_j)|
+ \le C_a|q_i-q_j|T_d\le C_a d\sqrt{T_d}\le C_a d.
+\]
+Every positive coordinate-order jet is bounded, including
+additional fixed parameter derivatives, because $F$ is analytic
+on the fixed product domain. It follows that
+\[
+ |\partial_s^a\partial_q^\beta\sum_{l\ne i}F(q_i,q_l)|
+       \le C_jN^{C_j}d^{1-|\beta|}.
+\]
+All jets of $A$ are polynomially bounded in $N$.
+Formula \eqref{eq:q-12} now proves the stated bound for $B$.
+
+For the angular representative, the exact frame coefficients are
+\[
+ E_a\theta_i=(M^{-1})_{ia}U_{q,a},\qquad
+ E_s\theta_i=(M^{-1}\dot U)_i.
+\]
+Their fixed jets are bounded by induction: differentiate
+$M^{-1}$ by $D(M^{-1})=-M^{-1}(DM)M^{-1}$, and use the bounded
+real angular derivatives of $M$ and the bounded analytic jets
+of $U_q,\dot U$. Each fixed number of index sums costs only a
+polynomial in $N$. The same induction applies to every original
+smooth real cutoff and its fixed angular derivatives.
+No inverse factor $U_q^{-1}$ is introduced. Applying the product
+rule to \eqref{eq:q-6} therefore proves the same bound for $V$,
+and justifies iterating \eqref{eq:q-9} with those real cutoffs.
+\end{proof}
+
+At fixed $\varepsilon,N$, the complete product identity gives
+collision degree $N(N-1)$ in the original angular differences.
+The field has one inverse diameter and each transport loses at most
+two degrees. Thus the full-equality puncture flux vanishes through
+order $j\le k$ whenever
+\begin{equation}\label{eq:q-18}
+N^2-2j-3>0,\qquad N\ge N_*+2,\quad k=N_*^2/2-1.
+\end{equation}
+No partial-diagonal flux occurs, since all pair quotients in \eqref{eq:q-12}
+are regular. Perform the transports on the whole smooth right term
+before selecting extrema or diameter shells.
+
+For clarity, a derivative of a determinant marks one matrix entry;
+its complementary minor retains Hadamard's bound. A fixed number
+of derivatives has only polynomially many index choices. Each
+field coefficient costs one inverse diameter, its coordinate
+derivative costs one more, and its parameter derivative costs none.
+The product rule and divergence therefore give, by induction,
+the following filtration:
+a descendant after $j$ transports contains $\ell$ marked entries and
+a scalar loss $d^{-h}$ with
+\begin{equation}\label{eq:q-19}
+h+\ell\le2j.
+\end{equation}
+All regular entry, one-body and scalar jets are bounded with
+polynomial $N$ costs. If the unchanged entries are at most $a$,
+Hadamard and $N!\ge(N/e)^N$ leave
+\begin{equation}\label{eq:q-20}
+C_j^N N^{-N/2+C_j}d^{-h}a^{N-\ell}
+ \frac{\prod_i|1+\varphi_w(w_i)|}{|1-Z|}.
+\end{equation}
+
+\section{One coarea estimate for the complete right integral}\label{sec:global-integration}
+\subsection{A projected periodic kernel}
+\begin{lemma}[Oblique periodic kernel]\label{lem:oblique-kernel}
+Fix $|\vartheta|<\pi/2$ and put $P_\vartheta=2\pi\cos\vartheta$.
+If $G=x-ia$, $a\ge a_0$, and $0<a_0\le1$, then, with
+$v=\Re(e^{-i\vartheta}G)$,
+\[
+ \frac1{|1-e^{-iG}|}
+ \le \frac{C_\vartheta}
+ {a_0+\operatorname{dist}(v,P_\vartheta\mathbb Z)}.
+\]
+Consequently, on any injective $v$-parametrized arc whose
+$v$-image has length $L$, the integral of this majorant in $v$
+is at most $C_\vartheta(1+L)(1+|\log a_0|)$.
+\end{lemma}
+\begin{proof}
+For $0<a\le1$, use
+\[
+ |1-e^{-a-ix}|^2=(1-e^{-a})^2+2e^{-a}(1-\cos x)
+ \ge c\{a^2+\operatorname{dist}(x,2\pi\mathbb Z)^2\}.
+\]
+It follows that
+$|1-e^{-iG}|\ge c\{a+\operatorname{dist}(x,2\pi\mathbb Z)\}$.
+For an integer $n$ minimizing the latter distance,
+\[
+ |v-2\pi n\cos\vartheta|
+ \le\cos\vartheta\,|x-2\pi n|+|\sin\vartheta|a.
+\]
+Thus $a_0+\operatorname{dist}(v,P_\vartheta\mathbb Z)$ is
+bounded by a constant times the preceding lower bound.
+For $a\ge1$, $|1-e^{-iG}|\ge1-e^{-1}$ and the proposed
+denominator is bounded above by $1+P_\vartheta/2$.
+Integration over translates of one period proves the final claim.
+\end{proof}
+
+
+For the actual contours the attenuation floor is
+$-\log|Z|\ge cN\varepsilon$. Indeed $\Im W_i\ge c\varepsilon$,
+and $W_i=\cos\varphi_i$ remains in a bounded set. Writing
+$\varphi_i=x_i-ia_i$ gives
+$\Im W_i=\sin x_i\sinh a_i\le C a_i$, hence
+$a_i\ge c\varepsilon$. Thus Lemma~\ref{lem:oblique-kernel}
+costs at most $C(1+L)(1+|\log\varepsilon|)$ on an injective
+projected phase interval of length $L$.
+
+\subsection{Oblique extreme coarea with the full occupancy dependence}
+
+Let $I=[-b-\delta_B,\delta_R]$, where $\delta_R=\delta<b/2$,
+and choose the negative segment inside the lower branch plateau.
+The upper inverse branch is outside $I$.  Use the original balanced
+contour with reflected disjoint bumps and put
+\[
+ \sigma=P/N,\quad\upsilon=Q/N,\quad
+ f(u;\sigma,\upsilon)
+ =-b+u-i\tau\{\sigma m(-b+u)-\upsilon p(-b+u)\}.
+\]
+Here $u\in[-\delta_B,b+\delta_R]$ and the original one-sided
+occupancies satisfy $P\le1/2$, $0\le Q\le N$.
+The auxiliary analytic estimates in terms of $E=\varepsilon+\tau\sigma$
+hold on the fixed box $0\le\sigma,\upsilon\le1$.
+The final bound in Lemma~\ref{lem:global-coarea} concerns actual
+occupancies computed from the angles, including on the enlarged
+rectangle used below.
+Let $\varphi_s(w)=\arccos(S(s)-\cos w)$ on the physical sheet,
+$b_s(w)=\partial_w\varphi_s(w)$. Use the regular coordinate
+defined above.
+The regularized phase coordinate is
+$q_s(w)=\varphi_s(w)+w-w_B(s)$.
+Its analytic inverse and the scalar transport were proved in
+Sections~\ref{sec:global-coordinate}--\ref{sec:global-transport}.
+
+\begin{lemma}[Occupancy-dependent extreme derivative]\label{lem:global-coarea}
+Write
+$G(\theta)=\sum_i\varphi_s(w_i(\theta))$ and
+$\vartheta=3\pi/8$.  On an actual extreme-index cell with
+$0\le m=\min_i u_i<M=\max_i u_i$, all other $u_i$ fixed,
+and $m+M$ fixed by the constraint, one has
+\begin{equation}\label{eq:g-G1}
+\Re\left(e^{-i\vartheta}\frac{dG}{dm}\right)>0,
+ \qquad
+ \frac{|(b_s(w_m)+1)(b_s(w_M)+1)|}
+ {\Re(e^{-i\vartheta}dG/dm)}
+ \le C\frac{\sqrt{M+\varepsilon}}{M-m}.
+\end{equation}
+The constants are independent of $N$, $\varepsilon$, and the
+actual occupancies.  A sufficiently small fixed $\tau$ is chosen
+after the bump derivatives and fixed angular margins.
+\end{lemma}
+\begin{proof}
+Temporarily hold the actual values of $\sigma,\upsilon$ fixed
+and set $E=\varepsilon+\tau\sigma$.
+On the plateau $f=-b+u-i\tau\sigma$; the square-root normal form gives
+\begin{equation}\label{eq:g-G2}
+|b_s(f(u))|\le C(u+E)^{-1/2},\qquad
+ |\varphi_s''(f(u))|\asymp(u+E)^{-3/2},\qquad u\ge0.
+\end{equation}
+These estimates extend to the remainder of the fixed right
+interval by compactness: it stays a fixed distance from both
+dispersion branches, while $u$ is bounded above and below there.
+The exact identity
+\[
+ -\varphi_s''(w)
+ =\frac{S(s)(1-S(s)\cos w+\cos^2w)}{\sin^3\varphi_s(w)}
+\]
+also gives
+\begin{equation}\label{eq:g-G3}
+\Re\{e^{-i\vartheta}[-\varphi_s''(f(u))]\}
+ \ge c|\varphi_s''(f(u))|.
+\end{equation}
+Indeed on the true branch the normal form puts
+$\arg(\sin\varphi)$ in an arbitrarily small enlargement of
+$[-\pi/4,0]$.  The real branch-center displacement is
+$O(\varepsilon^2+(\tau\sigma)^2)$ and the imaginary margin is
+comparable to $E$, so this statement includes $u=0$.
+On the compact remainder $\sin\varphi$ is close to a positive
+real number.  The numerator is uniformly close to a positive
+real number since
+$1-S_*c+c^2\ge1-S_*^2/4>0$ for real $c$.
+Thus \eqref{eq:g-G3} holds after fixing small $\tau,\varepsilon_0$.
+
+Put $a(u)=\partial_u f(u)$ and $B(u)=b_s(f(u))a(u)$ at these
+fixed occupancies.  Since $a=1+O(\tau)$,
+$a'=O(\tau)$, and $|b_s(f)|\le C|\varphi_s''(f)|$ by \eqref{eq:g-G2},
+\[
+ -B'=-\varphi_s''(f)a^2-b_s(f)a'
+\]
+retains \eqref{eq:g-G3}.  Therefore, with $d=M-m$,
+\begin{equation}\label{eq:g-G4}
+\begin{aligned}
+ &\Re\{e^{-i\vartheta}[B(m)-B(M)]\}\ge cL,\\
+ &L=\int_m^M(u+E)^{-3/2}du
+ =\frac{2d}{\sqrt{m+E}\sqrt{M+E}
+ (\sqrt{m+E}+\sqrt{M+E})}.
+\end{aligned}
+\end{equation}
+
+We now restore the entire occupancy dependence rather than
+moving the occupancies along that auxiliary comparison curve.
+Set
+\[
+ B_m^{\rm occ}=\sum_v m(\theta_v)b_s(w_v),\qquad
+ B_p^{\rm occ}=\sum_v p(\theta_v)b_s(w_v).
+\]
+Direct differentiation of the original balanced contour gives
+the exact formula
+\begin{equation}\label{eq:g-G5}
+\partial_{\theta_i}G
+ =b_s(w_i)a(u_i)
+ -\frac{i\tau p'(\theta_i)}N B_m^{\rm occ}
+ +\frac{i\tau m'(\theta_i)}N B_p^{\rm occ}.
+\end{equation}
+The constraint slice differentiates in the direction
+$\partial_{\theta_{\min}}-\partial_{\theta_{\max}}$.
+Every actual $u_v\ge m$, and the true branches have the same
+outward displacement $\tau\sigma$.  Hence \eqref{eq:g-G2} implies
+\[
+ \frac{|B_m^{\rm occ}|+|B_p^{\rm occ}|}{N}
+ \le C(m+E)^{-1/2}.
+\]
+Both bump-derivative differences in \eqref{eq:g-G5} are bounded by $Cd$.
+The total occupancy correction to $B(m)-B(M)$ is thus at most
+$C\tau d(m+E)^{-1/2}$.
+Since $M+E$ lies in a fixed bounded interval, the exact
+expression in \eqref{eq:g-G4} gives
+$d(m+E)^{-1/2}\le CL$.  Choosing $\tau$ small absorbs the
+correction into half the positive projection in \eqref{eq:g-G4}.
+This comparison uses the actual extreme configuration only;
+it does not presume a Hessian bound along a transposition path
+on which unchanged indices might become more extreme.
+
+The numerator in \eqref{eq:g-G1} is at most
+$C[(m+E)(M+E)]^{-1/2}$, with the constant enlarged on the bounded interval.
+Combining with \eqref{eq:g-G4} bounds the ratio by $C\sqrt{M+E}/d$.
+If $P=0$, then $E=\varepsilon$.  If $P>0$, an actual angle
+belongs to the positive support of $p$, so $M\ge b$.
+Therefore $E\le C(M+\varepsilon)$ in either event, proving
+\eqref{eq:g-G1}.
+\end{proof}
+
+
+
+\paragraph{The geometric integration domain.}\label{par:right-rectangle}
+After all differentiation, bound the smooth weight and its
+transported coefficients by their proved envelopes and enlarge
+the nonnegative integral to the full right angular rectangle
+$I^N\cap\mathbb H_N$. All actual occupancies there still satisfy
+$0\le\sigma,\upsilon\le1$, so the preceding lemma applies.
+The balanced displacement has the same sign on each semicircle,
+and hence $\Im(S-\cos w_i)\ge\Im S$: the physical sheet and
+attenuation floor are preserved on this enlarged domain.
+The regular inverse also remains valid there. On the compact
+right arc its $q$-image changes by $O(\varepsilon+\tau)$;
+near the branch, uniform square-root continuity bounds the
+change by $O(\sqrt{\varepsilon+\tau})$. Choose $\delta_B$,
+$\tau$ and $\varepsilon_0$ after the fixed margin of
+$\mathcal D_R$ so that all these images lie inside it.
+
+For fixed other coordinates and a fixed constrained sum,
+the conditions specifying the extreme indices, a diameter
+shell, and a nonnegative minimum are linear interval conditions
+in the remaining variable $m$, with $M=A-m$.
+Their intersection is therefore one interval. The negative
+part is bounded directly below. No assertion about the number
+of components of a smooth-cutoff fiber is required.
+
+\subsection{A fixed mean scale for every diameter}
+
+
+Write $u_i=\theta_i+b$, $t=N^{-1}\sum_i u_i$, and choose actual
+minimum $m$ and maximum $M$ only in the final absolute integral.
+The angular constraint fixes $t=b+2\pi l/N$; at most $CN$ such means
+meet the right interval. The independent coordinate measure after
+eliminating any one angle is unchanged.
+
+On a shell $r\le d\le2r$ use the scale
+$T=|t|+r+\varepsilon$ from Lemma~\ref{lem:coordinate-scale}.
+Every coordinate belongs to $[t-2r,t+2r]$.
+
+For a nonnegative minimum, Lemma~\ref{lem:global-coarea}
+gives the monotone projected phase and
+\begin{equation}\label{eq:q-24}
+ \frac{|1+\varphi_w(w_m)|\,|1+\varphi_w(w_M)|}
+ {|dv/dm|}\le C\frac{\sqrt{M+\varepsilon}}{M-m}.
+\end{equation}
+Its phase range is at most $CN$, since each phase is bounded.
+Lemma~\ref{lem:oblique-kernel} therefore costs $CN(H+1)$.
+Here and below $H=|\log\varepsilon|$.
+
+For a nonnegative minimum, \eqref{eq:q-24} therefore bounds the integral in
+the remaining extreme coordinate by
+\begin{equation}\label{eq:q-25}
+\int \frac{|1+\varphi_w(w_m)|\,|1+\varphi_w(w_M)|}{|1-Z|}\dd m
+       \le CN\frac{\sqrt T}{r}(H+1).
+\end{equation}
+For a negative minimum, $m$ lies in the fixed true-branch segment,
+where its attenuation gives
+\[
+ \frac{|1+\varphi_w(w_m)|\,|1+\varphi_w(w_M)|}{|1-Z|}
+ \le \frac{C}{(|m|+\varepsilon)\sqrt{|M|+\varepsilon}}.
+\]
+Set $a=|m|+\varepsilon$, $b_1=|M|+\varepsilon$. Since
+$a+b_1\ge M-m\ge r$, the elementary inequality
+\begin{equation}\label{eq:q-26}
+\frac1{a\sqrt{b_1}}
+ \le \frac1{\sqrt r}\left(\frac1a+\frac1{b_1}\right)
+\end{equation}
+follows by multiplying through by $a\sqrt{b_1}$ and using
+$a+b_1\ge r$. On the constrained slice $M=A-m$, so each reciprocal
+in \eqref{eq:q-26} integrates to $C(H+1)$ over a bounded interval. This gives
+\begin{equation}\label{eq:q-27}
+\int \frac{|1+\varphi_w(w_m)|\,|1+\varphi_w(w_M)|}{|1-Z|}\dd m
+ \le Cr^{-1/2}(H+1)\le C\frac{\sqrt T}{r}(H+1),
+\end{equation}
+which is the same pair envelope as \eqref{eq:q-25}. 
+
+The two actual extreme Jacobian factors have been retained through
+\eqref{eq:q-25}; only the $N-2$ remaining factors are now replaced by independent
+one-body majorants. Their interval integrations cost
+$(Cr/\sqrt T)^{N-2}$. Combine this with \eqref{eq:q-19}, \eqref{eq:q-20}, \eqref{eq:q-23}, and
+\eqref{eq:q-25}--\eqref{eq:q-27}: the complete shell contribution is bounded by
+\begin{equation}\label{eq:q-28}
+C_j^NN^{-N/2+C_j}
+ r^{2N-2j-3}T^{-N+3/2}(H+1)
+ \le C_j^NN^{-N/2+C_j}r^{N-2j-3/2}(H+1).
+\end{equation}
+Here the fixed number of marked entries permits all bounded powers
+of $T$ or $r$ to be absorbed into $C_j$. The last inequality uses
+$T\ge r$. This estimate is valid for every $r>0$.
+
+For all sufficiently large $N$, specifically $N>2k+4$, the exponent
+in \eqref{eq:q-28} is positive for every $j\le k$. Summing dyadic shells and
+the polynomial number of extrema and means gives a summable
+$C_j^NN^{-N/2+C_j}(H+1)$ envelope.
+
+For the finite orders $N_*+2\le N\le2k+4$, choose $\delta_B$ after
+the full finite list $2\le n\le2k+4$, $n$ even, so that the distance
+of every constrained mean from the branch exceeds $4\delta_B$.
+The same choice will be used in the finite-order complementary lemma.
+On the right interval $u\ge-\delta_B$,
+a sufficiently small-diameter configuration must then have every
+$u_i$ in a fixed compact right interval away from zero. There the
+full fixed-$N$ Vandermonde degree gives the shell power
+$N^2-2j-3>0$. The remaining shells have a fixed positive lower
+diameter and \eqref{eq:q-28} suffices, even if its exponent is negative.
+Thus the finite block has a uniform logarithmic bound as well.
+
+
+\section{The complete logarithmic tail}
+\label{sec:constrained-tail-sum}
+
+\begin{theorem}\label{thm:constrained-tail}
+At each selected point and for every $0\le j\le k$, uniformly
+for $0<\varepsilon<\varepsilon_0$,
+\begin{equation}\label{eq:logarithmic-absolute-tail}
+ \sum_{\substack{N>N_*\\N\ \mathrm{even}}}
+    |C_N^{(j)}((1+\varepsilon)s_*)|
+       \le C_j(1+|\log\varepsilon|).
+\end{equation}
+In particular the entire higher-particle contribution is
+$o(\varepsilon^{-1/2})$ at the derivative order of the first
+singularity.
+\end{theorem}
+\begin{proof}
+The selected part has the summable bound proved in
+Lemma~\ref{lem:constrained-selected}. The left-root part has
+the bound \eqref{eq:q-11}. For $N>N_c$, summing
+\eqref{eq:q-28} over dyadic shells gives the same factorial
+envelope times $H+1$. For the finitely many orders
+$N_*+2\le N\le N_c$, the finite-mean argument following
+\eqref{eq:q-28} gives a finite constant times $H+1$.
+These estimates include every part of the exact identity
+$C_N=F_N+2L_N$. Summing proves the theorem.
+Since $\varepsilon^{1/2}(1+|\log\varepsilon|)\to0$, this is
+the required noncancellation estimate.
+
+The choices have the following order: the selected point,
+$k$ and $N_c$; the fixed endpoint slivers and inverse-coordinate
+neighborhood; the finite mean gap and a sufficiently small
+branch width; the smooth bumps and right cutoff; a sufficiently
+small fixed $\tau$; the protected parameter-disk constants;
+and finally $\varepsilon_0$. Each estimate holds uniformly in
+all tail orders after those choices. The diameter divisions
+are made only after the complete weighted integrals have
+been transported.
+\end{proof}
+
+\section{The first singularity on the constrained angular torus}
+\label{sec:first-single}
+
+Fix $\zeta=e^{i\alpha}$ from Lemma~\ref{lem:prime-root-family}, and put
+\[
+ N=N_*=2p,\qquad k=N^2/2-1,\qquad
+ s_\varepsilon=(1+\varepsilon)\zeta,
+ \qquad H=\log(1/\varepsilon).
+\]
+We use the complete coefficients $C_n$ in \eqref{eq:angular-bulk}.
+The product-preserving deformation and its reflection decomposition
+\eqref{eq:constrained-split} will also be used at the finitely many
+orders $2\le n\le N$.  The formulas for the deformation and the
+transport fields are independent of the order restriction used in
+summing the infinite tail.
+
+The geometric choices already made give $\delta<\alpha/2$ and
+\eqref{eq:finite-mean-exclusion}. Hence $-\alpha$ lies on
+$m=1,p=0$, $+\alpha$ lies on $p=1,m=0$, and no constrained
+full-equality configuration of the present finite orders lies in
+the chosen branch neighborhood.
+
+\subsection{Finite-order complementary regions}
+
+\begin{lemma}\label{lem:finite-complement}
+Every positive even $n<N_*$ has bounded derivatives of every
+fixed order along $s_\varepsilon$. At $N=N_*$, choose a fixed
+smooth shape cutoff equal to one near
+$\theta_1=\cdots=\theta_N=-\alpha$, supported where the
+deformation is the identity and $w_L=1$. Let $I_N$ denote
+that part of $L_N$. Then $C_N-2I_N$ has bounded derivatives
+of every fixed order along this approach.
+\end{lemma}
+\begin{proof}
+We first prove $O(1+H)$ for each fixed derivative. All
+constants here may depend on the fixed order $n$ and the
+number of derivatives.
+
+For $F_n$, both occupancies are at least $1/4$. Each true
+branch has displacement at least $\tau/(4n)$ and the product
+has a positive damping gap at $s_*$. All one-body and pair
+denominators are separated there: the only limiting possible
+unit pair-product zero on these physical contours is at a
+dispersion branch, and the displacements separate those
+branches. Compactness supplies a fixed parameter disk on
+which the localized integrand is bounded and holomorphic.
+This argument includes $n=2$ and does not require the
+fourfold convolution bound.
+
+The left-root pieces of $L_n$ have bounded fixed derivatives
+by the anchor construction of Section~\ref{sec:left-gap}.
+Its argument is valid for each fixed $n\ge2$ and every
+fixed number of derivatives: eliminate the named compact
+anchor, retain its bounded Jacobian, and integrate the other
+independent branch majorants. Thus only the complete right
+part remains.
+
+At full equality the constraint requires
+$\theta_i=t_\theta=2\pi\ell/n$. By
+\eqref{eq:finite-mean-exclusion}, none of these finitely many
+points is at the branch. In the right interval their shifted
+means satisfy $t_\theta+b>4\delta_B$, so the equality
+neighborhoods are compact regular right charts. At equality
+the balanced deformation is exactly zero, since
+$P=np(t_\theta)$ and $Q=nm(t_\theta)$ give $h_i=0$.
+Consequently its product denominator can vanish only if
+\[
+ n\arccos(S_*-\cos t_\theta)\in2\pi\mathbb Z,
+ \qquad
+ S_* = \cos(2\pi\ell/n)+\cos(2\pi m/n).
+\]
+Lemma~\ref{lem:prime-root-family} excludes this for $n<N_*$.
+At $n=N_*$ it gives only $t_\theta=\pm\alpha$ modulo
+$2\pi$; the positive point is outside the one-sided support.
+Thus its only critical equality is $-\alpha$.
+
+Localize each noncritical equality in a fixed small
+neighborhood where the roots and pair factors are regular
+and $1-Z$ is separated. Such localized integrals extend
+holomorphically through $s_*$. At $N_*$ remove also the
+specified chart at $-\alpha$. It lies entirely in $m=1,p=0$,
+so its deformation is zero, $w_L=1$, and its right cutoff
+is one. On the remaining right support, including every
+cutoff derivative, the diameter satisfies $d\ge d_0>0$.
+
+The single field of Section~\ref{sec:right-field} is now
+smooth with bounded fixed regular jets, for any chosen
+number of derivatives. There is no puncture flux. The
+scalar transport gives the pointwise bound
+\[
+ C_{n,j}\frac{\prod_i|1+\varphi_w(w_i)|}{|1-Z|}.
+\]
+Retain the two actual extreme-coordinate factors for
+Lemma~\ref{lem:global-coarea}; only after their absorption
+are the other factors replaced by independent majorants.
+For a negative minimum use \eqref{eq:q-26} instead.
+There are finitely many means, extreme-index choices and
+diameter shells with $d\ge d_0$. Equations
+\eqref{eq:q-22}, \eqref{eq:q-25} and \eqref{eq:q-27}
+therefore give $O(1+H)$ for every fixed derivative of this
+entire remainder, including $n=2$ when there are no other
+coordinates. The enlargement to a geometric interval
+in Section~\ref{sec:global-integration} handles
+disconnected smooth-cutoff fibers.
+
+Each complete remainder is holomorphic on the exterior
+sector: all contours and angular localizations are fixed
+independently of $s$. For such a remainder $R$ and
+$0<\varepsilon\le\varepsilon_1$,
+\[
+ R^{(j)}((1+\varepsilon)s_*)
+ =R^{(j)}((1+\varepsilon_1)s_*)
+   -s_*\int_\varepsilon^{\varepsilon_1}
+              R^{(j+1)}((1+t)s_*)\,dt.
+\]
+The already proved bound at order $j+1$ is integrable at
+zero, proving boundedness. Finally
+$C_{N_*}-2I_{N_*}=F_{N_*}+2(L_{N_*}-I_{N_*})$ fixes the
+reflection factor exactly.
+\end{proof}
+
+\subsection{The local shape integral}
+
+Near the lower configuration write
+\[
+ \theta_i=-\alpha+t_i,\qquad
+ t_N=-\sum_{i<N}t_i.
+\]
+The angular constraint is exactly $\sum_i t_i=0$, since
+$N\alpha\in2\pi\mathbb Z$.  Its normalized measure is
+$\prod_{i<N}dt_i/(2\pi)$.  All angles here are negative and lie on $m=1,p=0$,
+so the deformation is identically zero and $w_L=1$.
+The physical regular dispersion coordinate has the expansion
+\[
+ \varphi_i
+  =\alpha-2i\varepsilon+t_i-\cot\alpha\,t_i^2
+    +O(\varepsilon^2+\varepsilon|t_i|+|t_i|^3).
+\]
+Put $q(t,s)=1-Z(t,s)$.  Then
+\begin{equation}\label{eq:single-q}
+ \begin{split}
+ q(t,s_\varepsilon)
+  &=2N\varepsilon-i\cot\alpha\sum_i t_i^2
+      +O(\varepsilon^2+\varepsilon|t|+|t|^3),\\
+ \partial_s q(0,\zeta)&=2N\zeta^{-1}=:D_s.
+ \end{split}
+\end{equation}
+The particle number is fixed in these expansions.
+
+\begin{lemma}\label{lem:single-q-bound}
+On a sufficiently small fixed real shape ball,
+\[
+ |q(t,s_\varepsilon)|\ge c(\varepsilon+|t|^2).
+\]
+\end{lemma}
+\begin{proof}
+Writing $\rho^2=\sum_i t_i^2$, the leading part in
+\eqref{eq:single-q} satisfies
+\[
+ |2N\varepsilon-i\cot\alpha\,\rho^2|
+       \ge c_0(\varepsilon+\rho^2).
+\]
+On $0<\varepsilon<\varepsilon_0$ and $\rho<\delta_0$, its
+remainder is at most
+$C(\varepsilon_0+\delta_0)(\varepsilon+\rho^2)$.
+Choose the two fixed radii so that this is at most half the
+preceding lower bound, and apply the triangle inequality.
+\end{proof}
+
+The local integral can be written exactly as
+\begin{equation}\label{eq:angular-local-integral}
+ I_N(s)=\int_{\mathbb R^{N-1}}
+        \frac{\chi(t)\Delta(t)^2 A(t,s)}{q(t,s)}
+                    \,dt_1\cdots dt_{N-1},
+\end{equation}
+where $\chi$ is the fixed shape cutoff and $A$ is analytic
+near $(0,\zeta)$.  Its value is
+\begin{equation}\label{eq:angular-local-prefactor}
+ A(0,\zeta)=A_\alpha
+ =\frac{2^{1-N(N-1)}}{N!(2\pi)^{N-1}\sin^{N^2}\alpha}>0.
+\end{equation}
+This is the coefficient computed in
+Section~\ref{sec:elementary-pfaffian}, including
+the determinant sign, all one-body factors, $1+Z$, $1/N!$,
+and the normalized constrained measure.
+All parameter derivatives of $A$ preserve the displayed
+Vandermonde zeros, since the real angular coordinates are
+independent of $s$.
+
+\begin{lemma}\label{lem:single-period}
+Put
+\[
+ a_0=\frac{N^2-1}{2},\qquad d_\alpha=\cot\alpha,\qquad
+ \mathcal C_N=\frac1{\sqrt N}
+   \int_{\substack{\sum_i\omega_i=0\\|\omega|=1}}
+                   \Delta(\omega)^2\,d\sigma(\omega)>0.
+\]
+Then, with $\tau_N=-\sum_{i<N}\tau_i$,
+\begin{equation}\label{eq:single-period}
+ \begin{split}
+ J_\alpha
+ &=\int_{\mathbb R^{N-1}}
+  \frac{\Delta(\tau)^2}
+       {(2N-i d_\alpha\sum_i\tau_i^2)^{k+1}}
+                      \,d\tau_1\cdots d\tau_{N-1}\\
+ &=\frac{\mathcal C_N}{2}(2N)^{-1/2}
+       (-i d_\alpha)^{-a_0}B(a_0,1/2)\ne0.
+ \end{split}
+\end{equation}
+Here $\arg(-i d_\alpha)=-\pi/2$.
+\end{lemma}
+\begin{proof}
+The coordinate measure on the zero-sum hyperplane is Euclidean
+measure divided by $\sqrt N$.  Polar coordinates give radial
+numerator $R^{N^2-2}$.  Substitution $u=R^2$ gives the beta
+integral for a positive real quadratic coefficient; continue that
+coefficient through the fourth quadrant to $-i d_\alpha$.
+The uniform majorant is a constant times
+$R^{N^2-2}(1+R^2)^{-N^2/2}$, whose tail is $R^{-2}$.
+The angular constant is positive because a zero-sum vector with
+distinct coordinates has an open spherical neighborhood where
+$\Delta^2>0$.  Every remaining factor is nonzero.
+\end{proof}
+
+\begin{theorem}\label{thm:single-first}
+At the selected prime root,
+\[
+ C_N^{(k)}(s_\varepsilon)
+   =\Lambda_\alpha\varepsilon^{-1/2}
+          +o(\varepsilon^{-1/2}),
+ \qquad
+ \Lambda_\alpha=2A_\alpha(-1)^kk!D_s^kJ_\alpha\ne0.
+\]
+For $j<k$, $C_N^{(j)}(s_\varepsilon)$ remains bounded.
+Every even $n<N$ has bounded derivatives of every fixed order
+along this approach.
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{lem:finite-complement}, $C_N-2I_N$ has bounded
+fixed derivatives.  Differentiate \eqref{eq:angular-local-integral}
+$k$ times.  Every term with denominator power at most $k$ is
+uniformly integrable, since its radial exponent at
+$\varepsilon=0$ is at least
+\[
+ N^2-2-2k=0.
+\]
+The only term of possible size $\varepsilon^{-1/2}$ is
+\[
+ \int \frac{\chi(t)\Delta(t)^2
+    (-1)^kk!(\partial_s q(t,s_\varepsilon))^k A(t,s_\varepsilon)}
+       {q(t,s_\varepsilon)^{k+1}}\,dt.
+\]
+Set $t=\sqrt\varepsilon\,\tau$.  Its total scale exponent is
+\[
+ \frac{N(N-1)}2+\frac{N-1}{2}-(k+1)=-\frac12.
+\]
+Lemma~\ref{lem:single-q-bound} gives the integrable majorant
+$C\Delta(\tau)^2/(1+|\tau|^2)^{k+1}$.
+Dominated convergence, \eqref{eq:single-q}, and
+\eqref{eq:angular-local-prefactor} give
+$A_\alpha(-1)^kk!D_s^kJ_\alpha$ for the lower chart.
+The factor two in $\Lambda_\alpha$ counts the two reflected
+centers; the separate factor two in $A_\alpha$ comes from $1+Z=2$.
+For $j<k$ every denominator power is at most $k$, so the same
+radial integrability argument and the complementary lemma prove
+boundedness.  The lower-order conclusion is already contained
+in that lemma.
+\end{proof}
+
+The radial phase is also explicit: $k=2p^2-1\equiv1\pmod4$ implies that
+$\zeta^k\Lambda_\alpha$ is a positive real multiple of
+$e^{-i\pi/4}$.
+\section{Noncancellation and the natural boundary}
+
+Let
+\[
+ U(s)=\sum_{\substack{N\ge2\\N\ \mathrm{even}}}C_N(s)
+             =\X(s)/\Mtwo(s).
+\]
+The normally convergent exterior series may be differentiated term
+by term. At a selected prime root, the finitely many lower orders
+have bounded $k$th derivatives by Lemma~\ref{lem:finite-complement}.
+Theorem~\ref{thm:single-first} gives the first singular term, and
+Theorem~\ref{thm:constrained-tail} controls the complete higher tail.
+Consequently
+\begin{equation}\label{eq:U-leading}
+ U^{(k)}(s_\varepsilon)
+       =\Lambda_\alpha\varepsilon^{-1/2}
+                           +o(\varepsilon^{-1/2}),
+ \qquad \Lambda_\alpha\ne0.
+\end{equation}
+Thus $U$ cannot extend holomorphically through $\zeta$.
+Since $\Mtwo$ is analytic and nonzero at this nonaxis point,
+the exact identity $\X=\Mtwo U$ transfers noncontinuation to
+the full connected bulk function.
+
+For completeness, its physical leading coefficient follows directly.
+The radial function $g(\varepsilon)=U((1+\varepsilon)\zeta)$
+has $g^{(k)}(\varepsilon)=O(\varepsilon^{-1/2})$.
+Integrability gives a finite limit of $g^{(k-1)}$ at zero;
+successive integration gives finite limits of all lower derivatives.
+Leibniz's rule therefore yields
+\[
+ \X^{(k)}(s_\varepsilon)
+     =\Mtwo(\zeta)\Lambda_\alpha\varepsilon^{-1/2}
+                             +o(\varepsilon^{-1/2}).
+\]
+The factor $\beta_{\rm phys}(s)=\operatorname{arsinh}(s)/(2J)$
+is locally analytic and nonzero at every selected point on the
+branch continued from the physical interval. Multiplication by it
+gives the same obstruction for $\chi$.
+
+The selected prime roots are dense in the open first quadrant.
+Evenness and conjugation give a dense set of obstructions in all
+four quadrants. Every neighborhood of a point on the unit circle,
+including an axis point, contains such an obstruction. Hence no
+point of the circle admits a holomorphic continuation of the
+exterior germ. This proves Theorem~\ref{thm:main}.
+
+
+\begin{thebibliography}{99}
+\bibitem{Yang}
+C. N. Yang, The spontaneous magnetization of a two-dimensional
+Ising model, \emph{Physical Review} \textbf{85} (1952), 808--816.
+\href{https://doi.org/10.1103/PhysRev.85.808}{doi:10.1103/PhysRev.85.808}.
+
+\bibitem{PalmerTracy}
+J. Palmer and C. Tracy, Two-dimensional Ising correlations:
+Convergence of the scaling limit, \emph{Advances in Applied
+Mathematics} \textbf{2} (1981), 329--388.
+\href{https://doi.org/10.1016/0196-8858(81)90010-5}{doi:10.1016/0196-8858(81)90010-5}.
+
+\bibitem{TracyWidom}
+C. A. Tracy and H. Widom, On the singularities in the susceptibility
+expansion for the two-dimensional Ising model,
+\emph{Journal of Statistical Physics} \textbf{156} (2014), 1125--1135.
+\href{https://doi.org/10.1007/s10955-014-1061-4}{doi:10.1007/s10955-014-1061-4}.
+
+
+\bibitem{Nickel1999}
+B. Nickel, On the singularity structure of the 2D Ising model susceptibility,
+\emph{Journal of Physics A: Mathematical and General} \textbf{32} (1999), 3889--3906.
+\href{https://doi.org/10.1088/0305-4470/32/21/303}{doi:10.1088/0305-4470/32/21/303}.
+
+\bibitem{Nickel2000}
+B. Nickel, Addendum to ``On the singularity structure of the 2D Ising model susceptibility'',
+\emph{Journal of Physics A: Mathematical and General} \textbf{33} (2000), 1693--1711.
+\href{https://doi.org/10.1088/0305-4470/33/8/313}{doi:10.1088/0305-4470/33/8/313}.
+
+\bibitem{Orrick2001}
+W. P. Orrick, B. Nickel, A. J. Guttmann and J. H. H. Perk,
+The susceptibility of the square lattice Ising model: New developments,
+\emph{Journal of Statistical Physics} \textbf{102} (2001), 795--841.
+\href{https://doi.org/10.1023/A:1004850919647}{doi:10.1023/A:1004850919647}.
+
+\bibitem{TracyWidomDiagonal}
+C. A. Tracy and H. Widom, On the diagonal susceptibility of the two-dimensional
+Ising model, \emph{Journal of Mathematical Physics} \textbf{54} (2013), 123302.
+\href{https://arxiv.org/abs/1307.5913v3}{arXiv:1307.5913v3}.
+
+\end{thebibliography}
+\end{document}

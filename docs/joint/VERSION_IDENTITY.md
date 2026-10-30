@@ -12,4 +12,4 @@ The [overlay manifest](../../JOINT_C002_OVERLAY_MANIFEST.json) binds 2,279 prote
 | Fetched base main | `43a9ce897ba12de0c96d6e1a636790cd93fae8ff` |
 | Release tag | `joint-v1.0.0-leanc002`, created only after merged-commit acceptance |
 
-[Original manifests](../../provenance/joint/frozen/) and [manuscript editions](../../paper/joint/README.md) retain their exact identities. The integrated source verifier also checks the unchanged earlier three-result publication. Execution receipts and the release identify the actual publication head and merge SHA independently of the C002 file freeze.
+[Original manifests](../../provenance/joint/frozen/) and [manuscript editions](../../archive/manuscripts/pre-eight-2026-10-30/paper/joint/README.md) retain their exact identities. The integrated source verifier also checks the unchanged earlier three-result publication. Execution receipts and the release identify the actual publication head and merge SHA independently of the C002 file freeze.
