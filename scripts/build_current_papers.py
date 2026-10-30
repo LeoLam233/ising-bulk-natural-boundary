@@ -11,7 +11,11 @@ def main():
   dst=out/src.parent.relative_to(ROOT/'papers');dst.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dst/src.name)
   for i in range(3):
    r=subprocess.run(['pdflatex','-no-shell-escape','-interaction=nonstopmode','-halt-on-error','-file-line-error','manuscript.tex'],cwd=dst,capture_output=True)
-   (dst/('pass-'+str(i+1)+'.stdout')).write_bytes(r.stdout);assert r.returncode==0,src
+   (dst/('pass-'+str(i+1)+'.stdout')).write_bytes(r.stdout)
+   (dst/('pass-'+str(i+1)+'.stderr')).write_bytes(r.stderr)
+   if r.returncode:
+    print(r.stdout.decode(errors='replace'));print(r.stderr.decode(errors='replace'))
+    raise RuntimeError('TeX build failed: '+str(src))
   log=(dst/'manuscript.log').read_text(errors='replace')
   assert not any(x in log for x in ['undefined references','undefined on input','multiply defined','Overfull','Missing character:']),src
   results.append({'source':src.relative_to(ROOT).as_posix(),'result':'BUILD_SUCCEEDED'})
