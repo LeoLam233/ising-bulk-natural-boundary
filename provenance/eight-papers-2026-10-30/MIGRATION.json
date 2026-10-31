@@ -28,11 +28,11 @@
       "input_paper": "HT_Reader"
     },
     "papers/high-temperature/alternative-proof/manuscript.tex": {
-      "sha256": "3fdcd2562d66efa0f301879e1e78b57762d15653f59c59c29ba9896357e40081",
+      "sha256": "6e21122576fc1f7cd7e94c08e0f9e1ea22fbb49bbf5f8042baf42d8284a47bc7",
       "input_paper": "HT_PSER"
     },
     "papers/high-temperature/alternative-proof/manuscript.pdf": {
-      "sha256": "3a89e17c6bf0125bd5938d0d849449423e12cd8c29e9743b22bf2130da534b6b",
+      "sha256": "ce6ff14af65f2af5e5ba411622e8bb2023c8769eea77904367257b08530301fe",
       "input_paper": "HT_PSER"
     },
     "papers/fixed-ratio-anisotropy/original-proof/manuscript.tex": {
