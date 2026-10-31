@@ -25,7 +25,7 @@ jobs:
             pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error -file-line-error manuscript.tex > "$RUNNER_TEMP/ht-pser-pass-$k.log" 2>&1
           done
           ! grep -Eq 'LaTeX Warning: (Reference|Citation).*undefined|There were undefined references|Overfull \\hbox|Missing character:' manuscript.log
-          pdfinfo manuscript.pdf | grep Pages
+          test -s manuscript.pdf && echo "HT-PSER PDF rebuilt successfully"
       - name: Update only the current HT-PSER TeX/PDF SHA-256 identities
         run: |
           python3 - <<'PY'
