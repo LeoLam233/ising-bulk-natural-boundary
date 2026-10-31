@@ -504,7 +504,7 @@ Its physical continuation lies in the fourth quadrant near either
 inverse-dispersion branch.  The angular integration coordinates remain
 $\theta_i$, with $\sum_i\theta_i=a_\sigma\pmod {2\pi}$.
 
-Choose a smooth periodic function $p$ supported in $(0,\pi)$,
+Choose a smooth periodic function $p$ compactly supported in $(0,\pi)$,
 with $0\le p\le1$ and $p=1$ on $[\delta,\pi-\delta]$.
 Here $\delta>0$ is smaller than $\widehat\alpha/2$, $b/2$, and
 $(2\widehat\alpha-b)/2$, and is small enough that $b$ is inside this
@@ -609,6 +609,24 @@ on a disk $|t-t_\varepsilon|\le c/N^3$.  Reduce $c$ once: the
 variation of $\log Z$ is at most $CN^{3/2}c/N^3$, smaller than
 half its preceding gap.  The true branches remain on their interior
 sheets throughout this disk.
+
+The Cauchy disk may cross $\Im S(t)=0$. All factors on that disk
+are understood as analytic continuations of the branches fixed at
+$t_\varepsilon$, rather than as newly selected physical roots at each
+parameter value. On the true-branch neighborhoods the deformation
+margin is of order $1/N$ in the $W$ plane; on the complementary
+compact angular sets the roots remain separated from $W=\pm1$.
+After reducing the disk constant, these facts give holomorphic
+branches for each $z_i$ and the continued bordered kernel.
+Moreover,
+$|\log Z(t)-\log Z(t_\varepsilon)|
+ \le CN^{3/2}|t-t_\varepsilon|$,
+so the existing $c/N$ damping gap yields
+$|Z(t)|\le\exp(-c'/N)$ and
+$|1-\sigma Z(t)|\ge c'/N$ on the entire disk.
+The pair-denominator separations below persist there by the same
+branch-margin estimates. No sign condition on $\Im S(t)$ is imposed
+on the continued integrand.
 
 We estimate the bordered determinant directly.
 Entries with both points near the same inverse branch are bounded:
@@ -762,7 +780,8 @@ The ordinary bordered kernel is analytic in these regular coordinates.
 Near the double branch, the even inverse in $\varphi$ cancels
 $\varphi_i+\varphi_l$ from its denominator. Away from there the
 denominator is separated: the double lower branch is the only limiting
-pair-product zero on the one-sided support. In particular,
+zero of a pair denominator $1-z_i z_l$ on the one-sided support.
+In particular,
 \begin{equation}\label{eq:v-3}
  |L(v_i,v_l)|\le C|v_i-v_l|\quad\text{on }\mathcal D_R^2,
 \end{equation}
@@ -1064,8 +1083,14 @@ real number. Consequently
        =\frac{U_{vv}}{U_v}w'(x)
 \]
 lies in a fixed small enlargement of the cone $[0,\pi/2]$.
-Choose the branch width, neighborhood and $\tau$ so that the
-enlarged cone still has width less than $\pi$ with a fixed margin.
+First fix the thin inverse-coordinate neighborhood and a
+strict angular margin below $\pi$ for the limiting cone.
+Shrink the branch width $\delta_B$ until its square-root
+normal-form enlargement is smaller than that margin, and then
+reduce $\tau$ and the parameter neighborhood. In particular,
+the allowed bound on $\delta_B$ in (6.1) is only an upper bound:
+$\delta_B$ may be chosen smaller independently of $N$.
+The enlarged cone then has width less than $\pi$ with a fixed margin.
 For $\theta_i>\theta_l$, its integral has the same cone, while
 $U_i-U_l=w(\theta_i)-w(\theta_l)$ has argument $O(\tau)$
 and modulus comparable to $\theta_i-\theta_l$.
@@ -1093,7 +1118,7 @@ For every fixed total order $m=a+|\beta|$, on the same actual contour,
 \begin{equation}\label{eq:v-14}
  |\partial_t^a\partial_v^\beta B_i|
  +|\partial_t^a\partial_v^\beta V_i|
- \le C_jN^{C_j}\Delta^{-1-m}.
+ \le C_mN^{C_m}\Delta^{-1-m}.
 \end{equation}
 Only pointwise scale envelopes are used; no mean, diameter or scale is
 differentiated. There is no separate inverse-$\varepsilon$ loss.
@@ -1114,9 +1139,9 @@ better size $O(\sqrt T)$.
 Leibniz' rule yields, for any joint derivative $\mathcal D^m$,
 \begin{equation}\label{eq:sharp-R}
  \begin{aligned}
- |\mathcal D^mR|&\le C_jN^{C_j}\sqrt T\Delta^{2-m},&
- |\mathcal D^mR^{-1}|&\le C_jN^{C_j}T^{-1/2}\Delta^{-2-m},\\
- |\mathcal D^mG_i|&\le C_jN^{C_j}\sqrt T\Delta^{1-m}.&&
+ |\mathcal D^mR|&\le C_mN^{C_m}\sqrt T\Delta^{2-m},&
+ |\mathcal D^mR^{-1}|&\le C_mN^{C_m}T^{-1/2}\Delta^{-2-m},\\
+ |\mathcal D^mG_i|&\le C_mN^{C_m}\sqrt T\Delta^{1-m}.&&
  \end{aligned}
 \end{equation}
 Here are the complete size checks. The $R$ jets at orders
@@ -1168,21 +1193,41 @@ where $A_{il}$ and its fixed jets are analytic and bounded on
 $\mathcal D_R^2$. This follows from \eqref{eq:kernel-square}
 and the analytic diagonal zero in \eqref{eq:v-3}, including at
 the double branch. Thus its $N(N-1)$ collision degrees remain
-available. A $v$ derivative loses at most one degree, its field
-coefficient costs one, and a divergence costs two. Fixed-$v$
-parameter differentiation preserves the pair zeros and costs at most
-one scale power in previously formed field coefficients. The product
-rule, \eqref{eq:v-14}, and induction on the transports give
+available.
+
+For clarity, fix the derivative budget $j\le k$ and induct on the
+number $r\le j$ of transports
+$\partial_t+\operatorname{div}_v(B\,\cdot)$, including the
+cutoff terms in \eqref{eq:v-9}. At $r=0$ the complete pair product
+has the displayed $N(N-1)$ zeros. Under one further transport,
+a spatial derivative can lose one collision degree and the
+corresponding field coefficient at most one more;
+$\operatorname{div}_v B$ has the same two-degree budget.
+Parameter derivatives of the analytic pair factors preserve their
+diagonal zeros, while derivatives of already formed field
+coefficients satisfy \eqref{eq:v-14}. The product rule therefore
+reduces the remaining collision degree by at most two per
+transport. There are $O(N^2)$ choices of a differentiated pair
+at each fixed step; the product-rule multiplicity over $r\le j$
+is at most $N^{O(j)}$. The fixed-order jets of the smooth weights
+and of $\det M$ obey the same polynomial budget by
+Lemma~\ref{lem:jets}.
+
+The transport freezes $\sum_i\varphi_i$ exactly by
+\eqref{eq:v-7}--\eqref{eq:v-8}, so no derivative of
+$(1-\sigma Z)^{-1}$ occurs. The remaining one-body factors
+are retained in the right-hand side, and all analytic pair
+quotients on the fixed inverse domain cost at most $C_j^{N^2}$.
+Induction gives
 \begin{equation}\label{eq:full-product-density}
  C_j^{N^2}\Delta^{N(N-1)-2j}
        \frac{\prod_i|1+\varphi_w(w_i)|}{|1-\sigma Z|}.
 \end{equation}
-There are only polynomially many index choices at fixed $j$.
-The bounded analytic factors in all pairs cost $C_j^{N^2}$;
-one-body factors, cutoff jets, and the Jacobian $\det M$ cost
-at most $C_j^NN^{C_j}$ and are absorbed in the same constant.
-The factor $1/N!$ can only improve this bound. The simple kernel
-is retained because the field freezes $\sum\varphi_i$ exactly.
+Since $j$ is fixed, the polynomial factors
+$N^{O(j)}$ and the one-body, cutoff and Jacobian costs
+$C_j^N N^{C_j}$ can be absorbed into $C_j^{N^2}$,
+uniformly for all odd $N\ge N_*+2$.
+The factorial $1/N!$ can only improve the bound.
 
 Second, on any region $d\ge d_0>0$, all field jets are bounded
 with polynomial $N$ costs. Differentiate the bordered determinant
@@ -1571,6 +1616,14 @@ For each fixed $n$, the mixed-population part $F_n$ has all
 true branches displaced by at least $\tau/(4n)$ and a fixed
 product damping gap. For each fixed $n$, compactness gives a fixed
 parameter disk on which its density is holomorphic and bounded.
+This is a disk for the analytic continuation of the deformed
+integrand from the physical parameter: the displacement keeps
+the true branches separated from $W=\pm1$, the other roots
+stay in compact regular neighborhoods, and the product damping
+gap remains positive after shrinking the disk. This reasoning
+also applies when the disk crosses $\Im S(t)=0$;
+the analytic continuation, rather than a new pointwise
+physical-sheet choice, is used in Cauchy's estimate.
 Every left-root term has bounded fixed derivatives by the
 anchor field of Section~\ref{sec:left-gap}, with its compact
 angle eliminated before integrating the remaining one-body
