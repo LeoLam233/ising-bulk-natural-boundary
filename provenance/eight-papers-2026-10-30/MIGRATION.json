@@ -4,67 +4,67 @@
   "historical_navigation_prefix": "provenance/eight-papers-2026-10-30/historical-navigation",
   "current_pairs": {
     "papers/low-temperature/original-proof/manuscript.tex": {
-      "sha256": "a984e829ace52cd68e03167daadec4715d84bf2540d54d51c36e58265fc17029",
+      "sha256": "e3f4aa05a27c914b6f930c6d5f1a21eebfaca0b375dc625c70a228fa2d11d06f",
       "input_paper": "LT_Reader"
     },
     "papers/low-temperature/original-proof/manuscript.pdf": {
-      "sha256": "ef7a3edd9a9c7fc1442fdf432cb6bfa10babc88e85311994540434a5228d69b1",
+      "sha256": "850d7fb89168dbc134e32e8c879d1ad4ef852fe1fa0f5f5da349888bcfb2f9fc",
       "input_paper": "LT_Reader"
     },
     "papers/low-temperature/alternative-proof/manuscript.tex": {
-      "sha256": "98877fbf21eacbe1bd6537b3044139dde5f32adc878e3c3984dfd8a59c6a0730",
+      "sha256": "0b018fa6275f058cc5baa9075de46a0cf8745d3ae159515b7ea6221e5fffb710",
       "input_paper": "LT_PSER"
     },
     "papers/low-temperature/alternative-proof/manuscript.pdf": {
-      "sha256": "ad0d0a66d9b8d4ceb36e490bfd591e707a7389b51a44a864b15b599190198c2c",
+      "sha256": "f54981c50c3d902e3d272ef4de4935599028a5a9665ef9a56a1c71ed4cfd325b",
       "input_paper": "LT_PSER"
     },
     "papers/high-temperature/original-proof/manuscript.tex": {
-      "sha256": "21730113b199269a5eb1eb25e48f0202a65b584bb0e9c4184c4ed3cf66be113f",
+      "sha256": "d3e709ea53b5d68ea67706d63edaf928ff015c501657da83b613349bcba5bc6b",
       "input_paper": "HT_Reader"
     },
     "papers/high-temperature/original-proof/manuscript.pdf": {
-      "sha256": "9ab769e322d82f086f72cbcf7c205e92062d1c59433ed579450fbe1db6c65729",
+      "sha256": "74f8f3d1c49cd57cadd93b23fcda5814d554395bceb243a9cc2295d77b9178a1",
       "input_paper": "HT_Reader"
     },
     "papers/high-temperature/alternative-proof/manuscript.tex": {
-      "sha256": "6e21122576fc1f7cd7e94c08e0f9e1ea22fbb49bbf5f8042baf42d8284a47bc7",
+      "sha256": "a5f2c4490b8afd20d5b9430185e50b0a9a8e7e80d22ea3b3c0add0606c5cad3a",
       "input_paper": "HT_PSER"
     },
     "papers/high-temperature/alternative-proof/manuscript.pdf": {
-      "sha256": "ce6ff14af65f2af5e5ba411622e8bb2023c8769eea77904367257b08530301fe",
+      "sha256": "16f72c50e4e4c85a60d6a8f94371e4598301b477178058ca0b79883c7fda511d",
       "input_paper": "HT_PSER"
     },
     "papers/fixed-ratio-anisotropy/original-proof/manuscript.tex": {
-      "sha256": "4465ec58563a67da149fbd5bb9fc11fd7691d64ccce16f4b532d3111be96b357",
+      "sha256": "69c136b0802d4213a1367ac6c38c91c6fa7ffe915426bc9e843cb24e9f5ec965",
       "input_paper": "ANISO_Reader"
     },
     "papers/fixed-ratio-anisotropy/original-proof/manuscript.pdf": {
-      "sha256": "0b89774a42b7f985ce2b096d2e7793b11625e8c5132b82486af2815e58cea45e",
+      "sha256": "e0fd63473554b033321a91b2b23fcca3ec6d0970f10c6f9ccfad10f3d90b6ace",
       "input_paper": "ANISO_Reader"
     },
     "papers/fixed-ratio-anisotropy/alternative-proof/manuscript.tex": {
-      "sha256": "c92c1a226e74d6f7424151b87b4e4b93bef52529d9344e494b417f0aee1c39a4",
+      "sha256": "fe69535bf1513ff64235f2587647efa052155525d86c7e5634a3a3cc868e6fb3",
       "input_paper": "ANISO_PSER"
     },
     "papers/fixed-ratio-anisotropy/alternative-proof/manuscript.pdf": {
-      "sha256": "0855cd0083c9b0e400f17d6763e94a5121299779561ae37ad0e50e95f2fda862",
+      "sha256": "33a5b8c31156862c7179697037f57b9c76605ee87d5c20288cd702befe85da5c",
       "input_paper": "ANISO_PSER"
     },
     "papers/two-complex-couplings/original-proof/manuscript.tex": {
-      "sha256": "186fb024755708ce84e7879678adfb8c71096638bafa0f99923e430cefdb7539",
+      "sha256": "7a95c48ae74d828ae765026880c622e37a4cd267f10aa69794d7e4182177ce43",
       "input_paper": "JOINT_Reader"
     },
     "papers/two-complex-couplings/original-proof/manuscript.pdf": {
-      "sha256": "720276785d482e72b17661edbd790b4b6fd5400f593c609fed565c4f15763fe9",
+      "sha256": "4c7c302ab7b5243412c4bcc06c91489cacfc09628f80b3f9545e1b2aae84dba4",
       "input_paper": "JOINT_Reader"
     },
     "papers/two-complex-couplings/alternative-proof/manuscript.tex": {
-      "sha256": "584bedeea5ae5e6fa420d184dde56b7e43c35d01857dafda8f8a35b8b43d5cd0",
+      "sha256": "1f109e191ba800168f80d40b7bc176194b1b59166f974c3a59f0fc8e7de980f2",
       "input_paper": "JOINT_PSER"
     },
     "papers/two-complex-couplings/alternative-proof/manuscript.pdf": {
-      "sha256": "1938094749a52c6183a51bad4a657444532c53554e32c8cf48ca65df7a03578c",
+      "sha256": "b9349500ac0367ad301dfdfd9dff77d70524a9bd935605b6db6debabc5d33b73",
       "input_paper": "JOINT_PSER"
     }
   },

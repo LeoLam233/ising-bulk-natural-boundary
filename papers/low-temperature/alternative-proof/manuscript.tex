@@ -43,18 +43,18 @@ constraint and one product denominator. At a dense family of prime
 roots of unity, the first singular even-particle term has a nonzero
 $\varepsilon^{-1/2}$ derivative, computed directly on this constraint.
 An elementary four-point determinant identity, propagated by
-Pfaffian condensation, determines the exact local coefficient. A deformation preserving the total angle and one regular
-coordinate on its one-sided part give
-an absolute logarithmic bound for the entire differentiated
-higher-particle tail. One collective tangential field treats all right-side configurations.
-Oblique coarea and one mean scale control every collision diameter,
-including diameters below the radial distance; a bounded anchor
-field handles the remaining regions with a separated product kernel. The same geometry
-controls the finite-order complement of the first singular chart. These estimates establish
-noncancellation for the full infinite expansion.
+An elementary four-point determinant identity, extended by Pfaffian
+condensation, gives the exact local coefficient. A deformation that
+preserves the total angle and a regular coordinate on the one-sided
+contour give an absolute logarithmic bound for the differentiated
+higher-particle tail. A single tangential field and oblique coarea
+control every right-side collision diameter, including diameters below
+the radial distance. A bounded anchor field treats the regions with a
+separated product kernel. These estimates also control the finite-order
+complement, so the first singularity survives in the full series.
 \end{abstract}
 
-\section{The bulk function and the argument}
+\section{Introduction}
 
 Consider the zero-field Ising model on the infinite square lattice,
 with equal positive nearest-neighbor coupling $J$. Set
@@ -119,17 +119,16 @@ $k=N_*^2/2-1$ and $s_\varepsilon=(1+\varepsilon)\zeta$, we prove
  \end{split}
 \end{equation}
 All constants may depend on this fixed point and derivative order.
-The first estimate is a local shape integral. For the second, we
-deform the complete constrained angular torus and then partition it.
-The regular coordinate includes the moving branch center, so
-parameter differentiation has uniform coefficients even at a
-dispersion branch. One collective field freezes the angular
-constraint and the total phase on the entire right part. The
-remaining left-root part has a separated product kernel and needs
-only a bounded anchor field. Determinant minors retain factorial
-decay, while oblique coarea gives one estimate for every right-side
-diameter. A fixed finite mean gap places the small-order collision
-charts away from the branch.
+The first estimate follows by rescaling the local shape variables.
+For the second, we deform the constrained angular torus and then
+partition it. Centering the regular coordinate at the moving branch
+point gives uniform coefficients for parameter differentiation. A
+tangential field preserves the angular constraint and total phase on
+the right part, while a bounded field anchored at a compact left root
+handles the part with a separated product kernel. Determinant minors
+give factorial decay, and coarea controls the dependence on the
+collision diameter. A fixed gap separates the finitely many small-order
+equality means from the branch.
 
 \subsection*{AI Declaration}
 ChatGPT was used extensively in the mathematical research, proof development,
@@ -163,9 +162,9 @@ Each kernel entry has the rational square
  K_{il}^2=-\frac{(y_i-y_l)^2z_i z_l}
                     {y_i y_l(1-z_i z_l)^2}.
 \end{equation}
-The determinant is used directly in the physical expansion.
-Section~\ref{sec:determinant-local} proves its collision zeros
-and the precise local coefficient needed below.
+The physical expansion uses the determinant directly.
+Section~\ref{sec:determinant-local} gives its collision
+multiplicities and local coefficient.
 
 Let the constrained torus and its normalized Haar measure be
 \[
@@ -234,9 +233,9 @@ Hadamard's inequality supplies the determinant factor. The bound is
 summable in all sites and all even $N\ge2$, so the lattice and
 particle sums may be interchanged.
 
-Summing over $b\in\mathbb Z$ gives $(1+Z)/(1-Z)$. To justify
-the other direction with its exact normalization, for a periodic
-function $F$ on $\mathbb T^N$ define
+Summing over $b\in\mathbb Z$ gives $(1+Z)/(1-Z)$. For the other
+lattice direction, associate to each periodic $F$ on $\mathbb T^N$
+a function of the total angle given by
 \[
  Q(v)=\int_{\mathbb T^{N-1}}
  F(\theta_1,\ldots,\theta_{N-1},v-\textstyle\sum_{i<N}\theta_i)
@@ -312,7 +311,7 @@ $\mathbb Q(\zeta_{pn})$. Its cyclotomic degree is
 $\varphi(pn)=\varphi(p)\varphi(n)$, so the two fields have intersection
 $\mathbb Q$. Thus a Nickel equation of order $n$ would make $S_*$
 rational. The displayed pair $(\alpha,\alpha)$ is available at order
-$2p$, proving the first-order assertion.
+$2p$, which is therefore the first even order.
 
 Next $\xi+\xi^{-1}=2u_a-2$, so $\xi$ is algebraic. If $\xi$ were a
 root of unity, every conjugate of $2u_a-2$ would lie in $[-2,2]$.
@@ -337,10 +336,9 @@ $1\leq a<p/4$, and $2\pi a/p\to\alpha_0$.
 \section{A product identity for the correlation determinant}
 \label{sec:elementary-pfaffian}\label{sec:determinant-local}
 
-The dispersion relation makes a four-point identity an ordinary
-Vandermonde determinant.  Pfaffian condensation then proves the
-identity at every even order.  We give both steps, since they also
-fix all local signs and collision multiplicities.
+A Vandermonde determinant gives the four-point identity on the
+dispersion curve. Pfaffian condensation then extends the identity to
+every even order, determining the signs and collision multiplicities.
 
 \begin{lemma}[Four points on the dispersion curve]
 Let nonzero $y_i,z_i$ satisfy
@@ -410,7 +408,7 @@ four.  The elementary Pfaffian condensation identity is
   -\operatorname{Pf}K_{Iac}\operatorname{Pf}K_{Ibd}
   +\operatorname{Pf}K_{Iad}\operatorname{Pf}K_{Ibc}.
 \]
-For completeness, when $K_I=A$ is invertible, the simultaneous
+When $K_I=A$ is invertible, simultaneous
 row and column elimination in
 $\left[\begin{smallmatrix}A&B\\-B^T&C\end{smallmatrix}\right]$
 has determinant one and gives the diagonal blocks
@@ -449,10 +447,10 @@ At order four,
        =-\Bigl(\prod_i r_i^3\Bigr)\prod_{i<j}B_{ij}
        =\prod_{i<j}K_{ij}.
 \]
-Thus the preceding identity is the four-point hypothesis for $K$.  Apply Lemma~\ref{lem:pf-propagation} at
-generic points, where all pair entries are nonzero, then clear
-denominators and continue.  This argument also covers
-degenerate parameter values by continuation.  The identity
+The preceding identity verifies the four-point hypothesis for $K$.
+Apply Lemma~\ref{lem:pf-propagation} at generic points, where all pair
+entries are nonzero, then clear denominators and extend by analytic
+continuation to degenerate parameter values. The identity
 $(\operatorname{Pf}K)^2=\det K$ gives the second equality.
 Changing a square root changes one row and its column by a
 minus sign and leaves both determinant expressions invariant.
@@ -485,7 +483,7 @@ Indeed the combined phase is
 $(-i)^N(-1)^{N(N-1)/2}=i^{-N^2}=1$ for even $N$.
 \end{corollary}
 
-\section{A product-preserving deformation of the whole-bulk integral}
+\section{Deformation preserving the total angle}
 \label{sec:constrained-deformation}
 
 We use the normalized coefficients $C_N$ of
@@ -500,9 +498,9 @@ The constants in this section may depend on the selected point and a
 fixed derivative order $k$, but never on the even particle number $N$
 or on $\varepsilon$.  The infinite-tail estimates concern $N\ge N_*+2$, where
 $k=N_*^2/2-1$. Set $N_c=2k+4$.
-We prove logarithmic absolute bounds through $k$, which are
-smaller than the first singular term. The deformation and the regular transport formulas
-are also used at fixed even orders $2\le N\le N_*$ in
+The logarithmic absolute bounds through order $k$ are smaller than
+the first singular term. The deformation and transport formulas also
+apply to the fixed even orders $2\le N\le N_*$ in
 Section~\ref{sec:first-single}.
 
 For the regular dispersion coordinate we write
@@ -550,9 +548,10 @@ On the upper semicircle the motion in
 semicircle it is outward.  Both motions increase $\Im W$.
 For the admissible exterior parameters it remains positive, so every
 $z_i$ stays on the interior sheet.  Thus $1-Z$ and all the pair
-denominators $1-z_i z_l$ stay nonzero.  The kernel square \eqref{eq:kernel-square} has no
-$1-y_i y_l$ denominator.  The closed constrained torus therefore
-undergoes a legal holomorphic homotopy.
+denominators $1-z_i z_l$ stay nonzero. The rational expression
+\eqref{eq:kernel-square} has already canceled the factor $1-y_i y_l$.
+The closed constrained torus therefore undergoes a holomorphic
+homotopy.
 
 Write $w_i=\theta_i-i h_i$, so $\sum_iw_i=\sum_i\theta_i$.
 The full matrix $I-iDh$ preserves the tangent hyperplane and induces
@@ -687,8 +686,7 @@ below if needed, so that
 The minimum is positive by Lemma~\ref{lem:prime-root-family}.
 The right interval will be $[-b-\delta_B,\delta]$; its
 complement on the one-sided support has a compact left root.
-Only this one smooth division will be needed. The displacement
-strength is chosen after these fixed margins and cutoffs.
+Choose the displacement strength after fixing these margins and cutoffs.
 
 Let
 \[
@@ -966,13 +964,11 @@ The same formula holds for $V$ multiplied by any scalar density.
 Thus ambient divergence restricts to constrained divergence without
 an additional measure factor. Integration by parts applies to the
 real and imaginary parts of these complex fields.
-The identity is for scalar coefficients; it does not assert a new
-intrinsic complex measure on $\mathbb H_N$. Smooth real bumps are
-never analytically continued. Formal $q$ differentiation is the
-commuting complex frame $(D_\theta\chi_s)^{-1}\nabla_\theta$; its
-coefficients and their derivatives are controlled below.
-
-More explicitly, if $A_\chi=D_\theta\chi_s$, set
+The identity acts on scalar coefficients relative to the original
+real constrained measure on $\mathbb H_N$. The cutoffs and
+occupancies are smooth functions of the real angles.
+The commuting frame $(D_\theta\chi_s)^{-1}\nabla_\theta$ represents
+$q$ differentiation. With $A_\chi=D_\theta\chi_s$, its operators are
 \[
  E_a=\sum_i(A_\chi^{-1})_{ia}\partial_{\theta_i},\qquad
  E_s=\partial_s-
@@ -981,9 +977,7 @@ More explicitly, if $A_\chi=D_\theta\chi_s$, set
 Then $E_a\chi_b=\delta_{ab}$ and $E_s\chi_b=0$. Every commutator
 $[E_a,E_b]$ or $[E_s,E_a]$ is a linear combination of the real
 angular derivatives and annihilates all $\chi_b$. Invertibility of
-$A_\chi$ therefore makes every commutator zero. This is a pointwise
-differential-operator calculation on the original real domain, and
-requires no complex extension of its smooth occupancy functions.
+$A_\chi$ therefore makes every commutator zero on the real angular domain.
 
 \subsection{A bounded transport when a left root is present}\label{sec:left-gap}
 
@@ -1071,9 +1065,8 @@ The same occupancies occur in both $h_i,h_j$, so
 Consequently $|R|\ge c d^2$ and
 $\sum_{i<j}|U_i-U_j|^2\le C|R|$.
 
-Only a global diameter zero is needed for parameter derivatives.
-The identities $U(s,0)=w_B(s)$ and $U_q(s,0)=0$ give, on the
-fixed convex domain,
+To estimate parameter derivatives in terms of the diameter, use
+$U(s,0)=w_B(s)$ and $U_q(s,0)=0$ on the fixed convex domain to obtain
 \begin{equation}\label{eq:q-16}
  |\partial_s^a U_q(s,q)|\le C_a|q|.
 \end{equation}
@@ -1126,12 +1119,11 @@ For the angular representative, the exact frame coefficients are
 Their fixed jets are bounded by induction: differentiate
 $M^{-1}$ by $D(M^{-1})=-M^{-1}(DM)M^{-1}$, and use the bounded
 real angular derivatives of $M$ and the bounded analytic jets
-of $U_q,\dot U$. Each fixed number of index sums costs only a
-polynomial in $N$. The same induction applies to every original
-smooth real cutoff and its fixed angular derivatives.
-No inverse factor $U_q^{-1}$ is introduced. Applying the product
-rule to \eqref{eq:q-6} therefore proves the same bound for $V$,
-and justifies iterating \eqref{eq:q-9} with those real cutoffs.
+of $U_q,\dot U$. At fixed order the index sums contribute a
+polynomial in $N$. The same induction bounds the jets of the real
+cutoffs. The frame formulas involve $U_q$ with a nonnegative power.
+Applying the product rule to \eqref{eq:q-6} gives the same bound for $V$
+and permits iteration of \eqref{eq:q-9} with these cutoffs.
 \end{proof}
 
 At fixed $\varepsilon,N$, the complete product identity gives
@@ -1142,17 +1134,17 @@ order $j\le k$ whenever
 \begin{equation}\label{eq:q-18}
 N^2-2j-3>0,\qquad N\ge N_*+2,\quad k=N_*^2/2-1.
 \end{equation}
-No partial-diagonal flux occurs, since all pair quotients in \eqref{eq:q-12}
-are regular. Perform the transports on the whole smooth right term
-before selecting extrema or diameter shells.
+The pair quotients in \eqref{eq:q-12} are regular, so fluxes need be
+checked only at full equality. Apply the transports to the smooth right
+term before selecting extrema or diameter shells.
 
-For clarity, a derivative of a determinant marks one matrix entry;
-its complementary minor retains Hadamard's bound. A fixed number
-of derivatives has only polynomially many index choices. Each
-field coefficient costs one inverse diameter, its coordinate
-derivative costs one more, and its parameter derivative costs none.
-The product rule and divergence therefore give, by induction,
-the following filtration:
+Differentiating a determinant marks a matrix entry and leaves a
+complementary minor to which Hadamard's inequality applies. At fixed
+order the number of index choices grows polynomially in $N$. Each field
+coefficient costs one inverse diameter, its coordinate derivative
+costs one more, and its parameter derivative preserves the power.
+The product rule and divergence give the following filtration by
+induction.
 a descendant after $j$ transports contains $\ell$ marked entries and
 a scalar loss $d^{-h}$ with
 \begin{equation}\label{eq:q-19}
@@ -1198,7 +1190,7 @@ Thus $a_0+\operatorname{dist}(v,P_\vartheta\mathbb Z)$ is
 bounded by a constant times the preceding lower bound.
 For $a\ge1$, $|1-e^{-iG}|\ge1-e^{-1}$ and the proposed
 denominator is bounded above by $1+P_\vartheta/2$.
-Integration over translates of one period proves the final claim.
+Integrating over translates of one period gives the integral bound.
 \end{proof}
 
 
@@ -1302,9 +1294,7 @@ retains \eqref{eq:g-G3}.  Therefore, with $d=M-m$,
 \end{aligned}
 \end{equation}
 
-We now restore the entire occupancy dependence rather than
-moving the occupancies along that auxiliary comparison curve.
-Set
+Differentiate on the constraint with both occupancies varying, and set
 \[
  B_m^{\rm occ}=\sum_v m(\theta_v)b_s(w_v),\qquad
  B_p^{\rm occ}=\sum_v p(\theta_v)b_s(w_v).
@@ -1332,9 +1322,9 @@ Since $M+E$ lies in a fixed bounded interval, the exact
 expression in \eqref{eq:g-G4} gives
 $d(m+E)^{-1/2}\le CL$.  Choosing $\tau$ small absorbs the
 correction into half the positive projection in \eqref{eq:g-G4}.
-This comparison uses the actual extreme configuration only;
-it does not presume a Hessian bound along a transposition path
-on which unchanged indices might become more extreme.
+This compares the derivative at the actual extreme configuration.
+The auxiliary curve was used to compare the two frozen-occupancy
+endpoint values.
 
 The numerator in \eqref{eq:g-G1} is at most
 $C[(m+E)(M+E)]^{-1/2}$, with the constant enlarged on the bounded interval.
@@ -1367,9 +1357,9 @@ For fixed other coordinates and a fixed constrained sum,
 the conditions specifying the extreme indices, a diameter
 shell, and a nonnegative minimum are linear interval conditions
 in the remaining variable $m$, with $M=A-m$.
-Their intersection is therefore one interval. The negative
-part is bounded directly below. No assertion about the number
-of components of a smooth-cutoff fiber is required.
+Their intersection is one interval. This is the enlarged geometric
+fiber after bounding the smooth cutoff. The estimate for a negative
+minimum is given below.
 
 \subsection{A fixed mean scale for every diameter}
 
@@ -1478,8 +1468,8 @@ $N_*+2\le N\le N_c$, the finite-mean argument following
 \eqref{eq:q-28} gives a finite constant times $H+1$.
 These estimates include every part of the exact identity
 $C_N=F_N+2L_N$. Summing proves the theorem.
-Since $\varepsilon^{1/2}(1+|\log\varepsilon|)\to0$, this is
-the required noncancellation estimate.
+Since $\varepsilon^{1/2}(1+|\log\varepsilon|)\to0$, the tail is
+smaller than the first singular term.
 
 The choices have the following order: the selected point,
 $k$ and $N_c$; the fixed endpoint slivers and inverse-coordinate
@@ -1487,9 +1477,8 @@ neighborhood; the finite mean gap and a sufficiently small
 branch width; the smooth bumps and right cutoff; a sufficiently
 small fixed $\tau$; the protected parameter-disk constants;
 and finally $\varepsilon_0$. Each estimate holds uniformly in
-all tail orders after those choices. The diameter divisions
-are made only after the complete weighted integrals have
-been transported.
+all tail orders after those choices. Divide into diameter ranges
+after transporting the complete weighted integrals.
 \end{proof}
 
 \section{The first singularity on the constrained angular torus}
@@ -1501,12 +1490,10 @@ Fix $\zeta=e^{i\alpha}$ from Lemma~\ref{lem:prime-root-family}, and put
  s_\varepsilon=(1+\varepsilon)\zeta,
  \qquad H=\log(1/\varepsilon).
 \]
-We use the complete coefficients $C_n$ in \eqref{eq:angular-bulk}.
-The product-preserving deformation and its reflection decomposition
-\eqref{eq:constrained-split} will also be used at the finitely many
-orders $2\le n\le N$.  The formulas for the deformation and the
-transport fields are independent of the order restriction used in
-summing the infinite tail.
+Use the coefficients $C_n$ in \eqref{eq:angular-bulk}.
+The same deformation and reflection decomposition
+\eqref{eq:constrained-split} apply for $2\le n\le N$, since
+the deformation and field formulas hold at these orders.
 
 The geometric choices already made give $\delta<\alpha/2$ and
 \eqref{eq:finite-mean-exclusion}. Hence $-\alpha$ lies on
@@ -1538,8 +1525,7 @@ unit pair-product zero on these physical contours is at a
 dispersion branch, and the displacements separate those
 branches. Compactness supplies a fixed parameter disk on
 which the localized integrand is bounded and holomorphic.
-This argument includes $n=2$ and does not require the
-fourfold convolution bound.
+This fixed-order compactness argument also applies at $n=2$.
 
 The left-root pieces of $L_n$ have bounded fixed derivatives
 by the anchor construction of Section~\ref{sec:left-gap}.
@@ -1584,9 +1570,9 @@ scalar transport gives the pointwise bound
 \[
  C_{n,j}\frac{\prod_i|1+\varphi_w(w_i)|}{|1-Z|}.
 \]
-Retain the two actual extreme-coordinate factors for
-Lemma~\ref{lem:global-coarea}; only after their absorption
-are the other factors replaced by independent majorants.
+Retain the two extreme-coordinate factors for
+Lemma~\ref{lem:global-coarea}, then bound the remaining factors
+by independent majorants.
 For a negative minimum use \eqref{eq:q-26} instead.
 There are finitely many means, extreme-index choices and
 diameter shells with $d\ge d_0$. Equations
@@ -1757,8 +1743,7 @@ The factor two in $\Lambda_\alpha$ counts the two reflected
 centers; the separate factor two in $A_\alpha$ comes from $1+Z=2$.
 For $j<k$ every denominator power is at most $k$, so the same
 radial integrability argument and the complementary lemma prove
-boundedness.  The lower-order conclusion is already contained
-in that lemma.
+boundedness.
 \end{proof}
 
 The radial phase is also explicit: $k=2p^2-1\equiv1\pmod4$ implies that
@@ -1788,8 +1773,8 @@ Since $\Mtwo$ is analytic and nonzero at this nonaxis point,
 the exact identity $\X=\Mtwo U$ transfers noncontinuation to
 the full connected bulk function.
 
-For completeness, its physical leading coefficient follows directly.
-The radial function $g(\varepsilon)=U((1+\varepsilon)\zeta)$
+To obtain the physical leading coefficient, set
+$g(\varepsilon)=U((1+\varepsilon)\zeta)$. This function
 has $g^{(k)}(\varepsilon)=O(\varepsilon^{-1/2})$.
 Integrability gives a finite limit of $g^{(k-1)}$ at zero;
 successive integration gives finite limits of all lower derivatives.
