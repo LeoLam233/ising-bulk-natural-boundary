@@ -42,43 +42,30 @@ susceptibility in two complex coupling variables\newline
 \begin{document}
 \maketitle
 \begin{abstract}
-We prove natural-boundary results for the complete connected zero-field
-response of the infinite nearest-neighbor square-lattice Ising model
-with two independent complex couplings. We first identify explicit
-high- and low-temperature domains in \(\C^2\) as components of a
-spectral complement. On each domain the physical full sum has a
-single-valued holomorphic continuation, and this continuation fails to
-extend through every boundary point.
-
-Three local arguments produce the boundary obstructions. At regular
-positive edges, a first singular derivative survives the entire
-higher-particle tail. At negative odd-particle edges, exact pole periods
-make one particle index dominate selected high Taylor coefficients of
-the complete sum. On the collinear isotropic restriction, a separate
-even--odd tail estimate supplies the obstruction. The regular-edge
-arguments hold along arbitrary nonramified holomorphic transverse
-curves and locally uniformly in complex dispersion parameters.
-
-Exact pullbacks recover both prescribed temperature domains for every
-finite positive coupling ratio, including their exceptional boundary
-points. The map \(s=\sinh z\) gives the full isotropic interior and
-exterior descendants with their distinct physical germs. Every result
-retains the onsite term, all lattice sites and particle indices, the
-plus-phase subtraction, and the relation \(\chi=\beta\mathcal X\).
-The natural-boundary statements concern the physical frontiers; no
-singularity assertion is made throughout the interior of the spectral set.
+We determine natural boundaries for the bulk zero-field susceptibility
+of the infinite square-lattice Ising model with two independent complex
+couplings. The high- and low-temperature physical germs extend
+holomorphically to explicit components of a spectral complement in
+\(\C^2\). At resonant edges, a nonzero leading derivative survives the
+differentiated particle tail. At negative edges of the odd sum, exact
+pole periods give a single dominating particle index at selected
+Taylor orders. The regular-edge estimates apply along holomorphic
+transverse curves with nonramified edge coordinate and are locally
+uniform in complex dispersion parameters. An even--odd tail estimate
+treats the collinear isotropic restriction. Exact pullbacks give the
+natural boundaries at every fixed positive coupling ratio, and the
+map \(s=\sinh z\) gives the isotropic disk and exterior germs.
 \end{abstract}
 
 \section{Main results and the physical observables}
 \label{main:statement}
 
 The zero-field susceptibility sums spin correlations over the entire
-square lattice. To derive a natural boundary from its form-factor
-expansion, singularities of finite-particle integrals must be combined
-with estimates for the remaining infinite sum
-\cite[Section 3.2]{ONGP}\cite[Section 6]{BHM}.
-With independent complex couplings, nonextension on physical temperature
-lines also requires a separate argument.
+square lattice. Its form-factor expansion leads to a noncancellation
+problem for an infinite series of singular integrals
+\cite[Section 3.2]{ONGP}\cite[Section 6]{BHM}. With two independent
+couplings the analytic problem includes both the joint continuation
+and the continuations on the physical temperature lines.
 
 The variables \(K_x,K_y\) are independent coupling coordinates.
 Put
@@ -91,10 +78,10 @@ Put
 For real positive couplings, \(\mathcal X_H\) is the sum of all
 two-spin correlations in the unique high-temperature Gibbs state;
 \(\mathcal X_L\) is the sum of all connected two-spin correlations
-in the infinite-volume plus phase. Their precise definitions and the
-physical interface are in Section~\ref{ana:physical}.
+in the infinite-volume plus phase. Section~\ref{ana:physical}
+gives the physical definitions and identifies their form factors.
 
-Define independently of any susceptibility
+Define the spectral set by
 \[
  \Sigma=\{(K_x,K_y):A=Sa+Tb\text{ for some }a,b\in[-1,1]\}.
 \]
@@ -107,10 +94,9 @@ The two domains used in this paper are explicitly
        \cosh x\tanh u>|\cos y|,\quad
        \cosh u\tanh x>|\cos v|\bigr\}.\label{main:DL}
 \end{align}
-These are open sets in the original coupling space, using the displayed
-invertible linear change of coordinates. The HT domain is unbounded
-along decoupled directions; boundedness is asserted only for its
-positive-ratio temperature slices.
+In these coupling coordinates \(\DH\) is unbounded along the
+decoupled directions and its positive-ratio temperature slices are
+bounded.
 
 \begin{theorem}[Joint physical natural boundaries]\label{main:joint}
 The following assertions hold for both phases of the full bulk reduced
@@ -131,20 +117,19 @@ continuation on an accumulating connected component of its domain
 side. These are thus natural boundaries also for continuation in
 unramified Riemann domains over \(\C^2\), reached from the given
 physical germ.
-\item The proof gives more than an ambient obstruction. At a dense
-set on every regular boundary face, the complete physical sum is
+\item At a dense set on every regular boundary face, the complete
+physical sum is
 nonextendable along every holomorphic transverse curve on which the
 local edge parameter is nonramified. The estimates are locally
 uniform for a fixed selected phase and compact admissible subfamilies
 of bounded holomorphic complex-parameter families on common polydisks
-in a regular-edge chart. No uniformity over the primes or through
-\(\Im B=0\) is required. The degenerate equal-coupling restriction has the additional
-dense local obstructions of Proposition~\ref{iso:local-obstruction}.
+in a regular-edge chart. The collinear equal-coupling restriction
+has the dense local obstructions of
+Proposition~\ref{iso:local-obstruction}.
 \end{enumerate}
 Here regular faces and their edge parameters are specified by
 Definition~\ref{geo:regular-definition} and
-Proposition~\ref{geo:local-coordinates}. The final assertion is part
-of the parent construction needed for the exact restrictions below.
+Proposition~\ref{geo:local-coordinates}.
 \end{theorem}
 
 For every finite \(\lambda>0\), put
@@ -184,9 +169,9 @@ for the energy-field response
        \chi(\zeta)=\frac{\zeta}{2J_x}\,
                          \mathcal X(\iota_\lambda(\zeta)).
 \]
-The proof uses the curve-level part of Theorem~\ref{main:joint}
-and its analytic construction, rather than inferring a restriction
-obstruction solely from ambient nonextension.
+The proof of nonextension on a slice uses the transverse-curve
+estimates of Theorem~\ref{main:joint} and the local isotropic
+estimates at equal coupling.
 \end{theorem}
 
 \begin{corollary}[Exact isotropic descendants]\label{main:isotropic}
@@ -208,48 +193,35 @@ Section~\ref{iso:section}. The LT onsite term is
 The map \(\sinh\) is a biholomorphism from \(\Omega_{H,1}\)
 to the disk and is the universal covering from \(\Omega_{L,1}\)
 to the exterior, with deck translations \(\zeta\mapsto\zeta+2\pi\ii k\).
-The energy-field results follow with \(\beta=\zeta/(2J)\) on that
-physical continuation. No single-valued inverse temperature on the
-whole exterior is required.
+The energy-field response uses \(\beta=\zeta/(2J)\) on the physical
+temperature continuation.
 \end{corollary}
 
-\subsection{Related work and proof outline}
+\subsection{Relation to earlier work}
 
-The starting geometry is related to the unsquared anisotropic Nickel
-equation studied by Boukraa, Hassani and Maillard
-\cite[Section 6]{BHM}. That paper distinguishes multi-variable
-finite-integral singularities from the full-susceptibility question.
-The passage from these finite integrals to the susceptibility requires
-an obstruction for the complete particle sum. Sections~\ref{ana:edges}
-and \ref{neg:section} establish that obstruction on regular faces. In particular the set \(\Sigma\) has
-interior; neither its interior nor every finite-integral candidate is
-declared a singularity of the physical sum.
+The unsquared anisotropic Nickel equation appears in
+\cite[Section 6]{BHM}. The natural-boundary question for the
+susceptibility involves the infinite particle sum on the physical
+complementary components of \(\Sigma\). At regular faces
+Sections~\ref{ana:edges} and \ref{neg:section} control that sum using
+the first resonant derivative and the growth of boundary Taylor
+coefficients, respectively. Section~\ref{ana:interface} gives the
+real-temperature form-factor input.
 
-Sections~\ref{geo:section}--\ref{main:closure} establish the joint
-continuation and infinite-tail estimates required for
-Theorems~\ref{main:joint}--\ref{main:slices} and
-Corollary~\ref{main:isotropic}. Section~\ref{ana:interface} specifies
-the real-temperature exact-solution input.
+The joint domains include points off the positive-ratio lines. For
+example, \(z=\operatorname{arsinh}(1/2),\ w=\ii\pi/6\) lies in
+\(\DH\) and on no positive-ratio temperature line. At regular edges
+the independent coordinates \((C,B)=(A/S,T/S)\) allow both
+constant-\(B\) transversals and curves with varying \(B\).
+The exact decoupled-axis restriction \(\XH(K_x,0)=e^{2K_x}\)
+illustrates the distinction between joint and restricted
+continuation.
 
-The joint domains contain points outside all positive-ratio
-temperature lines. For example
-\(z=\operatorname{arsinh}(1/2),\ w=\ii\pi/6\) is an interior point
-of \(\DH\) and lies on no positive-real-ratio temperature line.
-The independent complex coordinates \((C,B)=(A/S,T/S)\) have
-nonzero Jacobian at every regular edge. Their common polydisks,
-constant-\(B\) transversals, and variable-\(B\) curve estimates
-are used explicitly. Conversely the exact identity
-\(\XH(K_x,0)=e^{2K_x}\) shows why restriction nonextension needs
-its own proof.
-
-The proof has three stages. Section~\ref{geo:section} determines the
-domains and the geometry of their frontiers.
-Section~\ref{ana:physical} constructs the holomorphic functions from
-the complete physical sums. Sections~\ref{ana:edges}--\ref{iso:section}
-then produce local obstructions that survive those sums.
-Section~\ref{main:closure} combines them to prove
-Theorems~\ref{main:joint}--\ref{main:slices} and
-Corollary~\ref{main:isotropic}.
+Section~\ref{geo:section} determines the geometry of the physical
+domains. Section~\ref{ana:physical} constructs the holomorphic
+susceptibilities, and Sections~\ref{ana:edges}--\ref{iso:section}
+give the local obstructions. Section~\ref{main:closure} proves the
+joint and slice theorems and the isotropic corollary.
 
 
 
@@ -523,8 +495,8 @@ For \(F_1,F_2>0\),
 so \(|p|<1\).  For \(F_1,F_2<0\), both inequalities reverse,
 so \(|p|>1\).  These arguments allow zero real parts as well.
 On the positive real quadrant the common sign of \(F_1,F_2\)
-is the sign of \(1-(\sinh x\sinh u)^2\), which proves the
-claimed physical identification.
+is the sign of \(1-(\sinh x\sinh u)^2\), which identifies the two
+real physical regions.
 \end{proof}
 
 \begin{remark}\label{geo:algebraic-branches}
@@ -899,8 +871,7 @@ coefficient is
        \cos(2\pi k/q),\qquad q\text{ an odd prime},\quad
                          1\leq k\leq(q-1)/2,
 \]
-are dense.  This assertion specifies a dense geometric
-family only; it does not assert singularity of a sum there.
+are dense.
 \end{proposition}
 
 \begin{proof}
@@ -1113,14 +1084,11 @@ endpoint, and its regular left boundary has negative
 endpoint, since \(x\) and \(u=\lambda x\) have the
 same sign.  On the LT boundary the endpoint signs
 are those in Remark~\ref{geo:endpoint-signs}, with
-\(v=\lambda y\).  Thus the negative odd endpoint
-problem occurs on the actual HT physical boundary
-for every anisotropic positive ratio; it is not
-removed by selecting the physical component.
-The ratio \(\lambda=1\) is deliberately excluded from
-Proposition~\ref{geo:slice-density}; its collinear
-degeneracy is the entire isotropic boundary, described
-instead by Lemma~\ref{geo:isotropic-cover}.
+\(v=\lambda y\). In particular the HT lens has a regular
+negative-endpoint side at every unequal positive ratio.
+At \(\lambda=1\), the spectral curve is collinear along the
+entire isotropic boundary and Lemma~\ref{geo:isotropic-cover}
+describes the slice geometry.
 \end{remark}
 
 \subsection{Exceptional boundary points and componentwise continuation}
@@ -1224,9 +1192,7 @@ holomorphic function \(F\) on an open neighborhood \(U\)
 of \(P\) which agrees with \(f\) on some connected
 component \(E\) of \(D\cap U\) satisfying
 \(P\in\overline E\).
-This definition allows agreement on only the component
-reached by a continuation path; it does not require
-agreement on every component of \(D\cap U\).
+The component \(E\) may be the one reached by the continuation path.
 \end{definition}
 
 \begin{corollary}[Propagation from dense genuine obstructions]
@@ -1252,19 +1218,12 @@ neighborhood of \(Q\) contained in \(V\).  Restricting
 \end{proof}
 
 \begin{remark}\label{geo:scope-nonextension}
-Proposition~\ref{geo:joint-density},
-Proposition~\ref{geo:slice-density}, and
-Corollary~\ref{geo:propagate-obstruction} are a geometric
-bridge.  To apply them to a susceptibility, the dense
-obstructions must be proved for the entire physical sum,
-with its normalization and tail included.
-For a fixed-ratio corollary, its local singularity
-calculation must remain valid along the corresponding
-analytic curve \(B=B(t)\) in the coordinates of
-Proposition~\ref{geo:local-coordinates}; a bare joint
-nonextension assertion does not imply the same for
-its restriction.  Nothing here claims that all of
-\(\Sigma\), which has interior, is a singularity set.
+Propositions~\ref{geo:joint-density} and \ref{geo:slice-density}
+give the dense families for Corollary~\ref{geo:propagate-obstruction}.
+For the susceptibility the required local obstruction is that of
+the normalized full sum. On a fixed-ratio slice it is obtained
+from the integral along the corresponding curve \(B=B(t)\) in the
+coordinates of Proposition~\ref{geo:local-coordinates}.
 \end{remark}
 
 \subsection{Pseudoconvexity of the spectral components}
@@ -1310,20 +1269,12 @@ sets are relatively compact there.
 
 \begin{remark}\label{geo:Hartogs-scope}
 The exhaustion establishes pseudoconvexity of the complementary
-components and excludes a compulsory Hartogs filling caused by
-failure of pseudoconvexity. Nonextension of the physical function
-is established separately by the whole-sum obstructions and the
-local continuation argument above.
+components. Nonextension of the physical susceptibility follows
+from the whole-sum obstructions and the local continuation argument.
 \end{remark}
 
 \section{The physical observable and joint holomorphy}
 \label{ana:physical}
-
-We now identify the function to which the boundary estimates will
-apply. The order is physical correlations, complete lattice sums,
-joint holomorphic continuation, and finally the energy-field
-normalization. Keeping these identifications together makes the
-onsite contribution and the ordered-phase subtraction explicit.
 
 Throughout this paper \(z=2K_x\) and \(w=2K_y\) are independent
 complex coordinates. Write
@@ -1331,9 +1282,8 @@ complex coordinates. Write
  S=\sinh z,\qquad T=\sinh w,\qquad
  A=\cosh z\cosh w,\qquad p=ST.
 \]
-No inverse temperature is introduced as an additional independent
-variable in \(\C^2\). For real positive \(K_x,K_y\), the
-dimensionless uniform field is denoted by \(\eta\). The zero-field
+For real positive \(K_x,K_y\), write \(\eta\) for the
+dimensionless uniform field. The zero-field responses are
 responses are
 \begin{align}
  \XH(K_x,K_y)
@@ -1348,17 +1298,16 @@ responses are
 The high-temperature state is the unique Gibbs state. The subscript
 \(+\) means the infinite-volume plus state; the fourth root in the last
 line is positive. These definitions include the origin, both axes and
-all quadrants. In particular the low-temperature onsite contribution
-is \(1-M^2\), not \(1\).
+all quadrants. The low-temperature onsite term is \(1-M^2\).
 
 \subsection{Real-temperature form factors and state identification}
 \label{ana:interface}
 
-Only the real, noncritical spin form factors are imported from the
-exact solution. The relevant finite-cylinder formulas at arbitrary
-separation are \cite[(35)--(39)]{BL}; their finite-lattice matrix-element
-factorization is proved in \cite[Theorem 6.1]{IL}, with the
-paramagnetic vacuum change in its Remark 6.2. In our convention put
+The real noncritical form factors come from the exact solution.
+The finite-cylinder formulas at arbitrary separation are
+\cite[(35)--(39)]{BL}. The finite-lattice matrix-element factorization
+is proved in \cite[Theorem 6.1]{IL}, with the paramagnetic vacuum
+change in its Remark 6.2. In our convention put
 \[
  B=T/S>0,\quad C=A/S,\quad
  \cosh\gamma(q)=C-B\cos q,\quad \gamma(q)>0.
@@ -1407,9 +1356,7 @@ difference of \(\log\sinh((\gamma(q)+\gamma(q'))/2)\) in
 \]
 Thus at each fixed separation the entire correction is bounded by
 \(C_{m,l}C^N\), uniformly in \(L,N\). Terms with \(N>L\)
-vanish on the discrete grid. In particular no estimate at a fixed
-particle number is being used to pass an unbounded particle sum
-through the thermodynamic limit.
+vanish on the discrete grid.
 For the real roots \(0<\rho(q)=e^{-\gamma(q)}\le r<1\),
 \[
  \left|\frac{\rho(q)-\rho(q')}{1-\rho(q)\rho(q')}\right|\le r<1.
@@ -1437,10 +1384,9 @@ No response of a zero-mean mixed state is substituted for
 \subsection{Double contours and the full lattice}
 \label{ana:double}
 
-The double-contour representation serves two purposes: its spatial
-geometric series counts every lattice site, and its two Schur products
-give summable bounds uniform on compact coupling sets. We first
-check its residues against the real form factors.
+The spatial geometric series of the double contour counts all
+lattice sites, and the two Schur products give summable bounds on
+compact coupling sets.
 
 Let \(\zeta,\eta\) now denote independent contour variables, and set
 \[
@@ -1459,9 +1405,8 @@ has the symmetric representation
  \frac{\dd\zeta_i\,\dd\eta_i}{(2\pi\ii)^2\mathcal D(\zeta_i,\eta_i)}.
 \end{equation}
 The circles have radii strictly less than and sufficiently close to
-one. This formula can be checked directly on the real physical
-region, as follows. At \(\eta=e^{\ii q}\) the inside root is
-\(\zeta=\rho=e^{-\gamma(q)}\), and
+one. On the real physical region, at \(\eta=e^{\ii q}\) the
+inside root is \(\zeta=\rho=e^{-\gamma(q)}\), and
 \[
  \mathcal D_\zeta(\rho,\eta)
    =\frac{S(1-\rho^2)}{2\rho^2},\qquad
@@ -1479,9 +1424,8 @@ Subtracting two dispersion equations gives the exact canceled pair
 \end{equation}
 The residues therefore give \(B^{N/2}\), and the pairs give
 \(B^{N(N-1)/2}\). This proves the full exponent and the normalization
-in \eqref{ana:ff}. Reflection of either spatial coordinate is
-legitimate; equality under interchanging the separations while holding
-unequal couplings fixed is not required.
+in \eqref{ana:ff}. Each spatial coordinate can be reflected
+independently at fixed couplings.
 
 The exact product of the two spatial geometric series is
 \begin{equation}\label{ana:fullsites}
@@ -1501,8 +1445,8 @@ The angular form of this complete coefficient is
  G_N=B^{N/2}\prod_i\frac1{\sinh\gamma_i}\prod_{i<j}P_{ij},
  \quad Z=\prod_i\rho_i.
 \end{equation}
-There are \(N-1\), not \(N\), independent normalized measures in this
-formula; \(q_N=-\sum_{i<N}q_i\) modulo \(2\pi\).
+The \(N-1\) independent normalized measures correspond to
+\(q_1,\ldots,q_{N-1}\), with \(q_N=-\sum_{i<N}q_i\) modulo \(2\pi\).
 
 \begin{proposition}[Joint normal convergence]\label{ana:normal}
 On each of the two domains \(\DH,\DL\) specified by the independent
@@ -1588,12 +1532,11 @@ zero, since \(A-T\cos q\ne0\). This construction is jointly
 holomorphic locally in the couplings and in a complex angular
 neighborhood. On positive real noncritical parameters,
 \((A-S-T)(A+S+T)=(p-1)^2\) shows \(W(q)>1\), so it is the
-physical decaying root. We take \(\gamma=-\log\rho\) only on
-local patches where \(\rho\ne0\); no global logarithm through a root
-zero is asserted.
+physical decaying root. On a patch with \(\rho\ne0\), use the local
+logarithm \(\gamma=-\log\rho\).
 
-We next match each normalized angular coefficient with its
-double-contour counterpart throughout the physical domain. Indeed
+The normalized angular coefficients agree with their double-contour
+counterparts throughout the physical domain. Indeed
 \(1/\sinh\gamma=2\rho/(1-\rho^2)\) and the rational expression
 for \(P_{ij}\) in \eqref{ana:pair} contain no logarithm. After
 including the physical normalization, their one-body prefactors are
@@ -1615,8 +1558,6 @@ equality with the double-contour coefficients throughout these sets.
 Near a regular edge \(S,T\ne0\), this also fixes the compatible
 local odd square root \(\sqrt B=\sqrt p/S\). Normal convergence
 of the identified series follows from Proposition~\ref{ana:normal}.
-Thus every boundary calculation below is a calculation of the global
-physical sum on its actual interior side.
 
 \begin{remark}[The decoupled-axis restriction]\label{ana:axis}
 On \(K_y=0\), the lattice splits into independent horizontal chains.
@@ -1626,10 +1567,9 @@ For \(t=\tanh K_x\) near zero its response is
 \]
 This agrees with \eqref{ana:globalHT}: \(p=0\), only \(N=1\)
 survives, and \(F_1=(A-S)^{-1}=e^{2K_x}\).
-The restriction is entire, although the joint domain has boundary
-points on this line. This exact example is why a bare joint
-nonextension assertion cannot be used to prove the slice part
-of the main theorem.
+The restriction is entire, including at boundary points of the
+joint domain on this line. The slice theorem uses the obstructions
+along the positive-ratio temperature lines themselves.
 \end{remark}
 
 \subsection{Energy-field normalization}
@@ -1665,12 +1605,10 @@ This statement is made on temperature lines only.
 \section{Regular spectral edges and transverse curves}
 \label{ana:edges}
 
-This section proves the positive-edge obstruction in independent
-complex dispersion parameters. A strict contraction controls the
-numerators, the higher-index tail remains bounded after differentiation,
-and the first resonant coefficient has a nonzero leading amplitude.
-Keeping the anisotropy holomorphic along the curve makes the result
-applicable to the physical temperature slices.
+At a resonant edge, strict contraction controls the form-factor
+numerators, and the differentiated tail is bounded. The leading
+amplitude is evaluated with holomorphic anisotropy along the curve,
+as needed on the physical temperature slices.
 On a regular edge, exchange the two lattice axes if necessary.
 In the local coordinates \(C=A/S,\ B=T/S\) of the geometry section,
 one edge is \(C-B=b\), \(b=\cos\phi\in(-1,1)\).
@@ -1724,8 +1662,8 @@ The identity
 gives a strict bound \(|a(\rho_i,\rho_j)|\le q_0<1\).
 The denominator is separated from zero. By continuity a slightly
 larger constant below one still works on a common \emph{complex}
-parameter polydisk; individual root moduli need not stay below one
-there. Every canceled pair \(P_{ij}\) remains bounded by \(C\).
+parameter polydisk, even at parameters where individual root moduli
+exceed one. Every canceled pair \(P_{ij}\) remains bounded by \(C\).
 
 For even \(N\), expand the Schur Pfaffian in the
 \(\eta_i=e^{\ii q_i}\) variables only. For each matching, combine
@@ -1783,7 +1721,7 @@ have mass one. Therefore Lemma~\ref{ana:matching} gives
  \le\frac{C_jN^j}{N!}
        \exp\{-\kappa N^2+C N\log(N+1)\},
 \]
-uniformly in \(\eps\). This covers an actual infinite index range.
+uniformly in \(\eps\).
 
 For each remaining fixed \(N\), the only configuration with
 \(|Z|=1\) is \(q_1=\cdots=q_N=0\). There \(Z=e^{-\ii N\phi}\);
@@ -1866,8 +1804,8 @@ continuation to \(a=nu,\ b=B_0/2\).
 More explicitly, rotate both coefficients by \(-\ii\):
 \(a'=n\eps>0\) and \(b'=-\ii B_0/2\) has positive real part.
 The absolutely convergent Laplace--Gaussian calculation for
-\(a',b'\) fixes the continuation and its square root. No assumption
-\(\Re B_0>0\) is made.
+\(a',b'\) fixes the continuation and its square root using
+\(\Re b'>0\).
 For odd \(n\), \(k=\alpha\) is a multiple of four; for even
 \(n\), \(k=\alpha-\tfrac12\) is odd. Substitution gives
 \begin{align}
@@ -1882,9 +1820,8 @@ For odd \(n\), \(k=\alpha\) is a multiple of four; for even
 \end{align}
 In the second line \(u^{1/2}=e^{\ii\pi/4}\sqrt\eps\).
 
-\emph{Comparison with the exact integral.} We now justify these
-limits for the actual fixed-\(n\) coefficient by controlling the
-difference from its quadratic model. On its collision chart write the exact integrand as
+\emph{Comparison with the exact integral.} On the fixed-\(n\)
+collision chart write the exact integrand as
 \(\Delta^2 f(q,u)/H(q,u)\). It is even under simultaneous
 \(q\mapsto-q\), and, with \(c=-\ii/\sin\phi\),
 \[
@@ -1905,9 +1842,9 @@ Its radial integral is \(O(\log(1/\eps))\) for odd \(n\), where
 Extending the differentiated model from the chart to the whole
 tangent plane costs \(O(1)\), since its radial tails are
 \(R^{-3}\) and \(R^{-2}\), respectively. Outside the chart the
-exact denominator has a gap. These bounds prove the two claimed
-limits, including for the actual holomorphic function \(B(u)\),
-whose contribution to the denominator remainder is \(O(uQ)\).
+exact denominator has a gap. The variation of \(B(u)\) contributes
+\(O(uQ)\) to the denominator remainder, so these estimates give both
+limits for the exact coefficient.
 
 \emph{Passage to the full sum.}
 Lemma~\ref{ana:positivetail} bounds all higher derivatives in the
@@ -1938,12 +1875,11 @@ derivative of the complete sum therefore has a finite boundary value.
 The obstruction appears in their growth: selected Taylor coefficients
 grow too rapidly to belong to a holomorphic function.
 
-We prove this for an arbitrary holomorphic anisotropy along a
-transverse analytic curve, retaining the exact particle-dependent
-anisotropy factor, the complete constrained angular integral and every
-odd particle number. The proof reduces the coefficients to pole
-periods, evaluates the first two windings, selects one dominant index,
-and bounds all remaining indices and windings.
+For a holomorphic anisotropy along a transverse curve, the proof
+uses the exact particle-dependent anisotropy factor and the full
+constrained angular integral. We reduce the coefficients to pole
+periods, evaluate the first two windings, and compare the dominating
+index with the other odd indices and windings.
 
 \subsection{Statement, branch, and the physical side}
 \label{neg:setup}
@@ -2032,10 +1968,9 @@ It contains \(t=-\epsilon\) for every sufficiently small
 \[
  t=\frac{C+B-b}{B}.
  \]
-The curve hypothesis is that this \(t\) is a nonramified local
-parameter.  Thus any transverse analytic curve through the selected
-endpoint is included, with its actual function \(B(t)\).  The opposite
-orientation is obtained by complex conjugating all the data.
+The curve hypothesis is that this \(t\) is nonramified, with \(B(t)\)
+the anisotropy along the curve. Complex conjugation gives the opposite
+orientation.
 
 \begin{theorem}[Universal analytic-curve obstruction at a negative edge]
 \label{neg:theorem}
@@ -2071,16 +2006,14 @@ The hypotheses and all estimates are locally uniform for complex
 holomorphic families \(B(t,\eta)\): it suffices to work on a common
 parameter disk and a relatively compact parameter polydisk on which
 \(\Im B(0,\eta)\le-\beta<0\) and \(B\) has a common holomorphic bound.
-The constants can depend on that disk, that bound, \(\beta\), and the
- fixed rational phase.  The selected integers are allowed to depend
- on the family parameter, \(j_n=j_n(\eta)\); a common sequence of
- selected integers for all \(\eta\) is not asserted.
+The constants can depend on that disk, that bound, \(\beta\), and
+the fixed rational phase. The selected integers may depend on the
+family parameter, \(j_n=j_n(\eta)\).
 \end{theorem}
 
-We prove the theorem by identifying a single particle index that
-dominates selected, increasingly high Taylor coefficients in modulus.
-The other indices have arbitrary complex phases; no positivity or
-phase alignment of the infinite sum is assumed.
+We identify a single particle index that dominates all others in
+modulus at selected Taylor orders, allowing arbitrary phases for
+the other terms.
 
 \subsection{A uniform Gaussian numerator bound and all boundary jets}
 \label{neg:jets-section}
@@ -2113,7 +2046,7 @@ The same strict bound, with a slightly larger \(\theta<1\), holds
 on a fixed complex parameter disk for all real angles.  Every
 complete canceled pair in \eqref{neg:canceled} is bounded there.
 
-For completeness, the Schur identity used here is
+The Schur identity here is
 \(\operatorname{Pf}(\mathcal A(y_i,y_k))_{i,k=1}^{N}
 =\prod_{i<k}\mathcal A(y_i,y_k)\) for even \(N\).
 It follows by induction in \(N\): as rational functions of \(y_N\),
@@ -2194,8 +2127,6 @@ convergence for each fixed \(j\) now proves
  \sum_n |[t^j]C_n(t)|<\infty .
  \label{neg:jet-sum}
 \end{equation}
-This establishes the existence of all the jets, but does not give
-a positive radius for their formal Taylor series.
 
 \subsection{An exact reduction to simple-pole periods}
 \label{neg:pole-reduction}
@@ -2373,8 +2304,7 @@ On the real zero-sum plane, with measure
        \quad(j+1>\alpha_n).
  \label{neg:beta-period}
 \end{align}
-To verify the constants, the unrestricted Gaussian Vandermonde
-integral is
+The unrestricted Gaussian Vandermonde integral is
 \(n!\prod_{r=0}^{n-1}(\sqrt\pi\,r!/2^r)
  =n!\pi^{n/2}P_n\).
 This follows by writing the Vandermonde as a determinant of monic
@@ -2503,9 +2433,8 @@ over the whole ball.  If
           {\sum_i g_t(T_n,d_n+v_i)} .
  \]
 The numerator has norm at most \(C\|v\|_2\); another
-differentiation gives the Hessian bound.  These arguments use
-fixed scalar derivative bounds for \(g\), not a Cauchy radius
-that shrinks with the dimension.
+differentiation gives the Hessian bound. Both steps use scalar
+derivative bounds for \(g\) on fixed neighborhoods.
 
 Introduce removable divided differences
 \begin{align}
@@ -2529,7 +2458,7 @@ Evenness of \(g\) in its second variable implies
  |\partial_z^2\mathfrak h_n|+|\partial_t\mathfrak h_n|\le C .
  \label{neg:divided-bounds}
 \end{align}
-For clarity, Taylor's integral formula writes
+Taylor's integral formula writes
 \(\mathfrak e_n/z^2\) as an average of
 \(g_{\delta\delta}(t,d_n+uz)\).  Its first \(z\) derivative
 is an average of \(g_{\delta\delta\delta}\), an odd function
@@ -2730,8 +2659,7 @@ fixed small ball.  Its value at zero is
  {n\,n!(2\pi)^{n-1}2^{n(n-1)}s_\phi^{2\alpha_n}} .
  \label{neg:center-residue}
 \end{equation}
-To check its phase and sign, the numerator divided by
-\(\Delta^2\) at the center has the factor
+At the center the numerator divided by \(\Delta^2\) has the factor
 \((\ii s_\phi)^{-n^2}\).
 Since \(n\) is odd, \(\ii^{-n^2}=-\ii\), while
 \(\partial_t\Gamma_n=-\ii nB_n/s_\phi\).
@@ -2827,8 +2755,6 @@ Consequently the entire boundary error has the bound
  (Cn)^j\exp\{-\kappa n^2+C n\log(n+1)+C\}.
  \label{neg:cycle-error}
 \end{equation}
-This argument estimates the exact residue form, not an
-approximate quadratic denominator.
 
 \subsection{A uniform beta evaluation of the first two windings}
 \label{neg:beta-evaluation}
@@ -2848,10 +2774,9 @@ For \(j+1>\alpha_n\), \eqref{neg:beta-period} yields
        \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)}.
  \label{neg:first-beta}
 \end{equation}
-The gamma quotient is retained exactly.  Replacing it by
-\(j^{-\alpha_n}\) would introduce a logarithmic error of
-order \(\alpha_n^2/j\), which is not uniformly small in
-the regime required below.
+The exact gamma quotient controls relative errors in the regime below,
+where replacing it by \(j^{-\alpha_n}\) incurs a logarithmic error of
+order \(\alpha_n^2/j\).
 
 We prove that \eqref{neg:full-density} has relative integrated
 error
@@ -3271,17 +3196,12 @@ The sum of all their relative errors is bounded by
 The same is true of all higher windings by
 \eqref{neg:higher-windings}.
 
-These classes exhaust every odd particle number and every
-winding, together with all analytic and cycle remainders.
-Combining them in \eqref{neg:jet-sum} proves the actual
-full-sum coefficient asymptotic
+Substitution of the estimates for all odd indices, windings and
+remainders into \eqref{neg:jet-sum} gives
 \begin{equation}
  a_{j_n}=M(n,j_n)(1+o(1)).
  \label{neg:full-asymptotic}
 \end{equation}
-In particular, this is a statement about the sum of the
-complex coefficients, not merely a comparison of individual
-singularity sets.
 
 \subsection{Nonextension and uniformity}
 \label{neg:conclusion}
@@ -3310,24 +3230,18 @@ and its derivatives.  A holomorphic family with
 parameter polydisk supplies these uniformly by Cauchy's
 estimate.  The square roots and logarithms near one used
 in the normal form also have common neighborhoods.
-The exact coefficient model continues to use the actual
-values \(B(\tau_n,\eta)\); nothing in the argument freezes
-the anisotropy.  The crossing argument and all range
- estimates are uniform on each such compact family, with
- \(c_*=c_*(\eta)\) and the selected orders \(j_n(\eta)\).
+The exact model uses \(B(\tau_n,\eta)\). The crossing and range
+estimates are uniform on each such compact family, with
+\(c_*=c_*(\eta)\) and selected orders \(j_n(\eta)\).
 This completes the proof of Theorem~\ref{neg:theorem}.
 
 
 \section{The isotropic restriction: a unified even--odd proof}
 \label{iso:section}
 
-The isotropic line is collinear in the joint edge geometry. We
-therefore prove its local obstructions directly from the complete
-form-factor integrals. The analytic estimates treat the two phases
-together, with particle parity as the phase-dependent ingredient.
-First we identify the full-site coefficients, then evaluate the first
-singular order, and finally control every higher order uniformly
-near the boundary.
+On the collinear isotropic line we use the full form-factor
+integrals directly. The analytic estimates treat both phases
+with their corresponding particle parities.
 
 Write $\zeta$ for the auxiliary exterior variable, and put
 \[
@@ -3335,8 +3249,7 @@ Write $\zeta$ for the auxiliary exterior variable, and put
  D(x,y;\zeta)=E(\zeta)-\tfrac12(x+x^{-1}+y+y^{-1}).
 \]
 For the low-temperature restriction $\zeta=s$; for the high-temperature
-restriction $\zeta=s^{-1}$. This is a change of variable, not a duality
-identification between the two susceptibilities. Define
+restriction \(\zeta=s^{-1}\). Define
 \begin{align}
  T_N^\sigma(\zeta)
  &=\frac1{N!}\oint\cdots\oint
@@ -3399,7 +3312,6 @@ offsite coefficient, and $C_N$ is the full lattice coefficient. Equivalently,
 where $\cosh\gamma_i=E(\zeta)-\cos q_i$ and $z_i=e^{-\gamma_i}$.
 The independent measure has $N-1$ coordinates, with
 $q_N=-\sum_{i<N}q_i$ modulo $2\pi$.
-For completeness, this equality can be checked before any boundary limit.
 On real $\zeta>1$ let $q_N(m,n)$ be $1/N!$ times the $N$-angle integral with
 multiplier $Z^mY^n$, measure
 $\prod_i\dd q_i/(2\pi\sinh\gamma_i)$, and the displayed squared pairs.
@@ -3451,8 +3363,8 @@ gives
  \label{iso:normal}
 \end{equation}
 The bound is summable. Cauchy's estimate on a larger compact neighborhood
-proves local normal convergence of every fixed derivative. The constants
-in this compact statement are not asserted uniform at the unit circle.
+proves normal convergence of every fixed derivative on compact
+exterior sets.
 
 \begin{lemma}[The selected first orders]\label{iso:arithmetic}
 Let $p\ge11$ be prime, choose distinct
@@ -3580,8 +3492,8 @@ $O(R)$. A fixed $j$th parameter derivative costs $O(R^j)$.
 Integrating by parts $\ell+j+1$ times with
 $(e\cdot\nabla)/(e\cdot\nabla g)$ leaves radial majorant $CR^{-2}$
 for $R\ge1$, including all coefficient and cutoff derivatives. The
-small-$R$ part is bounded directly. Omitting both product factors proves
-the onsite assertion. This argument is at fixed $N,j$ only.
+small-$R$ part is bounded directly. Omitting both product factors
+gives the fixed-\(N,j\) onsite bound.
 \end{proof}
 
 \begin{proposition}[Nonzero first amplitude]\label{iso:first}
@@ -3667,9 +3579,8 @@ power contributes at scale $\eps^{-1/2}$ for even $N$ and
 $\eps^{-1}$ for odd $N$. The radial majorants have tails $R^{-2}$
 and $R^{-3}$ respectively. Lower pole powers vanish after multiplication
 by the indicated singularity scale; splitting at $R=\sqrt\eps$ gives
-the logarithm at the odd lower derivative. This is dominated convergence
-after the mean residue, not of the unintegrated absolute mean--shape
-integral.
+the logarithm at the odd lower derivative. Dominated convergence
+applies to the shape integral after the mean residue.
 
 For $a=(N^2-1)/2$, let
 \[
@@ -3701,9 +3612,8 @@ $-\pi/2$. For odd $N$, $a=k$ is divisible by four, so that power is
 $|H_{\alpha\beta}|^k>0$ for either sign of $E_*$.
 The factor $\ii^{-N^2}$ equals one for even $N$ and $-\ii$ for odd
 $N$. Every remaining factor is symmetric in $\alpha,\beta$.
-This checks the equality of the two complex coefficients, including
-orientation and phase, rather than just equality of their moduli.
-The two charts therefore add. Finally
+The two chart coefficients are equal as complex numbers, including
+the sign from the orientation, and hence add. The identity
 $C_N=f_N+2T_N$ and Lemma~\ref{iso:fixed} give the factor four.
 \end{proof}
 
@@ -3830,7 +3740,6 @@ index as the separated pair. The nested widths ensure that the branch
 slope dominates the compact slope by at least four; preliminary upper
 endpoint neighborhoods fix the latter bound before their final shrinking.
 
-For clarity the quadratic pair estimate used throughout is proved next.
 At $\eps=\lambda=0$, lower angles lie in $[-\pi,0]$; their roots are
 real in $[z_0,1]$ on $[-\pi,-b_*]$ and are $e^{-\ii v}$,
 $0\le v\le b_*$, on $[-b_*,0]$, where
@@ -3910,9 +3819,8 @@ moduli are
  \frac{\cos((b_*-a)/2)}{\cos((b_*+a)/2)}
  =1+a\tan(b_*/2)+O(a^2).
 \]
-They can exceed one. Keeping the compact-group margins fixed before
-shrinking the slivers is what preserves the strict same-group bound;
-no claim that every sliver pair contracts is used.
+The excess over one is controlled by choosing the sliver widths after
+the compact-group margins and cross-group slack.
 
 For $n=N$ lower variables in $K$, or $n=N-1$ in a current, the number
 of same-group pairs is at least $n^2/6-n/2$ and the number of cross pairs
@@ -3978,9 +3886,9 @@ integral with its fixed angular weights, gives
  \label{iso:selected-bound}
 \end{equation}
 Here $e^{C_j\log^2(N+1)}N^{-N/4+j+1/4}$ is summable.
-Pointwise assignments need not be holomorphic, because none is separately
-differentiated. The argument applies to every $N$, not just a moving
-finite window, and also with the product poles deleted.
+The assignments are pointwise bounds for the full integral to which
+Cauchy's inequality is applied. The bound holds for all \(N\) and
+also with the product poles removed.
 
 \paragraph{The original and protected current disks.}
 On $|\zeta-\zeta_\eps|\le c\eps$, the undeformed imaginary margin
@@ -4137,8 +4045,9 @@ cutoff derivative adds one cutoff derivative and at most one pole.
 These are all product-rule terms in \eqref{iso:pullback}.
 There are $N^{O(j)}$ descendants. At most $j$ complete pair factors are
 changed in each descendant, so \eqref{iso:quadratic} survives on the
-others. One must not divide by the original Vandermonde, which would
-create poles at unselected collisions.
+others. The recurrence retains the differentiated numerator, since
+division by the original Vandermonde would introduce poles at
+unselected collisions.
 
 To select pairs smoothly, fix an integer $M>2k+2$ and use
 \[
@@ -4301,10 +4210,10 @@ For the simple-kernel integrations just used, the elementary inequality
 \]
 gives $C(1+\ell)(1+|\log a|)$ on an interval of length $\ell$.
 For two phases, divide out the specified real Jacobian, enlarge to the
-containing rectangle, and apply this estimate twice. Periodic wrapping
-is accounted for by interval lengths, separately from the stated
-unwrapped multiplicity. A coarea radius is never integrated a second
-time after being exchanged for a phase.
+containing rectangle, and apply this estimate twice. The interval
+lengths account for periodic wrapping, and the unwrapped multiplicity
+comes from the coarea map. The phase replaces the coarea radius in
+this integral.
 
 \paragraph{Mixed and compact sectors.}
 Use regular $\phi_i$ on true branch indices $J$, and original angles
@@ -4381,7 +4290,7 @@ phase lengths \(O(N)\) give a further
 \(N^{O(1)}(H+\log N)^2\) factor by the simple-kernel estimates.
 Below that scale use $\theta_i=\mu+\rho\omega_i$,
 $\sum\omega_i=0$, $\sum\omega_i^2=1$.
-Then $\rho\le\sqrt N\,N^{-K_0}$, not merely $N^{-K_0}$.
+In this range $\rho\le\sqrt N\,N^{-K_0}$.
 The phase map $(\mu,\rho)\mapsto(N\mu,G)$ has Jacobian at least
 $c_RN\rho/2$ and multiplicity one on each ray. The numerator costs
 $C^{N^2}\rho^{N(N-1)}$. After the same conservative losses its
@@ -4425,10 +4334,10 @@ is at most
 \]
 Summing \eqref{iso:middle-bound} over all intermediate orders costs
 $\exp(O_j(\sqrt H\log(H+2)))=o(e^{H/2})$.
-This proves the assertion for signed $T_N^\sigma$ at positive $E_*$;
-\eqref{iso:sign} and conjugation cover the other odd family.
-Equation \eqref{iso:onsite-bound} and $C_N=f_N+2T_N$ prove the
-full-site assertion of Theorem~\ref{iso:tail}.
+This gives the tail bound for signed $T_N^\sigma$ at positive $E_*$.
+Equation \eqref{iso:sign} and conjugation give the other odd family.
+The full-site bound follows from \eqref{iso:onsite-bound} and
+$C_N=f_N+2T_N$.
 
 \paragraph{Order of constants and quantifiers.}
 The point, $N_0,k$, radial margin and all required derivative orders are
@@ -4444,7 +4353,8 @@ $\eps_0$ small enough for all the preceding estimates. The elementary
 limits $\eps^r e^{CN}N^m\to0$ for $N\le D\sqrt H$ and fixed
 $r>0,C,m$ make this single choice uniform in that window.
 Finitely many small-order constants may be large but remain independent
-of $\eps$. No particle or current window endpoint is differentiated.
+of $\eps$. The particle and current windows are imposed after
+differentiation.
 
 \subsection{Dense local obstructions and the exact physical identities}
 
@@ -4515,7 +4425,7 @@ is interpreted on the physical continuation of
 $\beta_{\rm phys}=\operatorname{arsinh}(s)/(2J)$.
 At every selected nonaxis point this factor is analytic and nonzero,
 so the same dense obstructions hold for $\chi=\beta_{\rm phys}\mathcal X$.
-No global single-valued inverse temperature on the exterior is asserted.
+On the exterior the inverse temperature is read on the physical cover.
 
 Finally put $s=\sinh z$ on the equal-coupling restriction.
 The central cell
@@ -4540,23 +4450,17 @@ proof of the slice theorem and its isotropic descendants below.
 \section{Proofs of the joint, slice and isotropic theorems}
 \label{main:closure}
 
-All local estimates are now available. We first prove the joint
-boundary theorem, then prove nonextension on each fixed-ratio line
-using its own transverse geometry, and finally pass through the
-isotropic covering map. This order keeps restriction and descent
-logically separate.
-
 \subsection{The complete joint obstruction}
 
 \begin{proof}[Proof of Theorem~\ref{main:joint}]
 Theorem~\ref{geo:exact-sigma} determines the spectral set at every
 coupling, including collinear and zero-real-part degeneracies.
 Theorem~\ref{geo:components} identifies the physical components
-and their contractibility and \(p\)-bounds. Proposition~\ref{geo:pseudoconvex}
-gives an explicit plurisubharmonic exhaustion, independent of the
-susceptibility. Proposition~\ref{ana:normal}, with the physical
-interface and its coefficientwise angular identification, proves
-joint holomorphy and normal convergence of the actual physical sums.
+and their contractibility and \(p\)-bounds.
+Proposition~\ref{geo:pseudoconvex} gives their plurisubharmonic
+exhaustion. The physical form-factor and coefficient identities with
+Proposition~\ref{ana:normal} give joint holomorphy and normal
+convergence of the physical sums.
 
 Take a regular face point whose free coefficient is
 \(b=\cos(2\pi a/\ell)\), with \(\ell\) an odd prime and
@@ -4569,8 +4473,8 @@ At such a point \(S,T\ne0\), and the edge identity
 physical prefactor is analytic and nonzero.
 
 At a positive endpoint, restrict to any holomorphic transversal with
-nonramified edge coordinate \(u=C-B-b\). Its actual anisotropy
-is a holomorphic function \(B(u)\). Conjugating the data when
+nonramified edge coordinate \(u=C-B-b\), and write its anisotropy
+as \(B(u)\). Conjugating the data when
 needed gives \(\Im B(0)>0\), and the physical side contains
 \(u=\ii\eps\). Proposition~\ref{ana:positive} proves a nonzero
 singular derivative of the entire odd or even sum, including the
@@ -4583,7 +4487,7 @@ For a negative endpoint of the odd sum use
              t=\frac{C+B-b}{B}.
 \]
 This is also nonramified on the stipulated transversal, because
-\(B(0)\ne0\). In its lower-half-root orientation the actual
+\(B(0)\ne0\). In the lower-half-root orientation the anisotropy
 \(B(t)\) has \(\Im B(0)<0\), and the local physical side is
 \(\Im(B(t)t)>0\). Theorem~\ref{neg:theorem} gives all finite
 boundary jets of the complete odd sum and a selected sequence
@@ -4591,10 +4495,9 @@ whose coefficient roots diverge. Its exact full-sum asymptotic
 \eqref{neg:full-asymptotic} excludes cancellation by every other
 particle index and winding. Division by the nonvanishing physical
 prefactor proves the same nonextension for the physical response.
-The opposite orientation is its complex conjugate. The local uniform
-complex-parameter hypotheses and constants are stated and proved in
-Sections~\ref{ana:edges} and \ref{neg:section}; no estimate for
-real fixed ratios is promoted to a joint estimate without proof.
+The opposite orientation follows by conjugation.
+Sections~\ref{ana:edges} and \ref{neg:section} give the estimates
+uniformly on the indicated compact complex-parameter families.
 
 In particular choose a constant-\(B\) transversal. If the joint
 physical function extended to a neighborhood of the selected point,
@@ -4606,10 +4509,8 @@ regular faces are dense in the entire physical boundaries by
 Proposition~\ref{geo:joint-density}. Corollary~\ref{geo:propagate-obstruction}
 then excludes componentwise extension at every boundary point,
 including corners, collinear points and vanishing transfer-coordinate
-charts. This proves the joint assertion and its transverse-curve
-strengthening. Proposition~\ref{iso:local-obstruction}, proved
-from the full sums in Section~\ref{iso:section}, supplies the
-additional local assertion on the collinear equal-coupling restriction.
+charts. On the collinear equal-coupling restriction the local
+obstructions are those of Proposition~\ref{iso:local-obstruction}.
 
 Finally consider analytic continuation in an unramified Riemann domain
 over \(\C^2\) from one of these physical germs. As long as the
@@ -4622,20 +4523,17 @@ would yield a holomorphic function on a base neighborhood agreeing
 with the physical function on an accumulating domain-side component.
 The proved componentwise obstruction forbids this. Compactness of
 the finite path interval guarantees a finite first exit whenever the
-path reaches outside. Thus neither a monodromy construction nor a
-different unramified physical sheet bypasses the boundary. This
-uses the standard notion of holomorphic continuation, not a
-definition tied to the spectral set.
+path reaches outside. The obstruction therefore holds on every
+unramified continuation reached from the physical germ.
 \end{proof}
 
 \subsection{All physical ratios, including the collinear one}
 
-\begin{lemma}[Actual complex-ratio neighborhoods]\label{main:complexratio}
-At any regular selected point of a positive-ratio slice where its edge
-coordinate has nonzero derivative, the transverse representation and
-the boundary estimates hold in a neighborhood with \(\lambda\)
-complex. The uniformity is on common compact parameter polydisks,
-not merely pointwise on the real-ratio family.
+\begin{lemma}[Complex neighborhoods of the coupling ratio]\label{main:complexratio}
+At a regular selected point on a positive-ratio slice with nonzero
+edge derivative, the transverse representation is holomorphic in
+the complex ratio \(\lambda\) nearby. The boundary estimates hold
+uniformly on common compact parameter polydisks.
 \end{lemma}
 \begin{proof}
 The boundary temperature coordinate \(z_0\) is nonzero. Thus
@@ -4651,37 +4549,29 @@ the nonvanishing physical prefactor and the other strict face
 conditions. Cauchy estimates on a slightly larger polydisk give
 the common holomorphic bounds required in
 Proposition~\ref{ana:positive} and Theorem~\ref{neg:theorem}.
-Their proofs therefore apply to the actual complex-ratio family.
-In the negative case the selected integers may depend on the
-family parameter, as explicitly stated there. No boundary estimate
-is claimed uniform through the collinear degeneration at
-\(\lambda=1\); that restriction is treated by its own proved
-full-sum estimates. Joint holomorphy on interior compact sets already
-includes complex-ratio neighborhoods at \(\lambda=1\).
+For a negative edge the selected integers may depend on the complex
+ratio. The equal-coupling boundary is treated by the collinear
+estimates, and joint holomorphy on interior compact sets also applies
+in complex-ratio neighborhoods at \(\lambda=1\).
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{main:slices}]
 The exact open-set equalities are Theorem~\ref{geo:exact-pullbacks}.
-The restrictions are jointly constructed physical functions by
-Proposition~\ref{ana:normal}, and are holomorphic on precisely the
-stated pullbacks. A boundary point of either pullback maps to the
-corresponding joint boundary: it is a limit of domain points and
-cannot map to the joint interior by the same open-set equality.
+The physical sums of Proposition~\ref{ana:normal} restrict
+holomorphically to these pullbacks. A pullback boundary point
+maps to the corresponding joint boundary by the open-set equality
+and continuity.
 
-First fix \(\lambda\ne1\). Proposition~\ref{geo:slice-density}
-proves, separately on this actual complex line, density of regular
-boundary points at which the local edge map has nonzero derivative
-and its free phase is one of the chosen prime-grid values. This
-proof includes every finite positive ratio, whether rational or
-irrational. In particular it does not rely on intersecting an
-arbitrary ambient dense set with the line. At each such point the
-temperature line is a holomorphic curve \(B=B(u)\) or \(B=B(t)\)
-of exactly the kind treated in the proof of Theorem~\ref{main:joint}.
-Apply Proposition~\ref{ana:positive} or Theorem~\ref{neg:theorem}
-to this actual curve, retaining its varying anisotropy. These local estimates prove
-nonextension of the restricted complete physical sum. The
-one-variable collar in Lemma~\ref{geo:collar} and
-Corollary~\ref{geo:propagate-obstruction} give every boundary point.
+Fix \(\lambda\ne1\). Proposition~\ref{geo:slice-density} gives a
+dense set on this slice at which the edge map has nonzero derivative
+and the free phase is a chosen prime-grid value. At each such point
+the line is a holomorphic curve \(B=B(u)\) or \(B=B(t)\) of the
+type used in Theorem~\ref{main:joint}. Apply
+Proposition~\ref{ana:positive} or Theorem~\ref{neg:theorem} to
+that varying anisotropy. The restricted full sum is nonextendable
+there. The one-variable collar in Lemma~\ref{geo:collar} and
+Corollary~\ref{geo:propagate-obstruction} extend the obstruction
+to every boundary point.
 
 Now let \(\lambda=1\). The exact coefficient and normalization
 identities in \eqref{iso:physical-L}--\eqref{iso:physical-H}
@@ -4694,17 +4584,14 @@ biholomorphism. The selected obstructing points pull back densely
 on the nonramified boundary arcs. The remaining points with
 \(\cosh\zeta=0\) are limits of those arcs. The same local collar
 therefore proves nonextension everywhere on both slice boundaries.
-This argument uses no limit as \(\lambda\to1\).
 
-All nonzero even orders were retained after subtraction of the
-zero-particle \(M^2\), and the exact full-site multiplier retains
-the origin and both axes. Section~\ref{ana:physical} proves the
-physical energy-field equality \(\chi=\beta\mathcal X\) with
-the plus phase fixed in LT. Here \(\beta=\zeta/(2J_x)\) is an
-entire function of the slice coordinate and is nonzero on both
-boundaries: zero lies in the HT interior and is strictly outside
-the LT closure. Multiplication or division by it cannot change
-local boundary extendability. The result consequently establishes the claims in both response conventions.
+Section~\ref{ana:physical} identifies the energy-field response
+\(\chi=\beta\mathcal X\), with the plus phase fixed in LT. The
+complete coefficient sum includes the origin and both axes and
+subtracts the zero-particle \(M^2\) in LT. The entire factor
+\(\beta=\zeta/(2J_x)\) is nonzero on both boundaries, since zero
+lies in the HT interior and strictly outside the LT closure.
+It therefore preserves local boundary extendability.
 \end{proof}
 
 \subsection{Derivation of the complete isotropic theorems from the slice theorem}
@@ -4741,10 +4628,9 @@ Suppose one of these descended functions extended through a point
 on its physical slice. Composing the proposed extension with the
 entire map \(\sinh\) would extend the slice function near
 \(z_0\), in agreement on the physical side. This contradicts
-Theorem~\ref{main:slices}. This composition argument also works
-at the ramified boundary values \(s_0=\pm\ii\); no local inverse
-at those values is required. Hence the entire unit circle is a
-natural boundary for both normalized germs.
+Theorem~\ref{main:slices}. Composition with \(\sinh\) also applies at
+its ramified boundary values \(s_0=\pm\ii\). Thus the unit circle is
+a natural boundary for both normalized germs.
 
 Finally \(\beta=z/(2J)\) on the prescribed physical temperature
 continuation yields the energy-field claims. In the disk it is
@@ -4752,29 +4638,24 @@ the branch \(\operatorname{arsinh}(s)/(2J)\). In the exterior it
 is interpreted on the proved covering. At all selected nonaxis
 points it is analytic and nonzero, so the local singular
 derivative remains nonzero after the product rule; density gives
-all remaining boundary points. This proves the HT and connected LT descendants with their
-distinct germs and complete odd/even sums. Their natural-boundary
-conclusions follow from the estimates proved in this paper.
+all remaining boundary points.
 \end{proof}
 
-\section{Two examples on the scope of continuation}
+\section{Decoupled restriction and an interior spectral point}
 \label{main:verification}
 
-Two exact examples clarify the scope of these results. First the
-decoupled restriction \(K_y=0\) is entire, as proved in
-Remark~\ref{ana:axis}; it refutes an unrestricted principle that
-ambient nonextension passes to every complex line. The positive-ratio
-slice theorem instead uses its explicit transverse-curve argument and
-separate collinear proof. Second, \(\Sigma\) cannot be replaced by
-\(\{|p|=1\}\): at
+The decoupled restriction \(K_y=0\) is entire by
+Remark~\ref{ana:axis}, including across its intersections with the
+joint frontier. The fixed-ratio theorem uses the transversals on each
+slice and the collinear argument at equal coupling.
+
+The inclusion \(\{|p|=1\}\subset\Sigma\) is strict. At
 \[
  z=\ii\pi/2,\qquad w=\operatorname{arsinh}(1/2)
 \]
 one has \(A=0,S=\ii,T=1/2\), so \(a=b=0\) represents a
 spectral point, while \(|p|=1/2\). In fact \(F_1=-1/4,F_2=1\),
-so this point lies in the interior of \(\Sigma\). Thus the modulus level set is strictly smaller than the spectral
-set; the example makes no assertion of a physical full-sum
-singularity at this interior spectral point.
+so this point lies in the interior of \(\Sigma\).
 
 
 

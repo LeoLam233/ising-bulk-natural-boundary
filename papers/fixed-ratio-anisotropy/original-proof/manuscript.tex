@@ -39,24 +39,18 @@ for the fixed-ratio anisotropic square-lattice Ising model}
 \begin{document}
 \maketitle
 \begin{abstract}
-For every fixed finite positive coupling ratio, we establish natural
-boundaries for the complete bulk magnetic susceptibility on both
-physical temperature sides. The high-temperature domain is a bounded
-lens; the low-temperature domain is a simply connected epigraph.
-We first determine these domains from an independently defined spectral
-set and then prove that their full boundaries obstruct continuation.
-At regular positive edges, and at either sign of a low-temperature edge,
-a nonzero first singular amplitude dominates the entire differentiated
-particle tail. Negative high-temperature edges require a different
-mechanism: the odd-particle constraint excludes an exact endpoint
-resonance, so we use an exact symmetric pole normal form, a
-dimension-uniform beta-period estimate, and dominance of one particle
-index in selected high Taylor coefficients. The isotropic case follows
-from an exact coefficient match to the normalized isotropic results.
-The proof retains every lattice site, all particle orders, the physical
-field normalization, and the pure-phase low-temperature magnetization
-subtraction. Its inputs are the cited real-temperature spin form factors
-and the explicitly identified isotropic analytic theorems.
+For each fixed positive coupling ratio, we determine the natural
+boundaries of the high-temperature bulk susceptibility and the
+low-temperature connected pure-phase susceptibility. The continuation
+domains in the complex temperature variable are a bounded lens and a
+simply connected epigraph, respectively. At resonant edges, a nonzero
+leading derivative survives the differentiated particle tail.
+At negative high-temperature edges the odd momentum constraint
+excludes endpoint resonance. There a symmetric pole normal form and a
+dimension-uniform beta-period estimate identify a single dominating
+particle index at selected Taylor orders. The isotropic case follows
+by matching the full-lattice coefficients and prefactors to the
+normalized isotropic theorems.
 \end{abstract}
 \section*{Introduction}
 The form-factor expansion expresses the magnetic susceptibility of the
@@ -67,20 +61,18 @@ analyticity. Orrick, Nickel, Guttmann and Perk \cite[Section 3.2]{ONGP}
 studied the order dependence of the isotropic singularity amplitudes.
 Boukraa, Hassani and Maillard \cite[Section 6.2]{BHM} described the
 anisotropic cosine-grid singularity equations in two complex couplings
-and their accumulation. Restricting the physical coupling ratio fixes
-a one-variable temperature problem, whose spectral geometry and
-complete-sum obstruction are the subjects of this paper.
+and their accumulation. Fixing the physical coupling ratio gives a
+one-variable problem in which the physical components and their
+boundary singularities can be determined explicitly.
 
-We prove the natural-boundary theorem on the explicit high-temperature
-lens and low-temperature epigraph stated in Theorem~\ref{thm:aniso}.
 The published spin form factors of Bugrij and Lisovyy \cite{BL} and
-Iorgov and Lisovyy \cite{IL} identify the physical coefficients.
-The regular-edge proof separates a nonzero first singular derivative
-from the entire differentiated tail. At negative high-temperature
-edges, the obstruction instead comes from the growth of boundary
-Taylor coefficients. The equal-coupling case follows from the
-isotropic natural-boundary theorems of Lin \cite{LTsource,HTsource}
-through the exact coefficient identities in Section~\ref{sec:closure}.
+Iorgov and Lisovyy \cite{IL} identify the coefficients of the two bulk
+susceptibilities in Theorem~\ref{thm:aniso}. At resonant edges the proof
+uses the first singular derivative and an absolute tail estimate.
+At negative high-temperature edges it uses the growth of boundary
+Taylor coefficients. The equal-coupling case uses the isotropic
+natural-boundary theorems of Lin \cite{LTsource,HTsource} via the
+coefficient identities in Section~\ref{sec:closure}.
 
 \subsection*{AI Declaration}
 ChatGPT was used extensively in the mathematical research, proof development,
@@ -88,32 +80,15 @@ and preparation of this manuscript.
 
 \tableofcontents
 
-\medskip
-\noindent\textbf{Guide to the proof.}
-Section~\ref{sec:physical} constructs the complete observable and fixes
-the real-physics input. Section~\ref{sec:geometry} identifies its two
-spectral domains and the dense regular arcs of their boundaries.
-Section~\ref{sec:regular} treats the resonant edges by separating the
-first singular term from a uniformly controlled infinite tail.
-For negative high-temperature edges, Section~\ref{sec:morse} computes
-the local pole contribution and Section~\ref{sec:jets} compares all
-particle indices and windings. Section~\ref{sec:closure} then includes
-the exceptional points and the isotropic ratio.
-
-The main geometric picture consists of two components of the spectral
-complement: a lens around the origin and an epigraph to its right.
-The local estimates establish obstructions on dense regular boundary
-arcs; the closure argument carries them to every boundary point.
-
-\section{Fixed-temperature slice and the physical observable}\label{sec:physical}
+\section{Fixed-ratio slice and physical susceptibility}\label{sec:physical}
 
 Fix $J_x>0$ and $\lambda=J_y/J_x\in(0,\infty)$. Throughout,
 \begin{equation}\label{eq:variables}
  z=2\beta J_x,\qquad S=\sinh z,\quad T=\sinh(\lambda z),\quad
  A=\cosh z\cosh(\lambda z),\quad p=ST.
 \end{equation}
-The ratio $\lambda$ is fixed before any complex continuation; in particular,
-the generally varying ratio $T/S$ is not the fixed coupling ratio.
+The coupling ratio $\lambda$ is held fixed in the complex continuation,
+during which $T/S$ generally varies.
 There is a unique $z_c>0$ with $\sinh z_c\sinh(\lambda z_c)=1$.
 Define strictly increasing functions on $[0,\infty)$ by
 \begin{equation}\label{eq:physicalPQ}
@@ -150,28 +125,16 @@ the entire lattice and all particle indices. They apply separately to
 $\mathcal X=\beta^{-1}\chi$ and to $\chi$ with the field convention below.
 \end{theorem}
 
-\medskip
-\noindent\textbf{Proof dependence at equal coupling.}
-For every fixed $\lambda\ne1$, the natural-boundary obstructions
-are established in this paper. At $\lambda=1$, the argument invokes
-the previously proved natural-boundary theorems for the complete
-isotropic low- and high-temperature bulk susceptibilities
-\cite{LTsource,HTsource}. Section~\ref{sec:closure} proves the
-exact full-site coefficient identities and covering-map relations
-needed to apply those two results.
-
-For unequal couplings, the proof proceeds from spectral geometry to
-local boundary obstructions and then to their closure.
-The unequal-coupling constants can degenerate as $\lambda\to1$.
-Uniformity in $\lambda$ is therefore not part of the argument:
-local constants may depend on the fixed ratio and the selected
-boundary point. Both rational and irrational ratios are included.
+For $\lambda\ne1$, Sections~\ref{sec:geometry}--\ref{sec:jets}
+give the local boundary estimates with constants depending on the
+fixed ratio and selected boundary point. These constants can
+degenerate as $\lambda\to1$. At $\lambda=1$ the proof uses the
+normalized isotropic theorems \cite{LTsource,HTsource}.
+Section~\ref{sec:closure} gives the full-site coefficient identities
+and the covering relations for this application.
 
 \subsection{Field normalization and state}
 
-We first fix the response convention and the thermodynamic state.
-These choices determine both the prefactor relating response to the
-covariance sum and the subtraction in the ordered phase.
 Let the magnetic field have energy units, so the finite-volume Hamiltonian
 contains $-h\sum_v\sigma_v$, with $\sigma_v\in\{-1,1\}$ and magnetic
 moment set to one. Direct differentiation of the finite partition
@@ -238,7 +201,7 @@ pure-phase convention applies. The two bounds determine the derivative after the
 absolute summability controls the passage from finite covariance sums
 to the whole-lattice sum.
 
-\subsection{Published real-temperature form-factor interface}
+\subsection{Real-temperature spin form factors}
 Away from criticality on either positive real interval set
 \[
  B=T/S>0,\qquad C=A/S,\qquad
@@ -252,7 +215,7 @@ Let $f_N(m,l)$ be
  \frac{\sin((q_i-q_j)/2)}{\sinh((\gamma(q_i)+\gamma(q_j))/2)}
  \right]^2\prod_{i=1}^N\frac{\dd q_i}{2\pi}.
 \end{equation}
-The exact infinite-plane correlation interface used here is
+The infinite-plane correlations are
 \begin{align}
  \langle\sigma_{00}\sigma_{ml}\rangle
    &=\xi_H\sum_{N\ge1,\ N\text{ odd}}f_N(m,l),
@@ -263,14 +226,12 @@ The exact infinite-plane correlation interface used here is
 \end{align}
 All powers are fixed by their positive real values. These are the
 anisotropic vacuum-to-state spin form factors of
-\cite{BL,IL}, in the bulk normalization of \cite{ONGP}. In particular,
-$B^{N^2/2}$ is part of the $N$th term. Replacing it by a fixed prefactor
-would change both the observable and the infinite-index problem.
+\cite{BL,IL}, in the bulk normalization of \cite{ONGP}, with the factor
+$B^{N^2/2}$ in the $N$th term.
 
-To pass from the published finite-volume formulas to the plane, begin
-with the finite cylinder formulas in \cite[(35)--(39)]{BL}, which concern arbitrary separations,
-not just a single lattice row. Vacuum-to-state matrix elements are also
-covered by \cite[Theorem 6.1]{IL} in the LT phase and by its
+For the plane limit use the finite-cylinder formulas at arbitrary
+separation in \cite[(35)--(39)]{BL}. The vacuum-to-state matrix
+elements are given in \cite[Theorem 6.1]{IL} in the LT phase and in its
 Remark 6.2, equations (6.8)--(6.10), with the HT vacuum change.
 On a fixed real noncritical compact set, the one-body dispersion is
 analytic in a common angular strip and has a positive real gap. The
@@ -279,8 +240,8 @@ $\log\xi_T$ tend uniformly to zero: their sum-minus-integral expressions
 are controlled by the exponentially convergent trapezoidal rule for
 periodic analytic functions. They are uniformly bounded before the limit.
 
-The same limit must also commute with the particle sum. The required
-uniformity follows from the Schur contraction. For real roots
+The Schur contraction gives a summable majorant for the particle
+sum in the cylinder limit. For real roots
 $0<\rho(q)=e^{-\gamma(q)}\le r<1$, the Schur factor
 $|(\rho_i-\rho_j)/(1-\rho_i\rho_j)|$ is at most a constant strictly below
 one. The matched-Pfaffian argument proved in
@@ -300,15 +261,14 @@ of translations: unequal horizontal and vertical couplings satisfy all
 four stated hypotheses. Such a state is the equal mixture of the plus
 and minus states. Its even spin correlations are those of the plus
 state. This identifies the two-point function in \eqref{eq:LTcorr};
-the connected pure-phase observable is obtained only after removing
-the zero-particle term $\xi_L$.
+the connected pure-phase observable is obtained by removing the
+zero-particle term $\xi_L$.
 
 \subsection{Symmetric double contours and every lattice site}
 
-The symmetric contour form will serve two purposes: it keeps both
-lattice directions visible, and it makes the full-site summation an
-explicit rational multiplier. We first verify that it has exactly the
-normalization of the angular correlation coefficient.
+The symmetric contour represents the two lattice directions by
+independent variables and turns the lattice sum into a rational
+multiplier.
 For separate contour variables $x,y$ put
 \begin{equation}\label{eq:Dpoly}
  D(x,y;z)=A-\frac S2(x+x^{-1})-\frac T2(y+y^{-1}),\qquad
@@ -341,9 +301,8 @@ and subtraction of two dispersion equations gives
 the residue factors supply $B^{N/2}$ and the pair factors supply
 $B^{N(N-1)/2}$. This recovers precisely $B^{N^2/2}$.
 The remaining factors in \eqref{eq:doublecorr} give the stated Fourier
-and spatial decay factors. Reflection in each coordinate is legitimate;
-equality under interchange of the two separations at fixed unequal
-couplings is not assumed.
+and spatial decay factors. Each separation can be reflected
+independently at the fixed coupling ratio.
 
 The exact full-site multiplier in the double contour is
 \begin{equation}\label{eq:allsites}
@@ -454,12 +413,10 @@ Fix \(\lambda>0\), and use the one-complex-variable coordinate
  a(z)=\sinh z,\quad b(z)=\sinh(\lambda z),\\
  A(z)=\cosh z\cosh(\lambda z),\qquad p(z)=a(z)b(z).
 \end{gather*}
-The constraint \(K_y=\lambda K_x\) is imposed throughout. In particular,
-the ratio \(b/a\) is generally a nonconstant meromorphic function of
-\(z\); it must not be identified with the fixed coupling ratio
-\(\lambda\).
+Here \(K_y=\lambda K_x\) throughout, and \(b/a\) varies
+meromorphically with \(z\).
 
-\subsection{An independently specified spectral set}
+\subsection{The spectral set}
 
 \begin{definition}\label{def:spectralset}
 For \((u,v)\in[-1,1]^2\), let
@@ -480,13 +437,11 @@ Equivalently, it is the set where the elementary spectral polynomial
 has a zero with \(|X|=|Y|=1\).
 \end{definition}
 
-The definition is entirely spectral and is independent of the susceptibility
-construction. The anisotropic Nickel candidate equation
-in \cite[eq.~(54)]{BHM} is the restriction of
-\eqref{eq:spectralset} to cosine grids. The result here is geometric grid closure. A genuine obstruction for the
-infinite physical sum will require the amplitude and tail estimates in
-Sections~\ref{sec:regular}--\ref{sec:jets}; it does not follow solely
-from the candidate equation or a differential system singular locus.
+Restricting \eqref{eq:spectralset} to cosine grids gives the
+anisotropic Nickel equations \cite[eq.~(54)]{BHM}. The grid closure
+lemma below identifies their accumulation set. The boundary
+singularities of the physical sum are established in
+Sections~\ref{sec:regular}--\ref{sec:jets}.
 
 Put
 \begin{equation}\label{eq:cramerUV}
@@ -541,12 +496,9 @@ step, or a bounded number of steps, avoids the exceptional equalities
 while the mesh error still tends to zero.
 \end{proof}
 
-The exclusions just mentioned are the convention displayed with the
-isotropic equation in \cite[eq.~(52)]{BHM}. Lemma~\ref{lem:gridclosure}
-does not assert that this list is an exhaustive anisotropic singularity
-classification. The physical odd/even order restrictions are supplied
-by the corresponding exact correlation representations, and the true
-singularity and infinite-sum arguments are separate.
+The deletions in Lemma~\ref{lem:gridclosure} are the isotropic
+convention in \cite[eq.~(52)]{BHM}. The physical parity restrictions
+come from the correlation expansions.
 
 \begin{lemma}\label{lem:noisolatedS}
 The set \(\cS_\lambda\) has no isolated points.
@@ -807,7 +759,7 @@ if \(\lambda\) is a ratio of two positive odd integers. In reduced
 form \(\lambda=r/s\) with both \(r,s\) odd, these simultaneous
 points have \(y=(2m+1)\pi s/2\).
 
-For completeness, a zero of \(a\) has \(z=\ii\pi m\) and belongs
+A zero of \(a\) has \(z=\ii\pi m\) and belongs
 to \(\cS_\lambda\) exactly when \(\cos(\lambda\pi m)=0\);
 then \(b=\pm\ii\), \(A=0\), and its representing pairs have
 \(V=0\). The corresponding statement for \(b=0\) follows by
@@ -991,12 +943,10 @@ gap and a thin complex angle neighborhood. For positive real
 and hence \(W(q)>1\) for all real \(q\), proving the physical match.
 \end{proof}
 
-The root statement does not identify the two particle parities or
-their phase prefactors. It also does not assert a logarithm at a root
-zero. On the physical LT component all these zeros are absent and
-simple connectivity fixes the nonvanishing algebraic prefactors by
-their real physical values. On the HT component the only root-zero
-normalization issue is at the origin, handled in the physical section.
+On the physical LT component the root is nonzero, and simple
+connectivity fixes the algebraic prefactors from their real values.
+On the HT component Section~\ref{sec:physical} gives the regular
+normalization at the sole root zero, the origin.
 
 At a regular edge with one cosine equal to \(+1\) and the other
 equal to \(\cos(2\pi k/q)\), where \(q\) is an odd prime and
@@ -1004,13 +954,12 @@ equal to \(\cos(2\pi k/q)\), where \(q\) is an odd prime and
 the least grid order is \(q\) and the least even order is \(2q\).
 These values are dense on every regular edge arc because its
 nonramified edge coordinate maps the arc to a real interval. At a
-\(-1\) endpoint, an exact grid representation requires an even
-order, and the least even order is again \(2q\). There is no exact
-odd endpoint resonance on such an edge. These arithmetic facts select the first possible resonances. The integral
-arguments below will prove lower-order regularity and noncancellation
-of the complete sum.
+\(-1\) endpoint the grid order must be even, and the least such order
+is \(2q\). The integral estimates below use these first resonances
+and establish lower-order regularity and noncancellation.
 
-One useful exact accumulation from the forbidden side is the following.
+An explicit family of grid roots approaches a negative endpoint
+from the interior of \(\cS_\lambda\).
 At a regular \(U=-1\) point with
 \(V=\cos(2\pi k/q)\), take odd \(n=q(2m+1)\) and set
 \[
@@ -1023,9 +972,8 @@ The simple root of the candidate equation has
 \]
 It lies in the interior of \(\cS_\lambda\) for large \(n\), and its
 least grid order is \(n\), since \((n-1)/2\) is coprime to \(n\).
-The derivative in the denominator is nonzero because the regular
-edge map is nonramified. This is candidate accumulation only; no
-continuation of the infinite sum into that interior is assumed.
+The derivative in the denominator is nonzero by nonramification of
+the edge map.
 
 \subsection{Isotropic covering and ratio symmetries}
 
@@ -1058,10 +1006,8 @@ is its universal cover. This proves the covering assertion.
 
 At the boundary points with \(\cosh z=0\), the inverse-sinh coordinate
 is branched. Elsewhere on the boundary it is locally biholomorphic.
-Accordingly the inherited dense isotropic singular family can be
-transferred at nonramified points and then closed by density; there
-is no need to assume an inverse-sinh branch through a branch point.
-This is the interpretation of \(|\sinh(2\beta J)|=1\) used here.
+The dense isotropic obstruction lifts at the nonramified points and
+includes the isolated branch points by density.
 
 Finally \(\cS_\lambda\) is invariant under conjugation and negation,
 and axis exchange gives
@@ -1070,8 +1016,7 @@ and axis exchange gives
 \]
 If \(\lambda=r/s\) is rational in lowest positive terms,
 \(\ii\pi s\) is an imaginary period of the spectral set: the two
-representing cosines only change signs. This statement does not
-automatically give a period of the physical odd susceptibility.
+representing cosines change by signs.
 For irrational \(\lambda\), there is no nonzero imaginary period.
 Indeed \eqref{eq:imagaxisS} is the union of two arithmetic progressions
 with spacings \(\pi\) and \(\pi/\lambda\). A translate of the first
@@ -1080,23 +1025,15 @@ their spacing ratio is rational. A period of the union must therefore
 be a period of each progression, forcing it to belong to both
 \(\pi\Z\) and \((\pi/\lambda)\Z\), hence to be zero.
 
-The geometric classification includes the exceptional ratio \(\lambda=1\),
-odd/odd rational simultaneous cosine zeros, all remaining elementary
-zeros, corners, and meromorphic critical points.
-For \(\lambda\ne1\), none removes a boundary interval from the dense
-regular-arc conclusion. Which complete physical sums have genuine
-singularities on those arcs is the task of the following sections.
+For each \(\lambda\ne1\), the regular arcs are dense in the boundary.
+The exceptional points include the odd-over-odd simultaneous cosine
+zeros, elementary zeros, corners and critical points of the
+meromorphic edge coordinates.
 
 
 
-\section{Regular spectral edges: whole amplitudes and the entire tail}
+\section{Regular spectral edges: leading amplitudes and tail estimates}
 \label{sec:regular}
-
-The task on these arcs is to keep a singularity visible after summing
-all particle orders. We first obtain Gaussian decay of the numerator,
-then control the differentiated tail, and finally compute the leading
-coefficient of the first resonant term. The comparison is made on the
-physical side of the same local edge coordinate.
 
 At a regular boundary point exactly one of the two real spectral
 coordinates is $+1$ or $-1$, the other lies strictly between them, and
@@ -1129,11 +1066,10 @@ $\Im W=\sinh(\Re\gamma)\sin(\Im\gamma)$ on the compact chosen branch.
 The same local side belongs to the physical component bordering the
 regular edge, by the geometry of Section~\ref{sec:geometry}.
 
-\subsection{A strict Schur bound, with the anisotropy retained}
+\subsection{Schur contraction and the form-factor numerator}
 
-The useful contraction is a property of the uncanceled spectral Schur
-factors. The canceled pair factors remain bounded, and the Pfaffian
-matching identity combines these two different estimates.
+The matching identity combines strict contraction of the spectral
+Schur factors with boundedness of the complete canceled pairs.
 The elementary identity
 \begin{equation}\label{eq:schurdifference}
  |1-vw|^2-|v-w|^2
@@ -1142,20 +1078,20 @@ The elementary identity
 and \eqref{eq:halfdisc} give a constant $\rho_0<1$ such that
 $|\cA(\rho_i,\rho_j)|\le\rho_0$ for every pair of real angles.
 By continuity a slightly larger constant still below one works on a
-fixed complex parameter neighborhood. This assertion continues to hold
-there even where a separate inequality $|\rho_i|\le1$ no longer does.
-Every complete canceled pair $P_{ij}$ is analytic and bounded on the
-same neighborhood.
+fixed complex parameter neighborhood. The bound on this neighborhood
+follows by continuity at the boundary and applies also where
+$|\rho_i|>1$. The canceled pairs $P_{ij}$ are analytic and bounded
+there.
 
-The canceled pair factors need not satisfy $|P_{ij}|\le1$. For example, on
+The canceled factors can exceed one. For example, on
 \eqref{eq:positiveedge},
 \[
  P(q,-q)=\frac{B\sin^2q}
                {[b+B(1-\cos q)]^2-1}.
 \]
 When $\Im B$ is small and the real part of the bracket is close to one,
-this can be arbitrarily large. The proof below retains the strict bound
-only for the uncanceled $\rho$-Schur factors.
+this can be arbitrarily large. The matching argument uses strict
+contraction for the uncanceled $\rho$-Schur factors.
 
 \begin{lemma}[Matched-Pfaffian numerator estimate]\label{lem:matching}
 For every fixed integer $r\ge0$, on a common parameter disk,
@@ -1184,14 +1120,14 @@ ghost edge, leaving $(N-1)^2/2$ uncanceled $\rho$ factors. This gives
  \left|\prod_{i<j}P_{ij}\right|
  \le N!!\,C^{(N-1)/2}\rho_0^{(N-1)^2/2}.
 \]
-The identities initially hold away from reciprocal $y$ pairs and extend
-by the analytic canceled formula. No division by a vanishing $\rho$
-factor occurs. One-body factors, including $B^{N/2}$, cost $C^N$.
+The identities initially hold away from reciprocal $y$ pairs and
+extend by the analytic canceled formula, which involves no division
+by a vanishing $\rho$ factor. One-body factors, including $B^{N/2}$,
+cost $C^N$.
 The unmatched Schur factors give Gaussian decay in $N$, while the
 matching count and one-body terms cost $\exp(O(N\log(N+1)))$.
-Cauchy's inequality on the common disk proves the numerator-jet
-statement. It is applied only to $G_N$, not across a pole of
-$(1+Z)/(1-Z)$.
+Cauchy's inequality on the common disk gives the jets of $G_N$.
+The product kernel $(1+Z)/(1-Z)$ is estimated separately below.
 \end{proof}
 
 \subsection{All indices in the differentiated tail}
@@ -1257,8 +1193,7 @@ selected parity, the only possible unit-modulus product configuration
 has $Z=e^{-\ii N\phi}\ne1$, so those entire form factors are
 holomorphic on a neighborhood of the selected point.
 
-The Gaussian Vandermonde period in the actual independent-angle measure
-is
+In independent-angle coordinates the Gaussian Vandermonde period is
 \begin{equation}\label{eq:mehta}
  G_n^{\rm Gauss}:=
  \int_{q_n=-\sum_{i<n}q_i}e^{-Q(q)}\Delta(q)^2
@@ -1266,14 +1201,13 @@ is
  =\frac{n!\,\pi^{(n-1)/2}P_n}{\sqrt n},\qquad
  P_n=\prod_{r=1}^{n-1}\frac{r!}{2^r}.
 \end{equation}
-For completeness, the ordinary $n$-variable Gaussian Vandermonde
+The ordinary $n$-variable Gaussian Vandermonde
 integral is $n!\pi^{n/2}P_n$, by the determinant formula and the
 Gaussian norms of monic Hermite polynomials. Put $x_i=q_i+m$ with
 $\sum q_i=0$. The coordinate Jacobian is $n$, while integration in
 $m$ gives $\sqrt{\pi/n}$. Dividing by their product proves
-\eqref{eq:mehta}. In particular, replacing the actual independent
-coordinate measure by hyperplane surface measure would introduce an
-incorrect factor $\sqrt n$.
+\eqref{eq:mehta}. Euclidean surface measure on the zero-sum
+hyperplane is $\sqrt n$ times the coordinate measure here.
 
 Write $s_\phi=\sin\phi$ and $\alpha=(n^2-1)/2$. The singular part
 of the complete first form factor, on its unique collision chart, has
@@ -1319,9 +1253,8 @@ Using \eqref{eq:mehta} and the Laplace integral yields
 \end{align}
 Here $u^{1/2}=e^{\ii\pi/4}\sqrt\eps$, and $\sqrt{B(0)}$ is fixed
 by the beta-period continuation from
-$\Re(-\ii B(0)/(2s_\phi))>0$. For even $n$ this sign is determined
-by the period; it is not an arbitrary extra square-root branch in the
-original integer power of $B$.
+$\Re(-\ii B(0)/(2s_\phi))>0$. For even $n$ this square root arises
+from evaluating the period with the original integer power of $B$.
 
 For the odd physical HT coefficients the square-root convention is
 particularly explicit. On $\OH$, both $\cos y$ and $\cos(\lambda y)$
@@ -1433,7 +1366,8 @@ Use two distinct quadratic quantities:
  Q(v)=\sum_i v_i^2,\qquad q(v)=\sum_i|v_i|^2.
  \label{eq:morse-two-quadratics}
 \end{equation}
-The first is holomorphic; the second is used only in bounds.
+Use the holomorphic form $Q$ in identities and the squared norm $q$
+in estimates.
 Put
 \begin{equation}
  c_n=\frac{\ii B_n}{2s},\qquad
@@ -1662,9 +1596,9 @@ Now define
  a_n^\sharp(w)&=\frac n{1+\sqrt{1+n\ell_n(w)^T\ell_n(w)}}.
  \label{eq:morse-rank-coefficient}
 \end{align}
-These are analytic matrix square roots near the identity.  Transposes in
-these identities are bilinear transposes, not Hermitian adjoints.  The
-matrix perturbation has operator norm at most
+These are analytic matrix square roots near the identity, with
+transposes for the bilinear form $Q$. The matrix perturbation has
+operator norm at most
 $C(|d_n|+\sqrt q)^2q/n$, so $R_n$ is uniformly biholomorphic on a
 smaller fixed ball.  Exact multiplication gives
 \begin{equation}
@@ -1792,16 +1726,16 @@ Thus the logarithmic cost of the complete residue density is at most
  C\left(n^2|T_n-\tau_n|+n|d_n|\sum_i|v_i|+nq(v)\right)
  \le C\bigl(\sqrt{nq(v)}+nq(v)\bigr).
 \]
-Combine this estimate with Lemma~\ref{lem:negative-morse}.  The comparison is relative to the center value, so its cost is the
-displayed logarithmic error rather than a fixed constant raised to $n^2$.
+Combining this bound with Lemma~\ref{lem:negative-morse} gives the
+stated estimate relative to the center density, with the displayed
+logarithmic error.
 \end{proof}
 
 \subsection{The real cycle, its deformation, and the boundary remainder}
 
-We next connect the normal form to the actual integral. A deformation
-of the real cycle produces a standard real ball and a boundary tube.
-The tube and the pole-subtracted term must both have the smaller
-analytic-remainder scale.
+The deformation gives a real ball in the pole coordinates and a
+boundary tube. The tube and the pole-subtracted term satisfy the
+analytic-remainder estimate below.
 
 \begin{lemma}[Cycle and analytic remainder]
 \label{lem:morse-cycle-remainder}
@@ -1920,9 +1854,9 @@ Homogeneity and the beta integral now give, when $j+1>\alpha_n$,
  \frac{\Gamma(j+1-\alpha_n)}{\Gamma(j+1)}.
  \label{eq:morse-beta-period}
 \end{align}
-The gamma ratio is retained exactly.  Replacing it by
-$j^{-\alpha_n}$ at fixed $n$ would have an error with logarithm of
-order $\alpha_n^2/j$, which is not small in the regime used below.
+The comparison below uses the exact gamma ratio. A fixed-$n$
+replacement by $j^{-\alpha_n}$ incurs a logarithmic error of order
+$\alpha_n^2/j$ in the range of comparison.
 
 \begin{lemma}[Uniform beta-density error]
 \label{lem:negative-beta-uniform}
@@ -2023,12 +1957,9 @@ Lemma~\ref{lem:morse-cycle-remainder} gives
 
 \begin{remark}
 The phase of $B_n^{\alpha_n-1/2}$ varies quadratically with $n$.
-Formula~\eqref{eq:morse-model} does not assert positivity or a common
-phase for different particle indices.  The comparison of indices in
-the next section is needed for noncancellation of the complete odd
-sum.  The uniform regime here includes, in particular,
-$\log j\le n\le\sqrt j/(\log j)^{1/4}$; the constants in
-\eqref{eq:morse-final-relative} do not change across that interval.
+The next section compares the magnitudes of the competing terms.
+The uniform estimate \eqref{eq:morse-final-relative} applies
+throughout $\log j\le n\le\sqrt j/(\log j)^{1/4}$.
 \end{remark}
 
 
@@ -2096,10 +2027,8 @@ with constants independent of $n$,
  &E_n&=\exp\{-\kappa n^2+C n\log(n+1)+C\}.
  \label{eq:jets_gaussian_num}
 \end{align}
-Shrinking $r_0$ is allowed. In particular, the strict Schur contraction
-used in \eqref{eq:jets_gaussian_num} persists on this fixed complex
-parameter disk; it does not require $|e^{-\gamma}|\le1$ at every
-complex parameter in the disk.
+Choose $r_0$ small enough that the strict Schur bound persists on
+the fixed complex disk, by continuity from the edge.
 
 For odd $n$, choose the shortest lifts $q_i=\pi+\delta_i$ modulo
 $2\pi$. Momentum conservation gives
@@ -2155,12 +2084,7 @@ convergence. Thus every fixed boundary jet exists by absolute summation. The rad
 of the resulting Taylor series is the separate question addressed below.
 \end{proof}
 
-\subsection{Removing all analytic remainders}
-
-The local model should be compared only after all terms analytic on
-the larger particle-dependent disks have been collected. Their total
-Taylor-coefficient growth will be smaller than that of the selected
-resonant contribution.
+\subsection{Analytic remainder estimates}
 
 Choose $\sigma>0$ sufficiently small, and then a fixed
 $c_{\rm out}>0$ such that
@@ -2247,11 +2171,10 @@ For a resonant $n$, the inner pole coefficient is exactly
 \begin{proof}
 All removed terms are bounded on a disk $c_{\rm rem}/n$, where
 $c_{\rm rem}$ is a fixed sufficiently small fraction of
-$\min(c_{\rm pole},c_{\rm out})$. The exact pole subtraction is
-constructed on its own larger disk before restriction; the pole need
-not lie in the exterior disk. The preceding decompositions are identities on the $c/n^2$ disk
-where the original integral is holomorphic. Taking its Taylor
-coefficients gives \eqref{eq:jets_exact_residue_coefficient}; the
+$\min(c_{\rm pole},c_{\rm out})$. Construct the pole subtraction on
+its larger disk, then restrict the resulting identity to the
+$c/n^2$ disk of the original integral. Taking Taylor coefficients
+there gives \eqref{eq:jets_exact_residue_coefficient}; the
 minus sign is the coefficient of $(t-T)^{-1}$ at $t=0$. Every
 removed term is analytic on $|t|<c_{\rm rem}/n$ with norm bounded by $CE_n$.
 Their total coefficient bound is
@@ -2280,9 +2203,8 @@ The same uniform inverse-function estimate as above consequently gives
 \end{equation}
 Here $\operatorname{Var}(v)=n^{-1}\sum_i(v_i-\bar v)^2\le
 C\sigma\bar v$, and
-$\bar v\ge (1-C\sigma)S/(2n)$. The second estimate concerns the
-modulus of a generally complex pole; it does not assert that the
-pole is real.
+$\bar v\ge (1-C\sigma)S/(2n)$, giving the stated lower bound for
+the complex pole modulus.
 
 Write $s=\sin\phi>0$, $\alpha_n=(n^2-1)/2$, and
 \begin{equation}\label{eq:jets_H0}
@@ -2514,9 +2436,8 @@ from the exact value of $\tau_n$.
 
 In \eqref{eq:jets_middle_window}, the error $j/n^4$ is smaller than
 $j/n^2$ by a factor at most $(\log j)^{-2}$, and $n^2/j$ tends
-uniformly to zero. The claimed negative bound follows. This proves
-concavity across the whole intermediate range, not just a fixed
-relative neighborhood of its maximum.
+uniformly to zero. This gives the negative second difference
+throughout the intermediate range.
 \end{proof}
 
 \subsection{Selecting an integer order with one dominating index}
@@ -2664,9 +2585,8 @@ model and \eqref{eq:jets_L_expansion} yield
 \end{align}
 For this calculation, the exact gamma ratio differs from
 $-\alpha_n\log j_n$ in its logarithm by $O(\alpha_n^2/j_n)$,
-which is $o(j_n)$ at the selected scale. It was retained exactly
-in the finite differences and the relative local estimate, where
-discarding it would not have been legitimate.
+which is $o(j_n)$ at the selected scale. The finite differences and
+relative estimates above use the exact ratio.
 
 The bounds \eqref{eq:jets_low_range} and
 \eqref{eq:jets_high_range}, and all analytic remainders, are
@@ -2717,20 +2637,13 @@ germ itself.
 
 
 
-\section{Closure, exceptional points, and the isotropic interface}\label{sec:closure}
-
-The remaining step is global assembly. For unequal couplings, the
-regular-edge obstructions and geometric density exclude extension at
-every boundary point. At the isotropic ratio, exact coefficient
-identities transfer the two normalized isotropic theorems.
+\section{Natural boundaries at unequal and equal coupling}\label{sec:closure}
 
 \subsection{Completing the unequal-coupling theorem}
-We now trace the two physical germs to their full boundaries. The
-representation in Section~\ref{sec:physical} gives holomorphic functions
-on the explicit, independently determined domains $\OH$ and $\OL$.
-Their equality with the two physical susceptibilities holds on the
-appropriate positive real intervals. The identity theorem fixes the
-continued physical germs on the entire corresponding connected domains.
+The holomorphic sums in Section~\ref{sec:physical} agree with the
+physical susceptibilities on the respective real intervals. The
+identity theorem fixes the continuations on the connected domains
+$\OH$ and $\OL$.
 
 For each fixed $\lambda\ne1$, the exceptional set in
 Section~\ref{sec:geometry} is locally discrete. Every other boundary
@@ -2775,27 +2688,17 @@ interior, while the two barriers are the explicit one-dimensional
 boundaries. Their obstruction follows from the complete-sum estimates
 and the closure argument above.
 
-\subsection{Coverage of ratios and exceptional points}
-The only ratio excluded from the strict anisotropic-edge mechanism is
-$\lambda=1$, where the real-linear determinant degenerates along the
-whole isotropic spectral curve. No rationality, algebraicity,
-Diophantine bound, or proximity to one is imposed on the other ratios.
-For $\lambda\ne1$, the exceptional boundary points consist of the
-locally discrete collinear points, corners, elementary zeros or poles
-in a chosen chart, and critical points of the edge coordinate. They
-are included in the final barrier by density, not declared removable.
-Simultaneous imaginary-axis cosine zeros occur exactly for positive
-odd-over-odd rational ratios; their local geometry is analyzed in
-Section~\ref{sec:geometry} and is likewise included. The near-real-critical
-opening of the two spectral edges is nonzero for every unequal positive
-ratio, so there is no omitted interval of weak anisotropy.
-
-The negative HT proof uses $B(t)$ only as a fixed holomorphic function
-near a regular point. Its exact resonant parameters
-$1-\cos(\pi/n)$ and strict single-index estimates do not require
-arithmetic control of the temperature coordinate or of $\lambda$.
-This is why highly approximable irrational ratios are covered without
-an implicit generic-ratio qualification.
+\subsection{Exceptional points and dependence on the ratio}
+For $\lambda\ne1$, the locally discrete collinear points, corners,
+elementary zeros or poles, and critical points of the edge coordinate
+are included by density. Section~\ref{sec:geometry} treats the
+simultaneous imaginary-axis cosine zeros at odd-over-odd rational
+ratios and shows a nonzero opening at the real critical point for
+every unequal positive ratio. The negative-edge estimates use the
+holomorphic germ $B(t)$ and the exact centers $1-\cos(\pi/n)$, with
+constants depending on the chosen regular point at the fixed ratio.
+For $\lambda=1$ the real-linear determinant degenerates along the
+spectral curve, and the following proof uses the isotropic formulas.
 
 \subsection{The isotropic slice and its prior boundary theorems}
 The isotropic transfer is an identity of the full coefficient formulas. Set
@@ -2810,9 +2713,8 @@ isotropic factor in \cite{LTsource}. The even coefficients and the
 full-site identity consequently agree term by term, with
 $\xi_L=(1-s^{-4})^{1/4}$. In the HT interval the full angular coefficient
 in \eqref{eq:fullangular} has $W=s+s^{-1}-\cos q$, and its prefactor
-is exactly $(1-s^4)^{1/4}/s$. This is the literal normalized odd sum
-in \cite{HTsource}, not a diagonal susceptibility or a dual
-low-temperature observable.
+is $(1-s^4)^{1/4}/s$. This is the normalized full-lattice odd series
+in \cite{HTsource}.
 In the notation of that HT manuscript its auxiliary exterior variable
 is $\widehat t=1/s$; hence our $C_N$ at $s$ is exactly its
 $C_N(\widehat t)$, and the reported real condition $\widehat t>1$
@@ -2828,10 +2730,7 @@ whole-form-factor Theorem 4.4 and the differentiated-tail Theorem 9.1;
 real full-bulk form-factor equality, absolute onsite summability and
 onsite normalization, addressed in Section~\ref{sec:physical} at $B=1$.
 \end{enumerate}
-The two normalized isotropic theorems are the mathematical inputs for
-this slice, with the full-bulk observables and hypotheses specified
-above. Their roles can be seen directly in the leading-term and tail
-estimates. In the low-temperature notation, at its dense prime family,
+The cited LT theorem gives, at its dense prime family,
 $N_0=2p$ and $k=N_0^2/2-1$, it proves
 \[
  T_{N_0}^{(k)}((1+\eps)s_*)
@@ -2842,18 +2741,16 @@ and, for every fixed $0\le j\le k$,
  \sum_{\substack{N>N_0\\N\ {\rm even}}}
  |T_N^{(j)}((1+\eps)s_*)|=o(\eps^{-1/2}).
 \]
-The cited low-temperature argument includes the full first-coefficient
-torus complement, its two local charts, the weighted Stokes current,
-the Vandermonde/Lie estimates, and every particle window.
-Its normalized function is
-$1-M^2+2M^2\sum_{N\ {\rm even},N\ge2}T_N$, which is exactly
-\eqref{eq:globalLT} on the isotropic slice by \eqref{eq:allsites}.
-The HT source supplies a nonzero first odd coefficient and a bound
-for the complete differentiated odd tail on both signs of the boundary
-real part; its normalized function is \eqref{eq:globalHT}.
-Section~\ref{sec:physical} supplies the real Gibbs-state and uniform-field
-identifications from the stated physical premises. These remain separate
-from the normalized isotropic analytic inputs.
+The cited LT argument estimates the two local charts and their torus
+complement, then uses the weighted Stokes current and the
+Vandermonde and Lie derivative bounds in the particle windows.
+Its normalized susceptibility
+$1-M^2+2M^2\sum_{N\ {\rm even},N\ge2}T_N$ equals
+\eqref{eq:globalLT} by \eqref{eq:allsites}. The HT theorem's first
+coefficient and differentiated-tail estimates on both boundary halves
+apply to \eqref{eq:globalHT}. The Gibbs-state and uniform-field
+identifications on the real intervals come from
+Section~\ref{sec:physical}.
 
 The geometry on this slice is exact:
 \[
@@ -2862,10 +2759,10 @@ The geometry on this slice is exact:
  \qquad L_1(y)=\operatorname{arsinh}(|\cos y|).
 \]
 The map $z\mapsto\sinh z$ maps the central HT cell biholomorphically
-onto $|s|<1$. It maps $\OL$ as the universal cover of $|s|>1$;
-its $2\pi\ii$ period is therefore a covering statement, not a claim
-that the energy-field response $\chi=\beta\mathcal X$ is globally
-single-valued as a function of $s$. At all nonaxis boundary points the
+onto $|s|<1$ and maps $\OL$ onto $|s|>1$ as its universal cover,
+with deck translation by $2\pi\ii$. The physical prefactor
+$\beta=z/(2J_x)$ is defined on the cover. At all nonaxis boundary
+points the
 map is locally biholomorphic. The boundary critical points with
 $\cosh z=0$ are limits of such points. Dense isotropic obstructions
 therefore pull back to every point of the two boundaries, including
