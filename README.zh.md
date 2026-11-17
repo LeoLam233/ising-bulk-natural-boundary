@@ -6,11 +6,11 @@
 
 原始固定比值证明在等耦合处合法调用原始低温、高温归一化自然边界定理；其实循环替代证明在文内独立处理等耦合情形。两篇双复变量证明各自证明联合结论、所有正比值切片及等耦合下降，未用环境空间非延拓代替切片证明。
 
-六条路线的已完成 Lean 结果有[明确的类型、前提和字段范围](docs/eight-papers/LEAN_CORRESPONDENCE.md)。固定比值实循环替代路线仍为 PARTIAL；双复变量端点/输运替代路线仍为 NOT_SEPARATELY_FORMALIZED。[逐篇状态](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md)和[对应矩阵](docs/eight-papers/SIX_PAPER_LEAN_SCOPE_MATRIX.csv)给出限定。
+八条路线中有七条已在 Lean 完成，[定理对应表](docs/eight-papers/LEAN_CORRESPONDENCE.md)列出各自的类型、前提和字段。固定比值实循环替代路线（ANISO-PSER F002）的实际终点是 [`IsingBulk.AnisoF002.full_uniform_field_conclusion`](lean/IsingBulk/AnisoF002/C03/FullUniformFieldConclusion.lean)。解析自然边界只要求耦合为正；实温度磁化率识别和能量场响应使用明示接口 `PublishedRealSpinFormFactors` 与 `PublishedRealGibbsFields`。见 [F002 范围与审计记录](docs/aniso-f002/PUBLICATION.md)及[八条路线状态](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md)。双复变量端点/输运替代路线（JOINT-PSER）仍为 `NOT_SEPARATELY_FORMALIZED`。
 
-[Lean 代码](lean/)及锁定依赖保持原字节。旧论文整树保存在[次级历史档案](archive/manuscripts/pre-eight-2026-10-30/README.md)；原有固定提交和标签 URL 不变。移动 main 分支上的旧文件 URL 不会自动重定向。Lean 内冻结的技术说明及元数据保留旧路径，使用档案映射查阅。
+[Lean 代码](lean/)增补了 F002；此前的证明源文件、工具链、锁定依赖和审计记录保留原字节。旧论文整树保存在[历史档案](archive/manuscripts/pre-eight-2026-10-30/README.md)，其中列有旧路径映射。原有固定提交和标签 URL 不变。
 
-运行 `python scripts/verify_eight_papers.py --historical-checks` 校验本次迁移及原验证器；运行 `python scripts/build_current_papers.py --output PATH` 在独立目录重编译当前八篇，不改动已发布稿件。
+[构建与 CI 指南](docs/PROOF_CI_ROUTING.md)列出历史核验、独立重编译论文、F002 编译和内核重放命令。CI 只在稿件或稿件构建脚本变动时自动运行 TeX 构建；涉及 F002 的拉取请求运行其最终证明验收。
 
 ## Low-temperature susceptibility
 

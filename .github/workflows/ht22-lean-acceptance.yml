@@ -4,6 +4,9 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/AnisoF002/**'
+      - '!lean/*AnisoF002*.lean'
+      - '!lean/lakefile.aniso-f002*.toml'
       - 'paper/ht/pser/**'
       - 'provenance/ht22/**'
       - 'verification/ht22/**'
@@ -17,6 +20,9 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/AnisoF002/**'
+      - '!lean/*AnisoF002*.lean'
+      - '!lean/lakefile.aniso-f002*.toml'
       - 'paper/ht/pser/**'
       - 'provenance/ht22/**'
       - 'verification/ht22/**'

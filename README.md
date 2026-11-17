@@ -6,13 +6,13 @@ The collection contains two distinct proofs for each of four subjects: low-tempe
 
 The [current index](papers/README.md) gives every scholarly title and PDF/TeX link. The original fixed-ratio proof legitimately imports the original low- and high-temperature normalized equal-coupling theorems. Its alternative proves that case internally. Both two-complex-variable proofs establish the joint, positive-ratio-slice and isotropic conclusions through their own curve-level arguments.
 
-Six proof routes have completed formal developments at their [precise theorem/field scope](docs/eight-papers/LEAN_CORRESPONDENCE.md). The real-cycle anisotropic alternative remains PARTIAL; the endpoint/transport two-complex-variable alternative is NOT_SEPARATELY_FORMALIZED. See the [eight-route status](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md), [scope matrix](docs/eight-papers/SIX_PAPER_LEAN_SCOPE_MATRIX.csv), and [independent preservation audit](docs/eight-papers/EIGHT_PAPER_MATH_PRESERVATION_REPORT.md).
+Seven of the eight routes have completed Lean proofs at their [precise theorem and field scope](docs/eight-papers/LEAN_CORRESPONDENCE.md). The real-cycle anisotropic alternative (ANISO-PSER F002) ends at [`IsingBulk.AnisoF002.full_uniform_field_conclusion`](lean/IsingBulk/AnisoF002/C03/FullUniformFieldConclusion.lean). Its natural-boundary fields require positive couplings; real susceptibility identification and field response use the explicit `PublishedRealSpinFormFactors` and `PublishedRealGibbsFields` interfaces. See the [F002 audit and scope](docs/aniso-f002/PUBLICATION.md) and the [eight-route status](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md). The two-complex-variable endpoint/transport alternative (JOINT-PSER) remains `NOT_SEPARATELY_FORMALIZED`.
 
-The active formal code remains in [lean/](lean/). All formal source, toolchain, dependency pins and prior audit records are byte-identical to the pinned pre-migration base. Historical source metadata and technical README snapshots under lean/ keep their original paths; resolve those through the [archive crosswalk](archive/manuscripts/pre-eight-2026-10-30/README.md), not as current reading entrances.
+The [Lean tree](lean/) contains the additive F002 integration alongside the unchanged earlier proof sources, toolchain, dependency pins and prior audit records. For old manuscript paths, see the [archive crosswalk](archive/manuscripts/pre-eight-2026-10-30/README.md).
 
 Historical manuscripts are preserved once in the [secondary archive](archive/manuscripts/pre-eight-2026-10-30/README.md). Immutable commit/tag URLs keep their old layouts; deleted moving-main file paths have no automatic GitHub redirect.
 
-For editorial verification run `python scripts/verify_eight_papers.py --historical-checks`. Rebuild all current TeX in a separate directory with `python scripts/build_current_papers.py --output PATH`. These commands preserve every published manuscript byte. Existing formal acceptance commands remain available, with hash-checked historical-path routing for their original verifier cores.
+The [build and CI guide](docs/PROOF_CI_ROUTING.md) gives the commands for historical verification, standalone TeX builds, and F002 compilation and replay.
 
 ## Low-temperature susceptibility
 

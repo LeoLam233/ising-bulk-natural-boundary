@@ -1,27 +1,50 @@
-name: Eight-paper editorial publication
+name: Eight-paper publication and F002 acceptance
 on:
   pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  manuscript-identity-archive-and-build:
+  publication-integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      manuscripts: ${{ steps.scope.outputs.manuscripts }}
+      f002: ${{ steps.scope.outputs.f002 }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Check current publication and frozen evidence
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            python3 scripts/verify_eight_papers.py --historical-checks
+          else
+            python3 scripts/verify_eight_papers.py
+          fi
+      - name: Select builds from the full change range
+        id: scope
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python3 scripts/publication_ci_scope.py "$GITHUB_EVENT_NAME" "$BASE_SHA" "$HEAD_SHA" >> "$GITHUB_OUTPUT"
+
+  manuscript-build:
+    needs: publication-integrity
+    if: needs.publication-integrity.outputs.manuscripts == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
       PYTHONUTF8: '1'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        with:
-          fetch-depth: 0
-      - run: python3 scripts/verify_eight_papers.py --historical-checks
       - name: Install standalone manuscript build dependencies
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-recommended lmodern
       - name: Build all eight current manuscripts outside published source trees
         run: python3 scripts/build_current_papers.py --output "$RUNNER_TEMP/eight-current-papers"
-      - run: python3 scripts/verify_eight_papers.py
       - name: Preserve exact TeX build diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -32,5 +55,55 @@ jobs:
             ${{ runner.temp }}/eight-current-papers/**/*.stderr
             ${{ runner.temp }}/eight-current-papers/**/*.log
             ${{ runner.temp }}/eight-current-papers/BUILD_RESULTS.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  f002-final-acceptance:
+    needs: publication-integrity
+    if: needs.publication-integrity.outputs.f002 == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+        working-directory: lean
+    env:
+      F002_LAKE_CONFIG: lakefile.aniso-f002-continuation.toml
+      LEAN_NUM_THREADS: '2'
+      LAKE_ARTIFACT_CACHE: 'false'
+      LAKE_NO_CACHE: 'true'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install hash-verified Lean 4.34.1
+        run: |
+          curl --fail --location --retry 3 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          echo "47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Restore only pinned upstream dependencies
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+        with:
+          path: lean/.lake/packages
+          key: mathlib-linux-v4.34.1-${{ hashFiles('lean/lake-manifest.json') }}
+      - name: Fetch official upstream artifacts for the locked dependencies
+        run: lake -f "$F002_LAKE_CONFIG" exe cache get
+      - name: Build the terminal and its final replay bundle from source
+        run: |
+          # The frozen recursor audit writes here independently of discovery.
+          mkdir -p ../evidence/support_c03
+          lake -f "$F002_LAKE_CONFIG" build +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
+            +IsingBulk.AnisoF002.Audit.C03FinalReplayBundle 2>&1 | tee "$RUNNER_TEMP/f002-build.log"
+      - name: Replay the F002 terminal in a fresh Lean kernel
+        run: |
+          lake -f "$F002_LAKE_CONFIG" env leanchecker --fresh IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
+            2>&1 | tee "$RUNNER_TEMP/f002-kernel.log"
+      - name: Retain F002 verification output
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: f002-final-acceptance-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/f002-*.log
+            evidence/support_c03/*.json
           if-no-files-found: warn
           retention-days: 30

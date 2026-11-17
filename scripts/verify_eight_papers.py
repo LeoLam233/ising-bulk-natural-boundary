@@ -1,71 +1,182 @@
 #!/usr/bin/env python3
-"""Verify current editions, exact whole-tree archive and protected base bytes."""
+"""Check the live collection and the frozen evidence for earlier publications."""
+
+import argparse
+import hashlib
+from io import BytesIO
+import json
 from pathlib import Path
-import argparse,hashlib,json,re,subprocess,sys
-ROOT=Path(__file__).resolve().parents[1]
-BASE='923266754afd65f5922a51f59a72ca56e1a88942'
-PREFIX='archive/manuscripts/pre-eight-2026-10-30/'
-RECORD='provenance/eight-papers-2026-10-30/MIGRATION.json'
-def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def git(*args):return subprocess.check_output(['git','-c','safe.directory='+ROOT.as_posix(),'-C',str(ROOT),*args])
-def base_entries():
- out={}
- for line in git('ls-tree','-r',BASE).decode().splitlines():
-  mode,kind,rest=line.split(' ',2);blob,path=rest.split('\t',1);out[path]=blob
- return out
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = '923266754afd65f5922a51f59a72ca56e1a88942'
+# Last accepted eight-paper edition before F002, including the later editorial revisions.
+SNAPSHOT = '7a7466eed439889bde2e981eb649b8bf8550eba8'
+ARCHIVE = 'archive/manuscripts/pre-eight-2026-10-30'
+MIGRATION = 'provenance/eight-papers-2026-10-30'
+PREFIX = ARCHIVE + '/'
+RECORD = MIGRATION + '/MIGRATION.json'
+STATUS = 'docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md'
+CORRESPONDENCE = 'docs/eight-papers/LEAN_CORRESPONDENCE.md'
+FROZEN_PREFIXES = ('lean/', 'verification/', 'provenance/', 'release/', 'audits/', 'research-history/')
+FROZEN_MANIFESTS = {
+    'ANISO_C001_OVERLAY_MANIFEST.json', 'HT_1747_OVERLAY_MANIFEST.json',
+    'JOINT_C002_OVERLAY_MANIFEST.json', 'MANIFEST.json',
+}
+
+
+def require(ok, message):
+    if not ok:
+        raise SystemExit(f'Publication verification: {message}')
+
+
+def git(*args, data=None):
+    return subprocess.check_output(
+        ['git', '-c', 'safe.directory=' + ROOT.as_posix(), '-C', str(ROOT), *args],
+        input=data,
+    )
+
+
+def entries(ref, *paths):
+    return {
+        path.decode('utf8'): info.split()[2].decode('ascii')
+        for line in git('ls-tree', '-rz', ref, '--', *paths).split(b'\0') if line
+        for info, path in [line.split(b'\t', 1)]
+    }
+
+
+def git_blobs(ref, paths):
+    """Read historical blobs in one Git process, retaining byte boundaries."""
+    paths = list(paths)
+    data = BytesIO(git('cat-file', '--batch', data=''.join(f'{ref}:{p}\n' for p in paths).encode()))
+    for path in paths:
+        header = data.readline().split()
+        require(len(header) == 3 and header[1] == b'blob', f'missing historical blob: {ref}:{path}')
+        size = int(header[2])
+        value = data.read(size)
+        require(len(value) == size and data.read(1) == b'\n', f'invalid Git blob response: {path}')
+        yield path, value
+
+
+def checked_file(rel, expected):
+    p = ROOT / rel
+    require(p.is_file() and not p.is_symlink(), f'missing or linked frozen file: {rel}')
+    raw = p.read_bytes()
+    blob = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+    require(blob == expected, f'frozen file changed: {rel}')
+    return raw
+
+
+def check_sealed_tree(directory, snapshot):
+    tree = ROOT / directory
+    require(tree.is_dir() and not tree.is_symlink(), f'missing or linked frozen tree: {directory}')
+    files = set()
+    for p in tree.rglob('*'):
+        rel = p.relative_to(ROOT).as_posix()
+        require(not p.is_symlink(), f'linked archive entry: {rel}')
+        if p.is_file():
+            files.add(rel)
+    expected = {rel for rel in snapshot if rel.startswith(directory + '/')}
+    require(files == expected, f'frozen tree inventory changed: {sorted(files ^ expected)}')
+    for rel in expected:
+        checked_file(rel, snapshot[rel])
+
+
+def verify_history():
+    old = entries(BASE)
+    snapshot = entries(SNAPSHOT, ARCHIVE, MIGRATION, 'docs/eight-papers')
+    check_sealed_tree(ARCHIVE, snapshot)
+    check_sealed_tree(MIGRATION, snapshot)
+    m = json.loads((ROOT / RECORD).read_bytes())
+    require(m['base'] == BASE and m['archive_prefix'] == PREFIX, 'incorrect migration baseline')
+    require(len(old) == 4009, 'incomplete migration baseline')
+
+    papers = {p: blob for p, blob in old.items() if p.startswith('paper/')}
+    require(len(papers) == 67 and not (ROOT / 'paper').exists(), 'invalid former paper/ inventory')
+    require({p for p in snapshot if p.startswith(PREFIX + 'paper/')} ==
+            {PREFIX + p for p in papers}, 'incomplete historical manuscript archive')
+    for rel, blob in papers.items():
+        require(snapshot[PREFIX + rel] == blob, f'migration altered archived bytes: {rel}')
+
+    # Reuse the six earlier formal acceptances only while their actual inputs match.
+    # README.md is the live Lean entrance; the old copy remains in BASE.
+    protected = {
+        p: blob for p, blob in old.items()
+        if (p.startswith(FROZEN_PREFIXES) or p in FROZEN_MANIFESTS) and p != 'lean/README.md'
+    }
+    for rel, blob in protected.items():
+        checked_file(rel, blob)
+    for rel, blob in snapshot.items():
+        if rel.startswith('docs/eight-papers/') and rel not in {STATUS, CORRESPONDENCE}:
+            checked_file(rel, blob)
+
+    # Compare the dated record to its own editions, not to today's navigation or TeX.
+    allowed = m['navigation_and_routing_changes']
+    recorded = m['current_pairs']
+    for rel, raw in git_blobs(SNAPSHOT, [*allowed, *recorded]):
+        if rel in recorded:
+            require(hashlib.sha256(raw).hexdigest() == recorded[rel]['sha256'],
+                    f'historical edition hash disagrees: {rel}')
+            continue
+        row = allowed[rel]
+        require(hashlib.sha256(raw).hexdigest() == row['new_sha256'],
+                f'historical routing hash disagrees: {rel}')
+        prev = m['historical_navigation_prefix'] + '/' + rel
+        before = (ROOT / prev).read_bytes()
+        require(snapshot[prev] == old[rel] and hashlib.sha256(before).hexdigest() == row['old_sha256'],
+                f'archived original routing disagrees: {rel}')
+        if rel.startswith('scripts/'):
+            require(raw.decode('utf8').replace(row['routing_insertion'], '', 1) == before.decode('utf8'),
+                    f'historical validator core changed during migration: {rel}')
+    return m, len(protected)
+
+
 def verify():
- m=json.loads((ROOT/RECORD).read_text(encoding='utf8'));assert m['base']==BASE
- old=base_entries();assert len(old)==4009
- actual_lean={p.relative_to(ROOT).as_posix() for p in (ROOT/'lean').rglob('*') if p.is_file() and not any(x in p.relative_to(ROOT/'lean').parts for x in ['.lake','.local','__pycache__'])}
- assert actual_lean=={n for n in old if n.startswith('lean/')},('Added/missing formal-tree files',sorted(actual_lean^{n for n in old if n.startswith('lean/')}))
- allowed=m['navigation_and_routing_changes']
- for rel,row in allowed.items():
-  assert not rel.startswith(('lean/','verification/','provenance/','release/','audits/','research-history/'))
-  assert rel.startswith(('.github/workflows/','scripts/','docs/','low-temperature/','high-temperature/','anisotropic/','joint/')) or rel in ['README.md','README.zh.md','REPOSITORY_MAP.md','AUTHORSHIP.md']
-  assert digest(ROOT/rel)==row['new_sha256'],('Changed navigation/routing bytes',rel)
-  prev=ROOT/m['historical_navigation_prefix']/rel
-  assert digest(prev)==row['old_sha256'],('Historical routing bytes',rel)
-  raw=prev.read_bytes();assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==old[rel]
-  if rel.startswith('scripts/'):
-   now=(ROOT/rel).read_text(encoding='utf8');before=prev.read_text(encoding='utf8')
-   addition=row['routing_insertion'];assert now.replace(addition,'',1)==before,('Historical validator core edited',rel)
- count=0;protected=0
- for rel,wanted in old.items():
-  if rel in allowed:continue
-  p=ROOT/(PREFIX+rel if rel.startswith('paper/') else rel)
-  assert p.is_file() and not p.is_symlink(),('Missing/linked protected file',rel)
-  raw=p.read_bytes();got=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
-  assert got==wanted,('Protected byte identity changed',rel)
-  count+=rel.startswith('paper/');protected+=not rel.startswith('paper/')
- assert count==67 and not (ROOT/'paper').exists()
- actual={p.relative_to(ROOT).as_posix() for p in (ROOT/PREFIX/'paper').rglob('*') if p.is_file()}
- assert actual=={PREFIX+n for n in old if n.startswith('paper/')}
- current={p.relative_to(ROOT).as_posix() for p in (ROOT/'papers').rglob('*') if p.suffix in ['.tex','.pdf']}
- assert current==set(m['current_pairs']) and len(current)==16
- for rel,row in m['current_pairs'].items():
-  assert digest(ROOT/rel)==row['sha256'],('Current candidate changed',rel)
-  if rel.endswith('.tex'):
-   s=(ROOT/rel).read_text(encoding='utf8');assert s.count('ChatGPT')==1 and 'Dehao Lin' in s
- # All live Markdown files outside sealed historical material have resolvable relative links.
- bad=[]
- for rel in m['live_markdown']:
-  p=ROOT/rel;s=p.read_text(encoding='utf8')
-  for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',s):
-   target=target.strip().split(' "',1)[0].split('#',1)[0]
-   if not target or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:',target):continue
-   target=target.replace('%20',' ')
-   if not (p.parent/target).resolve().exists():bad.append((rel,target))
- assert not bad,('Broken active links',bad)
- print(json.dumps({'status':'PASS','base':BASE,'archived_files':count,'other_protected_files':protected,'unchanged_lean_files':sum(n.startswith('lean/') for n in old),'current_tex_pdf_files':16,'navigation_routing_files':len(allowed),'formal_recompilation':'not required for byte-identical formal sources'},indent=2))
- return m
+    m, protected = verify_history()
+    current = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'papers').rglob('*')
+               if p.suffix in {'.tex', '.pdf'}}
+    require(current == set(m['current_pairs']) and len(current) == 16,
+            'the current collection must have eight TeX/PDF pairs at the indexed paths')
+    for rel in sorted(current):
+        p = ROOT / rel
+        require(p.is_file() and not p.is_symlink(), f'invalid current manuscript: {rel}')
+        if p.suffix == '.tex':
+            source = p.read_text(encoding='utf8')
+            require(source.count('ChatGPT') == 1 and 'Dehao Lin' in source,
+                    f'author metadata or disclosure missing: {rel}')
+        else:
+            require(p.read_bytes().startswith(b'%PDF-'), f'invalid PDF header: {rel}')
+
+    # Follow the live navigation files, including the current formalization maps.
+    live = sorted(set(m['live_markdown']) | {STATUS, CORRESPONDENCE, 'lean/README.md',
+                  'docs/aniso-f002/PUBLICATION.md'})
+    bad = []
+    for rel in live:
+        p = ROOT / rel
+        source = p.read_text(encoding='utf8')
+        for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)', source):
+            target = target.strip().split(' "', 1)[0].split('#', 1)[0]
+            if not target or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', target):
+                continue
+            if not (p.parent / target.replace('%20', ' ')).resolve().exists():
+                bad.append((rel, target))
+    require(not bad, f'broken current links: {bad}')
+    print(json.dumps({'status': 'PASS', 'historical_snapshot': SNAPSHOT, 'archived_manuscript_files': 67,
+                      'protected_baseline_files': protected, 'current_tex_pdf_files': len(current)}, indent=2))
+
+
 def main():
- p=argparse.ArgumentParser();p.add_argument('--historical-checks',action='store_true');p.add_argument('--ci-mode',action='store_true');a=p.parse_args()
- verify()
- if a.historical_checks:
-  from eight_paper_paths import historical_root
-  v=historical_root(ROOT,already_verified=True)
-  subprocess.run([sys.executable,str(v/'scripts/verify_ht22_preservation.py')],cwd=v,check=True)
- if a.ci_mode:
-  # Reuse prior accepted formal artifacts only after every protected source byte passed above.
-  print('formal=false')
-if __name__=='__main__':main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--historical-checks', action='store_true')
+    args = parser.parse_args()
+    verify()
+    if args.historical_checks:
+        from eight_paper_paths import historical_root
+        view = historical_root(ROOT, already_verified=True, link_packages=False)
+        subprocess.run([sys.executable, str(view / 'scripts/verify_ht22_preservation.py')], cwd=view, check=True)
+
+
+if __name__ == '__main__':
+    main()
