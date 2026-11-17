@@ -21,6 +21,6 @@ This is the current scholarly collection. Each subject has two distinct mathemat
 
 ## Formal sources and historical editions
 
-Six completed proof routes have explicit physical hypotheses and scope qualifications in the [paper-to-Lean matrix](../docs/eight-papers/SIX_PAPER_LEAN_SCOPE_MATRIX.csv) and [type/field map](../docs/eight-papers/LEAN_CORRESPONDENCE.md). The two other alternatives are **PARTIAL** and **NOT_SEPARATELY_FORMALIZED**, respectively; they inherit no Original certificate.
+Seven proof routes have completed Lean developments with the scope listed in the [eight-route status](../docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md) and [type and field map](../docs/eight-papers/LEAN_CORRESPONDENCE.md). The [ANISO-PSER F002 record](../docs/aniso-f002/PUBLICATION.md) links the final real-cycle theorem and audit. The endpoint/transport two-complex-coupling alternative (JOINT-PSER) remains **NOT_SEPARATELY_FORMALIZED**.
 
-The [prior manuscript archive](../archive/manuscripts/pre-eight-2026-10-30/README.md) is historical. The current [Lean source tree](../lean/) and all toolchain/dependency pins are preserved.
+The [prior manuscript archive](../archive/manuscripts/pre-eight-2026-10-30/README.md) records the historical editions. The [Lean source tree](../lean/) now includes the independent real-cycle proof under the existing toolchain and dependency pins.

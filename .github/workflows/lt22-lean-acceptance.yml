@@ -4,6 +4,9 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/AnisoF002/**'
+      - '!lean/*AnisoF002*.lean'
+      - '!lean/lakefile.aniso-f002*.toml'
       - '!lean/IsingBulk/HT22/**'
       - '!lean/IsingBulk/HT22.lean'
       - '!lean/IsingBulkHT22.lean'
@@ -18,6 +21,9 @@ on:
     paths:
       - 'lean/**'
       - '!lean/README.md'
+      - '!lean/IsingBulk/AnisoF002/**'
+      - '!lean/*AnisoF002*.lean'
+      - '!lean/lakefile.aniso-f002*.toml'
       - '!lean/IsingBulk/HT22/**'
       - '!lean/IsingBulk/HT22.lean'
       - '!lean/IsingBulkHT22.lean'
