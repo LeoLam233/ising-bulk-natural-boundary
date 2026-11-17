@@ -68,6 +68,7 @@ jobs:
         shell: bash
         working-directory: lean
     env:
+      F002_LAKE_CONFIG: lakefile.aniso-f002-continuation.toml
       LEAN_NUM_THREADS: '2'
       LAKE_ARTIFACT_CACHE: 'false'
       LAKE_NO_CACHE: 'true'
@@ -85,16 +86,16 @@ jobs:
           path: lean/.lake/packages
           key: mathlib-linux-v4.34.1-${{ hashFiles('lean/lake-manifest.json') }}
       - name: Fetch official upstream artifacts for the locked dependencies
-        run: lake exe cache get
+        run: lake -f "$F002_LAKE_CONFIG" exe cache get
       - name: Build the terminal and its final replay bundle from source
         run: |
           # The frozen recursor audit writes here independently of discovery.
           mkdir -p ../evidence/support_c03
-          lake build +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
+          lake -f "$F002_LAKE_CONFIG" build +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
             +IsingBulk.AnisoF002.Audit.C03FinalReplayBundle 2>&1 | tee "$RUNNER_TEMP/f002-build.log"
       - name: Replay the F002 terminal in a fresh Lean kernel
         run: |
-          lake env leanchecker --fresh IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
+          lake -f "$F002_LAKE_CONFIG" env leanchecker --fresh IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
             2>&1 | tee "$RUNNER_TEMP/f002-kernel.log"
       - name: Retain F002 verification output
         if: always()

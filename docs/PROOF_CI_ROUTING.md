@@ -43,16 +43,19 @@ The build writes outside the publication directories. It requires
 From `lean/`, with the pinned Lean 4.34.1 toolchain and existing lockfile:
 
 ```bash
-lake exe cache get
+lake -f lakefile.aniso-f002-continuation.toml exe cache get
 mkdir -p ../evidence/support_c03
-lake build +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
+lake -f lakefile.aniso-f002-continuation.toml build \
+  +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
   +IsingBulk.AnisoF002.Audit.C03FinalReplayBundle
-lake env leanchecker --fresh IsingBulk.AnisoF002.C03.FullUniformFieldConclusion
+lake -f lakefile.aniso-f002-continuation.toml env leanchecker --fresh \
+  IsingBulk.AnisoF002.C03.FullUniformFieldConclusion
 ```
 
-Use a clean checkout for a fresh source build. The build uses the default Lake
-configuration and the pinned upstream dependency cache. It elaborates the
-terminal and the final audit bundle, including the exact signature check,
+Use a clean checkout for a fresh source build. The frozen continuation Lake
+configuration registers a support library imported by the final audit. The
+explicit module arguments select the terminal and final audit bundle. The
+build uses the pinned upstream dependency cache and runs the signature check,
 stored proof route checks, structural discovery and controls. The last command
 replays the terminal module separately with the official Lean kernel. See
 [F002 scope and provenance](aniso-f002/PUBLICATION.md) for the accepted theorem
