@@ -51,4 +51,4 @@ The existing 53-page editorial PDF and its TeX are the public reading edition.
   75,238-constant closure in an empty kernel. The reported reachable axioms
   were `propext`, `Classical.choice` and `Quot.sound`.
 
-Build and replay the published terminal with the [current CI and build guide](../PROOF_CI_ROUTING.md#f002-proof).
+Build and replay the published terminal with the [local verification guide](../PROOF_CI_ROUTING.md#f002-proof).

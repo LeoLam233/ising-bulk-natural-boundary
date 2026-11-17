@@ -12,7 +12,7 @@
 
 [Lean 源码](lean/) · [历史稿件与路径映射](archive/manuscripts/pre-eight-2026-10-30/README.md)
 
-构建指南列出历史核验、论文重编译、F002 编译和内核重放命令。稿件或稿件构建脚本更新会触发 TeX 构建。涉及 F002 证明源文件、构建输入或验收路由的拉取请求会触发 F002 验收。[构建与 CI 指南](docs/PROOF_CI_ROUTING.md)。
+[本地验证指南](docs/PROOF_CI_ROUTING.md)列出历史核验、论文重编译、F002 编译和内核重放命令。
 
 ## Low-temperature susceptibility
 

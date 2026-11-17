@@ -12,7 +12,7 @@ The real-cycle anisotropic proof (ANISO-PSER F002) culminates in `IsingBulk.Anis
 
 [Lean sources](lean/) · [Historical manuscripts and path map](archive/manuscripts/pre-eight-2026-10-30/README.md)
 
-The [build and CI guide](docs/PROOF_CI_ROUTING.md) gives the commands for historical verification, standalone TeX builds, and F002 compilation and replay.
+The [local verification guide](docs/PROOF_CI_ROUTING.md) gives the commands for historical verification, standalone TeX builds, and F002 compilation and replay.
 
 ## Low-temperature susceptibility
 
