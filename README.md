@@ -1,16 +1,16 @@
 # Ising susceptibility: eight mathematical papers
 
-[Read the current eight-paper collection](papers/README.md) · [中文](README.zh.md) · [Repository map](REPOSITORY_MAP.md)
+[Read the current eight-paper collection](papers/README.md) · [中文](README.zh.md) · [Repository map](REPOSITORY_MAP.md) · [Authorship and AI disclosure](AUTHORSHIP.md)
 
-The collection contains two distinct proofs for each of four subjects: low-temperature susceptibility, high-temperature susceptibility, fixed-ratio anisotropic susceptibility, and susceptibility in two independent complex coupling variables. Each paper studies the full bulk response, with its physical normalization and published-real input interfaces. Article titles, authorship and the visible ChatGPT disclosures are preserved.
+The collection contains two proofs each for low-temperature susceptibility, high-temperature susceptibility, fixed-ratio anisotropic susceptibility, and susceptibility in two independent complex coupling variables. Each paper treats the full bulk susceptibility in its physical normalization.
 
-The [current index](papers/README.md) gives every scholarly title and PDF/TeX link. The original fixed-ratio proof legitimately imports the original low- and high-temperature normalized equal-coupling theorems. Its alternative proves that case internally. Both two-complex-variable proofs establish the joint, positive-ratio-slice and isotropic conclusions through their own curve-level arguments.
+At equal coupling, the original fixed-ratio proof applies the two original normalized isotropic natural-boundary theorems. The real-cycle alternative proves the equal-coupling case within the paper. Both two-variable proofs establish joint natural boundaries, prove natural boundaries on the temperature slice for each finite positive ratio, and derive the isotropic disk and exterior germs.
 
-Seven of the eight routes have completed Lean proofs at their [precise theorem and field scope](docs/eight-papers/LEAN_CORRESPONDENCE.md). The real-cycle anisotropic alternative (ANISO-PSER F002) ends at [`IsingBulk.AnisoF002.full_uniform_field_conclusion`](lean/IsingBulk/AnisoF002/C03/FullUniformFieldConclusion.lean). Its natural-boundary fields require positive couplings; real susceptibility identification and field response use the explicit `PublishedRealSpinFormFactors` and `PublishedRealGibbsFields` interfaces. See the [F002 audit and scope](docs/aniso-f002/PUBLICATION.md) and the [eight-route status](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md). The two-complex-variable endpoint/transport alternative (JOINT-PSER) remains `NOT_SEPARATELY_FORMALIZED`.
+Seven of the eight routes have completed Lean formalizations with explicit hypotheses and fields. The two-variable endpoint/transport proof (JOINT-PSER) has status `NOT_SEPARATELY_FORMALIZED`. [Theorem correspondence](docs/eight-papers/LEAN_CORRESPONDENCE.md) · [Eight-route status](docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md).
 
-The [Lean tree](lean/) contains the additive F002 integration alongside the unchanged earlier proof sources, toolchain, dependency pins and prior audit records. For old manuscript paths, see the [archive crosswalk](archive/manuscripts/pre-eight-2026-10-30/README.md).
+The real-cycle anisotropic proof (ANISO-PSER F002) culminates in `IsingBulk.AnisoF002.full_uniform_field_conclusion`. Its analytic natural-boundary fields assume positive couplings. Its real-temperature identification and energy-field response use `PublishedRealSpinFormFactors` and `PublishedRealGibbsFields` as explicit inputs. [Lean theorem](lean/IsingBulk/AnisoF002/C03/FullUniformFieldConclusion.lean) · [F002 scope and audit](docs/aniso-f002/PUBLICATION.md).
 
-Historical manuscripts are preserved once in the [secondary archive](archive/manuscripts/pre-eight-2026-10-30/README.md). Immutable commit/tag URLs keep their old layouts; deleted moving-main file paths have no automatic GitHub redirect.
+[Lean sources](lean/) · [Historical manuscripts and path map](archive/manuscripts/pre-eight-2026-10-30/README.md)
 
 The [build and CI guide](docs/PROOF_CI_ROUTING.md) gives the commands for historical verification, standalone TeX builds, and F002 compilation and replay.
 
