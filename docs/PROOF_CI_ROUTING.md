@@ -44,6 +44,7 @@ From `lean/`, with the pinned Lean 4.34.1 toolchain and existing lockfile:
 
 ```bash
 lake exe cache get
+mkdir -p ../evidence/support_c03
 lake build +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
   +IsingBulk.AnisoF002.Audit.C03FinalReplayBundle
 lake env leanchecker --fresh IsingBulk.AnisoF002.C03.FullUniformFieldConclusion

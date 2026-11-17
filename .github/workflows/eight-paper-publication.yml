@@ -88,6 +88,8 @@ jobs:
         run: lake exe cache get
       - name: Build the terminal and its final replay bundle from source
         run: |
+          # The frozen recursor audit writes here independently of discovery.
+          mkdir -p ../evidence/support_c03
           lake build +IsingBulk.AnisoF002.C03.FullUniformFieldConclusion \
             +IsingBulk.AnisoF002.Audit.C03FinalReplayBundle 2>&1 | tee "$RUNNER_TEMP/f002-build.log"
       - name: Replay the F002 terminal in a fresh Lean kernel
@@ -101,6 +103,6 @@ jobs:
           name: f002-final-acceptance-${{ github.sha }}
           path: |
             ${{ runner.temp }}/f002-*.log
-            evidence/support_c03/final_discovery_probe.json
+            evidence/support_c03/*.json
           if-no-files-found: warn
           retention-days: 30
