@@ -8,21 +8,31 @@ GitHub Actions is disabled for this repository. The files under
 
 ## Publication checks
 
-From the root of a full Git checkout, run the publication verifier or rebuild
-the manuscripts locally.
+Run the publication verifier from the root of a full Git checkout.
 
 ```bash
 python3 scripts/verify_eight_papers.py
+```
+
+The verifier checks each published TeX/PDF pair against the
+[build hashes](../papers/MANUSCRIPT_SHA256.json). It also checks the frozen
+archives, the accepted F002 source manifest, earlier Lean sources and
+dependency pins.
+Add `--historical-checks` to run the legacy validators in a temporary checkout
+of the pinned pre-migration commit. The verifier uses UTF-8 for those Python
+processes.
+
+To rebuild the manuscripts locally, run
+
+```bash
 python3 scripts/build_current_papers.py --output PATH
 ```
 
-The verifier checks the current manuscript paths, disclosures and navigation
-links, as well as the frozen archive, earlier Lean sources and dependency pins.
-Add `--historical-checks` to run the legacy validators in a temporary checkout
-of the pinned pre-migration commit.
-
 The build writes outside the publication directories. It requires
 `pdflatex`, TeX Live's extra LaTeX and recommended fonts, and Latin Modern.
+Publish the TeX and PDF for each updated pair along with its two entries from
+the generated `MANUSCRIPT_SHA256.json`. Run the verifier on the updated
+publication files.
 
 ## F002 proof
 

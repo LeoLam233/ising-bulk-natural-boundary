@@ -20,13 +20,16 @@ def historical_root(root, *, already_verified=False, link_packages=True):
     target = Path(tmp.name) / 'repository'
     # Separate Git metadata and index; the source object database is read-only.
     subprocess.run(['git', 'init', '--quiet', str(target)], check=True)
+    # Git compares the canonical path, including the directory casing on Windows.
+    target = target.resolve()
     objects = subprocess.check_output(
         ['git', '-c', 'safe.directory=' + root.as_posix(), '-C', str(root),
          'rev-parse', '--git-path', 'objects'],
     ).decode().strip()
     objects = (root / objects).resolve()
     (target / '.git/objects/info/alternates').write_bytes((objects.as_posix() + '\n').encode('utf8'))
-    cmd = ['git', '-c', 'safe.directory=' + target.as_posix(), '-c', 'core.autocrlf=false', '-C', str(target)]
+    cmd = ['git', '-c', 'safe.directory=' + target.as_posix(), '-c', 'core.autocrlf=false',
+           '-c', 'core.longpaths=true', '-C', str(target)]
     subprocess.run(cmd + ['read-tree', BASE], check=True)
     subprocess.run(cmd + ['update-ref', 'refs/heads/historical-view', BASE], check=True)
     subprocess.run(cmd + ['symbolic-ref', 'HEAD', 'refs/heads/historical-view'], check=True)

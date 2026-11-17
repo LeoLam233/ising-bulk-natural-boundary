@@ -5,6 +5,7 @@ import argparse
 import hashlib
 from io import BytesIO
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -18,6 +19,14 @@ ARCHIVE = 'archive/manuscripts/pre-eight-2026-10-30'
 MIGRATION = 'provenance/eight-papers-2026-10-30'
 PREFIX = ARCHIVE + '/'
 RECORD = MIGRATION + '/MIGRATION.json'
+MANUSCRIPT_HASHES = 'papers/MANUSCRIPT_SHA256.json'
+F002_ARCHIVE = 'archive/manuscripts/aniso-f002'
+F002_PAPER_HASHES = {
+    'ANISO_PSER_F002_FROZEN_52P.pdf': 'b82149625b7c2223c743b8e7482f4818543a760b46decd845acdf217d7a2376c',
+    'ANISO_PSER_F002_FROZEN_52P.tex': '7c0fc588a688869d0c95698ec67b989bf644f3bd0cb9ca1c7eb8624d3976c977',
+}
+F002_SOURCE_MANIFEST = F002_ARCHIVE + '/FROZEN_SOURCE_SHA256.json'
+F002_MANIFEST_SHA256 = '733133418727513bacbfa57161c1e964e2f28676de6f83dab688070419d26730'
 STATUS = 'docs/eight-papers/EIGHT_PAPER_FORMALIZATION_STATUS.md'
 CORRESPONDENCE = 'docs/eight-papers/LEAN_CORRESPONDENCE.md'
 FROZEN_PREFIXES = ('lean/', 'verification/', 'provenance/', 'release/', 'audits/', 'research-history/')
@@ -66,6 +75,14 @@ def checked_file(rel, expected):
     raw = p.read_bytes()
     blob = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
     require(blob == expected, f'frozen file changed: {rel}')
+    return raw
+
+
+def checked_sha256_file(rel, expected):
+    p = ROOT / rel
+    require(p.is_file() and not p.is_symlink(), f'missing or linked file: {rel}')
+    raw = p.read_bytes()
+    require(hashlib.sha256(raw).hexdigest() == expected, f'SHA-256 mismatch: {rel}')
     return raw
 
 
@@ -133,21 +150,34 @@ def verify_history():
     return m, len(protected)
 
 
+def verify_f002():
+    for name, digest in F002_PAPER_HASHES.items():
+        checked_sha256_file(f'{F002_ARCHIVE}/{name}', digest)
+    hashes = json.loads(checked_sha256_file(F002_SOURCE_MANIFEST, F002_MANIFEST_SHA256))
+    require(len(hashes) == 4267, 'incorrect F002 source inventory')
+    for rel, digest in hashes.items():
+        checked_sha256_file(rel, digest)
+    return len(hashes)
+
+
 def verify():
     m, protected = verify_history()
     current = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'papers').rglob('*')
                if p.suffix in {'.tex', '.pdf'}}
     require(current == set(m['current_pairs']) and len(current) == 16,
             'the current collection must have eight TeX/PDF pairs at the indexed paths')
+    hashes = json.loads((ROOT / MANUSCRIPT_HASHES).read_bytes())
+    require(isinstance(hashes, dict) and set(hashes) == current,
+            'manuscript hashes must cover all eight TeX/PDF pairs')
     for rel in sorted(current):
-        p = ROOT / rel
-        require(p.is_file() and not p.is_symlink(), f'invalid current manuscript: {rel}')
-        if p.suffix == '.tex':
-            source = p.read_text(encoding='utf8')
+        raw = checked_sha256_file(rel, hashes[rel])
+        if rel.endswith('.tex'):
+            source = raw.decode('utf8')
             require(source.count('ChatGPT') == 1 and 'Dehao Lin' in source,
                     f'author metadata or disclosure missing: {rel}')
         else:
-            require(p.read_bytes().startswith(b'%PDF-'), f'invalid PDF header: {rel}')
+            require(raw.startswith(b'%PDF-'), f'invalid PDF header: {rel}')
+    f002_sources = verify_f002()
 
     # Follow the live navigation files, including the current formalization maps.
     live = sorted(set(m['live_markdown']) | {STATUS, CORRESPONDENCE, 'lean/README.md',
@@ -164,7 +194,8 @@ def verify():
                 bad.append((rel, target))
     require(not bad, f'broken current links: {bad}')
     print(json.dumps({'status': 'PASS', 'historical_snapshot': SNAPSHOT, 'archived_manuscript_files': 67,
-                      'protected_baseline_files': protected, 'current_tex_pdf_files': len(current)}, indent=2))
+                      'protected_baseline_files': protected, 'current_tex_pdf_files': len(current),
+                      'f002_accepted_source_files': f002_sources}, indent=2))
 
 
 def main():
@@ -175,7 +206,9 @@ def main():
     if args.historical_checks:
         from eight_paper_paths import historical_root
         view = historical_root(ROOT, already_verified=True, link_packages=False)
-        subprocess.run([sys.executable, str(view / 'scripts/verify_ht22_preservation.py')], cwd=view, check=True)
+        env = dict(os.environ, PYTHONUTF8='1')
+        subprocess.run([sys.executable, str(view / 'scripts/verify_ht22_preservation.py')],
+                       cwd=view, env=env, check=True)
 
 
 if __name__ == '__main__':

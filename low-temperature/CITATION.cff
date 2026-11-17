@@ -1,19 +1,32 @@
 cff-version: 1.2.0
-message: "Please cite this candidate manuscript by version and state its review status."
-type: article
-title: "A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility"
+message: "Use preferred-citation for the v0.1-rc6 manuscript and the software record for its Lean formalization."
+type: software
+title: "Lean formalization of the low-temperature bulk Ising natural boundary"
 authors:
   - family-names: Lin
     given-names: Dehao
     orcid: "https://orcid.org/0009-0001-4551-8490"
     affiliation: "School of Physics, Sun Yat-sen University"
     email: "lindh9@mail2.sysu.edu.cn"
-version: "0.1-rc6"
-license: CC-BY-4.0
-abstract: "Development candidate manuscript v0.1-rc6 with Lean v0.3.0-rc2. Canonical lower-order and natural-boundary proofs no longer require E3; physical identification retains E1/E2. Proposition F.1 derives the complete-amplitude conversion on the physical exterior germ; this literature identity is manuscript-only. Exact validation is recorded separately. No independent human expert validation or peer review is claimed."
+version: "0.3.0-rc2"
+commit: "923266754afd65f5922a51f59a72ca56e1a88942"
+license: MIT
+repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
+abstract: "Lean v0.3.0-rc2 for manuscript v0.1-rc6. The normalized natural-boundary theorem has no external representation hypothesis. Physical identification uses E1/E2. The manuscript derives the complete-amplitude conversion on the physical exterior germ in Proposition F.1."
 keywords:
   - Ising model
   - susceptibility
   - natural boundary
   - candidate proof
   - reproducibility
+preferred-citation:
+  type: article
+  title: "A candidate natural-boundary proof for the bulk square-lattice Ising susceptibility"
+  authors:
+    - family-names: Lin
+      given-names: Dehao
+      orcid: "https://orcid.org/0009-0001-4551-8490"
+  year: 2026
+  version: "0.1-rc6"
+  license: CC-BY-4.0
+  url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/blob/d3bfb359cecdc61eb17606dbbc056532be438484/archive/manuscripts/pre-eight-2026-10-30/paper/next/manuscript.pdf"

@@ -29,18 +29,24 @@ intermediate asymptotic statements in the frozen paper are stronger than the
 exported Lean statements.
 
 The 2026-11-02 accepted Lean snapshot uses Lean 4.34.1 and Mathlib
-`d13f23b723b8a846827a245b89c10fc7d3f11612`. Its source manifest (4,267 files)
-has SHA-256 `733133418727513bacbfa57161c1e964e2f28676de6f83dab688070419d26730`;
-the terminal source has SHA-256
+`d13f23b723b8a846827a245b89c10fc7d3f11612`. Its
+[source manifest](../../archive/manuscripts/aniso-f002/FROZEN_SOURCE_SHA256.json)
+lists 4,267 files and has SHA-256
+`733133418727513bacbfa57161c1e964e2f28676de6f83dab688070419d26730`.
+The terminal source has SHA-256
 `4f3fb71a760039ef12836ce34abd321f866c250629ba347fd686bce1d4861a10`.
 The integration adds its 825 absent files byte for byte. The earlier top-level
 F002 and continuation roots are historical intermediate targets.
 
-The audit used the frozen 52-page paper. Its PDF SHA-256 is
-`b82149625b7c2223c743b8e7482f4818543a760b46decd845acdf217d7a2376c`,
-and its TeX SHA-256 is
+The audits used the
+[frozen 52-page PDF](../../archive/manuscripts/aniso-f002/ANISO_PSER_F002_FROZEN_52P.pdf)
+with SHA-256 `b82149625b7c2223c743b8e7482f4818543a760b46decd845acdf217d7a2376c`
+and the [frozen TeX](../../archive/manuscripts/aniso-f002/ANISO_PSER_F002_FROZEN_52P.tex)
+with SHA-256
 `7c0fc588a688869d0c95698ec67b989bf644f3bd0cb9ca1c7eb8624d3976c977`.
-The existing 53-page editorial PDF and its TeX are the public reading edition.
+The public reading edition is available as
+[PDF](../../papers/fixed-ratio-anisotropy/alternative-proof/manuscript.pdf)
+and [TeX](../../papers/fixed-ratio-anisotropy/alternative-proof/manuscript.tex).
 
 - **Pro, 2026-11-03: `EXHAUSTED`** for the frozen paper and the exact conditional Lean terminal.
 - **Codex, 2026-11-17: corrected `EXHAUSTED`; independent STOP-LOCK `APPROVE`.**

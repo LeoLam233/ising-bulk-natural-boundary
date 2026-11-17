@@ -1,14 +1,25 @@
 cff-version: 1.2.0
-message: "Cite the distinct LT22 PSER manuscript and the exact Preferred22 release tag/commit consulted. Internal audit and Lean acceptance do not claim human peer review."
-type: article
-title: "The full low-temperature Ising susceptibility: a regular-coordinate proof of the natural boundary"
+message: "Use preferred-citation for the frozen LT22 manuscript and the software record for its Lean formalization."
+type: software
+title: "LT22 Preferred22 Lean formalization"
 authors:
   - family-names: Lin
     given-names: Dehao
     orcid: "https://orcid.org/0009-0001-4551-8490"
     affiliation: "School of Physics, Sun Yat-sen University"
     email: "lindh9@mail2.sysu.edu.cn"
-version: "LT22-Preferred22-20261027"
-license: CC-BY-4.0
+version: "lt22-preferred22-v1.0.0"
+license: MIT
 repository-code: "https://github.com/LeoLam233/ising-bulk-natural-boundary"
-url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/tree/main/paper/lt/pser"
+url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/tag/lt22-preferred22-v1.0.0"
+preferred-citation:
+  type: article
+  title: "The full low-temperature Ising susceptibility: a regular-coordinate proof of the natural boundary"
+  authors:
+    - family-names: Lin
+      given-names: Dehao
+      orcid: "https://orcid.org/0009-0001-4551-8490"
+  year: 2026
+  version: "LT22-Preferred22-20261027"
+  license: CC-BY-4.0
+  url: "https://github.com/LeoLam233/ising-bulk-natural-boundary/releases/download/lt22-preferred22-v1.0.0/LT22_Preferred22_22page.pdf"
